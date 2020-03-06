@@ -22,10 +22,24 @@
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/topbar.ui")]
     public class Topbar : Gtk.Stack {
+        [GtkChild]
+        private Gtk.HeaderBar collection_toolbar;
+        [GtkChild]
+        private Gtk.HeaderBar display_toolbar;
 
         [GtkCallback]
         private void add_new_machine_button_clicked () {
             (new Connections.Assistant (Application.application.main_window)).run ();
+        }
+
+        [GtkCallback]
+        private void back_button_clicked () {
+            Application.application.main_window.show_collection_view ();
+            set_visible_child (collection_toolbar);
+        }
+
+        public void show_display_view () {
+            set_visible_child (display_toolbar);
         }
     }
 }

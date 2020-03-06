@@ -59,7 +59,13 @@ namespace Connections {
 
         public void open_machine (Machine machine) {
             display_view.connect_to (machine);
+
             stack.set_visible_child (display_view);
+            topbar.show_display_view ();
+        }
+
+        public void show_collection_view () {
+            stack.set_visible_child (collection_view);
         }
     }
 }

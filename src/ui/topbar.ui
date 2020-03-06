@@ -33,5 +33,36 @@
         </object>
       </child>
 
+      <child>
+        <object class="GtkHeaderBar" id="display_toolbar">
+          <property name="visible">True</property>
+          <property name="show-close-button">True</property>
+          <style>
+            <class name="titlebar"/>
+          </style>
+
+          <child>
+            <object class="GtkButton" id="back_button">
+              <property name="visible">True</property>
+              <signal name="clicked" handler="back_button_clicked"/>
+
+              <child internal-child="accessible">
+                <object class="AtkObject" id="a11y-back-button">
+                  <property name="accessible-name" translatable="yes">Go Back</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkImage">
+                  <property name="visible">True</property>
+                  <property name="icon-name">go-previous-symbolic</property>
+                  <property name="icon-size">1</property>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </child>
+
     </template>
   </interface>
