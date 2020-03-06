@@ -8,7 +8,8 @@
       <child>
         <object class="GtkImage" id="thumbnail">
           <property name="visible">True</property>
-          <property name="icon-name">microphone-sensitivity-medium</property>
+          <property name="icon-name">preferences-desktop-remote-desktop</property>
+          <property name="pixel-size">96</property>
           <property name="halign">center</property>
           <property name="margin-bottom">24</property>
         </object>
