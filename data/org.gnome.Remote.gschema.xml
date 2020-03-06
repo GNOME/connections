@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="remote">
+	<schema id="org.gnome.Remote" path="/org/gnome/Remote/">
+	</schema>
+</schemalist>

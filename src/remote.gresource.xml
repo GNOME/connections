@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/Remote">
+    <file>ui/assistant.ui</file>
+    <file>ui/collection-view.ui</file>
+    <file>ui/collection-view-child.ui</file>
+    <file>ui/display-view.ui</file>
+    <file>ui/empty-view.ui</file>
+    <file>ui/topbar.ui</file>
+    <file>ui/window.ui</file>
+  </gresource>
+</gresources>

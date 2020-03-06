@@ -1,0 +1,7 @@
+data/org.gnome.Remote.desktop.in
+data/org.gnome.Remote.appdata.xml.in
+data/org.gnome.Remote.gschema.xml
+src/window.ui
+src/main.vala
+src/window.vala
+
