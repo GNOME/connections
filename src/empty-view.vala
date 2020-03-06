@@ -19,8 +19,8 @@
  *
  */
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/empty-view.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/empty-view.ui")]
     public class EmptyView : Gtk.Grid {
     }
 }

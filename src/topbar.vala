@@ -19,13 +19,13 @@
  *
  */
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/topbar.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/topbar.ui")]
     public class Topbar : Gtk.Stack {
 
         [GtkCallback]
         private void add_new_machine_button_clicked () {
-            (new Remote.Assistant (Application.application.main_window)).run ();
+            (new Connections.Assistant (Application.application.main_window)).run ();
         }
     }
 }

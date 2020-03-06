@@ -19,8 +19,8 @@
  *
  */
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/collection-view-child.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/collection-view-child.ui")]
     public class CollectionViewChild : Gtk.Box {
         public Machine machine;
 

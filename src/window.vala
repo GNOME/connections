@@ -19,8 +19,8 @@
  *
  */
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/window.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/window.ui")]
     public class Window : Gtk.ApplicationWindow {
         [GtkChild]
         private Topbar topbar;

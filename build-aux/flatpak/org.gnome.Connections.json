@@ -1,9 +1,9 @@
 {
-    "app-id": "org.gnome.Remote",
+    "app-id": "org.gnome.Connections",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.32",
+    "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
-    "command": "remote",
+    "command": "connections",
     "finish-args": [
         "--share=network",
         "--share=ipc",
@@ -39,13 +39,13 @@
             ]
         },
         {
-            "name": "remote",
+            "name": "connections",
             "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
-                    "url": "file:///home/feborges/Remote"
+                    "url": "file:///home/feborges/connections"
                 }
             ]
         }

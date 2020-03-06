@@ -19,16 +19,16 @@
  *
  */
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/collection-view.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/collection-view.ui")]
     public class CollectionView : Gtk.ScrolledWindow {
         [GtkChild]
         private Gtk.FlowBox flowbox; 
 
-        private Remote.ActionsPopover popover;
+        private Connections.ActionsPopover popover;
 
         construct {
-            popover = new Remote.ActionsPopover ();
+            popover = new Connections.ActionsPopover ();
         }
 
         public void bind_model (ListModel model) {

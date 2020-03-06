@@ -19,8 +19,8 @@
  *
  */
 
-namespace Remote {
-    public class MachineConfig : Remote.Database {
+namespace Connections {
+    public class MachineConfig : Connections.Database {
         private string group;
 
         public MachineConfig (Machine machine) {
@@ -99,10 +99,10 @@ namespace Remote {
             keyfile.get_string (group, key);
         }
 
-        public List<Remote.Machine> get_machines () {
+        public List<Connections.Machine> get_machines () {
             load ();
 
-            List<Remote.Machine>? machines = new List<Remote.Machine> ();
+            List<Connections.Machine>? machines = new List<Connections.Machine> ();
             foreach (var group in keyfile.get_groups ()) {
                 machines.append (new Machine (group));
             }

@@ -22,8 +22,8 @@
 using Gtk;
 using Gdk;
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/display-view.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/display-view.ui")]
     private class DisplayView : Gtk.Box {
         [GtkChild]
         private EventBox event_box;
@@ -37,8 +37,8 @@ namespace Remote {
         [GtkChild]
         private Widget display_widget; 
 
-        private Remote.Display _display;
-        private Remote.Display display {
+        private Connections.Display _display;
+        private Connections.Display display {
             get { return _display; }
             set {
                 if (_display != null) {
@@ -112,7 +112,7 @@ namespace Remote {
                 event_box.remove (widget);
         }
 
-        public void replace_display (Remote.Display display) {
+        public void replace_display (Connections.Display display) {
             if (event_box.get_child () != null)
                 remove_display ();
 

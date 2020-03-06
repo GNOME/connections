@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="connections">
+	<schema id="org.gnome.Connections" path="/org/gnome/Connections/">
+	</schema>
+</schemalist>

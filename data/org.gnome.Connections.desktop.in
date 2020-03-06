@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=remote
-Exec=remote
+Name=connections
+Exec=connections
 Terminal=false
 Type=Application
 Categories=GTK;

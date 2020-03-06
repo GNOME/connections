@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.20"/>
-    <template class="RemoteAssistant" parent="GtkDialog">
+    <template class="ConnectionsAssistant" parent="GtkDialog">
       <property name="modal">True</property>
       <property name="type-hint">dialog</property>
       <property name="title" translatable="yes">Create a New Connection</property>
@@ -25,7 +25,7 @@
         <object class="GtkButton" id="cancel_button">
           <property name="visible">True</property>
           <property name="label" translatable="yes">Cancel</property>
-          <signal name="clicked" handler="gtk_widget_hide_on_delete" object="RemoteAssistant"/>
+          <signal name="clicked" handler="gtk_widget_hide_on_delete" object="ConnectionsAssistant"/>
         </object>
       </child>
 

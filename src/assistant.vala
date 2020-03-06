@@ -19,8 +19,8 @@
  *
  */
 
-namespace Remote {
-    [GtkTemplate (ui = "/org/gnome/Remote/ui/assistant.ui")]
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/assistant.ui")]
     public class Assistant : Gtk.Dialog {
         [GtkChild]
         private Gtk.Entry url_entry;
@@ -36,7 +36,7 @@ namespace Remote {
         [GtkCallback]
         private void on_create_machine_button_clicked () {
             try {
-                var machine = new Remote.Machine (url_entry.get_text ());
+                var machine = new Connections.Machine (url_entry.get_text ());
                 Application.application.add_machine (machine);
             } catch (GLib.Error error) {
                 warning ("Failed to add machine %s: %s", url_entry.get_text (), error.message);

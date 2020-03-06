@@ -21,8 +21,8 @@
 
 using Vnc;
 
-namespace Remote {
-    private class VncDisplay : Remote.Display {
+namespace Connections {
+    private class VncDisplay : Connections.Display {
         private Gtk.Window window;
 
         private Vnc.Display display;

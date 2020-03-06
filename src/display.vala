@@ -19,7 +19,7 @@
  *
  */
 
-namespace Remote {
+namespace Connections {
     private abstract class Display : GLib.Object {
         public abstract Gtk.Widget get_widget ();
         public abstract void connect_to (Machine machine);

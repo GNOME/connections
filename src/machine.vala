@@ -19,7 +19,7 @@
  *
  */
 
-namespace Remote {
+namespace Connections {
     public class Machine : Object {
         private MachineConfig config;
 

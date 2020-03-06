@@ -19,26 +19,26 @@
  *
  */
 
-namespace Remote {
+namespace Connections {
     public class Application : Gtk.Application {
         public static Application application;
 
         public ListStore model;
 
-        private List<Remote.Window> windows;
+        private List<Connections.Window> windows;
         public unowned Window main_window {
             get { return (windows.length () > 0) ? windows.data : null; }
         }
 
         construct {
-            windows = new List<Remote.Window> ();
-            model = new GLib.ListStore (typeof (Remote.Machine));
+            windows = new List<Connections.Window> ();
+            model = new GLib.ListStore (typeof (Connections.Machine));
         }
 
         public Application () {
             application = this;
 
-            application_id = "org.gnome.Remote";
+            application_id = "org.gnome.Connections";
         }
 
         public override void activate () {
@@ -54,7 +54,7 @@ namespace Remote {
         }
 
         public Window add_new_window () {
-            var window = new Remote.Window (this);
+            var window = new Connections.Window (this);
 
             windows.append (window);
             window.present ();

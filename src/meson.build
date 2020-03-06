@@ -1,4 +1,4 @@
-remote_sources = [
+connections_sources = [
   'actions-popover.vala', 
   'assistant.vala',
   'application.vala',
@@ -15,7 +15,7 @@ remote_sources = [
   'window.vala',
 ]
 
-remote_deps = [
+connections_deps = [
   config_h,
   valac.find_library ('config', dirs: src_dir),
   dependency('gio-2.0', version: '>= 2.50'),
@@ -26,13 +26,13 @@ remote_deps = [
 
 gnome = import('gnome')
 
-remote_sources += gnome.compile_resources('remote-resources',
-  'remote.gresource.xml',
-  c_name: 'remote'
+connections_sources += gnome.compile_resources('connections-resources',
+  'connections.gresource.xml',
+  c_name: 'connections'
 )
 
 c_args = [
-    '-DGETTEXT_PACKAGE="remote"',
+    '-DGETTEXT_PACKAGE="connections"',
 ]
 
 vala_args = [
@@ -40,10 +40,10 @@ vala_args = [
   '--target-glib=2.50',
 ]
 
-executable('remote', remote_sources,
+executable('connections', connections_sources,
   include_directories: config_h_dir, 
   vala_args: vala_args,
   c_args: c_args,
-  dependencies: remote_deps,
+  dependencies: connections_deps,
   install: true,
 )

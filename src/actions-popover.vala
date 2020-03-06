@@ -19,14 +19,14 @@
  *
  */
 
-namespace Remote {
+namespace Connections {
     public class ActionsPopover : Gtk.Popover {
         private GLib.SimpleActionGroup action_group;
         private const GLib.ActionEntry[] action_entries = {
             {"delete", delete_activated}
         };
 
-        private Remote.Machine machine;
+        private Connections.Machine machine;
 
         construct {
             action_group = new GLib.SimpleActionGroup ();
