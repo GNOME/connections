@@ -21,24 +21,29 @@
 
 namespace Connections {
     public class MachineConfig : Connections.Database {
-        private string group;
+
+        private unowned Machine machine;
 
         public MachineConfig (Machine machine) {
             load ();
 
-            keyfile.set_string (machine.uri, "protocol", machine.protocol.to_string ());
-            keyfile.set_string (machine.uri, "port", machine.port.to_string ());
-
-            group = machine.uri;
+            this.machine = machine;
         }
 
         public void delete () {
             try {
-                keyfile.remove_group (group);
+                keyfile.remove_group (machine.uri);
             } catch (GLib.Error error) {
             }
 
-            save ();
+            save_keyfile ();
+        }
+
+        public bool save () {
+            keyfile.set_string (machine.uri, "protocol", machine.protocol.to_string ());
+            keyfile.set_string (machine.uri, "port", machine.port.to_string ());
+
+            return save_keyfile ();
         }
     }
 
@@ -67,7 +72,7 @@ namespace Connections {
             }
         }
 
-        public bool save () {
+        public bool save_keyfile () {
             try {
                 return FileUtils.set_contents (filename, keyfile.to_data (null));
             } catch (GLib.Error error) {
@@ -104,7 +109,7 @@ namespace Connections {
 
             List<Connections.Machine>? machines = new List<Connections.Machine> ();
             foreach (var group in keyfile.get_groups ()) {
-                machines.append (new Machine (group));
+                machines.append (new Machine.from_uri (group));
             }
 
             return machines;

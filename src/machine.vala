@@ -64,22 +64,32 @@ namespace Connections {
             }
         }
 
-        public string uri { owned get { return @"$protocol://$host:$port"; } }
+        public string uri {
+            owned get {
+                return @"$protocol://$host:$port";
+            }
+
+            set {
+                var address = Xml.URI.parse (value);
+
+                protocol = protocol.from_string (address.scheme);
+                host = address.server;
+                port = address.port <= 0 ? 5900 : address.port;
+            }
+        }
+
         public string host;
         public int port;
         public Protocol protocol;
 
         public bool deleted { get; private set; }
 
-        public Machine (string _uri) {
-            var address = Xml.URI.parse (_uri);
-
-            protocol = protocol.from_string (address.scheme);
-            host = address.server;
-            port = address.port <= 0 ? 5900 : address.port;
-
+        construct {
             config = new MachineConfig (this);
-            config.save ();
+        }
+
+        public Machine.from_uri (string uri) {
+            this.uri = uri;
         }
 
         public void delete () {
@@ -88,5 +98,8 @@ namespace Connections {
             Application.application.remove_machine (this);
         }
 
+        public void save () {
+            config.save ();
+        }
     }
 }

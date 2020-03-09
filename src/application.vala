@@ -64,6 +64,7 @@ namespace Connections {
 
         public void add_machine (Machine machine) {
             model.insert (0, machine);
+            machine.save ();
         }
 
         public void remove_machine (Machine machine) {
