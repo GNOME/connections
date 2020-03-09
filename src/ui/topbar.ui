@@ -30,6 +30,30 @@
               </child>
             </object>
           </child>
+
+          <child>
+            <object class="GtkMenuButton" id="main_menu_button">
+              <property name="visible">True</property>
+              <property name="menu_model">main_menu_model</property>
+
+              <child internal-child="accessible">
+                <object class="AtkObject" id="a11y-application-menu">
+                  <property name="accessible-name" translatable="yes">Application Menu</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkImage">
+                  <property name="visible">True</property>
+                  <property name="icon-name">open-menu-symbolic</property>
+                  <property name="icon-size">1</property>
+                </object>
+              </child>
+            </object>
+            <packing>
+              <property name="pack-type">end</property>
+            </packing>
+          </child>
         </object>
       </child>
 
@@ -63,6 +87,20 @@
           </child>
         </object>
       </child>
-
     </template>
+
+    <menu id="main_menu_model">
+      <item>
+        <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.help</attribute>
+        <attribute name="label" translatable="yes">Help</attribute>
+      </item>
+      <item>
+        <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">About Connections</attribute>
+      </item>
+    </menu>
   </interface>
