@@ -42,6 +42,7 @@ namespace Connections {
         public bool save () {
             keyfile.set_string (machine.uri, "protocol", machine.protocol.to_string ());
             keyfile.set_string (machine.uri, "port", machine.port.to_string ());
+            keyfile.set_string (machine.uri, "display-name", machine.display_name);
 
             return save_keyfile ();
         }

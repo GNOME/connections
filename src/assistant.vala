@@ -24,6 +24,8 @@ namespace Connections {
     public class Assistant : Gtk.Dialog {
         [GtkChild]
         private Gtk.Entry url_entry;
+        [GtkChild]
+        private Gtk.Entry display_name_entry;
 
         construct {
             use_header_bar = 1;
@@ -37,7 +39,8 @@ namespace Connections {
         private void on_create_machine_button_clicked () {
             try {
                 var machine = new Connections.Machine () {
-                    uri = url_entry.get_text ()
+                    uri = url_entry.get_text (),
+                    display_name = display_name_entry.get_text ()
                 };
 
                 Application.application.add_machine (machine);

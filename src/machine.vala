@@ -82,6 +82,8 @@ namespace Connections {
         public int port;
         public Protocol protocol;
 
+        public string display_name;
+
         public bool deleted { get; private set; }
 
         construct {
