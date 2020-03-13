@@ -14,50 +14,56 @@
           <property name="visible">True</property>
 
           <child>
-            <object class="GtkGrid">
+            <object class="GtkStack" id="pages">
               <property name="visible">True</property>
-              <property name="border-width">40</property>
-              <property name="column-spacing">10</property>
-              <property name="row-spacing">10</property>
 
               <child>
-                <object class="GtkLabel" id="server_label">
+                <object class="GtkGrid">
                   <property name="visible">True</property>
-                  <property name="label" translatable="yes">Server</property>
-                  <property name="mnemonic_widget">url_entry</property>
-                </object>
-              </child>
-              <child>
-                <object class="GtkEntry" id="url_entry">
-                  <property name="visible">True</property>
-                  <property name="hexpand">True</property>
-                </object>
-                <packing>
-                  <property name="width">2</property>
-                </packing>
-              </child>
+                  <property name="border-width">40</property>
+                  <property name="column-spacing">10</property>
+                  <property name="row-spacing">10</property>
 
-              <child>
-                <object class="GtkLabel" id="display_name_label">
-                  <property name="visible">True</property>
-                  <property name="label" translatable="yes">Name</property>
-                  <property name="mnemonic_widget">display_name_entry</property>
+                  <child>
+                    <object class="GtkLabel" id="server_label">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">Server</property>
+                      <property name="mnemonic_widget">url_entry</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkEntry" id="url_entry">
+                      <property name="visible">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                    <packing>
+                      <property name="width">2</property>
+                    </packing>
+                  </child>
+
+                  <child>
+                    <object class="GtkLabel" id="display_name_label">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">Name</property>
+                      <property name="mnemonic_widget">display_name_entry</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">0</property>
+                      <property name="top-attach">1</property>
+                    </packing>
+                  </child>
+                  <child>
+                    <object class="GtkEntry" id="display_name_entry">
+                      <property name="visible">True</property>
+                      <property name="hexpand">True</property>
+                    </object>
+                    <packing>
+                      <property name="left-attach">1</property>
+                      <property name="top-attach">1</property>
+                      <property name="width">2</property>
+                    </packing>
+                  </child>
                 </object>
-                <packing>
-                  <property name="left-attach">0</property>
-                  <property name="top-attach">1</property>
-                </packing>
-              </child>
-              <child>
-                <object class="GtkEntry" id="display_name_entry">
-                  <property name="visible">True</property>
-                  <property name="hexpand">True</property>
-                </object>
-                <packing>
-                  <property name="left-attach">1</property>
-                  <property name="top-attach">1</property>
-                  <property name="width">2</property>
-                </packing>
               </child>
             </object>
           </child>
