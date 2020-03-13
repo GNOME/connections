@@ -26,6 +26,8 @@ namespace Connections {
         private Gtk.Entry url_entry;
         [GtkChild]
         private Gtk.Entry display_name_entry;
+        [GtkChild]
+        private Gtk.Button create_button; 
 
         construct {
             use_header_bar = 1;
@@ -33,6 +35,8 @@ namespace Connections {
 
         public Assistant (Window window) {
             set_transient_for (window);
+
+            create_button.get_style_context ().add_class ("suggested-action");
         }
 
         [GtkCallback]
