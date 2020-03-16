@@ -6,6 +6,7 @@
         <object class="GtkHeaderBar" id="collection_toolbar">
           <property name="visible">True</property>
           <property name="show-close-button">True</property>
+          <property name="title" translatable="yes">Connections</property>
           <style>
             <class name="titlebar"/>
           </style>
