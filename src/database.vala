@@ -31,6 +31,7 @@ namespace Connections {
         }
 
         public void delete () {
+            load ();
             try {
                 keyfile.remove_group (machine.uri);
             } catch (GLib.Error error) {
