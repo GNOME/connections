@@ -86,7 +86,7 @@ namespace Connections {
 
         public bool deleted { get; private set; }
 
-        private Thumbnailer thumbnailer;
+        public Thumbnailer thumbnailer;
         public Gdk.Pixbuf? thumbnail { set; get; }
 
         construct {

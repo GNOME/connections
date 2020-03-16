@@ -23,6 +23,14 @@ namespace Connections {
     private class Thumbnailer : GLib.Object {
         public weak Machine machine;
 
+        public string? thumbnail_path {
+            owned get {
+                return Path.build_filename (Environment.get_user_cache_dir (),
+                                            "connections",
+                                            machine.host + ".png");
+            }
+        }
+
         private uint thumbnail_id;
 
         public Thumbnailer (Machine machine) {
@@ -33,10 +41,18 @@ namespace Connections {
             if (thumbnail_id != 0)
                 return;
 
-            thumbnail_id = Timeout.add_seconds (2, () => {
+            thumbnail_id = Timeout.add_seconds (3, () => {
                 var pixbuf = display.get_pixbuf ();
                 if (pixbuf != null) {
                     machine.thumbnail = pixbuf.scale_simple (180, 134, Gdk.InterpType.BILINEAR);
+
+                    try {
+                        pixbuf.save (thumbnail_path, "png");
+                    } catch (GLib.Error error) {
+                        warning (error.message);
+
+                        return true;
+                    }
                 }
 
                return true; 

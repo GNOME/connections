@@ -43,6 +43,16 @@ namespace Connections {
             machine.notify["thumbnail"].connect (() => {
                 thumbnail.set_from_pixbuf (machine.thumbnail);
             }); 
+
+            update_thumbnail.begin ();
+        }
+
+        private async void update_thumbnail () {
+            var file = GLib.File.new_for_path (machine.thumbnailer.thumbnail_path);
+            if (file.query_exists ()) {
+                var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.get_path (), 180, 134, true);
+                thumbnail.set_from_pixbuf (pixbuf);
+            }
         }
     }
 }
