@@ -24,7 +24,7 @@
           <property name="halign">start</property>
           <property name="hexpand">True</property>
           <property name="valign">center</property>
-          <property name="ellipsize">midle</property>
+          <property name="ellipsize">middle</property>
           <property name="lines">3</property>
           <property name="wrap">True</property>
           <property name="wrap-mode">word-char</property>
