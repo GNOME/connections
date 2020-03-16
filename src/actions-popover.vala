@@ -23,7 +23,8 @@ namespace Connections {
     private class ActionsPopover : Gtk.Popover {
         private GLib.SimpleActionGroup action_group;
         private const GLib.ActionEntry[] action_entries = {
-            {"delete", delete_activated}
+            {"delete", delete_activated},
+            {"properties", properties_activated}
         };
 
         private Connections.Machine machine;
@@ -43,6 +44,10 @@ namespace Connections {
             menu.append (_("Delete"), "machine.delete");
             action.set_enabled (true);
 
+            action = action_group.lookup_action ("Properties") as GLib.SimpleAction;
+            menu.append (_("Properties"), "machine.properties");
+            action.set_enabled (true);
+
             bind_model (menu, null);
         }
 
@@ -50,6 +55,13 @@ namespace Connections {
             debug ("Deleting %s", machine.uri);
 
             Application.application.remove_machine (machine);
+        }
+
+        private void properties_activated () {
+            debug ("Launch properties for %s", machine.uri);
+
+            (new VncPropertiesDialog (machine).run ());
+
         }
     }
 }

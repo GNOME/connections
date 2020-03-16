@@ -11,6 +11,7 @@ connections_sources = [
   'machine.vala',
   'main.vala',
   'notifications.vala',
+  'properties.vala',
   'thumbnailer.vala',
   'topbar.vala',
   'vnc-display.vala',
