@@ -93,6 +93,12 @@ namespace Connections {
                 widget = new Gtk.Switch () 
             };
             model.append (view_only);
+
+            var use_jpeg_compression = new Property () {
+                label = _("Use JPEG compression"),
+                widget = new Gtk.Switch ()
+            };
+            model.append (use_jpeg_compression);
         }
 
         public VncPropertiesDialog (Machine machine) {
