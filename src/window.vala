@@ -37,6 +37,9 @@ namespace Connections {
         [GtkChild]
         private DisplayView display_view;
 
+        [GtkChild]
+        public NotificationsBar notifications_bar;
+
         public Window (Gtk.Application app) {
             Object (application: app);
 

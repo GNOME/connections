@@ -10,6 +10,7 @@ connections_sources = [
   'empty-view.vala',
   'machine.vala',
   'main.vala',
+  'notifications.vala',
   'thumbnailer.vala',
   'topbar.vala',
   'vnc-display.vala',

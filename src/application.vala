@@ -105,6 +105,16 @@ namespace Connections {
         }
 
         public void remove_machine (Machine machine) {
+            Notification.OKFunc undo = () => {
+                debug ("Machine deletion cancelled by user. Re-adding to view");
+                model.insert (0, machine);
+            };
+
+            Notification.DismissFunc really_remove = () => {
+                debug ("User did not cancel deletion. Deleting now...");
+                machine.delete ();
+            };
+
             for (int i = 0; i < model.get_n_items (); i++) {
                 if ((model.get_item (i) as Machine) == machine) {
                     model.remove (i);
@@ -113,7 +123,11 @@ namespace Connections {
                 }
             }
 
-            machine.delete ();
+            var message = _("Connection to “%s” has been deleted").printf (machine.display_name);
+            main_window.notifications_bar.display_for_action (message,
+                                                              _("Undo"),
+                                                              (owned) undo,
+                                                              (owned) really_remove);
         }
 
         public void load_machines () {
