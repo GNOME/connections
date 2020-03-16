@@ -66,7 +66,7 @@ namespace Connections {
                 ok_button.label = ok_label;
 
                 ok_button.clicked.connect (() => {
-                    if (ok_func != null);
+                    if (ok_func != null)
                         ok_func ();
 
                     set_reveal_child (false);
