@@ -63,6 +63,7 @@
                                 <object class="GtkEntry" id="url_entry">
                                   <property name="visible">True</property>
                                   <property name="hexpand">True</property>
+                                  <property name="completion">url_completion</property>
                                 </object>
                               </child>
                             </object> 
@@ -132,4 +133,31 @@
         <action-widget response="ok">create_button</action-widget>
       </action-widgets>
     </template>
+
+    <object class="GtkEntryCompletion" id="url_completion">
+      <property name="inline-completion">True</property>
+      <property name="popup-completion">False</property>
+      <property name="text-column">0</property>
+      <property name="model">url_completion_model</property>
+    </object>
+
+    <object class="GtkListStore" id="url_completion_model">
+      <columns>
+        <column type="gchararray"/>
+      </columns>
+      <data>
+        <row>
+          <col id="0">vnc</col>  
+        </row>
+        <row>
+          <col id="0">spice</col>  
+        </row>
+        <row>
+          <col id="0">rdp</col>  
+        </row>
+        <row>
+          <col id="0">ssh</col>  
+        </row>
+      </data>
+    </object>
   </interface>
