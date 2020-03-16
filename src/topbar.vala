@@ -21,7 +21,7 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/topbar.ui")]
-    public class Topbar : Gtk.Stack {
+    private class Topbar : Gtk.Stack {
         [GtkChild]
         private Gtk.HeaderBar collection_toolbar;
         [GtkChild]
@@ -38,8 +38,10 @@ namespace Connections {
             set_visible_child (collection_toolbar);
         }
 
-        public void show_display_view () {
+        public void show_display_view (Machine machine) {
             set_visible_child (display_toolbar);
+
+            display_toolbar.set_title (machine.display_name);
         }
     }
 }

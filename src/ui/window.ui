@@ -2,8 +2,8 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
     <template class="ConnectionsWindow" parent="GtkApplicationWindow">
-      <property name="default-width">600</property>
-    <property name="default-height">300</property>
+      <property name="width-request">1024</property>
+      <property name="height-request">768</property>
     <child type="titlebar">
       <object class="ConnectionsTopbar" id="topbar">
         <property name="visible">True</property>

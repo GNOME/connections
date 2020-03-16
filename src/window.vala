@@ -61,7 +61,7 @@ namespace Connections {
             display_view.connect_to (machine);
 
             stack.set_visible_child (display_view);
-            topbar.show_display_view ();
+            topbar.show_display_view (machine);
         }
 
         public void show_collection_view () {
