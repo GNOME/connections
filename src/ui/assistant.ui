@@ -123,6 +123,7 @@
       <child type="action">
         <object class="GtkButton" id="create_button">
           <property name="visible">True</property>
+          <property name="sensitive">False</property>
           <property name="label" translatable="yes">Create</property>
           <signal name="clicked" handler="on_create_machine_button_clicked"/>
         </object>

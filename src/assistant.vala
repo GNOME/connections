@@ -39,6 +39,29 @@ namespace Connections {
             create_button.get_style_context ().add_class ("suggested-action");
 
             url_entry.grab_focus ();
+            url_entry.changed.connect (on_url_entry_changed);
+        }
+
+        private void on_url_entry_changed () {
+            if (url_entry.text == "") {
+                create_button.sensitive = false;
+
+                return;
+            }
+
+            var uri = Xml.URI.parse (url_entry.text);
+            if (uri == null || uri.scheme == null) {
+                create_button.sensitive = false;
+
+                return;
+            }
+
+            if (uri.scheme == "vnc" ||
+                uri.scheme == "ssh" ||
+                uri.scheme == "rdp" ||
+                uri.scheme == "spice") {
+                create_button.sensitive = true;
+            }
         }
 
         [GtkCallback]
