@@ -64,6 +64,7 @@
                                   <property name="visible">True</property>
                                   <property name="hexpand">True</property>
                                   <property name="completion">url_completion</property>
+                                  <signal name="changed" handler="on_url_entry_changed"/>
                                 </object>
                               </child>
                             </object> 

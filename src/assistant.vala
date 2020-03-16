@@ -39,9 +39,9 @@ namespace Connections {
             create_button.get_style_context ().add_class ("suggested-action");
 
             url_entry.grab_focus ();
-            url_entry.changed.connect (on_url_entry_changed);
         }
 
+        [GtkCallback]
         private void on_url_entry_changed () {
             if (url_entry.text == "") {
                 create_button.sensitive = false;
