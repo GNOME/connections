@@ -109,19 +109,17 @@ namespace Connections {
             // Get the allocated size of the parent container
             Gtk.Allocation alloc;
             display.get_parent ().get_allocation (out alloc);
+            if (display.get_width () > alloc.width) {
+                display.width_request = alloc.width;
 
-            double parent_aspect = (double) alloc.width / (double) alloc.height;
-            double display_aspect = (double) display.get_width () / (double) display.get_height ();
-            Gtk.Allocation scaled = alloc;
-            if (parent_aspect > display_aspect) {
-                scaled.width = (int) (alloc.height * display_aspect);
-                scaled.x += (alloc.width - scaled.width) / 2;
-            } else {
-                scaled.height = (int) (alloc.width / display_aspect);
-                scaled.y += (alloc.height - scaled.height) / 2;
+                display.height_request = (alloc.width * display.height) / display.width;
             }
 
-            display.size_allocate (scaled);
+            if (display.get_height () > alloc.height) {
+                display.height_request = alloc.height;
+
+                display.width_request = (alloc.height * display.width) / display.height;
+            }
         }
     }
 }
