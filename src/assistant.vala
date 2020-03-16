@@ -21,7 +21,7 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/assistant.ui")]
-    public class Assistant : Gtk.Dialog {
+    private class Assistant : Gtk.Dialog {
         [GtkChild]
         private Gtk.Entry url_entry;
         [GtkChild]

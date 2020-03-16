@@ -20,7 +20,7 @@
  */
 
 namespace Connections {
-    public class ActionsPopover : Gtk.Popover {
+    private class ActionsPopover : Gtk.Popover {
         private GLib.SimpleActionGroup action_group;
         private const GLib.ActionEntry[] action_entries = {
             {"delete", delete_activated}

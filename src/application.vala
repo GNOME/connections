@@ -20,7 +20,7 @@
  */
 
 namespace Connections {
-    public class Application : Gtk.Application {
+    private class Application : Gtk.Application {
         public static Application application;
 
         public ListStore model;

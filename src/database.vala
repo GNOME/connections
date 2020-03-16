@@ -20,7 +20,7 @@
  */
 
 namespace Connections {
-    public class MachineConfig : Connections.Database {
+    private class MachineConfig : Connections.Database {
 
         private unowned Machine machine;
 
@@ -50,7 +50,7 @@ namespace Connections {
         }
     }
 
-    public class Database : Object {
+    private class Database : Object {
         protected KeyFile keyfile = new KeyFile ();
         protected string? filename = Path.build_filename (Environment.get_user_config_dir (),
                                                           "machines.db");
