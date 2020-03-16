@@ -37,6 +37,8 @@ namespace Connections {
             set_transient_for (window);
 
             create_button.get_style_context ().add_class ("suggested-action");
+
+            url_entry.grab_focus ();
         }
 
         [GtkCallback]
