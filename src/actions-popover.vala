@@ -49,7 +49,7 @@ namespace Connections {
         private void delete_activated () {
             debug ("Deleting %s", machine.uri);
 
-            machine.delete ();
+            Application.application.remove_machine (machine);
         }
     }
 }

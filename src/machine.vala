@@ -113,8 +113,6 @@ namespace Connections {
 
         public void delete () {
             config.delete ();
-
-            Application.application.remove_machine (this);
         }
 
         public void save () {

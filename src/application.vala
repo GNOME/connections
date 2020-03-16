@@ -112,6 +112,8 @@ namespace Connections {
                     break;
                 }
             }
+
+            machine.delete ();
         }
 
         public void load_machines () {
