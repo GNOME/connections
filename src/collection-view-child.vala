@@ -35,7 +35,10 @@ namespace Connections {
         public CollectionViewChild (Machine machine) {
             this.machine = machine;
 
-            machine_name.set_text (machine.display_name != null ? machine.display_name : machine.uri);
+            if (machine.display_name != null || machine.display_name != "")
+                machine_name.set_text (machine.uri);
+            else
+                machine_name.set_text (machine.display_name);
         }
     }
 }
