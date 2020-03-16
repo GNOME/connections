@@ -82,7 +82,19 @@ namespace Connections {
         public int port;
         public Protocol protocol;
 
-        public string display_name;
+        private string _display_name;
+        public string display_name {
+            owned get {
+                if (_display_name != null)
+                    return _display_name;
+
+                return uri;
+            }
+
+            set {
+                _display_name = value;
+            }
+        }
 
         public bool deleted { get; private set; }
 

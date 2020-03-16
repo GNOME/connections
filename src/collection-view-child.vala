@@ -35,10 +35,7 @@ namespace Connections {
         public CollectionViewChild (Machine machine) {
             this.machine = machine;
 
-            if (machine.display_name != null || machine.display_name != "")
-                machine_name.set_text (machine.uri);
-            else
-                machine_name.set_text (machine.display_name);
+            machine_name.set_text (machine.display_name);
 
             machine.notify["thumbnail"].connect (() => {
                 thumbnail.set_from_pixbuf (machine.thumbnail);
