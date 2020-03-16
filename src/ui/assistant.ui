@@ -65,6 +65,7 @@
                                   <property name="hexpand">True</property>
                                   <property name="completion">url_completion</property>
                                   <signal name="changed" handler="on_url_entry_changed"/>
+                                  <signal name="activate" handler="on_url_entry_activated"/>
                                 </object>
                               </child>
                             </object> 

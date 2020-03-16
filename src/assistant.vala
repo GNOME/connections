@@ -79,5 +79,11 @@ namespace Connections {
 
             destroy ();
         }
+
+        [GtkCallback]
+        private void on_url_entry_activated () {
+            if (create_button.sensitive)
+                create_button.clicked ();
+        }
     }
 }
