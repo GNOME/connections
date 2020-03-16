@@ -30,6 +30,8 @@ namespace Connections {
             use_header_bar = 1;
 
             listbox.bind_model (model, create_entry);
+
+            set_transient_for (Application.application.main_window);
         }
 
         private Gtk.Widget create_entry (Object item) {
