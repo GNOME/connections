@@ -30,6 +30,7 @@ namespace Connections {
             use_header_bar = 1;
 
             listbox.bind_model (model, create_entry);
+            listbox.set_header_func (use_listbox_separator);
 
             set_transient_for (Application.application.main_window);
         }
@@ -52,6 +53,23 @@ namespace Connections {
             box.show_all ();
 
             return box;
+        }
+
+        private void use_listbox_separator (Gtk.ListBoxRow row, Gtk.ListBoxRow? before_row) {
+            if (before_row == null) {
+                row.set_header (null);
+
+                return;
+            }
+
+            var current = row.get_header ();
+            if (current == null) {
+                current = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+                    visible = true
+                };
+
+                row.set_header (current);
+            }
         }
     }
 
