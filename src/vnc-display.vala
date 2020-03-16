@@ -81,7 +81,8 @@ namespace Connections {
         }
 
         public override Gtk.Widget get_widget () {
-            window.remove (display);
+            if (window.get_child () != null)
+                window.remove (display);
 
             return display;
         }
