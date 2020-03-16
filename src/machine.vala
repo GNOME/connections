@@ -20,7 +20,7 @@
  */
 
 namespace Connections {
-    public class Machine : Object {
+    private class Machine : Object {
         private MachineConfig config;
 
         public enum Protocol {
@@ -86,12 +86,17 @@ namespace Connections {
 
         public bool deleted { get; private set; }
 
+        private Thumbnailer thumbnailer;
+        public Gdk.Pixbuf? thumbnail { set; get; }
+
         construct {
             config = new MachineConfig (this);
         }
 
         public Machine.from_uri (string uri) {
             this.uri = uri;
+
+            thumbnailer = new Connections.Thumbnailer (this);
         }
 
         public void delete () {
@@ -102,6 +107,10 @@ namespace Connections {
 
         public void save () {
             config.save ();
+        }
+
+        public void update_thumbnail (Display display) {
+            thumbnailer.update_thumbnail (display);
         }
     }
 }

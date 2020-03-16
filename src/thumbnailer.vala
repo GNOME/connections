@@ -1,4 +1,4 @@
-/* collection-view-child.vala
+/* thumbnailer.vala
  *
  * Copyright (C) Red Hat, Inc
  *
@@ -20,29 +20,27 @@
  */
 
 namespace Connections {
-    [GtkTemplate (ui = "/org/gnome/Connections/ui/collection-view-child.ui")]
-    private class CollectionViewChild : Gtk.Box {
-        public Machine machine;
+    private class Thumbnailer : GLib.Object {
+        public weak Machine machine;
 
-        [GtkChild]
-        private Gtk.Label machine_name;
+        private uint thumbnail_id;
 
-        [GtkChild]
-        public Gtk.Image thumbnail; 
-
-        private ulong deleted_notify_id;
-
-        public CollectionViewChild (Machine machine) {
+        public Thumbnailer (Machine machine) {
             this.machine = machine;
+        }
 
-            if (machine.display_name != null || machine.display_name != "")
-                machine_name.set_text (machine.uri);
-            else
-                machine_name.set_text (machine.display_name);
+        public void update_thumbnail (Display display) {
+            if (thumbnail_id != 0)
+                return;
 
-            machine.notify["thumbnail"].connect (() => {
-                thumbnail.set_from_pixbuf (machine.thumbnail);
-            }); 
+            thumbnail_id = Timeout.add_seconds (2, () => {
+                var pixbuf = display.get_pixbuf ();
+                if (pixbuf != null) {
+                    machine.thumbnail = pixbuf.scale_simple (180, 134, Gdk.InterpType.BILINEAR);
+                }
+
+               return true; 
+            });            
         }
     }
 }

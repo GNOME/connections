@@ -140,6 +140,8 @@ namespace Connections {
                 replace_display (new VncDisplay ());
                 display.connect_to (machine);
             }
+
+            machine.update_thumbnail (display);
         }
 
         private void show_display () {
