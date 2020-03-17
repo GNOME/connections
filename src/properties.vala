@@ -81,12 +81,17 @@ namespace Connections {
     private class VncPropertiesDialog : PropertiesDialog {
         private weak Machine machine;
 
-        construct {
+        public VncPropertiesDialog (Machine machine) {
+            this.machine = machine;
+
             var scaling = new Property () {
                 label = _("Scaling"),
-                widget = new Gtk.Switch ()
+                widget = new Gtk.Switch () {
+                    active = machine.scaling
+                }
             };
             model.append (scaling);
+            scaling.widget.bind_property ("active", machine, "scaling", BindingFlags.SYNC_CREATE);
 
             var view_only = new Property () {
                 label = _("View only"),
@@ -99,10 +104,6 @@ namespace Connections {
                 widget = new Gtk.Switch ()
             };
             model.append (use_jpeg_compression);
-        }
-
-        public VncPropertiesDialog (Machine machine) {
-            this.machine = machine;
         }
     }
 }

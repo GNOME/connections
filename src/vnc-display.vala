@@ -27,6 +27,16 @@ namespace Connections {
 
         private Vnc.Display display;
 
+        public override bool scaling {
+            set {
+                display.set_scaling (value);
+            }
+
+            get {
+                return display.get_scaling ();
+            }
+        }
+
         construct {
             display = new Vnc.Display ();
             display.set_keyboard_grab (true);

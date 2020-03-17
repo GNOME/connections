@@ -103,6 +103,16 @@ namespace Connections {
 
         private Connections.Display display;
 
+        public bool scaling {
+            set {
+                display.scaling = value;
+            }
+
+            get {
+                return display.scaling;
+            }
+        }
+
         construct {
             config = new MachineConfig (this);
         }

@@ -30,6 +30,8 @@ namespace Connections {
         public bool mouse_grabbed { get; protected set; }
         public bool keyboard_grabbed { get; protected set; }
 
+        public abstract bool scaling { get; set; }
+
         public signal void show ();
 
         public async void take_screenshot () {
