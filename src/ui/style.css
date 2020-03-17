@@ -1,0 +1,13 @@
+/* Screenshot flash */
+@keyframes flash_animation {
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.flash {
+    border: 1px solid transparent;
+    animation: flash_animation;
+    animation-duration: 300ms;
+    animation-iteration-count: 1;
+}

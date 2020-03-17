@@ -47,6 +47,18 @@ namespace Connections {
 
             bind_model (Application.application.model);
             Application.application.model.items_changed.connect (items_changed);
+
+            try {
+                var style_provider = new Gtk.CssProvider ();
+                var file = File.new_for_uri ("resource:///org/gnome/Connections/ui/style.css");
+                style_provider.load_from_file (file);
+
+                Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                          style_provider,
+                                                          Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            } catch (GLib.Error error) {
+                warning ("Failed to load CSS: %s", error.message);
+            }
         }
 
         public void bind_model (ListModel model) {

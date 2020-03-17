@@ -8,6 +8,7 @@
     <file>ui/empty-view.ui</file>
     <file>ui/notification.ui</file>
     <file>ui/properties.ui</file>
+    <file>ui/style.css</file>
     <file>ui/topbar.ui</file>
     <file>ui/window.ui</file>
   </gresource>

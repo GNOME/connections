@@ -48,6 +48,18 @@ namespace Connections {
             } catch (GLib.Error error) {
                 warning ("Failed to take screenshot %s", error.message);
             }
+
+            flash_display ();
+        }
+
+        private void flash_display () {
+            var style_context = get_widget ().get_parent ().get_style_context ();
+            style_context.add_class ("flash");
+            Timeout.add (200, () => {
+                style_context.remove_class ("flash");
+
+                return false;
+            });
         }
     }
 }
