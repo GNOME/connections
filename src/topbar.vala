@@ -27,6 +27,28 @@ namespace Connections {
         [GtkChild]
         private Gtk.HeaderBar display_toolbar;
 
+        private weak Connections.Machine machine;
+        private const GLib.ActionEntry[] action_entries = {
+            {"properties", properties_activated}
+        };
+
+        construct {
+            var action_group = new GLib.SimpleActionGroup ();
+            action_group.add_action_entries (action_entries, this);
+            this.insert_action_group ("display", action_group);
+
+            var menu = new GLib.Menu ();
+            var section = new GLib.Menu ();
+
+            section.append (_("Properties"), "display.properties");
+            var action = action_group.lookup_action ("properties") as GLib.SimpleAction;
+            action.set_enabled (true);
+        }
+
+        private void properties_activated () {
+            (new VncPropertiesDialog (machine).run ());
+        }
+
         [GtkCallback]
         private void add_new_machine_button_clicked () {
             (new Connections.Assistant (Application.application.main_window)).run ();
@@ -39,6 +61,8 @@ namespace Connections {
         }
 
         public void show_display_view (Machine machine) {
+            this.machine = machine;
+
             set_visible_child (display_toolbar);
 
             display_toolbar.set_title (machine.display_name);
