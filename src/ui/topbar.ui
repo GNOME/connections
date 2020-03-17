@@ -131,6 +131,10 @@
 
     <menu id="display_menu_model">
       <item>
+        <attribute name="action">display.take_screenshot</attribute>
+        <attribute name="label" translatable="yes">Take Screenshot</attribute>
+      </item>
+      <item>
         <attribute name="action">display.properties</attribute>
         <attribute name="label" translatable="yes">Properties</attribute>
       </item>

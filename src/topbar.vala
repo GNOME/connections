@@ -29,7 +29,8 @@ namespace Connections {
 
         private weak Connections.Machine machine;
         private const GLib.ActionEntry[] action_entries = {
-            {"properties", properties_activated}
+            {"properties", properties_activated},
+            {"take_screenshot", take_screenshot_activated},
         };
 
         construct {
@@ -40,13 +41,22 @@ namespace Connections {
             var menu = new GLib.Menu ();
             var section = new GLib.Menu ();
 
+            section.append (_("Take Screenshot"), "display.take_screenshot");
+            var action = action_group.lookup_action ("take_screenshot") as GLib.SimpleAction;
+            action.set_enabled (true);
+
             section.append (_("Properties"), "display.properties");
-            var action = action_group.lookup_action ("properties") as GLib.SimpleAction;
+            action = action_group.lookup_action ("properties") as GLib.SimpleAction;
             action.set_enabled (true);
         }
 
         private void properties_activated () {
             (new VncPropertiesDialog (machine).run ());
+        }
+
+        private void take_screenshot_activated () {
+            if (machine != null)
+                machine.take_screenshot ();
         }
 
         [GtkCallback]

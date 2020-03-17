@@ -101,6 +101,8 @@ namespace Connections {
         public Thumbnailer thumbnailer;
         public Gdk.Pixbuf? thumbnail { set; get; }
 
+        private Connections.Display display;
+
         construct {
             config = new MachineConfig (this);
         }
@@ -120,7 +122,17 @@ namespace Connections {
         }
 
         public void update_thumbnail (Display display) {
+            this.display = display;
+
             thumbnailer.update_thumbnail (display);
+        }
+
+        public void take_screenshot () {
+            if (display == null)
+                return;
+
+            display.take_screenshot ();
+
         }
     }
 }

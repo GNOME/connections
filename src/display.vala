@@ -31,5 +31,23 @@ namespace Connections {
         public bool keyboard_grabbed { get; protected set; }
 
         public signal void show ();
+
+        public async void take_screenshot () {
+            var pixbuf = get_pixbuf ();
+            if (pixbuf == null)
+                return;
+
+            try {
+                var timestamp = new GLib.DateTime.now_local ().format ("%Y-%m-%d %H-%M-%S");
+
+                // Translators: %s => the timestamp of when the screenshot was taken.
+                var filename = _("Screenshot from %s").printf (timestamp);
+                var path = Path.build_filename (Environment.get_user_special_dir (GLib.UserDirectory.PICTURES),
+                                                filename);
+                pixbuf.save (path + ".png", "png");
+            } catch (GLib.Error error) {
+                warning ("Failed to take screenshot %s", error.message);
+            }
+        }
     }
 }
