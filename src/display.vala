@@ -31,6 +31,7 @@ namespace Connections {
         public bool keyboard_grabbed { get; protected set; }
 
         public abstract bool scaling { get; set; }
+        public abstract bool view_only { get; set; }
 
         public signal void show ();
 

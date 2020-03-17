@@ -113,6 +113,16 @@ namespace Connections {
             }
         }
 
+        public bool view_only {
+            set {
+                display.view_only = value;
+            }
+
+            get {
+                return display.view_only;
+            }
+        }
+
         construct {
             config = new MachineConfig (this);
         }

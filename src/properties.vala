@@ -95,9 +95,12 @@ namespace Connections {
 
             var view_only = new Property () {
                 label = _("View only"),
-                widget = new Gtk.Switch () 
+                widget = new Gtk.Switch () {
+                    active = machine.view_only
+                } 
             };
             model.append (view_only);
+            view_only.widget.bind_property ("active", machine, "view_only", BindingFlags.SYNC_CREATE);
 
             var use_jpeg_compression = new Property () {
                 label = _("Use JPEG compression"),

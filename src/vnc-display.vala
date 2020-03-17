@@ -37,6 +37,16 @@ namespace Connections {
             }
         }
 
+        public override bool view_only {
+            set {
+                display.set_read_only (value);
+            }
+
+            get {
+                return display.get_read_only ();
+            }
+        }
+
         construct {
             display = new Vnc.Display ();
             display.set_keyboard_grab (true);
