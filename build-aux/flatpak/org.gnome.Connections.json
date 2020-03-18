@@ -3,7 +3,7 @@
     "runtime": "org.gnome.Platform",
     "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
-    "command": "connections",
+    "command": "gnome-connections",
     "finish-args": [
         "--share=network",
         "--share=ipc",
@@ -39,13 +39,13 @@
             ]
         },
         {
-            "name": "connections",
+            "name": "gnome-connections",
             "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
-                    "url": "file:///home/feborges/connections"
+                    "url": "https://gitlab.gnome.org/felipeborges/gnome-connections.git"
                 }
             ]
         }
