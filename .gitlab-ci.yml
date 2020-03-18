@@ -1,0 +1,27 @@
+include: 'https://gitlab.gnome.org/GNOME/citemplates/raw/master/flatpak/flatpak_ci_initiative.yml'
+
+stages:
+- test
+- deploy
+
+variables:
+    BUNDLE: "gnome-connections.flatpak"
+    
+flatpak:
+    image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master
+    variables:
+        MANIFEST_PATH: "build-aux/flatpak/org.gnome.Connections.json"
+        FLATPAK_MODULE: "gnome-connections"
+        RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
+        APP_ID: "org.gnome.Connections"
+    extends: .flatpak 
+
+review:
+    stage: deploy
+    dependencies:
+        - flatpak
+    extends: ".review" 
+
+stop_review:
+    stage: deploy
+    extends: ".stop_review"
