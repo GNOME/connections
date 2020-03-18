@@ -29,6 +29,11 @@ if appstream_util.found()
   )
 endif
 
+# Icons
+install_subdir('icons',
+  install_dir: join_paths(get_option('datadir')),
+)
+
 install_data('org.gnome.Connections.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )

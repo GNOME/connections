@@ -75,7 +75,8 @@ namespace Connections {
                                    "copyright", "\xc2\xa9 2020 Red Hat, Inc.",
                                    "license-type", Gtk.License.LGPL_2_1,
                                    "program-name", _("Connections"),
-                                   "wrap-license", true);
+                                   "wrap-license", true,
+                                   "logo-icon-name", "org.gnome.Connections");
         }
 
         public override void activate () {
