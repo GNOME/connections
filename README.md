@@ -2,6 +2,8 @@
 
 A remote desktop client for the GNOME desktop environment.
 
+<img src="https://gitlab.gnome.org/felipeborges/gnome-connections/-/raw/master/data/screenshot.png" width="800"/>
+
 ## Goals
 
 Connections aims at replacing Vinagre as the remote desktop client for GNOME.
