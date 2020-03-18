@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/Connections">
+    <file>ui/auth-notification.ui</file>
     <file>ui/assistant.ui</file>
     <file>ui/collection-view.ui</file>
     <file>ui/collection-view-child.ui</file>

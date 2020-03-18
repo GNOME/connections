@@ -101,7 +101,31 @@ namespace Connections {
         public Thumbnailer thumbnailer;
         public Gdk.Pixbuf? thumbnail { set; get; }
 
-        public Connections.Display display;
+        private ulong need_password_id;
+        private ulong need_username_id;
+
+        private Display? _display;
+        public Connections.Display display {
+            get {
+                return _display;
+            }
+
+            set {
+                if (_display != null) {
+                    _display.disconnect (need_password_id);
+                    need_password_id = 0;
+                    _display.disconnect (need_username_id);
+                    need_username_id = 0;
+                }
+
+                _display = value;
+                if (_display == null)
+                    return;
+
+                need_password_id = _display.notify["need-password"].connect (handle_auth);
+                need_username_id = _display.notify["need-username"].connect (handle_auth);
+            }
+        }
 
         public bool scaling {
             set {
@@ -153,6 +177,32 @@ namespace Connections {
 
             display.take_screenshot ();
 
+        }
+
+        public string? username;
+        public string? password;
+        private void handle_auth () {
+            var need_username = display.need_username;
+            if (!display.need_username && !display.need_password)
+                return;
+
+            AuthNotification.AuthFunc auth_func = (username, password) => {
+                if (username != "")
+                    this.username = username;
+                if (password != "")
+                    this.password = password;
+
+                Application.application.open_machine (this);
+            };
+
+            Notification.DismissFunc dismiss_func = () => {
+            };
+
+            var auth_string = _("“%s” requires authentication").printf (display_name);
+            Application.application.main_window.notifications_bar.display_for_auth (auth_string,
+                                                                                    (owned) auth_func,
+                                                                                    (owned) dismiss_func,
+                                                                                    need_username);
         }
     }
 }

@@ -68,12 +68,12 @@ namespace Connections {
                     var credential = (DisplayCredential) cred;
 
                     switch (credential) {
-                    case DisplayCredential.USERNAME:
-                        print ("need username\n");
-                        break;
+                        case DisplayCredential.USERNAME:
+                            need_username = true;
+                            break;
 
                         case DisplayCredential.PASSWORD:
-                            print ("need passswd\n");
+                            need_password = true;
                             break;
 
                         case DisplayCredential.CLIENTNAME:
@@ -111,6 +111,10 @@ namespace Connections {
             if (connected)
                 return;
             connected = true;
+
+            display.set_credential (DisplayCredential.USERNAME, machine.username);
+            display.set_credential (DisplayCredential.PASSWORD, machine.password);
+            display.set_credential (DisplayCredential.CLIENTNAME, "gnome-connections");
 
             display.open_host (machine.host, machine.port.to_string ());
         }

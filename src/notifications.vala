@@ -40,6 +40,20 @@ namespace Connections {
 
             add (notification);
         }
+
+        public void display_for_auth (string auth_string,
+                                      owned AuthNotification.AuthFunc? auth_func,
+                                      owned Notification.DismissFunc?  dismiss_func,
+                                      bool                             need_username = true) {
+            var notification = new Connections.AuthNotification (auth_string,
+                                                                 (owned) auth_func,
+                                                                 (owned) dismiss_func,
+                                                                 need_username);
+            if (get_child () != null)
+                remove (get_child ());
+
+            add (notification);
+        }
     }
 
     [GtkTemplate (ui = "/org/gnome/Connections/ui/notification.ui")]
@@ -80,6 +94,61 @@ namespace Connections {
                 if (dismiss_func != null)
                     dismiss_func ();
             });
+        }
+    }
+
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/auth-notification.ui")]
+    private class AuthNotification : Gtk.Revealer {
+        public delegate void AuthFunc (string username, string password);
+
+        [GtkChild]
+        private Gtk.Label title_label;
+        [GtkChild]
+        private Gtk.Label username_label;
+        [GtkChild]
+        private Gtk.Entry username_entry;
+        [GtkChild]
+        private Gtk.Entry password_entry;
+        [GtkChild]
+        private Gtk.Button auth_button;
+
+        private AuthFunc? auth_func;
+
+        public AuthNotification (string auth_string,
+                                 owned AuthFunc? auth_func,
+                                 owned Notification.DismissFunc? dismiss_func,
+                                 bool need_username) {
+            set_reveal_child (true);
+
+            title_label.label = auth_string;
+
+            username_label.visible = need_username;
+            username_entry.visible = need_username;
+
+            this.auth_func = (owned) auth_func;
+        }
+
+        [GtkCallback]
+        private void on_username_entry_map () {
+            username_entry.grab_focus ();
+        }
+
+        [GtkCallback]
+        private void on_username_entry_activated () {
+            password_entry.grab_focus ();
+        }
+
+        [GtkCallback]
+        private void on_password_entry_activated () {
+            auth_button.activate ();
+        }
+
+        [GtkCallback]
+        private void on_auth_button_clicked () {
+            if (auth_func != null)
+                auth_func (username_entry.get_text (), password_entry.get_text ());
+
+            set_reveal_child (false);
         }
     }
 }
