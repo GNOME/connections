@@ -39,13 +39,13 @@
             ]
         },
         {
-            "name": "connections",
+            "name": "gnome-connections",
             "builddir": true,
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
-                    "url": "file:///home/feborges/connections"
+                    "url": "https://gitlab.gnome.org/felipeborges/gnome-connections.git"
                 }
             ]
         }
