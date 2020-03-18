@@ -123,6 +123,10 @@ namespace Connections {
             return display.get_pixbuf ();
         }
 
+        public override void send_keys (uint[] keyvals) {
+            display.send_keys (keyvals);
+        }
+
         public void scale () {
             if (!display.is_open ())
                 return;

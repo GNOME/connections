@@ -110,6 +110,30 @@
               <property name="pack-type">end</property>
             </packing>
           </child>
+
+          <child>
+            <object class="GtkMenuButton" id="keys_menu_button">
+              <property name="visible">True</property>
+              <property name="popover">keys_input_popover</property>
+
+              <child internal-child="accessible">
+                <object class="AtkObject" id="a11y-keyboard-menu">
+                  <property name="accessible-name" translatable="yes">Keyboard shortcuts</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkImage">
+                  <property name="visible">True</property>
+                  <property name="icon-name">input-keyboard-symbolic</property>
+                  <property name="icon-size">1</property>
+                </object>
+              </child>
+            </object>
+            <packing>
+              <property name="pack-type">end</property>
+            </packing>
+          </child>
         </object>
       </child>
     </template>
@@ -139,4 +163,57 @@
         <attribute name="label" translatable="yes">Properties</attribute>
       </item>
     </menu>
+
+    <object class="GtkPopoverMenu" id="keys_input_popover">
+      <child>
+        <object class="GtkBox">
+          <property name="visible">True</property>
+          <property name="margin">10</property>
+          <property name="orientation">vertical</property>
+          <child>
+            <object class="GtkModelButton">
+              <property name="visible">True</property>
+              <property name="action-name">key.ctrl+alt+backspace</property>
+              <property name="text" translatable="yes">Ctrl + Alt + Backspace</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkModelButton">
+              <property name="visible">True</property>
+              <property name="action-name">key.ctrl+alt+del</property>
+              <property name="text" translatable="yes">Ctrl + Alt + Del</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkModelButton">
+              <property name="visible">True</property>
+              <property name="action-name">key.ctrl+alt+f1</property>
+              <property name="text" translatable="yes">Ctrl + Alt + F1</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkModelButton">
+              <property name="visible">True</property>
+              <property name="action-name">key.ctrl+alt+f2</property>
+              <property name="text" translatable="yes">Ctrl + Alt + F2</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkModelButton">
+              <property name="visible">True</property>
+              <property name="action-name">key.ctrl+alt+f3</property>
+              <property name="text" translatable="yes">Ctrl + Alt + F3</property>
+            </object>
+          </child>
+          <child>
+            <object class="GtkModelButton">
+              <property name="visible">True</property>
+              <property name="action-name">key.ctrl+alt+f7</property>
+              <property name="text" translatable="yes">Ctrl + Alt + F7</property>
+            </object>
+          </child>
+        </object>
+      </child>
+    </object>
+
   </interface>

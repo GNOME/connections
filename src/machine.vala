@@ -101,7 +101,7 @@ namespace Connections {
         public Thumbnailer thumbnailer;
         public Gdk.Pixbuf? thumbnail { set; get; }
 
-        private Connections.Display display;
+        public Connections.Display display;
 
         public bool scaling {
             set {

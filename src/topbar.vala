@@ -33,6 +33,15 @@ namespace Connections {
             {"take_screenshot", take_screenshot_activated},
         };
 
+        private const GLib.ActionEntry[] key_input_action_entries = {
+            {"ctrl+alt+backspace", ctrl_alt_backspace_activated},
+            {"ctrl+alt+del", ctrl_alt_del_activated},
+            {"ctrl+alt+f1", ctrl_alt_fn_activated},
+            {"ctrl+alt+f2", ctrl_alt_fn_activated},
+            {"ctrl+alt+f3", ctrl_alt_fn_activated},
+            {"ctrl+alt+f7", ctrl_alt_fn_activated},
+        };
+
         construct {
             var action_group = new GLib.SimpleActionGroup ();
             action_group.add_action_entries (action_entries, this);
@@ -48,6 +57,10 @@ namespace Connections {
             section.append (_("Properties"), "display.properties");
             action = action_group.lookup_action ("properties") as GLib.SimpleAction;
             action.set_enabled (true);
+
+            var key_input_action_group = new GLib.SimpleActionGroup ();
+            key_input_action_group.add_action_entries (key_input_action_entries, this);
+            this.insert_action_group ("key", key_input_action_group);
         }
 
         private void properties_activated () {
@@ -76,6 +89,42 @@ namespace Connections {
             set_visible_child (display_toolbar);
 
             display_toolbar.set_title (machine.display_name);
+        }
+
+        private void ctrl_alt_backspace_activated () {
+            uint[] keyvals = { Gdk.Key.Control_L, Gdk.Key.Alt_L, Gdk.Key.BackSpace };
+
+            send_keys (keyvals);
+        }
+
+        private void ctrl_alt_del_activated () {
+            uint[] keyvals = { Gdk.Key.Control_L, Gdk.Key.Alt_L, Gdk.Key.Delete };
+
+            send_keys (keyvals);
+        }
+
+        private void ctrl_alt_fn_activated (GLib.SimpleAction action) {
+            uint[] keyvals = { Gdk.Key.Control_L, Gdk.Key.Alt_L, 0 };
+
+            if (action.name[action.name.length - 1] == '1')
+                keyvals[2] = Gdk.Key.F1;
+            else if (action.name[action.name.length - 1] == '2')
+                keyvals[2] = Gdk.Key.F2;
+            else if (action.name[action.name.length - 1] == '3')
+                keyvals[3] = Gdk.Key.F3;
+            else if (action.name[action.name.length - 1] == '7')
+                keyvals[2] = Gdk.Key.F7;
+            else {
+                warn_if_reached ();
+
+                return;
+            }
+
+            send_keys (keyvals);
+        }
+
+        private void send_keys (uint[] keyvals) {
+            machine.display.send_keys (keyvals);
         }
     }
 }

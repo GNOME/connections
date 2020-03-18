@@ -24,6 +24,7 @@ namespace Connections {
         public abstract Gtk.Widget get_widget ();
         public abstract void connect_to (Machine machine);
         public abstract Gdk.Pixbuf? get_pixbuf ();
+        public abstract void send_keys (uint[] keyvals);
         public bool connected;
 
         public bool can_grab_mouse { get; protected set; }
