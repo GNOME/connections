@@ -14,7 +14,7 @@
           <child>
             <object class="GtkButton" id="new_button">
               <property name="visible">True</property>
-              <signal name="clicked" handler="add_new_machine_button_clicked"/>
+              <signal name="clicked" handler="add_new_connection_button_clicked"/>
 
               <child internal-child="accessible">
                 <object class="AtkObject" id="a11y-new-button">

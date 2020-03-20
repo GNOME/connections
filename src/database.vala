@@ -22,18 +22,18 @@
 namespace Connections {
     private class MachineConfig : Connections.Database {
 
-        private unowned Machine machine;
+        private unowned Connection connection;
 
-        public MachineConfig (Machine machine) {
+        public MachineConfig (Connection connection) {
             load ();
 
-            this.machine = machine;
+            this.connection = connection;
         }
 
         public void delete () {
             load ();
             try {
-                keyfile.remove_group (machine.uri);
+                keyfile.remove_group (connection.uri);
             } catch (GLib.Error error) {
             }
 
@@ -41,10 +41,10 @@ namespace Connections {
         }
 
         public bool save () {
-            keyfile.set_string (machine.uri, "protocol", machine.protocol.to_string ());
-            keyfile.set_string (machine.uri, "host", machine.host);
-            keyfile.set_string (machine.uri, "port", machine.port.to_string ());
-            keyfile.set_string (machine.uri, "display-name", machine.display_name);
+            keyfile.set_string (connection.uri, "protocol", connection.protocol.to_string ());
+            keyfile.set_string (connection.uri, "host", connection.host);
+            keyfile.set_string (connection.uri, "port", connection.port.to_string ());
+            keyfile.set_string (connection.uri, "display-name", connection.display_name);
 
             return save_keyfile ();
         }
@@ -53,7 +53,7 @@ namespace Connections {
     private class Database : Object {
         protected KeyFile keyfile = new KeyFile ();
         protected string? filename = Path.build_filename (Environment.get_user_config_dir (),
-                                                          "machines.db");
+                                                          "connections.db");
 
         public void load () {
             try {
@@ -107,15 +107,17 @@ namespace Connections {
             keyfile.get_string (group, key);
         }
 
-        public List<Connections.Machine> get_machines () {
+        public List<Connections.Connection> get_connections () {
             load ();
 
-            List<Connections.Machine>? machines = new List<Connections.Machine> ();
+            List<Connections.Connection >? connections = new List<Connections.Connection> ();
             foreach (var group in keyfile.get_groups ()) {
-                machines.append (new Machine.from_uri (group));
+                var uri = Xml.URI.parse (group);
+                if (uri.scheme == "vnc")
+                    connections.append (new VncConnection (group));
             }
 
-            return machines;
+            return connections;
         }
     }
 }

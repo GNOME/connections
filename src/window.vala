@@ -72,11 +72,11 @@ namespace Connections {
                 stack.set_visible_child (empty_view);
         }
 
-        public void open_machine (Machine machine) {
-            display_view.connect_to (machine);
+        public void open_connection (Connection connection) {
+            display_view.connect_to (connection);
 
             stack.set_visible_child (display_view);
-            topbar.show_display_view (machine);
+            topbar.show_display_view (connection);
         }
 
         public void show_collection_view () {

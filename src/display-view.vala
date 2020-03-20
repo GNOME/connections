@@ -37,46 +37,9 @@ namespace Connections {
         [GtkChild]
         private Widget display_widget; 
 
-        private Connections.Display _display;
-        private Connections.Display display {
-            get { return _display; }
-            set {
-                if (_display != null) {
-                    _display.disconnect (show_display_id);
-                    show_display_id = 0;
-                }
-
-                _display = value;
-                if (_display == null)
-                    return;
-
-                show_display_id = _display.show.connect (() => {
-                    show_display (); 
-                });
-            }
-        }
+        private Widget? display;
 
         private ulong show_display_id;
-
-        private bool can_grab_mouse {
-            get {
-                return display != null ? display.can_grab_mouse : false;
-            }
-        }
-        private bool mouse_grabbed {
-            get {
-                return display != null ? display.mouse_grabbed : false;
-            }
-        }
-        private bool keyboard_grabbed {
-            get {
-                return display != null ? display.keyboard_grabbed : false;
-            }
-        }
-        private ulong can_grab_mouse_id;
-        private ulong mouse_grabbed_id;
-        private ulong keyboard_grabbed_id;
-        private ulong cursor_id;
 
         construct {
             event_box.set_events (EventMask.POINTER_MOTION_MASK | EventMask.SCROLL_MASK);
@@ -86,68 +49,51 @@ namespace Connections {
             if (event_box.get_child () == null)
                 return;
 
-            if (mouse_grabbed_id != 0) {
-                display.disconnect (mouse_grabbed_id);
-                mouse_grabbed_id = 0;
-            }
-
-            if (can_grab_mouse_id != 0) {
-                display.disconnect (can_grab_mouse_id);
-                can_grab_mouse_id = 0;
-            }
-
-            if (keyboard_grabbed_id != 0) {
-                display.disconnect (keyboard_grabbed_id);
-                keyboard_grabbed_id = 0;
-            }
             display = null;
 
             var widget = event_box.get_child ();
-            if (cursor_id != 0) {
-                widget.get_window ().disconnect (cursor_id);
-                cursor_id = 0;
-            }
-
             if (widget != null)
                 event_box.remove (widget);
         }
 
-        public void replace_display (Connections.Display display) {
+        public void replace_display (Gtk.Widget display) {
             if (event_box.get_child () != null)
                 remove_display ();
 
             this.display = display;
 
-            var widget = display.get_widget ();
-            widget.set_events (widget.get_events () & ~EventMask.POINTER_MOTION_MASK);
-            event_box.add (widget);
+            display.set_events (display.get_events () & ~EventMask.POINTER_MOTION_MASK);
+            event_box.add (display);
             event_box.show_all ();
 
             ulong draw_id = 0;
-            draw_id = widget.draw.connect (() => {
-                widget.disconnect (draw_id);
+            draw_id = display.draw.connect (() => {
+                display.disconnect (draw_id);
 
-                cursor_id = widget.get_window ().notify["cursor"].connect (() => {
-                   event_box.get_window ().set_cursor (widget.get_window ().cursor);
-                });
+                /*cursor_id = display.get_window ().notify["cursor"].connect (() => {
+                   event_box.get_window ().set_cursor (display.get_window ().cursor);
+                });*/
 
                 return false;
             });
         }
 
-        public void connect_to (Machine machine) {
-            if (machine.uri.contains ("vnc")) {
-                replace_display (new VncDisplay ());
-                display.connect_to (machine);
+        public void connect_to (Connection connection) {
+            replace_display (connection.widget);
+
+            if (show_display_id != 0) {
+                connection.disconnect (show_display_id);
+                show_display_id = 0;
             }
 
-            machine.update_thumbnail (display);
+            show_display_id = connection.show.connect (show_display);
+            connection.connect_it ();
         }
 
         private void show_display () {
             stack.set_visible_child (display_widget);
 
-            display.get_widget ().grab_focus ();
+            display.grab_focus ();
         }
 
         [GtkCallback]

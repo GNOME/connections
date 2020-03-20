@@ -22,30 +22,30 @@
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/collection-view-child.ui")]
     private class CollectionViewChild : Gtk.Box {
-        public Machine machine;
+        public Connection connection;
 
         [GtkChild]
-        private Gtk.Label machine_name;
+        private Gtk.Label connection_name;
 
         [GtkChild]
         public Gtk.Image thumbnail; 
 
         private ulong deleted_notify_id;
 
-        public CollectionViewChild (Machine machine) {
-            this.machine = machine;
+        public CollectionViewChild (Connection connection) {
+            this.connection = connection;
 
-            machine_name.set_text (machine.display_name);
+            connection_name.set_text (connection.display_name);
 
-            machine.notify["thumbnail"].connect (() => {
-                thumbnail.set_from_pixbuf (machine.thumbnail);
+            connection.thumbnailer.update.connect (() => {
+                thumbnail.set_from_pixbuf (connection.thumbnail.scale_simple (180, 134, Gdk.InterpType.BILINEAR));
             }); 
 
             update_thumbnail.begin ();
         }
 
         private async void update_thumbnail () {
-            var file = GLib.File.new_for_path (machine.thumbnailer.thumbnail_path);
+            var file = GLib.File.new_for_path (connection.thumbnailer.thumbnail_path);
             if (file.query_exists ()) {
                 var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.get_path (), 180, 134, true);
                 thumbnail.set_from_pixbuf (pixbuf);

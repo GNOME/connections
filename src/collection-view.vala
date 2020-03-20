@@ -39,7 +39,7 @@ namespace Connections {
             var child = new Gtk.FlowBoxChild (); 
             child.halign = Gtk.Align.START;
 
-            var box = new CollectionViewChild (item as Machine);
+            var box = new CollectionViewChild (item as Connection);
             child.add (box);
 
             return child;
@@ -51,7 +51,7 @@ namespace Connections {
             if (item == null)
                 return;
 
-            Application.application.open_machine (item.machine);
+            Application.application.open_connection (item.connection);
         } 
 
         [GtkCallback]
@@ -69,7 +69,7 @@ namespace Connections {
             if (item == null)
                 return false;
 
-            popover.update_for_item (item.machine);
+            popover.update_for_item (item.connection);
             popover.set_relative_to (item.thumbnail);
             popover.show ();
 

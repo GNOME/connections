@@ -1,4 +1,4 @@
-/* machine.vala
+/* connection.vala
  *
  * Copyright (C) Red Hat, Inc
  *
@@ -20,8 +20,20 @@
  */
 
 namespace Connections {
-    private class Machine : Object {
-        private MachineConfig config;
+    private abstract class Connection : GLib.Object {
+        public signal void show ();
+
+        public abstract Gtk.Widget widget { get; protected set; }
+
+        public bool need_password { get; protected set; }
+        public bool need_username { get; protected set; }
+
+        public abstract bool scaling { get; set; }
+        public abstract bool view_only { get; set; }
+
+        protected MachineConfig config;
+
+        public bool connected;
 
         public enum Protocol {
             UNKNOWN,
@@ -54,7 +66,7 @@ namespace Connections {
                     case "spice":
                         return SPICE;
                     case "rdp":
-                        return RDP;  
+                        return RDP;
                     case "ssh":
                        return SSH;
                     case "unknown":
@@ -63,6 +75,7 @@ namespace Connections {
                 }
             }
         }
+        public Protocol protocol;
 
         public string uri {
             owned get {
@@ -80,7 +93,6 @@ namespace Connections {
 
         public string host;
         public int port;
-        public Protocol protocol;
 
         private string _display_name;
         public string display_name {
@@ -96,94 +108,44 @@ namespace Connections {
             }
         }
 
-        public bool deleted { get; private set; }
+        public abstract void send_keys (uint[] keys);
 
         public Thumbnailer thumbnailer;
-        public Gdk.Pixbuf? thumbnail { set; get; }
+        public abstract Gdk.Pixbuf? thumbnail { set; owned get; }
 
-        private ulong need_password_id;
-        private ulong need_username_id;
-
-        private Display? _display;
-        public Connections.Display display {
-            get {
-                return _display;
-            }
-
-            set {
-                if (_display != null) {
-                    _display.disconnect (need_password_id);
-                    need_password_id = 0;
-                    _display.disconnect (need_username_id);
-                    need_username_id = 0;
-                }
-
-                _display = value;
-                if (_display == null)
-                    return;
-
-                need_password_id = _display.notify["need-password"].connect (handle_auth);
-                need_username_id = _display.notify["need-username"].connect (handle_auth);
-            }
-        }
-
-        public bool scaling {
-            set {
-                display.scaling = value;
-            }
-
-            get {
-                return display.scaling;
-            }
-        }
-
-        public bool view_only {
-            set {
-                display.view_only = value;
-            }
-
-            get {
-                return display.view_only;
-            }
-        }
-
-        construct {
-            config = new MachineConfig (this);
-        }
-
-        public Machine.from_uri (string uri) {
-            this.uri = uri;
-
-            thumbnailer = new Connections.Thumbnailer (this);
-        }
-
-        public void delete () {
-            config.delete ();
-        }
-
-        public void save () {
-            config.save ();
-        }
-
-        public void update_thumbnail (Display display) {
-            this.display = display;
-
-            thumbnailer.update_thumbnail (display);
-        }
-
-        public void take_screenshot () {
-            if (display == null)
+        public async void take_screenshot () {
+            if (thumbnail == null)
                 return;
 
-            display.take_screenshot ();
+            try {
+                var timestamp = new GLib.DateTime.now_local ().format ("%Y-%m-%d %H-%M-%S");
 
+                // Translators: %s => the timestamp of when the screenshot was taken.
+                var filename = _("Screenshot from %s").printf (timestamp);
+                var path = Path.build_filename (Environment.get_user_special_dir (GLib.UserDirectory.PICTURES),
+                                                filename);
+                thumbnail.save (path + ".png", "png");
+            } catch (GLib.Error error) {
+                warning ("Failed to take screenshot %s", error.message);
+            }
+
+            flash_display ();
+        }
+
+        private void flash_display () {
+            var style_context = widget.get_parent ().get_style_context ();
+            style_context.add_class ("flash");
+            Timeout.add (200, () => {
+                style_context.remove_class ("flash");
+
+                return false;
+            });
         }
 
         public string? username;
         public string? password;
-        private void handle_auth () {
-            var need_username = display.need_username;
-            if (!display.need_username && !display.need_password)
+        protected void handle_auth () {
+            if (!need_username && !need_password)
                 return;
 
             AuthNotification.AuthFunc auth_func = (username, password) => {
@@ -192,7 +154,7 @@ namespace Connections {
                 if (password != "")
                     this.password = password;
 
-                Application.application.open_machine (this);
+                Application.application.open_connection (this);
             };
 
             Notification.DismissFunc dismiss_func = () => {
@@ -204,5 +166,22 @@ namespace Connections {
                                                                                     (owned) dismiss_func,
                                                                                     need_username);
         }
+
+        public void delete () {
+            config.delete ();
+        }
+
+        public void save () {
+            config.save ();
+        }
+
+        construct {
+            config = new MachineConfig (this);
+            thumbnailer = new Connections.Thumbnailer (this);
+
+            show.connect (() => { thumbnailer.update_thumbnail (); });
+        }
+
+        public abstract void connect_it ();
     }
 }

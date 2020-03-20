@@ -65,15 +65,11 @@ namespace Connections {
         }
 
         [GtkCallback]
-        private void on_create_machine_button_clicked () {
+        private void on_create_connection_button_clicked () {
             try {
-                var machine = new Connections.Machine () {
-                    uri = url_entry.get_text ()
-                };
-
-                Application.application.add_machine (machine);
+                Application.application.add_connection (url_entry.get_text ());
             } catch (GLib.Error error) {
-                warning ("Failed to add machine %s: %s", url_entry.get_text (), error.message);
+                warning ("Failed to add connection %s: %s", url_entry.get_text (), error.message);
             }
 
             destroy ();

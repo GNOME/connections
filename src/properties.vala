@@ -79,28 +79,28 @@ namespace Connections {
     }
 
     private class VncPropertiesDialog : PropertiesDialog {
-        private weak Machine machine;
+        private weak VncConnection connection;
 
-        public VncPropertiesDialog (Machine machine) {
-            this.machine = machine;
+        public VncPropertiesDialog (Connection connection) {
+            this.connection = connection as VncConnection;
 
             var scaling = new Property () {
                 label = _("Scaling"),
                 widget = new Gtk.Switch () {
-                    active = machine.scaling
+                    active = connection.scaling
                 }
             };
             model.append (scaling);
-            scaling.widget.bind_property ("active", machine, "scaling", BindingFlags.SYNC_CREATE);
+            scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
 
             var view_only = new Property () {
                 label = _("View only"),
                 widget = new Gtk.Switch () {
-                    active = machine.view_only
+                    active = connection.view_only
                 } 
             };
             model.append (view_only);
-            view_only.widget.bind_property ("active", machine, "view_only", BindingFlags.SYNC_CREATE);
+            view_only.widget.bind_property ("active", connection, "view_only", BindingFlags.SYNC_CREATE);
 
             var use_jpeg_compression = new Property () {
                 label = _("Use JPEG compression"),

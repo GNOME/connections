@@ -32,7 +32,7 @@ namespace Connections {
 
         construct {
             windows = new List<Connections.Window> ();
-            model = new GLib.ListStore (typeof (Connections.Machine));
+            model = new GLib.ListStore (typeof (Connections.Connection));
         }
 
         public Application () {
@@ -88,7 +88,7 @@ namespace Connections {
 
             add_new_window ();
 
-            load_machines ();
+            load_connections ();
         }
 
         public Window add_new_window () {
@@ -100,46 +100,56 @@ namespace Connections {
             return window;
         }
 
-        public void add_machine (Machine machine) {
-            model.insert (0, machine);
-            machine.save ();
+        public void add_connection (string _uri) {
+            Connection? connection = null;
+
+            var uri = Xml.URI.parse (_uri);
+            if (uri.scheme == "vnc") {
+                connection = new VncConnection (_uri);
+            }
+
+            if (connection == null)
+                return;
+
+            model.insert (0, connection);
+            connection.save ();
         }
 
-        public void remove_machine (Machine machine) {
+        public void remove_connection (Connection connection) {
             Notification.OKFunc undo = () => {
-                debug ("Machine deletion cancelled by user. Re-adding to view");
-                model.insert (0, machine);
+                debug ("Connection deletion cancelled by user. Re-adding to view");
+                model.insert (0, connection);
             };
 
             Notification.DismissFunc really_remove = () => {
                 debug ("User did not cancel deletion. Deleting now...");
-                machine.delete ();
+                connection.delete ();
             };
 
             for (int i = 0; i < model.get_n_items (); i++) {
-                if ((model.get_item (i) as Machine) == machine) {
+                if ((model.get_item (i) as Connection) == connection) {
                     model.remove (i);
 
                     break;
                 }
             }
 
-            var message = _("Connection to “%s” has been deleted").printf (machine.display_name);
+            var message = _("Connection to “%s” has been deleted").printf (connection.display_name);
             main_window.notifications_bar.display_for_action (message,
                                                               _("Undo"),
                                                               (owned) undo,
                                                               (owned) really_remove);
         }
 
-        public void load_machines () {
+        public void load_connections () {
             var db = new Database ();
-            foreach (var machine in db.get_machines ()) {
-                model.append (machine);
+            foreach (var connection in db.get_connections ()) {
+                model.append (connection);
             }
         }
 
-        public void open_machine (Machine machine) {
-            main_window.open_machine (machine);
+        public void open_connection (Connection connection) {
+            main_window.open_connection (connection);
         }
     }
 }

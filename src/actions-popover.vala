@@ -27,40 +27,40 @@ namespace Connections {
             {"properties", properties_activated}
         };
 
-        private Connections.Machine machine;
+        private Connections.Connection connection;
 
         construct {
             action_group = new GLib.SimpleActionGroup ();
             action_group.add_action_entries (action_entries, this);
-            this.insert_action_group ("machine", action_group);
+            this.insert_action_group ("connection", action_group);
         }
 
-        public void update_for_item (Machine machine) {
-            this.machine = machine;
+        public void update_for_item (Connection connection) {
+            this.connection = connection;
 
             var menu = new GLib.Menu ();
 
             var action = action_group.lookup_action ("delete") as GLib.SimpleAction;
-            menu.append (_("Delete"), "machine.delete");
+            menu.append (_("Delete"), "connection.delete");
             action.set_enabled (true);
 
             action = action_group.lookup_action ("Properties") as GLib.SimpleAction;
-            menu.append (_("Properties"), "machine.properties");
+            menu.append (_("Properties"), "connection.properties");
             action.set_enabled (true);
 
             bind_model (menu, null);
         }
 
         private void delete_activated () {
-            debug ("Deleting %s", machine.uri);
+            debug ("Deleting %s", connection.uri);
 
-            Application.application.remove_machine (machine);
+            Application.application.remove_connection (connection);
         }
 
         private void properties_activated () {
-            debug ("Launch properties for %s", machine.uri);
+            debug ("Launch properties for %s", connection.uri);
 
-            (new VncPropertiesDialog (machine).run ());
+            (new VncPropertiesDialog (connection).run ());
 
         }
     }

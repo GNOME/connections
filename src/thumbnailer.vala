@@ -21,33 +21,33 @@
 
 namespace Connections {
     private class Thumbnailer : GLib.Object {
-        public weak Machine machine;
+        public weak Connection connection;
+
+        public signal void update ();
 
         public string? thumbnail_path {
             owned get {
                 return Path.build_filename (Environment.get_user_cache_dir (),
                                             "connections",
-                                            machine.host + ".png");
+                                            connection.host + ".png");
             }
         }
 
         private uint thumbnail_id;
 
-        public Thumbnailer (Machine machine) {
-            this.machine = machine;
+        public Thumbnailer (Connection connection) {
+            this.connection = connection;
         }
 
-        public void update_thumbnail (Display display) {
+        public void update_thumbnail () {
             if (thumbnail_id != 0)
                 return;
 
             thumbnail_id = Timeout.add_seconds (3, () => {
-                var pixbuf = display.get_pixbuf ();
-                if (pixbuf != null) {
-                    machine.thumbnail = pixbuf.scale_simple (180, 134, Gdk.InterpType.BILINEAR);
-
+                if (connection.thumbnail != null) {
+                    update ();
                     try {
-                        pixbuf.save (thumbnail_path, "png");
+                        connection.thumbnail.save (thumbnail_path, "png");
                     } catch (GLib.Error error) {
                         warning (error.message);
 

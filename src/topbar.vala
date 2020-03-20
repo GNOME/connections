@@ -27,7 +27,7 @@ namespace Connections {
         [GtkChild]
         private Gtk.HeaderBar display_toolbar;
 
-        private weak Connections.Machine machine;
+        private weak Connections.Connection connection;
         private const GLib.ActionEntry[] action_entries = {
             {"properties", properties_activated},
             {"take_screenshot", take_screenshot_activated},
@@ -64,16 +64,16 @@ namespace Connections {
         }
 
         private void properties_activated () {
-            (new VncPropertiesDialog (machine).run ());
+            (new VncPropertiesDialog (connection).run ());
         }
 
         private void take_screenshot_activated () {
-            if (machine != null)
-                machine.take_screenshot ();
+            if (connection != null)
+                connection.take_screenshot ();
         }
 
         [GtkCallback]
-        private void add_new_machine_button_clicked () {
+        private void add_new_connection_button_clicked () {
             (new Connections.Assistant (Application.application.main_window)).run ();
         }
 
@@ -83,12 +83,12 @@ namespace Connections {
             set_visible_child (collection_toolbar);
         }
 
-        public void show_display_view (Machine machine) {
-            this.machine = machine;
+        public void show_display_view (Connection connection) {
+            this.connection = connection;
 
             set_visible_child (display_toolbar);
 
-            display_toolbar.set_title (machine.display_name);
+            display_toolbar.set_title (connection.display_name);
         }
 
         private void ctrl_alt_backspace_activated () {
@@ -124,7 +124,7 @@ namespace Connections {
         }
 
         private void send_keys (uint[] keyvals) {
-            machine.display.send_keys (keyvals);
+            connection.send_keys (keyvals);
         }
     }
 }
