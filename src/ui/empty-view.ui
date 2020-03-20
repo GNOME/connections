@@ -4,12 +4,18 @@
     <template class="ConnectionsEmptyView" parent="GtkGrid">
       <property name="orientation">vertical</property>
       <property name="halign">center</property>
+      <property name="valign">center</property>
+      <style>
+        <class name="dim-label"/>
+      </style>
 
       <child>
         <object class="GtkImage">
           <property name="visible">True</property>
           <property name="icon-name">org.gnome.Connections-symbolic</property>
           <property name="halign">center</property>
+          <property name="valign">center</property>
+          <property name="pixel-size">192</property>
           <property name="margin-bottom">24</property>
         </object>
       </child>
@@ -17,12 +23,24 @@
       <child>
         <object class="GtkLabel">
           <property name="visible">True</property>
-          <property name="vexpand">True</property>
           <property name="halign">center</property>
+          <property name="margin-bottom">6</property>
           <property name="label" translatable="yes">Welcome to Connections</property>
           <attributes>
-            <attribute name="scale" value="1.2"/>
+            <attribute name="scale" value="1.6"/>
             <attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
+          </attributes>
+        </object>
+      </child>
+
+      <child>
+        <object class="GtkLabel">
+          <property name="visible">True</property>
+          <property name="use-markup">True</property>
+          <property name="halign">center</property>
+          <property name="label" translatable="yes">Just hit the &lt;b&gt;+&lt;/b&gt; button to make your first connection.</property>
+          <attributes>
+            <attribute name="scale" value="1.2"/>
           </attributes>
         </object>
       </child>
