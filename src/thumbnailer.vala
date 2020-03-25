@@ -51,7 +51,7 @@ namespace Connections {
                     } catch (GLib.Error error) {
                         warning (error.message);
 
-                        return true;
+                        return false;
                     }
                 }
 
