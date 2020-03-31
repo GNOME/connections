@@ -5,6 +5,7 @@
       <property name="orientation">vertical</property>
       <property name="spacing">0</property>
       <property name="vexpand">True</property>
+      <signal name="size-allocate" handler="on_size_allocate"/>
 
       <child>
         <object class="GtkStack" id="stack">
@@ -27,6 +28,16 @@
           <child>
             <object class="GtkOverlay" id="display_widget">
               <property name="visible">True</property>
+
+              <child type="overlay">
+                <object class="GtkLabel" id="size_label">
+                  <property name="halign">center</property>
+                  <property name="valign">center</property>
+                  <style>
+                    <class name="app-notification"/>
+                  </style>
+                </object>
+              </child>
 
               <child>
                 <object class="GtkEventBox" id="event_box">

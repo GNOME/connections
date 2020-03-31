@@ -35,7 +35,10 @@ namespace Connections {
         private Widget loading; 
 
         [GtkChild]
-        private Widget display_widget; 
+        private Widget display_widget;
+
+        [GtkChild]
+        private Label size_label;
 
         private Widget? display;
 
@@ -106,5 +109,39 @@ namespace Connections {
 
             return false;
         } 
+
+        private uint size_label_timeout;
+        private int width = -1;
+        private int height = -1;
+        [GtkCallback]
+        private void on_size_allocate (Gtk.Allocation allocation) {
+            if (width == allocation.width && height == allocation.height) {
+                return;
+            }
+
+            width = allocation.width;
+            height = allocation.height;
+
+            // Translators: Showing size of widget as WIDTH×HEIGHT here.
+            size_label.label = _("%d×%d").printf (allocation.width, allocation.height);
+
+            Idle.add (() => {
+                size_label.visible = true;
+
+                if (size_label_timeout != 0) {
+                    Source.remove (size_label_timeout);
+                    size_label_timeout = 0;
+                }
+
+                size_label_timeout = Timeout.add_seconds (3, () => {
+                    size_label.visible = false;
+                    size_label_timeout = 0;
+
+                    return false;
+                });
+
+                return false;
+            });
+        }
     }
 }
