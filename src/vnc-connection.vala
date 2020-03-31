@@ -99,7 +99,6 @@ namespace Connections {
         public VncConnection (string uri) {
             this.uri = uri;
 
-            thumbnailer = new Connections.Thumbnailer (this);
             config = new MachineConfig (this);
         }
 
