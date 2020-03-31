@@ -28,10 +28,9 @@ namespace Connections {
             load_keyfile ();
 
             this.connection = connection;
-            load ();
         }
 
-        private void load () {
+        public void load () {
             connection.protocol = connection.protocol.from_string (get_string (connection.uri, "protocol"));
             connection.host = get_string (connection.uri, "host");
             connection.port = int.parse (get_string (connection.uri, "port"));
@@ -129,8 +128,12 @@ namespace Connections {
             List<Connections.Connection >? connections = new List<Connections.Connection> ();
             foreach (var group in keyfile.get_groups ()) {
                 var uri = Xml.URI.parse (group);
-                if (uri.scheme == "vnc")
-                    connections.append (new VncConnection (group));
+                if (uri.scheme == "vnc") {
+                    var connection = new VncConnection (group);
+                    connection.load ();
+
+                    connections.append (connection);
+                }
             }
 
             return connections;
