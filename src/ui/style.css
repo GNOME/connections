@@ -11,3 +11,8 @@
     animation-duration: 300ms;
     animation-iteration-count: 1;
 }
+
+.thumbnail {
+    border: 1px solid mix (@theme_bg_color, shade (@theme_bg_color, 0.5), 0.5);
+    background: @theme_bg_color;
+}
