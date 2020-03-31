@@ -25,28 +25,44 @@ namespace Connections {
         private unowned Connection connection;
 
         public MachineConfig (Connection connection) {
-            load ();
+            load_keyfile ();
 
             this.connection = connection;
+            load ();
+        }
+
+        private void load () {
+            connection.protocol = connection.protocol.from_string (get_string (connection.uri, "protocol"));
+            connection.host = get_string (connection.uri, "host");
+            connection.port = int.parse (get_string (connection.uri, "port"));
+            connection.display_name = get_string (connection.uri, "display-name");
+
+            connection.scaling = get_boolean (connection.uri, "scaling");
+            connection.view_only = get_boolean (connection.uri, "view_only");
+            connection.show_local_pointer = get_boolean (connection.uri, "show_local_pointer");
+        }
+
+        public bool save () {
+            set_string (connection.uri, "protocol", connection.protocol.to_string ());
+            set_string (connection.uri, "host", connection.host);
+            set_string (connection.uri, "port", connection.port.to_string ());
+            set_string (connection.uri, "display-name", connection.display_name);
+
+            set_boolean (connection.uri, "scaling", connection.scaling);
+            set_boolean (connection.uri, "view_only", connection.view_only);
+            set_boolean (connection.uri, "show_local_pointer", connection.show_local_pointer);
+
+            return save_keyfile ();
         }
 
         public void delete () {
-            load ();
+            load_keyfile ();
             try {
                 keyfile.remove_group (connection.uri);
             } catch (GLib.Error error) {
             }
 
             save_keyfile ();
-        }
-
-        public bool save () {
-            keyfile.set_string (connection.uri, "protocol", connection.protocol.to_string ());
-            keyfile.set_string (connection.uri, "host", connection.host);
-            keyfile.set_string (connection.uri, "port", connection.port.to_string ());
-            keyfile.set_string (connection.uri, "display-name", connection.display_name);
-
-            return save_keyfile ();
         }
     }
 
@@ -55,7 +71,7 @@ namespace Connections {
         protected string? filename = Path.build_filename (Environment.get_user_config_dir (),
                                                           "connections.db");
 
-        public void load () {
+        public void load_keyfile () {
             try {
                 File file = File.new_for_path (filename);
                 file.create (FileCreateFlags.PRIVATE);
@@ -103,12 +119,12 @@ namespace Connections {
             keyfile.set_string (group, key, value);
         }
 
-        public void get_string (string group, string key) {
-            keyfile.get_string (group, key);
+        public string get_string (string group, string key) {
+            return keyfile.get_string (group, key);
         }
 
         public List<Connections.Connection> get_connections () {
-            load ();
+            load_keyfile ();
 
             List<Connections.Connection >? connections = new List<Connections.Connection> ();
             foreach (var group in keyfile.get_groups ()) {

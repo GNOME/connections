@@ -69,6 +69,16 @@ namespace Connections {
             }
         }
 
+        public override bool show_local_pointer {
+            set {
+                display.set_pointer_local (value);
+            }
+
+            get {
+                return display.get_pointer_local ();
+            }
+        }
+
         construct {
             display = new Vnc.Display ();
             display.set_keyboard_grab (true);
@@ -90,6 +100,7 @@ namespace Connections {
             this.uri = uri;
 
             thumbnailer = new Connections.Thumbnailer (this);
+            config = new MachineConfig (this);
         }
 
         ~VncConnection () {

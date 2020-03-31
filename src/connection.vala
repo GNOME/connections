@@ -30,6 +30,7 @@ namespace Connections {
 
         public abstract bool scaling { get; set; }
         public abstract bool view_only { get; set; }
+        public abstract bool show_local_pointer { get; set; }
 
         protected MachineConfig config;
 
@@ -176,7 +177,6 @@ namespace Connections {
         }
 
         construct {
-            config = new MachineConfig (this);
             thumbnailer = new Connections.Thumbnailer (this);
 
             show.connect (() => { thumbnailer.update_thumbnail (); });

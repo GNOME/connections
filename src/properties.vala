@@ -26,6 +26,8 @@ namespace Connections {
         [GtkChild]
         protected Gtk.ListBox listbox;
 
+        protected weak VncConnection connection;
+
         construct {
             use_header_bar = 1;
 
@@ -73,13 +75,12 @@ namespace Connections {
         }
     }
 
-    private class Property : GLib.Object {
+     private class Property : GLib.Object {
         public string label;
         public Gtk.Widget widget;
     }
 
     private class VncPropertiesDialog : PropertiesDialog {
-        private weak VncConnection connection;
 
         public VncPropertiesDialog (Connection connection) {
             this.connection = connection as VncConnection;
@@ -92,6 +93,7 @@ namespace Connections {
             };
             model.append (scaling);
             scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
+            connection.notify["scaling"].connect (() => { connection.save (); });
 
             var view_only = new Property () {
                 label = _("View only"),
@@ -101,12 +103,17 @@ namespace Connections {
             };
             model.append (view_only);
             view_only.widget.bind_property ("active", connection, "view_only", BindingFlags.SYNC_CREATE);
+            connection.notify["view_only"].connect (() => { connection.save (); });
 
-            var use_jpeg_compression = new Property () {
-                label = _("Use JPEG compression"),
-                widget = new Gtk.Switch ()
+            var local_pointer = new Property () {
+                label = _("Show local pointer"),
+                widget = new Gtk.Switch () {
+                    active = connection.show_local_pointer
+                }
             };
-            model.append (use_jpeg_compression);
+            model.append (local_pointer);
+            local_pointer.widget.bind_property ("active", connection, "show_local_pointer", BindingFlags.SYNC_CREATE);
+            connection.notify["show_local_pointer"].connect (() => { connection.save (); });
         }
     }
 }
