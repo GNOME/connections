@@ -126,6 +126,18 @@ namespace Connections {
                 var path = Path.build_filename (Environment.get_user_special_dir (GLib.UserDirectory.PICTURES),
                                                 filename);
                 thumbnail.save (path + ".png", "png");
+
+                Notification.OKFunc open = () => {
+                    debug ("Opening screenshot file");
+                    Gtk.show_uri (Application.application.main_window.get_screen (),
+                                  File.new_for_path (path).get_uri () + ".png",
+                                  Gdk.CURRENT_TIME);
+                };
+                var message = _("Screenshot taken");
+                Application.application.main_window.notifications_bar.display_for_action (message,
+                                                                                          _("Open"),
+                                                                                          (owned) open,
+                                                                                          null);
             } catch (GLib.Error error) {
                 warning ("Failed to take screenshot %s", error.message);
             }
