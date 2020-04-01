@@ -22,11 +22,11 @@
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/properties.ui")]
     private class PropertiesDialog : Gtk.Dialog {
-        protected GLib.ListStore model = new GLib.ListStore (typeof (Property));
+        private GLib.ListStore model = new GLib.ListStore (typeof (Property));
         [GtkChild]
-        protected Gtk.ListBox listbox;
+        private Gtk.ListBox listbox;
 
-        protected weak VncConnection connection;
+        protected weak Connection connection;
 
         construct {
             use_header_bar = 1;
@@ -35,6 +35,11 @@ namespace Connections {
             listbox.set_header_func (use_listbox_separator);
 
             set_transient_for (Application.application.main_window);
+        }
+
+        public void add_property (Connections.Property property) {
+            assert (property is Connections.Property);
+            model.append (property);
         }
 
         private Gtk.Widget create_entry (Object item) {
@@ -78,42 +83,5 @@ namespace Connections {
      private class Property : GLib.Object {
         public string label;
         public Gtk.Widget widget;
-    }
-
-    private class VncPropertiesDialog : PropertiesDialog {
-
-        public VncPropertiesDialog (Connection connection) {
-            this.connection = connection as VncConnection;
-
-            var scaling = new Property () {
-                label = _("Scaling"),
-                widget = new Gtk.Switch () {
-                    active = connection.scaling
-                }
-            };
-            model.append (scaling);
-            scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
-            connection.notify["scaling"].connect (() => { connection.save (); });
-
-            var view_only = new Property () {
-                label = _("View only"),
-                widget = new Gtk.Switch () {
-                    active = connection.view_only
-                } 
-            };
-            model.append (view_only);
-            view_only.widget.bind_property ("active", connection, "view_only", BindingFlags.SYNC_CREATE);
-            connection.notify["view-only"].connect (() => { connection.save (); });
-
-            var local_pointer = new Property () {
-                label = _("Show local pointer"),
-                widget = new Gtk.Switch () {
-                    active = connection.show_local_pointer
-                }
-            };
-            model.append (local_pointer);
-            local_pointer.widget.bind_property ("active", connection, "show_local_pointer", BindingFlags.SYNC_CREATE);
-            connection.notify["show-local-pointer"].connect (() => { connection.save (); });
-        }
     }
 }

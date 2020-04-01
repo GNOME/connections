@@ -1,4 +1,4 @@
-/* connection.vala
+/* vnc-connection.vala
  *
  * Copyright (C) Red Hat, Inc
  *
@@ -184,6 +184,43 @@ namespace Connections {
 
                 display.width_request = (alloc.height * display.width) / display.height;
             }
+        }
+    }
+
+    private class VncPropertiesDialog : PropertiesDialog {
+
+        public VncPropertiesDialog (Connection connection) {
+            this.connection = connection as VncConnection;
+
+            var scaling = new Property () {
+                label = _("Scaling"),
+                widget = new Gtk.Switch () {
+                    active = connection.scaling
+                }
+            };
+            scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
+            connection.notify["scaling"].connect (() => { connection.save (); });
+            add_property (scaling);
+
+            var view_only = new Property () {
+                label = _("View only"),
+                widget = new Gtk.Switch () {
+                    active = connection.view_only
+                }
+            };
+            view_only.widget.bind_property ("active", connection, "view_only", BindingFlags.SYNC_CREATE);
+            connection.notify["view-only"].connect (() => { connection.save (); });
+            add_property (view_only);
+
+            var local_pointer = new Property () {
+                label = _("Show local pointer"),
+                widget = new Gtk.Switch () {
+                    active = connection.show_local_pointer
+                }
+            };
+            local_pointer.widget.bind_property ("active", connection, "show_local_pointer", BindingFlags.SYNC_CREATE);
+            connection.notify["show-local-pointer"].connect (() => { connection.save (); });
+            add_property (local_pointer);
         }
     }
 }
