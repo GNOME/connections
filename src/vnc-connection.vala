@@ -95,7 +95,7 @@ namespace Connections {
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);
             display.size_allocate.connect (scale);
 
-            config = new MachineConfig (this);
+            config = new ConnectionConfig (this);
         }
 
         public VncConnection (string uuid) {

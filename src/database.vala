@@ -20,11 +20,11 @@
  */
 
 namespace Connections {
-    private class MachineConfig : Connections.Database {
+    private class ConnectionConfig : Connections.Database {
 
         private unowned Connection connection;
 
-        public MachineConfig (Connection connection) {
+        public ConnectionConfig (Connection connection) {
             load_keyfile ();
 
             this.connection = connection;
