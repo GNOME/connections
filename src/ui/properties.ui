@@ -16,7 +16,49 @@
           <child>
             <object class="GtkBox">
               <property name="visible">True</property>
+              <property name="orientation">vertical</property>
               <property name="border-width">20</property>
+              <property name="spacing">20</property>
+
+              <child>
+                <object class="GtkListBox">
+                  <property name="visible">True</property>
+                  <property name="selection-mode">none</property>
+                  <style>
+                    <class name="frame"/>
+                  </style>
+
+                  <child>
+                    <object class="GtkListBoxRow">
+                      <property name="visible">True</property>
+
+                      <child>
+                        <object class="GtkBox">
+                          <property name="visible">True</property>
+                          <property name="border-width">10</property>
+                          <property name="spacing">30</property>
+
+                          <child>
+                            <object class="GtkLabel">
+                              <property name="visible">True</property>
+                              <property name="halign">start</property>
+                              <property name="label" translatable="yes">Connection name</property>
+                            </object>
+                          </child>
+
+                          <child>
+                            <object class="GtkEntry" id="connection_name_entry">
+                              <property name="visible">True</property>
+                              <property name="hexpand">True</property>
+                              <signal name="focus-out-event" handler="on_connection_name_entry_changed" after="yes"/>
+                            </object>
+                          </child>
+                        </object>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+              </child>
 
               <child>
                 <object class="GtkListBox" id="listbox">

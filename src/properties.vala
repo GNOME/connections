@@ -25,8 +25,10 @@ namespace Connections {
         private GLib.ListStore model = new GLib.ListStore (typeof (Property));
         [GtkChild]
         private Gtk.ListBox listbox;
+        [GtkChild]
+        private Gtk.Entry connection_name_entry;
 
-        protected weak Connection connection;
+        protected weak Connection connection { get; set; }
 
         construct {
             use_header_bar = 1;
@@ -35,6 +37,10 @@ namespace Connections {
             listbox.set_header_func (use_listbox_separator);
 
             set_transient_for (Application.application.main_window);
+
+            notify["connection"].connect (() => {
+                connection_name_entry.set_text (connection.display_name);
+            });
         }
 
         public void add_property (Connections.Property property) {
@@ -77,6 +83,22 @@ namespace Connections {
 
                 row.set_header (current);
             }
+        }
+
+        [GtkCallback]
+        private bool on_connection_name_entry_changed () {
+            if (connection_name_entry.text == "") {
+                connection.display_name = null;
+                return true;
+            }
+
+            if (connection_name_entry.text == connection.display_name)
+                return true;
+
+            connection.display_name = connection_name_entry.text;
+            connection.save ();
+
+            return true;
         }
     }
 

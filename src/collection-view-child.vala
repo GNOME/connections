@@ -36,6 +36,7 @@ namespace Connections {
             this.connection = connection;
 
             connection_name.set_text (connection.display_name);
+            connection.bind_property ("display_name", connection_name, "label", BindingFlags.SYNC_CREATE);
 
             connection.thumbnailer.update.connect (() => {
                 thumbnail.set_from_pixbuf (connection.thumbnail.scale_simple (180, 134, Gdk.InterpType.BILINEAR));
