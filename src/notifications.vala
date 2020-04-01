@@ -35,8 +35,12 @@ namespace Connections {
                                         owned Notification.DismissFunc? dismiss_func) {
             var notification = new Notification (message, ok_label, (owned) ok_func, (owned) dismiss_func);
 
-            if (get_child () != null)
-                remove (get_child ());
+            if (get_child () != null) {
+                var child = (get_child () as Notification);
+                child.dismiss ();
+
+                remove (child);
+            }
 
             add (notification);
         }
@@ -61,17 +65,18 @@ namespace Connections {
         public delegate void OKFunc ();
         public delegate void DismissFunc ();
 
+        private DismissFunc? dismiss_func;
+
         [GtkChild]
         private Gtk.Label message_label; 
         [GtkChild]
         private Gtk.Button ok_button; 
-        [GtkChild]
-        private Gtk.Button close_button; 
 
         public Notification (string  message,
                              string? ok_label,
                              owned OKFunc? ok_func,
                              owned DismissFunc? dismiss_func) {
+            this.dismiss_func = dismiss_func;
             set_reveal_child (true);
 
             message_label.label = message;
@@ -88,12 +93,13 @@ namespace Connections {
 
                 ok_button.show_all ();
             }
+        }
 
-            close_button.clicked.connect (() => {
-                set_reveal_child (false);
-                if (dismiss_func != null)
-                    dismiss_func ();
-            });
+        [GtkCallback]
+        public void dismiss () {
+            set_reveal_child (false);
+            if (dismiss_func != null)
+                dismiss_func ();
         }
     }
 
