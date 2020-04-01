@@ -103,7 +103,7 @@ namespace Connections {
             };
             model.append (view_only);
             view_only.widget.bind_property ("active", connection, "view_only", BindingFlags.SYNC_CREATE);
-            connection.notify["view_only"].connect (() => { connection.save (); });
+            connection.notify["view-only"].connect (() => { connection.save (); });
 
             var local_pointer = new Property () {
                 label = _("Show local pointer"),
@@ -113,7 +113,7 @@ namespace Connections {
             };
             model.append (local_pointer);
             local_pointer.widget.bind_property ("active", connection, "show_local_pointer", BindingFlags.SYNC_CREATE);
-            connection.notify["show_local_pointer"].connect (() => { connection.save (); });
+            connection.notify["show-local-pointer"].connect (() => { connection.save (); });
         }
     }
 }
