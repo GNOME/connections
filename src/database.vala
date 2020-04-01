@@ -22,36 +22,30 @@
 namespace Connections {
     private class ConnectionConfig : Connections.Database {
 
-        private unowned Connection connection;
+        public unowned Connection connection;
 
-        public ConnectionConfig (Connection connection) {
+        construct {
             load_keyfile ();
-
-            this.connection = connection;
         }
 
-        public void load () {
+        public virtual void load () {
             connection.protocol = connection.protocol.from_string (get_string (connection.uuid, "protocol"));
             connection.host = get_string (connection.uuid, "host");
             connection.port = int.parse (get_string (connection.uuid, "port"));
             connection.display_name = get_string (connection.uuid, "display-name");
 
             connection.scaling = get_boolean (connection.uuid, "scaling");
-            connection.view_only = get_boolean (connection.uuid, "view_only");
-            connection.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
         }
 
-        public bool save () {
+        public virtual void save () {
             set_string (connection.uuid, "protocol", connection.protocol.to_string ());
             set_string (connection.uuid, "host", connection.host);
             set_string (connection.uuid, "port", connection.port.to_string ());
             set_string (connection.uuid, "display-name", connection.display_name);
 
             set_boolean (connection.uuid, "scaling", connection.scaling);
-            set_boolean (connection.uuid, "view_only", connection.view_only);
-            set_boolean (connection.uuid, "show_local_pointer", connection.show_local_pointer);
 
-            return save_keyfile ();
+            save_keyfile ();
         }
 
         public void delete () {

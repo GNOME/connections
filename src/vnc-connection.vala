@@ -95,7 +95,9 @@ namespace Connections {
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);
             display.size_allocate.connect (scale);
 
-            config = new ConnectionConfig (this);
+            config = new VncConfig () {
+                connection = this
+            };
         }
 
         public VncConnection (string uuid) {
@@ -221,6 +223,22 @@ namespace Connections {
             local_pointer.widget.bind_property ("active", connection, "show_local_pointer", BindingFlags.SYNC_CREATE);
             connection.notify["show-local-pointer"].connect (() => { connection.save (); });
             add_property (local_pointer);
+        }
+    }
+
+    private class VncConfig : ConnectionConfig {
+        public override void load () {
+            base.load ();
+
+            connection.view_only = get_boolean (connection.uuid, "view_only");
+            connection.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
+        }
+
+        public override void save () {
+            base.save ();
+
+            set_boolean (connection.uuid, "view_only", connection.view_only);
+            set_boolean (connection.uuid, "show_local_pointer", connection.show_local_pointer);
         }
     }
 }
