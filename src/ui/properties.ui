@@ -21,7 +21,7 @@
               <property name="spacing">20</property>
 
               <child>
-                <object class="GtkListBox">
+                <object class="GtkListBox" id="default_properties_listbox">
                   <property name="visible">True</property>
                   <property name="selection-mode">none</property>
                   <style>
@@ -42,7 +42,7 @@
                             <object class="GtkLabel">
                               <property name="visible">True</property>
                               <property name="halign">start</property>
-                              <property name="label" translatable="yes">Connection name</property>
+                              <property name="label" translatable="yes">Name</property>
                             </object>
                           </child>
 
@@ -51,6 +51,33 @@
                               <property name="visible">True</property>
                               <property name="hexpand">True</property>
                               <signal name="focus-out-event" handler="on_connection_name_entry_changed" after="yes"/>
+                            </object>
+                          </child>
+                        </object>
+                      </child>
+                    </object>
+                  </child>
+
+                  <child>
+                    <object class="GtkListBoxRow">
+                      <property name="visible">True</property>
+
+                      <child>
+                        <object class="GtkBox">
+                          <property name="visible">True</property>
+                          <property name="border-width">10</property>
+                          <property name="spacing">30</property>
+
+                          <child>
+                            <object class="GtkLabel">
+                              <property name="visible">True</property>
+                              <property name="label" translatable="yes">Address</property>
+                            </object>
+                          </child>
+
+                          <child>
+                            <object class="GtkLabel" id="host_address_label">
+                              <property name="visible">True</property>
                             </object>
                           </child>
                         </object>

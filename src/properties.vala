@@ -26,7 +26,11 @@ namespace Connections {
         [GtkChild]
         private Gtk.ListBox listbox;
         [GtkChild]
+        private Gtk.ListBox default_properties_listbox;
+        [GtkChild]
         private Gtk.Entry connection_name_entry;
+        [GtkChild]
+        private Gtk.Label host_address_label;
 
         protected weak Connection connection { get; set; }
 
@@ -35,11 +39,13 @@ namespace Connections {
 
             listbox.bind_model (model, create_entry);
             listbox.set_header_func (use_listbox_separator);
+            default_properties_listbox.set_header_func (use_listbox_separator);
 
             set_transient_for (Application.application.main_window);
 
             notify["connection"].connect (() => {
                 connection_name_entry.set_text (connection.display_name);
+                host_address_label.set_text (connection.uri);
             });
         }
 
