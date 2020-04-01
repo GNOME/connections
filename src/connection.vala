@@ -21,6 +21,8 @@
 
 namespace Connections {
     private abstract class Connection : GLib.Object {
+        public string uuid;
+
         public signal void show ();
 
         public abstract Gtk.Widget widget { get; protected set; }

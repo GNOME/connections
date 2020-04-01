@@ -31,25 +31,25 @@ namespace Connections {
         }
 
         public void load () {
-            connection.protocol = connection.protocol.from_string (get_string (connection.uri, "protocol"));
-            connection.host = get_string (connection.uri, "host");
-            connection.port = int.parse (get_string (connection.uri, "port"));
-            connection.display_name = get_string (connection.uri, "display-name");
+            connection.protocol = connection.protocol.from_string (get_string (connection.uuid, "protocol"));
+            connection.host = get_string (connection.uuid, "host");
+            connection.port = int.parse (get_string (connection.uuid, "port"));
+            connection.display_name = get_string (connection.uuid, "display-name");
 
-            connection.scaling = get_boolean (connection.uri, "scaling");
-            connection.view_only = get_boolean (connection.uri, "view_only");
-            connection.show_local_pointer = get_boolean (connection.uri, "show_local_pointer");
+            connection.scaling = get_boolean (connection.uuid, "scaling");
+            connection.view_only = get_boolean (connection.uuid, "view_only");
+            connection.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
         }
 
         public bool save () {
-            set_string (connection.uri, "protocol", connection.protocol.to_string ());
-            set_string (connection.uri, "host", connection.host);
-            set_string (connection.uri, "port", connection.port.to_string ());
-            set_string (connection.uri, "display-name", connection.display_name);
+            set_string (connection.uuid, "protocol", connection.protocol.to_string ());
+            set_string (connection.uuid, "host", connection.host);
+            set_string (connection.uuid, "port", connection.port.to_string ());
+            set_string (connection.uuid, "display-name", connection.display_name);
 
-            set_boolean (connection.uri, "scaling", connection.scaling);
-            set_boolean (connection.uri, "view_only", connection.view_only);
-            set_boolean (connection.uri, "show_local_pointer", connection.show_local_pointer);
+            set_boolean (connection.uuid, "scaling", connection.scaling);
+            set_boolean (connection.uuid, "view_only", connection.view_only);
+            set_boolean (connection.uuid, "show_local_pointer", connection.show_local_pointer);
 
             return save_keyfile ();
         }
@@ -57,7 +57,7 @@ namespace Connections {
         public void delete () {
             load_keyfile ();
             try {
-                keyfile.remove_group (connection.uri);
+                keyfile.remove_group (connection.uuid);
             } catch (GLib.Error error) {
             }
 
@@ -126,17 +126,30 @@ namespace Connections {
             load_keyfile ();
 
             List<Connections.Connection >? connections = new List<Connections.Connection> ();
-            foreach (var group in keyfile.get_groups ()) {
-                var uri = Xml.URI.parse (group);
-                if (uri.scheme == "vnc") {
-                    var connection = new VncConnection (group);
-                    connection.load ();
-
-                    connections.append (connection);
-                }
+            foreach (var uuid in keyfile.get_groups ()) {
+                connections.append (get_connection (uuid));
             }
 
             return connections;
+        }
+
+        public Connection? get_connection (string uuid) {
+            load_keyfile ();
+
+            if (!keyfile.has_group (uuid))
+                return null;
+
+            Connection? connection = null;
+            var protocol = get_string (uuid, "protocol");
+            switch (protocol) {
+                case "vnc":
+                    return new VncConnection (uuid);
+                default:
+                    debug ("Unknown protocol defined for %s", uuid);
+                    break;
+            }
+
+            return null;
         }
     }
 }

@@ -104,8 +104,13 @@ namespace Connections {
             Connection? connection = null;
 
             var uri = Xml.URI.parse (_uri);
-            if (uri.scheme == "vnc") {
-                connection = new VncConnection (_uri);
+            switch (uri.scheme) {
+                case "vnc":
+                    connection = new VncConnection.from_uri (_uri);
+                    break;
+                default:
+                    debug ("Failed to add '%s': unknown protocol", _uri);
+                    break;
             }
 
             if (connection == null)

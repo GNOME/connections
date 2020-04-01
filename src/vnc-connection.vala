@@ -94,12 +94,21 @@ namespace Connections {
             display.vnc_auth_credential.connect (on_vnc_auth_credential_cb);
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);
             display.size_allocate.connect (scale);
-        }
-
-        public VncConnection (string uri) {
-            this.uri = uri;
 
             config = new MachineConfig (this);
+        }
+
+        public VncConnection (string uuid) {
+            this.uuid = uuid;
+
+            config.load ();
+        }
+
+        public VncConnection.from_uri (string uri) {
+            this.uri = uri;
+
+            this.uuid = Uuid.string_random ();
+            config.save ();
         }
 
         ~VncConnection () {
