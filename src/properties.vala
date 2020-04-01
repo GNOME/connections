@@ -28,7 +28,11 @@ namespace Connections {
         [GtkChild]
         private Gtk.ListBox default_properties_listbox;
         [GtkChild]
+        private Gtk.Stack connection_name_stack;
+        [GtkChild]
         private Gtk.Entry connection_name_entry;
+        [GtkChild]
+        private Gtk.Label connection_name_label;
         [GtkChild]
         private Gtk.Label host_address_label;
 
@@ -44,7 +48,9 @@ namespace Connections {
             set_transient_for (Application.application.main_window);
 
             notify["connection"].connect (() => {
+                connection_name_label.set_text (connection.display_name);
                 connection_name_entry.set_text (connection.display_name);
+
                 host_address_label.set_text (connection.uri);
             });
         }
@@ -92,19 +98,28 @@ namespace Connections {
         }
 
         [GtkCallback]
-        private bool on_connection_name_entry_changed () {
-            if (connection_name_entry.text == "") {
-                connection.display_name = null;
-                return true;
+        private void on_connection_name_edit_toggled () {
+            if (connection_name_stack.visible_child == connection_name_label) {
+                connection_name_stack.set_visible_child (connection_name_entry);
+
+                connection_name_entry.grab_focus ();
+                return;
             }
 
+            connection_name_stack.set_visible_child (connection_name_label);
+
             if (connection_name_entry.text == connection.display_name)
-                return true;
+                return;
 
-            connection.display_name = connection_name_entry.text;
+            if (connection_name_entry.text == "") {
+                connection.display_name = null;
+                connection_name_label.set_text (connection.uri);
+            } else {
+                connection.display_name = connection_name_entry.text;
+                connection_name_label.set_text (connection_name_entry.text);
+            }
+
             connection.save ();
-
-            return true;
         }
     }
 

@@ -39,7 +39,7 @@
                           <property name="spacing">30</property>
 
                           <child>
-                            <object class="GtkLabel">
+                            <object class="GtkLabel" id="name_label">
                               <property name="visible">True</property>
                               <property name="halign">start</property>
                               <property name="label" translatable="yes">Name</property>
@@ -47,10 +47,44 @@
                           </child>
 
                           <child>
-                            <object class="GtkEntry" id="connection_name_entry">
+                            <object class="GtkStack" id="connection_name_stack">
                               <property name="visible">True</property>
-                              <property name="hexpand">True</property>
-                              <signal name="focus-out-event" handler="on_connection_name_entry_changed" after="yes"/>
+
+                              <child>
+                                <object class="GtkLabel" id="connection_name_label">
+                                  <property name="visible">True</property>
+                                  <property name="halign">start</property>
+                                  <style>
+                                    <class name="dim-label"/>
+                                  </style>
+                                </object>
+                              </child>
+
+                              <child>
+                                <object class="GtkEntry" id="connection_name_entry">
+                                  <property name="visible">True</property>
+                                  <property name="hexpand">True</property>
+                                </object>
+                              </child>
+                            </object>
+                          </child>
+
+                          <child>
+                            <object class="GtkToggleButton">
+                              <property name="visible">True</property>
+                              <property name="valign">center</property>
+                              <signal name="toggled" handler="on_connection_name_edit_toggled"/>
+                              <style>
+                                <class name="circular"/>
+                              </style>
+
+                              <child>
+                                <object class="GtkImage">
+                                  <property name="visible">True</property>
+                                  <property name="margin">5</property>
+                                  <property name="icon-name">document-edit-symbolic</property>
+                                </object>
+                              </child>
                             </object>
                           </child>
                         </object>
@@ -69,7 +103,7 @@
                           <property name="spacing">30</property>
 
                           <child>
-                            <object class="GtkLabel">
+                            <object class="GtkLabel" id="address_label">
                               <property name="visible">True</property>
                               <property name="label" translatable="yes">Address</property>
                             </object>
@@ -78,6 +112,9 @@
                           <child>
                             <object class="GtkLabel" id="host_address_label">
                               <property name="visible">True</property>
+                              <style>
+                                <class name="dim-label"/>
+                              </style>
                             </object>
                           </child>
                         </object>
@@ -101,4 +138,11 @@
         </object>
       </child>
     </template>
+
+    <object class="GtkSizeGroup">
+      <widgets>
+        <widget name="name_label"/>
+        <widget name="address_label"/>
+      </widgets>
+    </object>
   </interface>
