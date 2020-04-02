@@ -112,6 +112,31 @@
           </child>
 
           <child>
+            <object class="GtkButton" id="disconnect_button">
+              <property name="visible">True</property>
+              <signal name="clicked" handler="disconnect_button_clicked"/>
+
+              <child internal-child="accessible">
+                <object class="AtkObject" id="a11y-disconnect-button">
+                  <property name="accessible-name" translatable="yes">Disconnect</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkImage">
+                  <property name="visible">True</property>
+                  <property name="icon-name">system-shutdown-symbolic</property>
+                  <property name="icon-size">1</property>
+                </object>
+              </child>
+            </object>
+            <packing>
+              <property name="pack-type">end</property>
+            </packing>
+          </child>
+
+
+          <child>
             <object class="GtkMenuButton" id="keys_menu_button">
               <property name="visible">True</property>
               <property name="popover">keys_input_popover</property>

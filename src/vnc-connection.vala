@@ -116,8 +116,7 @@ namespace Connections {
         ~VncConnection () {
             debug ("Closig connection with %s", widget.name);
 
-            if (display.is_open ())
-                display.close ();
+            disconnect_it ();
         }
 
         public override void connect_it () {
@@ -130,6 +129,11 @@ namespace Connections {
             display.set_credential (DisplayCredential.CLIENTNAME, "gnome-connections");
 
             display.open_host (host, port.to_string ());
+        }
+
+        public override void disconnect_it () {
+            if (display.is_open ())
+                display.close ();
         }
 
         public override void send_keys (uint[] keyvals) {
@@ -160,7 +164,7 @@ namespace Connections {
                 }
             }
 
-            display.close ();
+            disconnect_it ();
             connected = false;
         }
 

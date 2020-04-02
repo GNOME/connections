@@ -86,6 +86,13 @@ namespace Connections {
             set_visible_child (collection_toolbar);
         }
 
+        [GtkCallback]
+        public void disconnect_button_clicked () {
+            connection.disconnect_it ();
+
+            back_button_clicked ();
+        }
+
         public void show_display_view (Connection connection) {
             this.connection = connection;
 

@@ -199,5 +199,6 @@ namespace Connections {
         }
 
         public abstract void connect_it ();
+        public abstract void disconnect_it ();
     }
 }

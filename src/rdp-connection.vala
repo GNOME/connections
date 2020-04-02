@@ -82,7 +82,7 @@ namespace Connections {
         ~RdpConnection () {
             debug ("Closig connection with %s", widget.name);
 
-            display.close ();
+            disconnect_it ();
         }
 
         public override void connect_it () {
@@ -91,6 +91,10 @@ namespace Connections {
             connected = true;
 
             display.open_host (host, port);
+        }
+
+        public override void disconnect_it () {
+            display.close ();
         }
 
         public override void send_keys (uint[] keyvals) {
