@@ -108,6 +108,9 @@ namespace Connections {
                 case "vnc":
                     connection = new VncConnection.from_uri (_uri);
                     break;
+                case "rdp":
+                    connection = new RdpConnection.from_uri (_uri);
+                    break;
                 default:
                     debug ("Failed to add '%s': unknown protocol", _uri);
                     break;

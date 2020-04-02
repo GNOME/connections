@@ -39,6 +39,37 @@
             ]
         },
         {
+            "name" : "freerdp",
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+                "-DWITH_OPENH264=ON",
+                "-DCMAKE_INSTALL_PREFIX=/app",
+                "-DCMAKE_INSTALL_LIBDIR=lib"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://pub.freerdp.com/releases/freerdp-2.0.0-rc4.tar.gz",
+                    "sha256" : "bd1cd5579765b2d6b444508cafc7b3669c68ff2246941a081e771f744b150f6a"
+                }
+            ]
+        },
+        {
+            "name" : "gtk-frdp",
+            "config-opts" : [
+                "--libdir=/app/lib"
+            ],
+            "buildsystem" : "meson",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git"
+                }
+            ]
+        },
+        {
             "name": "gnome-connections",
             "builddir": true,
             "buildsystem": "meson",

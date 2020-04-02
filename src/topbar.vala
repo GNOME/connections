@@ -64,7 +64,10 @@ namespace Connections {
         }
 
         private void properties_activated () {
-            (new VncPropertiesDialog (connection).run ());
+            if (connection.protocol == Connection.Protocol.VNC)
+                (new VncPropertiesDialog (connection).run ());
+            else
+                (new RdpPropertiesDialog (connection).run ());
         }
 
         private void take_screenshot_activated () {

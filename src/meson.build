@@ -11,6 +11,7 @@ connections_sources = [
   'main.vala',
   'notifications.vala',
   'properties.vala',
+  'rdp-connection.vala',
   'thumbnailer.vala',
   'topbar.vala',
   'vnc-connection.vala',
@@ -22,6 +23,7 @@ connections_deps = [
   valac.find_library ('config', dirs: src_dir),
   dependency('gio-2.0', version: '>= 2.50'),
   dependency('gtk+-3.0', version: '>= 3.22'),
+  dependency ('gtk-frdp-0.1'),
   dependency('gtk-vnc-2.0', version: '> 0.4.4'), 
   dependency ('libxml-2.0', version: '>= 2.7.8'),
 ]

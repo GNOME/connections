@@ -31,8 +31,6 @@ namespace Connections {
         public bool need_username { get; protected set; }
 
         public abstract bool scaling { get; set; }
-        public abstract bool view_only { get; set; }
-        public abstract bool show_local_pointer { get; set; }
 
         protected ConnectionConfig config;
 
@@ -157,8 +155,8 @@ namespace Connections {
             });
         }
 
-        public string? username;
-        public string? password;
+        public string? username { get; set; }
+        public string? password { get; set; }
         protected void handle_auth () {
             if (!need_username && !need_password)
                 return;

@@ -36,10 +36,12 @@ namespace Connections {
             var notification = new Notification (message, ok_label, (owned) ok_func, (owned) dismiss_func);
 
             if (get_child () != null) {
-                var child = (get_child () as Notification);
-                child.dismiss ();
-
+                var child = get_child ();
                 remove (child);
+
+                if (child is Notification)
+                    (child as Notification).dismiss ();
+
             }
 
             add (notification);

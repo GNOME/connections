@@ -138,6 +138,8 @@ namespace Connections {
             switch (protocol) {
                 case "vnc":
                     return new VncConnection (uuid);
+                case "rdp":
+                    return new RdpConnection (uuid);
                 default:
                     debug ("Unknown protocol defined for %s", uuid);
                     break;

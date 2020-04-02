@@ -59,7 +59,7 @@ namespace Connections {
             }
         }
 
-        public override bool view_only {
+        public bool view_only {
             set {
                 display.set_read_only (value);
             }
@@ -69,7 +69,7 @@ namespace Connections {
             }
         }
 
-        public override bool show_local_pointer {
+        public bool show_local_pointer {
             set {
                 display.set_pointer_local (value);
             }
@@ -190,9 +190,9 @@ namespace Connections {
     }
 
     private class VncPropertiesDialog : PropertiesDialog {
-
         public VncPropertiesDialog (Connection connection) {
-            this.connection = connection as VncConnection;
+            this.connection = connection;
+            var vnc = connection as VncConnection;
 
             var scaling = new Property () {
                 label = _("Scaling"),
@@ -207,21 +207,21 @@ namespace Connections {
             var view_only = new Property () {
                 label = _("View only"),
                 widget = new Gtk.Switch () {
-                    active = connection.view_only
+                    active = vnc.view_only
                 }
             };
-            view_only.widget.bind_property ("active", connection, "view_only", BindingFlags.SYNC_CREATE);
-            connection.notify["view-only"].connect (() => { connection.save (); });
+            view_only.widget.bind_property ("active", vnc, "view_only", BindingFlags.SYNC_CREATE);
+            vnc.notify["view-only"].connect (() => { vnc.save (); });
             add_property (view_only);
 
             var local_pointer = new Property () {
                 label = _("Show local pointer"),
                 widget = new Gtk.Switch () {
-                    active = connection.show_local_pointer
+                    active = vnc.show_local_pointer
                 }
             };
-            local_pointer.widget.bind_property ("active", connection, "show_local_pointer", BindingFlags.SYNC_CREATE);
-            connection.notify["show-local-pointer"].connect (() => { connection.save (); });
+            local_pointer.widget.bind_property ("active", vnc, "show_local_pointer", BindingFlags.SYNC_CREATE);
+            vnc.notify["show-local-pointer"].connect (() => { vnc.save (); });
             add_property (local_pointer);
         }
     }
@@ -230,15 +230,19 @@ namespace Connections {
         public override void load () {
             base.load ();
 
-            connection.view_only = get_boolean (connection.uuid, "view_only");
-            connection.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
+            var vnc = connection as VncConnection;
+
+            vnc.view_only = get_boolean (connection.uuid, "view_only");
+            vnc.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
         }
 
         public override void save () {
             base.save ();
 
-            set_boolean (connection.uuid, "view_only", connection.view_only);
-            set_boolean (connection.uuid, "show_local_pointer", connection.show_local_pointer);
+            var vnc = connection as VncConnection;
+
+            set_boolean (connection.uuid, "view_only", vnc.view_only);
+            set_boolean (connection.uuid, "show_local_pointer", vnc.show_local_pointer);
         }
     }
 }
