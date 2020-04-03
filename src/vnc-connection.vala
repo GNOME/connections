@@ -134,6 +134,7 @@ namespace Connections {
         public override void disconnect_it () {
             if (display.is_open ())
                 display.close ();
+            connected = false;
         }
 
         public override void send_keys (uint[] keyvals) {

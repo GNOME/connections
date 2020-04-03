@@ -95,6 +95,7 @@ namespace Connections {
 
         public override void disconnect_it () {
             display.close ();
+            connected = false;
         }
 
         public override void send_keys (uint[] keyvals) {
