@@ -56,10 +56,7 @@ namespace Connections {
                 return;
             }
 
-            if (uri.scheme == "vnc" ||
-                uri.scheme == "ssh" ||
-                uri.scheme == "rdp" ||
-                uri.scheme == "spice") {
+            if (uri.scheme == "vnc" || uri.scheme == "rdp") {
                 create_button.sensitive = true;
             }
         }

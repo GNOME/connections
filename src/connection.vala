@@ -39,20 +39,14 @@ namespace Connections {
         public enum Protocol {
             UNKNOWN,
             VNC,
-            SPICE,
             RDP,
-            SSH;
 
             public string to_string () {
                 switch (this) {
                     case VNC:
                         return "vnc";
-                    case SPICE:
-                        return "spice";
                     case RDP:
                         return "rdp";
-                    case SSH:
-                        return "ssh";
                     case UNKNOWN:
                         return "unknown";
                     default:
@@ -64,12 +58,8 @@ namespace Connections {
                 switch (protocol) {
                     case "vnc":
                         return VNC;
-                    case "spice":
-                        return SPICE;
                     case "rdp":
                         return RDP;
-                    case "ssh":
-                       return SSH;
                     case "unknown":
                     default:
                        return UNKNOWN;
