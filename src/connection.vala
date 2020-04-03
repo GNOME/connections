@@ -39,7 +39,7 @@ namespace Connections {
         public enum Protocol {
             UNKNOWN,
             VNC,
-            RDP,
+            RDP;
 
             public string to_string () {
                 switch (this) {
