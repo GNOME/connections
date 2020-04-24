@@ -61,11 +61,7 @@ namespace Connections {
 
         [GtkCallback]
         private void on_create_connection_button_clicked () {
-            try {
-                Application.application.add_connection (url_entry.get_text ());
-            } catch (GLib.Error error) {
-                warning ("Failed to add connection %s: %s", url_entry.get_text (), error.message);
-            }
+            Application.application.add_connection (url_entry.get_text ());
 
             destroy ();
         }
