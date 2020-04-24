@@ -159,5 +159,16 @@ namespace Connections {
         public void open_connection (Connection connection) {
             main_window.open_connection (connection);
         }
+
+        public override void shutdown () {
+            base.shutdown ();
+
+            for (int idx = 0; idx < model.get_n_items (); idx++) {
+                var connection = (Connection)model.get_item (idx);
+
+                if (connection.connected)
+                    connection.disconnect_it ();
+            }
+        }
     }
 }
