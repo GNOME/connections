@@ -139,7 +139,6 @@ namespace Connections {
             if (!keyfile.has_group (uuid))
                 return null;
 
-            Connection? connection = null;
             var protocol = get_string (uuid, "protocol");
             switch (protocol) {
                 case "vnc":
