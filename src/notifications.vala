@@ -80,7 +80,7 @@ namespace Connections {
                              string? ok_label,
                              owned OKFunc? ok_func,
                              owned DismissFunc? dismiss_func) {
-            this.dismiss_func = dismiss_func;
+            this.dismiss_func = (owned)dismiss_func;
             set_reveal_child (true);
 
             message_label.label = message;
