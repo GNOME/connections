@@ -32,9 +32,6 @@ namespace Connections {
         private Stack stack;
 
         [GtkChild]
-        private Widget loading; 
-
-        [GtkChild]
         private Widget display_widget;
 
         [GtkChild]
