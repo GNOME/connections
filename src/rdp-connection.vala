@@ -101,10 +101,6 @@ namespace Connections {
         public override void send_keys (uint[] keyvals) {
         }
 
-        private void on_vnc_auth_failure_cb (string message) {
-            debug ("Failed to authenticate %s", message);
-        }
-
         private void on_rdp_auth_credential_cb () {
             need_username = need_password = true;
 
