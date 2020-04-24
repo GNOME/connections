@@ -119,9 +119,13 @@ namespace Connections {
 
                 Notification.OKFunc open = () => {
                     debug ("Opening screenshot file");
-                    Gtk.show_uri (Application.application.main_window.get_screen (),
-                                  File.new_for_path (path).get_uri () + ".png",
-                                  Gdk.CURRENT_TIME);
+                    try {
+                        Gtk.show_uri (Application.application.main_window.get_screen (),
+                                      File.new_for_path (path).get_uri () + ".png",
+                                      Gdk.CURRENT_TIME);
+                    } catch (GLib.Error error) {
+                        warning ("Failed to open screenshot: %s", error.message);
+                    }
                 };
                 var message = _("Screenshot taken");
                 Application.application.main_window.notifications_bar.display_for_action (message,
