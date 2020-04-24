@@ -113,7 +113,13 @@ namespace Connections {
         }
 
         public string get_string (string group, string key) {
-            return keyfile.get_string (group, key);
+            try {
+                return keyfile.get_string (group, key);
+            } catch (GLib.KeyFileError error) {
+                debug ("Key %s not found in group %s: %s", key, group, error.message);
+
+                return ""; // DEFAULT_VALUE
+            }
         }
 
         public List<Connections.Connection> get_connections () {
