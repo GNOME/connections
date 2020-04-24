@@ -73,7 +73,7 @@ namespace Connections {
                                    "translator-credits", _("translator-credits"),
                                    "comments", _("A remote connection manager for the GNOME desktop"),
                                    "copyright", "\xc2\xa9 2020 Red Hat, Inc.",
-                                   "license-type", Gtk.License.LGPL_2_1,
+                                   "license-type", Gtk.License.GPL_3_0,
                                    "program-name", _("Connections"),
                                    "wrap-license", true,
                                    "logo-icon-name", "org.gnome.Connections");
