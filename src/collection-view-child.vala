@@ -30,8 +30,6 @@ namespace Connections {
         [GtkChild]
         public Gtk.Image thumbnail; 
 
-        private ulong deleted_notify_id;
-
         public CollectionViewChild (Connection connection) {
             this.connection = connection;
 
