@@ -17,9 +17,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="0.0.1" date="2020-03-18">
+    <release version="3.37.1" date="2020-04-24">
       <description>
-        <p>Initial availability of the application (tech preview).</p>
+        <p>This is the first public release of Connections.</p>
       </description>
     </release>
   </releases>
