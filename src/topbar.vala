@@ -72,7 +72,7 @@ namespace Connections {
 
         private void take_screenshot_activated () {
             if (connection != null)
-                connection.take_screenshot ();
+                connection.take_screenshot.begin ();
         }
 
         [GtkCallback]
