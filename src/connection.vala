@@ -188,10 +188,6 @@ namespace Connections {
             config.save ();
         }
 
-        public void load () {
-            config.load ();
-        }
-
         construct {
             thumbnailer = new Connections.Thumbnailer (this);
 
