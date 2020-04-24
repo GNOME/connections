@@ -25,8 +25,6 @@ namespace Connections {
         [GtkChild]
         private Gtk.Entry url_entry;
         [GtkChild]
-        private Gtk.Entry display_name_entry;
-        [GtkChild]
         private Gtk.Button create_button; 
 
         construct {
