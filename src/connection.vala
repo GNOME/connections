@@ -145,9 +145,13 @@ namespace Connections {
             });
         }
 
+        private AuthNotification auth_notification = null;
         public string? username { get; set; }
         public string? password { get; set; }
         protected void handle_auth () {
+            if (auth_notification != null)
+                return;
+
             if (!need_username && !need_password)
                 return;
 
@@ -161,13 +165,15 @@ namespace Connections {
             };
 
             Notification.DismissFunc dismiss_func = () => {
+                auth_notification = null;
             };
 
             var auth_string = _("“%s” requires authentication").printf (display_name);
-            Application.application.main_window.notifications_bar.display_for_auth (auth_string,
-                                                                                    (owned) auth_func,
-                                                                                    (owned) dismiss_func,
-                                                                                    need_username);
+            auth_notification =
+                Application.application.main_window.notifications_bar.display_for_auth (auth_string,
+                                                                                        (owned) auth_func,
+                                                                                        (owned) dismiss_func,
+                                                                                        need_username);
         }
 
         public void delete () {

@@ -47,10 +47,10 @@ namespace Connections {
             add (notification);
         }
 
-        public void display_for_auth (string auth_string,
-                                      owned AuthNotification.AuthFunc? auth_func,
-                                      owned Notification.DismissFunc?  dismiss_func,
-                                      bool                             need_username = true) {
+        public AuthNotification display_for_auth (string auth_string,
+                                                  owned AuthNotification.AuthFunc? auth_func,
+                                                  owned Notification.DismissFunc?  dismiss_func,
+                                                  bool                             need_username = true) {
             var notification = new Connections.AuthNotification (auth_string,
                                                                  (owned) auth_func,
                                                                  (owned) dismiss_func,
@@ -59,6 +59,8 @@ namespace Connections {
                 remove (get_child ());
 
             add (notification);
+
+            return notification;
         }
     }
 
@@ -108,6 +110,9 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/auth-notification.ui")]
     private class AuthNotification : Gtk.Revealer {
         public delegate void AuthFunc (string username, string password);
+        private bool auth_pressed;
+
+        public signal void dismissed ();
 
         [GtkChild]
         private Gtk.Label title_label;
@@ -134,6 +139,11 @@ namespace Connections {
             username_entry.visible = need_username;
 
             this.auth_func = (owned) auth_func;
+
+            dismissed.connect (() => {
+                if (!auth_pressed && dismiss_func != null)
+                    dismiss_func ();
+            });
         }
 
         [GtkCallback]
@@ -155,8 +165,14 @@ namespace Connections {
         private void on_auth_button_clicked () {
             if (auth_func != null)
                 auth_func (username_entry.get_text (), password_entry.get_text ());
+            auth_pressed = true;
 
+            dismiss ();
+        }
+
+        public void dismiss () {
             set_reveal_child (false);
+            dismissed ();
         }
     }
 }
