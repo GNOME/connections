@@ -19,6 +19,8 @@
  *
  */
 
+using Config;
+
 namespace Connections {
     private class Application : Gtk.Application {
         public static Application application;
@@ -76,7 +78,8 @@ namespace Connections {
                                    "license-type", Gtk.License.GPL_3_0,
                                    "program-name", _("Connections"),
                                    "wrap-license", true,
-                                   "logo-icon-name", "org.gnome.Connections");
+                                   "logo-icon-name", "org.gnome.Connections",
+                                   "version", Config.VERSION);
         }
 
         public override void activate () {

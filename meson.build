@@ -15,16 +15,21 @@ locale_dir = join_paths (get_option ('prefix'), get_option ('localedir'))
 conf = configuration_data ()
 conf.set_quoted ('GETTEXT_PACKAGE', meson.project_name ())
 conf.set_quoted ('LOCALEDIR', locale_dir)
+conf.set_quoted ('VERSION', '@0@-@VCS_TAG@'.format (meson.project_version()))
 
 config_h = declare_dependency (
+  sources: vcs_tag (
+    command: ['git', 'rev-parse', '--short', 'HEAD'],
+    fallback: '',
     input: configure_file (
-        output: 'config.h.in',
-        configuration: conf
+      output: 'config.h.in',
+      configuration: conf
     ),
     output: 'config.h'
+  )
 )
 
-configure_file (output: 'config.h', configuration: conf)
+#configure_file (output: 'config.h', configuration: conf)
 config_h_dir = include_directories ('.')
 
 subdir('data')
