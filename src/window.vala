@@ -43,6 +43,8 @@ namespace Connections {
         public Window (Gtk.Application app) {
             Object (application: app);
 
+            Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = true;
+
             stack.set_visible_child (empty_view);
 
             bind_model (Application.application.model);
