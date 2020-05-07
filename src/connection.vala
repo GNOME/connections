@@ -65,6 +65,18 @@ namespace Connections {
                        return UNKNOWN;
                 }
             }
+
+            public int get_default_port () {
+                switch (this) {
+                    case VNC:
+                        return 5900;
+                    case RDP:
+                        return 3389;
+                    case UNKNOWN:
+                    default:
+                        assert_not_reached ();
+                }
+            }
         }
         public Protocol protocol;
 
@@ -78,7 +90,7 @@ namespace Connections {
 
                 protocol = protocol.from_string (address.scheme);
                 host = address.server;
-                port = address.port <= 0 ? 5900 : address.port;
+                port = protocol.get_default_port ();
             }
         }
 
