@@ -29,6 +29,16 @@ if appstream_util.found()
   )
 endif
 
+dbus_conf = configuration_data ()
+dbus_conf.set ('bindir', join_paths (get_option ('prefix'), get_option ('bindir')))
+configure_file (
+  input: 'org.gnome.Connections.service.in',
+  output: 'org.gnome.Connections.service',
+  configuration: dbus_conf,
+  install: true,
+  install_dir: join_paths (get_option('datadir'), 'dbus-1', 'services')
+)
+
 # Icons
 install_subdir('icons',
   install_dir: join_paths(get_option('datadir')),

@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.gnome.Connections
+Exec=@bindir@/gnome-connections --gapplication-service

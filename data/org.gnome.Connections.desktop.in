@@ -6,3 +6,4 @@ Type=Application
 Categories=GTK;
 StartupNotify=true
 Icon=org.gnome.Connections
+DBusActivatable=true
