@@ -3,6 +3,7 @@ include: 'https://gitlab.gnome.org/GNOME/citemplates/raw/master/flatpak/flatpak_
 stages:
 - test
 - deploy
+- fedora
 
 variables:
     BUNDLE: "gnome-connections.flatpak"
@@ -25,3 +26,16 @@ review:
 stop_review:
     stage: deploy
     extends: ".stop_review"
+
+fedora:rawhide:
+    image: fedora:rawhide
+    stage: fedora
+    before_script:
+    - dnf update -y --nogpgcheck
+    - dnf install -y meson git vala gtk3-devel
+                     gtk-vnc2-devel gettext freerdp-devel
+                     python3-devel --nogpgcheck
+
+    script:
+        - meson _build .
+        - ninja -C _build
