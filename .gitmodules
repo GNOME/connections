@@ -1,0 +1,3 @@
+[submodule "gtk-frdp"]
+	path = subprojects/gtk-frdp
+	url = https://gitlab.gnome.org/GNOME/gtk-frdp.git
