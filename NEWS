@@ -1,3 +1,21 @@
+3.37.2 - Jul 21, 2020
+=====================
+
+Changes since 3.37.1
+
+  - Fix command name in the desktop file
+  - Prefer dark theme
+  - Show version number in the about dialog
+  - Grab focus for password field in the authentication dialog
+  - Make gtk-frdp a meson/git subproject/submodule dependency
+  - Add CI build test for Fedora Rawhide
+
+All contributors to this release:
+
+Felipe Borges <felipeborges@gnome.org>
+Manuel Wassermann <manuel.wassermann97@gmail.com>
+Marius Gedminas <marius@gedmin.as>
+
 3.37.1 - Apr 24, 2020
 =====================
 
