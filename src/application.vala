@@ -41,6 +41,7 @@ namespace Connections {
             application = this;
 
             application_id = "org.gnome.Connections";
+            flags |= ApplicationFlags.HANDLES_COMMAND_LINE;
 
             var action = new GLib.SimpleAction ("help", null);
             action.activate.connect (show_help);
@@ -172,6 +173,45 @@ namespace Connections {
                 if (connection.connected)
                     connection.disconnect_it ();
             }
+        }
+
+        static string[] opt_uris;
+        const OptionEntry[] options = {
+            { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_("URL to connection"), null },
+            { null }
+        };
+        public override int command_line (GLib.ApplicationCommandLine cmdline) {
+            opt_uris = null;
+
+            var parameter_string = _("— A simple application to access remote connections");
+            var opt_context = new OptionContext (parameter_string);
+            opt_context.add_main_entries (options, null);
+
+            try {
+                string[] args1 = cmdline.get_arguments ();
+                unowned string[] args2 = args1;
+                opt_context.parse (ref args2);
+            } catch (GLib.OptionError error) {
+                cmdline.printerr ("%s\n", error.message);
+
+                return 1;
+            }
+
+            if (opt_uris != null && opt_uris.length > 1) {
+                cmdline.printerr (_("Too many command line arguments specified.\n"));
+
+                return 1;
+            }
+
+            activate ();
+
+            if (opt_uris != null) {
+                var uri = opt_uris[0];
+
+                (new Connections.Assistant (main_window, uri)).run ();
+            }
+
+            return 0;
         }
     }
 }

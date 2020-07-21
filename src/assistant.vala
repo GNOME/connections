@@ -31,12 +31,15 @@ namespace Connections {
             use_header_bar = 1;
         }
 
-        public Assistant (Window window) {
+        public Assistant (Window window, string? uri = null) {
             set_transient_for (window);
 
             create_button.get_style_context ().add_class ("suggested-action");
 
             url_entry.grab_focus ();
+
+            if (uri != null)
+                url_entry.text = uri;
         }
 
         [GtkCallback]
