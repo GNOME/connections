@@ -59,4 +59,5 @@ executable('gnome-connections', connections_sources,
   c_args: c_args,
   dependencies: connections_deps,
   install: true,
+  install_rpath: join_paths (get_option ('prefix'), get_option ('libdir'), meson.project_name ())
 )
