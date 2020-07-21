@@ -24,11 +24,17 @@ namespace Connections {
     public class CollectionView : Gtk.ScrolledWindow {
         [GtkChild]
         private Gtk.FlowBox flowbox; 
+        [GtkChild]
+        public Gtk.SearchBar search_bar;
+        [GtkChild]
+        private Gtk.SearchEntry search_entry;
 
         private Connections.ActionsPopover popover;
 
         construct {
             popover = new Connections.ActionsPopover ();
+
+            flowbox.set_filter_func (model_filter);
         }
 
         public void bind_model (ListModel model) {
@@ -74,6 +80,23 @@ namespace Connections {
             popover.show ();
 
             return true;
+        }
+
+        private bool model_filter (Gtk.FlowBoxChild child) {
+            if (child == null)
+                return false;
+
+            var item = child.get_child () as CollectionViewChild;
+            if (item == null)
+                return false;
+
+            return item.connection.uri.contains (search_entry.text) ||
+                   item.connection.display_name.contains (search_entry.text);
+        }
+
+        [GtkCallback]
+        private void on_search_changed () {
+            flowbox.invalidate_filter ();
         }
     }
 }

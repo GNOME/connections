@@ -4,6 +4,7 @@
     <template class="ConnectionsWindow" parent="GtkApplicationWindow">
       <property name="width-request">1024</property>
       <property name="height-request">768</property>
+      <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
     <child type="titlebar">
       <object class="ConnectionsTopbar" id="topbar">
         <property name="visible">True</property>

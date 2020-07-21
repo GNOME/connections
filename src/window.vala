@@ -32,7 +32,7 @@ namespace Connections {
         private EmptyView empty_view;
 
         [GtkChild]
-        private CollectionView collection_view;
+        public CollectionView collection_view;
 
         [GtkChild]
         private DisplayView display_view;
@@ -61,6 +61,8 @@ namespace Connections {
             } catch (GLib.Error error) {
                 warning ("Failed to load CSS: %s", error.message);
             }
+
+            topbar.search_button.bind_property ("active", collection_view.search_bar, "search_mode_enabled", BindingFlags.BIDIRECTIONAL);
         }
 
         public void bind_model (ListModel model) {
@@ -83,6 +85,20 @@ namespace Connections {
 
         public void show_collection_view () {
             stack.set_visible_child (collection_view);
+        }
+
+        [GtkCallback]
+        private bool on_key_pressed (Gtk.Widget widget, Gdk.EventKey event) {
+            var default_modifiers = Gtk.accelerator_get_default_mod_mask ();
+
+            if (event.keyval == Gdk.Key.f &&
+                (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
+                collection_view.search_bar.search_mode_enabled = !collection_view.search_bar.search_mode_enabled;
+
+                return true;
+            }
+
+            return false;
         }
     }
 }

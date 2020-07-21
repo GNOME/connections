@@ -25,6 +25,8 @@ namespace Connections {
         [GtkChild]
         private Gtk.HeaderBar collection_toolbar;
         [GtkChild]
+        public Gtk.Button search_button;
+        [GtkChild]
         private Gtk.HeaderBar display_toolbar;
 
         private weak Connections.Connection connection;

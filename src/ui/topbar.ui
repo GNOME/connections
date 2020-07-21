@@ -55,6 +55,34 @@
               <property name="pack-type">end</property>
             </packing>
           </child>
+
+          <child>
+            <object class="GtkToggleButton" id="search_button">
+              <property name="visible">True</property>
+              <property name="use-underline">True</property>
+              <property name="valign">center</property>
+              <style>
+                <class name="image-button"/>
+              </style>
+
+              <child internal-child="accessible">
+                <object class="AtkObject" id="a11y-search-button">
+                  <property name="accessible-name" translatable="yes">Search</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkImage">
+                  <property name="visible">True</property>
+                  <property name="icon-name">edit-find-symbolic</property>
+                  <property name="icon-size">1</property>
+                </object>
+              </child>
+            </object>
+            <packing>
+              <property name="pack-type">end</property>
+            </packing>
+          </child>
         </object>
       </child>
 
