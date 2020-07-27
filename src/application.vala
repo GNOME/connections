@@ -41,7 +41,7 @@ namespace Connections {
             application = this;
 
             application_id = "org.gnome.Connections";
-            flags |= ApplicationFlags.HANDLES_COMMAND_LINE;
+            flags |= ApplicationFlags.HANDLES_COMMAND_LINE | ApplicationFlags.HANDLES_OPEN;
 
             var action = new GLib.SimpleAction ("help", null);
             action.activate.connect (show_help);
@@ -127,6 +127,27 @@ namespace Connections {
             connection.save ();
         }
 
+        public void add_connection_from_file (string file_path) {
+            Connection? connection = null;
+            var mime_type = GLib.ContentType.guess(file_path, null, null);
+
+            switch (mime_type) {
+                case "application/x-vnc":
+                    connection = new VncConnection.from_vnc_file (file_path);
+                    connection.protocol = Connection.Protocol.VNC;
+                    break;
+                default:
+                    warning ( _ ("Couldn't open file of unknown mime type %s".printf (mime_type)));
+                    break;
+            }
+
+            if (connection == null)
+                return;
+
+            model.insert (0, connection);
+            connection.save ();
+        }
+
         public void remove_connection (Connection connection) {
             Notification.OKFunc undo = () => {
                 debug ("Connection deletion cancelled by user. Re-adding to view");
@@ -164,6 +185,15 @@ namespace Connections {
             main_window.open_connection (connection);
         }
 
+        public override void open(File[] files, string hint)
+        {
+            activate();
+
+                foreach (var file in files) {
+                    add_connection_from_file(file.get_path());
+                }
+        }
+
         public override void shutdown () {
             base.shutdown ();
 
@@ -176,12 +206,15 @@ namespace Connections {
         }
 
         static string[] opt_uris;
+        static string opt_file_import_uri;
         const OptionEntry[] options = {
-            { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_("URL to connection"), null },
+            { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_ ("URL to connection"), null },
+            { "file", 'F', 0, GLib.OptionArg.FILENAME, ref opt_file_import_uri, N_ ("Open .vnc or .rdp file at at giving PATH"), "PATHS" },
             { null }
         };
         public override int command_line (GLib.ApplicationCommandLine cmdline) {
             opt_uris = null;
+            opt_file_import_uri = null;
 
             var parameter_string = _("— A simple application to access remote connections");
             var opt_context = new OptionContext (parameter_string);
@@ -202,13 +235,16 @@ namespace Connections {
 
                 return 1;
             }
-
             activate ();
 
             if (opt_uris != null) {
                 var uri = opt_uris[0];
 
                 (new Connections.Assistant (main_window, uri)).run ();
+            }
+
+            if (opt_file_import_uri != null) {
+                add_connection_from_file (opt_file_import_uri);
             }
 
             return 0;

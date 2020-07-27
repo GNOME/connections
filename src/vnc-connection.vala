@@ -113,6 +113,42 @@ namespace Connections {
             config.save ();
         }
 
+        public VncConnection.from_vnc_file(string file_path) {
+            var key_file = new KeyFile();
+
+            try {
+                key_file.load_from_file (file_path, GLib.KeyFileFlags.NONE);
+            } catch (GLib.Error e) {
+                warning (_ ("Could not parse the file"));
+                return;
+            }
+
+            try {
+                this.host = key_file.get_string ("Connection", "Host");
+            } catch (GLib.Error e) {
+                info  ( _ ("VNC File is missing key “Host“"));
+            }
+            try {
+                this.port = key_file.get_integer ("Connection", "Port");
+            } catch (GLib.Error e) {
+                info ( _ ("VNC File is missing key “Port“"));
+                this.port = Connection.Protocol.VNC.get_default_port();
+            }
+            try {
+                this.username = key_file.get_string ("Connection", "Username");
+            } catch (GLib.Error e) {
+                info ( _ ("VNC File is missing key “Username“"));
+            }
+            try {
+                this.password = key_file.get_string ("Connection", "Password ");
+            } catch (GLib.Error e) {
+                info ( _ ("VNC File is missing key “Password“"));
+            }
+
+            this.uuid = Uuid.string_random ();
+            this.config.save();
+        }
+
         ~VncConnection () {
             debug ("Closig connection with %s", widget.name);
 

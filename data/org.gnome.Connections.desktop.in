@@ -7,3 +7,4 @@ Categories=GTK;
 StartupNotify=true
 Icon=org.gnome.Connections
 DBusActivatable=true
+MimeType=application/x-vnc

@@ -54,3 +54,7 @@ if compile_schemas.found()
     args: ['--strict', '--dry-run', meson.current_source_dir()]
   )
 endif
+
+install_data('org.gnome.Connections.xml',
+  install_dir: join_paths(get_option('datadir'), 'mime', 'packages')
+)
