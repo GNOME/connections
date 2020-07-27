@@ -23,12 +23,14 @@ connections_deps = [
   valac.find_library ('config', dirs: src_dir),
   dependency('gio-2.0', version: '>= 2.50'),
   dependency('gtk+-3.0', version: '>= 3.22'),
-  dependency('gtk-vnc-2.0', version: '> 0.4.4'), 
+  dependency('gtk-vnc-2.0', version: '> 0.4.4'),
   dependency ('libxml-2.0', version: '>= 2.7.8'),
 ]
 
-if get_option('flatpak')
-  connections_deps += dependency('gtk-frdp-0.1')
+gtk_frdp_dep = dependency('gtk-frdp-0.1', required: false)
+
+if gtk_frdp_dep.found()
+  connections_deps += gtk_frdp_dep
 else
   gtk_frdp_dep = subproject('gtk-frdp', default_options: [
     'package_subdir=' + meson.project_name()
