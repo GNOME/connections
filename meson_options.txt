@@ -1,1 +1,0 @@
-option ('flatpak', type: 'boolean', value: false, description: 'Whether Connections is going to run in a Flatpak container')
