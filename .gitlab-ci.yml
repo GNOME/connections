@@ -7,6 +7,7 @@ stages:
 
 flatpak:
     image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master
+    needs: []
     variables:
         MANIFEST_PATH: "build-aux/flatpak/org.gnome.Connections.json"
         FLATPAK_MODULE: "gnome-connections"
@@ -23,6 +24,7 @@ nightly:
 fedora:rawhide:
     image: fedora:rawhide
     stage: fedora
+    needs: []
     before_script:
     - dnf update -y --nogpgcheck
     - dnf install -y meson git vala gtk3-devel
