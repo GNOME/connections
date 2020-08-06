@@ -5,9 +5,6 @@ stages:
 - deploy
 - fedora
 
-variables:
-    BUNDLE: "gnome-connections.flatpak"
-    
 flatpak:
     image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master
     variables:
@@ -15,7 +12,13 @@ flatpak:
         FLATPAK_MODULE: "gnome-connections"
         RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
         APP_ID: "org.gnome.Connections"
+        BUNDLE: "gnome-connections.flatpak"
     extends: .flatpak 
+
+nightly:
+  extends: '.publish_nightly'
+  dependencies: ['flatpak']
+  needs: ['flatpak']
 
 fedora:rawhide:
     image: fedora:rawhide
