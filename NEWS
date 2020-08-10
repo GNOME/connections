@@ -1,3 +1,24 @@
+3.37.90 - Aug 10, 2020
+======================
+
+Changes since 3.37.2
+
+  - Drop the "GNOME" suffix because we are not a core app
+  - Make the CI publish Connections to the GNOME Nightly repo
+  - Allow building with system gtk-frdp if found
+  - Account for offset of event_box child when relaying events
+  - Support opening .vnc files (from Vinagre)
+  - Handle command-line arguments
+  - Add search support
+  - Fix rpath linking with subprojects
+
+All contributors to this release:
+
+Felipe Borges <felipeborges@gnome.org>
+Jason Gerecke <killertofu@gmail.com>
+Jordan Petridis <jpetridis@gnome.org>
+Rasmus Thomsen <oss@cogitri.dev>
+
 3.37.2 - Jul 21, 2020
 =====================
 
