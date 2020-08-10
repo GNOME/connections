@@ -10,10 +10,10 @@ flatpak:
     needs: []
     variables:
         MANIFEST_PATH: "build-aux/flatpak/org.gnome.Connections.json"
-        FLATPAK_MODULE: "gnome-connections"
+        FLATPAK_MODULE: "connections"
         RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
         APP_ID: "org.gnome.Connections"
-        BUNDLE: "gnome-connections.flatpak"
+        BUNDLE: "connections.flatpak"
     extends: .flatpak 
 
 nightly:
