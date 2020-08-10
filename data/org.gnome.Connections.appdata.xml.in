@@ -17,9 +17,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="3.37.2" date="2020-07-21">
+    <release version="3.37.90" date="2020-08-10">
       <description>
-        <p>This is the first public release of Connections.</p>
+        <p>Various fixes and improvements including: search, handling of command line arguments, opening .vnc (vinagre) files.</p>
       </description>
     </release>
   </releases>
