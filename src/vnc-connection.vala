@@ -162,7 +162,7 @@ namespace Connections {
 
             display.set_credential (DisplayCredential.USERNAME, username);
             display.set_credential (DisplayCredential.PASSWORD, password);
-            display.set_credential (DisplayCredential.CLIENTNAME, "gnome-connections");
+            display.set_credential (DisplayCredential.CLIENTNAME, "connections");
 
             display.open_host (host, port.to_string ());
         }
