@@ -55,7 +55,7 @@ vala_args = [
   '--target-glib=2.50',
 ]
 
-executable('gnome-connections', connections_sources,
+executable('connections', connections_sources,
   include_directories: config_h_dir, 
   vala_args: vala_args,
   c_args: c_args,
