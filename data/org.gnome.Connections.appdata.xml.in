@@ -4,7 +4,7 @@
   <id>org.gnome.Connections.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-  <name>GNOME Connections</name>
+  <name>Connections</name>
   <summary>A remote desktop client for the GNOME desktop environment</summary>
   <description>
     <p>
@@ -13,7 +13,7 @@
   </description>
   <screenshots>
     <screenshot height="1600" width="900">
-      <image>https://gitlab.gnome.org/felipeborges/gnome-connections/-/raw/master/data/screenshot.png</image>
+      <image>https://gitlab.gnome.org/felipeborges/connections/-/raw/master/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
@@ -27,9 +27,9 @@
   <project_group>GNOME</project_group>
   <developer_name>The GNOME Project</developer_name>
   <update_contact>felipeborges_at_gnome.org</update_contact>
-  <url type="homepage">https://gitlab.gnome.org/felipeborges/gnome-connections</url>
-  <url type="bugtracker">https://gitlab.gnome.org/felipeborges/gnome-connections/issues</url>
+  <url type="homepage">https://gitlab.gnome.org/felipeborges/connections</url>
+  <url type="bugtracker">https://gitlab.gnome.org/felipeborges/connections/issues</url>
   <url type="donation">http://www.gnome.org/friends/</url>
-  <translation type="gettext">gnome-connections</translation>
+  <translation type="gettext">connections</translation>
   <content_rating type="oars-1.1" />
 </component>
