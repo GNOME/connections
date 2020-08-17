@@ -51,7 +51,18 @@ namespace Connections {
             }
 
             var uri = Xml.URI.parse (url_entry.text);
-            if (uri == null || uri.scheme == null) {
+            if (uri == null || uri.scheme == null || uri.path != null) {
+                create_button.sensitive = false;
+
+                return;
+            }
+
+            var port_str = url_entry.text.substring (url_entry.text.last_index_of (":",
+                                                                                   int.max (uri.scheme.length + 3,
+                                                                                            url_entry.text.index_of ("@"))
+                                                                                  )).substring (1);
+
+            if (uri.port > 65535 || port_str != "" && uri.port == 0) {
                 create_button.sensitive = false;
 
                 return;
