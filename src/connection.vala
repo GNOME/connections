@@ -90,7 +90,7 @@ namespace Connections {
 
                 protocol = protocol.from_string (address.scheme);
                 host = address.server;
-                port = protocol.get_default_port ();
+                port = (address.port != 0) ? address.port : protocol.get_default_port ();
             }
         }
 
