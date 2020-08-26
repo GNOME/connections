@@ -126,23 +126,24 @@ namespace Connections {
             try {
                 this.host = key_file.get_string ("Connection", "Host");
             } catch (GLib.Error e) {
-                info  ( _ ("VNC File is missing key “Host“"));
+                // Translators: %s is a VNC file key
+                info  ( _("VNC File is missing key “%s”".printf ("Host")));
             }
             try {
                 this.port = key_file.get_integer ("Connection", "Port");
             } catch (GLib.Error e) {
-                info ( _ ("VNC File is missing key “Port“"));
+                info  ( _ ("VNC File is missing key “%s”".printf ("Port")));
                 this.port = Connection.Protocol.VNC.get_default_port();
             }
             try {
                 this.username = key_file.get_string ("Connection", "Username");
             } catch (GLib.Error e) {
-                info ( _ ("VNC File is missing key “Username“"));
+                info  ( _ ("VNC File is missing key “%s”".printf ("Username")));
             }
             try {
                 this.password = key_file.get_string ("Connection", "Password ");
             } catch (GLib.Error e) {
-                info ( _ ("VNC File is missing key “Password“"));
+                info  ( _ ("VNC File is missing key “%s”".printf ("Password")));
             }
 
             this.uuid = Uuid.string_random ();
