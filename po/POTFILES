@@ -1,7 +1,6 @@
 data/org.gnome.Connections.desktop.in
 data/org.gnome.Connections.appdata.xml.in
 data/org.gnome.Connections.gschema.xml
-src/window.ui
+src/ui/window.ui
 src/main.vala
 src/window.vala
-
