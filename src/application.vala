@@ -74,7 +74,7 @@ namespace Connections {
                                    "artists", artists,
                                    "authors", authors,
                                    "translator-credits", _("translator-credits"),
-                                   "comments", _("A remote connection manager for the GNOME desktop"),
+                                   "comments", _("A remote desktop client for the GNOME desktop environment"),
                                    "copyright", "\xc2\xa9 2020 Red Hat, Inc.",
                                    "license-type", Gtk.License.GPL_3_0,
                                    "program-name", _("Connections"),
@@ -216,8 +216,8 @@ namespace Connections {
             opt_uris = null;
             opt_file_import_uri = null;
 
-            var parameter_string = _("— A simple application to access remote connections");
-            var opt_context = new OptionContext (parameter_string);
+            var parameter_string = _("A remote desktop client for the GNOME desktop environment");
+            var opt_context = new OptionContext ("— " + parameter_string);
             opt_context.add_main_entries (options, null);
 
             try {
