@@ -137,7 +137,7 @@ namespace Connections {
                     connection.protocol = Connection.Protocol.VNC;
                     break;
                 default:
-                    warning ( _ ("Couldn't open file of unknown mime type %s".printf (mime_type)));
+                    warning ( _ ("Couldn’t open file of unknown mime type %s".printf (mime_type)));
                     break;
             }
 
@@ -208,8 +208,8 @@ namespace Connections {
         static string[] opt_uris;
         static string opt_file_import_uri;
         const OptionEntry[] options = {
-            { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_ ("URL to connection"), null },
-            { "file", 'F', 0, GLib.OptionArg.FILENAME, ref opt_file_import_uri, N_ ("Open .vnc or .rdp file at at giving PATH"), "PATHS" },
+            { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_ ("URL to connect"), null },
+            { "file", 'F', 0, GLib.OptionArg.FILENAME, ref opt_file_import_uri, N_ ("Open .vnc or .rdp file at the given PATH"), "PATH" },
             { null }
         };
         public override int command_line (GLib.ApplicationCommandLine cmdline) {
@@ -231,7 +231,7 @@ namespace Connections {
             }
 
             if (opt_uris != null && opt_uris.length > 1) {
-                cmdline.printerr (_("Too many command line arguments specified.\n"));
+                cmdline.printerr (_("Too many command-line arguments specified.\n"));
 
                 return 1;
             }
