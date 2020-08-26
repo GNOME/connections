@@ -140,6 +140,7 @@ namespace Connections {
                     }
                 };
                 var message = _("Screenshot taken");
+                // Translators: Open is a verb
                 Application.application.main_window.notifications_bar.display_for_action (message,
                                                                                           _("Open"),
                                                                                           (owned) open,
