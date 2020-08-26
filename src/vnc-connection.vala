@@ -119,7 +119,7 @@ namespace Connections {
             try {
                 key_file.load_from_file (file_path, GLib.KeyFileFlags.NONE);
             } catch (GLib.Error e) {
-                warning (_ ("Could not parse the file"));
+                warning (_ ("Couldn’t parse the file"));
                 return;
             }
 
