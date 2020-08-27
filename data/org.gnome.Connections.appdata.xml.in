@@ -13,7 +13,7 @@
   </description>
   <screenshots>
     <screenshot height="1600" width="900">
-      <image>https://gitlab.gnome.org/felipeborges/connections/-/raw/master/data/screenshot.png</image>
+      <image>https://gitlab.gnome.org/GNOME/connections/-/raw/master/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
@@ -27,8 +27,8 @@
   <project_group>GNOME</project_group>
   <developer_name>The GNOME Project</developer_name>
   <update_contact>felipeborges_at_gnome.org</update_contact>
-  <url type="homepage">https://gitlab.gnome.org/felipeborges/connections</url>
-  <url type="bugtracker">https://gitlab.gnome.org/felipeborges/connections/issues</url>
+  <url type="homepage">https://gitlab.gnome.org/GNOME/connections</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/connections/issues</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <translation type="gettext">connections</translation>
   <content_rating type="oars-1.1" />

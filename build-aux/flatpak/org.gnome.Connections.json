@@ -85,7 +85,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/felipeborges/connections.git"
+                    "url": "https://gitlab.gnome.org/GNOME/connections.git"
                 }
             ]
         }

@@ -14,7 +14,7 @@
   <download-page
   rdf:resource="http://download.gnome.org/sources/connections/"/>
   <bug-database
-  rdf:resource="https://gitlab.gnome.org/felipeborges/connections/issues"/>
+  rdf:resource="https://gitlab.gnome.org/GNOME/connections/issues"/>
 
   <maintainer>
     <foaf:Person>
