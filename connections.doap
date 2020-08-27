@@ -5,7 +5,8 @@
          xmlns="http://usefulinc.com/ns/doap#">
 
   <name xml:lang="en">Connections</name>
-  <shortdesc xml:lang="en">A remote desktop client for the GNOME desktop environment</shortdesc>
+  <shortdesc xml:lang="en">A remote desktop client for GNOME</shortdesc>
+  <description xml:lang="en">A remote desktop client for the GNOME desktop environment</description>
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
   <programming-language>Vala</programming-language>
 
