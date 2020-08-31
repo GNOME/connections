@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+#
+# Jordi Mas i Hernàndez <jmas@softcatala.org>, 2020
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-31 21:43+0200\n"
+"PO-Revision-Date: 2020-08-31 21:43+0200\n"
+"Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
+"Language-Team: ca\n"
+"Language: Catalan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Connexions"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:22
+msgid ""
+"Various fixes and improvements including: search, handling of command line "
+"arguments, opening .vnc (vinagre) files."
+msgstr ""
+"Diverses correccions i millores incloent la gestió de cerca d'arguments de "
+"línia d'ordres obrint fitxers .vnc (vinagre)."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Suprimeix"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Propietats"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Jordi Mas i Hernàndez <jmas@softcatala.org>"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "No s'ha pogut obrir el fitxer de tipus MIME %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "S'ha eliminat la connexió a «%s»"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Desfés"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL a connectar"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Obre el fitxer .vnc o .rdp al PATH indicat"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "S'han especificat massa arguments de la línia d'ordres.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Captura de pantalla des de %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Captura de pantalla feta"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Obre"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” requereix autenticació"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+msgid "Scaling"
+msgstr "S'està escalant"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Fes una captura de pantalla"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Crea una connexió nova"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Introduïu una adreça de la màquina a la qual connectar-se. L'adreça pot "
+"començar amb rdp::// o vnc:://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Servidor"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nom"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Crea"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Nom d'usuari"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Contrasenya"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Inicia la sessió"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Us donem la benvinguda a Connexions"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Premeu el botó <b>+</b> per fer la vostra primera connexió."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Propietats de la connexió"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adreça"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nou"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menú d'aplicacions"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Cerca"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Vés enrere"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Mostra el menú"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Desconnecta"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Dreceres de teclat"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Dreceres de teclat"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Quant a Connexions"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Retrocés"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Supr"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Couldn’t parse the file"
+msgstr "No s'ha pogut analitzar el fitxer"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "El fitxer VNC manca la clau «%s»"
+
+#: src/vnc-connection.vala:250
+msgid "View only"
+msgstr "Mostra només"
+
+#: src/vnc-connection.vala:260
+msgid "Show local pointer"
+msgstr "Mostra el punter local"
