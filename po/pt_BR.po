@@ -1,0 +1,256 @@
+# Brazilian Portuguese translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-08-31 10:35+0000\n"
+"PO-Revision-Date: 2020-08-31 10:35+0000\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conexões"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Um cliente de área de trabalho remota para o ambiente GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Um cliente de área de trabalho remota para o ambiente GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "O Projeto GNOME"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Arquivo de área de trabalho remota (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Excluir"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Propriedades"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Rafael Fontenelle <rafaelff@gnome.org>"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Não foi possível abrir um arquivo de tipo mime desconhecido %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "A conexão com “%s” foi excluída"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Desfazer"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL para conectar"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Abre um arquivo .vnc ou .rdp no caminho informado"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "Muitos argumentos de linha de comando especificados.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Captura de tela de %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Captura de tela armazenada"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Abrir"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” requer autenticação"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+msgid "Scaling"
+msgstr "Escala"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Capturar de tela"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Criar uma nova conexão"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Insira um endereço de máquina para conectar. O endereço pode começar com "
+"rdp:// ou vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Servidor"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nome"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Criar"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Nome de _usuário"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Senha"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Entrar"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bem-vindo ao Conexões"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Basta pressionar o botão <b>+</b> para fazer sua primeira conexão."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Propriedades da conexão"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Endereço"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nova"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menu do aplicativo"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Pesquisar"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Voltar"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Exibir menu"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Atalhos de teclado"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Atalhos de teclado"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Sobre o Conexões"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Couldn’t parse the file"
+msgstr "Não foi possível analisar o arquivo"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Arquivo VNC sem chave “%s”"
+
+#: src/vnc-connection.vala:250
+msgid "View only"
+msgstr "Apenas visualizar"
+
+#: src/vnc-connection.vala:260
+msgid "Show local pointer"
+msgstr "Mostrar cursor local"
