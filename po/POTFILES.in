@@ -1,7 +1,12 @@
 data/org.gnome.Connections.desktop.in
 data/org.gnome.Connections.appdata.xml.in
 data/org.gnome.Connections.gschema.xml
-src/window.ui
+data/org.gnome.Connections.xml
+src/ui/empty-view.ui
+src/ui/auth-notification.ui
+src/ui/assistant.ui
+src/ui/properties.ui
+src/ui/topbar.ui
 src/main.vala
 src/window.vala
 
