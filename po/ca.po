@@ -162,7 +162,7 @@ msgstr "Inicia la sessió"
 
 #: src/ui/empty-view.ui:28
 msgid "Welcome to Connections"
-msgstr "Us donem la benvinguda a Connexions"
+msgstr "Us donem la benvinguda al Connexions"
 
 #: src/ui/empty-view.ui:41
 msgid "Just hit the <b>+</b> button to make your first connection."
@@ -215,7 +215,7 @@ msgstr "Ajuda"
 
 #: src/ui/topbar.ui:205
 msgid "About Connections"
-msgstr "Quant a Connexions"
+msgstr "Quant al Connexions"
 
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
