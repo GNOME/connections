@@ -1,0 +1,174 @@
+# Persian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-01 08:45+0000\n"
+"PO-Revision-Date: 2020-09-01 08:56+0000\n"
+"Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "دوردست‌ها"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "یک کارخواه میزکار دوردست برای محیط میزکار گنوم"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "یک کارخواه میزکار دوردست برای محیط میزکار گنوم."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "پروژهٔ گنوم"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "پروندهٔ میزکار دوردست (VNC)"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "به دوردست‌ها خوش آمدید"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "برای ساخت نخستین ارتباطتان، کافیست دکمهٔ <b>+</b> را بزنید."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_نام‌کاربری"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_گذرواژه"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "ورود"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "ایحاد ارتباطی جدید"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"برای ارتباط یا ماشین، نشانیش را وارد کنید. نشنانی‌ها می‌توانند با ‪rdp://‬ "
+"یا ‪vnc://‬ شروع شوند"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr ""
+"برای ارتباط یا ماشین، نشانیش را وارد کنید. نشنانی‌ها می‌توانند با ‪rdp://‬ "
+"یا ‪vnc://‬ شروع شوند"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "نام"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "لغو"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "ایجاد"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "ویژگی‌های ارتباط"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "نشانی"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "جدید"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "فهرست برنامه"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "جست‌وجو"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "عقب رفتن"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "فهرست نمایش"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "قطع ارتباط"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "میان‌برهای صفحه‌کلید"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "میان‌برهای صفحه‌کلید"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "راهنما"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "دربارهٔ دوردست‌ها"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "نماگرفت"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "ویژگی‌ها"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "مهار + دگرساز + پس‌بر"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "مهار + دگرساز + حذف"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "مهار + دگرساز + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "مهار + دگرساز + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "مهار + دگرساز + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "مهار + دگرساز + F7"
