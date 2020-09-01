@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 07:20+0000\n"
-"PO-Revision-Date: 2020-09-01 10:42+0200\n"
+"POT-Creation-Date: 2020-09-01 08:45+0000\n"
+"PO-Revision-Date: 2020-09-01 10:50+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
@@ -19,16 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 3.36.0\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Conexiones"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
-
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Un cliente de escritorio remoto para GNOME"
 
@@ -40,29 +38,87 @@ msgstr "Un cliente de escritorio remoto para GNOME."
 msgid "The GNOME Project"
 msgstr "El Proyecto GNOME"
 
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
 msgstr "Archivo de escritorio remoto (VNC)"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Bienvenido a Conexiones"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Eliminar"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Pulse el botón <b>+</b> para crear su primera conexión."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Propiedades"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "Nombre de _usuario"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2020"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "_Contraseña"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "No se pudo abrir el archivo %s o tipo MIME desconocido"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Registrarse"
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Se ha eliminado la conexión a «%s»"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Deshacer"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL al que conectar"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Abrir archivo .vnc .o .rdp en la RUTA dada"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "Demasiados argumentos en la línea de comandos.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+#| msgid "Take Screenshot"
+msgid "Screenshot from %s"
+msgstr "Captura de las %s"
+
+#: src/connection.vala:142
+#| msgid "Take Screenshot"
+msgid "Screenshot taken"
+msgstr "Captura realizada"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Abrir"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "«%s» requiere autenticación"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+msgid "Scaling"
+msgstr "Escalado"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Capturar la pantalla"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -91,6 +147,26 @@ msgstr "Cancelar"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Crear"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Nombre de _usuario"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Contraseña"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Registrarse"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bienvenido a Conexiones"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Pulse el botón <b>+</b> para crear su primera conexión."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -140,14 +216,6 @@ msgstr "Ayuda"
 msgid "About Connections"
 msgstr "Acerca de Conexiones"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Capturar la pantalla"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Propiedades"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Retroceso"
@@ -171,3 +239,22 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Couldn’t parse the file"
+msgstr "No se pudo analizar el archivo"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "El archivo VNC no tiene la clave «%s»"
+
+#: src/vnc-connection.vala:250
+msgid "View only"
+msgstr "Sólo lectura"
+
+#: src/vnc-connection.vala:260
+msgid "Show local pointer"
+msgstr "Mostrar puntero local"
