@@ -1,0 +1,172 @@
+# Indonesian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Andika Triwidada <atriwidada@gnome.org>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-01 08:56+0000\n"
+"PO-Revision-Date: 2020-09-01 16:21+0700\n"
+"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Sambungan"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Klien desktop jarak jauh untuk lingkungan desktop GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Klien desktop jarak jauh untuk lingkungan desktop GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "Proyek GNOME"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Berkas Desktop Jarak Jauh (VNC)"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Selamat Datang di Koneksi"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Nama pengg_una"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "San_di"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Masuk"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Membuat Koneksi Baru"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan "
+"rdp:// atau vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Server"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nama"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Batal"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Buat"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Properti Koneksi"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Alamat"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Baru"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menu Aplikasi"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Cari"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Kembali"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menu Tampilan"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Putuskan"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Cara pintas keyboard"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Tombol Pintas"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Bantuan"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Tentang Koneksi"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ambil Cuplikan Layar"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Tag (tertanam)"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
