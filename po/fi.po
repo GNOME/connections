@@ -1,0 +1,172 @@
+# Finnish translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-01 18:28+0000\n"
+"PO-Revision-Date: 2020-09-01 21:39+0300\n"
+"Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Yhteydet"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "Gnome-projekti"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Etätyöpöydän VNC-tiedosto"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Tervetuloa"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Käyttäjä_tunnus"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Salasana"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Kirjaudu sisään"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Luo uusi yhteys"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Kirjoita koneen osoite, johon yhdistetään. Voi alkaa rdp:// tai vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Palvelin"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nimi"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Peru"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Luo"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Yhteyden ominaisuudet"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Osoite"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Uusi"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Sovellusvalikko"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Haku"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Siirry takaisin"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Näytä valikko"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Katkaise yhteys"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Pikanäppäimet"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Pikanäppäimet"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ohje"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Tietoja - Yhteydet"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ota kuvakaappaus"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Ominaisuudet"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
