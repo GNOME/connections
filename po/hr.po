@@ -1,0 +1,176 @@
+# Croatian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-01 20:36+0000\n"
+"PO-Revision-Date: 2020-09-01 22:54+0200\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"X-Generator: Poedit 2.3\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Povezivanja"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Klijent udaljene površine za GNOME radno okruženje"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Klijent udaljene površine za GNOME radno okruženje."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "GNOME projekt"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Datoteka udaljene radne površine (VNC)"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Dobrodošli u Povezivanja"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Jednostavno pritisnite tipku <b>+</b> za stvaranje vašeg prvog "
+"povezivanja."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Korisničko ime"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Lozinka"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Prijava"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Stvori novo povezivanje"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Upišite adresu za povezivanje. Adrese mogu započinjati sa rdp:// ili "
+"vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Poslužitelj"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Naziv"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Odustani"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Stvori"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Svojstava povezivanja"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adresa"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Novo"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Izbornik aplikacije"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Pretraga"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Idi natrag"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Prikaži izbornik"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Prekini povezivanje"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Prečaci tipkovnice"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Prečaci tipkovnice"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Priručnik"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "O Povezivanju"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Uslikaj prikaz zaslona"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Svojstva"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
