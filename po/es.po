@@ -1,0 +1,173 @@
+# Spanish translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# FULL NAME <EMAIL@ADDRESS>, 2020.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-01 07:20+0000\n"
+"PO-Revision-Date: 2020-09-01 10:42+0200\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 3.36.0\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conexiones"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un cliente de escritorio remoto para GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Un cliente de escritorio remoto para GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "El Proyecto GNOME"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Archivo de escritorio remoto (VNC)"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bienvenido a Conexiones"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Pulse el botón <b>+</b> para crear su primera conexión."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Nombre de _usuario"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Contraseña"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Registrarse"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Crear una conexión nueva"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Introduzca la máquina al a conectarse. La dirección puede empezar por rdp:// "
+"o vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Servidor"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nombre"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Crear"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Propiedades de la conexión"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Dirección"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nueva"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menú de aplicación"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Buscar"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Atrás"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menú de pantalla"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Atajos del teclado"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Atajo del teclado"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ayuda"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Acerca de Conexiones"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Capturar la pantalla"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Propiedades"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Retroceso"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Supr"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
