@@ -1,0 +1,173 @@
+# Lithuanian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Aurimas Černius <aurisc4@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-01 18:39+0000\n"
+"PO-Revision-Date: 2020-09-01 22:54+0300\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
+"Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 3.36.0\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Ryšiai"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "GNOME projektas"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Nuotolinio darbalaukio (VNC) failas"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Sveiki pradėję naudoti Ryšius"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Tiesiog spauskite <b>+</b> mygtuką pirmajam ryšiui sukurti."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Na_udotojo vardas"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "Sla_ptažodis"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Prisijungti"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Sukurti naują ryšį"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Įvesite mašinos, prie kurios prisijungti, adresą. Adresas gali prasidėti "
+"rdp:// arba vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Serveris"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Sukurti"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Ryšio savybės"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adresas"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Naujas"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Programos meniu"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Ieškoti"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Grįžti"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Rodyti meniu"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Atsijungti"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Klaviatūros trumpiniai"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Klaviatūros trumpiniai"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Žinynas"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Apie ryšius"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Padaryti ekrano nuotrauką"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Savybės"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Vald + Ald + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Vald + Alt + Trinti"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Vald + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Vald + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Vald + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Vald + Alt + F7"
