@@ -1,0 +1,257 @@
+# Friulian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Fabio Tomat <f.t.public@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-08-31 17:00+0000\n"
+"PO-Revision-Date: 2020-09-01 09:27+0200\n"
+"Language-Team: Friulian <fur@li.org>\n"
+"Language: fur\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conessions"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client par scritori rimot pal ambient di scritori GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Un client par scritori rimot pal ambient di scritori GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "Il progjet GNOME"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "File di scritori rimot (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Elimine"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Proprietâts"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Fabio Tomat, <f.t.public@gmail.com>, 2020"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Impussibil vierzi il file di gjenar mime no cognossût %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "La conession a “%s” e je stade eliminade"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Disfe"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL dulà conetisi"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Vierç il file .vnc o .rdp al PERCORS indicât"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "Specificâts masse argoments a linie di comant.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Schermade di %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Videade caturade"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Vierç"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” al à bisugne di autenticazion"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+msgid "Scaling"
+msgstr ""
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Cature schermade"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Cree une gnove conession"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ "
+"cun rdp:// o vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Servidôr"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Non"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Anule"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Cree"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Non utent"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Password"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Jentre"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Benvignûts su Conessions"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Al baste fracâ il boton <b>+</b> par creâ la tô prime conession."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Proprietâts conession"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Direzion"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Gnove"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menù aplicazion"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Cîr"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Va indaûr"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menù schermi"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Disconet"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Scurtis di tastiere"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Scurtis di tastiere"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Jutori"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Informazions su Conessions"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Canc"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Couldn’t parse the file"
+msgstr "Impussibil analizâ il file"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Al file VNC al mancje la clâf “%s”"
+
+#: src/vnc-connection.vala:250
+msgid "View only"
+msgstr "Dome viôt"
+
+#: src/vnc-connection.vala:260
+msgid "Show local pointer"
+msgstr "Mostre pontadôr locâl"
