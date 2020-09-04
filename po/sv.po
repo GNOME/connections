@@ -1,0 +1,174 @@
+# Swedish translation for gnome-connections.
+# Copyright © 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-01 11:31+0000\n"
+"PO-Revision-Date: 2020-09-04 11:28+0200\n"
+"Language-Team: Swedish <gnome-se-list@gnome.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Anslutningar"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fjärrskrivbordsfil (VNC)"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Välkommen till Anslutningar"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Användarnamn"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Lösenord"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Logga in"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Skapa en ny anslutning"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Ange en maskinadress att ansluta till. Adressen kan börja med rdp:// "
+"eller vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Server"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Namn"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Skapa"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Anslutningsegenskaper"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adress"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Ny"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Programmeny"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Sök"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Gå tillbaka"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Skärmmeny"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Koppla från"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Hjälp"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Om Anslutningar"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ta en skärmbild"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Egenskaper"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backsteg"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
