@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 18:39+0000\n"
-"PO-Revision-Date: 2020-09-01 22:54+0300\n"
+"POT-Creation-Date: 2020-09-05 11:42+0000\n"
+"PO-Revision-Date: 2020-09-05 20:13+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -19,14 +19,11 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Generator: Gtranslator 3.36.0\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Ryšiai"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -44,25 +41,91 @@ msgstr "GNOME projektas"
 msgid "Remote Desktop (VNC) file"
 msgstr "Nuotolinio darbalaukio (VNC) failas"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Sveiki pradėję naudoti Ryšius"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Ištrinti"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Tiesiog spauskite <b>+</b> mygtuką pirmajam ryšiui sukurti."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Savybės"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "Na_udotojo vardas"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"Išvertė:\n"
+"\n"
+"Aurimas Černius <aurisc4@gmail.com>"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "Sla_ptažodis"
+#: src/application.vala:77
+#| msgid "A remote desktop client for the GNOME desktop environment"
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Nuotolinio ryšio tvarkyklė GNOME darbalaukio aplinkai"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Prisijungti"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Nepavyko atverti nežinomo mime tipo %s failo"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Ryšys su „%s“ buvo ištrintas"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Atšaukti"
+
+#: src/application.vala:211
+#| msgid "Welcome to Connections"
+msgid "URL to connection"
+msgstr "URL į ryšį"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Atverti .vnc arba .rdp failą nurodytame KELYJE"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "– paprasta programa nuotoliniams ryšiams prieiti"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Pateikta per daug komandų eilutės parametrų.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+#| msgid "Take Screenshot"
+msgid "Screenshot from %s"
+msgstr "Ekrano nuotrauka iš %s"
+
+#: src/connection.vala:142
+#| msgid "Take Screenshot"
+msgid "Screenshot taken"
+msgstr "Ekrano nuotrauka padaryta"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Atverti"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "„%s“ prašo patvirtinti tapatybę"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Mastelis"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Padaryti ekrano nuotrauką"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -91,6 +154,26 @@ msgstr "Atsisakyti"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Sukurti"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Na_udotojo vardas"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "Sla_ptažodis"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Prisijungti"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Sveiki pradėję naudoti Ryšius"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Tiesiog spauskite <b>+</b> mygtuką pirmajam ryšiui sukurti."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -140,14 +223,6 @@ msgstr "Žinynas"
 msgid "About Connections"
 msgstr "Apie ryšius"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Padaryti ekrano nuotrauką"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Savybės"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Vald + Ald + Backspace"
@@ -171,3 +246,34 @@ msgstr "Vald + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Vald + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Nepavyko perskaityti failo"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC failui trūksta „Host“ rakto"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC failui trūksta „Port“ rakto"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC failui trūksta „Username“ rakto"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC failui trūksta „Password“ rakto"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Tik rodyti"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Rodyti vietinį žymeklį"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
