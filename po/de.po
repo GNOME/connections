@@ -1,0 +1,177 @@
+# German translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+#
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2020.
+# Christian Kirbach <christian.kirbach@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-01 18:39+0000\n"
+"PO-Revision-Date: 2020-09-05 00:57+0200\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Verbindungen"
+
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
+# Leicht verändert aus Vinagre übernommen
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Ein Betrachter für entfernte Bildschirme für die GNOME Arbeitsumgebung"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr ""
+"Ein Betrachter für entfernte Bildschirme für die GNOME Arbeitsumgebung."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "Das GNOME-Projekt"
+
+# Aus Vinagre übernommen
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "»Entfernter Bildschirm (VNC)«-Datei"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Willkommen zu Verbindungen"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Klicken Sie auf den <b>+</b>-Knopf, um Ihre erste Verbindung zu erstellen."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Ben_utzername"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Passwort"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Eine neue Verbindung erstellen"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Geben Sie die Adresse eines Rechners ein, zu dem verbunden werden soll. Die "
+"Adresse kann mit rdp:// oder vnc:// beginnen."
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Server"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Name"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Erstellen"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Verbindungseigenschaften"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adresse"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Neu"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Anwendungsmenü"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Suchen"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Zurück gehen"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menü anzeigen"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Verbindung trennen"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Tastenkombinationen"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Tastenkombinationen"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Hilfe"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Info zu Verbindungen"
+
+#: src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Bildschirmfoto aufnehmen"
+
+#: src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Strg + Alt + Rückschritttaste"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Strg + Alt + Entf"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Strg + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Strg + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Strg + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Strg + Alt + F7"
