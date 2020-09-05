@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-31 21:43+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-05 11:42+0000\n"
 "PO-Revision-Date: 2020-08-31 21:43+0200\n"
 "Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
 "Language-Team: ca\n"
@@ -23,8 +23,7 @@ msgstr ""
 msgid "Connections"
 msgstr "Connexions"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
+#: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
 
@@ -32,21 +31,13 @@ msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
 msgid "A remote desktop client for the GNOME desktop environment."
 msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME."
 
-#: data/org.gnome.Connections.appdata.xml.in:22
-msgid ""
-"Various fixes and improvements including: search, handling of command line "
-"arguments, opening .vnc (vinagre) files."
-msgstr ""
-"Diverses correccions i millores incloent la gestió de cerca d'arguments de "
-"línia d'ordres obrint fitxers .vnc (vinagre)."
-
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "El projecte GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fitxer d'escriptori remot (VNC)"
 
 #: src/actions-popover.vala:44
 msgid "Delete"
@@ -60,10 +51,14 @@ msgstr "Propietats"
 msgid "translator-credits"
 msgstr "Jordi Mas i Hernàndez <jmas@softcatala.org>"
 
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
+
 #: src/application.vala:140
 #, c-format
-msgid "Couldn’t open file of unknown mime type %s"
-msgstr "No s'ha pogut obrir el fitxer de tipus MIME %s"
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "No s'ha pogut obrir el fitxer de tipus MIME desconegut %s"
 
 #: src/application.vala:170
 #, c-format
@@ -75,15 +70,19 @@ msgid "Undo"
 msgstr "Desfés"
 
 #: src/application.vala:211
-msgid "URL to connect"
+msgid "URL to connection"
 msgstr "URL a connectar"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at the given PATH"
+msgid "Open .vnc or .rdp file at at giving PATH"
 msgstr "Obre el fitxer .vnc o .rdp al PATH indicat"
 
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Una aplicació senzilla per accedir a les connexions remotes"
+
 #: src/application.vala:234
-msgid "Too many command-line arguments specified.\n"
+msgid "Too many command line arguments specified.\n"
 msgstr "S'han especificat massa arguments de la línia d'ordres.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
@@ -96,12 +95,11 @@ msgstr "Captura de pantalla des de %s"
 msgid "Screenshot taken"
 msgstr "Captura de pantalla feta"
 
-#. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:144
 msgid "Open"
 msgstr "Obre"
 
-#: src/connection.vala:188
+#: src/connection.vala:187
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” requereix autenticació"
@@ -112,7 +110,7 @@ msgstr "“%s” requereix autenticació"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
 msgid "Scaling"
 msgstr "S'està escalant"
 
@@ -166,8 +164,7 @@ msgstr "Us donem la benvinguda al Connexions"
 
 #: src/ui/empty-view.ui:41
 msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
-"Premeu el botó <b>+</b> per fer la vostra primera connexió."
+msgstr "Premeu el botó <b>+</b> per fer la vostra primera connexió."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -242,20 +239,30 @@ msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
 #: src/vnc-connection.vala:122
-msgid "Couldn’t parse the file"
+msgid "Could not parse the file"
 msgstr "No s'ha pogut analitzar el fitxer"
 
-#. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
-#, c-format
-msgid "VNC File is missing key “%s”"
-msgstr "El fitxer VNC manca la clau «%s»"
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "Manca la clau «Host» al fitxer VNC"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "Manca la clau «Port» al fitxer VNC"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "Manca la clau «Username» al fitxer VNC"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "Manca la clau «Password» al fitxer VNC"
+
+#: src/vnc-connection.vala:249
 msgid "View only"
 msgstr "Mostra només"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:259
 msgid "Show local pointer"
 msgstr "Mostra el punter local"
+
