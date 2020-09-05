@@ -1,16 +1,16 @@
 # Brazilian Portuguese translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2020.
 # Henrique Machado Campos <henriquecamposrj@gmail.com>, 2020.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-08-31 20:56+0000\n"
-"PO-Revision-Date: 2020-08-31 21:18-0300\n"
-"Last-Translator: Henrique Machado Campos <henriquecamposrj@gmail.com>\n"
+"POT-Creation-Date: 2020-09-05 09:20+0000\n"
+"PO-Revision-Date: 2020-09-05 06:41-0300\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,7 @@ msgstr ""
 msgid "Connections"
 msgstr "Conexões"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
+#: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Um cliente de área de trabalho remota para o ambiente GNOME"
 
@@ -37,10 +36,6 @@ msgstr "Um cliente de área de trabalho remota para o ambiente GNOME."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "O Projeto GNOME"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -57,12 +52,18 @@ msgstr "Propriedades"
 #: src/application.vala:76
 msgid "translator-credits"
 msgstr ""
-"Henrique Machado Campos <henriquecamposrj@gmail.com>, 2020"
-"Rafael Fontenelle <rafaelff@gnome.org>"
+"Henrique Machado Campos <henriquecamposrj@gmail.com>, 2020Rafael Fontenelle "
+"<rafaelff@gnome.org>"
+
+#: src/application.vala:77
+#| msgid "A remote desktop client for the GNOME desktop environment"
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Um cliente de área de trabalho remota para o ambiente GNOME"
 
 #: src/application.vala:140
 #, c-format
-msgid "Couldn’t open file of unknown mime type %s"
+#| msgid "Couldn’t open file of unknown mime type %s"
+msgid "Couldn't open file of unknown mime type %s"
 msgstr "Não foi possível abrir um arquivo de tipo mime desconhecido %s"
 
 #: src/application.vala:170
@@ -75,15 +76,22 @@ msgid "Undo"
 msgstr "Desfazer"
 
 #: src/application.vala:211
-msgid "URL to connect"
-msgstr "URL para conectar"
+#| msgid "URL to connect"
+msgid "URL to connection"
+msgstr "URL para a conexão"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at the given PATH"
+#| msgid "Open .vnc or .rdp file at the given PATH"
+msgid "Open .vnc or .rdp file at at giving PATH"
 msgstr "Abre um arquivo .vnc ou .rdp no caminho informado"
 
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Um aplicativo simples para acessar conexões remotas"
+
 #: src/application.vala:234
-msgid "Too many command-line arguments specified.\n"
+#| msgid "Too many command-line arguments specified.\n"
+msgid "Too many command line arguments specified.\n"
 msgstr "Muitos argumentos de linha de comando especificados.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
@@ -96,12 +104,11 @@ msgstr "Captura de tela de %s"
 msgid "Screenshot taken"
 msgstr "Captura de tela armazenada"
 
-#. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:144
 msgid "Open"
 msgstr "Abrir"
 
-#: src/connection.vala:188
+#: src/connection.vala:187
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” requer autenticação"
@@ -112,7 +119,7 @@ msgstr "“%s” requer autenticação"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
 msgid "Scaling"
 msgstr "Escala"
 
@@ -241,20 +248,37 @@ msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
 #: src/vnc-connection.vala:122
-msgid "Couldn’t parse the file"
+#| msgid "Couldn’t parse the file"
+msgid "Could not parse the file"
 msgstr "Não foi possível analisar o arquivo"
 
-#. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
-#, c-format
-msgid "VNC File is missing key “%s”"
-msgstr "Arquivo VNC sem chave “%s”"
+#: src/vnc-connection.vala:129
+#| msgid "VNC File is missing key “%s”"
+msgid "VNC File is missing key “Host“"
+msgstr "Arquivo VNC sem chave “Host”"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:134
+#| msgid "VNC File is missing key “%s”"
+msgid "VNC File is missing key “Port“"
+msgstr "Arquivo VNC sem chave “Port”"
+
+#: src/vnc-connection.vala:140
+#| msgid "VNC File is missing key “%s”"
+msgid "VNC File is missing key “Username“"
+msgstr "Arquivo VNC sem chave “Username”"
+
+#: src/vnc-connection.vala:145
+#| msgid "VNC File is missing key “%s”"
+msgid "VNC File is missing key “Password“"
+msgstr "Arquivo VNC sem chave “Senha”"
+
+#: src/vnc-connection.vala:249
 msgid "View only"
 msgstr "Apenas visualizar"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:259
 msgid "Show local pointer"
 msgstr "Mostrar cursor local"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
