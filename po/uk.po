@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-08-31 20:56+0000\n"
-"PO-Revision-Date: 2020-09-01 08:31+0300\n"
+"POT-Creation-Date: 2020-09-05 11:42+0000\n"
+"PO-Revision-Date: 2020-09-05 15:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -19,14 +19,11 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.11.70\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "З'єднання"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -44,26 +41,88 @@ msgstr "Проєкт GNOME"
 msgid "Remote Desktop (VNC) file"
 msgstr "Файл віддаленої стільниці (VNC)"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Вітаємо у «З'єднаннях»"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Вилучити"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
-"Просто натисніть на кнопку <b>+</b> кнопку, щоб створити ваше перше з'єднання."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Властивості"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "_Користувач"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2020"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "_Пароль"
+#: src/application.vala:77
+#| msgid "A remote desktop client for the GNOME desktop environment"
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "програма для керування з'єднаннями для середовища GNOME"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Увійти"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Не вдалося відкрити файл невідомого типу MIME %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "З'єднання із «%s» вилучено"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Скасувати"
+
+#: src/application.vala:211
+#| msgid "Welcome to Connections"
+msgid "URL to connection"
+msgstr "Адреса для з'єднання"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Відкрити файл .vnc або .rdp за вказаним шляхом"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— проста програма для доступу до віддалених з'єднань"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Вказано надто багато аргументів командного рядка.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+#| msgid "Take Screenshot"
+msgid "Screenshot from %s"
+msgstr "Знімок з %s"
+
+#: src/connection.vala:142
+#| msgid "Take Screenshot"
+msgid "Screenshot taken"
+msgstr "Знімок зроблено"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Відкрити"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "«%s» потребує засвідчення"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Масштабування"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Зробити знімок"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -74,9 +133,8 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Введіть адресу машини, з якою слід встановити з'єднання. Адреса може"
-" починатися з rdp:// або "
-"vnc://"
+"Введіть адресу машини, з якою слід встановити з'єднання. Адреса може "
+"починатися з rdp:// або vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -93,6 +151,28 @@ msgstr "Скасувати"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Створити"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Користувач"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Пароль"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Увійти"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Вітаємо у «З'єднаннях»"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Просто натисніть на кнопку <b>+</b> кнопку, щоб створити ваше перше "
+"з'єднання."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -142,14 +222,6 @@ msgstr "Довідка"
 msgid "About Connections"
 msgstr "Про «З'єднання»"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Зробити знімок"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Властивості"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
@@ -173,3 +245,34 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Не вдалося обробити файл"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "У файлі VNC не вказано ключа «Host»"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "У файлі VNC не вказано ключа «Port»"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "У файлі VNC не вказано ключа «Username»"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "У файлі VNC не вказано ключа «Password»"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Лише перегляд"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Показувати локальний вказівник"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
