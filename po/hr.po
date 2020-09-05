@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2020-09-05 11:42+0000\n"
-"PO-Revision-Date: 2020-09-05 22:54+0200\n"
+"PO-Revision-Date: 2020-09-05 22:57+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -106,7 +106,7 @@ msgstr "Otvori"
 #: src/connection.vala:187
 #, c-format
 msgid "“%s” requires authentication"
-msgstr "“%s” zahtjeva ovjeru"
+msgstr "“%s” zahtijeva ovjeru"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
