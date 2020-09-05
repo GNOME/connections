@@ -7,8 +7,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 09:22+0000\n"
-"PO-Revision-Date: 2020-09-01 17:00+0100\n"
+"POT-Creation-Date: 2020-09-05 07:40+0000\n"
+"PO-Revision-Date: 2020-09-05 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -16,14 +16,11 @@ msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Konexioak"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -37,29 +34,92 @@ msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako."
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
 msgstr "Urruneko mahaigainaren (VNC) fitxategia"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Ongi etorri Konexioak aplikaziora"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Ezabatu"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Propietateak"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "_Erabiltzaile-izena"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "translator-credits"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "_Pasahitza"
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Urruneko konexioen kudeatzailea GNOME mahaigainerako"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Hasi saioa"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Ezin da ireki %s mime mota ezezaguna duen fitxategia"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s” konexioa ezabatu da"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Desegin"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "Konexiorako URLa"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Ireki .vnc edo .rdp fitxategia emandako PATH bidean"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Urruneko konexioak atzitzeko aplikazio sinplea"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Komando-lerroko argumentu gehiegi zehaztu dira.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Pantaila-argazkia %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Pantaila-argazkia hartu da"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Ireki"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” konexioak autentifikazioa behar du"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Eskalatzea"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Egin pantaila-argazkia"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -86,6 +146,26 @@ msgstr "Utzi"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Sortu"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Erabiltzaile-izena"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Pasahitza"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Hasi saioa"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Ongi etorri Konexioak aplikaziora"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -135,14 +215,6 @@ msgstr "Laguntza"
 msgid "About Connections"
 msgstr "Konexioak aplikazioari buruz"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Egin pantaila-argazkia"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Propietateak"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Atzerako tekla"
@@ -166,3 +238,31 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Ezin izan da fitxategia analizatu"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC fitxategiak “Host“ (ostalaria) gakoa falta du"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC fitxategiak “Port“ (ataka) gakoa falta du"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC fitxategiak “Username“ (erabiltzaile-izena) gakoa falta du"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC fitxategiak “Password“ (pasahitza) gakoa falta du"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Ikusi soilik"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Erakutsi erakusle lokala"
