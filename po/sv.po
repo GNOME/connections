@@ -5,30 +5,27 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-connections gnome-3-38\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-09-01 11:31+0000\n"
-"PO-Revision-Date: 2020-09-04 11:28+0200\n"
-"Language-Team: Swedish <gnome-se-list@gnome.org>\n"
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-05 09:20+0000\n"
+"PO-Revision-Date: 2020-09-05 12:58+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Anslutningar"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
-
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME"
 
@@ -44,26 +41,81 @@ msgstr "GNOME-projektet"
 msgid "Remote Desktop (VNC) file"
 msgstr "Fjärrskrivbordsfil (VNC)"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Välkommen till Anslutningar"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Ta bort"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Egenskaper"
+
+#: src/application.vala:76
+msgid "translator-credits"
 msgstr ""
-"Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
+"Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"\n"
+"Skicka synpunkter på översättningen till\n"
+"<tp-sv@listor.tp-sv.se>"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "_Användarnamn"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Kunde inte öppna fil med okänd mime-typ %s"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "_Lösenord"
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Anslutning till ”%s” har tagits bort"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Logga in"
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Ångra"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL att ansluta till"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Öppna .vnc- eller .rdp-fil på angiven SÖKVÄG"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "För många kommandoradsargument angivna.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Skärmbild från %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Skärmbild tagen"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Öppna"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "”%s” kräver autentisering"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+msgid "Scaling"
+msgstr "Skalning"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ta en skärmbild"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -74,8 +126,8 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Ange en maskinadress att ansluta till. Adressen kan börja med rdp:// "
-"eller vnc://"
+"Ange en maskinadress att ansluta till. Adressen kan börja med rdp:// eller "
+"vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -92,6 +144,26 @@ msgstr "Avbryt"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Skapa"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Användarnamn"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Lösenord"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Logga in"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Välkommen till Anslutningar"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -141,14 +213,6 @@ msgstr "Hjälp"
 msgid "About Connections"
 msgstr "Om Anslutningar"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Ta en skärmbild"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Egenskaper"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backsteg"
@@ -172,3 +236,25 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Couldn’t parse the file"
+msgstr "Kunde inte tolka filen"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC-fil saknar nyckeln ”%s”"
+
+#: src/vnc-connection.vala:250
+msgid "View only"
+msgstr "Endast visning"
+
+#: src/vnc-connection.vala:260
+msgid "Show local pointer"
+msgstr "Visa lokal pekare"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
