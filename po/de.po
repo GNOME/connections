@@ -8,25 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 18:39+0000\n"
-"PO-Revision-Date: 2020-09-05 00:57+0200\n"
-"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"POT-Creation-Date: 2020-09-05 07:40+0000\n"
+"PO-Revision-Date: 2020-09-05 10:59+0200\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Lokalize 20.08.0\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Verbindungen"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 # Leicht verändert aus Vinagre übernommen
 #: data/org.gnome.Connections.appdata.xml.in:8
@@ -42,31 +39,98 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
 
+#: data/org.gnome.Connections.desktop.in:9
+msgid "org.gnome.Connections"
+msgstr "org.gnome.Connections"
+
 # Aus Vinagre übernommen
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
 msgstr "»Entfernter Bildschirm (VNC)«-Datei"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Willkommen zu Verbindungen"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Löschen"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
-"Klicken Sie auf den <b>+</b>-Knopf, um Ihre erste Verbindung zu erstellen."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Eigenschaften"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "Ben_utzername"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Mario Blättermann <mario.blaettermann@gmail.com>"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "_Passwort"
+# Leicht verändert aus Vinagre übernommen
+#: src/application.vala:77
+#| msgid "A remote desktop client for the GNOME desktop environment"
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Ein Verwalter für entfernte Verbindungen für die GNOME Arbeitsumgebung"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Anmelden"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Datei mit unbekanntem MIME-Typ %s konnte nicht geöffnet werden"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Verbindung zu »%s« wurde gelöscht"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Rückgängig"
+
+#: src/application.vala:211
+#| msgid "Welcome to Connections"
+msgid "URL to connection"
+msgstr "Adresse der Verbindung"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Eine .vnc- oder .rdp-Datei im angegebenen PFAD öffnen"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "– Eine einfache Anwendung für den Zugriff auf entfernte Rechner"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Es wurden zu viele Befehlszeilenargumente angegeben.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+#| msgid "Take Screenshot"
+msgid "Screenshot from %s"
+msgstr "Bildschirmfoto von %s"
+
+#: src/connection.vala:142
+#| msgid "Take Screenshot"
+msgid "Screenshot taken"
+msgstr "Bildschirmfoto aufgenommen"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Öffnen"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "»%s« erfordert Legitimierung"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Skalierung"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Bildschirmfoto aufnehmen"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -95,6 +159,27 @@ msgstr "Abbrechen"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Erstellen"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Ben_utzername"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Passwort"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Willkommen zu Verbindungen"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Klicken Sie auf den <b>+</b>-Knopf, um Ihre erste Verbindung zu erstellen."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -144,14 +229,6 @@ msgstr "Hilfe"
 msgid "About Connections"
 msgstr "Info zu Verbindungen"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Bildschirmfoto aufnehmen"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Eigenschaften"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Strg + Alt + Rückschritttaste"
@@ -175,3 +252,31 @@ msgstr "Strg + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Strg + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Datei konnte nicht ausgewertet werden"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "In der VNC-Datei fehlt der Schlüssel »Host«"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "In der VNC-Datei fehlt der Schlüssel »Port«"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "In der VNC-Datei fehlt der Schlüssel »Username«"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "In der VNC-Datei fehlt der Schlüssel »Password«"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Nur ansehen"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Lokalen Zeiger anzeigen"
