@@ -1,0 +1,273 @@
+# Serbian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Марко Костић <marko.m.kostic@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-05 11:42+0000\n"
+"PO-Revision-Date: 2020-09-06 08:53+0200\n"
+"Language-Team: Serbian <gnome-sr@googlegroups.com>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Везе"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Гномов клијент за удаљену радну површину"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Гномов клијент за удаљену радну површину."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "Гном пројекат"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Датотека удаљене површине (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Обриши"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Својства"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>\n"
+"\n"
+"https://гном.срб — превод Гнома на српски језик"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Управник удаљеним везама за Гномову радну површину"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Не могу отворити датотеку са непознатом миме врстом %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Веза ка „%s“ је обрисана"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Опозови"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "УРЛ везе"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Отвори .vnc или .rdp датотеку у датој ПУТАЊИ"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Једноставан програм за приступ удаљеним везама"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Сувише аргумената наредбене линије наведено.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Снимак од %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Снимак екрана направљен"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Отвори"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "„%s“ захтева потврду идентитета"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Размера"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Направи снимак екрана"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Направи нову везу"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Унесите адресу машине на коју се желите повезати. Адресе могу почињати "
+"са rdp:// или vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Сервер"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Назив"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Откажи"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Направи"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Корисник"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Лозинка"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Пријави ме"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Добро дошли у Везе"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Само притисните <b>+</b> дугме за стварање ваше прве везе."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Својства везе"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Адреса"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Нова"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Мени програма"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Претражи"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Иди назад"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Прикажи мени"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Прекини везу"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Пречице на тастатури"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Пречице на тастатури"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Помоћ"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "О Везама"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Не могу да обрадим датотеку"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC датотеци недостаје кључ \"Host\" (домаћин)"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC датотеци недостаје кључ \"Port\" (порт)"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC датотеци недостаје кључ \"Username\" (корисничко име)"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC датотеци недостаје кључ \"Password\" (лозинка)"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Само приказ"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Прикажи локални показивач миша"
