@@ -6,26 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-09-01 08:56+0000\n"
-"PO-Revision-Date: 2020-09-01 16:21+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-05 11:42+0000\n"
+"PO-Revision-Date: 2020-09-06 09:46+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Sambungan"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -43,25 +39,84 @@ msgstr "Proyek GNOME"
 msgid "Remote Desktop (VNC) file"
 msgstr "Berkas Desktop Jarak Jauh (VNC)"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Selamat Datang di Koneksi"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Hapus"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Tag (tertanam)"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "Nama pengg_una"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Andika Triwidada <andika@gmail.com>, 2020"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "San_di"
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Pengelola koneksi jarak jauh untuk lingkungan desktop GNOME"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Masuk"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Tak bisa membuka berkas dengan tipe mime %s yang tidak diketahui"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Koneksi ke \"%s\" telah dihapus"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Tak Jadi"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL ke koneksi"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Buka berkas .vnc atau .rdp di PATH yang diberikan"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Aplikasi sederhana untuk mengakses koneksi jarak jauh"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Terlalu banyak argumen baris perintah yang dinyatakan.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Cuplikan layar dari %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Tangkapan layar diambil"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Buka"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "\"%s\" membutuhkan otentikasi"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Penskalaan"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ambil Cuplikan Layar"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -72,8 +127,8 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan "
-"rdp:// atau vnc://"
+"Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan rdp:// "
+"atau vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -90,6 +145,26 @@ msgstr "Batal"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Buat"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Nama pengg_una"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "San_di"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Masuk"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Selamat Datang di Koneksi"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -139,14 +214,6 @@ msgstr "Bantuan"
 msgid "About Connections"
 msgstr "Tentang Koneksi"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Ambil Cuplikan Layar"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Tag (tertanam)"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
@@ -170,3 +237,31 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Tidak dapat mengurai berkas"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "Berkas VNC kurang kunci \"Host\""
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "Berkas VNC kurang kunci \"Port\""
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "Berkas VNC kurang kunci \"Username\""
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "Berkas VNC kurang kunci \"Password\""
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Hanya tilik"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Tampilkan penunjuk lokal"
