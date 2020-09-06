@@ -8,24 +8,21 @@ msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
 "issues\n"
-"POT-Creation-Date: 2020-09-01 19:55+0000\n"
-"PO-Revision-Date: 2020-09-01 16:35-0400\n"
+"POT-Creation-Date: 2020-09-05 11:42+0000\n"
+"PO-Revision-Date: 2020-09-06 10:02-0400\n"
+"Last-Translator: \n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "连接"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -43,25 +40,84 @@ msgstr "GNOME 项目"
 msgid "Remote Desktop (VNC) file"
 msgstr "远程桌面（VNC）文件"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "欢迎使用连接程序"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "删除"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "只需点击 <b> + </b> 按钮即可创建您的第一个连接。"
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "属性"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "用户名(_U)"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "xuweiyi <xuweiyi0923@gmail.com>, 2020."
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "密码(_P)"
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "GNOME 桌面远程连接管理器"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "登录"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "无法打开未知 mime 类型 %s 的文件"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "已删除与“%s”的连接"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "撤消"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "连接的 URL"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "在给定路径处打开 .vnc 或 .rdp 文件"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— 访问远程连接的简单应用程序"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "指定的命令行参数太多。\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "从 %s 截图"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "已截图"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "打开"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s”需要身份验证"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "缩放"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "截图"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -88,6 +144,26 @@ msgstr "取消"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "创建"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "用户名(_U)"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "密码(_P)"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "登录"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "欢迎使用连接程序"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "只需点击 <b> + </b> 按钮即可创建您的第一个连接。"
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -137,14 +213,6 @@ msgstr "帮助"
 msgid "About Connections"
 msgstr "关于“连接”"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "截图"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "属性"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
@@ -168,3 +236,34 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "无法解析文件"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC 文件缺少关键词“Host”"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC 文件缺少关键词“Port”"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC 文件缺少关键词“Username”"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC 文件缺少关键词“Password”"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "仅查看"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "显示本地指针"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
