@@ -1,0 +1,269 @@
+# Hungarian translation for gnome-connections.
+# Copyright (C) 2020 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-connections package.
+#
+# Balázs Meskó <mesko.balazs at fsf dot hu>, 2020.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-06 12:34+0000\n"
+"PO-Revision-Date: 2020-09-08 00:43+0200\n"
+"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Kapcsolatok"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Egy távoli asztali kliens a GNOME asztali környezethez"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Egy távoli asztali kliens a GNOME asztali környezethez."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "A GNOME projekt"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Távoli asztali (VNC) fájl"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Törlés"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Tulajdonságok"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Meskó Balázs <mesko dot balazs at fsf dot hu>"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Egy távoli kapcsolatkezelő a GNOME asztali környezethez"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Az ismeretlen MIME-típusú %s fájl nem nyitható meg"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "A(z) „%s” kapcsolat törölve lett"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Visszavonás"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL a kapcsolathoz"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Egy .vnc vagy .rdp fájl megnyitása a megadott ÚTVONALON"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Egy egyszerű alkalmazás távoli kapcsolatok eléréséhez"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Túl sok parancssori argumentum lett megadva.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Képernyőkép ekkor: %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "A képernyőkép elkészült"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Megnyitás"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "A(z) „%s” hitelesítést igényel"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Méretezés"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Képernyőkép készítése"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Új kapcsolat létrehozása"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Adjon meg egy gépcímet a kapcsolódáshoz. A cím rdp:// vagy vnc:// "
+"protokollal kezdődhet."
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Kiszolgáló"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Név"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Mégse"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Létrehozás"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Felhasználónév"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Jelszó"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Bejelentkezés"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Üdvözöljük a Kapcsolatokban"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Csak nyomja meg a <b>+</b> gombot az első kapcsolata létrehozásához."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Kapcsolat tulajdonságai"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Cím"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Új"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Alkalmazásmenü"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Keresés"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Ugrás vissza"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menü megjelenítése"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Kapcsolat bontása"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Gyorsbillentyűk"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Súgó"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "A Kapcsolatok névjegye"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Nem sikerült feldolgozni a fájlt"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "A VNC-fájlból hiányzik a „Host” kulcs"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "A VNC-fájlból hiányzik a „Port” kulcs"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "A VNC-fájlból hiányzik a „Username” kulcs"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "A VNC-fájlból hiányzik a „Password” kulcs"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Csak megtekintés"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Helyi mutató megjelenítése"
