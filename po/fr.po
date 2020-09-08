@@ -1,0 +1,275 @@
+# French translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Charles Monzat <charles.monzat@free.fr>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-06 12:34+0000\n"
+"PO-Revision-Date: 2020-09-08 13:27+0200\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
+"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 3.36.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Connexions"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client de bureau distant pour l’environnement de bureau GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Un client de bureau distant pour l’environnement de bureau GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "Le projet GNOME"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fichier de bureau distant (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Propriétés"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Charles Monzat <charles.monzat@free.fr>, 2020"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Un gestionnaire de connexion distante pour le bureau GNOME"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Impossible d’ouvrir le fichier de type mime inconnu %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "La connexion vers « %s » a été supprimée"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Annuler"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL de connexion"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Ouvrir le fichier .vnc ou .rdp au chemin donné"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr ""
+"— Une application simple permettant d’accéder aux connexions distantes."
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Nombre d’arguments de ligne de commande spécifiés trop important.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Capture d’écran du %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Capture d’écran effectuée"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Ouvrir"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "« %s » nécessite une authentification"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Échelle"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Prendre une capture d’écran"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Créer une nouvelle connexion"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Saisissez une adresse de machine à laquelle vous connecter. L’adresse peut "
+"commencer par rdp:// ou vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Serveur"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nom"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Annuler"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Créer"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Nom d’utilisateur"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Mot de passe"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Authentification"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bienvenue dans Connexions"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Appuyez simplement sur le bouton <b>+</b> pour établir votre première "
+"connexion."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Propriétés de connexion"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adresse"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nouvelle"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menu de l’application"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Rechercher"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Retour"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menu d’affichage"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Déconnexion"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Raccourcis clavier"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Raccourcis clavier"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Aide"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "À propos de Connexions"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Retour arrière"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Suppr"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Impossible d’analyser le fichier"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "Clé « Host » manquante pour le fichier VNC"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "Clé « Port » manquante pour le fichier VNC"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "Clé « Username » manquante pour le fichier VNC"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "Clé « Password » manquante pour le fichier VNC"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Afficher seulement"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Afficher le pointeur local"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
