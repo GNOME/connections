@@ -6,27 +6,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-09-02 12:26+0000\n"
-"PO-Revision-Date: 2020-09-02 22:44+0300\n"
-"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-07 22:45+0000\n"
+"PO-Revision-Date: 2020-09-08 09:41+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"Language-Team: Turkish <tr@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "X-Generator: Poedit 2.4.1\n"
 
-#: data/org.gnome.Connections.desktop.in:3
-#: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Bağlantılar"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -44,25 +40,84 @@ msgstr "GNOME Projesi"
 msgid "Remote Desktop (VNC) file"
 msgstr "Uzak Masaüstü (VNC) dosyası"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "Bağlantılar’a Hoş Geldiniz"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Sil"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "İlk bağlantınızı yapmak için <b>+</b> düğmesine basın."
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Özellikler"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "_Kullanıcı Adı"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Emin Tufan Çetin <etcetin@gmail.com>"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "_Parola"
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "GNOME masaüstü ortamı için uzak bağlantı yöneticisi"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "Giriş Yap"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Bilinmeyen %s mime türündeki dosya açılamadı"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s” bağlantısı silindi"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Geri Al"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "Bağlanılacak URL"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Verilen YOLdaki .vnc veya .rdp dosyasını aç"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Uzak bağlantılara erişmek için basit uygulama"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Çok fazla komut satırı argümanı belirtildi.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "%s ekran görüntüsü"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Ekran görüntüsü çekildi"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Aç"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” kimlik doğrulaması gerektiriyor"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Ölçek"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ekran Görüntüsü Çek"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -73,8 +128,7 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Bağlanılacak makine adresini gir. Adres, rdp:// veya vnc:// ile "
-"başlayabilir"
+"Bağlanılacak makine adresini gir. Adres, rdp:// veya vnc:// ile başlayabilir"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -91,6 +145,26 @@ msgstr "İptal Et"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "Oluştur"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Kullanıcı Adı"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Parola"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Giriş Yap"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bağlantılar'a Hoş Geldiniz"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "İlk bağlantınızı yapmak için <b>+</b> düğmesine basın."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -140,14 +214,6 @@ msgstr "Yardım"
 msgid "About Connections"
 msgstr "Bağlantılar Hakkında"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "Ekran Görüntüsü Çek"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "Özellikler"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
@@ -171,3 +237,34 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Dosya ayrıştırılamadı"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC dosyasının “Host” (ana makine) anahtarı eksik"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC dosyasının “Port” (bağlantı noktası) anahtarı eksik"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC dosyasının “Username” (kullanıcı adı) anahtarı eksik"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC dosyasının “Password” (parola) anahtarı eksik"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Yalnızca görüntüle"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Yerel imleci göster"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
