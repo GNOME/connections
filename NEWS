@@ -1,3 +1,75 @@
+3.37.91 - Sep 10, 2020
+======================
+
+Changes since 3.37.90
+
+  - Connections got enrolled in the GNOME translation infrastructure
+  - Moved to the GNOME/ Gitlab namespace
+  - Added/updated/fixed translations:
+    - Greek
+    - Portuguese
+    - French
+    - Persian
+    - Turkish
+    - Hungarian
+    - Slovenian
+    - Spanish
+    - Korean
+    - Galician
+    - Chinese (China)
+    - Slovak
+    - Danish
+    - Czech
+    - Serbian
+    - Indonesian
+    - Croatian
+    - Catalan
+    - Lithuanian
+    - German
+    - Ukrainian
+    - Polish
+    - Swedish
+    - Brazilian Portuguese
+    - Finnish
+    - Basque
+    - Japanese
+    - British English
+    - Friulian
+
+All contributors to this release:
+
+Anders Jonsson <anders.jonsson@norsjovallen.se>
+Andika Triwidada <atriwidada@gnome.org>
+Asier Sarasua Garmendia <asiersarasua@ni.eus>
+Ask Hjorth Larsen <asklarsen@gmail.com>
+Aurimas Černius <aurisc4@gmail.com>
+Balázs Meskó <meskobalazs@mailbox.org>
+Boyuan Yang <073plan@gmail.com>
+Bruce Cowan <bruce@bcowan.me.uk>
+Charles Monzat <charles.monzat@free.fr>
+DaeHyun Sung <sungdh86@gmail.com>
+Danial Behzadi <dani.behzi@ubuntu.com>
+Daniel Mustieles <daniel.mustieles@gmail.com>
+Dušan Kazik <prescott66@gmail.com>
+Efstathios Iosifidis <eiosifidis@gnome.org>
+Emin Tufan Çetin <etcetin@gmail.com>
+Fabio Tomat <f.t.public@gmail.com>
+Felipe Borges <felipeborges@gnome.org> 
+Fran Dieguez <frandieguez@gnome.org>
+Goran Vidović <trebelnik2@gmail.com>
+Henrique Machado Campos <henriquecamposrj@gmail.com>
+Jiri Grönroos <jiri.gronroos@iki.fi>
+Jordi Mas <jmas@softcatala.org>
+Juliano Camargo <julianosc@protonmail.com>
+Марко Костић <marko.m.kostic@gmail.com>
+Marek Černocký <marek@manet.cz>
+Mario Blättermann <mario.blaettermann@gmail.com>
+Matej Urbančič <mateju@svn.gnome.org>
+Piotr Drąg <piotrdrag@gmail.com>
+Rafael Fontenelle <rafaelff@gnome.org>
+Ryuta Fujii <translation@sicklylife.jp>
+Yuri Chornoivan <yurchor@ukr.net>
+
 3.37.90 - Aug 10, 2020
 ======================
 
