@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-04 09:34+0000\n"
-"PO-Revision-Date: 2020-09-04 23:32+0900\n"
+"POT-Creation-Date: 2020-09-10 11:52+0000\n"
+"PO-Revision-Date: 2020-09-11 20:45+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -21,10 +21,6 @@ msgstr ""
 #: data/org.gnome.Connections.appdata.xml.in:7 src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "接続"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -42,25 +38,84 @@ msgstr "The GNOME Project"
 msgid "Remote Desktop (VNC) file"
 msgstr "リモートデスクトップ (VNC) ファイル"
 
-#: src/ui/empty-view.ui:28
-msgid "Welcome to Connections"
-msgstr "“接続”へようこそ"
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "削除"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "<b>+</b> ボタンを押して接続を開始してください。"
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "プロパティ"
 
-#: src/ui/auth-notification.ui:39
-msgid "_Username"
-msgstr "ユーザー名(_U)"
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"sicklylife <translation@sicklylife.jp>"
 
-#: src/ui/auth-notification.ui:71
-msgid "_Password"
-msgstr "パスワード(_P)"
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "GNOME デスクトップ向けのリモート接続マネージャー"
 
-#: src/ui/auth-notification.ui:108
-msgid "Sign In"
-msgstr "サインイン"
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "不明な MIME タイプ %s のファイルを開けませんでした"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s”への接続を削除しました"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "元に戻す"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "接続する URL"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "指定した PATH のファイル (.vnc または .rdp) を開く"
+
+msgid "— A simple application to access remote connections"
+msgstr "— リモート接続のためのシンプルなアプリケーション"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "コマンドラインの引数が多すぎます。\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Screenshot from %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "スクリーンショットを撮影しました"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "開く"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s”は認証が必要です"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "スケーリング"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "スクリーンショットを撮る"
 
 #: src/ui/assistant.ui:9
 msgid "Create a New Connection"
@@ -89,6 +144,26 @@ msgstr "キャンセル"
 #: src/ui/assistant.ui:129
 msgid "Create"
 msgstr "作成"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "ユーザー名(_U)"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "パスワード(_P)"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "サインイン"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "“接続”へようこそ"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "<b>+</b> ボタンを押して接続を開始してください。"
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -138,14 +213,6 @@ msgstr "ヘルプ"
 msgid "About Connections"
 msgstr "“接続”について"
 
-#: src/ui/topbar.ui:212
-msgid "Take Screenshot"
-msgstr "スクリーンショットを撮る"
-
-#: src/ui/topbar.ui:216
-msgid "Properties"
-msgstr "プロパティ"
-
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
@@ -169,3 +236,31 @@ msgstr "Ctrl + Alt + F3"
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "ファイルを解析できませんでした"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC ファイルにキー“ホスト”がありません"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC ファイルにキー“ポート”がありません"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC ファイルにキー“ユーザー名”がありません"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC ファイルにキー“パスワード”がありません"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "表示専用"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "ローカルポインターを表示する"
