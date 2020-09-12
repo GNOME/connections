@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-05 07:40+0000\n"
-"PO-Revision-Date: 2020-09-05 10:59+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2020-09-07 21:29+0000\n"
+"PO-Revision-Date: 2020-09-10 22:51+0200\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
@@ -26,7 +26,8 @@ msgid "Connections"
 msgstr "Verbindungen"
 
 # Leicht verändert aus Vinagre übernommen
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Ein Betrachter für entfernte Bildschirme für die GNOME Arbeitsumgebung"
 
@@ -38,10 +39,6 @@ msgstr ""
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 # Aus Vinagre übernommen
 #: data/org.gnome.Connections.xml:5
@@ -58,18 +55,15 @@ msgstr "Eigenschaften"
 
 #: src/application.vala:76
 msgid "translator-credits"
-msgstr "Mario Blättermann <mario.blaettermann@gmail.com>"
-
-# Leicht verändert aus Vinagre übernommen
-#: src/application.vala:77
-#| msgid "A remote desktop client for the GNOME desktop environment"
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Ein Verwalter für entfernte Verbindungen für die GNOME Arbeitsumgebung"
+msgstr ""
+"Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"Stephan Woidowski <swoidowski@t-online.de>\n"
+"Christian Kirbach <christian.kirbach@gmail.com>, 2020"
 
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
-msgstr "Datei mit unbekanntem MIME-Typ %s konnte nicht geöffnet werden"
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Datei des unbekannten MIME-Typs %s konnte nicht geöffnet werden"
 
 #: src/application.vala:170
 #, c-format
@@ -78,45 +72,39 @@ msgstr "Verbindung zu »%s« wurde gelöscht"
 
 #: src/application.vala:172
 msgid "Undo"
-msgstr "Rückgängig"
+msgstr "Rückgängig machen"
 
 #: src/application.vala:211
-#| msgid "Welcome to Connections"
-msgid "URL to connection"
-msgstr "Adresse der Verbindung"
+msgid "URL to connect"
+msgstr "Adresse des Verbindungsziels"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
-msgstr "Eine .vnc- oder .rdp-Datei im angegebenen PFAD öffnen"
-
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "– Eine einfache Anwendung für den Zugriff auf entfernte Rechner"
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr ".vnc-Datei oder .rdp-Datei im angegebenen PFAD öffnen"
 
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
-msgstr "Es wurden zu viele Befehlszeilenargumente angegeben.\n"
+msgid "Too many command-line arguments specified.\n"
+msgstr "Zu viele Befehlszeilenargumente angegeben.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
 #, c-format
-#| msgid "Take Screenshot"
 msgid "Screenshot from %s"
 msgstr "Bildschirmfoto von %s"
 
 #: src/connection.vala:142
-#| msgid "Take Screenshot"
 msgid "Screenshot taken"
 msgstr "Bildschirmfoto aufgenommen"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Öffnen"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
-msgstr "»%s« erfordert Legitimierung"
+msgstr "»%s« benötigt eine Legitimation"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -124,7 +112,7 @@ msgstr "»%s« erfordert Legitimierung"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
 msgid "Scaling"
 msgstr "Skalierung"
 
@@ -254,29 +242,23 @@ msgid "Ctrl + Alt + F7"
 msgstr "Strg + Alt + F7"
 
 #: src/vnc-connection.vala:122
-msgid "Could not parse the file"
-msgstr "Datei konnte nicht ausgewertet werden"
+msgid "Couldn’t parse the file"
+msgstr "Die Datei konnte nicht analysiert werden"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "In der VNC-Datei fehlt der Schlüssel »Host«"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC-Datei fehlt Schlüssel »%s«"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "In der VNC-Datei fehlt der Schlüssel »Port«"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "In der VNC-Datei fehlt der Schlüssel »Username«"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "In der VNC-Datei fehlt der Schlüssel »Password«"
-
-#: src/vnc-connection.vala:249
+#: src/vnc-connection.vala:250
 msgid "View only"
-msgstr "Nur ansehen"
+msgstr "Nur anzeigen"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-connection.vala:260
 msgid "Show local pointer"
 msgstr "Lokalen Zeiger anzeigen"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
