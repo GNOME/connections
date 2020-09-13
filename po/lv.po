@@ -1,0 +1,268 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-10 11:52+0000\n"
+"PO-Revision-Date: 2020-09-13 09:52+0300\n"
+"Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2);\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Savienojumi"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Attālinātais darbvirsmas klients GNOME darbvirsmas videi"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Attālinātais darbvirsmas klients GNOME darbvirsmas videi."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "GNOME projekts"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Attālinātās darbvirsmas (VNC) datne"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Dzēst"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Īpašības"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Attālināto savienojumu pārvaldnieks GNOME darbvirsmas videi"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Nevarēja atvērt datni ar nezināmu mime tipu %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s” savienojums tika izdzēsts"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Atsaukt"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL uz savienojumu"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Atvērt .vnc vai .rdp datni dotajā CEĻĀ"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Vienkārša lietotne attālinātu savienojumu piekļuvei"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Tika norādīti pārāk daudz komandrindas parametri.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Ekrānattēls no %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Ekrānattēls uzņemts"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Atvērt"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” pieprasa autentificēšanos"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Mērogošana"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Uzņemt ekrānattēlu"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Izveidot jaunu savienojumu"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Ievadiet adresi mašīnai, ar kuru vēlaties savienoties. Adreses var sākties ar"
+" rdp:// un vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Serveris"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nosaukums"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Izveidot"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Lietotājvārds"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Parole"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Ierakstīties"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Laipni lūdzam Savienojumos"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Spiediet <b>+</b> pogu, lai izveidotu savu pirmo savienojumu."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Savienojuma īpašības"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adrese"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Jauns"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Lietotnes izvēlne"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Meklēt"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Iet atpakaļ"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Parādīt izvēlni"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Atvienoties"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Tastatūras īsinājumtaustiņi"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Tastatūras īsinājumtaustiņi"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Palīdzība"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Par Savienojumiem"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Neizdevās parsēt datni"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC datnei trūkst “Host” atslēgas"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC datnei trūkst “Port” atslēgas"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC datnei trūkst “Username” atslēgas"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC datnei trūkst “Password” atslēgas"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Tikai skatīšanās"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Rādīt lokālo rādītāju"
