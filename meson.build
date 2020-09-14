@@ -1,5 +1,5 @@
 project('connections', ['c', 'vala'], 
-          version: '3.37.91',
+          version: '3.38.0',
     meson_version: '>= 0.50.0',
   default_options: [ 'warning_level=2',
                    ],

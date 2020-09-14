@@ -13,13 +13,14 @@
   </description>
   <screenshots>
     <screenshot height="1600" width="900">
-      <image>https://gitlab.gnome.org/felipeborges/connections/-/raw/master/data/screenshot.png</image>
+      <image>https://gitlab.gnome.org/gnome/connections/-/raw/master/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <releases>
-    <release version="3.37.90" date="2020-08-10">
+    <release version="3.38.0" date="2020-09-14">
       <description>
-        <p>Various fixes and improvements including: search, handling of command line arguments, opening .vnc (vinagre) files.</p>
+        <p>Connections 3.38.0 is the latest stable version of Connections, and it
+           contains all the features and bugfixes introduced since our 3.38 release.</p>
       </description>
     </release>
   </releases>
@@ -27,8 +28,8 @@
   <project_group>GNOME</project_group>
   <developer_name>The GNOME Project</developer_name>
   <update_contact>felipeborges_at_gnome.org</update_contact>
-  <url type="homepage">https://gitlab.gnome.org/felipeborges/connections</url>
-  <url type="bugtracker">https://gitlab.gnome.org/felipeborges/connections/issues</url>
+  <url type="homepage">https://gitlab.gnome.org/gnome/connections</url>
+  <url type="bugtracker">https://gitlab.gnome.org/gnome/connections/issues</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <translation type="gettext">connections</translation>
   <content_rating type="oars-1.1" />
