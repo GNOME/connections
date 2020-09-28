@@ -1,0 +1,270 @@
+# Hebrew translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-13 06:53+0000\n"
+"PO-Revision-Date: 2020-09-29 00:46+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"Language-Team: Hebrew <yoseforb@gmail.com>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2\n"
+"X-Generator: Gtranslator 3.36.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "התחברויות"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "לקוח שולחן עבודה מרוחק עבור סביבת שולחן העבודה GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "לקוח שולחן עבודה מרוחק עבור סביבת שולחן העבודה GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "מיזם GNOME"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "קובץ שולחן עבודה מרוחק (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "מחיקה"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "מאפיינים"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
+"\n"
+"<a href=\"https://l10n.gnome.org/teams/he/\">מיזם תרגום GNOME לעברית</a>"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "מנהל התחברויות מרחוק עבור שולחן העבודה GNOME"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "לא נתן לפתוח קובץ בשל סוג קובץ לא ידוע %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "התחברות אל „%s” נמחקה"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "ביטול"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL to connection"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Open .vnc or .rdp file at at giving PATH"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— A simple application to access remote connections"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Too many command line arguments specified.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "צילום מסך מ־%s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "המסך צולם"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "פתיחה"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "‏„%s” דורש אימות"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "קנה מידה"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "צילום מסך"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "יצירת התחברות חדשה"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr "יש להזין כתובת מכונה להתחברות. כתובת יכולה להתחיל עם ‎rdp:// ‏או ‎vnc://‏."
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "שרת"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "שם"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "יצירה"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_שם משתמש"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_ססמה"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "כניסה"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "ברוכים הבאים לחיבורים"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "פשוט ללחוץ על כפתור ה<b>+</b> ליצירת ההתחברות הראשונה שלך."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "מאפייני התחברות"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "כתובת"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "חדש"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "תפריט יישום"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "חיפוש"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "לחזור"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "הצגת תפריט"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "התנתקות"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "צירופי מקשים"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "צירופי מקשים"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "עזרה"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "על אודות התחברויות"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "לא נתן לנתח את הקובץ"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "קובץ VNC חסר את המפתח „Host”"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "קובץ VNC חסר את המפתח „Port”"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "קובץ VNC חסר את המפתח „Username”"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "קובץ VNC חסר את המפתח „Password”"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "תצוגה בלבד"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "הצגת הסמן המקומי"
