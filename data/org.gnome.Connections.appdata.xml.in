@@ -17,9 +17,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="3.38.0" date="2020-09-14">
+    <release version="3.38.1" date="2020-10-02">
       <description>
-        <p>Connections 3.38.0 is the latest stable version of Connections, and it
+        <p>Connections 3.38.1 is the latest stable version of Connections, and it
            contains all the features and bugfixes introduced since our 3.38 release.</p>
       </description>
     </release>
