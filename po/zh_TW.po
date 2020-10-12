@@ -1,0 +1,271 @@
+# Chinese (Taiwan) translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Cheng-Chia Tseng <pswo10680@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-09-28 21:47+0000\n"
+"PO-Revision-Date: 2020-10-12 21:30+0800\n"
+"Language-Team: Chinese (Taiwan) <chinese-l10n@googlegroups.com>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "連線"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "GNOME 桌面環境的遠端桌面客戶端"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "GNOME 桌面環境的遠端桌面客戶端。"
+
+#: data/org.gnome.Connections.appdata.xml.in:29
+msgid "The GNOME Project"
+msgstr "GNOME 專案"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "遠端桌面 (VNC) 檔案"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "刪除"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "屬性"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"如對翻譯有任何意見，請送一封電子郵件給\n"
+"以下地址，GNOME 翻譯團隊會盡快回覆您：\n"
+"chinese-l10n@googlegroups.com\n"
+"\n"
+"Cheng-Chia Tseng <pswo10680@gmail.com>, 2020"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "GNOME 桌面的遠端連線管理員"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "無法開啟未知 MIME 類型 %s 的檔案"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "「%s」的連線已經刪除"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "取消動作"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "連線的 URL"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "開啟指定 PATH 路徑的 .vnc 或 .rdp 檔"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— 存取遠端連線的簡易應用程式"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "指定了過多指令列引數。\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "%s 的螢幕擷圖"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "螢幕已擷圖"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "開啟"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "「%s」需要通過身分核對"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "縮放中"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "拍下螢幕擷圖"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "建立新的連線"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr "輸入要連線的機器位址。位址可以 rdp:// 或 vnc:// 開頭"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "伺服器"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "名稱"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "取消"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "建立"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "使用者名稱(_U)"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "密碼(_P)"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "登入"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "歡迎使用《連線》"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "只要按 <b>+</b> 鈕就能開始您的首次連線。"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "連線屬性"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "位址"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "新增"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "應用程式選單"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "搜尋"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "返回"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "顯示器選單"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "中斷連接"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "鍵盤快捷鍵"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "鍵盤快捷鍵"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "求助"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "關於《連線》"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "無法解析檔案"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "VNC 檔案缺失「Host」鍵"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "VNC 檔案缺失「Port」鍵"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "VNC 檔案缺失「Username」鍵"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "VNC 檔案缺失「Password」鍵"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "僅檢視"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "顯示本機指標"
