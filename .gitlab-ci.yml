@@ -12,7 +12,7 @@ flatpak:
         MANIFEST_PATH: "build-aux/flatpak/org.gnome.Connections.json"
         FLATPAK_MODULE: "connections"
         RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
-        APP_ID: "org.gnome.Connections"
+        APP_ID: "org.gnome.Connections.Devel"
         BUNDLE: "connections.flatpak"
     extends: .flatpak 
 
