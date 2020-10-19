@@ -40,7 +40,7 @@ namespace Connections {
         public Application () {
             application = this;
 
-            application_id = "org.gnome.Connections";
+            application_id = Config.APPLICATION_ID;
             flags |= ApplicationFlags.HANDLES_COMMAND_LINE | ApplicationFlags.HANDLES_OPEN;
 
             var action = new GLib.SimpleAction ("help", null);

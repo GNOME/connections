@@ -17,6 +17,16 @@ conf.set_quoted ('GETTEXT_PACKAGE', meson.project_name ())
 conf.set_quoted ('LOCALEDIR', locale_dir)
 conf.set_quoted ('VERSION', '@0@-@VCS_TAG@'.format (meson.project_version()))
 
+if get_option ('profile') == 'development'
+  profile = '.Devel'
+else
+  profile = ''
+endif
+
+application_id = 'org.gnome.Connections@0@'.format (profile)
+conf.set_quoted ('PROFILE', profile)
+conf.set_quoted ('APPLICATION_ID', application_id)
+
 config_h = declare_dependency (
   sources: vcs_tag (
     command: ['git', 'rev-parse', '--short', 'HEAD'],

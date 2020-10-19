@@ -1,5 +1,5 @@
 {
-    "app-id": "org.gnome.Connections",
+    "app-id": "org.gnome.Connections.Devel",
     "runtime": "org.gnome.Platform",
     "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
@@ -82,6 +82,9 @@
             "name": "connections",
             "builddir": true,
             "buildsystem": "meson",
+            "config-opts": [
+                "-Dprofile=development"
+            ],
             "sources": [
                 {
                     "type": "git",

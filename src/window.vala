@@ -63,6 +63,10 @@ namespace Connections {
             }
 
             topbar.search_button.bind_property ("active", collection_view.search_bar, "search_mode_enabled", BindingFlags.BIDIRECTIONAL);
+
+            if (app.application_id == "org.gnome.Connections.Devel") {
+                get_style_context ().add_class ("devel");
+            }
         }
 
         public void bind_model (ListModel model) {
