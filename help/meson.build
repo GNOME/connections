@@ -1,5 +1,6 @@
 # Please keep this list in alphabetical order
 help_files = [
+  'connect.page',
   'index.page',
   'legal.xml',
 ]

@@ -1,0 +1,51 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="connect">
+  <info>
+    <revision pkgversion="3.38" version="0.1" date="2020-10-19" status="candidate"/>
+    <link type="guide" xref="index#start"/>
+
+    <credit type="author copyright">
+      <name>Felipe Borges</name>
+      <email>felipeborges@gmail.com</email>
+      <years>2020</years>
+    </credit>
+
+    <desc>Connect to a remote machine over the network.</desc>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+  </info>
+
+  <title>Connect to another computer</title>
+
+  <p><app>Connections</app> can be used to view and access a remote machine.</p>
+
+  <note style="important">
+    <p>The remote machine should already be configured.</p>
+  </note>
+
+  <steps>
+    <item><p>Click <gui style="button">+</gui> in the top left corner to launch
+    the remote connection creation assistant.</p></item>
+
+    <item><p>Enter a URL containing the protocol, IP address and port number of
+    the remote device or service. For example:</p>
+      <code>vnc://192.168.122.1:5900</code>
+      <p>The protocol will be:</p>
+      <list>
+        <item><p>rdp:// to connect to a remote <app>RDP</app> server.</p></item>
+        <item><p>vnc:// to connect to a remote <app>vino</app> or <app>VNC</app>
+        server.</p></item>
+      </list>
+      <note style="info">
+        <p>The address and port number should be available from the
+        configuration of the device or service on the remote machine.</p>
+      </note>
+    </item>
+    <item><p>Click <gui style="button">Create</gui>.</p></item>
+  </steps>
+
+  <p>The remote machine will open in the collection view.</p>
+
+</page>
