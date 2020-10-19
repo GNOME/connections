@@ -7,7 +7,7 @@ project('connections', ['c', 'vala'],
 
 i18n = import('i18n')
 valac = meson.get_compiler ('vala')
-
+gnome = import('gnome')
 
 src_dir = join_paths (meson.source_root (), 'src')
 locale_dir = join_paths (get_option ('prefix'), get_option ('localedir'))
@@ -43,6 +43,7 @@ config_h = declare_dependency (
 config_h_dir = include_directories ('.')
 
 subdir('data')
+subdir('help')
 subdir('src')
 subdir('po')
 
