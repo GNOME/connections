@@ -1,5 +1,11 @@
+desktop_conf = configuration_data()
+desktop_conf.set('icon', application_id)
 desktop_file = i18n.merge_file(
-  input: 'org.gnome.Connections.desktop.in',
+  input: configure_file(
+    input: files('org.gnome.Connections.desktop.in'),
+    output: 'org.gnome.Connections.desktop.in',
+    configuration: desktop_conf
+  ),
   output: '@0@.desktop'.format(application_id),
   type: 'desktop',
   po_dir: '../po',
@@ -29,9 +35,10 @@ if appstream_util.found()
   )
 endif
 
-dbus_conf = configuration_data ()
-dbus_conf.set ('bindir', join_paths (get_option ('prefix'), get_option ('bindir')))
-configure_file (
+dbus_conf = configuration_data()
+dbus_conf.set('bindir', join_paths (get_option ('prefix'), get_option ('bindir')))
+dbus_conf.set('appid', application_id)
+configure_file(
   input: 'org.gnome.Connections.service.in',
   output: '@0@.service'.format(application_id),
   configuration: dbus_conf,
@@ -40,8 +47,17 @@ configure_file (
 )
 
 # Icons
-install_subdir('icons',
-  install_dir: join_paths(get_option('datadir')),
+icon_dir = join_paths('icons', 'hicolor', 'scalable', 'apps')
+install_data(
+  join_paths(icon_dir, '@0@.svg'.format(application_id)),
+  install_dir: join_paths(get_option('datadir'), icon_dir),
+  rename: '@0@.svg'.format(application_id)
+)
+
+icon_dir = join_paths('icons', 'hicolor', 'symbolic', 'apps')
+install_data(
+  join_paths(icon_dir, 'org.gnome.Connections-symbolic.svg'),
+  install_dir: join_paths(get_option('datadir'), icon_dir)
 )
 
 install_data('org.gnome.Connections.gschema.xml',

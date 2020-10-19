@@ -79,7 +79,7 @@ namespace Connections {
                                    "license-type", Gtk.License.GPL_3_0,
                                    "program-name", _("Connections"),
                                    "wrap-license", true,
-                                   "logo-icon-name", "org.gnome.Connections",
+                                   "logo-icon-name", application_id,
                                    "version", Config.VERSION);
         }
 
