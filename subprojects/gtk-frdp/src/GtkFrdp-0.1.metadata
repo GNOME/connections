@@ -1,4 +1,0 @@
-Display
-    .authenticate.username out unowned=false
-    .authenticate.password out unowned=false
-    .authenticate.domain out unowned=false
