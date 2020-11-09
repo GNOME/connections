@@ -279,12 +279,12 @@ namespace Connections {
         }
 
         public override void save () {
-            base.save ();
-
             var vnc = connection as VncConnection;
 
             set_boolean (connection.uuid, "view_only", vnc.view_only);
             set_boolean (connection.uuid, "show_local_pointer", vnc.show_local_pointer);
+
+            base.save ();
         }
     }
 }
