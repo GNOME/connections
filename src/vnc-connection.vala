@@ -79,6 +79,39 @@ namespace Connections {
             }
         }
 
+        public string bandwidth {
+            set {
+                if (value == "high-quality") {
+                    display.set_depth (DisplayDepthColor.FULL);
+                } else if (value == "fast-refresh") {
+                    display.set_depth (DisplayDepthColor.LOW);
+                } else {
+                    debug ("Unknown display depth '%s', using high-quality", value);
+                    display.set_depth (DisplayDepthColor.FULL);
+                }
+            }
+
+            get {
+                unowned string ret;
+                switch (display.get_depth ()) {
+                case DisplayDepthColor.FULL:
+                    ret = "high-quality";
+                    break;
+
+                case DisplayDepthColor.LOW:
+                    ret = "fast-refresh";
+                    break;
+
+                default:
+                    debug ("Unsupported color depth: %s", display.get_depth().to_string());
+                    ret = "high-quality";
+                    break;
+
+                }
+                return ret;
+            }
+        }
+
         construct {
             display = new Vnc.Display ();
             display.set_keyboard_grab (true);
@@ -265,6 +298,18 @@ namespace Connections {
             local_pointer.widget.bind_property ("active", vnc, "show_local_pointer", BindingFlags.SYNC_CREATE);
             vnc.notify["show-local-pointer"].connect (() => { vnc.save (); });
             add_property (local_pointer);
+
+            var combo_widget = new Gtk.ComboBoxText();
+            combo_widget.append("high-quality", _("High quality"));
+            combo_widget.append("fast-refresh", _("Fast refresh"));
+            combo_widget.active_id = vnc.bandwidth;
+            var bandwidth = new Property () {
+                label = _("Bandwidth"),
+                widget = combo_widget
+            };
+            bandwidth.widget.bind_property ("active_id", vnc, "bandwidth", BindingFlags.SYNC_CREATE);
+            vnc.notify["bandwidth"].connect (() => { vnc.save (); });
+            add_property (bandwidth);
         }
     }
 
@@ -276,6 +321,7 @@ namespace Connections {
 
             vnc.view_only = get_boolean (connection.uuid, "view_only");
             vnc.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
+            vnc.bandwidth = get_string (connection.uuid, "bandwidth");
         }
 
         public override void save () {
@@ -283,6 +329,7 @@ namespace Connections {
 
             set_boolean (connection.uuid, "view_only", vnc.view_only);
             set_boolean (connection.uuid, "show_local_pointer", vnc.show_local_pointer);
+            set_string (connection.uuid, "bandwidth", vnc.bandwidth);
 
             base.save ();
         }
