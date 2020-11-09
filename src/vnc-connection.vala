@@ -151,7 +151,7 @@ namespace Connections {
         }
 
         ~VncConnection () {
-            debug ("Closig connection with %s", widget.name);
+            debug ("Closing connection with %s", widget.name);
 
             disconnect_it ();
         }
