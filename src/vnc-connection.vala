@@ -79,36 +79,52 @@ namespace Connections {
             }
         }
 
-        public string bandwidth {
-            set {
-                if (value == "high-quality") {
-                    display.set_depth (DisplayDepthColor.FULL);
-                } else if (value == "fast-refresh") {
-                    display.set_depth (DisplayDepthColor.LOW);
-                } else {
-                    debug ("Unknown display depth '%s', using high-quality", value);
-                    display.set_depth (DisplayDepthColor.FULL);
+        public enum Bandwidth {
+            DEFAULT,
+            HIGH_QUALITY,
+            FAST_REFRESH;
+
+            public string to_string () {
+                switch (this) {
+                    case HIGH_QUALITY:
+                        return "high-quality";
+                    case FAST_REFRESH:
+                        return "fast-refresh";
+                    default:
+                        return "default";
                 }
             }
 
-            get {
-                unowned string ret;
-                switch (display.get_depth ()) {
-                case DisplayDepthColor.FULL:
-                    ret = "high-quality";
-                    break;
-
-                case DisplayDepthColor.LOW:
-                    ret = "fast-refresh";
-                    break;
-
-                default:
-                    debug ("Unsupported color depth: %s", display.get_depth().to_string());
-                    ret = "high-quality";
-                    break;
-
+            public Bandwidth from_string (string bandwidth) {
+                switch (bandwidth) {
+                    case "high-quality":
+                        return HIGH_QUALITY;
+                    case "fast-refresh":
+                        return FAST_REFRESH;
+                    default:
+                        return DEFAULT;
                 }
-                return ret;
+            }
+        }
+        private Bandwidth _bandwidth;
+        public Bandwidth bandwidth {
+            set {
+                switch (value) {
+                case FAST_REFRESH:
+                    display.set_depth (DisplayDepthColor.LOW);
+                    break;
+
+                case HIGH_QUALITY:
+                case DEFAULT:
+                default:
+                    display.set_depth (DisplayDepthColor.FULL);
+                    break;
+                }
+                _bandwidth = value;
+            }
+
+            get {
+                return _bandwidth;
             }
         }
 
@@ -299,15 +315,17 @@ namespace Connections {
             vnc.notify["show-local-pointer"].connect (() => { vnc.save (); });
             add_property (local_pointer);
 
-            var combo_widget = new Gtk.ComboBoxText();
-            combo_widget.append("high-quality", _("High quality"));
-            combo_widget.append("fast-refresh", _("Fast refresh"));
-            combo_widget.active_id = vnc.bandwidth;
+            var combo_widget = new Gtk.ComboBoxText ();
+            combo_widget.append ("high-quality", _("High quality"));
+            combo_widget.append ("fast-refresh", _("Fast refresh"));
+            combo_widget.active_id = vnc.bandwidth.to_string ();
             var bandwidth = new Property () {
                 label = _("Bandwidth"),
                 widget = combo_widget
             };
-            bandwidth.widget.bind_property ("active_id", vnc, "bandwidth", BindingFlags.SYNC_CREATE);
+            combo_widget.notify["active-id"].connect (() => {
+                vnc.bandwidth = vnc.bandwidth.from_string (combo_widget.active_id);
+            });
             vnc.notify["bandwidth"].connect (() => { vnc.save (); });
             add_property (bandwidth);
         }
@@ -321,7 +339,7 @@ namespace Connections {
 
             vnc.view_only = get_boolean (connection.uuid, "view_only");
             vnc.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
-            vnc.bandwidth = get_string (connection.uuid, "bandwidth");
+            vnc.bandwidth = vnc.bandwidth.from_string (get_string (connection.uuid, "bandwidth"));
         }
 
         public override void save () {
@@ -329,7 +347,7 @@ namespace Connections {
 
             set_boolean (connection.uuid, "view_only", vnc.view_only);
             set_boolean (connection.uuid, "show_local_pointer", vnc.show_local_pointer);
-            set_string (connection.uuid, "bandwidth", vnc.bandwidth);
+            set_string (connection.uuid, "bandwidth", vnc.bandwidth.to_string ());
 
             base.save ();
         }
