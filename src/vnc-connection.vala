@@ -80,29 +80,26 @@ namespace Connections {
         }
 
         public enum Bandwidth {
-            DEFAULT,
             HIGH_QUALITY,
             FAST_REFRESH;
 
             public string to_string () {
                 switch (this) {
-                    case HIGH_QUALITY:
-                        return "high-quality";
                     case FAST_REFRESH:
                         return "fast-refresh";
+                    case HIGH_QUALITY:
                     default:
-                        return "default";
+                        return "high-quality";
                 }
             }
 
             public Bandwidth from_string (string bandwidth) {
                 switch (bandwidth) {
-                    case "high-quality":
-                        return HIGH_QUALITY;
                     case "fast-refresh":
                         return FAST_REFRESH;
+                    case "high-quality":
                     default:
-                        return DEFAULT;
+                        return HIGH_QUALITY;
                 }
             }
         }
@@ -115,7 +112,6 @@ namespace Connections {
                     break;
 
                 case HIGH_QUALITY:
-                case DEFAULT:
                 default:
                     display.set_depth (DisplayDepthColor.FULL);
                     break;
