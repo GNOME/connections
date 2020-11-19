@@ -6,16 +6,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-08-31 17:00+0000\n"
-"PO-Revision-Date: 2020-09-01 09:27+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-09-07 22:49+0000\n"
+"PO-Revision-Date: 2020-11-19 04:59+0100\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
@@ -36,10 +35,6 @@ msgstr "Un client par scritori rimot pal ambient di scritori GNOME."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Il progjet GNOME"
-
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -111,7 +106,7 @@ msgstr "%d×%d"
 
 #: src/rdp-connection.vala:128 src/vnc-connection.vala:240
 msgid "Scaling"
-msgstr ""
+msgstr "Scjale"
 
 #: src/topbar.vala:55 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -126,8 +121,8 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ "
-"cun rdp:// o vnc://"
+"Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ cun "
+"rdp:// o vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -255,3 +250,6 @@ msgstr "Dome viôt"
 #: src/vnc-connection.vala:260
 msgid "Show local pointer"
 msgstr "Mostre pontadôr locâl"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
