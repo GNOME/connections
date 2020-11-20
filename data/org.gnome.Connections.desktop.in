@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Connections
-Exec=connections
+Exec=gnome-connections
 Terminal=false
 Type=Application
 Categories=GTK;
