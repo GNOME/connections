@@ -4,7 +4,7 @@
   <id>org.gnome.Connections.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-  <name>Connections</name>
+  <name>GNOME Connections</name>
   <summary>A remote desktop client for the GNOME desktop environment</summary>
   <description>
     <p>
