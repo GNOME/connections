@@ -36,6 +36,7 @@
                   <child>
                     <object class="GtkLabel" id="host_address_label">
                       <property name="visible">True</property>
+                      <property name="selectable">True</property>
                     </object>
                   </child>
                 </object>
