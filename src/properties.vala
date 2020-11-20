@@ -53,6 +53,9 @@ namespace Connections {
 
                 host_address_label.set_text (connection.uri);
             });
+
+            var titlebar = get_titlebar () as Gtk.HeaderBar;
+            titlebar.bind_property ("title", connection_name_entry, "text", BindingFlags.BIDIRECTIONAL);
         }
 
         public void add_property (Connections.Property property) {
