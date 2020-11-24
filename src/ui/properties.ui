@@ -64,6 +64,7 @@
                                 <object class="GtkEntry" id="connection_name_entry">
                                   <property name="visible">True</property>
                                   <property name="hexpand">True</property>
+                                  <signal name="activate" handler="on_connection_name_edit_toggled"/>
                                 </object>
                               </child>
                             </object>
