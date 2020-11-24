@@ -1,3 +1,4 @@
 *.diff
 *.patch
 *.swp
+_build/
