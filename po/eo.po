@@ -1,0 +1,268 @@
+# Esperanto translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-11-22 11:44+0000\n"
+"PO-Revision-Date: 2020-11-28 17:25+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.38.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+msgid "GNOME Connections"
+msgstr "GNOME Konektoj"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Defora labortabla montrilo por la GNOME labortablo"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Defora labortabla montrilo por la GNOME labortablo."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "La projekto GNOME"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Konektoj"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Defora labortabla (VNC) dosiero"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Forigi"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Ecoj"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Kristjan SCHMIDT"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Ne eblis malfermi dosieron kun nekonata MIME-tipo %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Konekto al “%s”estas forigita"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Malfari"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL por konekti"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Malfermi .vnc- aŭ .rdp-dosieron je la donita VOJO"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "Tro multe komandliniaj argumentoj specifitaj.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Ekrankopio de %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Faris ekrankopion"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Malfermi"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” bezonas aŭtentigon"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+msgid "Scaling"
+msgstr "Skalado"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Fari ekrankopion"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Krei novan konekton"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Enigu adreson de maŝino al kiu vi volas konekti. Adresoj povas komenci kun "
+"rdp:// aŭ vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Servilo"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nomo"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Krei"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Uzantonomo"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Pasvorto"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Saluti"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bonvenon al Konektoj"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Nur alklaku la <b>+</b> butonon por krei vian unuan konekton."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Konekto-atributoj"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adreso"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nova"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Aplikaĵa menuo"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Serĉi"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Reen"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Montri menuo"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Malkonekti"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Klavkombinoj"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Klavkombinoj"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Helpo"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Pri Konektoj"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Stir + Alt + Reen"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Stir + Alt + For"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Stir + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Stir + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Stir + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Stir + Alt + F7"
+
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
+msgstr "Ne povis analizi la dosieron"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Al VNC-dosiero mankas ŝlosilo “%s”"
+
+#: src/vnc-connection.vala:295
+msgid "View only"
+msgstr "Nurvida"
+
+#: src/vnc-connection.vala:305
+msgid "Show local pointer"
+msgstr "Montri lokan montrilon"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Alta kvalito"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Rapida aktualigo"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Kapacito"
