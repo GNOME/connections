@@ -1,0 +1,156 @@
+# Ukrainian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"POT-Creation-Date: 2020-11-22 11:44+0000\n"
+"PO-Revision-Date: 2020-11-29 09:21+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.11.70\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2020"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:14
+msgid "Felipe Borges"
+msgstr "Феліпе Борхес"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:16
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "Встановлення з'єднання із віддаленим комп'ютером за допомогою мережі."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "Під'єднайтеся до іншого комп'ютера"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr ""
+"<app>З'єднаннями</app> можна скористатися для перегляду даних та доступу до"
+" віддалених комп'ютерів."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "Віддалена машина вже повинна бути налаштована."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"Натисніть кнопку <gui style=\"button\">+</gui> у верхньому лівому куті вікна"
+" програми, щоб запустити допоміжну програму для створення віддаленого"
+" з'єднання."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"Введіть URL-адресу, що містить протокол, IP-адресу та номер порту "
+"віддаленого пристрою чи сервісу. Наприклад:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "Протоколом буде:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr ""
+"rdp:// для встановлення з'єднання із віддаленим сервером <app>RDP</app>."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr ""
+"vnc:// для встановлення з'єднання із віддаленим сервером <app>vino</app> або "
+"<app>VNC</app>."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"Адресу і номер порту можна визначити за налаштуваннями пристрою або служби "
+"на віддаленому комп'ютері."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "Натисніть <gui style=\"button\">Створити</gui>."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "На панелі перегляду збірки буде відкрито запис віддаленого комп'ютера."
+
+#. (itstool) path: media/span
+#: C/index.page:9
+msgid "Connections"
+msgstr "З'єднання"
+
+#. (itstool) path: info/desc
+#: C/index.page:21
+msgid "Learn to connect to remote machines."
+msgstr "Навчіться встановлювати з'єднання із віддаленим комп'ютером."
+
+#. (itstool) path: page/title
+#: C/index.page:24
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> З'єднання"
+
+#. (itstool) path: page/p
+#: C/index.page:29
+msgid ""
+"<app>Connections</app> is a a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"<app>З'єднання</app> є клієнт віддалених стільниць для середовища GNOME."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Getting started"
+msgstr "Перші кроки"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "ліцензії Creative Commons Attribution-Share Alike 3.0 Unported"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Ця робота розповсюджується за умов дотримання <_:link-1/>."
