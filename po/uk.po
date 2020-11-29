@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-08-31 10:17+0000\n"
-"PO-Revision-Date: 2020-08-31 13:34+0300\n"
+"POT-Creation-Date: 2020-11-28 16:26+0000\n"
+"PO-Revision-Date: 2020-11-29 09:46+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -20,10 +20,9 @@ msgstr ""
 "X-Generator: Lokalize 20.11.70\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "З'єднання"
+#| msgid "Connections"
+msgid "GNOME Connections"
+msgstr "З'єднання GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -38,9 +37,10 @@ msgstr "Клієнт віддалених стільниць для середо
 msgid "The GNOME Project"
 msgstr "Проєкт GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "З'єднання"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -110,7 +110,7 @@ msgstr "«%s» потребує засвідчення"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Масштабування"
 
@@ -127,9 +127,8 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Введіть адресу машини, з якою слід встановити з'єднання. Адреса може"
-" починатися з rdp:// або "
-"vnc://"
+"Введіть адресу машини, з якою слід встановити з'єднання. Адреса може "
+"починатися з rdp:// або vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -166,13 +165,14 @@ msgstr "Вітаємо у «З'єднаннях»"
 #: src/ui/empty-view.ui:41
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr ""
-"Просто натисніть на кнопку <b>+</b> кнопку, щоб створити ваше перше з'єднання."
+"Просто натисніть на кнопку <b>+</b> кнопку, щоб створити ваше перше "
+"з'єднання."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
 msgstr "Властивості з'єднання"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:109
 msgid "Address"
 msgstr "Адреса"
 
@@ -240,21 +240,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Не вдалося обробити файл"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "У файлі VNC не вказано ключа «%s»"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Лише перегляд"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Показувати локальний вказівник"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Висока якість"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Швидке оновлення"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Ширина каналу"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
