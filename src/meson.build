@@ -15,6 +15,7 @@ connections_sources = [
   'thumbnailer.vala',
   'topbar.vala',
   'vnc-connection.vala',
+  'vnc-properties-dialog.vala',
   'window.vala',
 ]
 
