@@ -126,21 +126,66 @@ namespace Connections {
         }
     }
 
-     private class Property : GLib.Object {
+     private abstract class Property : GLib.Object {
         public string label;
-        public Gtk.Widget widget;
+        public abstract Gtk.Widget widget { get; }
     }
 
     private class BooleanProperty : Property {
+        private Gtk.Switch switch_widget;
+
+        public override Gtk.Widget widget {
+            get {
+                return switch_widget;
+            }
+        }
+
         public BooleanProperty (Connection connection, string property_id) {
-            widget = new Gtk.Switch ();
-            var switch_widget = widget as Gtk.Switch;
+            switch_widget = new Gtk.Switch ();
 
             bool active = false;
             connection.get (property_id, out active);
             switch_widget.active = active;
 
             switch_widget.bind_property ("active", connection, property_id, BindingFlags.SYNC_CREATE);
+        }
+    }
+
+    private class ComboProperty : Property {
+        private Gtk.ComboBoxText combo_widget;
+        private string? default_option;
+
+        public signal void changed (string property_value);
+        public string active_id {
+            get {
+                return combo_widget.active_id;
+            }
+
+            set {
+                combo_widget.active_id = value;
+            }
+        }
+
+        public override Gtk.Widget widget {
+            get {
+                return combo_widget;
+            }
+        }
+
+        public ComboProperty (Connection connection, string property_id, string default_option) {
+            combo_widget = new Gtk.ComboBoxText ();
+            this.default_option = default_option;
+
+            combo_widget.notify["active-id"].connect (() => {
+                changed (combo_widget.active_id);
+            });
+        }
+
+        public void add_option (string option_id, string option_label) {
+            combo_widget.append (option_id, option_label);
+
+            if (option_id == default_option)
+                combo_widget.active_id = option_id;
         }
     }
 }

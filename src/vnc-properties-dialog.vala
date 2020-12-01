@@ -23,7 +23,6 @@ namespace Connections {
     private class VncPropertiesDialog : PropertiesDialog {
         public VncPropertiesDialog (Connection connection) {
             this.connection = connection;
-            var vnc = connection as VncConnection;
 
             var scaling = new BooleanProperty (connection, "scaling") {
                 label = _("Scaling")
@@ -40,16 +39,14 @@ namespace Connections {
             };
             add_property (local_pointer);
 
-            var combo_widget = new Gtk.ComboBoxText ();
-            combo_widget.append ("high-quality", _("High quality"));
-            combo_widget.append ("fast-refresh", _("Fast refresh"));
-            combo_widget.active_id = vnc.bandwidth.to_string ();
-            var bandwidth = new Property () {
-                label = _("Bandwidth"),
-                widget = combo_widget
+            var vnc = connection as VncConnection;
+            var bandwidth = new ComboProperty (vnc, "bandwidth", vnc.bandwidth.to_string ()) {
+                label = _("Bandwidth")
             };
-            combo_widget.notify["active-id"].connect (() => {
-                vnc.bandwidth = vnc.bandwidth.from_string (combo_widget.active_id);
+            bandwidth.add_option ("high-quality", _("High quality"));
+            bandwidth.add_option ("fast-refresh", _("Fast refresh"));
+            bandwidth.changed.connect ((property_value) => {
+               vnc.bandwidth = vnc.bandwidth.from_string (property_value);
             });
             add_property (bandwidth);
         }
