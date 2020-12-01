@@ -25,31 +25,19 @@ namespace Connections {
             this.connection = connection;
             var vnc = connection as VncConnection;
 
-            var scaling = new Property () {
-                label = _("Scaling"),
-                widget = new Gtk.Switch () {
-                    active = connection.scaling
-                }
+            var scaling = new BooleanProperty (connection, "scaling") {
+                label = _("Scaling")
             };
-            scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
             add_property (scaling);
 
-            var view_only = new Property () {
-                label = _("View only"),
-                widget = new Gtk.Switch () {
-                    active = vnc.view_only
-                }
+            var view_only = new BooleanProperty (connection, "view-only") {
+                label = _("View only")
             };
-            view_only.widget.bind_property ("active", vnc, "view_only", BindingFlags.SYNC_CREATE);
             add_property (view_only);
 
-            var local_pointer = new Property () {
-                label = _("Show local pointer"),
-                widget = new Gtk.Switch () {
-                    active = vnc.show_local_pointer
-                }
+            var local_pointer = new BooleanProperty (connection, "show-local-pointer") {
+                label = _("Show local pointer")
             };
-            local_pointer.widget.bind_property ("active", vnc, "show_local_pointer", BindingFlags.SYNC_CREATE);
             add_property (local_pointer);
 
             var combo_widget = new Gtk.ComboBoxText ();

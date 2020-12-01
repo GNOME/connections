@@ -124,14 +124,9 @@ namespace Connections {
         public RdpPropertiesDialog (Connection connection) {
             this.connection = connection;
 
-            var scaling = new Property () {
-                label = _("Scaling"),
-                widget = new Gtk.Switch () {
-                    active = connection.scaling
-                }
+            var scaling = new BooleanProperty (connection, "scaling") {
+                label = _("Scaling")
             };
-            scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
-            connection.notify["scaling"].connect (() => { connection.save (); });
             add_property (scaling);
         }
     }

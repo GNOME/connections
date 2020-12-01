@@ -130,4 +130,17 @@ namespace Connections {
         public string label;
         public Gtk.Widget widget;
     }
+
+    private class BooleanProperty : Property {
+        public BooleanProperty (Connection connection, string property_id) {
+            widget = new Gtk.Switch ();
+            var switch_widget = widget as Gtk.Switch;
+
+            bool active = false;
+            connection.get (property_id, out active);
+            switch_widget.active = active;
+
+            switch_widget.bind_property ("active", connection, property_id, BindingFlags.SYNC_CREATE);
+        }
+    }
 }
