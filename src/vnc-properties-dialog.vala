@@ -32,7 +32,6 @@ namespace Connections {
                 }
             };
             scaling.widget.bind_property ("active", connection, "scaling", BindingFlags.SYNC_CREATE);
-            connection.notify["scaling"].connect (() => { connection.save (); });
             add_property (scaling);
 
             var view_only = new Property () {
@@ -42,7 +41,6 @@ namespace Connections {
                 }
             };
             view_only.widget.bind_property ("active", vnc, "view_only", BindingFlags.SYNC_CREATE);
-            vnc.notify["view-only"].connect (() => { vnc.save (); });
             add_property (view_only);
 
             var local_pointer = new Property () {
@@ -52,7 +50,6 @@ namespace Connections {
                 }
             };
             local_pointer.widget.bind_property ("active", vnc, "show_local_pointer", BindingFlags.SYNC_CREATE);
-            vnc.notify["show-local-pointer"].connect (() => { vnc.save (); });
             add_property (local_pointer);
 
             var combo_widget = new Gtk.ComboBoxText ();
@@ -66,7 +63,6 @@ namespace Connections {
             combo_widget.notify["active-id"].connect (() => {
                 vnc.bandwidth = vnc.bandwidth.from_string (combo_widget.active_id);
             });
-            vnc.notify["bandwidth"].connect (() => { vnc.save (); });
             add_property (bandwidth);
         }
     }

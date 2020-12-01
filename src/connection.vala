@@ -205,6 +205,8 @@ namespace Connections {
             thumbnailer = new Connections.Thumbnailer (this);
 
             show.connect (() => { thumbnailer.update_thumbnail (); });
+
+            notify.connect (save);
         }
 
         public abstract void connect_it ();
