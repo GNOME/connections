@@ -5,6 +5,7 @@
       <property name="width-request">1024</property>
       <property name="height-request">768</property>
       <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
+      <signal name="delete-event" handler="on_delete_event"/>
     <child type="titlebar">
       <object class="ConnectionsTopbar" id="topbar">
         <property name="visible">True</property>

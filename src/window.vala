@@ -104,5 +104,12 @@ namespace Connections {
 
             return false;
         }
+
+        [GtkCallback]
+        private bool on_delete_event () {
+            notifications_bar.dismiss_any_notification ();
+
+            return false;
+        }
     }
 }

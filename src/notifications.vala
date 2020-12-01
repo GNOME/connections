@@ -22,6 +22,9 @@
 namespace Connections {
     private class NotificationsBar : Gtk.Bin {
         public const int DEFAULT_TIMEOUT = 6;
+        private const int MAX_NOTIFICATIONS = 5;
+
+        private Gtk.Widget? active_notification;
 
         construct {
             valign = Gtk.Align.START;
@@ -41,10 +44,10 @@ namespace Connections {
 
                 if (child is Notification)
                     (child as Notification).dismiss ();
-
             }
 
             add (notification);
+            active_notification = notification;
         }
 
         public AuthNotification display_for_auth (string auth_string,
@@ -59,13 +62,25 @@ namespace Connections {
                 remove (get_child ());
 
             add (notification);
+            active_notification = notification;
 
             return notification;
+        }
+
+        public void dismiss_any_notification () {
+            if (active_notification != null) {
+                Notification? child = active_notification as Notification;
+                if (child != null) {
+                    child.dismiss ();
+                }
+            }
         }
     }
 
     [GtkTemplate (ui = "/org/gnome/Connections/ui/notification.ui")]
     private class Notification : Gtk.Revealer {
+        public signal void dismissed ();
+
         public delegate void OKFunc ();
         public delegate void DismissFunc ();
 
@@ -76,14 +91,23 @@ namespace Connections {
         [GtkChild]
         private Gtk.Button ok_button; 
 
+        private uint notification_timeout_id = 0;
+
         public Notification (string  message,
                              string? ok_label,
                              owned OKFunc? ok_func,
-                             owned DismissFunc? dismiss_func) {
+                             owned DismissFunc? dismiss_func,
+                             int timeout = NotificationsBar.DEFAULT_TIMEOUT) {
             this.dismiss_func = (owned)dismiss_func;
             set_reveal_child (true);
 
             message_label.label = message;
+
+            notification_timeout_id = Timeout.add_seconds (timeout, () => {
+                notification_timeout_id = 0;
+                dismissed ();
+                return Source.REMOVE;
+            });
 
             if (ok_label != null) {
                 ok_button.label = ok_label;
@@ -93,10 +117,17 @@ namespace Connections {
                         ok_func ();
 
                     set_reveal_child (false);
+
+                    if (notification_timeout_id != 0) {
+                        Source.remove (notification_timeout_id);
+                        notification_timeout_id = 0;
+                    }
                 });
 
                 ok_button.show_all ();
             }
+
+            dismissed.connect (dismiss);
         }
 
         [GtkCallback]
@@ -104,6 +135,11 @@ namespace Connections {
             set_reveal_child (false);
             if (dismiss_func != null)
                 dismiss_func ();
+
+            if (notification_timeout_id != 0) {
+                Source.remove (notification_timeout_id);
+                notification_timeout_id = 0;
+            }
         }
     }
 
