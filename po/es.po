@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 08:45+0000\n"
-"PO-Revision-Date: 2020-09-01 10:50+0200\n"
+"POT-Creation-Date: 2020-11-28 16:26+0000\n"
+"PO-Revision-Date: 2020-12-02 10:51+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Conexiones"
+#| msgid "Connections"
+msgid "GNOME Connections"
+msgstr "Conexiones de GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -38,9 +37,10 @@ msgstr "Un cliente de escritorio remoto para GNOME."
 msgid "The GNOME Project"
 msgstr "El Proyecto GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conexiones"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -87,12 +87,10 @@ msgstr "Demasiados argumentos en la línea de comandos.\n"
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
 #, c-format
-#| msgid "Take Screenshot"
 msgid "Screenshot from %s"
 msgstr "Captura de las %s"
 
 #: src/connection.vala:142
-#| msgid "Take Screenshot"
 msgid "Screenshot taken"
 msgstr "Captura realizada"
 
@@ -112,7 +110,7 @@ msgstr "«%s» requiere autenticación"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Escalado"
 
@@ -172,7 +170,7 @@ msgstr "Pulse el botón <b>+</b> para crear su primera conexión."
 msgid "Connection Properties"
 msgstr "Propiedades de la conexión"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:109
 msgid "Address"
 msgstr "Dirección"
 
@@ -240,21 +238,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "No se pudo analizar el archivo"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "El archivo VNC no tiene la clave «%s»"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Sólo lectura"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Mostrar puntero local"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Alta calidad"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Actualización rápida"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Ancho de banda"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
