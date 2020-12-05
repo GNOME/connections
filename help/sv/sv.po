@@ -1,0 +1,154 @@
+# Swedish translation for gnome-connections.
+# Copyright © 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"POT-Creation-Date: 2020-12-04 09:50+0000\n"
+"PO-Revision-Date: 2020-12-05 14:39+0100\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:14
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:16
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "Anslut till en fjärrmaskin över nätverket."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "Anslut till en annan dator"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr ""
+"<app>Anslutningar</app> kan användas för att visa och komma åt en "
+"fjärrmaskin."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "Fjärrmaskinen bör redan vara konfigurerad."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"Klicka på <gui style=\"button\">+</gui> i det övre vänstra hörnet för att "
+"starta assistenten för skapande av fjärranslutningar."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"Ange en URL som innehåller protokollet, IP-adressen och portnumret för "
+"fjärrenheten eller tjänsten. Till exempel:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "Protokollet kommer vara:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "rdp:// för att ansluta till en fjärran <app>RDP</app>-server."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr ""
+"vnc:// för att ansluta till en fjärran <app>vino</app>- eller <app>VNC</app>-"
+"server."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"Adressen och portnumret bör finnas tillgängligt från konfigurationen av "
+"enheten eller tjänsten på fjärrmaskinen."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "Klicka på <gui style=\"button\">Skapa</gui>."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "Fjärrmaskinen kommer att öppnas i samlingsvyn."
+
+#. (itstool) path: media/span
+#: C/index.page:9
+msgid "Connections"
+msgstr "Anslutningar"
+
+#. (itstool) path: info/desc
+#: C/index.page:21
+msgid "Learn to connect to remote machines."
+msgstr "Lär dig ansluta till fjärrmaskiner."
+
+#. (itstool) path: page/title
+#: C/index.page:24
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> Anslutningar"
+
+#. (itstool) path: page/p
+#: C/index.page:29
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"<app>Anslutningar</app> är en fjärrskrivbordsklient för skrivbordsmiljön "
+"GNOME."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Getting started"
+msgstr "Komma igång"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "Creative Commons Erkännande-DelaLika 3.0 Unported"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Detta verk är licensierat under licensen <_:link-1/>."
