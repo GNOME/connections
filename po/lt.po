@@ -1,0 +1,272 @@
+# Lithuanian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Aurimas Černius <aurisc4@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2020-12-08 17:26+0000\n"
+"PO-Revision-Date: 2020-12-10 22:33+0200\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
+"Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 3.38.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+msgid "GNOME Connections"
+msgstr "GNOME ryšiai"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "GNOME projektas"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Ryšiai"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Nuotolinio darbalaukio (VNC) failas"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Savybės"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"Išvertė:\n"
+"\n"
+"Aurimas Černius <aurisc4@gmail.com>"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Nepavyko atverti nežinomo MIME tipo failo %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Ryšys „%s“ buvo ištrintas"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Atšaukti"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "Prisijungti prie URL"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Atverti .vnc arba .rdp failą nurodytame KELYJE"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "Pateikta per daug komandų eilutės argumentų.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Ekrano nuotrauka iš %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Ekrano nuotrauka padaryta"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Atverti"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "„%s“ prašo patvirtinti tapatybę"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+msgid "Scaling"
+msgstr "Mastelis"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Padaryti nuotrauką"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Sukurti naują ryšį"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Įveskite kompiuterio, prie kurio jungtis, adresą. Adresas gali prasidėti "
+"rdp:// arba vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Serveris"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
+msgid "Name"
+msgstr "Pavadinimas"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Sukurti"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Na_udotojo vardas"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "Sla_ptažodis"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Prisijungti"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Sveiki pradėję naudoti ryšius"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Tiesiog spauskite mygtuką <b>+</b> pirmajam ryšiui sukurti."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Ryšio savybės"
+
+#: src/ui/properties.ui:32
+msgid "Address"
+msgstr "Adresas"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Naujas"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Programos meniu"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Ieškoti"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Grįžti"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Rodyti meniu"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Atsijungti"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Klaviatūros trumpiniai"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Klaviatūros trumpiniai"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Žinynas"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Apie ryšius"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Vald + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Vald + Alt + Trinti"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Vald + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Vald + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Vald + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Vald + Alt + F7"
+
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
+msgstr "Nepavyko perskaityti failo"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC faile trūksta rakto „%s“"
+
+#: src/vnc-connection.vala:295
+msgid "View only"
+msgstr "Tik žiūrėti"
+
+#: src/vnc-connection.vala:305
+msgid "Show local pointer"
+msgstr "Rodyti vietinį žymeklį"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Aukštos kokybės"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Greitas atnaujinimas"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Pralaidumas"
