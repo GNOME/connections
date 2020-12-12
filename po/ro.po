@@ -1,0 +1,273 @@
+# Romanian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Florentina Mușat <florentina.musat.28@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2020-12-04 15:02+0000\n"
+"PO-Revision-Date: 2020-12-12 21:06+0200\n"
+"Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n"
+"%100 < 20)) ? 1 : 2);;\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conexiuni"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client de desktop la distanță pentru mediul de desktop GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Un client de desktop la distanță pentru mediul de desktop GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:29
+msgid "The GNOME Project"
+msgstr "Proiectul GNOME"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fișier de desktop la distanță (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Șterge"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] "
+"com>, 2020"
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr ""
+"Un administrator de conexiune de la distanță pentru desktopul GNOME"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Nu s-a putut deschide fișierul de tip mime necunoscut %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Conexiunea la „%s” a fost ștearsă"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Refă"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL la conexiune"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Deschide un fișier .vnc sau .rdp la CALEA dată"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— O aplicație simplă pentru a accesa conexiuni de la distanță"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Prea multe argumente specificate pentru linia de comandă.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Captură de ecran de la %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Captură de ecran luată"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Deschide"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "„%s” necesită autentificare"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Scalare"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Fă captură de ecran"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Creează o conexiune nouă"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Introduceți o adresă de mașină la care să vă conectați. Adresa poate să "
+"înceapă cu rdp:// sau vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Server"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nume"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Anulează"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Creează"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Nume de _utilizator"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Parolă"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Autentificare"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Bine ați venit la Conexiuni"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Doar apăsați pe butonul <b>+</b> pentru a face prima conexiune."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Proprietăți conexiune"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adresă"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nou"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Meniu de aplicație"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Căutare"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Navighează înapoi"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Meniu de afișaj"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Deconectează"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Scurtături de tastatură"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Scurtături de tastatură"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ajutor"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Despre Conexiuni"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Nu s-a putut parsa fișierul"
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr "Fișierului VNC îi lipsește cheia „Gazdă”"
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr "Fișierului VNC îi lipsește cheia „Port”"
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr "Fișierului VNC îi lipsește cheia „Nume de utilizator”"
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr "Fișierului VNC îi lipsește cheia „Parolă”"
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Doar vizualizare"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Arată pointerul local"
