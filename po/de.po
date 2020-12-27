@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-07 21:29+0000\n"
-"PO-Revision-Date: 2020-09-10 22:51+0200\n"
-"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"POT-Creation-Date: 2020-12-08 01:28+0000\n"
+"PO-Revision-Date: 2020-12-13 18:11+0100\n"
+"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -20,10 +20,8 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Verbindungen"
+msgid "GNOME Connections"
+msgstr "GNOME Verbindungen"
 
 # Leicht verändert aus Vinagre übernommen
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
@@ -39,6 +37,11 @@ msgstr ""
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Verbindungen"
 
 # Aus Vinagre übernommen
 #: data/org.gnome.Connections.xml:5
@@ -112,7 +115,7 @@ msgstr "»%s« benötigt eine Legitimation"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Skalierung"
 
@@ -136,7 +139,7 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Name"
 
@@ -173,7 +176,7 @@ msgstr ""
 msgid "Connection Properties"
 msgstr "Verbindungseigenschaften"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adresse"
 
@@ -241,24 +244,36 @@ msgstr "Strg + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Strg + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Die Datei konnte nicht analysiert werden"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-Datei fehlt Schlüssel »%s«"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Nur anzeigen"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Lokalen Zeiger anzeigen"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Hohe Qualität"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Schnelle Aktualisierung"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Bandbreite"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
