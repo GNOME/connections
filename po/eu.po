@@ -7,8 +7,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-05 07:40+0000\n"
-"PO-Revision-Date: 2020-09-05 17:00+0100\n"
+"POT-Creation-Date: 2020-12-08 01:28+0000\n"
+"PO-Revision-Date: 2020-12-27 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -17,12 +17,11 @@ msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Konexioak"
+msgid "GNOME Connections"
+msgstr "GNOME Konexioak"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako"
 
@@ -34,9 +33,10 @@ msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako."
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Konexioak"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -54,13 +54,9 @@ msgstr "Propietateak"
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Urruneko konexioen kudeatzailea GNOME mahaigainerako"
-
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ezin da ireki %s mime mota ezezaguna duen fitxategia"
 
 #: src/application.vala:170
@@ -73,19 +69,15 @@ msgid "Undo"
 msgstr "Desegin"
 
 #: src/application.vala:211
-msgid "URL to connection"
+msgid "URL to connect"
 msgstr "Konexiorako URLa"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
+msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Ireki .vnc edo .rdp fitxategia emandako PATH bidean"
 
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— Urruneko konexioak atzitzeko aplikazio sinplea"
-
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
+msgid "Too many command-line arguments specified.\n"
 msgstr "Komando-lerroko argumentu gehiegi zehaztu dira.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
@@ -98,11 +90,12 @@ msgstr "Pantaila-argazkia %s"
 msgid "Screenshot taken"
 msgstr "Pantaila-argazkia hartu da"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Ireki"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” konexioak autentifikazioa behar du"
@@ -113,7 +106,7 @@ msgstr "“%s” konexioak autentifikazioa behar du"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Eskalatzea"
 
@@ -135,7 +128,7 @@ msgstr "Sartu makina baten helbide bat harekin konektatzeko. Helbidearen hasiera
 msgid "Server"
 msgstr "Zerbitzaria"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Izena"
 
@@ -171,7 +164,7 @@ msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
 msgid "Connection Properties"
 msgstr "Konexioaren propietateak"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Helbidea"
 
@@ -239,30 +232,51 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
 msgstr "Ezin izan da fitxategia analizatu"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "VNC fitxategiak “Host“ (ostalaria) gakoa falta du"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC fitxategiak “%s” gakoa falta du"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "VNC fitxategiak “Port“ (ataka) gakoa falta du"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "VNC fitxategiak “Username“ (erabiltzaile-izena) gakoa falta du"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "VNC fitxategiak “Password“ (pasahitza) gakoa falta du"
-
-#: src/vnc-connection.vala:249
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Ikusi soilik"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Erakutsi erakusle lokala"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Kalitate altua"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Freskatze azkarra"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Banda-zabalera"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
+
+#~ msgid "A remote connection manager for the GNOME desktop"
+#~ msgstr "Urruneko konexioen kudeatzailea GNOME mahaigainerako"
+
+#~ msgid "— A simple application to access remote connections"
+#~ msgstr "— Urruneko konexioak atzitzeko aplikazio sinplea"
+
+#~ msgid "VNC File is missing key “Port“"
+#~ msgstr "VNC fitxategiak “Port“ (ataka) gakoa falta du"
+
+#~ msgid "VNC File is missing key “Username“"
+#~ msgstr "VNC fitxategiak “Username“ (erabiltzaile-izena) gakoa falta du"
+
+#~ msgid "VNC File is missing key “Password“"
+#~ msgstr "VNC fitxategiak “Password“ (pasahitza) gakoa falta du"
