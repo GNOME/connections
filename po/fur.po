@@ -7,21 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-07 22:49+0000\n"
-"PO-Revision-Date: 2020-11-19 04:59+0100\n"
+"POT-Creation-Date: 2020-12-08 01:28+0000\n"
+"PO-Revision-Date: 2020-12-31 09:08+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Conessions"
+msgid "GNOME Connections"
+msgstr "GNOME Conessions"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -35,6 +33,11 @@ msgstr "Un client par scritori rimot pal ambient di scritori GNOME."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Il progjet GNOME"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conessions"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -104,7 +107,7 @@ msgstr "“%s” al à bisugne di autenticazion"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Scjale"
 
@@ -128,7 +131,7 @@ msgstr ""
 msgid "Server"
 msgstr "Servidôr"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Non"
 
@@ -164,7 +167,7 @@ msgstr "Al baste fracâ il boton <b>+</b> par creâ la tô prime conession."
 msgid "Connection Properties"
 msgstr "Proprietâts conession"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Direzion"
 
@@ -232,24 +235,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Impussibil analizâ il file"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Al file VNC al mancje la clâf “%s”"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Dome viôt"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Mostre pontadôr locâl"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Alte cualitât"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Inzornament veloç"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Largjece di bande"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
