@@ -2,28 +2,27 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Fran Dieguez <frandieguez@gnome.gl>, 2020.
+# Fran Dieguez <frandieguez@gnome.org>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 08:45+0000\n"
-"PO-Revision-Date: 2020-09-01 11:58+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.gl>\n"
-"Language-Team: Galician <Proxecto Trasno <proxecto@trasno.gal>>\n"
+"POT-Creation-Date: 2020-12-08 01:28+0000\n"
+"PO-Revision-Date: 2021-01-04 23:43+0100\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Conexións"
+#| msgid "Connections"
+msgid "GNOME Connections"
+msgstr "Conexións de GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -39,9 +38,10 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "O Proxecto de GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Conexións"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -83,7 +83,7 @@ msgstr "Abrir ficheiro .vnc ou .rdp no PATH fornecido"
 
 #: src/application.vala:234
 msgid "Too many command-line arguments specified.\n"
-msgstr ""
+msgstr "Especificou demasiados argumentos de liña de ordes\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
@@ -111,7 +111,7 @@ msgstr "«%s» require autenticación"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Escalado"
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Server"
 msgstr "Servidor"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Nome"
 
@@ -171,7 +171,7 @@ msgstr "Simplemente prema o botón <b>+</b> para crear a primeira conexión."
 msgid "Connection Properties"
 msgstr "Propiedades da conexión"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Enderezo"
 
@@ -239,21 +239,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Non foi posíbel analizar o ficheiro"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "No ficheiro VNC falta unha chave «%s»"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Só ver"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Mostrar punteiro local"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Alta calidade"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Recarga rápida"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Ancho de banda"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
