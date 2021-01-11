@@ -1,14 +1,14 @@
 # Czech translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Marek Černocký <marek@manet.cz>, 2020.
+# Marek Černocký <marek@manet.cz>, 2020, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-connections master\n"
+"Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-08-31 10:58+0000\n"
-"PO-Revision-Date: 2020-08-31 10:58+0000\n"
+"POT-Creation-Date: 2021-01-06 16:06+0000\n"
+"PO-Revision-Date: 2021-01-11 17:38+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -18,10 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Připojení"
+msgid "GNOME Connections"
+msgstr "Připojení GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -36,9 +34,10 @@ msgstr "Klient vzdálené pracovní plochy pro uživatelské prostředí GNOME."
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Připojení"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -59,7 +58,7 @@ msgstr "Marek Černocký <marek@manet.cz>"
 #: src/application.vala:140
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
-msgstr "Nelze se otevřít soubor neznámého typu MIME %s"
+msgstr "Nelze otevřít soubor neznámého typu MIME %s"
 
 #: src/application.vala:170
 #, c-format
@@ -108,7 +107,7 @@ msgstr "„%s“ požaduje ověření"
 msgid "%d×%d"
 msgstr "%d × %d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Škálování"
 
@@ -132,7 +131,7 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Název"
 
@@ -169,7 +168,7 @@ msgstr ""
 msgid "Connection Properties"
 msgstr "Vlastnosti připojení"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adresa"
 
@@ -187,7 +186,7 @@ msgstr "Hledat"
 
 #: src/ui/topbar.ui:104
 msgid "Go Back"
-msgstr "Vratit se zpět"
+msgstr "Vrátit se zpět"
 
 #: src/ui/topbar.ui:125
 msgid "Display Menu"
@@ -237,21 +236,33 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Nezdařilo se zpracovat soubor"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "V souboru VNC schází klíč „%s“"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Jen zobrazení"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Zobrazovat místní ukazatel"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Vysoká kvalita"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Rychlé reakce"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Šířka pásma"
