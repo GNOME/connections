@@ -104,7 +104,7 @@ msgstr "Obre"
 #: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
-msgstr "“%s” requereix autenticació"
+msgstr "«%s» requereix autenticació"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -166,7 +166,7 @@ msgstr "Us donem la benvinguda al Connexions"
 
 #: src/ui/empty-view.ui:41
 msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Premeu el botó <b>+</b> per fer la vostra primera connexió."
+msgstr "Premeu el botó <b>+</b> per a fer la vostra primera connexió."
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
@@ -190,7 +190,7 @@ msgstr "Cerca"
 
 #: src/ui/topbar.ui:104
 msgid "Go Back"
-msgstr "Vés enrere"
+msgstr "Ves enrere"
 
 #: src/ui/topbar.ui:125
 msgid "Display Menu"
