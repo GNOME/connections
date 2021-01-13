@@ -2,32 +2,28 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2020–.
+# Matej Urbančič <mateju@svn.gnome.org>, 2020–2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-08-31 14:38+0000\n"
-"PO-Revision-Date: 2020-09-02 22:33+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-01-06 16:06+0000\n"
+"PO-Revision-Date: 2021-01-13 21:22+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
-"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups."
-"com>\n"
+"Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n"
-"%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Povezave"
+msgid "GNOME Connections"
+msgstr "Povezave GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -42,9 +38,10 @@ msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME."
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Povezave"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -82,7 +79,7 @@ msgstr "Naslov URL za povezavo"
 
 #: src/application.vala:212
 msgid "Open .vnc or .rdp file at the given PATH"
-msgstr "Odpri datoteko .vnc oziroma .rdp na podati POTI"
+msgstr "Odpri datoteko .vnc oziroma .rdp na podani POTI"
 
 #: src/application.vala:234
 msgid "Too many command-line arguments specified.\n"
@@ -114,7 +111,7 @@ msgstr "»%s« zahteva overitev"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Prilagajanje velikosti"
 
@@ -130,14 +127,13 @@ msgstr "Ustvari novo povezavo"
 msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
-msgstr ""
-"Vpis naslova za povezavo. Naslov se lahko začne z rdp:// ali vnc://."
+msgstr "Vpis naslova za povezavo. Naslov se lahko začne z rdp:// ali vnc://."
 
 #: src/ui/assistant.ui:58
 msgid "Server"
 msgstr "Strežnik"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Ime"
 
@@ -173,7 +169,7 @@ msgstr "Pritisnite gumb <b>+</b> in ustvarite prvo povezavo."
 msgid "Connection Properties"
 msgstr "Lastnosti povezave"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Naslov"
 
@@ -241,21 +237,51 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Datoteke ni mogoče razčleniti"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Datoteka VNC je brez ključa »%s«"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Samo pogled"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Pokaži kazalnik"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Visoka kakovost"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Hitro osveževanje"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Pasovna širina"
+
+#~ msgid "A remote connection manager for the GNOME desktop"
+#~ msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME"
+
+#~ msgid "— A simple application to access remote connections"
+#~ msgstr "– Enostaven program za dostop do oddaljenih sistemov"
+
+#~ msgid "VNC File is missing key “Port“"
+#~ msgstr "Datoteka VNC je brez ključa »Vrata«"
+
+#~ msgid "VNC File is missing key “Username“"
+#~ msgstr "Datoteka VNC je brez ključa »Uporabniško ime«"
+
+#~ msgid "VNC File is missing key “Password“"
+#~ msgstr "Datoteka VNC je brez ključa »Geslo«"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
