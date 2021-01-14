@@ -2,44 +2,43 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # Andika Triwidada <atriwidada@gnome.org>, 2020.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-08-31 14:12+0000\n"
-"PO-Revision-Date: 2020-08-31 21:37+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-01-06 16:06+0000\n"
+"PO-Revision-Date: 2021-01-14 20:01+0700\n"
+"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Sambungan"
+msgid "GNOME Connections"
+msgstr "GNOME Koneksi"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Klien desktop jarak jauh untuk lingkungan desktop GNOME"
+msgstr "Klien destop jarak jauh untuk lingkungan destop GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Klien desktop jarak jauh untuk lingkungan desktop GNOME."
+msgstr "Klien destop jarak jauh untuk lingkungan destop GNOME."
 
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Koneksi"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -55,7 +54,9 @@ msgstr "Properti"
 
 #: src/application.vala:76
 msgid "translator-credits"
-msgstr "Andika Triwidada <andika@gmail.com>, 2020"
+msgstr ""
+"Andika Triwidada <andika@gmail.com>, 2020\n"
+"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021"
 
 #: src/application.vala:140
 #, c-format
@@ -91,7 +92,7 @@ msgstr "Cuplikan layar dari %s"
 
 #: src/connection.vala:142
 msgid "Screenshot taken"
-msgstr "Tangkapan layar diambil"
+msgstr "Cuplikan layar diambil"
 
 #. Translators: Open is a verb
 #: src/connection.vala:145
@@ -101,7 +102,7 @@ msgstr "Buka"
 #: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
-msgstr "\"%s\" membutuhkan otentikasi"
+msgstr "\"%s\" membutuhkan autentikasi"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -109,7 +110,7 @@ msgstr "\"%s\" membutuhkan otentikasi"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
 msgid "Scaling"
 msgstr "Penskalaan"
 
@@ -126,14 +127,14 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan "
-"rdp:// atau vnc://"
+"Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan rdp:// "
+"atau vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
-msgstr "Server"
+msgstr "Peladen"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Nama"
 
@@ -169,7 +170,7 @@ msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
 msgid "Connection Properties"
 msgstr "Properti Koneksi"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Alamat"
 
@@ -237,21 +238,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Tidak dapat mengurai berkas"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Berkas VNC kurang kunci \"%s\""
 
-#: src/vnc-connection.vala:250
+#: src/vnc-connection.vala:295
 msgid "View only"
 msgstr "Hanya tilik"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-connection.vala:305
 msgid "Show local pointer"
 msgstr "Tampilkan penunjuk lokal"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "Kualitas tinggi"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "Segarkan cepat"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "Lebar Pita"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
