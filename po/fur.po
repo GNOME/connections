@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-12-08 01:28+0000\n"
-"PO-Revision-Date: 2020-12-31 09:08+0100\n"
+"POT-Creation-Date: 2021-01-06 16:06+0000\n"
+"PO-Revision-Date: 2021-01-17 15:05+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -24,11 +24,11 @@ msgstr "GNOME Conessions"
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Un client par scritori rimot pal ambient di scritori GNOME"
+msgstr "Un client par scritori lontan pal ambient di scritori GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Un client par scritori rimot pal ambient di scritori GNOME."
+msgstr "Un client par scritori lontan pal ambient di scritori GNOME."
 
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
@@ -41,7 +41,7 @@ msgstr "Conessions"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
-msgstr "File di scritori rimot (VNC)"
+msgstr "File di scritori lontan (VNC)"
 
 #: src/actions-popover.vala:44
 msgid "Delete"
