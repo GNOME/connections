@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-11-22 11:44+0000\n"
-"PO-Revision-Date: 2020-12-04 16:01+0100\n"
+"POT-Creation-Date: 2020-12-12 19:08+0000\n"
+"PO-Revision-Date: 2021-01-25 15:37+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -126,7 +126,7 @@ msgstr "Lag en ny tilkobling"
 msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
-msgstr ""
+msgstr "Oppgi en maskinadresse å koble til. Adressen kan starte med rdp:// eller vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
@@ -166,7 +166,7 @@ msgstr ""
 
 #: src/ui/properties.ui:9
 msgid "Connection Properties"
-msgstr ""
+msgstr "Egenskaper for tilkobling"
 
 #: src/ui/properties.ui:108
 msgid "Address"
@@ -178,7 +178,7 @@ msgstr "Ny"
 
 #: src/ui/topbar.ui:42
 msgid "Application Menu"
-msgstr ""
+msgstr "Programmeny"
 
 #: src/ui/topbar.ui:70
 msgid "Search"
@@ -214,51 +214,51 @@ msgstr "Om Tilkoblinger"
 
 #: src/ui/topbar.ui:230
 msgid "Ctrl + Alt + Backspace"
-msgstr ""
+msgstr "Ctrl + Alt + Backspace"
 
 #: src/ui/topbar.ui:237
 msgid "Ctrl + Alt + Del"
-msgstr ""
+msgstr "Ctrl + Alt + Del"
 
 #: src/ui/topbar.ui:244
 msgid "Ctrl + Alt + F1"
-msgstr ""
+msgstr "Ctrl + Alt + F1"
 
 #: src/ui/topbar.ui:251
 msgid "Ctrl + Alt + F2"
-msgstr ""
+msgstr "Ctrl + Alt + F2"
 
 #: src/ui/topbar.ui:258
 msgid "Ctrl + Alt + F3"
-msgstr ""
+msgstr "Ctrl + Alt + F3"
 
 #: src/ui/topbar.ui:265
 msgid "Ctrl + Alt + F7"
-msgstr ""
+msgstr "Ctrl + Alt + F7"
 
 #: src/vnc-connection.vala:122
 msgid "Could not parse the file"
-msgstr ""
+msgstr "Kunne ikke tolke filen"
 
 #: src/vnc-connection.vala:129
 msgid "VNC File is missing key “Host“"
-msgstr ""
+msgstr "VNC fil mangler nøkkelen «Host»"
 
 #: src/vnc-connection.vala:134
 msgid "VNC File is missing key “Port“"
-msgstr ""
+msgstr "VNC filen mangler nøkkelen «Port»"
 
 #: src/vnc-connection.vala:140
 msgid "VNC File is missing key “Username“"
-msgstr ""
+msgstr "VNC filen mangler nøkkelen «Username»"
 
 #: src/vnc-connection.vala:145
 msgid "VNC File is missing key “Password“"
-msgstr ""
+msgstr "VNC filen mangler nøkkelen «Password»"
 
 #: src/vnc-connection.vala:249
 msgid "View only"
-msgstr ""
+msgstr "Kun visning"
 
 #: src/vnc-connection.vala:259
 msgid "Show local pointer"
