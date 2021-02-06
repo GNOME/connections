@@ -1,0 +1,269 @@
+# Punjabi translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+#
+# A S Alam <amanpreet.alam@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-01-06 16:06+0000\n"
+"PO-Revision-Date: 2021-02-06 10:06-0800\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjab-translation@googlegroups.com>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+msgid "GNOME Connections"
+msgstr "ਗਨੋਮ ਕਨੈਕਸ਼ਨਸ"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ ਹੈ।"
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "ਗਨੋਮ ਪਰੋਜੈਕਟ"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "ਕਨੈਕਸ਼ਨਸ"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "ਰਿਮੋਟ ਡੈਸਕਟਾਪ (VNC) ਫਾਇਲ"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "ਹਟਾਓ"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+"ਅ ਸ ਆਲਮ (A S Alam) ੨੦੨੧\n"
+"Punjabi OpenSource Team (POST) www.satluj.org"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "ਅਣਜਾਣ ਮਾਈਮ ਕਿਸਮ %s ਦੀ ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s” ਲਈ ਕਨੈਕਸ਼ਨ ਨੂੰ ਹਟਾਇਆ ਗਿਆ ਹੈ"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "ਵਾਪਸ ਲਵੋ"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "ਕਨੈਕਟ ਕਰਨ ਲਈ URL"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "ਦਿੱਤੇ ਮਾਰਗ ਤੋਂ .vnc ਜਾਂ .rdp ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "ਬਹੁਤ ਸਾਰੇ ਕਮਾਂਡ-ਲਾਈਨ ਆਰਗੂਮੈਂਟ ਦਿੱਤੇ ਗਏ।\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "%s ਤੋਂ ਸਕਰੀਨਸ਼ਾਟ"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "ਸਕਰੀਨਸ਼ਾਟ ਲਿਆ"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” ਲਈ ਪਰਮਾਣਕਿਤਾ ਚਾਹੀਦੀ ਹੈ"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+msgid "Scaling"
+msgstr "ਸਕੇਲਿੰਗ"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "ਸਕਰੀਨਸ਼ਾਟ ਲਵੋ"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "ਨਵਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਓ"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"ਕਨੈਕਟ ਕਰਨ ਲਈ ਮਸ਼ੀਨ ਦਾ ਐਡਰੈਸ ਦਿਓ। ਐਡਰੈਸ  rdp:// ਜਾਂ vnc:// ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "ਸਰਵਰ"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
+msgid "Name"
+msgstr "ਨਾਂ"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "ਬਣਾਓ"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ(_U)"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "ਪਾਸਵਰਡ(_P)"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "ਸਾਇਨ ਇਨ ਕਰੋ"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "ਕਨੈਕਸ਼ਨਸ ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਉਣ ਲਈ <b>+</b> ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "ਕਨੈਕਸ਼ਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+
+#: src/ui/properties.ui:32
+msgid "Address"
+msgstr "ਐਡਰੈਸ"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "ਨਵਾਂ"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਮੇਨੂ"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "ਖੋਜੋ"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "ਪਿੱਛੇ ਜਾਓ"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "ਡਿਸਪਲੇਅ ਮੇਨੂ"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "ਡਿਸ-ਕਨੈਕਟ"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "ਮਦਦ"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "ਕਨੈਕਸ਼ਨਸ ਬਾਰੇ"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
+msgstr "ਫਾਇਲ ਨੂੰ ਪਾਰਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC ਫਾਇਲ ਲਈ “%s” ਕੁੰਜੀ ਗੁੰਮ ਹੈ"
+
+#: src/vnc-connection.vala:295
+msgid "View only"
+msgstr "ਸਿਰਫ਼ ਵੇਖਣ ਲਈ"
+
+#: src/vnc-connection.vala:305
+msgid "Show local pointer"
+msgstr "ਲੋਕਲ ਪੁਆਇੰਟਰ ਵੇਖਾਓ"
+
+#: src/vnc-connection.vala:315
+msgid "High quality"
+msgstr "ਉੱਚ ਕੁਆਲਟੀ"
+
+#: src/vnc-connection.vala:316
+msgid "Fast refresh"
+msgstr "ਤੇਜ਼ ਤਾਜ਼ਾ"
+
+#: src/vnc-connection.vala:319
+msgid "Bandwidth"
+msgstr "ਬੈਂਡਵਿਡਥ"
