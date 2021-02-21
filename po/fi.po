@@ -6,24 +6,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-08-31 14:38+0000\n"
-"PO-Revision-Date: 2020-08-31 20:00+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-02-06 18:06+0000\n"
+"PO-Revision-Date: 2021-02-21 16:17+0200\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Yhteydet"
+msgid "GNOME Connections"
+msgstr "Gnomen Yhteydet"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -38,9 +35,10 @@ msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle."
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Yhteydet"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -70,7 +68,7 @@ msgstr "Yhteys koneeseen “%s” on poistettu"
 
 #: src/application.vala:172
 msgid "Undo"
-msgstr "Kumoa "
+msgstr "Kumoa"
 
 #: src/application.vala:211
 msgid "URL to connect"
@@ -110,7 +108,7 @@ msgstr "“%s” vaatii tunnistautumisen"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128
 msgid "Scaling"
 msgstr "Skaalaus"
 
@@ -126,14 +124,13 @@ msgstr "Luo uusi yhteys"
 msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
-msgstr ""
-"Kirjoita koneen osoite, johon yhdistetään. Voi alkaa rdp:// tai vnc://"
+msgstr "Kirjoita koneen osoite, johon yhdistetään. Voi alkaa rdp:// tai vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
 msgstr "Palvelin"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Nimi"
 
@@ -169,7 +166,7 @@ msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
 msgid "Connection Properties"
 msgstr "Yhteyden ominaisuudet"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Osoite"
 
@@ -237,21 +234,22 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Tiedostoa ei voitu jäsentää"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-tiedostosta puuttuu avain “%s”"
 
-#: src/vnc-connection.vala:250
-msgid "View only"
-msgstr "Vain katselu"
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
 
-#: src/vnc-connection.vala:260
-msgid "Show local pointer"
-msgstr "Näytä paikallinen osoitin"
+#~ msgid "View only"
+#~ msgstr "Vain katselu"
+
+#~ msgid "Show local pointer"
+#~ msgstr "Näytä paikallinen osoitin"
