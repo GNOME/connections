@@ -8,10 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-12-08 01:28+0000\n"
+"POT-Creation-Date: 2021-02-06 18:06+0000\n"
 "PO-Revision-Date: 2021-01-04 23:43+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,6 @@ msgstr ""
 "X-Generator: Gtranslator 3.38.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#| msgid "Connections"
 msgid "GNOME Connections"
 msgstr "Conexións de GNOME"
 
@@ -111,7 +110,7 @@ msgstr "«%s» require autenticación"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+#: src/rdp-connection.vala:128
 msgid "Scaling"
 msgstr "Escalado"
 
@@ -250,25 +249,20 @@ msgstr "Non foi posíbel analizar o ficheiro"
 msgid "VNC File is missing key “%s”"
 msgstr "No ficheiro VNC falta unha chave «%s»"
 
-#: src/vnc-connection.vala:295
-msgid "View only"
-msgstr "Só ver"
+#~ msgid "View only"
+#~ msgstr "Só ver"
 
-#: src/vnc-connection.vala:305
-msgid "Show local pointer"
-msgstr "Mostrar punteiro local"
+#~ msgid "Show local pointer"
+#~ msgstr "Mostrar punteiro local"
 
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "Alta calidade"
+#~ msgid "High quality"
+#~ msgstr "Alta calidade"
 
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "Recarga rápida"
+#~ msgid "Fast refresh"
+#~ msgstr "Recarga rápida"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Ancho de banda"
+#~ msgid "Bandwidth"
+#~ msgstr "Ancho de banda"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
