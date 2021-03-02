@@ -26,16 +26,16 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/display-view.ui")]
     private class DisplayView : Gtk.Box {
         [GtkChild]
-        private EventBox event_box;
+        private unowned EventBox event_box;
 
         [GtkChild]
-        private Stack stack;
+        private unowned Stack stack;
 
         [GtkChild]
-        private Widget display_widget;
+        private unowned Widget display_widget;
 
         [GtkChild]
-        private Label size_label;
+        private unowned Label size_label;
 
         private Widget? display;
 

@@ -24,17 +24,17 @@ namespace Connections {
     private class PropertiesDialog : Gtk.Dialog {
         private GLib.ListStore model = new GLib.ListStore (typeof (Property));
         [GtkChild]
-        private Gtk.ListBox listbox;
+        private unowned Gtk.ListBox listbox;
         [GtkChild]
-        private Gtk.ListBox default_properties_listbox;
+        private unowned Gtk.ListBox default_properties_listbox;
         [GtkChild]
-        private Gtk.Stack connection_name_stack;
+        private unowned Gtk.Stack connection_name_stack;
         [GtkChild]
-        private Gtk.Entry connection_name_entry;
+        private unowned Gtk.Entry connection_name_entry;
         [GtkChild]
-        private Gtk.Label connection_name_label;
+        private unowned Gtk.Label connection_name_label;
         [GtkChild]
-        private Gtk.Label host_address_label;
+        private unowned Gtk.Label host_address_label;
 
         protected weak Connection connection { get; set; }
 

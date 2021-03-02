@@ -25,10 +25,10 @@ namespace Connections {
         public Connection connection;
 
         [GtkChild]
-        private Gtk.Label connection_name;
+        private unowned Gtk.Label connection_name;
 
         [GtkChild]
-        public Gtk.Image thumbnail; 
+        public unowned Gtk.Image thumbnail; 
 
         public CollectionViewChild (Connection connection) {
             this.connection = connection;

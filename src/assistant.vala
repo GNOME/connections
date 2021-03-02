@@ -23,9 +23,9 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/assistant.ui")]
     private class Assistant : Gtk.Dialog {
         [GtkChild]
-        private Gtk.Entry url_entry;
+        private unowned Gtk.Entry url_entry;
         [GtkChild]
-        private Gtk.Button create_button; 
+        private unowned Gtk.Button create_button; 
 
         construct {
             use_header_bar = 1;

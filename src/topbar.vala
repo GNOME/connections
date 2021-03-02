@@ -23,11 +23,11 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/topbar.ui")]
     private class Topbar : Gtk.Stack {
         [GtkChild]
-        private Gtk.HeaderBar collection_toolbar;
+        private unowned Gtk.HeaderBar collection_toolbar;
         [GtkChild]
-        public Gtk.Button search_button;
+        public unowned Gtk.Button search_button;
         [GtkChild]
-        private Gtk.HeaderBar display_toolbar;
+        private unowned Gtk.HeaderBar display_toolbar;
 
         private weak Connections.Connection connection;
         private const GLib.ActionEntry[] action_entries = {

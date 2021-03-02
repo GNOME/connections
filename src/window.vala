@@ -23,22 +23,22 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/window.ui")]
     private class Window : Gtk.ApplicationWindow {
         [GtkChild]
-        private Topbar topbar;
+        private unowned Topbar topbar;
 
         [GtkChild]
-        private Gtk.Stack stack;
+        private unowned Gtk.Stack stack;
 
         [GtkChild]
-        private EmptyView empty_view;
+        private unowned EmptyView empty_view;
 
         [GtkChild]
-        public CollectionView collection_view;
+        public unowned CollectionView collection_view;
 
         [GtkChild]
-        private DisplayView display_view;
+        private unowned DisplayView display_view;
 
         [GtkChild]
-        public NotificationsBar notifications_bar;
+        public unowned NotificationsBar notifications_bar;
 
         public Window (Gtk.Application app) {
             Object (application: app);

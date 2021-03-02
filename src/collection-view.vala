@@ -23,11 +23,11 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/collection-view.ui")]
     public class CollectionView : Gtk.ScrolledWindow {
         [GtkChild]
-        private Gtk.FlowBox flowbox; 
+        private unowned Gtk.FlowBox flowbox; 
         [GtkChild]
-        public Gtk.SearchBar search_bar;
+        public unowned Gtk.SearchBar search_bar;
         [GtkChild]
-        private Gtk.SearchEntry search_entry;
+        private unowned Gtk.SearchEntry search_entry;
 
         private Connections.ActionsPopover popover;
 

@@ -87,9 +87,9 @@ namespace Connections {
         private DismissFunc? dismiss_func;
 
         [GtkChild]
-        private Gtk.Label message_label; 
+        private unowned Gtk.Label message_label; 
         [GtkChild]
-        private Gtk.Button ok_button; 
+        private unowned Gtk.Button ok_button; 
 
         private uint notification_timeout_id = 0;
 
@@ -151,15 +151,15 @@ namespace Connections {
         public signal void dismissed ();
 
         [GtkChild]
-        private Gtk.Label title_label;
+        private unowned Gtk.Label title_label;
         [GtkChild]
-        private Gtk.Label username_label;
+        private unowned Gtk.Label username_label;
         [GtkChild]
-        private Gtk.Entry username_entry;
+        private unowned Gtk.Entry username_entry;
         [GtkChild]
-        private Gtk.Entry password_entry;
+        private unowned Gtk.Entry password_entry;
         [GtkChild]
-        private Gtk.Button auth_button;
+        private unowned Gtk.Button auth_button;
 
         private AuthFunc? auth_func;
 
