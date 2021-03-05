@@ -6,40 +6,43 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-09-08 20:10+0000\n"
-"PO-Revision-Date: 2020-09-09 01:50+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-02-06 18:06+0000\n"
+"PO-Revision-Date: 2021-03-05 23:37+0200\n"
+"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek <gnome-el-list@gnome.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Συνδέσεις"
+msgid "GNOME Connections"
+msgstr "Συνδέσεις GNOME"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr ""
-"Ένας πελάτης απομακρυσμένης επιφάνειας εργασίας για το περιβάλλον "
-"επιφάνειας εργασίας GNOME"
+"Ένας πελάτης απομακρυσμένης επιφάνειας εργασίας για το περιβάλλον επιφάνειας "
+"εργασίας GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid "A remote desktop client for the GNOME desktop environment."
 msgstr ""
-"Ένας πελάτης απομακρυσμένης επιφάνειας εργασίας για το περιβάλλον "
-"επιφάνειας εργασίας GNOME."
+"Ένας πελάτης απομακρυσμένης επιφάνειας εργασίας για το περιβάλλον επιφάνειας "
+"εργασίας GNOME."
 
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Συνδέσεις"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -62,15 +65,9 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr ""
-"Ένας διαχειριστής απομακρυσμένης σύνδεσης για το περιβάλλον εργασίας "
-"GNOME"
-
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Αδυναμία ανοίγματος αρχείου άγνωστου τύπου mime %s"
 
 #: src/application.vala:170
@@ -83,20 +80,16 @@ msgid "Undo"
 msgstr "Aναίρεση"
 
 #: src/application.vala:211
-msgid "URL to connection"
+msgid "URL to connect"
 msgstr "URL για σύνδεση"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
-msgstr "Ανοίξτε το αρχείο .vnc ή .rdp στο PATH"
-
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— Μια απλή εφαρμογή για πρόσβαση σε απομακρυσμένες συνδέσεις"
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Άνοιγμα αρχείου .vnc ή .rdp στο δοσμένο PATH"
 
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
-msgstr "Πάρα πολλά ορίσματα γραμμής εντολών.\n"
+msgid "Too many command-line arguments specified.\n"
+msgstr "Καθορίστηκαν πάρα πολλά ορίσματα γραμμής εντολών.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
@@ -108,11 +101,12 @@ msgstr "Στιγμιότυπο από %s"
 msgid "Screenshot taken"
 msgstr "Λήφθηκε στιγμιότυπο"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "Το «%s» απαιτεί πιστοποίηση"
@@ -123,7 +117,7 @@ msgstr "Το «%s» απαιτεί πιστοποίηση"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128
 msgid "Scaling"
 msgstr "Κλιμάκωση"
 
@@ -140,14 +134,14 @@ msgid ""
 "Enter a machine address to connect to. Address can begin with rdp:// or "
 "vnc://"
 msgstr ""
-"Εισαγάγετε μια διεύθυνση για σύνδεση. Οι διευθύνσεις μπορούν να "
-"ξεκινήσουν με rdp:// ή vnc://"
+"Εισαγάγετε μια διεύθυνση για σύνδεση. Οι διευθύνσεις μπορούν να ξεκινήσουν "
+"με rdp:// ή vnc://"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
 msgstr "Διακομιστής"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Όνομα"
 
@@ -183,7 +177,7 @@ msgstr "Πατήστε το κουμπί <b>+</b> για να κάνετε τη�
 msgid "Connection Properties"
 msgstr "Ιδιότητες σύνδεσης"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Διεύθυνση"
 
@@ -251,30 +245,35 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
 msgstr "Αδυναμία ανάλυσης του αρχείου"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "Λείπει ο «Κόμβος» από το αρχείο VNC"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Λείπει το κλειδί “%s” στο αρχείο VNC"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "Λείπει η «Θύρα» από το αρχείο VNC"
+#~ msgid "A remote connection manager for the GNOME desktop"
+#~ msgstr ""
+#~ "Ένας διαχειριστής απομακρυσμένης σύνδεσης για το περιβάλλον εργασίας GNOME"
 
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "Λείπει το «Όνομα χρήστη» από το αρχείο VNC"
+#~ msgid "— A simple application to access remote connections"
+#~ msgstr "— Μια απλή εφαρμογή για πρόσβαση σε απομακρυσμένες συνδέσεις"
 
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "Λείπει το «Συνθηματικό» από το αρχείο VNC"
+#~ msgid "VNC File is missing key “Port“"
+#~ msgstr "Λείπει η «Θύρα» από το αρχείο VNC"
 
-#: src/vnc-connection.vala:249
-msgid "View only"
-msgstr "Μόνο προβολή"
+#~ msgid "VNC File is missing key “Username“"
+#~ msgstr "Λείπει το «Όνομα χρήστη» από το αρχείο VNC"
 
-#: src/vnc-connection.vala:259
-msgid "Show local pointer"
-msgstr "Εμφάνιση τοπικού δείκτη"
+#~ msgid "VNC File is missing key “Password“"
+#~ msgstr "Λείπει το «Συνθηματικό» από το αρχείο VNC"
+
+#~ msgid "View only"
+#~ msgstr "Μόνο προβολή"
+
+#~ msgid "Show local pointer"
+#~ msgstr "Εμφάνιση τοπικού δείκτη"
