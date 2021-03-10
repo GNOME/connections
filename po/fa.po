@@ -1,28 +1,25 @@
 # Persian translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Danial Behzadi <dani.behzi@ubuntu.com>, 2020.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-08-31 10:58+0000\n"
-"PO-Revision-Date: 2020-08-31 11:55+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-02-06 18:06+0000\n"
+"PO-Revision-Date: 2021-03-10 14:41+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "دوردست‌ها"
+msgid "GNOME Connections"
+msgstr "دوردست‌های گنوم"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -37,9 +34,10 @@ msgstr "یک کارخواه میزکار دوردست برای محیط میزک
 msgid "The GNOME Project"
 msgstr "پروژهٔ گنوم"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "دوردست‌ها"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -109,7 +107,7 @@ msgstr "«%s» نیاز به تأیید هویت دارد"
 msgid "%d×%d"
 msgstr "%Id×%Id"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128
 msgid "Scaling"
 msgstr "مقیاس"
 
@@ -123,17 +121,16 @@ msgstr "ایحاد ارتباطی جدید"
 
 #: src/ui/assistant.ui:34
 msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
+"Enter a machine address to connect to. Address can begin with rdp:// or vnc://"
 msgstr ""
-"برای ارتباط یا ماشین، نشانیش را وارد کنید. نشنانی‌ها می‌توانند با ‪rdp://‬ "
-"یا ‪vnc://‬ شروع شوند"
+"برای ارتباط یا ماشین، نشانیش را وارد کنید. نشنانی‌ها می‌توانند با ‪rdp://‬ یا ‪"
+"vnc://‬ شروع شوند"
 
 #: src/ui/assistant.ui:58
 msgid "Server"
 msgstr "کارساز"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "نام"
 
@@ -169,7 +166,7 @@ msgstr "برای ساخت نخستین ارتباطتان، کافیست دکم�
 msgid "Connection Properties"
 msgstr "ویژگی‌های ارتباط"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "نشانی"
 
@@ -237,21 +234,22 @@ msgstr "مهار + دگرساز + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "مهار + دگرساز + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "نمی‌توان پرونده را تجزیه کرد"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "پروندهٔ VNC کلید %s را ندارد"
 
-#: src/vnc-connection.vala:250
-msgid "View only"
-msgstr "فقط مشاهده"
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
 
-#: src/vnc-connection.vala:260
-msgid "Show local pointer"
-msgstr "نمایش اشاره‌گر محلّی"
+#~ msgid "View only"
+#~ msgstr "فقط مشاهده"
+
+#~ msgid "Show local pointer"
+#~ msgstr "نمایش اشاره‌گر محلّی"
