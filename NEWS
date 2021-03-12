@@ -1,3 +1,108 @@
+40.rc - Mar 12, 2021
+====================
+
+Changes since 3.37.90
+
+  - Validate connection port range
+  - Add "Devel" build profile
+  - Produce a nightly build
+  - Add initial documentation files
+  - Sync connection configurations with database
+  - Add a badwidth/quality property for VNC connections
+  - Reinstate the GNOME brand
+  - Rename executable to "gnome-connections"
+  - Make connection address label selectable
+  - Dismiss notifications when closing the app
+  - Revamp the connection properties dialog
+  - Mark GtkChild object references as unowned
+  - Update screenshot to dark variant theme
+  - Added/updated/fixed translations:
+    - Ukrainian
+    - Brazilian Portuguese
+    - Persian
+    - Chinese (China)
+    - Indonesian
+    - Finnish
+    - Czech
+    - Catalan
+    - Friulian
+    - Spanish
+    - Basque
+    - Galician
+    - British English
+    - Croatian
+    - Slovak
+    - Turkish
+    - Slovenian
+    - Swedish
+    - Japanese
+    - Polish
+    - German
+    - Danish
+    - Korean
+    - Hungarian
+    - French
+    - Greek
+    - Italian
+    - Hebrew
+    - Chinese (Taiwan)
+    - Esperanto
+    - Romanian
+    - Lithuanian
+    - Portuguese
+    - Punjabi
+    - Kazakh
+
+All contributors to this release:
+
+A S Alam <amanpreet.alam@gmail.com>
+Aliya Rahmani <aliyarahmani786@gmail.com>
+Anders Jonsson <anders.jonsson@norsjovallen.se>
+Andika Triwidada <atriwidada@gnome.org>
+Asier Sarasua Garmendia <asiersarasua@ni.eus>
+Ask Hjorth Larsen <asklarsen@gmail.com>
+Aurimas Černius <aurisc4@gmail.com>
+Balázs Meskó <meskobalazs@mailbox.org>
+Balázs Úr <balazs@urbalazs.hu>
+Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Boyuan Yang <073plan@gmail.com>
+Bruce Cowan <bruce@bcowan.me.uk>
+Charles Monzat <charles.monzat@free.fr>
+Cheng-Chia Tseng <pswo10680@gmail.com>
+Chris Heywood <15127-creywood@users.noreply.gitlab.gnome.org>
+Christian Kirbach <Christian.Kirbach@gmail.com>
+DaeHyun Sung <sungdh86@gmail.com>
+Danial Behzadi <dani.behzi@ubuntu.com>
+Daniel Mustieles <daniel.mustieles@gmail.com>
+Dušan Kazik <prescott66@gmail.com>
+Efstathios Iosifidis <eiosifidis@gnome.org>
+Emin Tufan Çetin <etcetin@gmail.com>
+Fabio Tomat <f.t.public@gmail.com>
+Felipe Borges <felipeborges@gnome.org>
+Florentina Mușat <florentina.musat.28@gmail.com>
+Fran Dieguez <frandieguez@gnome.org>
+Goran Vidović <trebelnik2@gmail.com>
+Guillaume Bernard <associations@guillaume-bernard.fr>
+Hugo Carvalho <hugokarvalho@hotmail.com>
+Jiri Grönroos <jiri.gronroos@iki.fi>
+Jordi Mas <jmas@softcatala.org>
+Kukuh Syafaat <kukuhsyafaat@gnome.org>
+Марко Костић <marko.m.kostic@gmail.com>
+Marek Černocký <marek@manet.cz>
+Mario Blättermann <mario.blaettermann@gmail.com>
+Matej Urbančič <mateju@svn.gnome.org>
+Mike L <cl.jeremy@qq.com>
+Milo Casagrande <milo@milo.name>
+Philipp Kiemle <philipp.kiemle@gmail.com>
+Piotr Drąg <piotrdrag@gmail.com>
+Rafael Fontenelle <rffontenelle@gmail.com>
+Rohan M <rohan@crazydeveloper.fail>
+Ryuta Fujii <translation@sicklylife.jp>
+Sabri Ünal <libreajans@gmail.com>
+Yosef Or Boczko <yoseforb@gnome.org>
+Yuri Chornoivan <yurchor@ukr.net>
+Zander Brown <zbrown@gnome.org>
+
 3.37.90 - Aug 10, 2020
 ======================
 
