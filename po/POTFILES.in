@@ -13,3 +13,4 @@ src/ui/empty-view.ui
 src/ui/properties.ui
 src/ui/topbar.ui
 src/vnc-connection.vala
+src/vnc-properties-dialog.vala
