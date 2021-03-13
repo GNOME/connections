@@ -1,15 +1,15 @@
 # Polish translation for connections.
-# Copyright © 2020 the connections authors.
+# Copyright © 2020-2021 the connections authors.
 # This file is distributed under the same license as the connections package.
-# Piotr Drąg <piotrdrag@gmail.com>, 2020.
-# Aviary.pl <community-poland@mozilla.org>, 2020.
+# Piotr Drąg <piotrdrag@gmail.com>, 2020-2021.
+# Aviary.pl <community-poland@mozilla.org>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-05 11:42+0000\n"
-"PO-Revision-Date: 2020-09-05 13:40+0200\n"
+"POT-Creation-Date: 2021-03-13 19:18+0000\n"
+"PO-Revision-Date: 2021-03-13 20:21+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -20,12 +20,11 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Połączenia"
+msgid "GNOME Connections"
+msgstr "Połączenia GNOME"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Klient zdalnego pulpitu dla środowiska GNOME"
 
@@ -36,6 +35,11 @@ msgstr "Klient zdalnego pulpitu dla środowiska GNOME."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Połączenia"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -52,16 +56,12 @@ msgstr "Właściwości"
 #: src/application.vala:76
 msgid "translator-credits"
 msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2020\n"
-"Aviary.pl <community-poland@mozilla.org>, 2020"
-
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Menedżer zdalnych połączeń dla środowiska GNOME"
+"Piotr Drąg <piotrdrag@gmail.com>, 2020-2021\n"
+"Aviary.pl <community-poland@mozilla.org>, 2020-2021"
 
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nie można otworzyć pliku o nieznanym typie MIME %s"
 
 #: src/application.vala:170
@@ -74,19 +74,15 @@ msgid "Undo"
 msgstr "Cofnij"
 
 #: src/application.vala:211
-msgid "URL to connection"
+msgid "URL to connect"
 msgstr "Adres URL do połączenia"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
+msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Otwiera plik .vnc lub .rdp w podanej ŚCIEŻCE"
 
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— prosty program do zdalnych połączeń"
-
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
+msgid "Too many command-line arguments specified.\n"
 msgstr "Podano za dużo parametrów wiersza poleceń.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
@@ -99,11 +95,12 @@ msgstr "Zrzut ekranu z %s"
 msgid "Screenshot taken"
 msgstr "Wykonano zrzut ekranu"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Otwórz"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "„%s” wymaga uwierzytelnienia"
@@ -114,7 +111,7 @@ msgstr "„%s” wymaga uwierzytelnienia"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Skalowanie"
 
@@ -138,7 +135,7 @@ msgstr ""
 msgid "Server"
 msgstr "Serwer"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Nazwa"
 
@@ -175,7 +172,7 @@ msgstr ""
 msgid "Connection Properties"
 msgstr "Właściwości połączenia"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adres"
 
@@ -243,30 +240,33 @@ msgstr "Ctrl+Alt+F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl+Alt+F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
 msgstr "Nie można przetworzyć pliku"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "W pliku VNC nie ma klucza „Host”"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "W pliku VNC nie ma klucza „%s”"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "W pliku VNC nie ma klucza „Port”"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "W pliku VNC nie ma klucza „Username”"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "W pliku VNC nie ma klucza „Password”"
-
-#: src/vnc-connection.vala:249
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Tylko wyświetlanie"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Lokalny kursor"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Przepustowość"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Wysoka jakość"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Szybkie odświeżanie"
