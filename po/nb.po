@@ -1,0 +1,245 @@
+# Norwegian Bokmål translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Kjartan Maraas <kmaraas@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-03-05 04:17+0000\n"
+"PO-Revision-Date: 2021-03-13 19:12+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Norwegian Bokmål <nb@li.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+msgid "GNOME Connections"
+msgstr "GNOME tilkoblinger"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "En klient for eksternt skrivebord skrevet for GNOME skrivebordsmiljøet"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "En klient for eksternt skrivebord for GNOME skrivebordsmiljøet."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "GNOME prosjektet"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Tilkoblinger"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fil for eksternt skrivebord (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Slett"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Egenskaper"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "Kjartan Maraas <kmaraas@gnome.org>"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr ""
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr ""
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Angre"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "URL for tilkobling"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr ""
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr ""
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Skjermdump fra %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Skjermdump tatt"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "Åpne"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr ""
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%dx%d"
+
+#: src/rdp-connection.vala:128
+msgid "Scaling"
+msgstr "Skalering"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Ta skjermdump"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Lag en ny tilkobling"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Tjener"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
+msgid "Name"
+msgstr "Navn"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Lag"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Br_ukernavn"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Passord"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr ""
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Velkommen til tilkoblinger"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr ""
+
+#: src/ui/properties.ui:32
+msgid "Address"
+msgstr "Adresse"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Ny"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Programmeny"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Søk"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Gå tilbake"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr ""
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Koble fra"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Tastatursnarveier"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Tastatursnarveier"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Hjelp"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Om Tilkoblinger"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr ""
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr ""
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr ""
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr ""
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr ""
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr ""
+
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
+msgstr "Kunne ikke lese filen"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC-fil mangler nøkkel «%s»"
