@@ -1,0 +1,153 @@
+# Czech translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Marek Černocký <marek@manet.cz>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"POT-Creation-Date: 2021-03-13 19:32+0000\n"
+"PO-Revision-Date: 2021-03-14 11:43+0100\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Marek Černocký <marek@manet.cz>"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:14
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:16
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "Jak se připojit ke vzdálenému počítači přes síť."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "Připojení k jinému počítači"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr ""
+"<app>Připojení</app> můžete používat k zobrazení a k přístupu ke vzdáleným "
+"strojům."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "Vzdálený stroj by měl být předem nastavený a funkční."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"Kliknutím na <gui style=\"button\">+</gui> v levém horním rohu spustíte "
+"průvodce vytvořením zvdáleného připojení."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"Zadejte adresu URL obsahující protokol, adresu IP a číslo portu vzdáleného "
+"zařízení nebo služby. Například:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "Protokol bude následující:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "rdp:// pro připojení ke vzdálenému serveru <app>RDP</app>."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr ""
+"vnc:// pro připojení ke vzdálenému serveru <app>vino</app> nebo <app>VNC"
+"</app>."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"Adresu a port byste měli dozvědět z nastavení zařízení nebo služby na "
+"vzdáleném stroji."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "Klikněte na tlačítko <gui style=\"button\">Vytvořit</gui>."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "Vzdálený stroj se otevře v zobrazení sbírky připojení."
+
+#. (itstool) path: media/span
+#: C/index.page:9
+msgid "Connections"
+msgstr "Připojení"
+
+#. (itstool) path: info/desc
+#: C/index.page:21
+msgid "Learn to connect to remote machines."
+msgstr "Zjistěte si víc o připojení ke vzdáleným strojům."
+
+#. (itstool) path: page/title
+#: C/index.page:24
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> Připojení"
+
+#. (itstool) path: page/p
+#: C/index.page:29
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"Aplikace <app>Připojení</app> je klient vzdálené plochy pro uživatelské "
+"prostředí GNOME."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Getting started"
+msgstr "Začínáme"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "Creative Commons Attribution-Share Alike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Tato příručka je licencována pod <_:link-1/>."
