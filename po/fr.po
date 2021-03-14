@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-03-05 04:17+0000\n"
-"PO-Revision-Date: 2021-03-07 10:10+0100\n"
+"POT-Creation-Date: 2021-03-13 19:32+0000\n"
+"PO-Revision-Date: 2021-03-14 10:08+0100\n"
 "Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -84,8 +84,7 @@ msgstr "Ouvrir le fichier .vnc ou .rdp au chemin donné"
 
 #: src/application.vala:234
 msgid "Too many command-line arguments specified.\n"
-msgstr ""
-"Nombre de paramètres de ligne de commande spécifiés trop important.\n"
+msgstr "Nombre de paramètres de ligne de commande spécifiés trop important.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
@@ -113,7 +112,7 @@ msgstr "« %s » nécessite une authentification"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Échelle"
 
@@ -254,6 +253,26 @@ msgstr "Impossible d’analyser le fichier"
 msgid "VNC File is missing key “%s”"
 msgstr "Clé « %s » manquante pour le fichier VNC"
 
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "Afficher seulement"
+
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "Afficher le pointeur local"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Bande passante"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Haute qualité"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Actualisation rapide"
+
 #~ msgid "A remote connection manager for the GNOME desktop"
 #~ msgstr "Un gestionnaire de connexion distante pour le bureau GNOME"
 
@@ -269,12 +288,6 @@ msgstr "Clé « %s » manquante pour le fichier VNC"
 
 #~ msgid "VNC File is missing key “Password“"
 #~ msgstr "Clé « Password » manquante pour le fichier VNC"
-
-#~ msgid "View only"
-#~ msgstr "Afficher seulement"
-
-#~ msgid "Show local pointer"
-#~ msgstr "Afficher le pointeur local"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
