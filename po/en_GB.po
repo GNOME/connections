@@ -1,31 +1,30 @@
 # British English translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Bruce Cowan <bruce@bcowan.me.uk>, 2020.
-# Zander Brown <zbrown@gnome.org>, 2020.
+# Bruce Cowan <bruce@bcowan.me.uk>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-07 07:11+0000\n"
-"PO-Revision-Date: 2020-09-08 19:17+0100\n"
-"Last-Translator: Zander Brown <zbrown@gnome.org>\n"
-"Language-Team: English - United Kingdom <en_GB@li.org>\n"
+"POT-Creation-Date: 2021-03-13 19:18+0000\n"
+"PO-Revision-Date: 2021-03-14 11:23+0000\n"
+"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"Language-Team: English - United Kingdom <en@li.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Connections"
+#| msgid "Connections"
+msgid "GNOME Connections"
+msgstr "GNOME Connections"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "A remote desktop client for the GNOME desktop environment"
 
@@ -36,6 +35,11 @@ msgstr "A remote desktop client for the GNOME desktop environment."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "The GNOME Project"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Connections"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -52,18 +56,13 @@ msgstr "Properties"
 #: src/application.vala:76
 msgid "translator-credits"
 msgstr ""
-"Bruce Cowan <bruce@bcowan.me.uk>\n"
-"Zander Brown <zbrown@gnome.org>"
-
-#: src/application.vala:77
-#| msgid "A remote desktop client for the GNOME desktop environment"
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "A remote connection manager for the GNOME desktop"
+"Stephan Woidowski <swoidowski@t-online.de>\n"
+"Bruce Cowan <bruce@bcowan.me.uk>"
 
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
-msgstr "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Couldn’t open file of unknown mime type %s"
 
 #: src/application.vala:170
 #, c-format
@@ -75,39 +74,33 @@ msgid "Undo"
 msgstr "Undo"
 
 #: src/application.vala:211
-#| msgid "Welcome to Connections"
-msgid "URL to connection"
-msgstr "URL to connection"
+msgid "URL to connect"
+msgstr "URL to connect"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
-msgstr "Open .vnc or .rdp file at at giving PATH"
-
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— A simple application to access remote connections"
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Open .vnc or .rdp file at the given PATH"
 
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
-msgstr "Too many command line arguments specified.\n"
+msgid "Too many command-line arguments specified.\n"
+msgstr "Too many command-line arguments specified.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
 #, c-format
-#| msgid "Take Screenshot"
 msgid "Screenshot from %s"
 msgstr "Screenshot from %s"
 
 #: src/connection.vala:142
-#| msgid "Take Screenshot"
 msgid "Screenshot taken"
 msgstr "Screenshot taken"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Open"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” requires authentication"
@@ -118,7 +111,7 @@ msgstr "“%s” requires authentication"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Scaling"
 
@@ -142,7 +135,7 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Name"
 
@@ -178,7 +171,7 @@ msgstr "Just hit the <b>+</b> button to make your first connection."
 msgid "Connection Properties"
 msgstr "Connection Properties"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Address"
 
@@ -246,33 +239,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
-msgstr "Could not parse the file"
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
+msgstr "Couldn’t parse the file"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "VNC File is missing key “Host“"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC File is missing key »%s«"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "VNC File is missing key “Port“"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "VNC File is missing key “Username“"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "VNC File is missing key “Password“"
-
-#: src/vnc-connection.vala:249
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "View only"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Show local pointer"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Bandwidth"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "High quality"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Fast refresh"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
