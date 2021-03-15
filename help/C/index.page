@@ -4,10 +4,9 @@
       id="index">
 
   <info>
-    <title role="trail" type="link">
-      <media type="image" mime="image/png" its:translate="no" height="20" src="figures/connections_icon.png">
-      <span its:translate="yes"> Connections</span></media>
-    </title>
+    <title type="link" role="trail">Connections</title>
+    <title type="link">Connections</title>
+    <title type="text">Connections</title>
     <revision pkgversion="3.38" date="2020-10-19" status="review"/>
 
     <credit type="author copyright">
@@ -22,8 +21,8 @@
   </info>
 
   <title>
-    <media type="image" mime="image/png" its:translate="no" height="36" src="figures/connections_icon.png" />
-    Connections
+    <media type="image" its:translate="no" width="48px" height="48px"
+      src="figures/org.gnome.Connections.svg" /> Connections
   </title>
 
   <p><app>Connections</app> is a remote desktop client for the GNOME desktop environment.</p>

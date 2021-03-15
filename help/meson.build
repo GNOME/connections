@@ -6,7 +6,7 @@ help_files = [
 ]
 
 help_media = [
-  'figures/connections_icon.png'
+  'figures/org.gnome.Connections.svg'
 ]
 
 gnome.yelp(meson.project_name(),
