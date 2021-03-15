@@ -55,7 +55,7 @@ namespace Connections {
         private void show_help () {
             try {
                 Gtk.show_uri (main_window.get_screen (),
-                              "help:connections",
+                              "help:gnome-connections",
                               Gtk.get_current_event_time ());
             } catch (GLib.Error error) {
                 warning ("Failed to display help: %s", error.message);
