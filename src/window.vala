@@ -109,6 +109,10 @@ namespace Connections {
                 Application.application.activate_action ("help", null);
 
                 return true;
+            } else if (event.keyval == Gdk.Key.n &&
+                       (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
+                (new Connections.Assistant (this).run ());
+                return true;
             }
 
             return false;
