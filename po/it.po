@@ -1,14 +1,14 @@
 # Italian translation for gnome-connections.
-# Copyright (C) 2020 Free Software Foundation, Inc.
+# Copyright (C) 2020, 2021 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-connections package.
-# Milo Casagrande <milo@milo.name>, 2020.
+# Milo Casagrande <milo@milo.name>, 2020, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-05 09:20+0000\n"
-"PO-Revision-Date: 2020-09-10 13:51+0200\n"
+"POT-Creation-Date: 2021-03-13 19:32+0000\n"
+"PO-Revision-Date: 2021-03-15 09:39+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <gnome-it-list@gnome.org>\n"
 "Language: it\n"
@@ -16,15 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Connessioni"
+msgid "GNOME Connections"
+msgstr "Connessioni GNOME"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Un client per desktop remoto per l'ambiente grafico GNOME"
 
@@ -35,6 +34,11 @@ msgstr "Un client per desktop remoto per l'ambiente grafico GNOME."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "Il progetto GNOME"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Connessioni"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -50,16 +54,12 @@ msgstr "Proprietà"
 
 #: src/application.vala:76
 msgid "translator-credits"
-msgstr "Milo Casagrande <milo@milo.name>, 2020"
-
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Un gestore di connessioni remoto per l'ambiente grafico GNOME"
+msgstr "Milo Casagrande <milo@milo.name>, 2020, 2021"
 
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
-msgstr "Impossibile aprire il file con tipo MIME sconosciuto %s"
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Impossibile aprire file di tipo MIME %s"
 
 #: src/application.vala:170
 #, c-format
@@ -71,19 +71,15 @@ msgid "Undo"
 msgstr "Annulla"
 
 #: src/application.vala:211
-msgid "URL to connection"
-msgstr "URL di connessione"
+msgid "URL to connect"
+msgstr "URL a cui connettersi"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
-msgstr "Apre un file .vnc o .rdp al PERCORSO fornito"
-
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— Un'applicazione per accedere a connessioni remote"
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Apre un file .vnc o .rdp al PERCORSO specificato"
 
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
+msgid "Too many command-line arguments specified.\n"
 msgstr "Specificati troppi argomenti da riga di comando.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
@@ -96,11 +92,12 @@ msgstr "Schermata da %s"
 msgid "Screenshot taken"
 msgstr "Schermata catturata"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Apri"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» richiede autenticazione"
@@ -111,7 +108,7 @@ msgstr "«%s» richiede autenticazione"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Ingrandimento"
 
@@ -135,7 +132,7 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Nome"
 
@@ -171,7 +168,7 @@ msgstr "Premere il pulsante <b>+</b> per creare la prima connessione."
 msgid "Connection Properties"
 msgstr "Proprietà connessione"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Indirizzo"
 
@@ -239,30 +236,33 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
 msgstr "Impossibile leggere il file"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "Manca la chiave «Host» nel file VNC"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Manca la chiave «%s» nel file VNC"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "Manca la chiave «Port» nel file VNC"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "Manca la chiave «Username» nel file VNC"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "Manca la chiave «Password» nel file VNC"
-
-#: src/vnc-connection.vala:249
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Solo visualizzazione"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Mostra puntatore locale"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Banda"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Alta qualità"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Aggiornamento rapido"
