@@ -100,6 +100,15 @@ namespace Connections {
                 collection_view.search_bar.search_mode_enabled = !collection_view.search_bar.search_mode_enabled;
 
                 return true;
+            } else if (event.keyval == Gdk.Key.q &&
+                       (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
+                Application.application.quit_app ();
+
+                return true;
+            } else if (event.keyval == Gdk.Key.F1) {
+                Application.application.activate_action ("help", null);
+
+                return true;
             }
 
             return false;
