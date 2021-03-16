@@ -50,6 +50,10 @@ namespace Connections {
             action = new GLib.SimpleAction ("about", null);
             action.activate.connect (show_about_dialog);
             add_action (action);
+
+            action = new GLib.SimpleAction ("quit", null);
+            action.activate.connect (quit_app);
+            add_action (action);
         }
 
         private void show_help () {
@@ -203,6 +207,13 @@ namespace Connections {
                 if (connection.connected)
                     connection.disconnect_it ();
             }
+        }
+
+        public void quit_app () {
+            foreach (var window in windows)
+                window.hide ();
+
+            quit ();
         }
 
         static string[] opt_uris;
