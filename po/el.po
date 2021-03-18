@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-02-06 18:06+0000\n"
-"PO-Revision-Date: 2021-03-05 23:37+0200\n"
+"POT-Creation-Date: 2021-03-13 19:32+0000\n"
+"PO-Revision-Date: 2021-03-18 10:34+0200\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek <gnome-el-list@gnome.org>\n"
 "Language: el\n"
@@ -117,7 +117,7 @@ msgstr "Το «%s» απαιτεί πιστοποίηση"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Κλιμάκωση"
 
@@ -256,6 +256,26 @@ msgstr "Αδυναμία ανάλυσης του αρχείου"
 msgid "VNC File is missing key “%s”"
 msgstr "Λείπει το κλειδί “%s” στο αρχείο VNC"
 
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "Μόνο προβολή"
+
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "Εμφάνιση τοπικού δείκτη"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Εύρος ζώνης"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Υψηλή ποιότητα"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Γρήγορη ανανέωση"
+
 #~ msgid "A remote connection manager for the GNOME desktop"
 #~ msgstr ""
 #~ "Ένας διαχειριστής απομακρυσμένης σύνδεσης για το περιβάλλον εργασίας GNOME"
@@ -271,9 +291,3 @@ msgstr "Λείπει το κλειδί “%s” στο αρχείο VNC"
 
 #~ msgid "VNC File is missing key “Password“"
 #~ msgstr "Λείπει το «Συνθηματικό» από το αρχείο VNC"
-
-#~ msgid "View only"
-#~ msgstr "Μόνο προβολή"
-
-#~ msgid "Show local pointer"
-#~ msgstr "Εμφάνιση τοπικού δείκτη"
