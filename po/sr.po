@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-02-06 18:06+0000\n"
-"PO-Revision-Date: 2021-02-15 17:04+0100\n"
+"POT-Creation-Date: 2021-03-13 19:32+0000\n"
+"PO-Revision-Date: 2021-03-19 08:27+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <gnome-sr@googlegroups.com>\n"
 "Language: sr\n"
@@ -112,7 +112,7 @@ msgstr "„%s“ захтева потврду идентитета"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Размера"
 
@@ -251,6 +251,26 @@ msgstr "Не могу да обрадим датотеку"
 msgid "VNC File is missing key “%s”"
 msgstr "VNC датотеци недостаје кључ „%s“"
 
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "Само приказ"
+
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "Прикажи локални показивач миша"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Проток"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Висок квалитет"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Брзо освежавање"
+
 #~ msgid "A remote connection manager for the GNOME desktop"
 #~ msgstr "Управник удаљеним везама за Гномову радну површину"
 
@@ -265,9 +285,3 @@ msgstr "VNC датотеци недостаје кључ „%s“"
 
 #~ msgid "VNC File is missing key “Password“"
 #~ msgstr "VNC датотеци недостаје кључ \"Password\" (лозинка)"
-
-#~ msgid "View only"
-#~ msgstr "Само приказ"
-
-#~ msgid "Show local pointer"
-#~ msgstr "Прикажи локални показивач миша"
