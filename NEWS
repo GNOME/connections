@@ -1,3 +1,36 @@
+40.0 - Mar 19, 2021
+===================
+
+Changes since 40.rc
+
+  - Update app icon in the documentation
+  - Added/updated/fixed translations:
+    - Norwegian Bokmål
+    - Polish
+    - Finnish
+    - Hungarian
+    - Czech
+    - British English
+    - French
+    - Italian
+    - Greek
+    - Serbian
+
+All contributors to this release:
+
+Balázs Úr <balazs@urbalazs.hu>
+Efstathios Iosifidis <eiosifidis@gnome.org>
+Felipe Borges <felipeborges@gnome.org>
+Guillaume Bernard <associations@guillaume-bernard.fr>
+Jiri Grönroos <jiri.gronroos@iki.fi>
+Kjartan Maraas <kmaraas@gnome.org>
+Marek Černocký <marek@manet.cz>
+Марко Костић <marko.m.kostic@gmail.com>
+Milo Casagrande <milo@milo.name>
+Piotr Drąg <piotrdrag@gmail.com>
+Sabri Ünal <libreajans@gmail.com>
+Stephan Woidowski <swoidowski@t-online.de>
+
 40.rc - Mar 12, 2021
 ====================
 

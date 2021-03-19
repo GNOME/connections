@@ -17,9 +17,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="3.37.90" date="2020-08-10">
+    <release version="40.0" date="2020-03-19">
       <description>
-        <p>Various fixes and improvements including: search, handling of command line arguments, opening .vnc (vinagre) files.</p>
+        <p>GNOME Connections 40.0 culminates six months of feature development, bugfixes, and performance improvements.</p>
       </description>
     </release>
   </releases>
