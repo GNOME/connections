@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: connections-help\n"
-"POT-Creation-Date: 2021-03-13 19:18+0000\n"
+"POT-Creation-Date: 2021-03-19 16:04+0000\n"
 "PO-Revision-Date: 2021-03-13 20:30+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -26,12 +26,12 @@ msgstr ""
 "Aviary.pl <community-poland@mozilla.org>, 2021"
 
 #. (itstool) path: credit/name
-#: C/connect.page:9 C/index.page:14
+#: C/connect.page:9 C/index.page:13
 msgid "Felipe Borges"
 msgstr "Felipe Borges"
 
 #. (itstool) path: credit/years
-#: C/connect.page:11 C/index.page:16
+#: C/connect.page:11 C/index.page:15
 msgid "2020"
 msgstr "2020"
 
@@ -116,23 +116,36 @@ msgstr "Kliknij przycisk <gui style=\"button\">Utwórz</gui>."
 msgid "The remote machine will open in the collection view."
 msgstr "Zdalny komputer zostanie otwarty w widoku kolekcji."
 
-#. (itstool) path: media/span
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Połączenia"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Połączenia"
+
+#. (itstool) path: info/title
 #: C/index.page:9
+msgctxt "text"
 msgid "Connections"
 msgstr "Połączenia"
 
 #. (itstool) path: info/desc
-#: C/index.page:21
+#: C/index.page:20
 msgid "Learn to connect to remote machines."
 msgstr "Jak łączyć się ze zdalnymi komputerami."
 
 #. (itstool) path: page/title
-#: C/index.page:24
+#: C/index.page:23
 msgid "<_:media-1/> Connections"
 msgstr "<_:media-1/> Połączenia"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:28
 msgid ""
 "<app>Connections</app> is a remote desktop client for the GNOME desktop "
 "environment."
@@ -140,7 +153,7 @@ msgstr ""
 "<app>Menedżer połączeń</app> to klient zdalnego pulpitu dla środowiska GNOME."
 
 #. (itstool) path: section/title
-#: C/index.page:32
+#: C/index.page:31
 msgid "Getting started"
 msgstr "Pierwsze kroki"
 
