@@ -132,7 +132,7 @@ namespace Connections {
                 Notification.OKFunc open = () => {
                     debug ("Opening screenshot file");
                     try {
-                        Gtk.show_uri (Application.application.main_window.get_screen (),
+                        Gtk.show_uri_on_window (Application.application.main_window,
                                       File.new_for_path (path).get_uri () + ".png",
                                       Gdk.CURRENT_TIME);
                     } catch (GLib.Error error) {
