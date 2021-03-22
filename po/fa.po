@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-02-06 18:06+0000\n"
-"PO-Revision-Date: 2021-03-10 14:41+0000\n"
+"POT-Creation-Date: 2021-03-20 14:02+0000\n"
+"PO-Revision-Date: 2021-03-22 19:44+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "Language: fa\n"
@@ -107,7 +107,7 @@ msgstr "«%s» نیاز به تأیید هویت دارد"
 msgid "%d×%d"
 msgstr "%Id×%Id"
 
-#: src/rdp-connection.vala:128
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "مقیاس"
 
@@ -245,11 +245,25 @@ msgstr "نمی‌توان پرونده را تجزیه کرد"
 msgid "VNC File is missing key “%s”"
 msgstr "پروندهٔ VNC کلید %s را ندارد"
 
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "فقط مشاهده"
+
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "نمایش اشاره‌گر محلّی"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "پهنای باند"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "کیفیت بالا"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "نوسازی سریع"
+
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
-
-#~ msgid "View only"
-#~ msgstr "فقط مشاهده"
-
-#~ msgid "Show local pointer"
-#~ msgstr "نمایش اشاره‌گر محلّی"
