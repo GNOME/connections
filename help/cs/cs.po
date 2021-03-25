@@ -5,15 +5,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-connections master\n"
-"POT-Creation-Date: 2021-03-13 19:32+0000\n"
-"PO-Revision-Date: 2021-03-14 11:43+0100\n"
+"Project-Id-Version: gnome-connections gnome-40\n"
+"POT-Creation-Date: 2021-03-20 14:02+0000\n"
+"PO-Revision-Date: 2021-03-25 18:53+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -22,12 +22,12 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>"
 
 #. (itstool) path: credit/name
-#: C/connect.page:9 C/index.page:14
+#: C/connect.page:9 C/index.page:13
 msgid "Felipe Borges"
 msgstr "Felipe Borges"
 
 #. (itstool) path: credit/years
-#: C/connect.page:11 C/index.page:16
+#: C/connect.page:11 C/index.page:15
 msgid "2020"
 msgstr "2020"
 
@@ -91,8 +91,8 @@ msgstr "rdp:// pro připojení ke vzdálenému serveru <app>RDP</app>."
 #: C/connect.page:38
 msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
 msgstr ""
-"vnc:// pro připojení ke vzdálenému serveru <app>vino</app> nebo <app>VNC"
-"</app>."
+"vnc:// pro připojení ke vzdálenému serveru <app>vino</app> nebo <app>VNC</"
+"app>."
 
 #. (itstool) path: note/p
 #: C/connect.page:42
@@ -113,23 +113,36 @@ msgstr "Klikněte na tlačítko <gui style=\"button\">Vytvořit</gui>."
 msgid "The remote machine will open in the collection view."
 msgstr "Vzdálený stroj se otevře v zobrazení sbírky připojení."
 
-#. (itstool) path: media/span
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Připojení"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Připojení"
+
+#. (itstool) path: info/title
 #: C/index.page:9
+msgctxt "text"
 msgid "Connections"
 msgstr "Připojení"
 
 #. (itstool) path: info/desc
-#: C/index.page:21
+#: C/index.page:20
 msgid "Learn to connect to remote machines."
 msgstr "Zjistěte si víc o připojení ke vzdáleným strojům."
 
 #. (itstool) path: page/title
-#: C/index.page:24
+#: C/index.page:23
 msgid "<_:media-1/> Connections"
 msgstr "<_:media-1/> Připojení"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:28
 msgid ""
 "<app>Connections</app> is a remote desktop client for the GNOME desktop "
 "environment."
@@ -138,7 +151,7 @@ msgstr ""
 "prostředí GNOME."
 
 #. (itstool) path: section/title
-#: C/index.page:32
+#: C/index.page:31
 msgid "Getting started"
 msgstr "Začínáme"
 
@@ -151,3 +164,4 @@ msgstr "Creative Commons Attribution-Share Alike 3.0 Unported License"
 #: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
 msgstr "Tato příručka je licencována pod <_:link-1/>."
+
