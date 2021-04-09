@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Nepali Translation\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2021-04-06 08:02+0000\n"
+"PO-Revision-Date: 2021-04-09 07:28+0545\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ne\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+msgid "GNOME Connections"
+msgstr "जि-नोम जडानहरू"
+
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "जिनोम डेस्कटप वातावरणका लागि दूर डेस्कटप ग्राहक"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "जिनोम डेस्कटप वातावरणका लागि दूर डेस्कटप ग्राहक."
+
+#: data/org.gnome.Connections.appdata.xml.in:28
+msgid "The GNOME Project"
+msgstr "जिनोम परियोजना"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "जडानहरू"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "टाढा डेस्कटप (भिएनसि) फाइल"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "मेट्नुहोस्"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "गुणहरू"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr "translator-credits Pawan Chitrakar <chautari@gmail.com>"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "अज्ञात माइम प्रकार %s को फाईल खोल्न सकेन"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s” सँगको जडान मेटिएको छ"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "पुर्वस्थितिमा फर्काउनुहोस्"
+
+#: src/application.vala:211
+msgid "URL to connect"
+msgstr "युआरएल जडान गर्नुहोस्"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr ".Vnc वा .rdp फाईल दिइएको PATH मा खोल्नुहोस्"
+
+#: src/application.vala:234
+msgid "Too many command-line arguments specified.\n"
+msgstr "धेरै आदेश तर्कहरू निर्दिष्ट गरियो।.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "%s बाट स्क्रिनसट"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "स्क्रिनको तस्बिर लिइयो"
+
+#. Translators: Open is a verb
+#: src/connection.vala:145
+msgid "Open"
+msgstr "खुला"
+
+#: src/connection.vala:188
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” प्रमाणीकरण आवश्यक छ"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
+msgid "Scaling"
+msgstr "मापन गर्दैछ"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "स्क्रिनसट लिनुहोस्"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "नयाँ जडान सिर्जना गर्नुहोस्"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"जडान गर्न मेशीन ठेगाना प्रविष्ट गर्नुहोस्। ठेगाना rdp: // वा vnc: // बाट सुरू हुन "
+"सक्छ।."
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "सर्भर"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
+msgid "Name"
+msgstr "नाम"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "रद्द गर्ने"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "सिर्जना गर्नुहोस्"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "प्रयोगकर्ता नाम"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "पासवर्ड"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "लगइन गर्दै"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "जडानमा स्वागत छ"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "पहिलो जडान बनाउन <b> + </b> बटन थिच्नुहोस् ।."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "जडान गुणहरू"
+
+#: src/ui/properties.ui:32
+msgid "Address"
+msgstr "ठेगाना"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "नयाँ"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "अनुप्रयोग मेनु"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "खोज"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "पछाडी जानुहोस्"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "प्रदर्शन मेनु"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "विच्छेद गर्नुहोस्"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "किबोर्स सर्टकटहरू"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "कुञ्जीपाटी सर्टकटहरू"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "मद्दत"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "जडान बारेमा"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
+msgstr "फाईल पार्स गर्न सकिएन"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC फाईलमा “%s”कुञ्जी हराइरहेको छ"
+
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "हेर्ने-मात्र"
+
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "स्थानीय सूचक देखाउनुहोस्"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "ब्यान्डविथ"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "उच्च गुणस्तर"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "चाँडो ताजा पार्नुहोस्"
