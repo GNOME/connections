@@ -30,6 +30,6 @@
   <url type="homepage">https://gitlab.gnome.org/GNOME/connections</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/connections/issues</url>
   <url type="donation">http://www.gnome.org/friends/</url>
-  <translation type="gettext">connections</translation>
+  <translation type="gettext">gnome-connections</translation>
   <content_rating type="oars-1.1" />
 </component>
