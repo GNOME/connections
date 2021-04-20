@@ -288,6 +288,9 @@ namespace Connections {
         }
 
         public override void save () {
+            if (connection.uuid == null)
+                return;
+
             var vnc = connection as VncConnection;
 
             set_boolean (connection.uuid, "view_only", vnc.view_only);
