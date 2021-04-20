@@ -145,7 +145,7 @@ namespace Connections {
 
             Notification.DismissFunc really_remove = () => {
                 debug ("User did not cancel deletion. Deleting now...");
-                connection.delete ();
+                Database.get_default ().delete_connection (connection);
             };
 
             for (int i = 0; i < model.get_n_items (); i++) {

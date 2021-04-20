@@ -193,10 +193,6 @@ namespace Connections {
                                                                                         need_username);
         }
 
-        public void delete () {
-            config.delete ();
-        }
-
         public void save () {
             config.save ();
         }

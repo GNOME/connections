@@ -47,16 +47,6 @@ namespace Connections {
 
             save_keyfile ();
         }
-
-        public void delete () {
-            load_keyfile ();
-            try {
-                keyfile.remove_group (connection.uuid);
-            } catch (GLib.Error error) {
-            }
-
-            save_keyfile ();
-        }
     }
 
     private class Database : Object {
@@ -180,6 +170,17 @@ namespace Connections {
             connection.save ();
 
             return connection;
+        }
+
+        public void delete_connection (Connection connection) {
+            load_keyfile ();
+            try {
+                keyfile.remove_group (connection.uuid);
+            } catch (GLib.Error error) {
+                warning ("Failed to delete '%s': %s", connection.uuid, error.message);
+            }
+
+            save_keyfile ();
         }
     }
 }
