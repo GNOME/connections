@@ -24,7 +24,23 @@ namespace Connections {
         public const int DEFAULT_TIMEOUT = 6;
         private const int MAX_NOTIFICATIONS = 5;
 
-        private Gtk.Widget? active_notification;
+        private Gtk.Widget? _active_notification;
+        private Gtk.Widget? active_notification {
+            get {
+                return _active_notification;
+            }
+
+            set {
+                var child = get_child ();
+                if (child != null)
+                    remove (child);
+
+                if (value != null)
+                    add (value);
+
+                _active_notification = value;
+            }
+        }
 
         construct {
             valign = Gtk.Align.START;
@@ -37,16 +53,10 @@ namespace Connections {
                                         owned Notification.OKFunc? ok_func,
                                         owned Notification.DismissFunc? dismiss_func) {
             var notification = new Notification (message, ok_label, (owned) ok_func, (owned) dismiss_func);
+            notification.dismissed.connect (() => {
+                active_notification = null;
+            });
 
-            if (get_child () != null) {
-                var child = get_child ();
-                remove (child);
-
-                if (child is Notification)
-                    (child as Notification).dismiss ();
-            }
-
-            add (notification);
             active_notification = notification;
         }
 
@@ -58,10 +68,6 @@ namespace Connections {
                                                                  (owned) auth_func,
                                                                  (owned) dismiss_func,
                                                                  need_username);
-            if (get_child () != null)
-                remove (get_child ());
-
-            add (notification);
             active_notification = notification;
 
             return notification;
@@ -117,6 +123,7 @@ namespace Connections {
                         ok_func ();
 
                     set_reveal_child (false);
+                    dismissed ();
 
                     if (notification_timeout_id != 0) {
                         Source.remove (notification_timeout_id);
@@ -126,12 +133,11 @@ namespace Connections {
 
                 ok_button.show_all ();
             }
-
-            dismissed.connect (dismiss);
         }
 
         [GtkCallback]
         public void dismiss () {
+            dismissed ();
             set_reveal_child (false);
             if (dismiss_func != null)
                 dismiss_func ();
