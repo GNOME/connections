@@ -60,6 +60,14 @@ namespace Connections {
     }
 
     private class Database : Object {
+        private static Database database;
+        public static Database get_default () {
+            if (database == null)
+                database = new Database ();
+
+            return database;
+        }
+
         protected KeyFile keyfile = new KeyFile ();
         protected string? filename = Path.build_filename (Environment.get_user_config_dir (),
                                                           "connections.db");
@@ -151,6 +159,27 @@ namespace Connections {
             }
 
             return null;
+        }
+
+        public Connection add_connection (string _uri) {
+            Connection? connection = null;
+
+            var uri = Xml.URI.parse (_uri);
+            switch (uri.scheme) {
+                case "vnc":
+                    connection = new VncConnection.from_uri (_uri);
+                    break;
+                case "rdp":
+                    connection = new RdpConnection.from_uri (_uri);
+                    break;
+                default:
+                    debug ("Failed to add '%s': unknown protocol", _uri);
+                    break;
+            }
+
+            connection.save ();
+
+            return connection;
         }
     }
 }

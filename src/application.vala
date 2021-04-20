@@ -108,27 +108,12 @@ namespace Connections {
             return window;
         }
 
-        public void add_connection (string _uri) {
-            Connection? connection = null;
-
-            var uri = Xml.URI.parse (_uri);
-            switch (uri.scheme) {
-                case "vnc":
-                    connection = new VncConnection.from_uri (_uri);
-                    break;
-                case "rdp":
-                    connection = new RdpConnection.from_uri (_uri);
-                    break;
-                default:
-                    debug ("Failed to add '%s': unknown protocol", _uri);
-                    break;
-            }
-
+        public void add_connection (string uri) {
+            var connection = Database.get_default ().add_connection (uri);
             if (connection == null)
                 return;
 
             model.insert (0, connection);
-            connection.save ();
         }
 
         public void add_connection_from_file (string file_path) {
