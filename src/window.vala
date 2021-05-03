@@ -119,7 +119,7 @@ namespace Connections {
                 return true;
             }
 
-            return false;
+            return collection_view.search_bar.handle_event ((Gdk.Event) event);
         }
 
         [GtkCallback]
