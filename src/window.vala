@@ -71,6 +71,10 @@ namespace Connections {
 
         public void bind_model (ListModel model) {
             collection_view.bind_model (model);
+
+            model.items_changed.connect (() => {
+                topbar.search_button.visible = model.get_n_items () > 0;
+            });
         }
 
         public void items_changed () {
