@@ -52,6 +52,8 @@ namespace Connections {
             }
         }
 
+        public override int port { get; protected set; default = 3389; }
+
         construct {
             display = new FrdpDisplay ();
             display.bind_property ("username", this, "username", BindingFlags.BIDIRECTIONAL);
@@ -60,23 +62,15 @@ namespace Connections {
             display.rdp_connected.connect (() => { show (); });
             display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             //display.size_allocate.connect (scale);
-
-            config = new RdpConfig () {
-                connection = this
-            };
         }
 
         public RdpConnection (string uuid) {
             this.uuid = uuid;
-
-            config.load ();
         }
 
         public RdpConnection.from_uri (string uri) {
-            this.uri = uri;
-
             this.uuid = Uuid.string_random ();
-            config.save ();
+            this.uri = uri;
         }
 
         ~RdpConnection () {
@@ -128,16 +122,6 @@ namespace Connections {
                 label = _("Scaling")
             };
             add_property (scaling);
-        }
-    }
-
-    private class RdpConfig : ConnectionConfig {
-        public override void load () {
-            base.load ();
-        }
-
-        public override void save () {
-            base.save ();
         }
     }
 }

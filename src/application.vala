@@ -123,7 +123,6 @@ namespace Connections {
             switch (mime_type) {
                 case "application/x-vnc":
                     connection = new VncConnection.from_vnc_file (file_path);
-                    connection.protocol = Connection.Protocol.VNC;
                     break;
                 default:
                     warning ( _ ("Couldn’t open file of unknown mime type %s".printf (mime_type)));
@@ -134,7 +133,6 @@ namespace Connections {
                 return;
 
             model.insert (0, connection);
-            connection.save ();
         }
 
         public void remove_connection (Connection connection) {

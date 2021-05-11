@@ -79,50 +79,8 @@ namespace Connections {
             }
         }
 
-        public enum Bandwidth {
-            HIGH_QUALITY,
-            FAST_REFRESH;
-
-            public string to_string () {
-                switch (this) {
-                    case FAST_REFRESH:
-                        return "fast-refresh";
-                    case HIGH_QUALITY:
-                    default:
-                        return "high-quality";
-                }
-            }
-
-            public Bandwidth from_string (string bandwidth) {
-                switch (bandwidth) {
-                    case "fast-refresh":
-                        return FAST_REFRESH;
-                    case "high-quality":
-                    default:
-                        return HIGH_QUALITY;
-                }
-            }
-        }
-        private Bandwidth _bandwidth;
-        public Bandwidth bandwidth {
-            set {
-                switch (value) {
-                case FAST_REFRESH:
-                    display.set_depth (DisplayDepthColor.LOW);
-                    break;
-
-                case HIGH_QUALITY:
-                default:
-                    display.set_depth (DisplayDepthColor.FULL);
-                    break;
-                }
-                _bandwidth = value;
-            }
-
-            get {
-                return _bandwidth;
-            }
-        }
+        public override int port { get; protected set; default = 3900; }
+        public string bandwidth { get; set; default = "hight-quality"; }
 
         construct {
             display = new Vnc.Display ();
@@ -139,23 +97,15 @@ namespace Connections {
             display.vnc_auth_credential.connect (on_vnc_auth_credential_cb);
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);
             display.size_allocate.connect (scale);
-
-            config = new VncConfig () {
-                connection = this
-            };
         }
 
         public VncConnection (string uuid) {
             this.uuid = uuid;
-
-            config.load ();
         }
 
         public VncConnection.from_uri (string uri) {
-            this.uri = uri;
-
             this.uuid = Uuid.string_random ();
-            config.save ();
+            this.uri = uri;
         }
 
         public VncConnection.from_vnc_file(string file_path) {
@@ -178,7 +128,6 @@ namespace Connections {
                 this.port = key_file.get_integer ("Connection", "Port");
             } catch (GLib.Error e) {
                 info  ( _ ("VNC File is missing key “%s”".printf ("Port")));
-                this.port = Connection.Protocol.VNC.get_default_port();
             }
             try {
                 this.username = key_file.get_string ("Connection", "Username");
@@ -192,7 +141,6 @@ namespace Connections {
             }
 
             this.uuid = Uuid.string_random ();
-            this.config.save();
         }
 
         ~VncConnection () {
@@ -273,31 +221,6 @@ namespace Connections {
 
                 display.width_request = (alloc.height * display.width) / display.height;
             }
-        }
-    }
-
-    private class VncConfig : ConnectionConfig {
-        public override void load () {
-            base.load ();
-
-            var vnc = connection as VncConnection;
-
-            vnc.view_only = get_boolean (connection.uuid, "view_only");
-            vnc.show_local_pointer = get_boolean (connection.uuid, "show_local_pointer");
-            vnc.bandwidth = vnc.bandwidth.from_string (get_string (connection.uuid, "bandwidth"));
-        }
-
-        public override void save () {
-            if (connection.uuid == null)
-                return;
-
-            var vnc = connection as VncConnection;
-
-            set_boolean (connection.uuid, "view_only", vnc.view_only);
-            set_boolean (connection.uuid, "show_local_pointer", vnc.show_local_pointer);
-            set_string (connection.uuid, "bandwidth", vnc.bandwidth.to_string ());
-
-            base.save ();
         }
     }
 }

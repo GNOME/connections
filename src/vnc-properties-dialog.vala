@@ -40,13 +40,13 @@ namespace Connections {
             add_property (local_pointer);
 
             var vnc = connection as VncConnection;
-            var bandwidth = new ComboProperty (vnc, "bandwidth", vnc.bandwidth.to_string ()) {
+            var bandwidth = new ComboProperty (vnc, "bandwidth", vnc.bandwidth) {
                 label = _("Bandwidth")
             };
             bandwidth.add_option ("high-quality", _("High quality"));
             bandwidth.add_option ("fast-refresh", _("Fast refresh"));
             bandwidth.changed.connect ((property_value) => {
-               vnc.bandwidth = vnc.bandwidth.from_string (property_value);
+               vnc.bandwidth = property_value;
             });
             add_property (bandwidth);
         }

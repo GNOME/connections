@@ -66,7 +66,7 @@ namespace Connections {
         }
 
         private void properties_activated () {
-            if (connection.protocol == Connection.Protocol.VNC)
+            if (connection.protocol == "vnc")
                 (new VncPropertiesDialog (connection).run ());
             else
                 (new RdpPropertiesDialog (connection).run ());

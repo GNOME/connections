@@ -32,53 +32,8 @@ namespace Connections {
 
         public abstract bool scaling { get; set; }
 
-        protected ConnectionConfig config;
-
         public bool connected;
 
-        public enum Protocol {
-            UNKNOWN,
-            VNC,
-            RDP;
-
-            public string to_string () {
-                switch (this) {
-                    case VNC:
-                        return "vnc";
-                    case RDP:
-                        return "rdp";
-                    case UNKNOWN:
-                        return "unknown";
-                    default:
-                        assert_not_reached ();
-                }
-            }
-
-            public Protocol from_string (string protocol) {
-                switch (protocol) {
-                    case "vnc":
-                        return VNC;
-                    case "rdp":
-                        return RDP;
-                    case "unknown":
-                    default:
-                       return UNKNOWN;
-                }
-            }
-
-            public int get_default_port () {
-                switch (this) {
-                    case VNC:
-                        return 5900;
-                    case RDP:
-                        return 3389;
-                    case UNKNOWN:
-                    default:
-                        assert_not_reached ();
-                }
-            }
-        }
-        public Protocol protocol;
 
         public string uri {
             owned get {
@@ -88,14 +43,15 @@ namespace Connections {
             set {
                 var address = Xml.URI.parse (value);
 
-                protocol = protocol.from_string (address.scheme);
+                protocol = address.scheme;
                 host = address.server;
-                port = (address.port != 0) ? address.port : protocol.get_default_port ();
+                port = (address.port != 0) ? address.port : port;
             }
         }
 
-        public string host;
-        public int port;
+        public string host { get; protected set; }
+        public abstract int port { get; protected set; }
+        public string protocol { get; protected set; }
 
         private string _display_name;
         public string display_name {
@@ -193,16 +149,17 @@ namespace Connections {
                                                                                         need_username);
         }
 
-        public void save () {
-            config.save ();
-        }
-
         construct {
             thumbnailer = new Connections.Thumbnailer (this);
 
             show.connect (() => { thumbnailer.update_thumbnail (); });
 
             notify.connect (save);
+        }
+
+        public void save (GLib.ParamSpec? pspec = null) {
+            if (uuid != null && pspec != null)
+                Database.get_default ().save_property (this, pspec.name);
         }
 
         public abstract void connect_it ();

@@ -20,35 +20,6 @@
  */
 
 namespace Connections {
-    private class ConnectionConfig : Connections.Database {
-
-        public unowned Connection connection;
-
-        construct {
-            load_keyfile ();
-        }
-
-        public virtual void load () {
-            connection.protocol = connection.protocol.from_string (get_string (connection.uuid, "protocol"));
-            connection.host = get_string (connection.uuid, "host");
-            connection.port = int.parse (get_string (connection.uuid, "port"));
-            connection.display_name = get_string (connection.uuid, "display-name");
-
-            connection.scaling = get_boolean (connection.uuid, "scaling");
-        }
-
-        public virtual void save () {
-            set_string (connection.uuid, "protocol", connection.protocol.to_string ());
-            set_string (connection.uuid, "host", connection.host);
-            set_string (connection.uuid, "port", connection.port.to_string ());
-            set_string (connection.uuid, "display-name", connection.display_name);
-
-            set_boolean (connection.uuid, "scaling", connection.scaling);
-
-            save_keyfile ();
-        }
-    }
-
     private class Database : Object {
         private static Database database;
         public static Database get_default () {
@@ -62,7 +33,7 @@ namespace Connections {
         protected string? filename = Path.build_filename (Environment.get_user_config_dir (),
                                                           "connections.db");
 
-        public void load_keyfile () {
+        private void load_keyfile () {
             try {
                 File file = File.new_for_path (filename);
                 file.create (FileCreateFlags.PRIVATE);
@@ -82,7 +53,7 @@ namespace Connections {
             }
         }
 
-        public bool save_keyfile () {
+        private bool save_keyfile () {
             try {
                 return FileUtils.set_contents (filename, keyfile.to_data (null));
             } catch (GLib.Error error) {
@@ -92,7 +63,7 @@ namespace Connections {
             }
         }
 
-        public bool get_boolean (string group, string key) {
+        private bool get_boolean (string group, string key) {
             try {
                 return keyfile.get_boolean (group, key);
             } catch (GLib.KeyFileError error) {
@@ -102,15 +73,7 @@ namespace Connections {
             }
         }
 
-        public void set_boolean (string group, string key, bool value) {
-            keyfile.set_boolean (group, key, value);
-        }
-
-        public void set_string (string group, string key, string value) {
-            keyfile.set_string (group, key, value);
-        }
-
-        public string get_string (string group, string key) {
+        private string get_string (string group, string key) {
             try {
                 return keyfile.get_string (group, key);
             } catch (GLib.KeyFileError error) {
@@ -118,6 +81,58 @@ namespace Connections {
 
                 return ""; // DEFAULT_VALUE
             }
+        }
+
+        private void load_properties (Connection connection) {
+            try {
+                foreach (var property_name in keyfile.get_keys (connection.uuid))
+                    load_property (connection, property_name);
+            } catch (GLib.Error error) {
+                warning ("Failed to load connection properties: %s".printf (error.message));
+            }
+        }
+
+        private void load_property (Connection connection, string property_name) {
+            var property = connection.get_class ().find_property (property_name);
+            if (property == null)
+                return;
+
+            var value = GLib.Value (property.value_type);
+            try {
+                if (value.type () == typeof (string))
+                    value = get_string (connection.uuid, property_name);
+                if (value.type () == typeof (bool))
+                    value = get_boolean (connection.uuid, property_name);
+                if (value.type () == typeof (uint64))
+                    value = keyfile.get_uint64 (connection.uuid, property_name);
+                if (value.type () == typeof (int64))
+                    value = keyfile.get_int64 (connection.uuid, property_name);
+            } catch (GLib.Error error) {
+            }
+
+            connection.set_property (property_name, value);
+        }
+
+        public void save_property (Connection connection, string property_name) {
+            load_keyfile ();
+
+            var value = GLib.Value (connection.get_class ().find_property (property_name).value_type);
+
+            connection.get_property (property_name, ref value);
+
+            if (value.type () == typeof (string))
+                keyfile.set_string (connection.uuid, property_name, value.get_string ());
+            else if (value.type () == typeof (bool))
+                keyfile.set_boolean (connection.uuid, property_name, value.get_boolean ());
+            else if (value.type () == typeof (uint64))
+                keyfile.set_uint64 (connection.uuid, property_name, value.get_uint64 ());
+            else if (value.type () == typeof (int64))
+                keyfile.set_int64 (connection.uuid, property_name, value.get_int64 ());
+            else
+                warning ("Unhadled property %s type, value: %s".printf (property_name,
+                                                                        value.strdup_contents ()));
+
+            save_keyfile ();
         }
 
         public List<Connections.Connection> get_connections () {
@@ -137,18 +152,27 @@ namespace Connections {
             if (!keyfile.has_group (uuid))
                 return null;
 
+            Connection? connection = null;
             var protocol = get_string (uuid, "protocol");
             switch (protocol) {
                 case "vnc":
-                    return new VncConnection (uuid);
+                    connection = new VncConnection (uuid);
+                    break;
                 case "rdp":
-                    return new RdpConnection (uuid);
+                    connection = new RdpConnection (uuid);
+                    break;
                 default:
                     debug ("Unknown protocol defined for %s", uuid);
                     break;
             }
 
-            return null;
+
+            if (connection == null)
+                return null;
+
+            load_properties (connection);
+
+            return connection;
         }
 
         public Connection add_connection (string _uri) {

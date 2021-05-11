@@ -121,8 +121,6 @@ namespace Connections {
                 connection.display_name = connection_name_entry.text;
                 connection_name_label.set_text (connection_name_entry.text);
             }
-
-            connection.save ();
         }
     }
 
