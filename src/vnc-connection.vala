@@ -79,7 +79,7 @@ namespace Connections {
             }
         }
 
-        public override int port { get; protected set; default = 3900; }
+        public override int port { get; protected set; default = 5900; }
         public string bandwidth { get; set; default = "hight-quality"; }
 
         construct {
