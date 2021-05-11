@@ -92,8 +92,6 @@ namespace Connections {
 
         private void show_display () {
             stack.set_visible_child (display_widget);
-
-            display.grab_focus ();
         }
 
         [GtkCallback]

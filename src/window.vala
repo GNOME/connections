@@ -40,6 +40,16 @@ namespace Connections {
         [GtkChild]
         public unowned NotificationsBar notifications_bar;
 
+        public bool fullscreened {
+            get { return Gdk.WindowState.FULLSCREEN in get_window ().get_state (); }
+            set {
+                if (value)
+                    fullscreen ();
+                else
+                    unfullscreen ();
+            }
+        }
+
         public Window (Gtk.Application app) {
             Object (application: app);
 
@@ -102,6 +112,10 @@ namespace Connections {
             if (event.keyval == Gdk.Key.f &&
                 (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
                 collection_view.search_bar.search_mode_enabled = !collection_view.search_bar.search_mode_enabled;
+
+                return true;
+            } else if (event.keyval == Gdk.Key.F11) {
+                fullscreened = !fullscreened;
 
                 return true;
             } else if (event.keyval == Gdk.Key.q &&
