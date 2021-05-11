@@ -49,6 +49,16 @@ namespace Connections {
                vnc.bandwidth = property_value;
             });
             add_property (bandwidth);
+
+            var scale_mode = new ComboProperty (vnc, "scale-mode", vnc.scale_mode) {
+                label = _("Scale mode")
+            };
+            scale_mode.add_option ("fit-window", _("Fit window"));
+            scale_mode.add_option ("original", _("Original size"));
+            scale_mode.changed.connect ((property_value) => {
+                vnc.scale_mode = property_value;
+            });
+            add_property (scale_mode);
         }
     }
 }

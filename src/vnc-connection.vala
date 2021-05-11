@@ -81,6 +81,7 @@ namespace Connections {
 
         public override int port { get; protected set; default = 5900; }
         public string bandwidth { get; set; default = "hight-quality"; }
+        public string scale_mode { get; set; default = "fit-window"; }
 
         construct {
             display = new Vnc.Display ();
@@ -96,6 +97,8 @@ namespace Connections {
             display.vnc_auth_credential.connect (on_vnc_auth_credential_cb);
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);
             display.size_allocate.connect (scale);
+
+            notify["scale-mode"].connect (scale);
         }
 
         public VncConnection (string uuid) {
@@ -206,8 +209,22 @@ namespace Connections {
             if (!display.is_open ())
                 return;
 
+            display.scaling = display.expand = false;
+
+            if (scale_mode == "original")
+                scale_to_original_size ();
+            else
+                scale_to_fit_window ();
+        }
+
+        private void scale_to_fit_window () {
             display.scaling = display.hexpand = true;
             display.width_request = display.height_request = 0;
+        }
+
+        private void scale_to_original_size () {
+            display.width_request = display.width;
+            display.height_request = display.height;
         }
     }
 }
