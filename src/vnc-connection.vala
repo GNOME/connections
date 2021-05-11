@@ -87,7 +87,6 @@ namespace Connections {
             display.set_keyboard_grab (true);
             display.set_pointer_grab (true);
             display.set_force_size (false);
-            display.set_scaling (true);
 
             window = new Gtk.Window ();
             window.add (display);
@@ -207,20 +206,8 @@ namespace Connections {
             if (!display.is_open ())
                 return;
 
-            // Get the allocated size of the parent container
-            Gtk.Allocation alloc;
-            display.get_parent ().get_allocation (out alloc);
-            if (display.get_width () > alloc.width) {
-                display.width_request = alloc.width;
-
-                display.height_request = (alloc.width * display.height) / display.width;
-            }
-
-            if (display.get_height () > alloc.height) {
-                display.height_request = alloc.height;
-
-                display.width_request = (alloc.height * display.width) / display.height;
-            }
+            display.scaling = display.hexpand = true;
+            display.width_request = display.height_request = 0;
         }
     }
 }
