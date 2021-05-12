@@ -36,6 +36,8 @@ namespace Connections {
 
         [GtkChild]
         private unowned Label size_label;
+        [GtkChild]
+        private unowned Button escape_fullscreen_button;
 
         private Widget? display;
 
@@ -152,6 +154,21 @@ namespace Connections {
 
                 return false;
             });
+        }
+
+        [GtkCallback]
+        private void on_escape_fullscreen_button_clicked () {
+            Application.application.main_window.fullscreened = false;
+            escape_fullscreen_button.visible = false;
+        }
+
+        public override bool motion_notify_event (Gdk.EventMotion event) {
+            if (!Application.application.main_window.fullscreened)
+                return false;
+
+            escape_fullscreen_button.visible = (event.y < 40);
+
+            return base.motion_notify_event (event);
         }
     }
 }
