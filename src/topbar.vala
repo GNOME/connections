@@ -31,8 +31,9 @@ namespace Connections {
 
         private weak Connections.Connection connection;
         private const GLib.ActionEntry[] action_entries = {
-            {"properties", properties_activated},
             {"take_screenshot", take_screenshot_activated},
+            {"fullscreen", fullscreen_activated},
+            {"properties", properties_activated},
         };
 
         private const GLib.ActionEntry[] key_input_action_entries = {
@@ -56,6 +57,10 @@ namespace Connections {
             var action = action_group.lookup_action ("take_screenshot") as GLib.SimpleAction;
             action.set_enabled (true);
 
+            section.append (_("Fullscreen"), "display.fullscreen");
+            action = action_group.lookup_action ("fullscreen") as GLib.SimpleAction;
+            action.set_enabled (true);
+
             section.append (_("Properties"), "display.properties");
             action = action_group.lookup_action ("properties") as GLib.SimpleAction;
             action.set_enabled (true);
@@ -75,6 +80,11 @@ namespace Connections {
         private void take_screenshot_activated () {
             if (connection != null)
                 connection.take_screenshot.begin ();
+        }
+
+        private void fullscreen_activated () {
+            Application.application.main_window.fullscreened =
+                !Application.application.main_window.fullscreened;
         }
 
         [GtkCallback]
