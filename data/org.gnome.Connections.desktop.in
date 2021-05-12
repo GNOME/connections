@@ -4,7 +4,7 @@ Exec=gnome-connections
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;RemoteAccess;Network;
-Keywords=vnc;rdp;remote;
+Keywords=vnc;rdp;remote;desktop;windows;support;access;view
 StartupNotify=true
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=@icon@

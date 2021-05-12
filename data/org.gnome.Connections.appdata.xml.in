@@ -4,11 +4,17 @@
   <id>org.gnome.Connections.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-  <name>GNOME Connections</name>
-  <summary>A remote desktop client for the GNOME desktop environment</summary>
+  <name>Connections</name>
+  <summary>View and use other desktops</summary>
   <description>
     <p>
-     A remote desktop client for the GNOME desktop environment.
+    Connections allows you to connect to and use other desktops. This can be a great way to access content or software on a different desktop operating system. It can also be used as a way to provide support to users who might need help.
+    </p>
+    <p>
+    A range of different operating systems can be connected to, including Linux and Windows desktops. You can also connect to virtual machines.
+    </p>
+    <p>
+    Connections uses the widely supported VNC and RDP protocols, and one of these must be enabled on the desktop that you want to connect to.
     </p>
   </description>
   <screenshots>
