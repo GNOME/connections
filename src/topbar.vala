@@ -28,6 +28,8 @@ namespace Connections {
         public unowned Gtk.Button search_button;
         [GtkChild]
         private unowned Gtk.HeaderBar display_toolbar;
+        [GtkChild]
+        public unowned Connections.Assistant assistant;
 
         private weak Connections.Connection connection;
         private const GLib.ActionEntry[] action_entries = {
@@ -85,11 +87,6 @@ namespace Connections {
         private void fullscreen_activated () {
             Application.application.main_window.fullscreened =
                 !Application.application.main_window.fullscreened;
-        }
-
-        [GtkCallback]
-        private void add_new_connection_button_clicked () {
-            (new Connections.Assistant (Application.application.main_window)).run ();
         }
 
         [GtkCallback]

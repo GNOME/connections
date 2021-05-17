@@ -129,7 +129,8 @@ namespace Connections {
                 return true;
             } else if (event.keyval == Gdk.Key.n &&
                        (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
-                (new Connections.Assistant (this).run ());
+                topbar.assistant.popdown ();
+
                 return true;
             }
 

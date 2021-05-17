@@ -234,7 +234,8 @@ namespace Connections {
             if (opt_uris != null) {
                 var uri = opt_uris[0];
 
-                (new Connections.Assistant (main_window, uri)).run ();
+                // TODO: throw a notification if this fails.
+                add_connection (uri);
             }
 
             if (opt_file_import_uri != null) {

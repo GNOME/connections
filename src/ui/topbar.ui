@@ -12,9 +12,9 @@
           </style>
 
           <child>
-            <object class="GtkButton" id="new_button">
+            <object class="GtkMenuButton" id="new_button">
               <property name="visible">True</property>
-              <signal name="clicked" handler="add_new_connection_button_clicked"/>
+              <property name="popover">assistant</property>
 
               <child internal-child="accessible">
                 <object class="AtkObject" id="a11y-new-button">
@@ -272,5 +272,8 @@
         </object>
       </child>
     </object>
+
+    <!-- Assistant popover -->
+  <object class="ConnectionsAssistant" id="assistant"/>
 
   </interface>

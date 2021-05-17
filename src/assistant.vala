@@ -21,26 +21,11 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/assistant.ui")]
-    private class Assistant : Gtk.Dialog {
+    private class Assistant : Gtk.Popover {
         [GtkChild]
         private unowned Gtk.Entry url_entry;
         [GtkChild]
         private unowned Gtk.Button create_button; 
-
-        construct {
-            use_header_bar = 1;
-        }
-
-        public Assistant (Window window, string? uri = null) {
-            set_transient_for (window);
-
-            create_button.get_style_context ().add_class ("suggested-action");
-
-            url_entry.grab_focus ();
-
-            if (uri != null)
-                url_entry.text = uri;
-        }
 
         [GtkCallback]
         private void on_url_entry_changed () {
@@ -76,8 +61,9 @@ namespace Connections {
         [GtkCallback]
         private void on_create_connection_button_clicked () {
             Application.application.add_connection (url_entry.get_text ());
+            url_entry.set_text ("");
 
-            destroy ();
+            popdown ();
         }
 
         [GtkCallback]
