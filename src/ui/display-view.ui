@@ -58,12 +58,17 @@
               </child>
 
               <child>
-                <object class="GtkEventBox" id="event_box">
+                <object class="GtkScrolledWindow">
                   <property name="visible">True</property>
-                  <property name="above-child">True</property>
-                  <property name="hexpand">True</property>
-                  <property name="vexpand">True</property>
-                  <signal name="event" handler="on_event_box_event"/>
+                  <child>
+                    <object class="GtkEventBox" id="event_box">
+                      <property name="visible">True</property>
+                      <property name="above-child">True</property>
+                      <property name="hexpand">True</property>
+                      <property name="vexpand">True</property>
+                      <signal name="event" handler="on_event_box_event"/>
+                    </object>
+                  </child>
                 </object>
               </child>
             </object>
