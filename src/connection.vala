@@ -47,20 +47,7 @@ namespace Connections {
         public string host { get; protected set; }
         public abstract int port { get; protected set; }
         public string protocol { get; protected set; }
-
-        private string _display_name;
-        public string display_name {
-            owned get {
-                if (_display_name != null)
-                    return _display_name;
-
-                return uri;
-            }
-
-            set {
-                _display_name = value;
-            }
-        }
+        public string display_name { get; set; }
 
         public abstract void send_keys (uint[] keys);
 

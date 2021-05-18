@@ -48,8 +48,10 @@ namespace Connections {
             set_transient_for (Application.application.main_window);
 
             notify["connection"].connect (() => {
-                connection_name_label.set_text (connection.display_name);
-                connection_name_entry.set_text (connection.display_name);
+                if (connection.display_name != null && connection.display_name != "") {
+                    connection_name_label.set_text (connection.display_name);
+                    connection_name_entry.set_text (connection.display_name);
+                }
 
                 host_address_label.set_text (connection.uri);
             });
@@ -115,8 +117,7 @@ namespace Connections {
                 return;
 
             if (connection_name_entry.text == "") {
-                connection.display_name = null;
-                connection_name_label.set_text (connection.uri);
+                connection.display_name = connection_name_label.label = null;
             } else {
                 connection.display_name = connection_name_entry.text;
                 connection_name_label.set_text (connection_name_entry.text);

@@ -33,14 +33,21 @@ namespace Connections {
         public CollectionViewChild (Connection connection) {
             this.connection = connection;
 
-            connection_name.set_text (connection.display_name);
-            connection.bind_property ("display_name", connection_name, "label", BindingFlags.SYNC_CREATE);
+            update_display_name ();
+            connection.notify["display-name"].connect (update_display_name);
 
             connection.thumbnailer.update.connect (() => {
                 thumbnail.set_from_pixbuf (connection.thumbnail.scale_simple (180, 134, Gdk.InterpType.BILINEAR));
             }); 
 
             update_thumbnail.begin ();
+        }
+
+        private void update_display_name () {
+            if (connection.display_name != null && connection.display_name != "")
+                connection_name.set_text (connection.display_name);
+            else
+                connection_name.set_text (connection.uri);
         }
 
         private async void update_thumbnail () {
