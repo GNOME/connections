@@ -154,7 +154,8 @@ namespace Connections {
                 }
             }
 
-            var message = _("Connection to “%s” has been deleted").printf (connection.display_name);
+            var message = _("Connection to “%s” has been deleted").printf (connection.display_name != "" && connection.display_name != null ?
+                                                                           connection.display_name : connection.uri);
             main_window.notifications_bar.display_for_action (message,
                                                               _("Undo"),
                                                               (owned) undo,
