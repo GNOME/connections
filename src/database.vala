@@ -120,9 +120,10 @@ namespace Connections {
 
             connection.get_property (property_name, ref value);
 
-            if (value.type () == typeof (string))
-                keyfile.set_string (connection.uuid, property_name, value.get_string ());
-            else if (value.type () == typeof (bool))
+            if (value.type () == typeof (string)) {
+                var vstring = (value.get_string () == null ? "" : value.get_string ());
+                keyfile.set_string (connection.uuid, property_name, vstring);
+            } else if (value.type () == typeof (bool))
                 keyfile.set_boolean (connection.uuid, property_name, value.get_boolean ());
             else if (value.type () == typeof (uint64))
                 keyfile.set_uint64 (connection.uuid, property_name, value.get_uint64 ());
