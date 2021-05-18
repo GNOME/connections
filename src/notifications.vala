@@ -48,6 +48,12 @@ namespace Connections {
             get_style_context ().add_class ("transparent-bg");
         }
 
+        public void display_for_error (string message) {
+            var notification = new Notification (message, null, null, null);
+
+            active_notification = notification;
+        }
+
         public void display_for_action (string message,
                                         string? ok_label,
                                         owned Notification.OKFunc? ok_func,
