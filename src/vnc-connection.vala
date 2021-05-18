@@ -201,8 +201,10 @@ namespace Connections {
             connected = false;
         }
 
-        private void on_vnc_auth_failure_cb (string message) {
-            debug ("Failed to authenticate %s", message);
+        private void on_vnc_auth_failure_cb (string reason) {
+            debug ("Failed to authenticate %s", reason);
+
+            auth_failed (reason);
         }
 
         public void scale () {

@@ -146,6 +146,17 @@ namespace Connections {
                                                                                         need_username);
         }
 
+        protected void auth_failed (string reason) {
+            disconnect_it ();
+
+            username = password = null;
+
+            auth_notification = null;
+            var message = _("Authentication failed: %s").printf (reason);
+            Application.application.main_window.notifications_bar.display_for_error (message);
+            Application.application.main_window.show_collection_view ();
+        }
+
         construct {
             thumbnailer = new Connections.Thumbnailer (this);
 
