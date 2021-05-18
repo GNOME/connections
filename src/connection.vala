@@ -26,14 +26,9 @@ namespace Connections {
         public signal void show ();
 
         public abstract Gtk.Widget widget { get; protected set; }
-
-        public bool need_password { get; protected set; }
-        public bool need_username { get; protected set; }
-
         public abstract bool scaling { get; set; }
 
         public bool connected;
-
 
         public string uri {
             owned get {
@@ -119,8 +114,10 @@ namespace Connections {
         }
 
         private AuthNotification auth_notification = null;
-        public string? username { get; set; }
-        public string? password { get; set; }
+        public bool need_password;
+        public bool need_username;
+        public string? username;
+        public string? password;
         protected void handle_auth () {
             if (auth_notification != null)
                 return;
