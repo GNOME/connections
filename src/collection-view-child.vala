@@ -44,10 +44,7 @@ namespace Connections {
         }
 
         private void update_display_name () {
-            if (connection.display_name != null && connection.display_name != "")
-                connection_name.set_text (connection.display_name);
-            else
-                connection_name.set_text (connection.uri);
+            connection_name.set_text (connection.get_visible_name ());
         }
 
         private async void update_thumbnail () {

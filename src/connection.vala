@@ -125,7 +125,7 @@ namespace Connections {
                 auth_notification = null;
             };
 
-            var auth_string = _("“%s” requires authentication").printf (display_name);
+            var auth_string = _("“%s” requires authentication").printf (get_visible_name ());
             auth_notification =
                 Application.application.main_window.notifications_bar.display_for_auth (auth_string,
                                                                                         (owned) auth_func,
@@ -155,6 +155,13 @@ namespace Connections {
         public void save (GLib.ParamSpec? pspec = null) {
             if (uuid != null && pspec != null)
                 Database.get_default ().save_property (this, pspec.name);
+        }
+
+        public string get_visible_name () {
+            if (display_name != null && display_name != "")
+                return display_name;
+
+            return uri;
         }
 
         public abstract void connect_it ();
