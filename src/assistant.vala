@@ -26,6 +26,14 @@ namespace Connections {
         private unowned Gtk.Entry url_entry;
         [GtkChild]
         private unowned Gtk.Button create_button; 
+        [GtkChild]
+        private unowned Gtk.Label learn_more_label;
+
+        construct {
+            // Translators: This is a link which takes users to a documentation page in yelp
+            var learn_more_string = _("Learn more.");
+            learn_more_label.set_markup ("<a href=\'help:gnome-connections/connect\'>%s</a>".printf (learn_more_string));
+        }
 
         [GtkCallback]
         private void on_url_entry_changed () {
