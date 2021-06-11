@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-01 08:45+0000\n"
-"PO-Revision-Date: 2020-09-02 14:34+0200\n"
+"POT-Creation-Date: 2021-03-20 14:02+0000\n"
+"PO-Revision-Date: 2021-06-11 15:55+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -16,13 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Pripojenia"
+msgid "GNOME Connections"
+msgstr "Pripojenia prostredia GNOME"
 
 #: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
 #: src/application.vala:219
@@ -37,9 +35,10 @@ msgstr "Klient vzdialenej pracovnej plochy pre pracovné prostredie GNOME."
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.Connections.desktop.in:9
-msgid "org.gnome.Connections"
-msgstr "org.gnome.Connections"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Pripojenia"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -109,7 +108,7 @@ msgstr "Pripojenie „%s” vyžaduje overenie totožnosti"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:240
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Zmena mierky"
 
@@ -133,7 +132,7 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Názov"
 
@@ -169,7 +168,7 @@ msgstr "Na vytvorenie vášho prvého pripojenia stačí stlačiť tlačidlo <b>
 msgid "Connection Properties"
 msgstr "Vlastnosti pripojenia"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adresa"
 
@@ -237,21 +236,36 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
+#: src/vnc-connection.vala:167
 msgid "Couldn’t parse the file"
 msgstr "Nepodarilo sa analyzovať súbor"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:130 src/vnc-connection.vala:135
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Súboru VNC chýba kľúč „%s”"
 
-#: src/vnc-connection.vala:250
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Iba zobrazenie"
 
-#: src/vnc-connection.vala:260
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Zobraziť miestny ukazovateľ"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Šírka pásma"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Vysoká kvalita"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Rýchle obnovovanie"
+
+#~ msgid "org.gnome.Connections"
+#~ msgstr "org.gnome.Connections"
