@@ -1,14 +1,14 @@
 # Swedish translation for gnome-connections.
-# Copyright © 2020 gnome-connections's COPYRIGHT HOLDER
+# Copyright © 2020, 2021 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-11-28 16:26+0000\n"
-"PO-Revision-Date: 2020-11-28 22:36+0100\n"
+"POT-Creation-Date: 2021-06-12 09:36+0000\n"
+"PO-Revision-Date: 2021-06-14 11:56+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -19,26 +19,50 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "GNOME Anslutningar"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "GNOME-projektet"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Anslutningar"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Visa och använd andra skrivbord"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Anslutningar låter dig ansluta till och använda andra skrivbord. Detta kan "
+"vara ett utmärkt sätt att komma åt innehåll eller programvara på ett annat "
+"skrivbordsoperativsystem. Det kan också användas som ett sätt att erbjuda "
+"stöd åt användare som kan behöva hjälp."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"En stor mängd olika operativsystem kan anslutas till, inkluderande Linux- "
+"och Windows-skrivbord. Du kan också ansluta till virtuella maskiner."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Anslutningar använder VNC- och RDP-protokollen som många har stöd för, och "
+"ett av dessa måste vara aktiverade på skrivbordet som du vill ansluta till."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;fjärr;skrivbord;windows;support;åtkomst;visning"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -48,11 +72,11 @@ msgstr "Fjärrskrivbordsfil (VNC)"
 msgid "Delete"
 msgstr "Ta bort"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Egenskaper"
 
-#: src/application.vala:76
+#: src/application.vala:80
 msgid "translator-credits"
 msgstr ""
 "Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
@@ -60,51 +84,60 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>"
 
-#: src/application.vala:140
+#: src/application.vala:81 src/application.vala:214
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME"
+
+#: src/application.vala:128
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Kunde inte öppna fil med okänd mime-typ %s"
 
-#: src/application.vala:170
+#: src/application.vala:157
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Anslutning till ”%s” har tagits bort"
 
-#: src/application.vala:172
+#: src/application.vala:160
 msgid "Undo"
 msgstr "Ångra"
 
-#: src/application.vala:211
+#: src/application.vala:206
 msgid "URL to connect"
 msgstr "URL att ansluta till"
 
-#: src/application.vala:212
+#: src/application.vala:207
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Öppna .vnc- eller .rdp-fil på angiven SÖKVÄG"
 
-#: src/application.vala:234
+#: src/application.vala:229
 msgid "Too many command-line arguments specified.\n"
 msgstr "För många kommandoradsargument angivna.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Skärmbild från %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Öppna"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "”%s” kräver autentisering"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Autentisering misslyckades: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -112,41 +145,29 @@ msgstr "”%s” kräver autentisering"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Skalning"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Ta en skärmbild"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Skapa en ny anslutning"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Helskärm"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
-"Ange en maskinadress att ansluta till. Adressen kan börja med rdp:// eller "
-"vnc://"
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Anslut till ett skrivbord"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Server"
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Anslut"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
-msgid "Name"
-msgstr "Namn"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Skapa"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Adresser börjar med antingen vnc:// eller rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -172,9 +193,13 @@ msgstr "Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
 msgid "Connection Properties"
 msgstr "Anslutningsegenskaper"
 
-#: src/ui/properties.ui:109
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adress"
+
+#: src/ui/properties.ui:67
+msgid "Name"
+msgstr "Namn"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -216,60 +241,69 @@ msgstr "Hjälp"
 msgid "About Connections"
 msgstr "Om Anslutningar"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backsteg"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Kunde inte tolka filen"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
+#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-fil saknar nyckeln ”%s”"
 
-#: src/vnc-connection.vala:295
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Endast visning"
 
-#: src/vnc-connection.vala:305
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Visa lokal pekare"
 
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "Hög kvalitet"
-
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "Snabb uppdatering"
-
-#: src/vnc-connection.vala:319
+#: src/vnc-properties-dialog.vala:44
 msgid "Bandwidth"
 msgstr "Bandbredd"
 
-#~ msgid "org.gnome.Connections"
-#~ msgstr "org.gnome.Connections"
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Hög kvalitet"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Snabb uppdatering"
+
+#: src/vnc-properties-dialog.vala:54
+msgid "Scale mode"
+msgstr "Skalningsläge"
+
+#: src/vnc-properties-dialog.vala:56
+msgid "Fit window"
+msgstr "Anpassa till fönster"
+
+#: src/vnc-properties-dialog.vala:57
+msgid "Original size"
+msgstr "Ursprunglig storlek"
