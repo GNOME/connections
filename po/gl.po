@@ -8,39 +8,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-02-06 18:06+0000\n"
-"PO-Revision-Date: 2021-01-04 23:43+0100\n"
+"POT-Creation-Date: 2021-06-12 09:36+0000\n"
+"PO-Revision-Date: 2021-06-22 23:39+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
+"Language-Team: Galician <Proxecto Trasno <proxecto@trasno.gal>>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Conexións de GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Un cliente de escritorio remoto para o ambiente de escritorio de GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr ""
-"Un cliente de escritorio remoto para o ambiente de escritorio de GNOME."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "O Proxecto de GNOME"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Conexións"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Ver e usar outros escritorios"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Conexións permítelle conectarse e usar outros escritorios. Isto pode ser "
+"unha forma incríbel para acceder a contidos ou software de distintos "
+"sistemas operativos. Tamén pode usarse como unha forma de fornecer soporte "
+"técnico a quen precise axuda."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Pode conectarse a distintos sistemas operativos, incluíndo escritorios Linux "
+"e Windows. Tamén pode conectarse a máquinas virtuais."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Conexións usa os protocolos VNC e RDP, usados en moitos sitios, debe ter un "
+"destes activados no escritorio ao que quere conectarse."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "O Proxecto de GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;remoto;escritorio;windows;asistencia;soporte;acceso;ver"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -50,59 +73,68 @@ msgstr "Ficheiro de Escritorio Remoto (VNC)"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Propiedades"
 
-#: src/application.vala:76
+#: src/application.vala:80
 msgid "translator-credits"
 msgstr "Fran Diéguez <frandieguez@gnome.org>, 2020."
 
-#: src/application.vala:140
+#: src/application.vala:81 src/application.vala:214
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un cliente de escritorio remoto para o ambiente de escritorio de GNOME"
+
+#: src/application.vala:128
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Non foi posíbel abrir o ficheiro de tipo mime descoñecido %s"
 
-#: src/application.vala:170
+#: src/application.vala:157
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "A conexión a «%s» foi eliminada"
 
-#: src/application.vala:172
+#: src/application.vala:160
 msgid "Undo"
 msgstr "Desfacer"
 
-#: src/application.vala:211
+#: src/application.vala:206
 msgid "URL to connect"
 msgstr "URL á que conectarse"
 
-#: src/application.vala:212
+#: src/application.vala:207
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Abrir ficheiro .vnc ou .rdp no PATH fornecido"
 
-#: src/application.vala:234
+#: src/application.vala:229
 msgid "Too many command-line arguments specified.\n"
 msgstr "Especificou demasiados argumentos de liña de ordes\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Captura de pantalla desde %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Captura de pantalla tomada"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Abrir"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» require autenticación"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Produciuse un fallo na autenticación: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -110,41 +142,30 @@ msgstr "«%s» require autenticación"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128
+#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Escalado"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Tomar captura de pantalla"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Crear unha nova conexión"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Pantalla completa"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
-"Escriba o enderezo da máquina á que conectarse. O enderezo pode comezar con "
-"rdp:// ou vnc://"
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Conectar a un escritorio"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Servidor"
+#: src/ui/assistant.ui:46
+#| msgid "Connections"
+msgid "Connect"
+msgstr "Conectar"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Nome"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Crear"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Os enderezos deben comezar por vnc:// ou rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -173,6 +194,10 @@ msgstr "Propiedades da conexión"
 #: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Enderezo"
+
+#: src/ui/properties.ui:67
+msgid "Name"
+msgstr "Nome"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -214,55 +239,98 @@ msgstr "Axuda"
 msgid "About Connections"
 msgstr "Sobre Conexións"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Retroceso"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Supr"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Non foi posíbel analizar o ficheiro"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
+#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "No ficheiro VNC falta unha chave «%s»"
 
-#~ msgid "View only"
-#~ msgstr "Só ver"
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "Só ver"
 
-#~ msgid "Show local pointer"
-#~ msgstr "Mostrar punteiro local"
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "Mostrar punteiro local"
 
-#~ msgid "High quality"
-#~ msgstr "Alta calidade"
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Ancho de banda"
 
-#~ msgid "Fast refresh"
-#~ msgstr "Recarga rápida"
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Alta calidade"
 
-#~ msgid "Bandwidth"
-#~ msgstr "Ancho de banda"
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Recarga rápida"
+
+#: src/vnc-properties-dialog.vala:54
+msgid "Scale mode"
+msgstr "Modo de escalado"
+
+#: src/vnc-properties-dialog.vala:56
+msgid "Fit window"
+msgstr "Axustar á xanela"
+
+#: src/vnc-properties-dialog.vala:57
+msgid "Original size"
+msgstr "Tamaño orixinal"
+
+#~ msgid "GNOME Connections"
+#~ msgstr "Conexións de GNOME"
+
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr ""
+#~ "Un cliente de escritorio remoto para o ambiente de escritorio de GNOME."
+
+#~ msgid "Create a New Connection"
+#~ msgstr "Crear unha nova conexión"
+
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Escriba o enderezo da máquina á que conectarse. O enderezo pode comezar "
+#~ "con rdp:// ou vnc://"
+
+#~ msgid "Server"
+#~ msgstr "Servidor"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "Create"
+#~ msgstr "Crear"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
