@@ -16,3 +16,15 @@
     border: 1px solid @theme_bg_color;
     background: mix (@theme_bg_color, shade (@theme_bg_color, 0.5), 0.5);
 }
+
+/* Onboarding dialog */
+.onboarding-dialog-page {
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center 15%;
+}
+
+.onboarding-dialog-page,
+.onboarding-dialog-page-title-label {
+    color: white;
+}

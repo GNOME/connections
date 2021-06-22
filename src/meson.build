@@ -10,6 +10,8 @@ connections_sources = [
   'empty-view.vala',
   'main.vala',
   'notifications.vala',
+  'onboarding-dialog.vala',
+  'onboarding-dialog-page.vala',
   'properties.vala',
   'rdp-connection.vala',
   'thumbnailer.vala',
@@ -19,12 +21,16 @@ connections_sources = [
   'window.vala',
 ]
 
+cc = meson.get_compiler ('c')
+
 connections_deps = [
   config_h,
   valac.find_library ('config', dirs: src_dir),
+  cc.find_library('m'),
   dependency('gio-2.0', version: '>= 2.50'),
   dependency('gtk+-3.0', version: '>= 3.22'),
   dependency('gtk-vnc-2.0', version: '> 0.4.4'),
+  dependency('libhandy-1', version: '>= 1.0.0'),
   dependency ('libxml-2.0', version: '>= 2.7.8'),
 ]
 

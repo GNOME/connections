@@ -32,6 +32,12 @@ namespace Connections {
             get { return (windows.length () > 0) ? windows.data : null; }
         }
 
+        private GLib.Settings settings;
+        private bool first_run {
+            get { return settings.get_boolean ("first-run"); }
+            set { settings.set_boolean ("first-run", value); }
+        }
+
         construct {
             windows = new List<Connections.Window> ();
             model = new GLib.ListStore (typeof (Connections.Connection));
@@ -42,6 +48,8 @@ namespace Connections {
 
             application_id = Config.APPLICATION_ID;
             flags |= ApplicationFlags.HANDLES_COMMAND_LINE | ApplicationFlags.HANDLES_OPEN;
+
+            settings = new GLib.Settings ("org.gnome.Connections");
 
             var action = new GLib.SimpleAction ("help", null);
             action.activate.connect (show_help);
@@ -87,6 +95,12 @@ namespace Connections {
                                    "version", Config.VERSION);
         }
 
+        public override void startup () {
+            base.startup ();
+
+            Hdy.init ();
+        }
+
         public override void activate () {
             base.activate ();
 
@@ -95,6 +109,12 @@ namespace Connections {
             }
 
             add_new_window ();
+
+            if (first_run) {
+                (new OnboardingDialog (main_window)).present ();
+
+                first_run = !first_run;
+            }
 
             load_connections ();
         }

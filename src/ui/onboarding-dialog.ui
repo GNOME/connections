@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="ConnectionsOnboardingDialog" parent="HdyWindow">
+    <property name="modal">True</property>
+    <property name="resizable">False</property>
+    <property name="type-hint">dialog</property>
+    <property name="height-request">600</property>
+    <property name="width-request">710</property>
+    <signal name="delete-event" handler="gtk_widget_hide_on_delete"/>
+    <style>
+      <class name="onboarding-dialog"/>
+    </style>
+
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="border-width">0</property>
+        <property name="orientation">vertical</property>
+
+        <child>
+          <object class="GtkButton">
+            <property name="visible">True</property>
+            <property name="halign">end</property>
+            <property name="margin">10</property>
+            <signal name="clicked" handler="gtk_widget_destroy" object="ConnectionsOnboardingDialog"/>
+            <style>
+              <class name="flat"/>
+            </style>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="icon-name">window-close-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox" id="indicator-spacer">
+            <property name="visible">True</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkOverlay">
+            <property name="visible">True</property>
+            <property name="expand">True</property>
+
+            <child>
+              <object class="HdyCarousel" id="paginator">
+                <property name="visible">True</property>
+                <property name="animation-duration">400</property>
+                <property name="margin-bottom">12</property>
+
+                <child>
+                  <object class="ConnectionsOnboardingDialogPage" id="homepage">
+                    <property name="title" translatable="yes">Welcome to Connections</property>
+                    <property name="description" translatable="yes">Connections makes it easy to use other desktops remotely.</property>
+                    <property name="image">/org/gnome/Connections/ui/onboarding/empty.svg</property>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="ConnectionsOnboardingDialogPage">
+                    <property name="title" translatable="yes">Connect to Linux or Windows</property>
+                    <property name="description" translatable="yes">Remotely access a range of desktop operating systems.</property>
+                    <property name="image">/org/gnome/Connections/ui/onboarding/multiplatform.svg</property>
+                  </object>
+                </child>
+
+                <child>
+                  <object class="ConnectionsOnboardingDialogPage">
+                    <property name="title" translatable="yes">Configure for Access</property>
+                    <property name="description" translatable="yes">To connect to a desktop, it needs to be setup first.</property>
+                    <property name="image">/org/gnome/Connections/ui/onboarding/configure-access.svg</property>
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <child type="overlay">
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="orientation">horizontal</property>
+                <property name="border-width">20</property>
+
+                <child>
+                  <object class="GtkButton" id="go_back_button">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="valign">center</property>
+                    <signal name="clicked" handler="on_back_button_clicked"/>
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="icon-size">2</property>
+                        <property name="margin">5</property>
+                        <property name="icon-name">go-previous-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="pack-type">start</property>
+                  </packing>
+                </child>
+
+                <child>
+                  <object class="GtkButton" id="go_next_button">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="valign">center</property>
+                    <signal name="clicked" handler="on_next_button_clicked"/>
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="icon-size">2</property>
+                        <property name="margin">5</property>
+                        <property name="icon-name">go-next-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="pack-type">end</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="pass-through">True</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="HdyCarouselIndicatorDots" id="indicator">
+            <property name="visible">True</property>
+            <property name="carousel">paginator</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <object class="GtkSizeGroup">
+    <property name="mode">vertical</property>
+    <widgets>
+      <widget name="indicator-spacer"/>
+      <widget name="indicator"/>
+    </widgets>
+  </object>
+</interface>

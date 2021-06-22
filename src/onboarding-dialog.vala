@@ -1,0 +1,76 @@
+/* onboarding-dialog.vala
+ *
+ * Copyright (C) Red Hat, Inc
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Author: Felipe Borges <felipeborges@gnome.org>
+ *
+ */
+
+using Gtk;
+using Hdy;
+
+namespace Connections {
+    [GtkTemplate (ui = "/org/gnome/Connections/ui/onboarding-dialog.ui")]
+    private class OnboardingDialog : Hdy.Window {
+        [GtkChild]
+        private unowned Carousel paginator;
+        [GtkChild]
+        private unowned OnboardingDialogPage homepage;
+
+        private GLib.List<unowned OnboardingDialogPage> pages;
+
+        construct {
+            pages = new GLib.List<unowned OnboardingDialogPage> ();
+
+            OnboardingDialogPage? onboarding_page = null;
+            foreach (var page in paginator.get_children ()) {
+                assert (page is OnboardingDialogPage);
+
+                onboarding_page = page as OnboardingDialogPage;
+                pages.append (onboarding_page);
+            }
+
+            // Adds a custom link to the last page
+            if (onboarding_page != null) {
+                var learn_more_label = _("Read our tutorial to learn how.");
+
+                onboarding_page.description += " <a href=\'help:gnome-connections/connect\'>%s</a>".printf (learn_more_label);;
+            }
+        }
+
+        public OnboardingDialog (Window window) {
+            set_transient_for (window);
+        }
+
+        [GtkCallback]
+        private void on_next_button_clicked () {
+            var index = (int) Math.round (paginator.position) + 1;
+            if (index >= pages.length ())
+                return;
+
+            paginator.scroll_to (pages.nth_data (index));
+        }
+
+        [GtkCallback]
+        private void on_back_button_clicked () {
+            var index = (int) Math.round (paginator.position) - 1;
+            if (index < 0)
+                return;
+
+            paginator.scroll_to (pages.nth_data (index));
+        }
+    }
+}
