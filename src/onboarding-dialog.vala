@@ -29,6 +29,10 @@ namespace Connections {
         private unowned Carousel paginator;
         [GtkChild]
         private unowned OnboardingDialogPage homepage;
+        [GtkChild]
+        private unowned Button go_back_button;
+        [GtkChild]
+        private unowned Button go_next_button;
 
         private GLib.List<unowned OnboardingDialogPage> pages;
 
@@ -49,6 +53,8 @@ namespace Connections {
 
                 onboarding_page.description += " <a href=\'help:gnome-connections/connect\'>%s</a>".printf (learn_more_label);;
             }
+
+            on_position_changed ();
         }
 
         public OnboardingDialog (Window window) {
@@ -71,6 +77,13 @@ namespace Connections {
                 return;
 
             paginator.scroll_to (pages.nth_data (index));
+        }
+
+        [GtkCallback]
+        private void on_position_changed () {
+            var position = (int)paginator.position;
+            go_back_button.visible = (position > 0);
+            go_next_button.visible = (position < (pages.length () - 1));
         }
     }
 }
