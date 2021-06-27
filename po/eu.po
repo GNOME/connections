@@ -2,13 +2,13 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2020.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2020, 2021.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-12-08 01:28+0000\n"
-"PO-Revision-Date: 2020-12-27 17:00+0100\n"
+"POT-Creation-Date: 2021-06-12 09:36+0000\n"
+"PO-Revision-Date: 2021-06-27 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -17,26 +17,42 @@ msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "GNOME Konexioak"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "GNOME proiektua"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Konexioak"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Ikusi eta erabili beste mahaigain batzuk"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr "Konexioak aplikazioari esker, beste mahaigain batzuekin konektatu eta haiek erabili ahal izango dituzu. Beste sistema eragile bateko edukia edo softwarea atzitzeko modu bikaina da. Laguntza behar duten beste erabiltzaile batzuei euskarria eskaintzeko modua ere izan daiteke."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr "Mota askotako sistema eragileak konektatu daitezke, Linux eta Windows mahaigainak barne. Makina birtualekin ere konektatu zaitezke."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr "Konexioak aplikazioak euskarri zabala duten VNC eta RDP protokoloak erabiltzen ditu. Horietako batek gaituta egon behar du konektatuko den mahaigainean."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "GNOME proiektua"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;urrenekoa;mahaigaina;windows;euskarria;atzitu;ikusi"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -46,59 +62,68 @@ msgstr "Urruneko mahaigainaren (VNC) fitxategia"
 msgid "Delete"
 msgstr "Ezabatu"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Propietateak"
 
-#: src/application.vala:76
+#: src/application.vala:80
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: src/application.vala:140
+#: src/application.vala:81 src/application.vala:214
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako"
+
+#: src/application.vala:128
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ezin da ireki %s mime mota ezezaguna duen fitxategia"
 
-#: src/application.vala:170
+#: src/application.vala:157
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "“%s” konexioa ezabatu da"
 
-#: src/application.vala:172
+#: src/application.vala:160
 msgid "Undo"
 msgstr "Desegin"
 
-#: src/application.vala:211
+#: src/application.vala:206
 msgid "URL to connect"
 msgstr "Konexiorako URLa"
 
-#: src/application.vala:212
+#: src/application.vala:207
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Ireki .vnc edo .rdp fitxategia emandako PATH bidean"
 
-#: src/application.vala:234
+#: src/application.vala:229
 msgid "Too many command-line arguments specified.\n"
 msgstr "Komando-lerroko argumentu gehiegi zehaztu dira.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Pantaila-argazkia %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Pantaila-argazkia hartu da"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Ireki"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” konexioak autentifikazioa behar du"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Autentifikazioak huts egin du: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -106,39 +131,29 @@ msgstr "“%s” konexioak autentifikazioa behar du"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Eskalatzea"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Egin pantaila-argazkia"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Sortu konexio berria"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Pantaila osoa"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr "Sartu makina baten helbide bat harekin konektatzeko. Helbidearen hasiera rdp:// edo vnc:// izan daiteke."
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Konektatu mahaigain batekin"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Zerbitzaria"
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Konektatu"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Izena"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Utzi"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Sortu"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Helbidearen hasierak vnc:// edo rdp:// izan behar du."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -167,6 +182,10 @@ msgstr "Konexioaren propietateak"
 #: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Helbidea"
+
+#: src/ui/properties.ui:67
+msgid "Name"
+msgstr "Izena"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -208,60 +227,97 @@ msgstr "Laguntza"
 msgid "About Connections"
 msgstr "Konexioak aplikazioari buruz"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Atzerako tekla"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Ezabatu tekla"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Ezin izan da fitxategia analizatu"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
+#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC fitxategiak “%s” gakoa falta du"
 
-#: src/vnc-connection.vala:295
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Ikusi soilik"
 
-#: src/vnc-connection.vala:305
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Erakutsi erakusle lokala"
 
-#: src/vnc-connection.vala:315
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Banda-zabalera"
+
+#: src/vnc-properties-dialog.vala:46
 msgid "High quality"
 msgstr "Kalitate altua"
 
-#: src/vnc-connection.vala:316
+#: src/vnc-properties-dialog.vala:47
 msgid "Fast refresh"
 msgstr "Freskatze azkarra"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Banda-zabalera"
+#: src/vnc-properties-dialog.vala:54
+msgid "Scale mode"
+msgstr "Eskalatze-modua"
+
+#: src/vnc-properties-dialog.vala:56
+msgid "Fit window"
+msgstr "Doitu leihoa"
+
+#: src/vnc-properties-dialog.vala:57
+msgid "Original size"
+msgstr "Jatorrizko tamaina"
+
+#~ msgid "GNOME Connections"
+#~ msgstr "GNOME Konexioak"
+
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako."
+
+#~ msgid "Create a New Connection"
+#~ msgstr "Sortu konexio berria"
+
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Sartu makina baten helbide bat harekin konektatzeko. Helbidearen hasiera "
+#~ "rdp:// edo vnc:// izan daiteke."
+
+#~ msgid "Server"
+#~ msgstr "Zerbitzaria"
+
+#~ msgid "Cancel"
+#~ msgstr "Utzi"
+
+#~ msgid "Create"
+#~ msgstr "Sortu"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
