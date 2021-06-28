@@ -12,12 +12,13 @@ connections_sources = [
   'notifications.vala',
   'onboarding-dialog.vala',
   'onboarding-dialog-page.vala',
-  'properties.vala',
+  'preferences-widgets.vala',
   'rdp-connection.vala',
+  'rdp-preferences-window.vala',
   'thumbnailer.vala',
   'topbar.vala',
   'vnc-connection.vala',
-  'vnc-properties-dialog.vala',
+  'vnc-preferences-window.vala',
   'window.vala',
 ]
 

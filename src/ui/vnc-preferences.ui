@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+    <template class="ConnectionsVncPreferencesWindow" parent="ConnectionsPreferencesWindow">
+      <property name="modal">True</property>
+      <property name="type-hint">dialog</property>
+      <property name="valign">start</property>
+      <property name="default-width">540</property>
+      <property name="title" translatable="yes">Connection preferences</property>
+
+      <child>
+        <object class="HdyPreferencesPage">
+          <property name="visible">True</property>
+
+          <child>
+            <object class="HdyPreferencesGroup">
+              <property name="visible">True</property>
+
+              <child>
+                <object class="HdyActionRow">
+                  <property name="activatable-widget">host_address_label</property>
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Address</property>
+
+                  <child>
+                    <object class="GtkLabel" id="host_address_label">
+                      <property name="visible">True</property>
+                      <property name="selectable">True</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <child>
+                <object class="HdyActionRow">
+                  <property name="activatable-widget">connection_name_entry</property>
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Name</property>
+
+                  <child>
+                    <object class="GtkEntry" id="connection_name_entry">
+                      <property name="visible">True</property>
+                      <property name="valign">center</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+            </object>
+          </child>
+
+          <child>
+            <object class="HdyPreferencesGroup">
+              <property name="visible">True</property>
+              <property name="title" translatable="yes">Display</property>
+
+              <child>
+                <object class="ConnectionsBooleanProperty" id="scaling">
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Scaling</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="ConnectionsBooleanProperty" id="view_only">
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">View only</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="ConnectionsBooleanProperty" id="show_local_pointer">
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Show local pointer</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="HdyActionRow">
+                  <property name="activatable-widget">bandwidth_combo</property>
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Bandwidth</property>
+
+                  <child>
+                    <object class="GtkComboBoxText" id="bandwidth_combo">
+                      <property name="visible">True</property>
+                      <property name="valign">center</property>
+                      <items>
+                        <item id="high-qualiy" translatable="yes">High quality</item>
+                        <item id="fast-refresh" translatable="yes">Fast refresh</item>
+                      </items>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <child>
+                <object class="HdyActionRow">
+                  <property name="activatable-widget">scale_mode_combo</property>
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Scale mode</property>
+
+                  <child>
+                    <object class="GtkComboBoxText" id="scale_mode_combo">
+                      <property name="visible">True</property>
+                      <property name="valign">center</property>
+                      <items>
+                        <item id="fit-window" translatable="yes">Fit window</item>
+                        <item id="original" translatable="yes">Original size</item>
+                      </items>
+                    </object>
+                  </child>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </child>
+    </template>
+  </interface>

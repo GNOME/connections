@@ -8,7 +8,8 @@
     <file>ui/display-view.ui</file>
     <file>ui/empty-view.ui</file>
     <file>ui/notification.ui</file>
-    <file>ui/properties.ui</file>
+    <file>ui/rdp-preferences.ui</file>
+    <file>ui/vnc-preferences.ui</file>
     <file>ui/style.css</file>
     <file>ui/topbar.ui</file>
     <file>ui/window.ui</file>

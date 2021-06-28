@@ -60,11 +60,7 @@ namespace Connections {
         private void properties_activated () {
             debug ("Launch properties for %s", connection.uri);
 
-            if (connection.protocol == "vnc")
-                (new VncPropertiesDialog (connection).run ());
-            else
-                (new RdpPropertiesDialog (connection).run ());
-
+            Application.application.main_window.show_preferences_window (connection);
         }
     }
 }

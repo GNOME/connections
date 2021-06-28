@@ -113,15 +113,4 @@ namespace Connections {
             return true;
         }
     }
-
-    private class RdpPropertiesDialog : PropertiesDialog {
-        public RdpPropertiesDialog (Connection connection) {
-            this.connection = connection;
-
-            var scaling = new BooleanProperty (connection, "scaling") {
-                label = _("Scaling")
-            };
-            add_property (scaling);
-        }
-    }
 }

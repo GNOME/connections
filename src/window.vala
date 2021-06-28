@@ -105,6 +105,15 @@ namespace Connections {
             stack.set_visible_child (collection_view);
         }
 
+        public void show_preferences_window (Connection connection) {
+            if (connection is VncConnection)
+                (new VncPreferencesWindow (connection)).present ();
+            else if (connection is RdpConnection)
+                (new RdpPreferencesWindow (connection)).present ();
+            else
+                debug ("Failed to launch preferences window for %s", connection.uri);
+        }
+
         [GtkCallback]
         private bool on_key_pressed (Gtk.Widget widget, Gdk.EventKey event) {
             var default_modifiers = Gtk.accelerator_get_default_mod_mask ();
