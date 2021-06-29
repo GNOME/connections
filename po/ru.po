@@ -1,0 +1,310 @@
+# Russian translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Alexey Rubtsov <rushills@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-06-12 09:36+0000\n"
+"PO-Revision-Date: 2021-06-29 08:28+0300\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
+"X-Generator: Poedit 3.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Соединения"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Просмотр и использование других рабочих столов"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Подключения позволяют подключаться к другим рабочим столам и использовать "
+"их. Это может быть отличным способом доступа к содержимому или программному "
+"обеспечению на другой операционной системе рабочего стола. Это также может "
+"быть использовано как способ оказания поддержки пользователям, которым "
+"может понадобиться помощь."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Можно подключаться к различным операционным системам, включая настольные "
+"компьютеры Linux и Windows. Можно также подключаться к виртуальным машинам."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Connections использует широко поддерживаемые протоколы VNC и RDP, и один из "
+"них должен быть включен на рабочем столе, к которому вы хотите подключиться."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Проект GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;удалённая работа;десктоп;окна;поддержка;доступ;просмотр"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Файл удаленного рабочего стола (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "Свойства"
+
+#: src/application.vala:80
+msgid "translator-credits"
+msgstr ""
+"Станислав Соловей <whats_up@tut.by>, 2013-2019.\n"
+"Юрий Мясоедов <ymyasoedov@yandex.ru>, 2014.\n"
+"Alexey Rubtsov <rushills@gmail.com>, 2021"
+
+#: src/application.vala:81 src/application.vala:214
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Клиент удаленного рабочего стола для среды рабочего стола GNOME"
+
+#: src/application.vala:128
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Не удалось открыть файл неизвестного типа mime %s"
+
+#: src/application.vala:157
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Соединение с «%s» было удалено"
+
+#: src/application.vala:160
+msgid "Undo"
+msgstr "Отменить"
+
+#: src/application.vala:206
+msgid "URL to connect"
+msgstr "URL для подключения"
+
+#: src/application.vala:207
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Открыть файл .vnc или .rdp в указанном PATH"
+
+#: src/application.vala:229
+msgid "Too many command-line arguments specified.\n"
+msgstr "Указано слишком много аргументов командной строки.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:65
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Снимок экрана от %s"
+
+#: src/connection.vala:80
+msgid "Screenshot taken"
+msgstr "Сделан скриншот"
+
+#. Translators: Open is a verb
+#: src/connection.vala:83
+msgid "Open"
+msgstr "Открыть"
+
+#: src/connection.vala:128
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "«%s» требует аутентификации"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Аутентификация не прошла: %s"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
+msgid "Scaling"
+msgstr "Масштабирование"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Сделать скриншот"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Полноэкранный режим"
+
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Подключение к рабочему столу"
+
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Подключиться"
+
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Адреса начинаются либо с vnc://, либо с rdp://."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Имя пользователя"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Пароль"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Войти"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Добро пожаловать в Связи"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Просто нажмите кнопку <b>+</b>, чтобы установить первое соединение."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Свойства подключения"
+
+#: src/ui/properties.ui:32
+msgid "Address"
+msgstr "Адрес"
+
+#: src/ui/properties.ui:67
+msgid "Name"
+msgstr "Имя"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Новый"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Меню приложения"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Поиск"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Назад"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Отображение меню"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Отключиться"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Комбинации клавиш"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Справка"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "О Связях"
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:119
+msgid "Couldn’t parse the file"
+msgstr "Не удалось разобрать файл"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
+#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC File is missing key «%s»"
+
+#: src/vnc-properties-dialog.vala:33
+msgid "View only"
+msgstr "Только просмотр"
+
+#: src/vnc-properties-dialog.vala:38
+msgid "Show local pointer"
+msgstr "Показать локальный указатель"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Полоса пропускания"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Высокое качество"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Быстрое обновление"
+
+#: src/vnc-properties-dialog.vala:54
+msgid "Scale mode"
+msgstr "Режим масштабирования"
+
+#: src/vnc-properties-dialog.vala:56
+msgid "Fit window"
+msgstr "Окно"
+
+#: src/vnc-properties-dialog.vala:57
+msgid "Original size"
+msgstr "Исходный размер"
