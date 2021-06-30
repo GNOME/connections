@@ -2,15 +2,15 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Matej Urbančič <mateju@svn.gnome.org>, 2020–2021.
+# Matej Urbančič <mateju@src.gnome.org>, 2020–2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-01-06 16:06+0000\n"
-"PO-Revision-Date: 2021-01-13 21:22+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"POT-Creation-Date: 2021-06-12 09:36+0000\n"
+"PO-Revision-Date: 2021-06-30 22:16+0200\n"
+"Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
@@ -19,29 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Povezave GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Povezave"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Pregled in upravljanje namizij"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Program omogoča povezovanje in upravljanje namizij na daljavo. Na ta način "
+"je mogoč enostaven dostop do vsebine in programske opreme na drugih "
+"operacijskih sistemih. Program je mogoče uporabiti tudi za podporo "
+"uporabnikom, ki potrebujejo pomoč."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Podprto je povezovanje z različnimi operacijskimi sistemi, na primer namizja "
+"Linux in Windows, mogoče je tudi povezovanje na navidezne naprave."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Program podpira protokole VNC in RDP, katerikoli pa mora biti omogočen tudi "
+"na namizju, s katerim poteka povezovanje."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;oddaljeno;souporaba;"
+"podpora;okno;namizje;pogled;dostop"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -51,59 +77,68 @@ msgstr "Datoteka (VNC) oddaljenega namizja"
 msgid "Delete"
 msgstr "Izbriši"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Lastnosti"
 
-#: src/application.vala:76
+#: src/application.vala:80
 msgid "translator-credits"
-msgstr "Matej Urbančič <mateju@svn.gnome.org>"
+msgstr "Matej Urbančič <mateju@src.gnome.org>"
 
-#: src/application.vala:140
+#: src/application.vala:81 src/application.vala:214
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME"
+
+#: src/application.vala:128
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ni mogoče odpreti datoteke neznane vrste mime %s"
 
-#: src/application.vala:170
+#: src/application.vala:157
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Povezava z »%s« je bila izbrisana"
 
-#: src/application.vala:172
+#: src/application.vala:160
 msgid "Undo"
 msgstr "Razveljavi"
 
-#: src/application.vala:211
+#: src/application.vala:206
 msgid "URL to connect"
 msgstr "Naslov URL za povezavo"
 
-#: src/application.vala:212
+#: src/application.vala:207
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Odpri datoteko .vnc oziroma .rdp na podani POTI"
 
-#: src/application.vala:234
+#: src/application.vala:229
 msgid "Too many command-line arguments specified.\n"
 msgstr "Navedenih je preveč argumentov ukazne vrstice.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Zaslonska slika %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Zaslonska slika je zajeta"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Odpri"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "»%s« zahteva overitev"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Overitev je spodletela: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -111,39 +146,29 @@ msgstr "»%s« zahteva overitev"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
+#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Prilagajanje velikosti"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Zajemi zaslonsko sliko"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Ustvari novo povezavo"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Celozaslonski način"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr "Vpis naslova za povezavo. Naslov se lahko začne z rdp:// ali vnc://."
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Poveži z namizjem"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Strežnik"
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Poveži"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Ime"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Prekliči"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Ustvari"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Naslovi se začnejo z vnc:// ali rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -172,6 +197,10 @@ msgstr "Lastnosti povezave"
 #: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Naslov"
+
+#: src/ui/properties.ui:67
+msgid "Name"
+msgstr "Ime"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -213,60 +242,96 @@ msgstr "Pomoč"
 msgid "About Connections"
 msgstr "O programu"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Vračalka"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Datoteke ni mogoče razčleniti"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
+#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Datoteka VNC je brez ključa »%s«"
 
-#: src/vnc-connection.vala:295
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Samo pogled"
 
-#: src/vnc-connection.vala:305
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Pokaži kazalnik"
 
-#: src/vnc-connection.vala:315
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Pasovna širina"
+
+#: src/vnc-properties-dialog.vala:46
 msgid "High quality"
 msgstr "Visoka kakovost"
 
-#: src/vnc-connection.vala:316
+#: src/vnc-properties-dialog.vala:47
 msgid "Fast refresh"
 msgstr "Hitro osveževanje"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Pasovna širina"
+#: src/vnc-properties-dialog.vala:54
+msgid "Scale mode"
+msgstr "Način spreminjanja velikosti"
+
+#: src/vnc-properties-dialog.vala:56
+msgid "Fit window"
+msgstr "Prilagodi oknu"
+
+#: src/vnc-properties-dialog.vala:57
+msgid "Original size"
+msgstr "Izvorna velikost"
+
+#~ msgid "GNOME Connections"
+#~ msgstr "Povezave GNOME"
+
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME."
+
+#~ msgid "Create a New Connection"
+#~ msgstr "Ustvari novo povezavo"
+
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Vpis naslova za povezavo. Naslov se lahko začne z rdp:// ali vnc://."
+
+#~ msgid "Server"
+#~ msgstr "Strežnik"
+
+#~ msgid "Cancel"
+#~ msgstr "Prekliči"
+
+#~ msgid "Create"
+#~ msgstr "Ustvari"
 
 #~ msgid "A remote connection manager for the GNOME desktop"
 #~ msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME"
