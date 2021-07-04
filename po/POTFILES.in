@@ -1,16 +1,21 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
 data/org.gnome.Connections.appdata.xml.in
 data/org.gnome.Connections.desktop.in
 data/org.gnome.Connections.xml
 src/actions-popover.vala
 src/application.vala
+src/assistant.vala
 src/connection.vala
 src/display-view.vala
+src/onboarding-dialog.vala
 src/rdp-connection.vala
 src/topbar.vala
 src/ui/assistant.ui
 src/ui/auth-notification.ui
 src/ui/empty-view.ui
-src/ui/properties.ui
+src/ui/onboarding-dialog.ui
+src/ui/rdp-preferences.ui
 src/ui/topbar.ui
+src/ui/vnc-preferences.ui
 src/vnc-connection.vala
-src/vnc-properties-dialog.vala
