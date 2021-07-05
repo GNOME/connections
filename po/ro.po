@@ -6,41 +6,69 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-12-08 01:28+0000\n"
-"PO-Revision-Date: 2020-12-08 19:25+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-07-04 15:59+0000\n"
+"PO-Revision-Date: 2021-07-05 21:28+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n"
-"%100 < 20)) ? 1 : 2);;\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
-"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Conexiuni GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Un client de desktop la distanță pentru mediul de desktop GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Un client de desktop la distanță pentru mediul de desktop GNOME."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "Proiectul GNOME"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Conexiuni"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Vizualizați și utilizați alte desktop-uri"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Conexiuni vă permite să vă conectați și să utilizați alte desktop-uri. "
+"Aceasta poate fi o modalitate excelentă de a accesa conținut sau software de "
+"pe un sistem de operare desktop diferit. Poate fi utilizat și ca o "
+"modalitate de a oferi asistență utilizatorilor care ar putea avea nevoie de "
+"ajutor."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Se poate conecta la o gamă largă de sisteme de operare diferite, inclusiv "
+"desktop-uri Linux și Windows. Puteți, de asemenea, să conectați mașini "
+"virtuale."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Conexiuni utilizează protocoalele VNC și RDP sprijinite pe scară largă, și "
+"unul dintre acestea trebuie să fie activat pe desktop-ul la care vreți să vă "
+"conectați."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Proiectul GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;la distanță;ferestre;"
+"suport;acces;vizualizare"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -50,61 +78,75 @@ msgstr "Fișier de desktop la distanță (VNC)"
 msgid "Delete"
 msgstr "Șterge"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Proprietăți"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
-"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] "
-"com>, 2020"
+"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
+"2020-2021"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:234
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client de desktop la distanță pentru mediul de desktop GNOME"
+
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nu s-a putut deschide fișierul de tip mime necunoscut %s"
 
-#: src/application.vala:170
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Conexiunea la „%s” a fost ștearsă"
 
-#: src/application.vala:172
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Refă"
 
-#: src/application.vala:211
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "URL de conectat"
 
-#: src/application.vala:212
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Deschide fișierul .vnc sau .rdp la CALEA dată"
 
-#: src/application.vala:234
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Prea multe argumente în linie de comandă specificate.\n"
 
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Aflați mai multe."
+
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Captură de ecran de la %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Captură de ecran luată"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Deschide"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "„%s” necesită autentificare"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Autentificarea a eșuat: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -112,41 +154,30 @@ msgstr "„%s” necesită autentificare"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
-msgid "Scaling"
-msgstr "Scalare"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Citiți tutorialul pentru a afla cum."
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Fă captură de ecran"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Creează o conexiune nouă"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Ecran complet"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
-"Introduce o adresă de mașină la care să vă conectați. Adresa poate să "
-"înceapă cu rdp:// sau vnc://"
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Conectare la un desktop"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Server"
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Conectare"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Nume"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Anulează"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Creează"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Adresele încep ori cu vnc:// ori cu rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -160,7 +191,7 @@ msgstr "_Parolă"
 msgid "Sign In"
 msgstr "Conectare"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
 msgstr "Bine ați venit la Conexiuni"
 
@@ -168,13 +199,38 @@ msgstr "Bine ați venit la Conexiuni"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Doar apăsați pe butonul <b>+</b> pentru a face prima conexiune."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Proprietăți conexiune"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "Conexiuni facilitează utilizarea de la distanță a altor desktop-uri."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Conectare la Linux sau Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Accesați de la distanță o gamă de sisteme de operare desktop."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Configurează pentru acces"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr ""
+"Pentru a se conecta la un desktop, trebuie să fie configurat mai întâi."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Preferințe de conexiune"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Adresă"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Nume"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -216,57 +272,102 @@ msgstr "Ajutor"
 msgid "About Connections"
 msgstr "Despre Conexiuni"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Afișaj"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Scalare"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Doar vizualizare"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Arată pointerul local"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Lungime de bandă"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Calitate înaltă"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Reîmprospătare rapidă"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Modul scalare"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Potrivește la fereastră"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Dimensiune originală"
+
+#: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Nu s-a putut parsa fișierul"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
+#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Fișierului VNC îi lipsește cheia „%s”"
 
-#: src/vnc-connection.vala:295
-msgid "View only"
-msgstr "Doar vizualizare"
+#~ msgid "GNOME Connections"
+#~ msgstr "Conexiuni GNOME"
 
-#: src/vnc-connection.vala:305
-msgid "Show local pointer"
-msgstr "Arată pointerul local"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Un client de desktop la distanță pentru mediul de desktop GNOME."
 
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "Calitate înaltă"
+#~ msgid "Create a New Connection"
+#~ msgstr "Creează o conexiune nouă"
 
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "Reîmprospătare rapidă"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Introduce o adresă de mașină la care să vă conectați. Adresa poate să "
+#~ "înceapă cu rdp:// sau vnc://"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Lungime de bandă"
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Cancel"
+#~ msgstr "Anulează"
+
+#~ msgid "Create"
+#~ msgstr "Creează"
