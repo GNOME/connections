@@ -7,8 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-06-12 09:36+0000\n"
-"PO-Revision-Date: 2021-06-29 08:28+0300\n"
+"POT-Creation-Date: 2021-07-04 15:59+0000\n"
+"PO-Revision-Date: 2021-07-05 13:49+0300\n"
+"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -16,14 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
 "X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
-msgstr "Соединения"
+msgstr "Подключения"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "View and use other desktops"
@@ -39,8 +39,8 @@ msgstr ""
 "Подключения позволяют подключаться к другим рабочим столам и использовать "
 "их. Это может быть отличным способом доступа к содержимому или программному "
 "обеспечению на другой операционной системе рабочего стола. Это также может "
-"быть использовано как способ оказания поддержки пользователям, которым "
-"может понадобиться помощь."
+"быть использовано как способ оказания поддержки пользователям, которым может "
+"понадобиться помощь."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
@@ -78,42 +78,47 @@ msgstr "Удалить"
 msgid "Properties"
 msgstr "Свойства"
 
-#: src/application.vala:80
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "Станислав Соловей <whats_up@tut.by>, 2013-2019.\n"
 "Юрий Мясоедов <ymyasoedov@yandex.ru>, 2014.\n"
 "Alexey Rubtsov <rushills@gmail.com>, 2021"
 
-#: src/application.vala:81 src/application.vala:214
+#: src/application.vala:89 src/application.vala:234
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Клиент удаленного рабочего стола для среды рабочего стола GNOME"
 
-#: src/application.vala:128
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Не удалось открыть файл неизвестного типа mime %s"
 
-#: src/application.vala:157
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Соединение с «%s» было удалено"
 
-#: src/application.vala:160
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/application.vala:206
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "URL для подключения"
 
-#: src/application.vala:207
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Открыть файл .vnc или .rdp в указанном PATH"
 
-#: src/application.vala:229
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Указано слишком много аргументов командной строки.\n"
+
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Изучить подробности."
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:65
@@ -146,9 +151,10 @@ msgstr "Аутентификация не прошла: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Масштабирование"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Прочитайте нашу инструкцию, чтобы узнать как."
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -182,23 +188,43 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Войти"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
-msgstr "Добро пожаловать в Связи"
+msgstr "Добро пожаловать в Подключения"
 
 #: src/ui/empty-view.ui:41
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Просто нажмите кнопку <b>+</b>, чтобы установить первое соединение."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Свойства подключения"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "Подключения делают подключение к другим компьютерам простой задачей."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Подключиться к Linux или Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Удалённый доступ к ряду настольных операционных систем."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Настроить доступ"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr "Для подключения к компьютеру его нужно сначала настроить."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Настройки подключения"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Адрес"
 
-#: src/ui/properties.ui:67
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
 msgid "Name"
 msgstr "Имя"
 
@@ -266,6 +292,46 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Дисплей"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Масштабирование"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Только просмотр"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Показать локальный указатель"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Полоса пропускания"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Высокое качество"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Быстрое обновление"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Режим масштабирования"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Окно"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Исходный размер"
+
 #: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Не удалось разобрать файл"
@@ -276,35 +342,3 @@ msgstr "Не удалось разобрать файл"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC File is missing key «%s»"
-
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Только просмотр"
-
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Показать локальный указатель"
-
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Полоса пропускания"
-
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Высокое качество"
-
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Быстрое обновление"
-
-#: src/vnc-properties-dialog.vala:54
-msgid "Scale mode"
-msgstr "Режим масштабирования"
-
-#: src/vnc-properties-dialog.vala:56
-msgid "Fit window"
-msgstr "Окно"
-
-#: src/vnc-properties-dialog.vala:57
-msgid "Original size"
-msgstr "Исходный размер"
