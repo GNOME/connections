@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-06-12 09:36+0000\n"
-"PO-Revision-Date: 2021-07-03 13:02-0300\n"
+"POT-Creation-Date: 2021-07-04 15:59+0000\n"
+"PO-Revision-Date: 2021-07-06 10:25-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Gtranslator 40.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Conexões"
@@ -79,39 +79,44 @@ msgstr "Excluir"
 msgid "Properties"
 msgstr "Propriedades"
 
-#: src/application.vala:80
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr "Rafael Fontenelle <rafaelff@gnome.org>"
 
-#: src/application.vala:81 src/application.vala:214
+#: src/application.vala:89 src/application.vala:234
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Um cliente de área de trabalho remota para o ambiente GNOME"
 
-#: src/application.vala:128
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Não foi possível abrir um arquivo de tipo mime desconhecido %s"
 
-#: src/application.vala:157
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "A conexão com “%s” foi excluída"
 
-#: src/application.vala:160
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Desfazer"
 
-#: src/application.vala:206
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "URL para conectar"
 
-#: src/application.vala:207
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Abre um arquivo .vnc ou .rdp no caminho informado"
 
-#: src/application.vala:229
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Muitos argumentos de linha de comando especificados.\n"
+
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Saiba mais."
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:65
@@ -144,9 +149,10 @@ msgstr "A autenticação falhou: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Escala"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Leia nosso tutorial para saber como."
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -161,7 +167,6 @@ msgid "Connect to a Desktop"
 msgstr "Conectar a uma área de trabalho"
 
 #: src/ui/assistant.ui:46
-#| msgid "Connections"
 msgid "Connect"
 msgstr "Conectar"
 
@@ -181,23 +186,45 @@ msgstr "_Senha"
 msgid "Sign In"
 msgstr "Entrar"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
-msgstr "Bem-vindo ao Conexões"
+msgstr "Bem-vindo(a) ao Conexões"
 
 #: src/ui/empty-view.ui:41
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Basta pressionar o botão <b>+</b> para fazer sua primeira conexão."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Propriedades da conexão"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "O Conexões facilita o uso de áreas de trabalho remotas."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Conectar a Linux ou Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Acesse remotamente uma gama de sistemas operacionais de computador."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Configurar para acessar"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr ""
+"Para se conectar a uma área de trabalho, é necessário primeiro configurar."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+#| msgid "Connection Properties"
+msgid "Connection preferences"
+msgstr "Preferências da conexão"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Endereço"
 
-#: src/ui/properties.ui:67
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
 msgid "Name"
 msgstr "Nome"
 
@@ -265,6 +292,47 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
+#: src/ui/vnc-preferences.ui:54
+#| msgid "Display Menu"
+msgid "Display"
+msgstr "Exibição"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Escala"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Apenas visualizar"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Mostrar cursor local"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Largura de banda"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Alta qualidade"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Atualização rápida"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Modo de escala"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Ajustar à janela"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Tamanho original"
+
 #: src/vnc-connection.vala:119
 msgid "Couldn’t parse the file"
 msgstr "Não foi possível analisar o arquivo"
@@ -275,38 +343,6 @@ msgstr "Não foi possível analisar o arquivo"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Arquivo VNC sem chave “%s”"
-
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Apenas visualizar"
-
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Mostrar cursor local"
-
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Largura de banda"
-
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Alta qualidade"
-
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Atualização rápida"
-
-#: src/vnc-properties-dialog.vala:54
-msgid "Scale mode"
-msgstr "Modo de escala"
-
-#: src/vnc-properties-dialog.vala:56
-msgid "Fit window"
-msgstr "Ajustar à janela"
-
-#: src/vnc-properties-dialog.vala:57
-msgid "Original size"
-msgstr "Tamanho original"
 
 #~| msgid "Connections"
 #~ msgid "GNOME Connections"
