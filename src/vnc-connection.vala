@@ -24,6 +24,7 @@ using Vnc;
 namespace Connections {
     private class VncConnection : Connection {
         private Gtk.Window window;
+        private Gtk.Clipboard clipboard;
 
         private Vnc.Display display;
         public override Gtk.Widget widget {
@@ -93,10 +94,14 @@ namespace Connections {
             window.add (display);
             display.realize ();
 
+            clipboard = Gtk.Clipboard.get_default(window.get_display ());
+
             display.vnc_initialized.connect (() => { show (); });
             display.vnc_auth_credential.connect (on_vnc_auth_credential_cb);
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);
             display.size_allocate.connect (scale);
+            display.vnc_server_cut_text.connect (on_vnc_server_cut_text_cb);
+            clipboard.owner_change.connect (on_owner_change_cb);
 
             notify["scale-mode"].connect (scale);
         }
@@ -205,6 +210,22 @@ namespace Connections {
             debug ("Failed to authenticate %s", reason);
 
             auth_failed (reason);
+        }
+
+        private void on_vnc_server_cut_text_cb (string message) {
+            if (view_only)
+                return;
+
+            clipboard.set_text (message, message.length);
+            clipboard.store ();
+        }
+
+        private void on_owner_change_cb () {
+            if (view_only)
+                return;
+
+            string message = clipboard.wait_for_text ();
+            display.client_cut_text (message);
         }
 
         public void scale () {
