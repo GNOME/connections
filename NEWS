@@ -1,3 +1,76 @@
+41.alpha - 09 Jul, 2021
+=======================
+
+Changes since 40.0
+
+  - Add shared clipboard support for VNC connections
+  - Add a preferences dialog (based in Hdy.PreferencesWindow)
+  - Introduce Onboarding dialog
+  - Add new application icon
+  - Add new connection creation assistant
+  - Handle authentication failures
+  - Add fullscreen support
+  - Add VNC display scale modes setting
+  - Default display scaling to "fit-window"
+  - Add "vnc, rdp, remote" keywords to desktop file
+  - Enable type-to-search in the main view
+  - Only show search button when collection isn't empty
+  - Dismiss notifications on exit
+  - Add a few keyboard shortcuts
+  - Added/updated/fixed translations:
+  - Update app metadata
+    - Basque
+    - Brazilian Portuguese
+    - Danish
+    - Dutch
+    - Galician
+    - Hebrew
+    - Indonesian
+    - Korean
+    - Nepali
+    - Occitan
+    - Persian
+    - Polish
+    - Portuguese
+    - Romanian
+    - Russian
+    - Slovak
+    - Slovenian
+    - Spanish
+    - Swedish
+    - Ukrainian
+
+All contributors to this release:
+
+Alexey Rubtsov <rushills@gmail.com>
+Allan Day <allanpday@gmail.com>
+Anders Jonsson <anders.jonsson@norsjovallen.se>
+Andika Triwidada <atriwidada@gnome.org>
+Asier Sarasua Garmendia <asiersarasua@ni.eus>
+Ask Hjorth Larsen <asklarsen@gmail.com>
+Balló György <ballogyor@gmail.com>
+Changwoo Ryu <cwryu@debian.org>
+Cédric Valmary <cvalmary@yahoo.fr>
+Danial Behzadi <dani.behzi@ubuntu.com>
+Daniel Mustieles <daniel.mustieles@gmail.com>
+Dušan Kazik <prescott66@gmail.com>
+Felipe Borges <felipeborges@gnome.org>
+Florentina Mușat <florentina.musat.28@gmail.com>
+Fran Dieguez <frandieguez@gnome.org>
+Hugo Carvalho <hugokarvalho@hotmail.com>
+Jakub Steiner <jimmac@gmail.com>
+Kukuh Syafaat <kukuhsyafaat@gnome.org>
+Manuel Wassermann <manuel.wassermann97@gmail.com>
+Matej Urbančič <mateju@src.gnome.org>
+Nathan Follens <nfollens@gnome.org>
+Pawan Chitrakar <chautari@gmail.com>
+Piotr Drąg <piotrdrag@gmail.com>
+Quentin PAGÈS <pages_quentin@hotmail.com>
+Rafael Fontenelle <rafaelff@gnome.org>
+Veli Tasali <veli.tasali@gmail.com>
+Yaron Shahrabani <sh.yaron@gmail.com>
+Yuri Chornoivan <yurchor@ukr.net>
+
 40.0 - Mar 19, 2021
 ===================
 
