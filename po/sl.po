@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-06-12 09:36+0000\n"
-"PO-Revision-Date: 2021-06-30 22:16+0200\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
+"PO-Revision-Date: 2021-07-13 21:11+0200\n"
 "Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Povezave"
@@ -81,39 +81,44 @@ msgstr "Izbriši"
 msgid "Properties"
 msgstr "Lastnosti"
 
-#: src/application.vala:80
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr "Matej Urbančič <mateju@src.gnome.org>"
 
-#: src/application.vala:81 src/application.vala:214
+#: src/application.vala:89 src/application.vala:234
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME"
 
-#: src/application.vala:128
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ni mogoče odpreti datoteke neznane vrste mime %s"
 
-#: src/application.vala:157
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Povezava z »%s« je bila izbrisana"
 
-#: src/application.vala:160
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Razveljavi"
 
-#: src/application.vala:206
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "Naslov URL za povezavo"
 
-#: src/application.vala:207
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Odpri datoteko .vnc oziroma .rdp na podani POTI"
 
-#: src/application.vala:229
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Navedenih je preveč argumentov ukazne vrstice.\n"
+
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Več o tem."
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:65
@@ -146,9 +151,10 @@ msgstr "Overitev je spodletela: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Prilagajanje velikosti"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Več podrobnosti je zapisanih v vodniku."
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -182,7 +188,7 @@ msgstr "_Geslo"
 msgid "Sign In"
 msgstr "Prijava"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
 msgstr "Dobrodošli v program Povezave"
 
@@ -190,15 +196,36 @@ msgstr "Dobrodošli v program Povezave"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Pritisnite gumb <b>+</b> in ustvarite prvo povezavo."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "Program olajša delo z oddaljenimi namizji."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Povezava z okolji Linux in WIndows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Oddaljen dostop do različnih operacijskih sistemov."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Nastavitve za dostop"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr ""
+"Za dostop do oddaljenega namizja je treba najprej prilagoditi nastavitve."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
 msgstr "Lastnosti povezave"
 
-#: src/ui/properties.ui:32
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Naslov"
 
-#: src/ui/properties.ui:67
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
 msgid "Name"
 msgstr "Ime"
 
@@ -266,48 +293,56 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:119
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Zaslon"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Prilagajanje velikosti"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Samo pogled"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Pokaži kazalnik"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Pasovna širina"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Visoka kakovost"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Hitro osveževanje"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Način spreminjanja velikosti"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Prilagodi oknu"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Izvorna velikost"
+
+#: src/vnc-connection.vala:124
 msgid "Couldn’t parse the file"
 msgstr "Datoteke ni mogoče razčleniti"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
-#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
+#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Datoteka VNC je brez ključa »%s«"
-
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Samo pogled"
-
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Pokaži kazalnik"
-
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Pasovna širina"
-
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Visoka kakovost"
-
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Hitro osveževanje"
-
-#: src/vnc-properties-dialog.vala:54
-msgid "Scale mode"
-msgstr "Način spreminjanja velikosti"
-
-#: src/vnc-properties-dialog.vala:56
-msgid "Fit window"
-msgstr "Prilagodi oknu"
-
-#: src/vnc-properties-dialog.vala:57
-msgid "Original size"
-msgstr "Izvorna velikost"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "Povezave GNOME"
