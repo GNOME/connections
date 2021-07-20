@@ -44,7 +44,7 @@ namespace Connections {
             }
 
             var uri = Xml.URI.parse (url_entry.text);
-            if (uri == null || uri.scheme == null || uri.path != null) {
+            if (uri == null || uri.scheme == null || uri.path != null || uri.server == null) {
                 create_button.sensitive = false;
 
                 return;
