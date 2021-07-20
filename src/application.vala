@@ -134,6 +134,8 @@ namespace Connections {
                 return;
 
             model.insert (0, connection);
+
+            open_connection (connection);
         }
 
         public void add_connection_from_file (string file_path) {
