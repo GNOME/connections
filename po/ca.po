@@ -2,17 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the connections package.
 #
-# Jordi Mas i Hernàndez <jmas@softcatala.org>, 2020
+# Jordi Mas i Hernàndez <jmas@softcatala.org>, 2020-2021
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2020-12-08 01:28+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
 "PO-Revision-Date: 2020-12-23 08:45+0100\n"
-"Last-Translator: Miquel-Àngel Burgos i Fradeja <miquel.angel."
-"burgos@gmail.com>\n"
+"Last-Translator: Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>\n"
 "Language-Team: ca\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -21,26 +19,50 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Connexions del GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "El projecte GNOME"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Connexions"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Visualitza i utilitza altres escriptoris"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"El Connexions us permet connectar i utilitzar altres escriptoris. Aquesta"
+" pot ser una bona manera d'accedir al contingut o programari en un sistema "
+"operatiu d'escriptori diferent. També es pot utilitzar com a manera de donar"
+" suport als usuaris que puguin necessitar ajuda."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Es pot connectar a una sèrie de diferents sistemes operatius, incloent-hi "
+"escriptoris Linux i Windows. També podeu connectar a màquines virtuals."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"El connexions utilitza els protocols VNC i RDP àmpliament admesos, i un "
+"d'aquests ha d'estar habilitat a l'escriptori al qual voleu connectar."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;remot;escriptori;windows;suport;accés;visualitza"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -50,61 +72,76 @@ msgstr "Fitxer d'escriptori remot (VNC)"
 msgid "Delete"
 msgstr "Suprimeix"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Propietats"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:234
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
+
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "No s'ha pogut obrir el fitxer de tipus MIME desconegut %s"
 
-#: src/application.vala:170
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "S'ha eliminat la connexió a «%s»"
 
-#: src/application.vala:172
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Desfés"
 
-#: src/application.vala:211
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "URL a connectar"
 
-#: src/application.vala:212
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Obre el fitxer .vnc o .rdp al CAMÍ indicat"
 
-#: src/application.vala:234
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "S'han especificat massa arguments de línia d'ordres.\n"
 
+#. Translators: This is a link which takes users to a documentation page in
+#. yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Més informació."
+
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Captura de pantalla des de %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Captura de pantalla feta"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Obre"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» requereix autenticació"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Ha fallat l'autenticació: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -112,41 +149,30 @@ msgstr "«%s» requereix autenticació"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
-msgid "Scaling"
-msgstr "S'està escalant"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Llegiu el nostre tutorial per a aprendre com."
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Fes una captura de pantalla"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Crea una connexió nova"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Pantalla completa"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
-"Introduïu una adreça de la màquina a la qual connectar-se. L'adreça pot "
-"començar amb rdp::// o vnc:://"
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Connecta a un escriptori"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Servidor"
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Connecta"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Nom"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Crea"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Les adreces comencen amb vnc:// o rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -160,7 +186,7 @@ msgstr "_Contrasenya"
 msgid "Sign In"
 msgstr "Inicia la sessió"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
 msgstr "Us donem la benvinguda al Connexions"
 
@@ -168,13 +194,37 @@ msgstr "Us donem la benvinguda al Connexions"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Premeu el botó <b>+</b> per a fer la vostra primera connexió."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Propietats de la connexió"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "El connexions facilita l'ús remot d'altres escriptoris."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Connecta a Linux o Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Accés remot a un ampli ventall de sistemes operatius d'escriptori."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Configura per a accedir"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr "Per connectar-vos a un escriptori, primer cal configurar-lo."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Preferències de la connexió"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Adreça"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Nom"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -216,72 +266,78 @@ msgstr "Ajuda"
 msgid "About Connections"
 msgstr "Quant al Connexions"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Retrocés"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Supr"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Mostra"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "S'està escalant"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Mostra només"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Mostra el punter local"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Amplada de banda"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Qualitat alta"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Actualització ràpida"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Mode d'escala"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Ajusta la finestra"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Mida original"
+
+#: src/vnc-connection.vala:124
 msgid "Couldn’t parse the file"
 msgstr "No s'ha pogut analitzar el fitxer"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
+#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la clau «%s» del fitxer VNC"
 
-#: src/vnc-connection.vala:295
-msgid "View only"
-msgstr "Mostra només"
-
-#: src/vnc-connection.vala:305
-msgid "Show local pointer"
-msgstr "Mostra el punter local"
-
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "Qualitat alta"
-
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "Actualització ràpida"
-
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Amplada de banda"
-
-#~ msgid "A remote connection manager for the GNOME desktop"
-#~ msgstr "Un client d'escriptori remot per a l'entorn d'escriptori GNOME"
-
-#~ msgid "— A simple application to access remote connections"
-#~ msgstr "— Una aplicació senzilla per accedir a les connexions remotes"
-
-#~ msgid "VNC File is missing key “Port“"
-#~ msgstr "Manca la clau «Port» al fitxer VNC"
-
-#~ msgid "VNC File is missing key “Username“"
-#~ msgstr "Manca la clau «Username» al fitxer VNC"
-
-#~ msgid "VNC File is missing key “Password“"
-#~ msgstr "Manca la clau «Password» al fitxer VNC"
