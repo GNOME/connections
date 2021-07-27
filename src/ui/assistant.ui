@@ -2,7 +2,7 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
     <template class="ConnectionsAssistant" parent="GtkPopover">
-      <property name="border-width">10</property>
+      <property name="border-width">20</property>
 
       <child>
         <object class="GtkGrid">
@@ -14,14 +14,15 @@
             <object class="GtkLabel">
               <property name="visible">True</property>
               <property name="halign">start</property>
-              <property name="label" translatable="yes">Connect to a Desktop</property>
-              <attributes>
-                <attribute name="weight" value="bold"/>
-              </attributes>
+              <property name="xalign">0</property>
+              <property name="wrap">True</property>
+              <property name="max-width-chars">40</property>
+              <property name="label" translatable="yes">Enter the network identifier of the remote desktop to connect to:</property>
             </object>
             <packing>
               <property name="top-attach">0</property>
               <property name="left-attach">0</property>
+              <property name="width">2</property>
             </packing>
           </child>
 
@@ -36,32 +37,18 @@
             <packing>
               <property name="top-attach">1</property>
               <property name="left-attach">0</property>
-            </packing>
-          </child>
-
-          <child>
-            <object class="GtkButton" id="create_button">
-              <property name="visible">True</property>
-              <property name="sensitive">False</property>
-              <property name="label" translatable="yes">Connect</property>
-              <signal name="clicked" handler="on_create_connection_button_clicked"/>
-              <style>
-                <class name="suggested-action"/>
-              </style>
-            </object>
-            <packing>
-              <property name="top-attach">1</property>
-              <property name="left-attach">1</property>
+              <property name="width">2</property>
             </packing>
           </child>
 
           <child>
             <object class="GtkLabel">
               <property name="visible">True</property>
-              <property name="label" translatable="yes">Addresses start with either vnc:// or rdp://.</property>
-              <style>
-                <class name="dim-label"/>
-              </style>
+              <property name="halign">start</property>
+              <property name="label" translatable="yes">Connection Type</property>
+              <attributes>
+                <attribute name="weight" value="bold"/>
+              </attributes>
             </object>
             <packing>
               <property name="top-attach">2</property>
@@ -70,14 +57,57 @@
           </child>
 
           <child>
-            <object class="GtkLabel" id="learn_more_label">
+            <object class="GtkRadioButton" id="rdp_radio_button">
               <property name="visible">True</property>
-              <property name="use-markup">True</property>
-              <property name="halign">start</property>
+              <property name="label" translatable="yes">RDP (standard for connecting to Windows)</property>
             </object>
             <packing>
               <property name="top-attach">3</property>
               <property name="left-attach">0</property>
+              <property name="width">2</property>
+            </packing>
+          </child>
+
+          <child>
+            <object class="GtkRadioButton" id="vnc_radio_button">
+              <property name="visible">True</property>
+              <property name="group">rdp_radio_button</property>
+              <property name="label" translatable="yes">VNC (standard for connecting to Linux)</property>
+            </object>
+            <packing>
+              <property name="top-attach">4</property>
+              <property name="left-attach">0</property>
+              <property name="width">2</property>
+            </packing>
+          </child>
+
+          <child>
+            <object class="GtkButton" id="help_button">
+              <property name="visible">True</property>
+              <property name="halign">start</property>
+              <property name="label" translatable="yes">Help</property>
+              <signal name="clicked" handler="on_help_button_clicked"/>
+            </object>
+            <packing>
+              <property name="top-attach">5</property>
+              <property name="left-attach">0</property>
+            </packing>
+          </child>
+
+          <child>
+            <object class="GtkButton" id="create_button">
+              <property name="visible">True</property>
+              <property name="sensitive">False</property>
+              <property name="halign">end</property>
+              <property name="label" translatable="yes">Connect</property>
+              <signal name="clicked" handler="on_create_connection_button_clicked"/>
+              <style>
+                <class name="suggested-action"/>
+              </style>
+            </object>
+            <packing>
+              <property name="top-attach">5</property>
+              <property name="left-attach">1</property>
             </packing>
           </child>
         </object>
@@ -103,5 +133,12 @@
           <col id="0">rdp://</col>  
         </row>
       </data>
+    </object>
+
+    <object class="GtkSizeGroup">
+      <widgets>
+        <widget name="help_button"/>
+        <widget name="create_button"/>
+      </widgets>
     </object>
   </interface>
