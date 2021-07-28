@@ -36,7 +36,7 @@ namespace Connections {
         [GtkChild]
         private unowned Button escape_fullscreen_button;
 
-        private Widget? display;
+        private Connection? connection;
 
         private ulong show_display_id;
 
@@ -45,21 +45,21 @@ namespace Connections {
         }
 
         private void remove_display () {
-            if (event_box.get_child () == null)
-                return;
-
-            display = null;
-
             var widget = event_box.get_child ();
             if (widget != null)
                 event_box.remove (widget);
+
+            connection = null;
         }
 
-        public void replace_display (Gtk.Widget display) {
-            if (event_box.get_child () != null)
-                remove_display ();
+        public void replace_display (Connection connection) {
+            if (event_box.get_child () == connection.widget)
+                return;
 
-            this.display = display;
+            remove_display ();
+
+            this.connection = connection;
+            var display = connection.widget;
 
             display.set_events (display.get_events () & ~EventMask.POINTER_MOTION_MASK);
             event_box.add (display);
@@ -80,7 +80,7 @@ namespace Connections {
         public void connect_to (Connection connection) {
             stack.set_visible_child_name ("loading");
 
-            replace_display (connection.widget);
+            replace_display (connection);
 
             if (show_display_id != 0) {
                 connection.disconnect (show_display_id);
