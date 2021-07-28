@@ -32,9 +32,6 @@ namespace Connections {
         private unowned Stack stack;
 
         [GtkChild]
-        private unowned Widget display_widget;
-
-        [GtkChild]
         private unowned Label size_label;
         [GtkChild]
         private unowned Button escape_fullscreen_button;
@@ -93,7 +90,7 @@ namespace Connections {
         }
 
         private void show_display () {
-            stack.set_visible_child (display_widget);
+            stack.set_visible_child_name ("display");
         }
 
         [GtkCallback]

@@ -26,7 +26,7 @@
           </child>
 
           <child>
-            <object class="GtkOverlay" id="display_widget">
+            <object class="GtkOverlay">
               <property name="visible">True</property>
 
               <child type="overlay">
@@ -72,6 +72,9 @@
                 </object>
               </child>
             </object>
+            <packing>
+              <property name="name">display</property>
+            </packing>
 
           </child>
         </object>
