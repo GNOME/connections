@@ -49,6 +49,10 @@ namespace Connections {
             if (widget != null)
                 event_box.remove (widget);
 
+            if (connection == null)
+                return;
+
+            connection.dispose_display ();
             connection = null;
         }
 

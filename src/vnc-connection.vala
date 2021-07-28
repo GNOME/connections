@@ -23,7 +23,7 @@ using Vnc;
 
 namespace Connections {
     private class VncConnection : Connection {
-        private Gtk.Window window;
+        private Gtk.Window sidecar_vnc_window;
         private Gtk.Clipboard clipboard;
 
         private Vnc.Display display;
@@ -33,8 +33,8 @@ namespace Connections {
             }
 
             get {
-                if (window.get_child () != null)
-                    window.remove (display);
+                if (sidecar_vnc_window.get_child () != null)
+                    sidecar_vnc_window.remove (display);
 
                 return display as Gtk.Widget;
             }
@@ -90,9 +90,7 @@ namespace Connections {
             display.set_pointer_grab (true);
             display.set_force_size (false);
 
-            window = new Gtk.Window ();
-            window.add (display);
-            display.realize ();
+            dispose_display ();
 
             clipboard = Gtk.Clipboard.get_default (Application.application.main_window.get_display ());
 
@@ -175,6 +173,17 @@ namespace Connections {
             if (display.is_open ())
                 display.close ();
             connected = false;
+        }
+
+        public override void dispose_display () {
+            /* The Vnc.Display widget doesn't like not having a realized window.
+             * so we pack it on a temporary window for initialization and for
+             * when the connection persists but the display is not being presented. */
+            if (sidecar_vnc_window == null)
+                sidecar_vnc_window = new Gtk.Window ();
+
+            sidecar_vnc_window.add (display);
+            display.realize ();
         }
 
         public override void send_keys (uint[] keyvals) {

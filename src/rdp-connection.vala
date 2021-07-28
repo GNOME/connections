@@ -92,6 +92,9 @@ namespace Connections {
             connected = false;
         }
 
+        public override void dispose_display () {
+        }
+
         public override void send_keys (uint[] keyvals) {
         }
 

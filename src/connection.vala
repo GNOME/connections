@@ -166,5 +166,7 @@ namespace Connections {
 
         public abstract void connect_it ();
         public abstract void disconnect_it ();
+
+        public abstract void dispose_display ();
     }
 }
