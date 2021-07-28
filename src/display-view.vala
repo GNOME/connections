@@ -80,12 +80,12 @@ namespace Connections {
         public void connect_to (Connection connection) {
             stack.set_visible_child_name ("loading");
 
-            replace_display (connection);
-
             if (show_display_id != 0) {
-                connection.disconnect (show_display_id);
+                this.connection.disconnect (show_display_id);
                 show_display_id = 0;
             }
+
+            replace_display (connection);
 
             show_display_id = connection.show.connect (show_display);
             connection.connect_it ();
