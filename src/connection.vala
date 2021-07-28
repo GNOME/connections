@@ -135,6 +135,7 @@ namespace Connections {
 
         protected void on_connection_error_cb (string reason) {
             Application.application.main_window.notifications_bar.display_for_error (reason);
+            Application.application.main_window.show_collection_view ();
         }
 
         protected void auth_failed (string reason) {
@@ -144,8 +145,8 @@ namespace Connections {
 
             auth_notification = null;
             var message = _("Authentication failed: %s").printf (reason);
-            Application.application.main_window.notifications_bar.display_for_error (message);
             Application.application.main_window.show_collection_view ();
+            Application.application.main_window.notifications_bar.display_for_error (message);
         }
 
         construct {
