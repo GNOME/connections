@@ -157,8 +157,11 @@ namespace Connections {
         }
 
         public override void connect_it () {
-            if (connected)
+            if (connected) {
+                show ();
+
                 return;
+            }
             connected = true;
 
             display.set_credential (DisplayCredential.USERNAME, username);

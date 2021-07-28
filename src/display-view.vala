@@ -78,6 +78,8 @@ namespace Connections {
         }
 
         public void connect_to (Connection connection) {
+            stack.set_visible_child_name ("loading");
+
             replace_display (connection.widget);
 
             if (show_display_id != 0) {
