@@ -94,6 +94,7 @@ namespace Connections {
 
             clipboard = Gtk.Clipboard.get_default (Application.application.main_window.get_display ());
 
+            display.vnc_error.connect (on_connection_error_cb);
             display.vnc_initialized.connect (() => { show (); });
             display.vnc_auth_credential.connect (on_vnc_auth_credential_cb);
             display.vnc_auth_failure.connect (on_vnc_auth_failure_cb);

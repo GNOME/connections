@@ -133,6 +133,10 @@ namespace Connections {
                                                                                         need_username);
         }
 
+        protected void on_connection_error_cb (string reason) {
+            Application.application.main_window.notifications_bar.display_for_error (reason);
+        }
+
         protected void auth_failed (string reason) {
             disconnect_it ();
 
