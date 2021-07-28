@@ -16,6 +16,7 @@ conf = configuration_data ()
 conf.set_quoted ('GETTEXT_PACKAGE', meson.project_name ())
 conf.set_quoted ('LOCALEDIR', locale_dir)
 conf.set_quoted ('VERSION', '@0@-@VCS_TAG@'.format (meson.project_version()))
+conf.set_quoted ('PACKAGE_TARNAME', meson.project_name ())
 
 if get_option ('profile') == 'development'
   profile = '.Devel'

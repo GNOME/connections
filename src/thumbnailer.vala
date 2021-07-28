@@ -25,18 +25,17 @@ namespace Connections {
 
         public signal void update ();
 
-        public string? thumbnail_path {
-            owned get {
-                return Path.build_filename (Environment.get_user_cache_dir (),
-                                            "connections",
-                                            connection.host + ".png");
-            }
-        }
+        public string? thumbnail_path;
 
         private uint thumbnail_id;
 
         public Thumbnailer (Connection connection) {
             this.connection = connection;
+
+            var cache_dir = Path.build_filename (Environment.get_user_cache_dir (),
+                                                 Config.PACKAGE_TARNAME);
+            ensure_directory (cache_dir);
+            thumbnail_path = Path.build_filename (cache_dir, connection.host);
         }
 
         public void update_thumbnail () {
@@ -49,7 +48,7 @@ namespace Connections {
                     try {
                         connection.thumbnail.save (thumbnail_path, "png");
                     } catch (GLib.Error error) {
-                        warning (error.message);
+                        debug (error.message);
 
                         return false;
                     }
@@ -57,6 +56,16 @@ namespace Connections {
 
                return true; 
             });            
+        }
+
+        private void ensure_directory (string dir) {
+            try {
+                var file = GLib.File.new_for_path (dir);
+                file.make_directory_with_parents (null);
+            } catch (GLib.IOError.EXISTS error) {
+            } catch (GLib.Error error) {
+                debug (error.message);
+            }
         }
     }
 }

@@ -4,4 +4,5 @@ namespace Config {
     public const string LOCALEDIR;
     public const string VERSION;
     public const string APPLICATION_ID;
+    public const string PACKAGE_TARNAME;
 }
