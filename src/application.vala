@@ -222,16 +222,19 @@ namespace Connections {
             quit ();
         }
 
+        static bool opt_fullscreen;
         static string[] opt_uris;
         static string opt_file_import_uri;
         const OptionEntry[] options = {
             { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_ ("URL to connect"), null },
             { "file", 'F', 0, GLib.OptionArg.FILENAME, ref opt_file_import_uri, N_ ("Open .vnc or .rdp file at the given PATH"), "PATH" },
+            { "fullscreen", 'f', 0, GLib.OptionArg.NONE, ref opt_fullscreen, N_("Open in full screen"), null },
             { null }
         };
         public override int command_line (GLib.ApplicationCommandLine cmdline) {
             opt_uris = null;
             opt_file_import_uri = null;
+            opt_fullscreen = false;
 
             var parameter_string = _("A remote desktop client for the GNOME desktop environment");
             var opt_context = new OptionContext ("— " + parameter_string);
@@ -264,6 +267,8 @@ namespace Connections {
             if (opt_file_import_uri != null) {
                 add_connection_from_file (opt_file_import_uri);
             }
+
+            main_window.fullscreened = opt_fullscreen;
 
             return 0;
         }
