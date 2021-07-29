@@ -84,8 +84,11 @@
           <object class="GtkEntry" id="password_entry">
             <property name="visible">True</property>
             <property name="visibility">False</property>
+            <property name="secondary-icon-activatable">True</property>
+            <property name="secondary-icon-name">eye-not-looking-symbolic</property>
             <signal name="map" handler="on_password_entry_map"/>
             <signal name="activate" handler="on_password_entry_activated"/>
+            <signal name="icon-release" handler="on_secondary_icon_clicked"/>
           </object>
 
           <packing>

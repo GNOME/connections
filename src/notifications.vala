@@ -223,6 +223,15 @@ namespace Connections {
             dismiss ();
         }
 
+        [GtkCallback]
+        private void on_secondary_icon_clicked () {
+            password_entry.visibility = !password_entry.visibility;
+
+            password_entry.secondary_icon_name = password_entry.visibility ?
+                                                 "eye-open-negative-filled-symbolic" :
+                                                 "eye-not-looking-symbolic";
+        }
+
         public void dismiss () {
             set_reveal_child (false);
             dismissed ();

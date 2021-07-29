@@ -14,6 +14,9 @@
     <file>ui/topbar.ui</file>
     <file>ui/window.ui</file>
 
+    <file>ui/eye-not-looking-symbolic.svg</file>
+    <file>ui/eye-open-negative-filled-symbolic.svg</file>
+
     <!-- Onboarding dialog -->
     <file>ui/onboarding-dialog.ui</file>
     <file>ui/onboarding-dialog-page.ui</file>
