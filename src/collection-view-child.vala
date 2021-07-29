@@ -30,33 +30,40 @@ namespace Connections {
         [GtkChild]
         public unowned Gtk.Image thumbnail; 
 
+        private uint thumbnail_id = 0;
+
         public CollectionViewChild (Connection connection) {
             this.connection = connection;
 
             update_display_name ();
             connection.notify["display-name"].connect (update_display_name);
 
-            connection.thumbnailer.update.connect (() => {
-                thumbnail.set_from_pixbuf (connection.thumbnail.scale_simple (180, 134, Gdk.InterpType.BILINEAR));
-            }); 
-
-            update_thumbnail.begin ();
+            connection.show.connect (update_thumbnail);
         }
 
         private void update_display_name () {
             connection_name.set_text (connection.get_visible_name ());
         }
 
-        private async void update_thumbnail () {
-            var file = GLib.File.new_for_path (connection.thumbnailer.thumbnail_path);
-            if (file.query_exists ()) {
-                try {
-                    var pixbuf = new Gdk.Pixbuf.from_file_at_scale (file.get_path (), 180, 134, true);
-                    thumbnail.set_from_pixbuf (pixbuf);
-                } catch (GLib.Error error) {
-                    debug ("Failed to update thumbnail: %s", error.message);
+        private void update_thumbnail () {
+            thumbnail_id = Timeout.add_seconds (3, () => {
+                if (!connection.connected) {
+                    thumbnail_id = 0;
+                    thumbnail.set_from_icon_name ("org.gnome.Connections-symbolic",
+                                                  Gtk.IconSize.LARGE_TOOLBAR);
+                    return false;
                 }
-            }
+
+                thumbnail.set_from_pixbuf (connection.thumbnail.scale_simple (180, 134,
+                                                                              Gdk.InterpType.BILINEAR));
+
+                return true;
+            });
+        }
+
+        ~CollectionViewChild () {
+            if (thumbnail_id != 0)
+                Source.remove (thumbnail_id);
         }
     }
 }

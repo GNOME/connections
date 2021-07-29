@@ -15,7 +15,6 @@ connections_sources = [
   'preferences-widgets.vala',
   'rdp-connection.vala',
   'rdp-preferences-window.vala',
-  'thumbnailer.vala',
   'topbar.vala',
   'vnc-connection.vala',
   'vnc-preferences-window.vala',

@@ -51,7 +51,6 @@ namespace Connections {
 
         public abstract void send_keys (uint[] keys);
 
-        public Thumbnailer thumbnailer;
         public abstract Gdk.Pixbuf? thumbnail { set; owned get; }
 
         public async void take_screenshot () {
@@ -150,10 +149,6 @@ namespace Connections {
         }
 
         construct {
-            thumbnailer = new Connections.Thumbnailer (this);
-
-            show.connect (() => { thumbnailer.update_thumbnail (); });
-
             notify.connect (save);
         }
 
