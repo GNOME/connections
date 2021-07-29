@@ -99,12 +99,22 @@ namespace Connections {
             back_button_clicked ();
         }
 
+        public void show_collection_view () {
+            this.connection = null;
+
+            set_visible_child (collection_toolbar);
+        }
+
         public void show_display_view (Connection connection) {
             this.connection = connection;
 
             set_visible_child (display_toolbar);
 
-            display_toolbar.set_title (connection.display_name);
+            display_toolbar.set_title (connection.get_visible_name ());
+        }
+
+        public void set_title (string title) {
+            collection_toolbar.set_title (title);
         }
 
         private void ctrl_alt_backspace_activated () {

@@ -103,6 +103,9 @@ namespace Connections {
 
         public void show_collection_view () {
             stack.set_visible_child (collection_view);
+
+            topbar.show_collection_view ();
+            topbar.set_title (_("Connections"));
         }
 
         public void show_preferences_window (Connection connection) {
