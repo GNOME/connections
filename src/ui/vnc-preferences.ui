@@ -86,7 +86,7 @@
                       <property name="visible">True</property>
                       <property name="valign">center</property>
                       <items>
-                        <item id="high-qualiy" translatable="yes">High quality</item>
+                        <item id="high-quality" translatable="yes">High quality</item>
                         <item id="fast-refresh" translatable="yes">Fast refresh</item>
                       </items>
                     </object>
