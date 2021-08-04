@@ -40,6 +40,7 @@
                   <child>
                     <object class="GtkEntry" id="connection_name_entry">
                       <property name="visible">True</property>
+                      <property name="hexpand">True</property>
                       <property name="valign">center</property>
                     </object>
                   </child>
