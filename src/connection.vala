@@ -102,8 +102,8 @@ namespace Connections {
         private AuthNotification auth_notification = null;
         public bool need_password;
         public bool need_username;
-        public string? username;
-        public string? password;
+        public string? username { get; set; }
+        public string? password { get; set; }
         protected void handle_auth () {
             if (auth_notification != null)
                 return;
@@ -153,8 +153,13 @@ namespace Connections {
         }
 
         public void save (GLib.ParamSpec? pspec = null) {
-            if (uuid != null && pspec != null)
+            if (uuid != null && pspec != null) {
+                /* Don't save the credentials in plain text */
+                if (pspec.name == "username" || pspec.name == "password")
+                    return;
+
                 Database.get_default ().save_property (this, pspec.name);
+            }
         }
 
         public string get_visible_name () {
