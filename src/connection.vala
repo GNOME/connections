@@ -47,7 +47,7 @@ namespace Connections {
         public string host { get; protected set; }
         public abstract int port { get; protected set; }
         public string protocol { get; protected set; }
-        public string display_name { get; set; }
+        public string display_name { get; set; default = ""; }
 
         public abstract void send_keys (uint[] keys);
 
