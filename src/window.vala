@@ -106,6 +106,10 @@ namespace Connections {
 
             topbar.show_collection_view ();
             topbar.set_title (_("Connections"));
+
+            if (notifications_bar.active_notification is AuthNotification) {
+                notifications_bar.dismiss ();
+            }
         }
 
         public void show_preferences_window (Connection connection) {
@@ -151,7 +155,7 @@ namespace Connections {
 
         [GtkCallback]
         private bool on_delete_event () {
-            notifications_bar.dismiss_any_notification ();
+            notifications_bar.dismiss ();
 
             return false;
         }

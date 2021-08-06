@@ -25,7 +25,7 @@ namespace Connections {
         private const int MAX_NOTIFICATIONS = 5;
 
         private Gtk.Widget? _active_notification;
-        private Gtk.Widget? active_notification {
+        public Gtk.Widget? active_notification {
             get {
                 return _active_notification;
             }
@@ -79,12 +79,20 @@ namespace Connections {
             return notification;
         }
 
-        public void dismiss_any_notification () {
+        public void dismiss () {
             if (active_notification != null) {
-                Notification? child = active_notification as Notification;
-                if (child != null) {
-                    child.dismiss ();
+                // TODO: Make AuthNotification derived from Notification
+                if (active_notification is Notification) {
+                    Notification? notification = active_notification as Notification;
+
+                    notification.dismiss ();
+                } else if (active_notification is AuthNotification) {
+                    AuthNotification? notification = active_notification as AuthNotification;
+
+                    notification.dismiss ();
                 }
+
+                active_notification = null;
             }
         }
     }
