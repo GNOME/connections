@@ -61,6 +61,7 @@ namespace Connections {
 
             display.rdp_connected.connect (() => { show (); });
             display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
+            display.rdp_auth_failure.connect (auth_failed);
             //display.size_allocate.connect (scale);
         }
 
@@ -88,7 +89,8 @@ namespace Connections {
         }
 
         public override void disconnect_it () {
-            display.close ();
+            if (connected)
+                display.close ();
             connected = false;
         }
 
@@ -103,7 +105,7 @@ namespace Connections {
 
             handle_auth ();
 
-            display.close ();
+            disconnect_it ();
         }
     }
 
