@@ -1,14 +1,14 @@
 # Lithuanian translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Aurimas Černius <aurisc4@gmail.com>, 2020.
+# Aurimas Černius <aurisc4@gmail.com>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-12-08 17:26+0000\n"
-"PO-Revision-Date: 2020-12-10 22:33+0200\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
+"PO-Revision-Date: 2021-08-08 22:34+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -17,29 +17,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "GNOME ryšiai"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "GNOME projektas"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Ryšiai"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Rodyti ir naudoti kitus darbalaukius"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Ryšiai leidžia prisijungti ir naudotis kitais darbalaukiais. Tai yra puikus "
+"būdas pasiekti turinį ar programinę įrangą kitoje operacinėje sistemoje. "
+"Taip pat galima naudoti teikiant pagalbą naudotojams."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Galima prisijungti prie įvairių operacinių sistemų, tokių kaip Linux ar "
+"Windows darbalaukiai. Taip pat galima prisijungti prie virtualių mašinų."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Ryšiai naudoja plačiai palaikomus VNC ir RDP protokolos, vienas iš jų turi "
+"būti įjungtas darbalaukyje, prie kurio norima prisijungti."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "GNOME projektas"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;nutolęs;darbalaukis;langai;pagalba;prieiga;rodymas;"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -49,62 +72,76 @@ msgstr "Nuotolinio darbalaukio (VNC) failas"
 msgid "Delete"
 msgstr "Ištrinti"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Savybės"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "Išvertė:\n"
 "\n"
 "Aurimas Černius <aurisc4@gmail.com>"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:234
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai"
+
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nepavyko atverti nežinomo MIME tipo failo %s"
 
-#: src/application.vala:170
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Ryšys „%s“ buvo ištrintas"
 
-#: src/application.vala:172
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: src/application.vala:211
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "Prisijungti prie URL"
 
-#: src/application.vala:212
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Atverti .vnc arba .rdp failą nurodytame KELYJE"
 
-#: src/application.vala:234
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Pateikta per daug komandų eilutės argumentų.\n"
 
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Sužinokite daugiau."
+
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:65
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Ekrano nuotrauka iš %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:80
 msgid "Screenshot taken"
 msgstr "Ekrano nuotrauka padaryta"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:83
 msgid "Open"
 msgstr "Atverti"
 
-#: src/connection.vala:188
+#: src/connection.vala:128
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "„%s“ prašo patvirtinti tapatybę"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Nepavyko patvirtinti tapatybės: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:138
@@ -112,41 +149,31 @@ msgstr "„%s“ prašo patvirtinti tapatybę"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
-msgid "Scaling"
-msgstr "Mastelis"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Perskaitykite vadovą ir sužinokite kaip."
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Padaryti nuotrauką"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Sukurti naują ryšį"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Visame ekrane"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
-"Įveskite kompiuterio, prie kurio jungtis, adresą. Adresas gali prasidėti "
-"rdp:// arba vnc://"
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Prisijungti prie darbalaukio"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Serveris"
+#: src/ui/assistant.ui:46
+#| msgid "Connections"
+msgid "Connect"
+msgstr "Prisijungti"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Pavadinimas"
-
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Atsisakyti"
-
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Sukurti"
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Adresas gali prasidėti vnc:// arba rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -160,7 +187,7 @@ msgstr "Sla_ptažodis"
 msgid "Sign In"
 msgstr "Prisijungti"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
 msgstr "Sveiki pradėję naudoti ryšius"
 
@@ -168,13 +195,38 @@ msgstr "Sveiki pradėję naudoti ryšius"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Tiesiog spauskite mygtuką <b>+</b> pirmajam ryšiui sukurti."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "Ryšiai leidžia lengvai nuotoliniu būdu naudoti kitus darbalaukius."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Prisijungti prie Linux arba Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Nuotoliniu būdu prisijungti prie darbalaukio operacinių sistemų."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Konfigūruoti prieigą"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr "Prisijungimui prie darbalaukio pirmiausia reikia jį sukonfigūruoti."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+#| msgid "Connection Properties"
+msgid "Connection preferences"
 msgstr "Ryšio savybės"
 
-#: src/ui/properties.ui:32
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Adresas"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Pavadinimas"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -216,57 +268,103 @@ msgstr "Žinynas"
 msgid "About Connections"
 msgstr "Apie ryšius"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Vald + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Vald + Alt + Trinti"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Vald + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Vald + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Vald + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Vald + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:54
+#| msgid "Display Menu"
+msgid "Display"
+msgstr "Vaizduoklis"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Mastelis"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Tik žiūrėti"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Rodyti vietinį žymeklį"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Pralaidumas"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Aukštos kokybės"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Greitas atnaujinimas"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Ištempimo veiksena"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Pritaikyti prie lango"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Pradinis dydis"
+
+#: src/vnc-connection.vala:124
 msgid "Couldn’t parse the file"
 msgstr "Nepavyko perskaityti failo"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
+#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC faile trūksta rakto „%s“"
 
-#: src/vnc-connection.vala:295
-msgid "View only"
-msgstr "Tik žiūrėti"
+#~ msgid "GNOME Connections"
+#~ msgstr "GNOME ryšiai"
 
-#: src/vnc-connection.vala:305
-msgid "Show local pointer"
-msgstr "Rodyti vietinį žymeklį"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai."
 
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "Aukštos kokybės"
+#~ msgid "Create a New Connection"
+#~ msgstr "Sukurti naują ryšį"
 
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "Greitas atnaujinimas"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Įveskite kompiuterio, prie kurio jungtis, adresą. Adresas gali prasidėti "
+#~ "rdp:// arba vnc://"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Pralaidumas"
+#~ msgid "Server"
+#~ msgstr "Serveris"
+
+#~ msgid "Cancel"
+#~ msgstr "Atsisakyti"
+
+#~ msgid "Create"
+#~ msgstr "Sukurti"
