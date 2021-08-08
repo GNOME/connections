@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-06-12 09:36+0000\n"
-"PO-Revision-Date: 2021-06-21 20:52+0300\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
+"PO-Revision-Date: 2021-08-08 07:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "חיבורים"
@@ -36,9 +36,9 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
-"תכנית האחיבורים מאפשרת לך להתחבר ולהשתמש בשולחנות עבודה אחרים. זו יכולה "
-"להיות דרך מצוינת לגשת לתוכן או לתכניות בשולחן עבודה במערכת הפעלה אחרת. ניתן "
-"גם להשתמש בזה כדרך לספק תמיכה למשתמשים שאולי זקוקים לעזרה."
+"תכנית החיבורים מאפשרת לך להתחבר ולהשתמש בשולחנות עבודה אחרים. זו יכולה להיות "
+"דרך מצוינת לגשת לתוכן או לתכניות בשולחן עבודה במערכת הפעלה אחרת. ניתן גם "
+"להשתמש בזה כדרך לספק תמיכה למשתמשים שאולי זקוקים לעזרה."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
@@ -50,11 +50,11 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
-"Connections uses the widely supported VNC and RDP protocols, and one of "
-"these must be enabled on the desktop that you want to connect to."
+"Connections uses the widely supported VNC and RDP protocols, and one of these "
+"must be enabled on the desktop that you want to connect to."
 msgstr ""
-"תכנית החיבורים משתמשת בפרוטוקולים VNC ו־RDP הנפוצים ועל אחד מאלה להיות "
-"פעילים בשולחן העבודה אליו ברצונך להתחבר."
+"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות פעילים "
+"בשולחן העבודה אליו ברצונך להתחבר."
 
 #: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
@@ -78,42 +78,47 @@ msgstr "מחיקה"
 msgid "Properties"
 msgstr "מאפיינים"
 
-#: src/application.vala:80
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
 "\n"
 "<a href=\"https://l10n.gnome.org/teams/he/\">מיזם תרגום GNOME לעברית</a>"
 
-#: src/application.vala:81 src/application.vala:214
+#: src/application.vala:89 src/application.vala:234
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "לקוח שולחן עבודה מרוחק עבור סביבת שולחן העבודה GNOME"
 
-#: src/application.vala:128
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "לא ניתן לפתוח קובץ כי סוגו אינו ידוע %s"
 
-#: src/application.vala:157
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "התחברות אל „%s” נמחקה"
 
-#: src/application.vala:160
+#: src/application.vala:180
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/application.vala:206
+#: src/application.vala:226
 msgid "URL to connect"
-msgstr "URL to connect"
+msgstr "כתובת להתחברות"
 
-#: src/application.vala:207
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Open .vnc or .rdp file at the given PATH"
 
-#: src/application.vala:229
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Too many command-line arguments specified.\n"
+
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "מידע נוסף."
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:65
@@ -146,9 +151,10 @@ msgstr "האימות נכשל: %s"
 msgid "%d×%d"
 msgstr "‫‎%d×%d"
 
-#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "קנה מידה"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "המדריך שלנו יסביר לך כיצד."
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -164,7 +170,7 @@ msgstr "התחברות לשולחן עבודה"
 
 #: src/ui/assistant.ui:46
 msgid "Connect"
-msgstr "התחברות"
+msgstr "חיבור"
 
 #: src/ui/assistant.ui:61
 msgid "Addresses start with either vnc:// or rdp://."
@@ -182,7 +188,7 @@ msgstr "_ססמה"
 msgid "Sign In"
 msgstr "כניסה"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
 msgstr "ברוך בואך לחיבורים"
 
@@ -190,15 +196,35 @@ msgstr "ברוך בואך לחיבורים"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "פשוט ללחוץ על כפתור ה<b>+</b> ליצירת ההתחברות הראשונה שלך."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "מאפייני התחברות"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "כלי החיבורים מקל על השימוש מרחוק בשולחנות עבודה אחרים."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "התחברות ללינוקס או ל־Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "גישה מרחוק למגוון של מערכות הפעלה עם שולחנות עבודה."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "הגדרה לגישה"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr "כדי להתחבר לשולחן עבודה, יש להגדיר אותו תחילה."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "העדפות התחברות"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "כתובת"
 
-#: src/ui/properties.ui:67
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
 msgid "Name"
 msgstr "שם"
 
@@ -224,7 +250,7 @@ msgstr "הצגת תפריט"
 
 #: src/ui/topbar.ui:149
 msgid "Disconnect"
-msgstr "התנתקות"
+msgstr "ניתוק"
 
 #: src/ui/topbar.ui:174
 msgid "Keyboard shortcuts"
@@ -240,7 +266,7 @@ msgstr "עזרה"
 
 #: src/ui/topbar.ui:205
 msgid "About Connections"
-msgstr "על אודות התחברויות"
+msgstr "על אודות חיבורים"
 
 #: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
@@ -266,48 +292,56 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:119
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "תצוגה"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "קנה מידה"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "תצוגה בלבד"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "הצגת הסמן המקומי"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "רוחב פס"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "איכות גבוהה"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "רענון מהיר"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "מצב שינוי גודל"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "התאמת החלון"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "גודל מקורי"
+
+#: src/vnc-connection.vala:124
 msgid "Couldn’t parse the file"
 msgstr "לא ניתן לנתח את הקובץ"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
-#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
+#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "בקובץ ה־VNC חסר המפתח „%s”"
-
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "תצוגה בלבד"
-
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "הצגת הסמן המקומי"
-
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "רוחב פס"
-
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "איכות גבוהה"
-
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "רענון מהיר"
-
-#: src/vnc-properties-dialog.vala:54
-msgid "Scale mode"
-msgstr "מצב שינוי גודל"
-
-#: src/vnc-properties-dialog.vala:56
-msgid "Fit window"
-msgstr "התאמת החלון"
-
-#: src/vnc-properties-dialog.vala:57
-msgid "Original size"
-msgstr "גודל מקורי"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "התחברויות של GNOME"
