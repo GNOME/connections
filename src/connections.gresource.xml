@@ -18,7 +18,9 @@
     <file>ui/onboarding-dialog.ui</file>
     <file>ui/onboarding-dialog-page.ui</file>
     <file>ui/onboarding/configure-access.svg</file>
-    <file>ui/onboarding/empty.svg</file>
     <file>ui/onboarding/multiplatform.svg</file>
+    <file>ui/onboarding/remote-computer.svg</file>
+    <file>ui/onboarding/thankyou.svg</file>
+    <file>ui/onboarding/welcome.svg</file>
   </gresource>
 </gresources>

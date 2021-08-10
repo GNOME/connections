@@ -39,7 +39,7 @@
                   <object class="ConnectionsOnboardingDialogPage" id="homepage">
                     <property name="title" translatable="yes">Welcome to Connections</property>
                     <property name="description" translatable="yes">Connections makes it easy to use other desktops remotely.</property>
-                    <property name="image">/org/gnome/Connections/ui/onboarding/empty.svg</property>
+                    <property name="image">/org/gnome/Connections/ui/onboarding/welcome.svg</property>
                   </object>
                 </child>
 
