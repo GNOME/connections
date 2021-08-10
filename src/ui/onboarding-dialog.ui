@@ -18,24 +18,6 @@
         <property name="orientation">vertical</property>
 
         <child>
-          <object class="GtkButton">
-            <property name="visible">True</property>
-            <property name="halign">end</property>
-            <property name="margin">10</property>
-            <signal name="clicked" handler="gtk_widget_destroy" object="ConnectionsOnboardingDialog"/>
-            <style>
-              <class name="flat"/>
-            </style>
-            <child>
-              <object class="GtkImage">
-                <property name="visible">True</property>
-                <property name="icon-name">window-close-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
-
-        <child>
           <object class="GtkBox" id="indicator-spacer">
             <property name="visible">True</property>
           </object>
@@ -138,6 +120,16 @@
                 <property name="pass-through">True</property>
               </packing>
             </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkButton" id="close_button">
+            <property name="visible">True</property>
+            <property name="halign">center</property>
+            <property name="label" translatable="yes">No Thanks</property>
+            <property name="margin-bottom">20</property>
+            <signal name="clicked" handler="gtk_widget_destroy" object="ConnectionsOnboardingDialog"/>
           </object>
         </child>
 

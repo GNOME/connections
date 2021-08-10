@@ -33,6 +33,8 @@ namespace Connections {
         private unowned Button go_back_button;
         [GtkChild]
         private unowned Button go_next_button;
+        [GtkChild]
+        private unowned Button close_button;
 
         private GLib.List<unowned OnboardingDialogPage> pages;
 
@@ -82,8 +84,15 @@ namespace Connections {
         [GtkCallback]
         private void on_position_changed () {
             var position = (int)paginator.position;
-            go_back_button.visible = (position > 0);
-            go_next_button.visible = (position < (pages.length () - 1));
+
+            bool is_first_page = (position == 0);
+            bool is_last_page = (position == (pages.length () - 1));
+
+            go_back_button.visible = !is_first_page;
+            go_next_button.visible = !is_last_page;
+
+            close_button.visible = is_first_page || is_last_page;
+            close_button.label = is_first_page ? _("No Thanks") : _("Close");
         }
     }
 }
