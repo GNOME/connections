@@ -17,9 +17,10 @@
         <property name="margin-top">330</property>
         <style>
           <class name="onboarding-dialog-page-title-label"/>
+          <class name="title-1"/>
         </style>
         <attributes>
-          <attribute name="scale" value="2.2"/>
+          <attribute name="scale" value="1"/>
         </attributes>
       </object>
     </child>
