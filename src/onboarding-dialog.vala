@@ -49,13 +49,6 @@ namespace Connections {
                 pages.append (onboarding_page);
             }
 
-            // Adds a custom link to the last page
-            if (onboarding_page != null) {
-                var learn_more_label = _("Read our tutorial to learn how.");
-
-                onboarding_page.description += " <a href=\'help:gnome-connections/connect\'>%s</a>".printf (learn_more_label);;
-            }
-
             on_position_changed ();
         }
 
