@@ -27,6 +27,7 @@
           <object class="GtkOverlay">
             <property name="visible">True</property>
             <property name="expand">True</property>
+            <property name="valign">start</property>
 
             <child>
               <object class="HdyCarousel" id="paginator">
