@@ -39,7 +39,7 @@
                 <child>
                   <object class="ConnectionsOnboardingDialogPage" id="homepage">
                     <property name="title" translatable="yes">Welcome to Connections</property>
-                    <property name="description" translatable="yes">Click Next to learn about how it works.</property>
+                    <property name="description" translatable="yes">Learn about how Connections works.</property>
                     <property name="image">/org/gnome/Connections/ui/onboarding/welcome.svg</property>
                   </object>
                 </child>
@@ -47,7 +47,7 @@
                 <child>
                   <object class="ConnectionsOnboardingDialogPage">
                     <property name="title" translatable="yes">Use other desktops, remotely</property>
-                    <property name="description" translatable="yes">Use Connections to view the screen of another desktop, and control it using a pointer and keyboard.</property>
+                    <property name="description" translatable="yes">Use Connections to view the screen of other desktops. You can control them using the pointer and keyboard, too!</property>
                     <property name="image">/org/gnome/Connections/ui/onboarding/remote-computer.svg</property>
                   </object>
                 </child>
@@ -55,15 +55,15 @@
                 <child>
                   <object class="ConnectionsOnboardingDialogPage">
                     <property name="title" translatable="yes">Connect to different operating systems</property>
-                    <property name="description" translatable="yes">Connections can be used with Linux, Mac, or Windows Desktops.</property>
+                    <property name="description" translatable="yes">Access Linux, Mac, and Windows desktops using Connections.</property>
                     <property name="image">/org/gnome/Connections/ui/onboarding/multiplatform.svg</property>
                   </object>
                 </child>
 
                 <child>
                   <object class="ConnectionsOnboardingDialogPage">
-                    <property name="title" translatable="yes">Connections requires a remote desktop</property>
-                    <property name="description" translatable="yes">You can connect to a remote desktop that has been provided for you, or set up an existing desktop to use.</property>
+                    <property name="title" translatable="yes">Enable remote desktop before connecting</property>
+                    <property name="description" translatable="yes">Computers need to be set up for remote desktop before you can connect to them.</property>
                     <property name="image">/org/gnome/Connections/ui/onboarding/configure-access.svg</property>
                   </object>
                 </child>
@@ -71,6 +71,7 @@
                 <child>
                   <object class="ConnectionsOnboardingDialogPage">
                     <property name="title" translatable="yes">We hope that you enjoy Connections!</property>
+                    <property name="description" translatable="yes">More information can be found in the help.</property>
                     <property name="image">/org/gnome/Connections/ui/onboarding/thankyou.svg</property>
                   </object>
                 </child>
