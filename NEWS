@@ -1,3 +1,38 @@
+41.beta - 12 Aug, 2021
+======================
+
+Changes since 41.alpha
+
+  - New onboarding dialog with instructions to use the app
+  - Allow window to shrink
+  - Connect to address after adding it
+  - Validate server addresses
+  - Display connection errors as notifications
+  - Add command line option to launch a connection in fullscreen
+  - Indicate that a connection is open by showing its thumbnail
+  - Various internal refactorings
+  - Added/updated/fixed translations:
+    - Catalan
+    - Friulian
+    - German
+    - Hebrew
+    - Lithuanian
+    - Slovenian
+    - Spanish
+
+All contributors to this release:
+
+Allan Day <allanpday@gmail.com>
+Aurimas Černius <aurisc4@gmail.com>
+Daniel Mustieles <daniel.mustieles@gmail.com>
+Fabio Tomat <f.t.public@gmail.com>
+Felipe Borges <felipeborges@gnome.org>
+Jakub Steiner <jimmac@gmail.com>
+Jordi Mas <jmas@softcatala.org>
+Matej Urbančič <mateju@src.gnome.org>
+Philipp Kiemle <philipp.kiemle@gmail.com>
+Yaron Shahrabani <sh.yaron@gmail.com>
+
 41.alpha - 09 Jul, 2021
 =======================
 
