@@ -52,18 +52,17 @@ namespace Connections {
                 if (!connection.connected) {
                     thumbnail.set_from_icon_name ("org.gnome.Connections-symbolic",
                                                   Gtk.IconSize.LARGE_TOOLBAR);
-                    return false;
+                    return Source.REMOVE;
                 }
 
                 if (connection.thumbnail == null)
-                    return false;
+                    return Source.REMOVE;
 
                 var pixbuf = connection.thumbnail.scale_simple (180, 134,
                                                                 Gdk.InterpType.BILINEAR);
                 thumbnail.set_from_pixbuf (pixbuf);
 
-                return true;
-
+                return Source.CONTINUE;
             });
         }
 
