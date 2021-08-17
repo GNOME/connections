@@ -54,10 +54,15 @@ namespace Connections {
                     return false;
                 }
 
-                thumbnail.set_from_pixbuf (connection.thumbnail.scale_simple (180, 134,
-                                                                              Gdk.InterpType.BILINEAR));
+                if (connection.thumbnail == null)
+                    return false;
+
+                var pixbuf = connection.thumbnail.scale_simple (180, 134,
+                                                                Gdk.InterpType.BILINEAR);
+                thumbnail.set_from_pixbuf (pixbuf);
 
                 return true;
+
             });
         }
 
