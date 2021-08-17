@@ -47,8 +47,9 @@ namespace Connections {
 
         private void update_thumbnail () {
             thumbnail_id = Timeout.add_seconds (3, () => {
+                thumbnail_id = 0;
+
                 if (!connection.connected) {
-                    thumbnail_id = 0;
                     thumbnail.set_from_icon_name ("org.gnome.Connections-symbolic",
                                                   Gtk.IconSize.LARGE_TOOLBAR);
                     return false;
@@ -69,6 +70,7 @@ namespace Connections {
         ~CollectionViewChild () {
             if (thumbnail_id != 0)
                 Source.remove (thumbnail_id);
+                thumbnail_id = 0;
         }
     }
 }
