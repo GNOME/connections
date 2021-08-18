@@ -7,8 +7,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-06-12 09:36+0000\n"
-"PO-Revision-Date: 2021-06-27 17:00+0100\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
+"PO-Revision-Date: 2021-08-18 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -17,7 +17,7 @@ msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Konexioak"
@@ -66,39 +66,44 @@ msgstr "Ezabatu"
 msgid "Properties"
 msgstr "Propietateak"
 
-#: src/application.vala:80
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: src/application.vala:81 src/application.vala:214
+#: src/application.vala:89 src/application.vala:234
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako"
 
-#: src/application.vala:128
+#: src/application.vala:148
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ezin da ireki %s mime mota ezezaguna duen fitxategia"
 
-#: src/application.vala:157
+#: src/application.vala:177
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "“%s” konexioa ezabatu da"
 
-#: src/application.vala:160
+#: src/application.vala:180
 msgid "Undo"
 msgstr "Desegin"
 
-#: src/application.vala:206
+#: src/application.vala:226
 msgid "URL to connect"
 msgstr "Konexiorako URLa"
 
-#: src/application.vala:207
+#: src/application.vala:227
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Ireki .vnc edo .rdp fitxategia emandako PATH bidean"
 
-#: src/application.vala:229
+#: src/application.vala:249
 msgid "Too many command-line arguments specified.\n"
 msgstr "Komando-lerroko argumentu gehiegi zehaztu dira.\n"
+
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Ikasi gehiago."
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:65
@@ -131,9 +136,10 @@ msgstr "Autentifikazioak huts egin du: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:122 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Eskalatzea"
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "Irakurri gure tutoriala nola egin ikasteko."
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -167,7 +173,7 @@ msgstr "_Pasahitza"
 msgid "Sign In"
 msgstr "Hasi saioa"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
 msgid "Welcome to Connections"
 msgstr "Ongi etorri Konexioak aplikaziora"
 
@@ -175,15 +181,35 @@ msgstr "Ongi etorri Konexioak aplikaziora"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Konexioaren propietateak"
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "Konexioak aplikazioari esker oso erraza da beste mahaigain batzuk urrunetik erabiltzea."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Konektatu Linuxekin edo Windowsekin"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Sartu urrunetik mahaigaineko sistema eragile desberdinetara."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Konfiguratu sartzeko"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr "Mahaigain batekin konektatzeko, lehenengo hura konfiguratu egin behar da."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Konexio-hobespenak"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Helbidea"
 
-#: src/ui/properties.ui:67
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
 msgid "Name"
 msgstr "Izena"
 
@@ -251,48 +277,56 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:119
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Bistaratzea"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Eskalatzea"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Ikusi soilik"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Erakutsi erakusle lokala"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Banda-zabalera"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Kalitate altua"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Freskatze azkarra"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Eskalatze-modua"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Doitu leihoa"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Jatorrizko tamaina"
+
+#: src/vnc-connection.vala:124
 msgid "Couldn’t parse the file"
 msgstr "Ezin izan da fitxategia analizatu"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
-#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
+#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC fitxategiak “%s” gakoa falta du"
-
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Ikusi soilik"
-
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Erakutsi erakusle lokala"
-
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Banda-zabalera"
-
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Kalitate altua"
-
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Freskatze azkarra"
-
-#: src/vnc-properties-dialog.vala:54
-msgid "Scale mode"
-msgstr "Eskalatze-modua"
-
-#: src/vnc-properties-dialog.vala:56
-msgid "Fit window"
-msgstr "Doitu leihoa"
-
-#: src/vnc-properties-dialog.vala:57
-msgid "Original size"
-msgstr "Jatorrizko tamaina"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "GNOME Konexioak"
