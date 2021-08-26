@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-07-04 15:59+0000\n"
-"PO-Revision-Date: 2021-07-04 19:13+0300\n"
+"POT-Creation-Date: 2021-08-26 10:01+0000\n"
+"PO-Revision-Date: 2021-08-26 13:08+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -85,78 +85,81 @@ msgstr "Властивості"
 msgid "translator-credits"
 msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2020"
 
-#: src/application.vala:89 src/application.vala:234
+#: src/application.vala:89 src/application.vala:239
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Клієнт віддалених стільниць для середовища GNOME"
 
-#: src/application.vala:148
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Не вдалося відкрити файл невідомого типу MIME %s"
 
-#: src/application.vala:177
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "З'єднання із «%s» вилучено"
 
-#: src/application.vala:180
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Скасувати"
 
-#: src/application.vala:226
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "Адреса для з'єднання"
 
-#: src/application.vala:227
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Відкрити файл .vnc або .rdp за вказаним PATH"
 
-#: src/application.vala:249
+#: src/application.vala:231
+#| msgid "Fullscreen"
+msgid "Open in full screen"
+msgstr "Відкрити на увесь екран"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Вказано надто багато аргументів командного рядка.\n"
 
-#. Translators: This is a link which takes users to a documentation page in yelp
-#: src/assistant.vala:34
-msgid "Learn more."
-msgstr ""
-"Дізнатися більше."
-
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:65
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Знімок екрана від %s"
 
-#: src/connection.vala:80
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Знімок отримано"
 
 #. Translators: Open is a verb
-#: src/connection.vala:83
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Відкрити"
 
-#: src/connection.vala:128
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» потребує засвідчення"
 
-#: src/connection.vala:142
+#: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Розпізнавання не пройдено: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#. Adds a custom link to the last page
-#: src/onboarding-dialog.vala:52
-msgid "Read our tutorial to learn how."
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
 msgstr ""
-"Ознайомтеся із нашим підручником, щоб дізнатися як."
+"Ні, дякую"
+
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr ""
+"Закрити"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -166,17 +169,33 @@ msgstr "Зробити знімок"
 msgid "Fullscreen"
 msgstr "На увесь екран"
 
-#: src/ui/assistant.ui:17
-msgid "Connect to a Desktop"
-msgstr "З'єднання зі стільницею"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr ""
+"Введіть ідентифікатор мережі віддаленої стільниці для з'єднання:"
 
-#: src/ui/assistant.ui:46
+#: src/ui/assistant.ui:53
+#| msgid "Connections"
+msgid "Connection Type"
+msgstr "Тип з'єднання"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr ""
+"RDP (стандарт для з'єднання із Windows)"
+
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr ""
+"VNC (стандарт для з'єднання із Linux)"
+
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Довідка"
+
+#: src/ui/assistant.ui:98
 msgid "Connect"
 msgstr "З'єднатися"
-
-#: src/ui/assistant.ui:61
-msgid "Addresses start with either vnc:// or rdp://."
-msgstr "Адреси починаються з vnc:// або rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -190,7 +209,7 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Увійти"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Вітаємо у «З'єднаннях»"
 
@@ -200,33 +219,56 @@ msgstr ""
 "Просто натисніть на кнопку <b>+</b> кнопку, щоб створити ваше перше "
 "з'єднання."
 
-#: src/ui/onboarding-dialog.ui:59
-msgid "Connections makes it easy to use other desktops remotely."
+#: src/ui/onboarding-dialog.ui:42
+#| msgid "About Connections"
+msgid "Learn about how Connections works."
+msgstr "Дізнайтеся про те, як працюють «З'єднання»."
+
+#: src/ui/onboarding-dialog.ui:49
+#| msgid "View and use other desktops"
+msgid "Use other desktops, remotely"
+msgstr "Віддалене користування іншими стільничними середовищами"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
 msgstr ""
-"«З'єднання» спрощують віддалене користування іншими стільницями."
+"Скористайтеся «З'єднаннями» для перегляду зображення на екранах інших комп'ютерів. Ви зможете також керувати вказівником миші і клавіатурою на цих комп'ютерах!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr ""
+"З'єднання із іншими операційними системами"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Отримайте доступ до робочих станцій Linux, Mac і Windows за допомогою «З'єднань»."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr ""
+"Увімкніть віддалену стільницю до встановлення з'єднання"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Connect to Linux or Windows"
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
 msgstr ""
-"З'єднатися із Linux або Windows"
+"Перш ніж ви зможете встановлювати з'єднання із віддаленими комп'ютерами, їх слід слід належно налаштувати."
 
-#: src/ui/onboarding-dialog.ui:67
-msgid "Remotely access a range of desktop operating systems."
-msgstr ""
-"Віддалений доступ до діапазону стільничних операційних систем."
+#: src/ui/onboarding-dialog.ui:73
+#| msgid "Welcome to Connections"
+msgid "We hope that you enjoy Connections!"
+msgstr "Сподіваємося, вам сподобаються «З'єднання»!"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "Configure for Access"
+msgid "More information can be found in the help."
 msgstr ""
-"Налаштувати на доступ"
-
-#: src/ui/onboarding-dialog.ui:75
-msgid "To connect to a desktop, it needs to be setup first."
-msgstr ""
-"Щоб встановити з'єднання зі стільницею, програму спочатку слід налаштувати."
+"Докладніші відомості наведено у довідці."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
-#| msgid "Connection Properties"
 msgid "Connection preferences"
 msgstr "Параметри з'єднання"
 
@@ -270,10 +312,6 @@ msgstr "Клавіатурні скорочення"
 msgid "Keyboard Shortcuts"
 msgstr "Клавіатурні скорочення"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Довідка"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Про «З'єднання»"
@@ -302,57 +340,85 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:54
-#| msgid "Display Menu"
+#: src/ui/vnc-preferences.ui:55
 msgid "Display"
 msgstr "Показ"
 
-#: src/ui/vnc-preferences.ui:59
+#: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
 msgstr "Масштабування"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "Лише перегляд"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "Показувати локальний вказівник"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
 msgstr "Ширина каналу"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:89
 msgid "High quality"
 msgstr "Висока якість"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:90
 msgid "Fast refresh"
 msgstr "Швидке оновлення"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:101
 msgid "Scale mode"
 msgstr "Режим масштабування"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
 msgstr "Вмістити у вікно"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:109
 msgid "Original size"
 msgstr "Початковий розмір"
 
-#: src/vnc-connection.vala:119
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Не вдалося обробити файл"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
-#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "У файлі VNC не вказано ключа «%s»"
+
+#~ msgid "Learn more."
+#~ msgstr "Дізнатися більше."
+
+#~ msgid "Read our tutorial to learn how."
+#~ msgstr "Ознайомтеся із нашим підручником, щоб дізнатися як."
+
+#~ msgid "Connect to a Desktop"
+#~ msgstr "З'єднання зі стільницею"
+
+#~ msgid "Addresses start with either vnc:// or rdp://."
+#~ msgstr "Адреси починаються з vnc:// або rdp://."
+
+#~ msgid "Connections makes it easy to use other desktops remotely."
+#~ msgstr "«З'єднання» спрощують віддалене користування іншими стільницями."
+
+#~ msgid "Connect to Linux or Windows"
+#~ msgstr "З'єднатися із Linux або Windows"
+
+#~ msgid "Remotely access a range of desktop operating systems."
+#~ msgstr "Віддалений доступ до діапазону стільничних операційних систем."
+
+#~ msgid "Configure for Access"
+#~ msgstr "Налаштувати на доступ"
+
+#~ msgid "To connect to a desktop, it needs to be setup first."
+#~ msgstr ""
+#~ "Щоб встановити з'єднання зі стільницею, програму спочатку слід "
+#~ "налаштувати."
 
 #~| msgid "Connections"
 #~ msgid "GNOME Connections"
