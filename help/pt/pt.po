@@ -1,0 +1,165 @@
+# Portuguese translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
+"PO-Revision-Date: 2021-08-26 16:20+0100\n"
+"Language-Team: Portuguese <pt@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"X-Generator: Poedit 3.0\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>, 2021"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:13
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:15
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "Ligar a uma máquina remota através da rede."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "Ligar a outro computador"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr ""
+"<app>Ligações</app> pode ser usado para ver e aceder uma máquina remota."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "A máquina remota deve já estar configurada."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"Clique no <gui style=\"button\">+</gui> no canto esquerdo superior para "
+"iniciar o assistente de criação de ligação remota."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"Insira um URL contendo o protocolo, endereço IP e número da porta do "
+"dispositivo ou serviço remoto. Por exemplo:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "O protocolo será:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "rdp:// para ligar a um serviço <app>RDP</app> remoto."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr ""
+"vnc:// para ligar a um servidor <app>vino</app> ou <app>VNC</app> remoto."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"O endereço e o número da porta devem estar disponíveis na configuração do "
+"dispositivo ou serviço na máquina remota."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "Clique em <gui style=\"button\">Criar</gui>."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "A máquina remota será aberta na visualização da coleção."
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Ligações"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Ligações"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Connections"
+msgstr "Ligações"
+
+#. (itstool) path: info/desc
+#: C/index.page:20
+msgid "Learn to connect to remote machines."
+msgstr "Aprenda a ligar-se a máquinas remotas."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> Ligações"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"<app>Ligações</app> é um cliente de área de trabalho remota para o ambiente "
+"de trabalho GNOME."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Getting started"
+msgstr "Primeiros passos"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "Creative Commons Attribution-Share Alike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Este trabalho está licenciado sob uma licença <_:link-1/>."
