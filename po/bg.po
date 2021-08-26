@@ -1,0 +1,349 @@
+# Bulgarian translation of GNOME connections po-file.
+# Copyright (C) 2021 Alexander Shopov <ash@kambanaria.org>.
+# This file is distributed under the same license as the GNOME connections package.
+# Alexander Shopov <ash@kambanaria.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-07-13 09:53+0000\n"
+"PO-Revision-Date: 2021-08-26 11:57+0200\n"
+"Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Свързване"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Достъп и ползване на отдалечени работни среди"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Чрез „Свързване“ може да установявате връзки към графични среди. Това е "
+"чудесен начин да ползвате различни операционни системи или да помагате на "
+"други потребители."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Може да се свързвате към много видове операционни системи, включително "
+"графичните среди на Linux и Windows. Може да се свързвате и към виртуални "
+"машини."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Програмата ползва широко разпространените протоколи VNC и RDP за свързване. "
+"Поне един от тях трябва да е наличен на отдалечената машина."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Проектът GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;отдалечена;графична;среда;"
+"достъп;връзка;свързване;"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Файл за връзка към графична среда (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Изтриване"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "Настройки"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr ""
+"Александър Шопов &lt;<a href='mailto:ash@kambanaria.org'>ash@kambanaria.org</"
+"a>&gt;\n"
+"\n"
+"\n"
+"Проектът за превод на GNOME има нужда от подкрепа.\n"
+"Научете повече за нас на <a href='https://fsa-bg.org/project/gtp'>уеб сайта</"
+"a> ни.\n"
+"Докладвайте за грешки в превода в <a href='https://fsa-bg.org/project/gtp/"
+"newticket'>съответния раздел</a>."
+
+#: src/application.vala:89 src/application.vala:234
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Клиентска програма за GNOME за свързване с отдалечени графични среди"
+
+#: src/application.vala:148
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Файлът с непознат вид MIME не може да бъде отворен: %s"
+
+#: src/application.vala:177
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Връзката към „%s“ е изтрита"
+
+#: src/application.vala:180
+msgid "Undo"
+msgstr "Отмяна"
+
+#: src/application.vala:226
+msgid "URL to connect"
+msgstr "Адрес за свързване"
+
+#: src/application.vala:227
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Отваряне на файл с разширение „.vnc“ или „.rdp“ от дадения ПЪТ"
+
+#: src/application.vala:249
+msgid "Too many command-line arguments specified.\n"
+msgstr "Твърде много аргументи на командния ред.\n"
+
+#. Translators: This is a link which takes users to a documentation page in yelp
+#: src/assistant.vala:34
+msgid "Learn more."
+msgstr "Повече информация."
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:65
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Снимка на екрана на %s"
+
+#: src/connection.vala:80
+msgid "Screenshot taken"
+msgstr "Направена снимка на екрана"
+
+#. Translators: Open is a verb
+#: src/connection.vala:83
+msgid "Open"
+msgstr "Отваряне"
+
+#: src/connection.vala:128
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "„%s“ изисква идентификация"
+
+#: src/connection.vala:142
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Неуспешна идентификация: %s"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#. Adds a custom link to the last page
+#: src/onboarding-dialog.vala:52
+msgid "Read our tutorial to learn how."
+msgstr "За да научите повече, прочетете въведението."
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Снимка на екрана"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Цял екран"
+
+#: src/ui/assistant.ui:17
+msgid "Connect to a Desktop"
+msgstr "Свързване към графична работна среда"
+
+#: src/ui/assistant.ui:46
+msgid "Connect"
+msgstr "Свързване"
+
+#: src/ui/assistant.ui:61
+msgid "Addresses start with either vnc:// or rdp://."
+msgstr "Адресите започват с „vnc://“ или „rdp://“."
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Име на потребител"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Парола"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Вписване"
+
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+msgid "Welcome to Connections"
+msgstr "Добре дошли в „Свързване“"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Натиснете бутона <b>+</b>, за да настроите първата връзка."
+
+#: src/ui/onboarding-dialog.ui:59
+msgid "Connections makes it easy to use other desktops remotely."
+msgstr "Програмата позволява лесно свързване към отдалечени графични среди."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Connect to Linux or Windows"
+msgstr "Свързване към Linux или Windows"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remotely access a range of desktop operating systems."
+msgstr "Отдалечено свързване към различни операционни системи."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Configure for Access"
+msgstr "Настройки за достъпа"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To connect to a desktop, it needs to be setup first."
+msgstr "Преди да се свържете с графична среда, настройте връзката."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Настройки на връзката"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+msgid "Address"
+msgstr "Адрес"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Име"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Нова"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Меню на приложението"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Търсене"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Назад"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Меню за екрана"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Прекъсване"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Клавишни комбинации"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Клавишни комбинации"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Помощ"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Относно „Свързване“"
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Екран"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Мащабиране"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Само разглеждане"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Локален показалец"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Широчина на канала"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Високо качество"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Бързо опресняване"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Режим на мащабиране"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Напасване на прозореца"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Първоначален размер"
+
+#: src/vnc-connection.vala:124
+msgid "Couldn’t parse the file"
+msgstr "Файлът не може да се анализира"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
+#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Ключът „%s“ липсва във файла за VNC"
