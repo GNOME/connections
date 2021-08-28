@@ -1,0 +1,270 @@
+# Occitan translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Quentin PAGÈS <pages_quentin@hotmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
+"issues\n"
+"POT-Creation-Date: 2021-07-04 16:00+0000\n"
+"PO-Revision-Date: 2021-08-28 23:46+0200\n"
+"Language-Team: Occitan <totenoc@gmail.com>\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Quentin PAGÈS\n"
+"X-Generator: Poedit 3.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Connexions"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client de burèu distant per l’environament de burèu GNOME"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid "A remote desktop client for the GNOME desktop environment."
+msgstr "Un client de burèu distant per l’environament de burèu GNOME."
+
+#: data/org.gnome.Connections.appdata.xml.in:29
+msgid "The GNOME Project"
+msgstr "Lo projècte GNOME"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fichièr d'accès a distància (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Suprimir"
+
+#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+msgid "Properties"
+msgstr "Proprietats"
+
+#: src/application.vala:76
+msgid "translator-credits"
+msgstr ""
+
+#: src/application.vala:77
+msgid "A remote connection manager for the GNOME desktop"
+msgstr "Un gestionari de burèu distant per l’environament de burèu GNOME"
+
+#: src/application.vala:140
+#, c-format
+msgid "Couldn't open file of unknown mime type %s"
+msgstr "Impossible de dobrir lo fichièr de tipe mime desconegut %s"
+
+#: src/application.vala:170
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "La connexion cap a « %s » es estada suprimida"
+
+#: src/application.vala:172
+msgid "Undo"
+msgstr "Desfar"
+
+#: src/application.vala:211
+msgid "URL to connection"
+msgstr "URL de connexion"
+
+#: src/application.vala:212
+msgid "Open .vnc or .rdp file at at giving PATH"
+msgstr "Dobrir lo fichièr .vnc o .rdp al camin donat"
+
+#: src/application.vala:219
+msgid "— A simple application to access remote connections"
+msgstr "— Una aplicacion simpla per accedir a de maquinas distantas"
+
+#: src/application.vala:234
+msgid "Too many command line arguments specified.\n"
+msgstr "Tròp d'arguments especificats dins la comanda.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:127
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Captura d'ecran de %s"
+
+#: src/connection.vala:142
+msgid "Screenshot taken"
+msgstr "Captura d’ecran efectuada"
+
+#: src/connection.vala:144
+msgid "Open"
+msgstr "Dobrir"
+
+#: src/connection.vala:187
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "« %s » requerís l’autentificacion"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:138
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+msgid "Scaling"
+msgstr "Mesa a l'escala"
+
+#: src/topbar.vala:55 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Prendre una captura d’ecran"
+
+#: src/ui/assistant.ui:9
+msgid "Create a New Connection"
+msgstr "Crear una connexion novèla"
+
+#: src/ui/assistant.ui:34
+msgid ""
+"Enter a machine address to connect to. Address can begin with rdp:// or "
+"vnc://"
+msgstr ""
+"Picatz una adreça de maquina a la quala se connectar. L’adreça pòt "
+"començar amb rdp:// or vnc://"
+
+#: src/ui/assistant.ui:58
+msgid "Server"
+msgstr "Servidor"
+
+#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+msgid "Name"
+msgstr "Nom"
+
+#: src/ui/assistant.ui:120
+msgid "Cancel"
+msgstr "Anullar"
+
+#: src/ui/assistant.ui:129
+msgid "Create"
+msgstr "Crear"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_ Nom d’utilizaire"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Senhal"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Se connectar"
+
+#: src/ui/empty-view.ui:28
+msgid "Welcome to Connections"
+msgstr "Benvenguda dins Connexions"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Quichatz simplament sul boton <b>+</b> per establir vòstra primièra "
+"connexion."
+
+#: src/ui/properties.ui:9
+msgid "Connection Properties"
+msgstr "Proprietats de la connexion"
+
+#: src/ui/properties.ui:108
+msgid "Address"
+msgstr "Adreça"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nòu"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Menú de l’aplicacion"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Recercar"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Retorn"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Menú d’afichatge"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Desconnectar"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Acorchis de clavièr"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Acorchis de clavièr"
+
+#: src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "A prepaus de Connexions"
+
+#: src/ui/topbar.ui:230
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Retorn Arrièr"
+
+#: src/ui/topbar.ui:237
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Supr"
+
+#: src/ui/topbar.ui:244
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:251
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:258
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:265
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/vnc-connection.vala:122
+msgid "Could not parse the file"
+msgstr "Impossible d'analisar lo fichièr."
+
+#: src/vnc-connection.vala:129
+msgid "VNC File is missing key “Host“"
+msgstr ""
+
+#: src/vnc-connection.vala:134
+msgid "VNC File is missing key “Port“"
+msgstr ""
+
+#: src/vnc-connection.vala:140
+msgid "VNC File is missing key “Username“"
+msgstr ""
+
+#: src/vnc-connection.vala:145
+msgid "VNC File is missing key “Password“"
+msgstr ""
+
+#: src/vnc-connection.vala:249
+msgid "View only"
+msgstr "Afichar solament"
+
+#: src/vnc-connection.vala:259
+msgid "Show local pointer"
+msgstr "Afichar lo puntador local"
