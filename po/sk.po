@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-03-20 14:02+0000\n"
-"PO-Revision-Date: 2021-06-11 15:55+0200\n"
+"POT-Creation-Date: 2021-08-26 10:01+0000\n"
+"PO-Revision-Date: 2021-08-31 16:48+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -16,29 +16,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Pripojenia prostredia GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Klient vzdialenej pracovnej plochy pre pracovné prostredie GNOME"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Klient vzdialenej pracovnej plochy pre pracovné prostredie GNOME."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Pripojenia"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Zobrazuje a používa iné pracovné plochy"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Aplikácia Pripojenia vám umožňuje pripojiť sa a používať iné pracovné "
+"plochy. To môže byť skvelý spôsob ako pristupovať k obsahu alebo softvéru na "
+"pracovných plochách rôznych operačných systémov. Môže byť tiež použitá na "
+"poskytnutie podpory používateľom, ktorí potrebujú pomoc."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Môže byť pripojených veľa rôznych operačných systémov, vrátane pracovných "
+"plôch systémov Linux a Windows. Môžete sa tiež pripojiť k virtuálnym "
+"počítačom."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Aplikácia Pripojenia využíva všeobecne podporované protokoly VNC a RDP. "
+"Jeden z týchto protokolov musí byť povolený na pracovnej ploche, ku ktorej "
+"sa chcete pripojiť."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;vzdialená;plocha;okná;windows;podpora;prístup;zobrazenie;zobraziť;"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -48,101 +75,120 @@ msgstr "Súbor vzdialenej pracovnej plochy (VNC)"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr "Dušan Kazik <prescott66@gmail.com>"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:239
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Klient vzdialenej pracovnej plochy pre pracovné prostredie GNOME"
+
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nepodarilo sa otvoriť súbor neznámeho typu MIME %s"
 
-#: src/application.vala:170
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Pripojenie k „%s” bolo odstránené"
 
-#: src/application.vala:172
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Vrátiť späť"
 
-#: src/application.vala:211
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "URL na pripojenie"
 
-#: src/application.vala:212
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Otvorí súbor .vnc alebo .rdp na zadanej CESTE"
 
-#: src/application.vala:234
+# cmdline desc
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Otvorí v režime na celú obrazovku"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Bolo určených príliš veľa parametrov v príkazovom riadku.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Snímka obrazovky z %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Zachytená snímka obrazovky"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Otvoriť"
 
-#: src/connection.vala:188
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "Pripojenie „%s” vyžaduje overenie totožnosti"
 
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Overenie totožnosti zlyhalo: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Zmena mierky"
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Nie, ďakujem"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Zavrieť"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Zachytiť snímku obrazovky"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Vytvorenie nového pripojenia"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Na celú obrazovku"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Zadajte adresu počítača, ku ktorému sa chcete pripojiť. Adresa môže začínať "
-"s rdp:// alebo vnc://"
+"Zadajte identifikátor siete vzdialenej plochy, ku ktorej sa má pripojiť:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Server"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Typ pripojenia"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Názov"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (štandard pripojenia k systému Windows)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Zrušiť"
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (štandard pripojenia k systému Linux)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Vytvoriť"
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Pomocník"
+
+#: src/ui/assistant.ui:98
+msgid "Connect"
+msgstr "Pripojiť"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -156,7 +202,7 @@ msgstr "_Heslo"
 msgid "Sign In"
 msgstr "Prihlásiť sa"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Vitajte v aplikácii Pripojenia"
 
@@ -164,13 +210,63 @@ msgstr "Vitajte v aplikácii Pripojenia"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Na vytvorenie vášho prvého pripojenia stačí stlačiť tlačidlo <b>+</b>."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Vlastnosti pripojenia"
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Dozveďte sa ako funguje aplikácia Pripojenia."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Použitie iných pracovných plôch, vzdialene"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Použite aplikáciu Pripojenia na zobrazenie obrazoviek iných pracovných "
+"plôch. Môžete ich ovládať pomocou ukazovateľa a tiež klávesnice!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Pripojenie k rôznym operačným systémom"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Pristupujte k pracovným plochám systémov Linux, Mac a Windows pomocou "
+"aplikácie Pripojenia."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Povolenie vzdialenej plochy pred pripojením"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Predtým, než sa pripojíte k počítačom, musia byť nastavené na použitie "
+"vzdialenej pracovnej plochy."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Dúfame, že sa vám bude aplikácia Pripojenia páčiť!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Viac informácií môžete nájsť v pomocníkovi."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Predvoľby pripojenia"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Adresa"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Názov"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -204,68 +300,109 @@ msgstr "Klávesové skratky"
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové skratky"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Pomocník"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "O aplikácii Pripojenia"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:55
+msgid "Display"
+msgstr "Zobrazenie"
+
+#: src/ui/vnc-preferences.ui:60
+msgid "Scaling"
+msgstr "Zmena mierky"
+
+#: src/ui/vnc-preferences.ui:67
+msgid "View only"
+msgstr "Iba zobrazenie"
+
+#: src/ui/vnc-preferences.ui:74
+msgid "Show local pointer"
+msgstr "Zobraziť miestny ukazovateľ"
+
+#: src/ui/vnc-preferences.ui:82
+msgid "Bandwidth"
+msgstr "Šírka pásma"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "High quality"
+msgstr "Vysoká kvalita"
+
+#: src/ui/vnc-preferences.ui:90
+msgid "Fast refresh"
+msgstr "Rýchle obnovovanie"
+
+#: src/ui/vnc-preferences.ui:101
+msgid "Scale mode"
+msgstr "Režim zmeny mierky"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Prispôsobiť oknu"
+
+#: src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Pôvodná veľkosť"
+
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Nepodarilo sa analyzovať súbor"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Súboru VNC chýba kľúč „%s”"
 
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Iba zobrazenie"
+#~ msgid "GNOME Connections"
+#~ msgstr "Pripojenia prostredia GNOME"
 
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Zobraziť miestny ukazovateľ"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Klient vzdialenej pracovnej plochy pre pracovné prostredie GNOME."
 
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Šírka pásma"
+#~ msgid "Create a New Connection"
+#~ msgstr "Vytvorenie nového pripojenia"
 
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Vysoká kvalita"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Zadajte adresu počítača, ku ktorému sa chcete pripojiť. Adresa môže "
+#~ "začínať s rdp:// alebo vnc://"
 
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Rýchle obnovovanie"
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušiť"
+
+#~ msgid "Create"
+#~ msgstr "Vytvoriť"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
