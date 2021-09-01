@@ -1,0 +1,162 @@
+# Korean translation for gnome-connections.
+# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Seong-ho Cho <shcho@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections master\n"
+"POT-Creation-Date: 2021-08-26 15:21+0000\n"
+"PO-Revision-Date: 2021-08-31 16:16+0900\n"
+"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "조성호 <shcho@gnome.org>, 2021."
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:13
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:15
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "네트워크의 원격 머신에 연결합니다."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "다른 컴퓨터에 연결합니다"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr "<app>연결</app>앱은 원격 머신을 보고 접근할 때 사용할 수 있습니다."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "원격 머신은 미리 설정해두어야 합니다."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"좌측 상단의<gui style=\"button\">+</gui> 단추를 눌러 원격 연결 만들기 도우미"
+"를 실행하십시오."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"프로토콜, IP 주소, 원격 장치 또는 서비스의 포트 번호가 들어있는 URL을 입력하"
+"십시오. 다음과 같습니다:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "프로토콜은 다음을 의미합니다:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "rdp:// 는 원격 <app>RDP</app> 서버에 연결합니다."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr "vnc:// 는 원 격<app>vino</app>, <app>VNC</app> 서버에 연결합니다."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"주소와 포트번호는 원격 머신의 장치 설정 또는 서비스 설정으로 사용할 수 있어야"
+"합니다."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "<gui style=\"button\">만들기</gui>를 누르십시오."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "원격 머신을 모음 보기에서 엽니다."
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "연결"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "연결"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Connections"
+msgstr "연결"
+
+#. (itstool) path: info/desc
+#: C/index.page:20
+msgid "Learn to connect to remote machines."
+msgstr "원격 머신 연결 방법을 알아봅니다."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> 연결"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"<app>연결</app> 앱은 그놈 데스크톱 환경용 원격 데스크톱 클라이언트입니다."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Getting started"
+msgstr "시작하기"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 Unported 라이선스"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "이 문서는 <_:link-1/> 라이선스로 배포합니다."
