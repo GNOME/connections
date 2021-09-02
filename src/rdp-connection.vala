@@ -68,9 +68,11 @@ namespace Connections {
 
             display.rdp_error.connect (on_connection_error_cb);
             display.rdp_connected.connect (() => { show (); });
-            display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
+            //display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_auth_failure.connect (auth_failed);
             //display.size_allocate.connect (scale);
+
+            need_username = need_password = true;
         }
 
         public RdpConnection (string uuid) {
@@ -91,9 +93,15 @@ namespace Connections {
         public override void connect_it () {
             if (connected)
                 return;
-            connected = true;
+
+            if (username == null && password == null) {
+                handle_auth ();
+
+                return;
+            }
 
             display.open_host (host, port);
+            connected = true;
         }
 
         public override void disconnect_it () {
@@ -112,8 +120,6 @@ namespace Connections {
             need_username = need_password = true;
 
             handle_auth ();
-
-            disconnect_it ();
         }
     }
 
