@@ -7,8 +7,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-07-13 09:53+0000\n"
-"PO-Revision-Date: 2021-08-18 17:00+0100\n"
+"POT-Creation-Date: 2021-08-26 10:01+0000\n"
+"PO-Revision-Date: 2021-09-04 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -70,76 +70,78 @@ msgstr "Propietateak"
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: src/application.vala:89 src/application.vala:234
+#: src/application.vala:89 src/application.vala:239
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Urruneko mahaigainen bezero bat GNOME mahaigain-ingurunerako"
 
-#: src/application.vala:148
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ezin da ireki %s mime mota ezezaguna duen fitxategia"
 
-#: src/application.vala:177
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "“%s” konexioa ezabatu da"
 
-#: src/application.vala:180
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Desegin"
 
-#: src/application.vala:226
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "Konexiorako URLa"
 
-#: src/application.vala:227
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Ireki .vnc edo .rdp fitxategia emandako PATH bidean"
 
-#: src/application.vala:249
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Ireki pantaila osoan"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Komando-lerroko argumentu gehiegi zehaztu dira.\n"
 
-#. Translators: This is a link which takes users to a documentation page in yelp
-#: src/assistant.vala:34
-msgid "Learn more."
-msgstr "Ikasi gehiago."
-
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:65
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Pantaila-argazkia %s"
 
-#: src/connection.vala:80
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Pantaila-argazkia hartu da"
 
 #. Translators: Open is a verb
-#: src/connection.vala:83
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Ireki"
 
-#: src/connection.vala:128
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” konexioak autentifikazioa behar du"
 
-#: src/connection.vala:142
+#: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentifikazioak huts egin du: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#. Adds a custom link to the last page
-#: src/onboarding-dialog.vala:52
-msgid "Read our tutorial to learn how."
-msgstr "Irakurri gure tutoriala nola egin ikasteko."
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Ez, eskerrik asko"
+
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Itxi"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -149,17 +151,29 @@ msgstr "Egin pantaila-argazkia"
 msgid "Fullscreen"
 msgstr "Pantaila osoa"
 
-#: src/ui/assistant.ui:17
-msgid "Connect to a Desktop"
-msgstr "Konektatu mahaigain batekin"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Sartu konektatu nahi den urruneko mahaigainaren sareko identifikatzailea:"
 
-#: src/ui/assistant.ui:46
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Konexio mota"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (estandarra Windowsekin konektatzeko)"
+
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (estandarra Linuxekin konektatzeko)"
+
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Laguntza"
+
+#: src/ui/assistant.ui:98
 msgid "Connect"
 msgstr "Konektatu"
-
-#: src/ui/assistant.ui:61
-msgid "Addresses start with either vnc:// or rdp://."
-msgstr "Helbidearen hasierak vnc:// edo rdp:// izan behar du."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -173,7 +187,7 @@ msgstr "_Pasahitza"
 msgid "Sign In"
 msgstr "Hasi saioa"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Ongi etorri Konexioak aplikaziora"
 
@@ -181,25 +195,45 @@ msgstr "Ongi etorri Konexioak aplikaziora"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
 
-#: src/ui/onboarding-dialog.ui:59
-msgid "Connections makes it easy to use other desktops remotely."
-msgstr "Konexioak aplikazioari esker oso erraza da beste mahaigain batzuk urrunetik erabiltzea."
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Ikasi Konexioak aplikazioak nola funtzionatzen duen."
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Erabili beste mahaigain batzuk urrunetik"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr "Erabili Konexioak aplikazioa beste mahaigain batzuetako pantaila ikusteko. Haiek kontrolatu ahal izango dituzu erakuslea eta teklatua erabilita."
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Konektatu beste sistema eragile batzuekin"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "Sartu Linux, Mac eta Windows mahaigainetara Konexioak aplikazioa erabilita."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Gaitu urruneko mahaigaina konexioa gauzatu baino lehen"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Connect to Linux or Windows"
-msgstr "Konektatu Linuxekin edo Windowsekin"
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr "Ordenagailuak konfiguratu egin behar dira urruneko mahaigain gisa funtzionatu dezaten eta haiekin konektatu ahal izateko."
 
-#: src/ui/onboarding-dialog.ui:67
-msgid "Remotely access a range of desktop operating systems."
-msgstr "Sartu urrunetik mahaigaineko sistema eragile desberdinetara."
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Espero dugu Konexioak gustuko izango duzula!"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "Configure for Access"
-msgstr "Konfiguratu sartzeko"
-
-#: src/ui/onboarding-dialog.ui:75
-msgid "To connect to a desktop, it needs to be setup first."
-msgstr "Mahaigain batekin konektatzeko, lehenengo hura konfiguratu egin behar da."
+msgid "More information can be found in the help."
+msgstr "Informazio gehiagorako, begiratu laguntza."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -245,10 +279,6 @@ msgstr "Laster-teklak"
 msgid "Keyboard Shortcuts"
 msgstr "Laster-teklak"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Laguntza"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Konexioak aplikazioari buruz"
@@ -277,56 +307,86 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:54
+#: src/ui/vnc-preferences.ui:55
 msgid "Display"
 msgstr "Bistaratzea"
 
-#: src/ui/vnc-preferences.ui:59
+#: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
 msgstr "Eskalatzea"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "Ikusi soilik"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "Erakutsi erakusle lokala"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
 msgstr "Banda-zabalera"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:89
 msgid "High quality"
 msgstr "Kalitate altua"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:90
 msgid "Fast refresh"
 msgstr "Freskatze azkarra"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:101
 msgid "Scale mode"
 msgstr "Eskalatze-modua"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
 msgstr "Doitu leihoa"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:109
 msgid "Original size"
 msgstr "Jatorrizko tamaina"
 
-#: src/vnc-connection.vala:124
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Ezin izan da fitxategia analizatu"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
-#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC fitxategiak “%s” gakoa falta du"
+
+#~ msgid "Learn more."
+#~ msgstr "Ikasi gehiago."
+
+#~ msgid "Read our tutorial to learn how."
+#~ msgstr "Irakurri gure tutoriala nola egin ikasteko."
+
+#~ msgid "Connect to a Desktop"
+#~ msgstr "Konektatu mahaigain batekin"
+
+#~ msgid "Addresses start with either vnc:// or rdp://."
+#~ msgstr "Helbidearen hasierak vnc:// edo rdp:// izan behar du."
+
+#~ msgid "Connections makes it easy to use other desktops remotely."
+#~ msgstr ""
+#~ "Konexioak aplikazioari esker oso erraza da beste mahaigain batzuk "
+#~ "urrunetik erabiltzea."
+
+#~ msgid "Connect to Linux or Windows"
+#~ msgstr "Konektatu Linuxekin edo Windowsekin"
+
+#~ msgid "Remotely access a range of desktop operating systems."
+#~ msgstr "Sartu urrunetik mahaigaineko sistema eragile desberdinetara."
+
+#~ msgid "Configure for Access"
+#~ msgstr "Konfiguratu sartzeko"
+
+#~ msgid "To connect to a desktop, it needs to be setup first."
+#~ msgstr ""
+#~ "Mahaigain batekin konektatzeko, lehenengo hura konfiguratu egin behar da."
 
 #~ msgid "GNOME Connections"
 #~ msgstr "GNOME Konexioak"
