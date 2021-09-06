@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-05 11:42+0000\n"
-"PO-Revision-Date: 2020-09-05 22:57+0200\n"
+"POT-Creation-Date: 2021-07-04 16:00+0000\n"
+"PO-Revision-Date: 2021-09-06 11:58+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -17,15 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Povezivanja"
+msgid "GNOME Connections"
+msgstr "GNOME povezivanja"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
+#: src/application.vala:219
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Klijent udaljene površine za GNOME radno okruženje"
 
@@ -36,6 +35,11 @@ msgstr "Klijent udaljene površine za GNOME radno okruženje."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "GNOME projekt"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Povezivanja"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -55,13 +59,9 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Upravitelj udaljenog povezivanja za GNOME radno okruženje"
-
 #: src/application.vala:140
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nemoguće otvaranje datoteke nepoznate mime vrste %s"
 
 #: src/application.vala:170
@@ -74,20 +74,16 @@ msgid "Undo"
 msgstr "Vrati"
 
 #: src/application.vala:211
-msgid "URL to connection"
+msgid "URL to connect"
 msgstr "URL do povezivanja"
 
 #: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
+msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Otvori .vnc ili .rdp datoteku na zadanoj PUTANJI"
 
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— Jednostavna aplikacija za pristup udaljenim povezivanjima"
-
 #: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
-msgstr "Previše argumenata naredbenog redka je određeno.\n"
+msgid "Too many command-line arguments specified.\n"
+msgstr "Previše argumenata naredbenog redka je navedeno.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
 #: src/connection.vala:127
@@ -99,11 +95,12 @@ msgstr "Slika zaslona od %s"
 msgid "Screenshot taken"
 msgstr "Uslikaj zaslon"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Otvori"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” zahtijeva ovjeru"
@@ -114,7 +111,7 @@ msgstr "“%s” zahtijeva ovjeru"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Promjena veličine"
 
@@ -137,7 +134,7 @@ msgstr ""
 msgid "Server"
 msgstr "Poslužitelj"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Naziv"
 
@@ -174,7 +171,7 @@ msgstr ""
 msgid "Connection Properties"
 msgstr "Svojstava povezivanja"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adresa"
 
@@ -242,33 +239,51 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
+#: src/vnc-connection.vala:167
+msgid "Couldn’t parse the file"
 msgstr "Nemoguća obrada datoteke"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "VNC datoteci nedostaje ključ “Poslužitelj“"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC datoteci nedostaje ključ “%s”"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "VNC datoteci nedostaje ključ “Ulaz“"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "VNC datoteci nedostaje ključ “Korisničko ime“"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "VNC datoteci nedostaje ključ “Lozinka“"
-
-#: src/vnc-connection.vala:249
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Samo gledaj"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Prikaži lokalni pokazivač"
+
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Propusnost"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Visoka kavaliteta"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Brzo osvježavanje"
+
+#~ msgid "A remote connection manager for the GNOME desktop"
+#~ msgstr "Upravitelj udaljenog povezivanja za GNOME radno okruženje"
+
+#~ msgid "— A simple application to access remote connections"
+#~ msgstr "— Jednostavna aplikacija za pristup udaljenim povezivanjima"
+
+#~ msgid "VNC File is missing key “Port“"
+#~ msgstr "VNC datoteci nedostaje ključ “Ulaz“"
+
+#~ msgid "VNC File is missing key “Username“"
+#~ msgstr "VNC datoteci nedostaje ključ “Korisničko ime“"
+
+#~ msgid "VNC File is missing key “Password“"
+#~ msgstr "VNC datoteci nedostaje ključ “Lozinka“"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
