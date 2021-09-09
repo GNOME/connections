@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2020-12-23 08:45+0100\n"
+"PO-Revision-Date: 2020-009-09 19:08+0100\n"
 "Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
 "Language-Team: ca\n"
 "Language: ca\n"
@@ -375,30 +375,3 @@ msgstr "No s'ha pogut analitzar el fitxer"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la clau «%s» del fitxer VNC"
-
-#~ msgid "Learn more."
-#~ msgstr "Més informació."
-
-#~ msgid "Read our tutorial to learn how."
-#~ msgstr "Llegiu el nostre tutorial per a aprendre com."
-
-#~ msgid "Connect to a Desktop"
-#~ msgstr "Connecta a un escriptori"
-
-#~ msgid "Addresses start with either vnc:// or rdp://."
-#~ msgstr "Les adreces comencen amb vnc:// o rdp://."
-
-#~ msgid "Connections makes it easy to use other desktops remotely."
-#~ msgstr "El connexions facilita l'ús remot d'altres escriptoris."
-
-#~ msgid "Connect to Linux or Windows"
-#~ msgstr "Connecta a Linux o Windows"
-
-#~ msgid "Remotely access a range of desktop operating systems."
-#~ msgstr "Accés remot a un ampli ventall de sistemes operatius d'escriptori."
-
-#~ msgid "Configure for Access"
-#~ msgstr "Configura per a accedir"
-
-#~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr "Per connectar-vos a un escriptori, primer cal configurar-lo."
