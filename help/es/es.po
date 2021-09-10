@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"POT-Creation-Date: 2021-03-20 14:02+0000\n"
+"POT-Creation-Date: 2021-09-01 10:54+0000\n"
 "PO-Revision-Date: 2021-05-10 13:27+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
@@ -115,21 +115,18 @@ msgstr "La máquina remota se abrirá en la vista de colecciones"
 
 #. (itstool) path: info/title
 #: C/index.page:7
-#| msgid "Connections"
 msgctxt "link:trail"
 msgid "Connections"
 msgstr "Conexiones"
 
 #. (itstool) path: info/title
 #: C/index.page:8
-#| msgid "Connections"
 msgctxt "link"
 msgid "Connections"
 msgstr "Conexiones"
 
 #. (itstool) path: info/title
 #: C/index.page:9
-#| msgid "Connections"
 msgctxt "text"
 msgid "Connections"
 msgstr "Conexiones"
@@ -161,7 +158,7 @@ msgstr "Primeros pasos"
 #. (itstool) path: p/link
 #: C/legal.xml:4
 msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
-msgstr "Creative Commons Atribución - Compartir igual 3.0 sin soporte"
+msgstr "Creative Commons Atribución - Compartir igual 3.0 no portada"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
