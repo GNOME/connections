@@ -1,82 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.20"/>
-    <template class="ConnectionsWindow" parent="GtkApplicationWindow">
+    <template class="ConnectionsWindow" parent="HdyApplicationWindow">
       <property name="default-width">980</property>
       <property name="default-height">640</property>
       <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
       <signal name="delete-event" handler="on_delete_event"/>
-    <child type="titlebar">
-      <object class="ConnectionsTopbar" id="topbar">
-        <property name="visible">True</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="orientation">vertical</property>
 
-        <child>
-          <object class="GtkSearchBar" id="search_bar">
-            <property name="visible">True</property>
-          </object>
-        </child>
+      <child>
+        <object class="GtkBox">
+          <property name="visible">True</property>
+          <property name="orientation">vertical</property>
+  
+          <child>
+            <object class="ConnectionsTopbar" id="topbar">
+              <property name="visible">True</property>
+            </object>
+          </child>
+          
+          <child>
+            <object class="GtkSearchBar" id="search_bar">
+              <property name="visible">True</property>
+            </object>
+          </child>
 
-        <child>
-          <object class="GtkOverlay" id="notification_overlay">
-            <property name="visible">True</property>
+          <child>
+            <object class="GtkOverlay" id="notification_overlay">
+              <property name="visible">True</property>
 
-            <child type="overlay">
-              <object class="ConnectionsNotificationsBar" id="notifications_bar">
-                <property name="visible">True</property>
-              </object>
-            </child>
+              <child type="overlay">
+                <object class="ConnectionsNotificationsBar" id="notifications_bar">
+                  <property name="visible">True</property>
+                </object>
+              </child>
 
-            <child>
-              <object class="GtkStack" id="stack">
-                <property name="visible">True</property>
+              <child>
+                <object class="GtkStack" id="stack">
+                  <property name="visible">True</property>
 
-                <child>
-                  <object class="ConnectionsCollectionView" id="collection_view">
-                    <property name="visible">True</property>
-                  </object>
-                </child>
+                  <child>
+                    <object class="ConnectionsCollectionView" id="collection_view">
+                      <property name="visible">True</property>
+                    </object>
+                  </child>
 
-                <child>
-                  <object class="ConnectionsEmptyView" id="empty_view">
-                    <property name="visible">True</property>
-                  </object>
-                </child>
+                  <child>
+                    <object class="ConnectionsEmptyView" id="empty_view">
+                      <property name="visible">True</property>
+                    </object>
+                  </child>
 
-                <child>
-                  <object class="ConnectionsDisplayView" id="display_view">
-                    <property name="visible">True</property>
-                  </object>
-                </child>
+                  <child>
+                    <object class="ConnectionsDisplayView" id="display_view">
+                      <property name="visible">True</property>
+                    </object>
+                  </child>
 
-                <child>
-                  <object class="GtkBox" id="loading_view">
-                    <property name="visible">True</property>
-                    <property name="expand">True</property>
+                  <child>
+                    <object class="GtkBox" id="loading_view">
+                      <property name="visible">True</property>
+                      <property name="expand">True</property>
 
-                    <child>
-                      <object class="GtkSpinner">
-                        <property name="visible">True</property>
-                        <property name="active">True</property>
-                        <property name="width-request">32</property>
-                        <property name="height-request">32</property>
-                      </object>
-                      <packing>
-                        <property name="expand">True</property>
-                      </packing>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
+                      <child>
+                        <object class="GtkSpinner">
+                          <property name="visible">True</property>
+                          <property name="active">True</property>
+                          <property name="width-request">32</property>
+                          <property name="height-request">32</property>
+                        </object>
+                        <packing>
+                          <property name="expand">True</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+              </child>
+            </object>
+          </child>
+        </object>
+      </child>
     </template>
   </interface>

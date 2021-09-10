@@ -21,7 +21,7 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/window.ui")]
-    private class Window : Gtk.ApplicationWindow {
+    private class Window : Hdy.ApplicationWindow {
         [GtkChild]
         private unowned Topbar topbar;
 

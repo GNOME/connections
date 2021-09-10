@@ -23,7 +23,7 @@ namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/topbar.ui")]
     private class Topbar : Gtk.Stack {
         [GtkChild]
-        private unowned Gtk.HeaderBar collection_toolbar;
+        private unowned Hdy.HeaderBar collection_toolbar;
         [GtkChild]
         public unowned Gtk.Button search_button;
         [GtkChild]
