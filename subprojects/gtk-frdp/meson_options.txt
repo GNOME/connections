@@ -1,0 +1,8 @@
+option ('examples',
+        type: 'boolean',
+        value: false,
+        description: 'Whether to build and install the example/demo app')
+
+option ('package_subdir',
+        type: 'string',
+        description: 'Subdir for when gtk-frdp is consumed as a subproject')
