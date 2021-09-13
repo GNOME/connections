@@ -19,3 +19,4 @@ src/ui/rdp-preferences.ui
 src/ui/topbar.ui
 src/ui/vnc-preferences.ui
 src/vnc-connection.vala
+src/window.vala
