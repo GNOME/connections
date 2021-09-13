@@ -20,3 +20,4 @@ src/ui/topbar.ui
 src/ui/vnc-preferences.ui
 src/ui/window.ui
 src/vnc-connection.vala
+src/window.vala
