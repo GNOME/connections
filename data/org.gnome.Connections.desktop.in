@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Connections
-Exec=gnome-connections
+Exec=gnome-connections %U
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;RemoteAccess;Network;
