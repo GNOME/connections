@@ -1,45 +1,72 @@
 # Dutch translation for gnome-connections.
 # Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Nathan Follens <nthn@unseen.is>, 2021.
+# Nathan Follens <nfollens@gnome.org>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-40\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/"
-"issues\n"
-"POT-Creation-Date: 2021-03-20 14:02+0000\n"
-"PO-Revision-Date: 2021-04-01 22:31+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-08-26 10:01+0000\n"
+"PO-Revision-Date: 2021-09-02 15:41+0200\n"
+"Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Gnome Verbindingen"
-
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Een externbureaubladcliënt voor de Gnome-bureaubladomgeving"
-
-#: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Een externbureaubladcliënt voor de Gnome-bureaubladomgeving."
-
-#: data/org.gnome.Connections.appdata.xml.in:28
-msgid "The GNOME Project"
-msgstr "Het Gnome-project"
-
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9
 msgid "Connections"
 msgstr "Verbindingen"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Bekijk en gebruik andere bureaubladen"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Verbindingen laat u verbinding maken met andere bureaubladen en ze "
+"gebruiken. Dit kan een uitstekende manier zijn om inhoud of software op een "
+"ander besturingssysteem te benaderen. Verbindingen kan ook gebruikt worden "
+"om gebruikers die hulp nodig hebben te ondersteunen."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Er worden heel wat verschillende besturingssystemen ondersteund, waaronder "
+"Linux- en Windows-bureaubladen. U kunt ook verbinding maken met virtuele "
+"machines."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Verbindingen maakt gebruik van de goed ondersteunde VNC- en RDP-"
+"protocollen. Eén van deze protocollen moet ingeschakeld zijn op het "
+"bureaublad waarmee u verbinding wilt maken."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Het Gnome-project"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;extern;bureaublad;"
+"ondersteuning;toegang;bekijken;weergave"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -49,104 +76,123 @@ msgstr "Externbureaubladbestand (VNC)"
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "Nathan Follens\n"
 "\n"
 "Meer info over Gnome-NL http://nl.gnome.org"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:239
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Een externbureaubladcliënt voor de Gnome-bureaubladomgeving"
+
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Kon bestand met onbekend MIME-type %s niet openen"
 
-#: src/application.vala:170
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Verbinding met ‘%s’ is verwijderd"
 
-#: src/application.vala:172
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/application.vala:211
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "URL om mee te verbinden"
 
-#: src/application.vala:212
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr ".vnc- of .rdp-bestand openen op gegeven PAD"
 
-#: src/application.vala:234
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "In volledig scherm openen"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Te veel argumenten opgegeven voor de opdracht.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Schermafdruk van %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Schermafdruk gemaakt"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Openen"
 
-#: src/connection.vala:188
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "‘%s’ vereist authenticatie"
 
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Aanmelding mislukt: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Schalen"
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Nee, bedankt"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Sluiten"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Schermafdruk maken"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Nieuwe verbinding maken"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Volledig scherm"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Voer het adres in van een machine om mee te verbinden. Het adres kan "
-"beginnen met rdp:// of vnc://"
+"Voer de netwerkidentificatie van het extern bureaublad waarmee u verbinding "
+"wilt maken in:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Server"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Verbindingstype"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Naam"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (standaard om te verbinden met Windows)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Annuleren"
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (standaard om te verbinden met Linux)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Aanmaken"
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Hulp"
+
+#: src/ui/assistant.ui:98
+msgid "Connect"
+msgstr "Verbinden"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -160,7 +206,7 @@ msgstr "Wa_chtwoord"
 msgid "Sign In"
 msgstr "Aanmelden"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Welkom bij Verbindingen"
 
@@ -168,13 +214,62 @@ msgstr "Welkom bij Verbindingen"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Klik gewoon op de <b>+</b>-knop om uw eerste verbinding te maken."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Verbindingseigenschappen"
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Kom meer te weten over hoe Verbindingen werkt."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Gebruik andere bureaubladen op afstand"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Gebruik Verbindingen om het scherm van andere bureaubladen te bekijken. U "
+"kunt ze zelfs besturen met uw muis en toetsenbord!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Verbind met verschillende besturingssystemen"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Verkrijg toegang tot Linux-, Mac- en Windows-bureaubladen met Verbindingen."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Schakel extern bureaublad in vóór verbinden"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Computers moeten ingesteld zijn voor externbureaubladfunctionaliteit "
+"vooraleer u er verbinding mee kunt maken."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "We hopen dat u Verbindingen met plezier zult gebruiken!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Meer informatie kan gevonden worden in de hulpbestanden."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Verbindingsvoorkeuren"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Adres"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Naam"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -208,65 +303,106 @@ msgstr "Sneltoetsen"
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Hulp"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Over Verbindingen"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:55
+msgid "Display"
+msgstr "Weergave"
+
+#: src/ui/vnc-preferences.ui:60
+msgid "Scaling"
+msgstr "Schalen"
+
+#: src/ui/vnc-preferences.ui:67
+msgid "View only"
+msgstr "Alleen bekijken"
+
+#: src/ui/vnc-preferences.ui:74
+msgid "Show local pointer"
+msgstr "Lokale pointer weergeven"
+
+#: src/ui/vnc-preferences.ui:82
+msgid "Bandwidth"
+msgstr "Bandbreedte"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "High quality"
+msgstr "Hoge kwaliteit"
+
+#: src/ui/vnc-preferences.ui:90
+msgid "Fast refresh"
+msgstr "Snel verversen"
+
+#: src/ui/vnc-preferences.ui:101
+msgid "Scale mode"
+msgstr "Schaalmodus"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Aanpassen aan venster"
+
+#: src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Oorspronkelijke grootte"
+
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Kon bestand niet verwerken"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Sleutel ‘%s’ ontbreekt in VNC-bestand"
 
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Alleen bekijken"
+#~ msgid "GNOME Connections"
+#~ msgstr "Gnome Verbindingen"
 
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Lokale pointer weergeven"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Een externbureaubladcliënt voor de Gnome-bureaubladomgeving."
 
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Bandbreedte"
+#~ msgid "Create a New Connection"
+#~ msgstr "Nieuwe verbinding maken"
 
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Hoge kwaliteit"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Voer het adres in van een machine om mee te verbinden. Het adres kan "
+#~ "beginnen met rdp:// of vnc://"
 
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Snel verversen"
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuleren"
+
+#~ msgid "Create"
+#~ msgstr "Aanmaken"
