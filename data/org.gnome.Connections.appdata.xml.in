@@ -23,6 +23,21 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="41.1" date="2021-09-17">
+      <p>Connections 41.0 is here!</p>
+      <ul>
+        <li>An onboarding dialog with usage instructions.</li>
+        <li>A new connection creation dialog.</li>
+        <li>Fullscreen support.</li>
+        <li>A display thumbnail is now shown to indicate a connection is open.</li>
+        <li>Shared clipboard support for VNC connections.</li>
+        <li>Scale modes for VNC connections.</li>
+        <li>Improvements to RDP authentication.</li>
+        <li>Type-to-search in the main view.</li>
+        <li>A new icon.</li>
+      </ul>
+    </release>
+
     <release version="40.0" date="2020-03-19">
       <description>
         <p>GNOME Connections 40.0 culminates six months of feature development, bugfixes, and performance improvements.</p>
