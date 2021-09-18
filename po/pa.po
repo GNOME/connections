@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-01-06 16:06+0000\n"
-"PO-Revision-Date: 2021-02-06 10:06-0800\n"
+"POT-Creation-Date: 2021-09-13 16:42+0000\n"
+"PO-Revision-Date: 2021-09-18 16:13-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjab-translation@googlegroups.com>\n"
 "Language: pa\n"
@@ -16,29 +16,48 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 20.12.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "ਗਨੋਮ ਕਨੈਕਸ਼ਨਸ"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/window.vala:108
+msgid "Connections"
+msgstr "ਕਨੈਕਸ਼ਨ"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ"
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "ਹੋਰ ਡੈਸਕਟਾਪ ਵੇਖੋ ਅਤੇ ਵਰਤੋ"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ ਹੈ।"
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"ਕਨੈਕਸ਼ਨਜ਼ ਤੁਹਾਨੂੰ ਹੋਰ ਡੈਸਕਟਾਪ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਤੇ ਵਰਤਣ ਦੀ ਮਦਦਗਾਰ ਕਰਦਾ ਹੈ। ਇਹ"
+" ਵੱਖੋ-ਵੱਖਰੇ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਉੱਤੇ ਸਮੱਗਰੀ ਜਾਂ ਸਾਫਟਵੇਅਰ ਵਰਤਣ ਲਈ ਵਧੀਆ ਢੰਗ ਹੈ। ਇਸ"
+" ਨੂੰ ਮਦਦ ਦੇ ਚਾਹਵਾਨ ਵਰਤੋਂਕਾਰਾਂ ਵਾਸਤੇ ਵਧੀਆ ਢੰਗ ਵੀ ਹੋ ਸਕਦਾ ਹੈ।"
 
-#: data/org.gnome.Connections.appdata.xml.in:28
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+
+#: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "ਗਨੋਮ ਪਰੋਜੈਕਟ"
 
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "ਕਨੈਕਸ਼ਨਸ"
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "ਵੀਐਨਸੀ;ਰਿਮੋਟ;ਡੈਸਕਟਾਪ;ਵਿੰਡੋ;ਸਹਿਯੋਗ;ਪਹੁੰਚ;ਵੇਖੋ"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -48,102 +67,122 @@ msgstr "ਰਿਮੋਟ ਡੈਸਕਟਾਪ (VNC) ਫਾਇਲ"
 msgid "Delete"
 msgstr "ਹਟਾਓ"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "ਅ ਸ ਆਲਮ (A S Alam) ੨੦੨੧\n"
 "Punjabi OpenSource Team (POST) www.satluj.org"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:239
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ"
+
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "ਅਣਜਾਣ ਮਾਈਮ ਕਿਸਮ %s ਦੀ ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
 
-#: src/application.vala:170
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "“%s” ਲਈ ਕਨੈਕਸ਼ਨ ਨੂੰ ਹਟਾਇਆ ਗਿਆ ਹੈ"
 
-#: src/application.vala:172
+#: src/application.vala:182
 msgid "Undo"
 msgstr "ਵਾਪਸ ਲਵੋ"
 
-#: src/application.vala:211
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "ਕਨੈਕਟ ਕਰਨ ਲਈ URL"
 
-#: src/application.vala:212
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "ਦਿੱਤੇ ਮਾਰਗ ਤੋਂ .vnc ਜਾਂ .rdp ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: src/application.vala:234
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "ਪੂਰੀ ਸਕਰੀਨ ਵਿੱਚ ਖੋਲ੍ਹੋ"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "ਬਹੁਤ ਸਾਰੇ ਕਮਾਂਡ-ਲਾਈਨ ਆਰਗੂਮੈਂਟ ਦਿੱਤੇ ਗਏ।\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "%s ਤੋਂ ਸਕਰੀਨਸ਼ਾਟ"
 
-#: src/connection.vala:142
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "ਸਕਰੀਨਸ਼ਾਟ ਲਿਆ"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:82
 msgid "Open"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/connection.vala:188
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” ਲਈ ਪਰਮਾਣਕਿਤਾ ਚਾਹੀਦੀ ਹੈ"
 
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "ਪਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
-msgid "Scaling"
-msgstr "ਸਕੇਲਿੰਗ"
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "ਨਹੀਂ ਜੀ ਧੰਨਵਾਦ"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "ਸਕਰੀਨਸ਼ਾਟ ਲਵੋ"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "ਨਵਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਓ"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "ਪੂਰੀ ਸਕਰੀਨ"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"ਕਨੈਕਟ ਕਰਨ ਲਈ ਮਸ਼ੀਨ ਦਾ ਐਡਰੈਸ ਦਿਓ। ਐਡਰੈਸ  rdp:// ਜਾਂ vnc:// ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "ਸਰਵਰ"
+#: src/ui/assistant.ui:53
+#| msgid "Connections"
+msgid "Connection Type"
+msgstr "ਕਨੈਕਸ਼ਨ ਦੀ ਕਿਸਮ"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "ਨਾਂ"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (Windows ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਟੈਂਡਰਡ)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "ਰੱਦ ਕਰੋ"
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (ਲੀਨਕਸ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਟੈਂਡਰਡ)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "ਬਣਾਓ"
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "ਮਦਦ"
+
+#: src/ui/assistant.ui:98
+#| msgid "Connections"
+msgid "Connect"
+msgstr "ਕਨੈਕਟ ਕਰੋ"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -157,7 +196,7 @@ msgstr "ਪਾਸਵਰਡ(_P)"
 msgid "Sign In"
 msgstr "ਸਾਇਨ ਇਨ ਕਰੋ"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "ਕਨੈਕਸ਼ਨਸ ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ"
 
@@ -165,13 +204,66 @@ msgstr "ਕਨੈਕਸ਼ਨਸ ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਉਣ ਲਈ <b>+</b> ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "ਕਨੈਕਸ਼ਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+#: src/ui/onboarding-dialog.ui:42
+#, fuzzy
+#| msgid "About Connections"
+msgid "Learn about how Connections works."
+msgstr "ਕਨੈਕਸ਼ਨਸ ਬਾਰੇ"
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "ਹੋਰ ਡੈਸਕਟਾਪ ਵਰਤੋਂ, ਰਿਮੋਟ ਤੋਂ"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"ਹੋਰ ਡੈਸਕਟਾਪਾਂ ਦੀ ਸਕਰੀਨ ਵੇਖਣ ਲਈ ਕਨੈਕਸ਼ਨਜ਼ ਵਰਤੋਂ। ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਪੁਆਇੰਟਰ ਤੇ"
+" ਕੀਬੋਰਡ ਵਰਤ ਕੇ ਕੰਟਰੋਲ ਕਰ ਸਕਦੇ ਹੋ!"
+
+#: src/ui/onboarding-dialog.ui:57
+#| msgid "Connection Properties"
+msgid "Connect to different operating systems"
+msgstr "ਵੱਖੋ-ਵੱਖਰੇ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "ਲੀਨਕਸ, ਮੈਕ ਤੇ ਵਿੰਡੋਜ਼ ਡੈਸਕਟਾਪਾਂ ਨੂੰ ਕਨੈਕਸ਼ਨਜ਼ ਰਾਹੀਂ ਇਸਤੇਮਾਲ ਕਰੋ।"
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "ਕਨੈਕਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸਮਰੱਥ ਕਰੋ"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਤੁਸੀਂ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ, ਉਹਨਾਂ ਨਾਲ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸੈਟ"
+" ਅੱਪ ਕਰਨ ਦੀ ਲੋੜ ਹੈ।"
+
+#: src/ui/onboarding-dialog.ui:73
+#| msgid "Welcome to Connections"
+msgid "We hope that you enjoy Connections!"
+msgstr "ਸਾਨੂੰ ਆਸ ਹੈ ਕਿ ਤੁਸੀਂ ਕਨੈਕਸ਼ਨਸ ਆਨੰਦ ਮਾਣੋਗੇ!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "ਹੋਰ ਜਾਣਕਾਰੀ ਮਦਦ ਵਿੱਚ ਲੱਭੀ ਜਾ ਸਕਦੀ ਹੈ।"
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+#| msgid "Connection Properties"
+msgid "Connection preferences"
+msgstr "ਕਨੈਕਸ਼ਨ ਪਸੰਦਾਂ"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "ਐਡਰੈਸ"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "ਨਾਂ"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -205,65 +297,105 @@ msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ"
 msgid "Keyboard Shortcuts"
 msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "ਮਦਦ"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "ਕਨੈਕਸ਼ਨਸ ਬਾਰੇ"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:55
+#| msgid "Display Menu"
+msgid "Display"
+msgstr "ਡਿਸਪਲੇਅ"
+
+#: src/ui/vnc-preferences.ui:60
+msgid "Scaling"
+msgstr "ਸਕੇਲਿੰਗ"
+
+#: src/ui/vnc-preferences.ui:67
+msgid "View only"
+msgstr "ਸਿਰਫ਼ ਵੇਖਣ ਲਈ"
+
+#: src/ui/vnc-preferences.ui:74
+msgid "Show local pointer"
+msgstr "ਲੋਕਲ ਪੁਆਇੰਟਰ ਵੇਖਾਓ"
+
+#: src/ui/vnc-preferences.ui:82
+msgid "Bandwidth"
+msgstr "ਬੈਂਡਵਿਡਥ"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "High quality"
+msgstr "ਉੱਚ ਕੁਆਲਟੀ"
+
+#: src/ui/vnc-preferences.ui:90
+msgid "Fast refresh"
+msgstr "ਤੇਜ਼ ਤਾਜ਼ਾ"
+
+#: src/ui/vnc-preferences.ui:101
+msgid "Scale mode"
+msgstr "ਸਕੇਲ ਮੋਡ"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "ਵਿੰਡੋ ਲਈ ਫਿੱਟ ਕਰੋ"
+
+#: src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "ਅਸਲ ਆਕਾਰ"
+
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "ਫਾਇਲ ਨੂੰ ਪਾਰਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC ਫਾਇਲ ਲਈ “%s” ਕੁੰਜੀ ਗੁੰਮ ਹੈ"
 
-#: src/vnc-connection.vala:295
-msgid "View only"
-msgstr "ਸਿਰਫ਼ ਵੇਖਣ ਲਈ"
+#~ msgid "GNOME Connections"
+#~ msgstr "ਗਨੋਮ ਕਨੈਕਸ਼ਨਸ"
 
-#: src/vnc-connection.vala:305
-msgid "Show local pointer"
-msgstr "ਲੋਕਲ ਪੁਆਇੰਟਰ ਵੇਖਾਓ"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ ਹੈ।"
 
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "ਉੱਚ ਕੁਆਲਟੀ"
+#~ msgid "Create a New Connection"
+#~ msgstr "ਨਵਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਓ"
 
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "ਤੇਜ਼ ਤਾਜ਼ਾ"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr "ਕਨੈਕਟ ਕਰਨ ਲਈ ਮਸ਼ੀਨ ਦਾ ਐਡਰੈਸ ਦਿਓ। ਐਡਰੈਸ  rdp:// ਜਾਂ vnc:// ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "ਬੈਂਡਵਿਡਥ"
+#~ msgid "Server"
+#~ msgstr "ਸਰਵਰ"
+
+#~ msgid "Cancel"
+#~ msgstr "ਰੱਦ ਕਰੋ"
+
+#~ msgid "Create"
+#~ msgstr "ਬਣਾਓ"
