@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-07-13 09:53+0000\n"
-"PO-Revision-Date: 2021-08-08 07:42+0300\n"
+"POT-Creation-Date: 2021-09-13 16:42+0000\n"
+"PO-Revision-Date: 2021-09-23 12:09+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/window.vala:108
 msgid "Connections"
 msgstr "חיבורים"
 
@@ -85,76 +85,78 @@ msgstr ""
 "\n"
 "<a href=\"https://l10n.gnome.org/teams/he/\">מיזם תרגום GNOME לעברית</a>"
 
-#: src/application.vala:89 src/application.vala:234
+#: src/application.vala:89 src/application.vala:239
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "לקוח שולחן עבודה מרוחק עבור סביבת שולחן העבודה GNOME"
 
-#: src/application.vala:148
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "לא ניתן לפתוח קובץ כי סוגו אינו ידוע %s"
 
-#: src/application.vala:177
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "התחברות אל „%s” נמחקה"
 
-#: src/application.vala:180
+#: src/application.vala:182
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/application.vala:226
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "כתובת להתחברות"
 
-#: src/application.vala:227
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Open .vnc or .rdp file at the given PATH"
 
-#: src/application.vala:249
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "פתיחה במסך מלא"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Too many command-line arguments specified.\n"
 
-#. Translators: This is a link which takes users to a documentation page in yelp
-#: src/assistant.vala:34
-msgid "Learn more."
-msgstr "מידע נוסף."
-
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:65
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "צילום מסך מ־%s"
 
-#: src/connection.vala:80
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "המסך צולם"
 
 #. Translators: Open is a verb
-#: src/connection.vala:83
+#: src/connection.vala:82
 msgid "Open"
 msgstr "פתיחה"
 
-#: src/connection.vala:128
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "‏„%s” דורש אימות"
 
-#: src/connection.vala:142
+#: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "האימות נכשל: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "‫‎%d×%d"
 
-#. Adds a custom link to the last page
-#: src/onboarding-dialog.vala:52
-msgid "Read our tutorial to learn how."
-msgstr "המדריך שלנו יסביר לך כיצד."
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "לא תודה"
+
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "סגירה"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -164,17 +166,29 @@ msgstr "צילום מסך"
 msgid "Fullscreen"
 msgstr "מסך מלא"
 
-#: src/ui/assistant.ui:17
-msgid "Connect to a Desktop"
-msgstr "התחברות לשולחן עבודה"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "נא למלא את מזהה הרשת של שולחן העבודה המרוחק כדי להתחבר אליו:"
 
-#: src/ui/assistant.ui:46
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "סוג החיבור"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "‫RDP (תקן להתחברות אל Windows)"
+
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "‫VNC (תקן להתחברות אל Linux)"
+
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "עזרה"
+
+#: src/ui/assistant.ui:98
 msgid "Connect"
 msgstr "חיבור"
-
-#: src/ui/assistant.ui:61
-msgid "Addresses start with either vnc:// or rdp://."
-msgstr "כתובות מתחילות או ב־vnc://‎ או ב־rdp://‎."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -188,7 +202,7 @@ msgstr "_ססמה"
 msgid "Sign In"
 msgstr "כניסה"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "ברוך בואך לחיבורים"
 
@@ -196,25 +210,46 @@ msgstr "ברוך בואך לחיבורים"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "פשוט ללחוץ על כפתור ה<b>+</b> ליצירת ההתחברות הראשונה שלך."
 
-#: src/ui/onboarding-dialog.ui:59
-msgid "Connections makes it easy to use other desktops remotely."
-msgstr "כלי החיבורים מקל על השימוש מרחוק בשולחנות עבודה אחרים."
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "מידע על אופן העבודה של חיבורים."
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "ניתן להשתמש בשולחנות עבודה, מרחוק"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"יש להשתמש בחיבורים כדי לצפות במסך של שולחנות עבודה אחרים. ניתן גם לשלוט בהם "
+"באמצעות הסמן והמקלדת!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "התחברות למגוון מערכות הפעלה"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "גישה לשולחנות עבודה של לינוקס, Mac ו־Windows באמצעות חיבורים."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "יש להפעיל שולחן עבודה מרוחק בטרם החיבור"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Connect to Linux or Windows"
-msgstr "התחברות ללינוקס או ל־Windows"
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to them."
+msgstr "יש להגדיר על המחשבים חיבור שולחן עבודה מרוחק בטרם אפשר להתחבר אליהם."
 
-#: src/ui/onboarding-dialog.ui:67
-msgid "Remotely access a range of desktop operating systems."
-msgstr "גישה מרחוק למגוון של מערכות הפעלה עם שולחנות עבודה."
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "אנו מקווים שתכנית החיבורים עושה לך רק טוב!"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "Configure for Access"
-msgstr "הגדרה לגישה"
-
-#: src/ui/onboarding-dialog.ui:75
-msgid "To connect to a desktop, it needs to be setup first."
-msgstr "כדי להתחבר לשולחן עבודה, יש להגדיר אותו תחילה."
+msgid "More information can be found in the help."
+msgstr "ניתן למצוא מידע נוסף בעזרה."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -260,10 +295,6 @@ msgstr "צירופי מקשים"
 msgid "Keyboard Shortcuts"
 msgstr "צירופי מקשים"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "עזרה"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "על אודות חיבורים"
@@ -292,56 +323,83 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:54
+#: src/ui/vnc-preferences.ui:55
 msgid "Display"
 msgstr "תצוגה"
 
-#: src/ui/vnc-preferences.ui:59
+#: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
 msgstr "קנה מידה"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "תצוגה בלבד"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "הצגת הסמן המקומי"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
 msgstr "רוחב פס"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:89
 msgid "High quality"
 msgstr "איכות גבוהה"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:90
 msgid "Fast refresh"
 msgstr "רענון מהיר"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:101
 msgid "Scale mode"
 msgstr "מצב שינוי גודל"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
 msgstr "התאמת החלון"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:109
 msgid "Original size"
 msgstr "גודל מקורי"
 
-#: src/vnc-connection.vala:124
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "לא ניתן לנתח את הקובץ"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
-#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "בקובץ ה־VNC חסר המפתח „%s”"
+
+#~ msgid "Learn more."
+#~ msgstr "מידע נוסף."
+
+#~ msgid "Read our tutorial to learn how."
+#~ msgstr "המדריך שלנו יסביר לך כיצד."
+
+#~ msgid "Connect to a Desktop"
+#~ msgstr "התחברות לשולחן עבודה"
+
+#~ msgid "Addresses start with either vnc:// or rdp://."
+#~ msgstr "כתובות מתחילות או ב־vnc://‎ או ב־rdp://‎."
+
+#~ msgid "Connections makes it easy to use other desktops remotely."
+#~ msgstr "כלי החיבורים מקל על השימוש מרחוק בשולחנות עבודה אחרים."
+
+#~ msgid "Connect to Linux or Windows"
+#~ msgstr "התחברות ללינוקס או ל־Windows"
+
+#~ msgid "Remotely access a range of desktop operating systems."
+#~ msgstr "גישה מרחוק למגוון של מערכות הפעלה עם שולחנות עבודה."
+
+#~ msgid "Configure for Access"
+#~ msgstr "הגדרה לגישה"
+
+#~ msgid "To connect to a desktop, it needs to be setup first."
+#~ msgstr "כדי להתחבר לשולחן עבודה, יש להגדיר אותו תחילה."
 
 #~ msgid "GNOME Connections"
 #~ msgstr "התחברויות של GNOME"
