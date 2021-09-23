@@ -1,0 +1,378 @@
+# Vietnamese translation for connections.
+# Copyright (C) 2021 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+# Ngọc Quân Trần <vnwildman@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2021-09-22 15:32+0000\n"
+"PO-Revision-Date: 2021-09-23 13:53+0700\n"
+"Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
+"X-Generator: Gtranslator 3.38.0\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/window.vala:108
+msgid "Connections"
+msgstr "Kết nối"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Xem và sử dụng màn hình làm việc từ máy khác"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Kết nối cho phép bạn kết nối và sử dụng các máy tính để bàn khác. Đây có "
+"thể là một cách tuyệt vời để truy cập nội dung hoặc phần mềm trên một hệ "
+"điều hành máy tính để bàn khác. Nó cũng có thể được sử dụng như một cách để "
+"cung cấp hỗ trợ cho những người dùng có thể cần giúp đỡ."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Một loạt các hệ điều hành khác nhau có thể được kết nối, bao gồm cả máy "
+"tính để bàn Linux và Windows. Bạn cũng có thể kết nối với các máy ảo."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Kết nối sử dụng các giao thức VNC và RDP được hỗ trợ rộng rãi và một trong "
+"số này phải được bật trên máy tính để bàn mà bạn muốn kết nối."
+
+#: data/org.gnome.Connections.appdata.xml.in:34
+msgid "The GNOME Project"
+msgstr "Dự án GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;remote;desktop;windows;support;access;view"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Tập tin điều khiển màn hình từ xa (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Xóa"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "Thuộc tính"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr "Nhóm Việt hóa Gnome <gnome-vi-list@gnome.org>"
+
+#: src/application.vala:89 src/application.vala:239
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr ""
+"Một chương trình điều khiển màn hình từ xa cho môi trường máy tính để bàn "
+"GNOME"
+
+#: src/application.vala:150
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Không thể mở tập tin của kiểu mime chưa biết %s"
+
+#: src/application.vala:179
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Kết nối đến “%s” đã bị xóa bỏ"
+
+#: src/application.vala:182
+msgid "Undo"
+msgstr "Hồi lại"
+
+#: src/application.vala:229
+msgid "URL to connect"
+msgstr "URL để kết nối"
+
+#: src/application.vala:230
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Mở tập tin .vnc hoặc .rdp ở /ĐƯỜNG/DẪN/ đã cho"
+
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Mở toàn màn hình"
+
+#: src/application.vala:254
+msgid "Too many command-line arguments specified.\n"
+msgstr ""
+"Quá nhiều đối số dòng lệnh được đưa ra.\n"
+"\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:64
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Hình chụp vào %s"
+
+#: src/connection.vala:79
+msgid "Screenshot taken"
+msgstr "Chụp màn hình"
+
+#. Translators: Open is a verb
+#: src/connection.vala:82
+msgid "Open"
+msgstr "Mở"
+
+#: src/connection.vala:127
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "“%s” cần xác thực"
+
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Gặp lỗi khi xác thực: %s"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:141
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Không, cảm ơn"
+
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Đóng"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Chụp màn hình"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Toàn màn hình"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Nhập định danh mạng của màn hình nền từ xa để kết nối với:"
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Kiểu kết nối"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (tiêu chuẩn để kết nối đến Windows)"
+
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (tiêu chuẩn để kết nối đến Linux)"
+
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Xem trợ giúp"
+
+#: src/ui/assistant.ui:98
+msgid "Connect"
+msgstr "Kết nối"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Tên người _dùng"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Mật mã"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Đăng nhập"
+
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+msgid "Welcome to Connections"
+msgstr "Chào mừng bạn dùng \"Kết nối\""
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Chỉ cần bấm vào nút <b>+</b> để tạo kết nối đầu tiên."
+
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Tìm hiểu về cách hoạt động của \"Kết nối\"."
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Điều khiển máy tính để bàn khác, qua mạng"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Dùng \"Kết nối\" để xem màn hình của các màn hình nền khác. Bạn cũng có thể "
+"điều khiển chúng bằng con trỏ và bàn phím!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Kết nối đến hệ điều hành khác"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Truy cập máy tính để bàn Linux, Mac và Windows bằng cách dùng \"Kết nối\"."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Bật cho điều khiển màn hình từ xa trước khi kết nối"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Máy tính cần được cài đặt cho phép điều khiển màn hình qua mạng trước khi "
+"bạn có thể kết nối với chúng."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Chúng tôi hy vọng bạn thích \"Kết nối\"!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Muốn có thêm thông tin có thể tìm thấy trong phần trợ giúp."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Tùy thích kết nối"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+msgid "Address"
+msgstr "Địa chỉ"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Tên"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Mớn"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Trình đơn ứng dụng"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Lùi lại"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Hiển thị trình đơn"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Ngắt kết nối"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Phím tắt bàn phím"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Phím tắt"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Giới thiệu về \"Kết nối\""
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Xóa lùi"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:55
+msgid "Display"
+msgstr "Hiển thị"
+
+#: src/ui/vnc-preferences.ui:60
+msgid "Scaling"
+msgstr "Tỷ lệ"
+
+#: src/ui/vnc-preferences.ui:67
+msgid "View only"
+msgstr "Chỉ xem"
+
+#: src/ui/vnc-preferences.ui:74
+msgid "Show local pointer"
+msgstr "Hiển thị con trỏ cục bộ"
+
+#: src/ui/vnc-preferences.ui:82
+msgid "Bandwidth"
+msgstr "Băng thông"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "High quality"
+msgstr "Chất lượng cao"
+
+#: src/ui/vnc-preferences.ui:90
+msgid "Fast refresh"
+msgstr "Làm mới nhanh"
+
+#: src/ui/vnc-preferences.ui:101
+msgid "Scale mode"
+msgstr "Chế độ co giãn"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Vừa khít cửa sổ"
+
+#: src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Kích cỡ gốc"
+
+#: src/vnc-connection.vala:123
+msgid "Couldn’t parse the file"
+msgstr "Không thể phân tích cú pháp tập tin"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Tập tin VNC thiếu khóa “%s”"
