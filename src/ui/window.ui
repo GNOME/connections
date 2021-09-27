@@ -2,6 +2,7 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
     <template class="ConnectionsWindow" parent="GtkApplicationWindow">
+      <property name="title" translatable="yes">Connections</property>
       <property name="default-width">980</property>
       <property name="default-height">640</property>
       <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
