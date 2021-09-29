@@ -103,6 +103,8 @@ namespace Connections {
                     value = get_string (connection.uuid, property_name);
                 if (value.type () == typeof (bool))
                     value = get_boolean (connection.uuid, property_name);
+                if (value.type () == typeof (int))
+                    value = keyfile.get_integer (connection.uuid, property_name);
                 if (value.type () == typeof (uint64))
                     value = keyfile.get_uint64 (connection.uuid, property_name);
                 if (value.type () == typeof (int64))
@@ -125,6 +127,8 @@ namespace Connections {
                 keyfile.set_string (connection.uuid, property_name, vstring);
             } else if (value.type () == typeof (bool))
                 keyfile.set_boolean (connection.uuid, property_name, value.get_boolean ());
+            else if (value.type () == typeof (int))
+                keyfile.set_integer (connection.uuid, property_name, value.get_int ());
             else if (value.type () == typeof (uint64))
                 keyfile.set_uint64 (connection.uuid, property_name, value.get_uint64 ());
             else if (value.type () == typeof (int64))
