@@ -234,7 +234,7 @@ namespace Connections {
         }
 
         private void on_owner_change_cb () {
-            if (view_only)
+            if (!connected || view_only)
                 return;
 
             string message = clipboard.wait_for_text ();
