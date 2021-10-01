@@ -38,7 +38,14 @@ namespace Connections {
             }
 
             owned get {
-                return display.get_pixbuf ();
+                Gtk.Allocation alloc;
+                widget.get_allocation (out alloc);
+
+                var surface = new Cairo.ImageSurface (ARGB32, alloc.width, alloc.height);
+                var context = new Cairo.Context (surface);
+                widget.draw (context);
+
+                return Gdk.pixbuf_get_from_surface (surface, 0, 0, alloc.width, alloc.height);
             }
         }
 
