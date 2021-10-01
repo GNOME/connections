@@ -80,7 +80,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git",
-                    "branch" : "f591dcf456a1e126c0cdf6e49d436485556d8999"
+                    "branch" : "9c15c1202ed66fe20334e33d798cc5ebd39917f0"
                 }
             ]
         },
