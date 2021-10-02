@@ -18,4 +18,5 @@ src/ui/onboarding-dialog.ui
 src/ui/rdp-preferences.ui
 src/ui/topbar.ui
 src/ui/vnc-preferences.ui
+src/ui/window.ui
 src/vnc-connection.vala
