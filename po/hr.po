@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-05 11:42+0000\n"
-"PO-Revision-Date: 2020-09-05 22:57+0200\n"
+"POT-Creation-Date: 2021-10-02 11:56+0000\n"
+"PO-Revision-Date: 2021-10-02 15:28+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -17,25 +17,53 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Povezivanja"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Klijent udaljene površine za GNOME radno okruženje"
+msgid "View and use other desktops"
+msgstr "Pogledajte i koristite druge radne površine"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Klijent udaljene površine za GNOME radno okruženje."
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Povezivanja vam omogućuju povezivanje i korištenje drugih radnih površina. "
+"To može biti sjajan način za pristup softveru ili sadržaju koji se nalazi "
+"na drugim operativnim sustavima. Može se koristiti i za pružanje potrebne "
+"pomoći korisnicima."
 
-#: data/org.gnome.Connections.appdata.xml.in:28
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Može se povezati s raznim operativnim sustavima, uključujući Linux i "
+"Windows radne površine. Možete se povezati i s virtualnim strojevima."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Povezivanja koristi široko podržane VNC i RDP protokole, i jedan od njih "
+"mora biti omogućen u radnoj površini kako bi se mogli povezati."
+
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "GNOME projekt"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;udaljeno;radna površina;windowsi;podrška;pristup;pogled"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -45,109 +73,122 @@ msgstr "Datoteka udaljene radne površine (VNC)"
 msgid "Delete"
 msgstr "Obriši"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Svojstva"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Upravitelj udaljenog povezivanja za GNOME radno okruženje"
+#: src/application.vala:89 src/application.vala:239
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Klijent udaljene površine za GNOME radno okruženje"
 
-#: src/application.vala:140
+#: src/application.vala:150
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nemoguće otvaranje datoteke nepoznate mime vrste %s"
 
-#: src/application.vala:170
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Povezivanje s “%s” je obrisano"
 
-#: src/application.vala:172
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Vrati"
 
-#: src/application.vala:211
-msgid "URL to connection"
-msgstr "URL do povezivanja"
+#: src/application.vala:229
+msgid "URL to connect"
+msgstr "URL za povezivanja"
 
-#: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
+#: src/application.vala:230
+msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Otvori .vnc ili .rdp datoteku na zadanoj PUTANJI"
 
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— Jednostavna aplikacija za pristup udaljenim povezivanjima"
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Otvori u cijelom zaslonu"
 
-#: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
-msgstr "Previše argumenata naredbenog redka je određeno.\n"
+#: src/application.vala:254
+msgid "Too many command-line arguments specified.\n"
+msgstr "Previše argumenata naredbenog redka je navedeno.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Slika zaslona od %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Uslikaj zaslon"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Otvori"
 
-#: src/connection.vala:187
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” zahtijeva ovjeru"
 
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Neuspjela ovjera: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
-msgid "Scaling"
-msgstr "Promjena veličine"
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Ne hvala"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Zatvori"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Uslikaj prikaz zaslona"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Stvori novo povezivanje"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Cijeli zaslon"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Upišite adresu za povezivanje. Adrese mogu započinjati sa rdp:// ili vnc://"
+"Upišite mrežnog identifikatora udaljene radne površine s kojom se "
+"povezujete:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Poslužitelj"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Vrsta povezivanja"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
-msgid "Name"
-msgstr "Naziv"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (standard za povezivanje s Windowsima)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Odustani"
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (standard za povezivanje s Linuxom)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Stvori"
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Priručnik"
+
+#: src/ui/assistant.ui:98
+msgid "Connect"
+msgstr "Poveži se"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -161,7 +202,7 @@ msgstr "_Lozinka"
 msgid "Sign In"
 msgstr "Prijava"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Dobrodošli u Povezivanja"
 
@@ -170,13 +211,62 @@ msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr ""
 "Jednostavno pritisnite tipku <b>+</b> za stvaranje vašeg prvog povezivanja."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Svojstava povezivanja"
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Saznajte više kako Povezivanja rade."
 
-#: src/ui/properties.ui:108
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Koristi druge radne površine, udaljeno"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Koristi Povezivanja kako bi vidjeli zaslon drugih radnih površina. Možete "
+"upravljati njima koristeći pokazivač i tipkovnicu!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Poveži se s drugim operativnim sustavom"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Pristupite Linux, Mac, i Windows radnim površinama koristeći Povezivanja."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Omogući udaljenu radnu površinu prije povezivanja"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Računala moraju biti postavljena za udaljene radne površine prije nego što "
+"se može povezati s njima."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Nadamo se da ste uživali u Povezivanjima!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Više informacija možete pronaći u pomoći."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Osobitosti povezivanja"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Adresa"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Naziv"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -210,65 +300,121 @@ msgstr "Prečaci tipkovnice"
 msgid "Keyboard Shortcuts"
 msgstr "Prečaci tipkovnice"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Priručnik"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "O Povezivanju"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
-msgstr "Nemoguća obrada datoteke"
+#: src/ui/vnc-preferences.ui:55
+msgid "Display"
+msgstr "Prikaz"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "VNC datoteci nedostaje ključ “Poslužitelj“"
+#: src/ui/vnc-preferences.ui:60
+msgid "Scaling"
+msgstr "Promjena veličine"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "VNC datoteci nedostaje ključ “Ulaz“"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "VNC datoteci nedostaje ključ “Korisničko ime“"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "VNC datoteci nedostaje ključ “Lozinka“"
-
-#: src/vnc-connection.vala:249
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "Samo gledaj"
 
-#: src/vnc-connection.vala:259
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "Prikaži lokalni pokazivač"
+
+#: src/ui/vnc-preferences.ui:82
+msgid "Bandwidth"
+msgstr "Brzina prijenosa"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "High quality"
+msgstr "Visoka kvaliteta"
+
+#: src/ui/vnc-preferences.ui:90
+msgid "Fast refresh"
+msgstr "Brzo osvježavanje"
+
+#: src/ui/vnc-preferences.ui:101
+msgid "Scale mode"
+msgstr "Način prilagodbe veličine"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Prilagodi na prozor"
+
+#: src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Izvorna veličina"
+
+#: src/vnc-connection.vala:123
+msgid "Couldn’t parse the file"
+msgstr "Nemoguća obrada datoteke"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC datoteci nedostaje ključ “%s”"
+
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Klijent udaljene površine za GNOME radno okruženje."
+
+#~ msgid "A remote connection manager for the GNOME desktop"
+#~ msgstr "Upravitelj udaljenog povezivanja za GNOME radno okruženje"
+
+#~ msgid "— A simple application to access remote connections"
+#~ msgstr "— Jednostavna aplikacija za pristup udaljenim povezivanjima"
+
+#~ msgid "Create a New Connection"
+#~ msgstr "Stvori novo povezivanje"
+
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Upišite adresu za povezivanje. Adrese mogu započinjati sa rdp:// ili "
+#~ "vnc://"
+
+#~ msgid "Server"
+#~ msgstr "Poslužitelj"
+
+#~ msgid "Cancel"
+#~ msgstr "Odustani"
+
+#~ msgid "Create"
+#~ msgstr "Stvori"
+
+#~ msgid "VNC File is missing key “Port“"
+#~ msgstr "VNC datoteci nedostaje ključ “Ulaz“"
+
+#~ msgid "VNC File is missing key “Username“"
+#~ msgstr "VNC datoteci nedostaje ključ “Korisničko ime“"
+
+#~ msgid "VNC File is missing key “Password“"
+#~ msgstr "VNC datoteci nedostaje ključ “Lozinka“"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
