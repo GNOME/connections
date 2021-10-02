@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2021-09-05 20:57+0200\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"POT-Creation-Date: 2021-10-02 10:33+0000\n"
+"PO-Revision-Date: 2021-10-02 12:34+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Anslutningar"
 
@@ -57,7 +57,7 @@ msgstr ""
 "Anslutningar använder VNC- och RDP-protokollen som många har stöd för, och "
 "ett av dessa måste vara aktiverade på skrivbordet som du vill ansluta till."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
@@ -217,14 +217,14 @@ msgstr "Läs mer om hur Anslutningar fungerar."
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
-msgstr "Använd andra skrivbord, på distans"
+msgstr "Använd andra skrivbord på distans"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
-"Använd Anslutningar för att visa skärmen på andra skrivbord. Du kan också "
+"Använd Anslutningar för att visa skärmen för andra skrivbord. Du kan också "
 "styra dem med musen och tangentbordet!"
 
 #: src/ui/onboarding-dialog.ui:57
