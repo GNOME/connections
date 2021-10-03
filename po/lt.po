@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2021-09-02 17:45+0300\n"
+"POT-Creation-Date: 2021-10-03 07:19+0000\n"
+"PO-Revision-Date: 2021-10-03 14:15+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Ryšiai"
 
@@ -56,7 +56,7 @@ msgstr ""
 "Ryšiai naudoja plačiai palaikomus VNC ir RDP protokolos, vienas iš jų turi "
 "būti įjungtas darbalaukyje, prie kurio norima prisijungti."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "GNOME projektas"
 
@@ -168,8 +168,7 @@ msgstr "Visame ekrane"
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Įveskite tinklo identifikatorių nuotoliniam darbastaliui, prie kurio "
-"jungiatės:"
+"Įveskite nuotolinio darbalaukio, prie kuri jungiatės, tinklo identifikatorių:"
 
 #: src/ui/assistant.ui:53
 #| msgid "Connections"
@@ -178,11 +177,11 @@ msgstr "Ryšio tipas"
 
 #: src/ui/assistant.ui:63
 msgid "RDP (standard for connecting to Windows)"
-msgstr "RDP (standartinis jungiantis prie Windows)"
+msgstr "RDP (įprastinis jungiantis prie Windows)"
 
 #: src/ui/assistant.ui:71
 msgid "VNC (standard for connecting to Linux)"
-msgstr "VNC (standartinis jungiantis prie Linux)"
+msgstr "VNC (įprastinis jungiantis prie Linux)"
 
 #: src/ui/assistant.ui:88 src/ui/topbar.ui:201
 msgid "Help"
@@ -215,43 +214,45 @@ msgstr "Tiesiog spauskite mygtuką <b>+</b> pirmajam ryšiui sukurti."
 #: src/ui/onboarding-dialog.ui:42
 #| msgid "About Connections"
 msgid "Learn about how Connections works."
-msgstr "Sužinokite, kaip veikia Ryšiai"
+msgstr "Sužinokite daugiau, kaip veikia ryšiai"
 
 #: src/ui/onboarding-dialog.ui:49
 #| msgid "View and use other desktops"
 msgid "Use other desktops, remotely"
-msgstr "Naudoti kitus darbalaukius nuotoliniu būdu"
+msgstr "Naudokitės kitais darbalaukiais nuotoliniu būdu"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
-"Naudokite Ryšius kitų darbastalių ekranams matyti. Taip pat galite juos "
-"valdyti naudodami žymeklį ir klaviatūrą!"
+"Naudokite ryšius kitų darbalaukių ekranams matyti. Taip pat galite juos "
+"valdyti žymekliu bei klaviatūra!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
-msgstr "Prisijunkite prie kitų operacinių sistemų"
+msgstr "Prisijunkite prie skirtingų operacinių sistemų"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Pasiekite Linux, Mac ir Windows darbastalius naudodami Ryšius."
+msgstr "Pasiekite Linux, Mac bei Windows darbalaukius ryšių pagalba."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
-msgstr "Įjunkite nuotolinį darbastalį prie junkdamiesi"
+msgstr "Įjunkite nuotolinį darbalaukį prie prisijungdami"
 
 #: src/ui/onboarding-dialog.ui:66
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
-msgstr "Kompiuterius reikia nustatyti prieš jungiantis prie jų."
+msgstr ""
+"Kompiuterius reikia sukonfigūruoti nuotoliniam darbalaukio naudojimui prie "
+"jungiantis prie jų."
 
 #: src/ui/onboarding-dialog.ui:73
 #| msgid "Welcome to Connections"
 msgid "We hope that you enjoy Connections!"
-msgstr "Tikimės, kad jums patiks Ryšiai!"
+msgstr "Tikimės, kad jums patiks ryšių programa!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
