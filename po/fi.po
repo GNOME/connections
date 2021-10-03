@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-03-13 19:32+0000\n"
-"PO-Revision-Date: 2021-03-13 21:57+0200\n"
+"POT-Creation-Date: 2021-10-03 15:55+0000\n"
+"PO-Revision-Date: 2021-10-03 19:05+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -16,29 +16,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Gnomen Yhteydet"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
+msgid "Connections"
+msgstr "Yhteydet"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle"
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Katsele ja käytä muita työpöytiä"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle."
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Yhteydet mahdollistaa etäyhteyksien luomisen muihin tietokoneisiin. Tällä "
+"tavalla voit käyttää eri käyttöjärjestelmien sisältöä ja ohjelmistoja. "
+"Etäyhteys mahdollistaa myös etätuen antamisen muille."
 
-#: data/org.gnome.Connections.appdata.xml.in:28
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Joukkoon erilaisia käyttöjärjestelmiä on mahdollista yhdistää, mukaan "
+"lukien Linux- ja Windows-työpöydät. Voit myös yhdistää virtuaalikoneisiin."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Yhteydet käyttää laajalti tuettuja VNC- ja RDP-protokollia. Tällaisen "
+"protokollan tulee olla käytössä myös työpöydällä johon haluat yhdistää."
+
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Yhteydet"
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;työpöytä;tuki;etäyhteys"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -48,99 +72,118 @@ msgstr "Etätyöpöydän VNC-tiedosto"
 msgid "Delete"
 msgstr "Poista"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Ominaisuudet"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:239
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle"
+
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ei voitu avata tuntematonta MIME-tyyppiä %s"
 
-#: src/application.vala:170
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Yhteys koneeseen “%s” on poistettu"
 
-#: src/application.vala:172
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Kumoa"
 
-#: src/application.vala:211
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "URL johon yhdistetään"
 
-#: src/application.vala:212
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Avaa .vnc- tai .rdp-tiedosto annetussa PATH:issa (polku)"
 
-#: src/application.vala:234
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Avaa koko näytön tilassa"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Liian monta komentoriviargumenttia määritetty.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Kuvakaappaus %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Kuvakaappaus otettu"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Avaa"
 
-#: src/connection.vala:188
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” vaatii tunnistautumisen"
 
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Tunnistautuminen epäonnistui: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Skaalaus"
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Ei kiitos"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Sulje"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Ota kuvakaappaus"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Luo uusi yhteys"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Koko näyttö"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr "Kirjoita koneen osoite, johon yhdistetään. Voi alkaa rdp:// tai vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Anna yhdistettävän etätyöpöydän verkkotunniste:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Palvelin"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Yhteyden tyyppi"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Nimi"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (standardi Windowsiin yhdistäessä)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Peru"
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (standardi Linuxiin yhdistäessä)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Luo"
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ohje"
+
+#: src/ui/assistant.ui:98
+msgid "Connect"
+msgstr "Yhdistä"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -154,7 +197,7 @@ msgstr "S_alasana"
 msgid "Sign In"
 msgstr "Kirjaudu sisään"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Tervetuloa"
 
@@ -162,13 +205,59 @@ msgstr "Tervetuloa"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Yhteyden ominaisuudet"
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Lue miten Yhteydet toimii."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Käytä muita työpöytiä, etänä"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr "Käytä Yhteydet-sovellusta yhdistääksesi muihin työpöytiin."
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Yhdistä eri käyttöjärjestelmiin"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "Käytä Linux-, Mac- ja Windows-työpöytiä Yhteydet-sovelluksella."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Ota etätyöpöytätuki käyttöön ennen yhdistämistä"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Tietokoneiden etätyöpöytätuki tulee olla käytettävissä, ennen kuin yhdistät "
+"niihin."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Toivottavasti Yhteydet on mieleesi!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Lisätietoja on tarjolla ohjeessa."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Yhteyden asetukset"
+
+#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
 msgstr "Osoite"
+
+#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+msgid "Name"
+msgstr "Nimi"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -202,68 +291,108 @@ msgstr "Pikanäppäimet"
 msgid "Keyboard Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Ohje"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Tietoja - Yhteydet"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:55
+msgid "Display"
+msgstr "Näyttö"
+
+#: src/ui/vnc-preferences.ui:60
+msgid "Scaling"
+msgstr "Skaalaus"
+
+#: src/ui/vnc-preferences.ui:67
+msgid "View only"
+msgstr "Vain katselu"
+
+#: src/ui/vnc-preferences.ui:74
+msgid "Show local pointer"
+msgstr "Näytä paikallinen osoitin"
+
+#: src/ui/vnc-preferences.ui:82
+msgid "Bandwidth"
+msgstr "Kaistanleveys"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "High quality"
+msgstr "Korkea laatu"
+
+#: src/ui/vnc-preferences.ui:90
+msgid "Fast refresh"
+msgstr "Nopea päivitys"
+
+#: src/ui/vnc-preferences.ui:101
+msgid "Scale mode"
+msgstr "Skaalaustila"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Sovita ikkunaan"
+
+#: src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Alkuperäinen koko"
+
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Tiedostoa ei voitu jäsentää"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-tiedostosta puuttuu avain “%s”"
 
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Vain katselu"
+#~ msgid "GNOME Connections"
+#~ msgstr "Gnomen Yhteydet"
 
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Näytä paikallinen osoitin"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle."
 
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Kaistanleveys"
+#~ msgid "Create a New Connection"
+#~ msgstr "Luo uusi yhteys"
 
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Korkea laatu"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Kirjoita koneen osoite, johon yhdistetään. Voi alkaa rdp:// tai vnc://"
 
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Nopea päivitys"
+#~ msgid "Server"
+#~ msgstr "Palvelin"
+
+#~ msgid "Cancel"
+#~ msgstr "Peru"
+
+#~ msgid "Create"
+#~ msgstr "Luo"
 
 #~ msgid "org.gnome.Connections"
 #~ msgstr "org.gnome.Connections"
