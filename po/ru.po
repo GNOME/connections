@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-07-04 15:59+0000\n"
-"PO-Revision-Date: 2021-07-05 13:49+0300\n"
+"POT-Creation-Date: 2021-10-02 11:56+0000\n"
+"PO-Revision-Date: 2021-10-02 18:31+0300\n"
 "Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Подключения"
 
@@ -58,7 +58,7 @@ msgstr ""
 "Connections использует широко поддерживаемые протоколы VNC и RDP, и один из "
 "них должен быть включен на рабочем столе, к которому вы хотите подключиться."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
@@ -85,76 +85,78 @@ msgstr ""
 "Юрий Мясоедов <ymyasoedov@yandex.ru>, 2014.\n"
 "Alexey Rubtsov <rushills@gmail.com>, 2021"
 
-#: src/application.vala:89 src/application.vala:234
+#: src/application.vala:89 src/application.vala:239
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Клиент удаленного рабочего стола для среды рабочего стола GNOME"
 
-#: src/application.vala:148
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Не удалось открыть файл неизвестного типа mime %s"
 
-#: src/application.vala:177
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Соединение с «%s» было удалено"
 
-#: src/application.vala:180
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/application.vala:226
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "URL для подключения"
 
-#: src/application.vala:227
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Открыть файл .vnc или .rdp в указанном PATH"
 
-#: src/application.vala:249
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Открыть на полный экран"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Указано слишком много аргументов командной строки.\n"
 
-#. Translators: This is a link which takes users to a documentation page in yelp
-#: src/assistant.vala:34
-msgid "Learn more."
-msgstr "Изучить подробности."
-
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:65
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Снимок экрана от %s"
 
-#: src/connection.vala:80
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Сделан скриншот"
 
 #. Translators: Open is a verb
-#: src/connection.vala:83
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Открыть"
 
-#: src/connection.vala:128
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» требует аутентификации"
 
-#: src/connection.vala:142
+#: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Аутентификация не прошла: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#. Adds a custom link to the last page
-#: src/onboarding-dialog.vala:52
-msgid "Read our tutorial to learn how."
-msgstr "Прочитайте нашу инструкцию, чтобы узнать как."
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Нет, спасибо"
+
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Закрыть"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -164,17 +166,30 @@ msgstr "Сделать скриншот"
 msgid "Fullscreen"
 msgstr "Полноэкранный режим"
 
-#: src/ui/assistant.ui:17
-msgid "Connect to a Desktop"
-msgstr "Подключение к рабочему столу"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr ""
+"Введите сетевой идентификатор удалённого рабочего стола для подключения:"
 
-#: src/ui/assistant.ui:46
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Тип подключения"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (стандарт для подключения к Windows)"
+
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (стандарт для подключения к Linux)"
+
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Справка"
+
+#: src/ui/assistant.ui:98
 msgid "Connect"
 msgstr "Подключиться"
-
-#: src/ui/assistant.ui:61
-msgid "Addresses start with either vnc:// or rdp://."
-msgstr "Адреса начинаются либо с vnc://, либо с rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -188,7 +203,7 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Войти"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Добро пожаловать в Подключения"
 
@@ -196,25 +211,50 @@ msgstr "Добро пожаловать в Подключения"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Просто нажмите кнопку <b>+</b>, чтобы установить первое соединение."
 
-#: src/ui/onboarding-dialog.ui:59
-msgid "Connections makes it easy to use other desktops remotely."
-msgstr "Подключения делают подключение к другим компьютерам простой задачей."
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Узнайте как работают Подключения"
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Используйте другие рабочие столы, удалённо"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Используйте Подключения чтобы увидеть экраны других компьютеров. Вы также "
+"можете управлять ими используя мышь и клавиатуру!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Подключайтесь к другим операционным системам"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Получите доступ к компьютерам с Linux, Mac и Windows, используя Подключения"
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Разрешите удалённый рабочий стол перед подключением"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Connect to Linux or Windows"
-msgstr "Подключиться к Linux или Windows"
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Компьютеры должны быть настроены для использования удалённых рабочих столов "
+"прежде, чем вы сможете подключиться к ним."
 
-#: src/ui/onboarding-dialog.ui:67
-msgid "Remotely access a range of desktop operating systems."
-msgstr "Удалённый доступ к ряду настольных операционных систем."
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Мы надеемся, что Подключения вам понравятся!"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "Configure for Access"
-msgstr "Настроить доступ"
-
-#: src/ui/onboarding-dialog.ui:75
-msgid "To connect to a desktop, it needs to be setup first."
-msgstr "Для подключения к компьютеру его нужно сначала настроить."
+msgid "More information can be found in the help."
+msgstr "Вы сможете найти подробную информацию в Помощи"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -260,10 +300,6 @@ msgstr "Комбинации клавиш"
 msgid "Keyboard Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Справка"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "О Связях"
@@ -292,53 +328,81 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:54
+#: src/ui/vnc-preferences.ui:55
 msgid "Display"
 msgstr "Дисплей"
 
-#: src/ui/vnc-preferences.ui:59
+#: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
 msgstr "Масштабирование"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "Только просмотр"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "Показать локальный указатель"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
 msgstr "Полоса пропускания"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:89
 msgid "High quality"
 msgstr "Высокое качество"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:90
 msgid "Fast refresh"
 msgstr "Быстрое обновление"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:101
 msgid "Scale mode"
 msgstr "Режим масштабирования"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
 msgstr "Окно"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:109
 msgid "Original size"
 msgstr "Исходный размер"
 
-#: src/vnc-connection.vala:119
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Не удалось разобрать файл"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
-#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC File is missing key «%s»"
+
+#~ msgid "Learn more."
+#~ msgstr "Изучить подробности."
+
+#~ msgid "Read our tutorial to learn how."
+#~ msgstr "Прочитайте нашу инструкцию, чтобы узнать как."
+
+#~ msgid "Connect to a Desktop"
+#~ msgstr "Подключение к рабочему столу"
+
+#~ msgid "Addresses start with either vnc:// or rdp://."
+#~ msgstr "Адреса начинаются либо с vnc://, либо с rdp://."
+
+#~ msgid "Connections makes it easy to use other desktops remotely."
+#~ msgstr ""
+#~ "Подключения делают подключение к другим компьютерам простой задачей."
+
+#~ msgid "Connect to Linux or Windows"
+#~ msgstr "Подключиться к Linux или Windows"
+
+#~ msgid "Remotely access a range of desktop operating systems."
+#~ msgstr "Удалённый доступ к ряду настольных операционных систем."
+
+#~ msgid "Configure for Access"
+#~ msgstr "Настроить доступ"
+
+#~ msgid "To connect to a desktop, it needs to be setup first."
+#~ msgstr "Для подключения к компьютеру его нужно сначала настроить."
