@@ -23,7 +23,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="41.1" date="2021-09-17">
+    <release version="41.0" date="2021-09-17">
       <p>Connections 41.0 is here!</p>
       <ul>
         <li>An onboarding dialog with usage instructions.</li>
