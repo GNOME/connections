@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-07-07 08:15+0000\n"
-"PO-Revision-Date: 2021-07-08 16:24+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2021-10-03 20:30+0000\n"
+"PO-Revision-Date: 2021-10-04 12:04+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Sambungan"
 
@@ -57,7 +57,7 @@ msgstr ""
 "Sambungan menggunakan protokol VNC dan RDP yang didukung secara luas, dan "
 "salah satu dari ini harus diaktifkan pada destop yang ingin Anda sambungkan."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
@@ -80,79 +80,81 @@ msgstr "Properti"
 #: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
-"Andika Triwidada <andika@gmail.com>, 2020\n"
+"Andika Triwidada <andika@gmail.com>, 2020, 2021.\n"
 "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021"
 
-#: src/application.vala:89 src/application.vala:234
+#: src/application.vala:89 src/application.vala:239
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Klien destop jarak jauh untuk lingkungan destop GNOME"
 
-#: src/application.vala:148
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Tak dapat membuka berkas dari tipe mime yang tidak dikenal %s"
 
-#: src/application.vala:177
+#: src/application.vala:179
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Koneksi ke \"%s\" telah dihapus"
 
-#: src/application.vala:180
+#: src/application.vala:182
 msgid "Undo"
 msgstr "Tak Jadi"
 
-#: src/application.vala:226
+#: src/application.vala:229
 msgid "URL to connect"
 msgstr "URL untuk disambungkan"
 
-#: src/application.vala:227
+#: src/application.vala:230
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Buka berkas .vnc atau .rdp di PATH yang diberikan"
 
-#: src/application.vala:249
+#: src/application.vala:231
+msgid "Open in full screen"
+msgstr "Buka di layar penuh"
+
+#: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
 msgstr "Terlalu banyak argumen baris perintah yang ditentukan.\n"
 
-#. Translators: This is a link which takes users to a documentation page in yelp
-#: src/assistant.vala:34
-msgid "Learn more."
-msgstr "Pelajari lebih lanjut."
-
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:65
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Cuplikan layar dari %s"
 
-#: src/connection.vala:80
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Cuplikan layar diambil"
 
 #. Translators: Open is a verb
-#: src/connection.vala:83
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Buka"
 
-#: src/connection.vala:128
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "\"%s\" membutuhkan autentikasi"
 
-#: src/connection.vala:142
+#: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentikasi gagal: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#. Adds a custom link to the last page
-#: src/onboarding-dialog.vala:52
-msgid "Read our tutorial to learn how."
-msgstr "Baca tutorial kami untuk mempelajari caranya."
+#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Tidak, Terima Kasih"
+
+#: src/onboarding-dialog.vala:88
+msgid "Close"
+msgstr "Tutup"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -162,17 +164,29 @@ msgstr "Ambil Cuplikan Layar"
 msgid "Fullscreen"
 msgstr "Layar Penuh"
 
-#: src/ui/assistant.ui:17
-msgid "Connect to a Desktop"
-msgstr "Sambungkan ke Destop"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Masukkan pengenal jaringan destop jarak jauh untuk menyambung ke:"
 
-#: src/ui/assistant.ui:46
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Tipe Koneksi"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (standar untuk terhubung ke Windows)"
+
+#: src/ui/assistant.ui:71
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (standar untuk terhubung ke Linux)"
+
+#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Bantuan"
+
+#: src/ui/assistant.ui:98
 msgid "Connect"
 msgstr "Sambungan"
-
-#: src/ui/assistant.ui:61
-msgid "Addresses start with either vnc:// or rdp://."
-msgstr "Alamat dimulai dengan vnc:// atau rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -186,7 +200,7 @@ msgstr "_Kata Sandi"
 msgid "Sign In"
 msgstr "Masuk"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Selamat Datang di Sambungan"
 
@@ -194,25 +208,49 @@ msgstr "Selamat Datang di Sambungan"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
 
-#: src/ui/onboarding-dialog.ui:59
-msgid "Connections makes it easy to use other desktops remotely."
-msgstr "Sambungan memudahkan penggunaan destop lain dari jarak jauh."
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Pelajari tentang cara kerja Koneksi."
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Gunakan destop lain, dari jarak jauh"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Gunakan Koneksi untuk melihat layar destop lainnya. Anda dapat mengontrolnya "
+"menggunakan penunjuk dan papan tik juga!"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Menyambung ke sistem operasi yang berbeda"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "Mengakses destop Linux, Mac, dan Windows menggunakan Koneksi."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Aktifkan destop jarak jauh sebelum menyambungkan"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Connect to Linux or Windows"
-msgstr "Sambungkan ke Linux atau Windows"
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Komputer perlu diatur untuk destop jarak jauh sebelum Anda dapat terhubung "
+"ke mereka."
 
-#: src/ui/onboarding-dialog.ui:67
-msgid "Remotely access a range of desktop operating systems."
-msgstr "Mengakses berbagai sistem operasi destop dari jarak jauh."
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Kami harap Anda menikmati Koneksi!"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "Configure for Access"
-msgstr "Konfigurasikan untuk Akses"
-
-#: src/ui/onboarding-dialog.ui:75
-msgid "To connect to a desktop, it needs to be setup first."
-msgstr "Untuk tersambung ke destop, perlu penyetelan terlebih dahulu."
+msgid "More information can be found in the help."
+msgstr "Informasi lebih lanjut dapat ditemukan dalam bantuan."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -258,10 +296,6 @@ msgstr "Pintasan papan tik"
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Papan Tik"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Bantuan"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Tentang Koneksi"
@@ -290,81 +324,53 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:54
+#: src/ui/vnc-preferences.ui:55
 msgid "Display"
 msgstr "Tampilan"
 
-#: src/ui/vnc-preferences.ui:59
+#: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
 msgstr "Penskalaan"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "Hanya tilik"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "Tampilkan penunjuk lokal"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
 msgstr "Lebar Pita"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:89
 msgid "High quality"
 msgstr "Kualitas tinggi"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:90
 msgid "Fast refresh"
 msgstr "Segarkan cepat"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:101
 msgid "Scale mode"
 msgstr "Mode skala"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
 msgstr "Paskan jendela"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:109
 msgid "Original size"
 msgstr "Ukuran asli"
 
-#: src/vnc-connection.vala:119
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Tidak dapat mengurai berkas"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:127 src/vnc-connection.vala:132
-#: src/vnc-connection.vala:137 src/vnc-connection.vala:142
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Berkas VNC kurang kunci \"%s\""
-
-#~ msgid "GNOME Connections"
-#~ msgstr "GNOME Koneksi"
-
-#~ msgid "A remote desktop client for the GNOME desktop environment."
-#~ msgstr "Klien destop jarak jauh untuk lingkungan destop GNOME."
-
-#~ msgid "Create a New Connection"
-#~ msgstr "Membuat Koneksi Baru"
-
-#~ msgid ""
-#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
-#~ "vnc://"
-#~ msgstr ""
-#~ "Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan rdp:// "
-#~ "atau vnc://"
-
-#~ msgid "Server"
-#~ msgstr "Peladen"
-
-#~ msgid "Cancel"
-#~ msgstr "Batal"
-
-#~ msgid "Create"
-#~ msgstr "Buat"
-
-#~ msgid "org.gnome.Connections"
-#~ msgstr "org.gnome.Connections"
