@@ -32,7 +32,7 @@ namespace Connections {
         private unowned Gtk.RadioButton vnc_radio_button;
 
         private bool uri_has_supported_scheme (string uri) {
-            return uri.has_prefix ("rdp") || uri.has_prefix ("vnc");
+            return uri.has_prefix ("rdp://") || uri.has_prefix ("vnc://");
         }
 
         [GtkCallback]
@@ -43,19 +43,26 @@ namespace Connections {
                 return;
             }
 
-            var uri = Xml.URI.parse (url_entry.text);
+            var address = url_entry.text;
+            if (!uri_has_supported_scheme (address)) {
+                if (rdp_radio_button.get_active ())
+                    address = "rdp://" + address;
+                else
+                    address = "vnc://" + address;
+            }
+
+            debug ("Attempting to add \"%s\"", address);
+            var uri = Xml.URI.parse (address);
             if (uri == null) {
                 create_button.sensitive = false;
+
+                debug ("Address \"%s\" is invalid", address);
 
                 return;
             }
 
             rdp_radio_button.set_active (uri.scheme == "rdp");
             vnc_radio_button.set_active (uri.scheme == "vnc");
-
-            if (!uri_has_supported_scheme (url_entry.text)) {
-                uri.server = url_entry.text;
-            }
 
             create_button.sensitive = uri.server != null;
         }

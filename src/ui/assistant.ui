@@ -61,6 +61,7 @@
                 <object class="GtkRadioButton" id="rdp_radio_button">
                   <property name="visible">True</property>
                   <property name="label" translatable="yes">RDP (standard for connecting to Windows)</property>
+                  <signal name="toggled" handler="on_url_entry_changed"/>
                 </object>
               </child>
 
@@ -69,6 +70,7 @@
                   <property name="visible">True</property>
                   <property name="group">rdp_radio_button</property>
                   <property name="label" translatable="yes">VNC (standard for connecting to Linux)</property>
+                  <signal name="toggled" handler="on_url_entry_changed"/>
                 </object>
               </child>
             </object>
