@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2020-09-09 19:08+0100\n"
-"Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
+"POT-Creation-Date: 2021-10-06 22:49+0000\n"
+"PO-Revision-Date: 2020-12-23 08:45+0100\n"
+"Last-Translator: Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>\n"
 "Language-Team: ca\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Connexions"
 
@@ -56,7 +56,7 @@ msgstr ""
 "El connexions utilitza els protocols VNC i RDP àmpliament admesos, i un "
 "d'aquests ha d'estar habilitat a l'escriptori al qual voleu connectar."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
 msgstr "El projecte GNOME"
 
@@ -166,7 +166,8 @@ msgstr "Pantalla completa"
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Introduïu l'identificador de xarxa de l'escriptori remot al qual connectar:"
+"Introduïu l'identificador de xarxa de l'escriptori remot al qual connectar-"
+"se:"
 
 #: src/ui/assistant.ui:53
 msgid "Connection Type"
@@ -176,15 +177,15 @@ msgstr "Tipus de connexió"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (estàndard per a connectar-se a Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (estàndard per a connectar-se a Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Ajuda"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Connecta"
 
@@ -210,48 +211,48 @@ msgstr "Premeu el botó <b>+</b> per a fer la vostra primera connexió."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
-msgstr "Apreneu com funcionen el Connexions."
+msgstr "Apreneu com funcionen les connexions."
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
-msgstr "Utilitza altres escriptoris, remotament"
+msgstr "Utilitzeu altres escriptoris, remotament"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
-"Utilitza el Connexions per a veure la pantalla d'altres escriptoris. També "
-"els podeu controlar utilitzant el punter i el teclat!"
+"Utilitzeu el Connexions per a veure la pantalla d'altres escriptoris. També podeu"
+" controlar-los utilitzant el punter i el teclat!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
-msgstr "Connecta a diferents sistemes operatius"
+msgstr "Connecteu a diferents sistemes operatius"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Accediu als escriptoris Linux, Mac i Windows utilitzant el Connexions."
+msgstr "Accediu a escriptoris de Linux, Mac i Windows utilitzant el Connections."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
 msgstr "Habilita l'escriptori remot abans de connectar"
 
 #: src/ui/onboarding-dialog.ui:66
+
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
-"Cal configurar els ordinadors per a accedir a l'escriptori remot abans de poder-hi "
-"connectar."
+"Cal configurar ordinadors per a usar l'escriptori remot abans de poder connectar-"
+"vos a ells."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
-msgstr "Esperem que gaudiu del Connexions"
+msgstr "Esperem que gaudiu del Connections!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
-msgstr "Podeu trobar més informació a l'ajuda."
+msgstr "Es pot trobar més informació a l'ajuda."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -375,3 +376,30 @@ msgstr "No s'ha pogut analitzar el fitxer"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la clau «%s» del fitxer VNC"
+
+#~ msgid "Learn more."
+#~ msgstr "Més informació."
+
+#~ msgid "Read our tutorial to learn how."
+#~ msgstr "Llegiu el nostre tutorial per a aprendre com."
+
+#~ msgid "Connect to a Desktop"
+#~ msgstr "Connecta a un escriptori"
+
+#~ msgid "Addresses start with either vnc:// or rdp://."
+#~ msgstr "Les adreces comencen amb vnc:// o rdp://."
+
+#~ msgid "Connections makes it easy to use other desktops remotely."
+#~ msgstr "El connexions facilita l'ús remot d'altres escriptoris."
+
+#~ msgid "Connect to Linux or Windows"
+#~ msgstr "Connecta a Linux o Windows"
+
+#~ msgid "Remotely access a range of desktop operating systems."
+#~ msgstr "Accés remot a un ampli ventall de sistemes operatius d'escriptori."
+
+#~ msgid "Configure for Access"
+#~ msgstr "Configura per a accedir"
+
+#~ msgid "To connect to a desktop, it needs to be setup first."
+#~ msgstr "Per connectar-vos a un escriptori, primer cal configurar-lo."
