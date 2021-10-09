@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-10-03 07:19+0000\n"
-"PO-Revision-Date: 2021-10-03 16:05+0200\n"
+"POT-Creation-Date: 2021-10-06 22:49+0000\n"
+"PO-Revision-Date: 2021-10-09 17:08+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Occitan <totenoc@gmail.com>\n"
 "Language: oc\n"
@@ -34,18 +34,27 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
+"Connexions vos permet de vos connectar e d’utilizar d’autres burèus. Aquò "
+"pòt èsser un bon biais d’accedir al contengut o als logicials sus un "
+"sistèma operatiu diferent. Pòt tanben servir a provesir una assisténcia als "
+"utilizaires que ne fan mestièr."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
+"Una plaja de diferents sistèmas operatius s’i pòdon connectar, inlutz los "
+"burèus Linux e Windows. Podètz tanben vos connectar a las maquinas "
+"virtualas."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
+"Connexions utiliza los protocòls grandament preses en carga VNC e RDP, e un "
+"d’aquestes deu èsser activat sul burèu que volètz contactar."
 
 #: data/org.gnome.Connections.appdata.xml.in:49
 msgid "The GNOME Project"
@@ -53,7 +62,7 @@ msgstr "Lo projècte GNOME"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
-msgstr ""
+msgstr "vnc;rdp;remote;desktop;windows;assisténcia;accès;veire;"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -155,7 +164,7 @@ msgstr "Ecran complet"
 
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
-msgstr ""
+msgstr "Picatz l’identificador ret del burèu distant ont se connectar :"
 
 #: src/ui/assistant.ui:53
 msgid "Connection Type"
@@ -163,17 +172,17 @@ msgstr "Tipe de connexion"
 
 #: src/ui/assistant.ui:63
 msgid "RDP (standard for connecting to Windows)"
-msgstr ""
+msgstr "RDP (zstandard per las connexions a Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
-msgstr ""
+msgstr "VNC (estandard per las connexions a Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Ajuda"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Se connectar"
 
@@ -205,13 +214,15 @@ msgstr "Aprendre coma fonciona Connexions."
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
-msgstr ""
+msgstr "Utilizar d’autres burèus, a distància"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
+"Utilizatz Connexion per veire l’ecran d’autres burèus. Los podètz "
+"contrarotlar en utilizant la mirga e lo clavièr !"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -219,17 +230,19 @@ msgstr "Se connectar a diferents sistèmas operatius"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
+msgstr "Accedir a Linux, Mac e Windows en utilizant Connexions."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
-msgstr ""
+msgstr "Activar lo burèu distant abant la connexion"
 
 #: src/ui/onboarding-dialog.ui:66
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
+"Los ordenador devon èsser configurats pel burèu a distància abans que "
+"poscatz vos i connectar."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
