@@ -26,6 +26,8 @@ int main (string[] args) {
     Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
     Intl.textdomain (GETTEXT_PACKAGE);
 
+    typeof (Connections.OnboardingDialogPage).ensure ();
+
     var application = new Connections.Application ();
 
     var exit_status = application.run (args);
