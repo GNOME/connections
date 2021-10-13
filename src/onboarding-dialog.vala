@@ -28,8 +28,6 @@ namespace Connections {
         [GtkChild]
         private unowned Carousel paginator;
         [GtkChild]
-        private unowned OnboardingDialogPage homepage;
-        [GtkChild]
         private unowned Button go_back_button;
         [GtkChild]
         private unowned Button go_next_button;
