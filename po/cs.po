@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2021-08-29 21:50+0200\n"
+"POT-Creation-Date: 2021-10-13 07:54+0000\n"
+"PO-Revision-Date: 2021-10-15 13:51+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
 msgid "Connections"
 msgstr "Připojení"
 
@@ -146,11 +146,11 @@ msgstr "Ověření selhalo: %s"
 msgid "%d×%d"
 msgstr "%d × %d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Ne, děkuji"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Zavřít"
 
@@ -165,7 +165,8 @@ msgstr "Celá obrazovka"
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Zadejte síťový identifikátor vzdáleného stroje, ke kterému se chcete připojit:"
+"Zadejte síťový identifikátor vzdáleného stroje, ke kterému se chcete "
+"připojit:"
 
 #: src/ui/assistant.ui:53
 msgid "Connection Type"
@@ -175,15 +176,15 @@ msgstr "Typ připojení"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (standard pro připojení k Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standard pro připojení k Linuxu)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Nápověda"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Připojit"
 
@@ -231,8 +232,8 @@ msgstr "Připojte se k různým operačním systémům"
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr ""
-"Pomocí připojení lze získat přístup do uživatelských prostředí Linuxu, Macu i "
-"Windows."
+"Pomocí připojení lze získat přístup do uživatelských prostředí Linuxu, Macu "
+"i Windows."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
@@ -248,7 +249,7 @@ msgstr ""
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
-msgstr "Ať se vám práce s Připojením daří"
+msgstr "Ať se vám práce s Připojeními daří"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
@@ -376,4 +377,3 @@ msgstr "Nezdařilo se zpracovat soubor"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "V souboru VNC schází klíč „%s“"
-
