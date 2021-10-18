@@ -99,6 +99,7 @@ namespace Connections {
             base.startup ();
 
             Hdy.init ();
+            Hdy.StyleManager.get_default ().color_scheme = PREFER_DARK;
         }
 
         public override void activate () {

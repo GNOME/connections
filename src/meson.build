@@ -59,6 +59,7 @@ c_args = [
 
 vala_args = [
   '--enable-experimental',
+  '--disable-since-check',
   '--target-glib=2.50',
 ]
 
