@@ -29,7 +29,7 @@ namespace Connections {
         private unowned Gtk.Stack stack;
 
         [GtkChild]
-        private unowned EmptyView empty_view;
+        private unowned Hdy.StatusPage empty_view;
 
         [GtkChild]
         public unowned CollectionView collection_view;

@@ -6,7 +6,6 @@
     <file>ui/collection-view.ui</file>
     <file>ui/collection-view-child.ui</file>
     <file>ui/display-view.ui</file>
-    <file>ui/empty-view.ui</file>
     <file>ui/notification.ui</file>
     <file>ui/rdp-preferences.ui</file>
     <file>ui/vnc-preferences.ui</file>
