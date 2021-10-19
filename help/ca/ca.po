@@ -1,0 +1,170 @@
+# Catalan translation for connections.
+# 
+# Translators:
+# Ma. Teresa Guix <maite.guix@gmail.com>, 2021
+# Benny Beat <bennybeat@gmail.com>, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: connections gnome-41\n"
+"POT-Creation-Date: 2021-10-15 12:14+0000\n"
+"PO-Revision-Date: 2021-10-18 13:38+0000\n"
+"Last-Translator: Benny Beat <bennybeat@gmail.com>, 2021\n"
+"Language-Team: Catalan (https://www.transifex.com/softcatala/teams/62837/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Benet (BennyBeat) R. i Camps, benet@softcatala.org, 2021\n"
+"Maite Guix, maite.guix@me.com, 2021"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:13
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:15
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "Permet connectar a una màquina remota mitjançant la xarxa."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "Connecteu a un altre ordinador"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid ""
+"<app>Connections</app> can be used to view and access a remote machine."
+msgstr ""
+"Les <app>connexions</app> es poden utilitzar per veure i accedir a una "
+"màquina remota."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "La màquina remota ja hauria d'estar configurada."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"Feu clic <gui style=\"button\">+</gui> a l'extrem superior esquerre per "
+"iniciar l'assistent de creació de connexions remotes."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"Indiqueu l'URL que contingui el protocol, l'adreça IP i el número de port "
+"del dispositiu o servei remot. Per exemple:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "El protocol serà:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "rdp:// per a connectar a un servidor remot <app>RDP</app>."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid ""
+"vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr ""
+"vnc:// per a connectar a un servidor remot <app>vino</app> o <app>VNC</app>."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"L'adreça i el número de port haurien d'estar disponibles a la configuració "
+"del dispositiu o servei de la màquina remota."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "Feu clic a <gui style=\"button\">Crea</gui>."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "La màquina remota s'obrirà a la vista de col·lecció."
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Connexions"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Connexions"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Connections"
+msgstr "Connexions"
+
+#. (itstool) path: info/desc
+#: C/index.page:20
+msgid "Learn to connect to remote machines."
+msgstr "Apreneu com connectar a màquines remotes."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> Connexions"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"<app>Connexions</app> és un client d'escriptori remot per a l'entorn "
+"d'escriptori GNOME."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Getting started"
+msgstr "Primers passos"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "Creative Commons Attribution-Share Alike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Aquesta obra està llicenciada sota una <_:link-1/>."
