@@ -150,7 +150,10 @@ namespace Connections {
                 return true;
             }
 
-            return collection_view.search_bar.handle_event ((Gdk.Event) event);
+            if (stack.visible_child == collection_view)
+                return collection_view.search_bar.handle_event ((Gdk.Event) event);
+
+            return false;
         }
 
         [GtkCallback]
