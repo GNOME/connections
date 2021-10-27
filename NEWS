@@ -1,3 +1,62 @@
+41.1 - Oct 27, 2021
+===================
+
+  - Prevent search from stealing display key-press events
+  - Improve the parsing of incomplete addresses
+  - Draw RDP thumbnails on the app side
+  - Do not tap to clipboard until VNC connection is connected
+  - Fix missing app title in the Shell
+  - Add parameters to the Exec key in the desktop file
+  - Added/updated/fixed translations:
+    - Basque
+    - Brazilian Portuguese
+    - Catalan
+    - Chinese (China)
+    - Croatian
+    - Czech
+    - Finnish
+    - Hebrew
+    - Indonesian
+    - Lithuanian
+    - Occitan
+    - Persian
+    - Polish
+    - Portuguese
+    - Romanian
+    - Russian
+    - Serbian
+    - Slovak
+    - Slovenian
+    - Swedish
+    - Turkish
+    - Ukrainian
+
+All contributors to this release:
+
+Alexey Rubtsov <rushills@gmail.com>
+Anders Jonsson <anders.jonsson@norsjovallen.se>
+Andika Triwidada <atriwidada@gnome.org>
+Asier Sarasua Garmendia <asiersarasua@ni.eus>
+Aurimas Černius <aurisc4@gmail.com>
+Boyuan Yang <073plan@gmail.com>
+Danial Behzadi <dani.behzi@ubuntu.com>
+Daniel Șerbănescu <daniel@serbanescu.dk>
+Dušan Kazik <prescott66@gmail.com>
+Emin Tufan Çetin <etcetin@gmail.com>
+Enrico Nicoletto <liverig@gmail.com>
+Felipe Borges <felipeborges@gnome.org>
+Goran Vidović <trebelnik2@gmail.com>
+Hugo Carvalho <hugokarvalho@hotmail.com>
+Jiri Grönroos <jiri.gronroos@iki.fi>
+Jordi Mas <jmas@softcatala.org>
+Marek Černocký <marek@manet.cz>
+Matej Urbančič <mateju@src.gnome.org>
+Piotr Drąg <piotrdrag@gmail.com>
+Quentin PAGÈS <pages_quentin@hotmail.com>
+Yaron Shahrabani <sh.yaron@gmail.com>
+Yuri Chornoivan <yurchor@ukr.net>
+Марко Костић <marko.m.kostic@gmail.com>
+
 41.0 - 17 Sep, 2021
 ====================
 

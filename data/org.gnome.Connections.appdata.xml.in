@@ -23,6 +23,16 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="41.1" date="2021-10-27">
+      <ul>
+        <li>Fix search bar stealing input from display keyboard</li>
+        <li>Improve parsing of incomplete connection addresses</li>
+        <li>Fix startup issues with VNC clipboard</li>
+        <li>Fix missing application title in the Shell</li>
+        <li>Updated translations</li>
+      </ul>
+    </release>
+
     <release version="41.0" date="2021-09-17">
       <p>Connections 41.0 is here!</p>
       <ul>
