@@ -238,7 +238,8 @@ namespace Connections {
                 return;
 
             string message = clipboard.wait_for_text ();
-            display.client_cut_text (message);
+            if (message != null)
+                display.client_cut_text (message);
         }
 
         public void scale () {
