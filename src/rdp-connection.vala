@@ -66,6 +66,7 @@ namespace Connections {
             display.bind_property ("username", this, "username", BindingFlags.BIDIRECTIONAL);
             display.bind_property ("password", this, "password", BindingFlags.BIDIRECTIONAL);
 
+            display.rdp_error.connect (on_connection_error_cb);
             display.rdp_connected.connect (() => { show (); });
             display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_auth_failure.connect (auth_failed);
