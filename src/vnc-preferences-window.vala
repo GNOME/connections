@@ -33,6 +33,8 @@ namespace Connections {
         [GtkChild]
         private unowned BooleanProperty show_local_pointer;
         [GtkChild]
+        private unowned BooleanProperty enable_audio;
+        [GtkChild]
         private unowned Gtk.ComboBoxText bandwidth_combo;
         [GtkChild]
         private unowned Gtk.ComboBoxText scale_mode_combo;
@@ -44,6 +46,7 @@ namespace Connections {
             bind_widget_property (host_address_label, "label", "uri");
             bind_widget_property (scaling, "active", "scaling");
             bind_widget_property (view_only, "active", "view-only");
+            bind_widget_property (enable_audio, "active", "enable_audio");
             bind_widget_property (show_local_pointer, "active", "show-local-pointer");
             bind_widget_property (bandwidth_combo, "active_id", "bandwidth");
             bind_widget_property (scale_mode_combo, "active_id", "scale-mode");

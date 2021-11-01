@@ -80,6 +80,23 @@ namespace Connections {
             }
         }
 
+        private bool _enable_audio = true;
+        public bool enable_audio {
+            set {
+                var connection = display.get_connection ();
+                _enable_audio = value;
+
+                if (_enable_audio)
+                    connection.audio_enable ();
+                else
+                    connection.audio_disable ();
+            }
+
+            get {
+                return _enable_audio;
+            }
+        }
+
         public override int port { get; protected set; default = 5900; }
         public string bandwidth { get; set; default = "hight-quality"; }
         public string scale_mode { get; set; default = "fit-window"; }

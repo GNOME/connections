@@ -76,6 +76,13 @@
               </child>
 
               <child>
+                <object class="ConnectionsBooleanProperty" id="enable_audio">
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Enable audio</property>
+                </object>
+              </child>
+
+              <child>
                 <object class="HdyActionRow">
                   <property name="activatable-widget">bandwidth_combo</property>
                   <property name="visible">True</property>
