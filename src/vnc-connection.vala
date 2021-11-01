@@ -103,6 +103,14 @@ namespace Connections {
             clipboard.owner_change.connect (on_owner_change_cb);
 
             notify["scale-mode"].connect (scale);
+
+            var connection = display.get_connection ();
+            connection.set_audio_format (new Vnc.AudioFormat () {
+                frequency = 44100,
+                nchannels = 2
+            });
+            connection.set_audio (new Vnc.AudioPulse ());
+            connection.audio_enable ();
         }
 
         public VncConnection (string uuid) {

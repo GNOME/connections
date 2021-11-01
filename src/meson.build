@@ -29,6 +29,7 @@ connections_deps = [
   dependency('gio-2.0', version: '>= 2.50'),
   dependency('gtk+-3.0', version: '>= 3.22'),
   dependency('gtk-vnc-2.0', version: '> 0.4.4'),
+  dependency('gvncpulse-1.0'),
   dependency('libhandy-1', version: '>= 1.2.0'),
   dependency ('libxml-2.0', version: '>= 2.7.8'),
 ]

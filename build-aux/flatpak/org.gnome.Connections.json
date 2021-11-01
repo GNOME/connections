@@ -8,6 +8,7 @@
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
+        "--socket=pulseaudio",
         "--socket=wayland"
     ],
     "cleanup": [
@@ -26,6 +27,9 @@
         {
             "name" : "gtk-vnc",
             "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dpulseaudio=enabled"
+            ],
             "sources" : [
                 {
                     "type" : "archive",
