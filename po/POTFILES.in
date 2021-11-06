@@ -13,7 +13,6 @@ src/rdp-connection.vala
 src/topbar.vala
 src/ui/assistant.ui
 src/ui/auth-notification.ui
-src/ui/empty-view.ui
 src/ui/onboarding-dialog.ui
 src/ui/rdp-preferences.ui
 src/ui/topbar.ui
