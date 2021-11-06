@@ -1,29 +1,28 @@
 # Danish translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# scootergrisen, 2020.
+# scootergrisen, 2020-2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-09-07 07:11+0000\n"
-"PO-Revision-Date: 2020-09-08 19:01+0200\n"
-"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
+"POT-Creation-Date: 2021-03-20 14:02+0000\n"
+"PO-Revision-Date: 2021-10-16 00:00+0200\n"
+"Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Forbindelser"
+#| msgid "Connections"
+msgid "GNOME Connections"
+msgstr "GNOME Forbindelser"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:81
+#: src/application.vala:230
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "En fjernskrivebordsklient til GNOME-skrivebordsmiljøet"
 
@@ -34,6 +33,11 @@ msgstr "En fjernskrivebordsklient til GNOME-skrivebordsmiljøet."
 #: data/org.gnome.Connections.appdata.xml.in:28
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
+
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:84
+#: src/ui/topbar.ui:9
+msgid "Connections"
+msgstr "Forbindelser"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -47,44 +51,38 @@ msgstr "Slet"
 msgid "Properties"
 msgstr "Egenskaber"
 
-#: src/application.vala:76
+#: src/application.vala:80
 msgid "translator-credits"
 msgstr "scootergrisen"
 
-#: src/application.vala:77
-msgid "A remote connection manager for the GNOME desktop"
-msgstr "Håndtering af fjernforbindelser til GNOME-skrivebordet"
-
-#: src/application.vala:140
+#: src/application.vala:144
 #, c-format
-msgid "Couldn't open file of unknown mime type %s"
+#| msgid "Couldn't open file of unknown mime type %s"
+msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Kunne ikke åbne fil af ukendt MIME-type %s"
 
-#: src/application.vala:170
+#: src/application.vala:174
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Forbindelsen til “%s” er blevet slettet"
 
-#: src/application.vala:172
+#: src/application.vala:176
 msgid "Undo"
 msgstr "Fortryd"
 
-#: src/application.vala:211
-msgid "URL to connection"
-msgstr "URL til forbindelsen"
+#: src/application.vala:222
+#| msgid "URL to connection"
+msgid "URL to connect"
+msgstr "URL som der skal oprettes forbindelse til"
 
-# scootergrisen: set ved "--help"
-# scootergrisen: der står "-F, --file=PATHS" med S foran så kilden er ikke helt korrekt
-#: src/application.vala:212
-msgid "Open .vnc or .rdp file at at giving PATH"
+#: src/application.vala:223
+#| msgid "Open .vnc or .rdp file at at giving PATH"
+msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Åbn .vnc- eller .rdp-fil på den angivne STI"
 
-#: src/application.vala:219
-msgid "— A simple application to access remote connections"
-msgstr "— Et simpelt program til at tilgå fjernforbindelser"
-
-#: src/application.vala:234
-msgid "Too many command line arguments specified.\n"
+#: src/application.vala:245
+#| msgid "Too many command line arguments specified.\n"
+msgid "Too many command-line arguments specified.\n"
 msgstr "Der er angivet for mange kommandolinjeargumenter.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
@@ -97,11 +95,12 @@ msgstr "Skærmbillede fra %s"
 msgid "Screenshot taken"
 msgstr "Skærmbillede taget"
 
-#: src/connection.vala:144
+#. Translators: Open is a verb
+#: src/connection.vala:145
 msgid "Open"
 msgstr "Åbn"
 
-#: src/connection.vala:187
+#: src/connection.vala:188
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” kræver godkendelse"
@@ -112,7 +111,7 @@ msgstr "“%s” kræver godkendelse"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:239
+#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
 msgid "Scaling"
 msgstr "Skalering"
 
@@ -136,7 +135,7 @@ msgstr ""
 msgid "Server"
 msgstr "Server"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
+#: src/ui/assistant.ui:94 src/ui/properties.ui:67
 msgid "Name"
 msgstr "Navn"
 
@@ -172,7 +171,7 @@ msgstr "Tryk blot på <b>+</b>-knappen for at oprette din første forbindelse."
 msgid "Connection Properties"
 msgstr "Egenskaber for forbindelse"
 
-#: src/ui/properties.ui:108
+#: src/ui/properties.ui:32
 msgid "Address"
 msgstr "Adresse"
 
@@ -240,36 +239,35 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:122
-msgid "Could not parse the file"
+#: src/vnc-connection.vala:167
+#| msgid "Could not parse the file"
+msgid "Couldn’t parse the file"
 msgstr "Kunne ikke fortolke filen"
 
-#: src/vnc-connection.vala:129
-msgid "VNC File is missing key “Host“"
-msgstr "VNC-filen mangler nøglen “Host”"
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
+#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#, c-format
+#| msgid "VNC File is missing key “Host“"
+msgid "VNC File is missing key “%s”"
+msgstr "VNC-filen mangler nøglen “%s”"
 
-#: src/vnc-connection.vala:134
-msgid "VNC File is missing key “Port“"
-msgstr "VNC-filen mangler nøglen “Port”"
-
-#: src/vnc-connection.vala:140
-msgid "VNC File is missing key “Username“"
-msgstr "VNC-filen mangler nøglen “Username”"
-
-#: src/vnc-connection.vala:145
-msgid "VNC File is missing key “Password“"
-msgstr "VNC-filen mangler nøglen “Password”"
-
-# scootergrisen: findes i egenskaber til en VNC-forbindelse
-# scootergrisen: tjek om det skal være "Kun vis", "Kun visning" ...
-# scootergrisen: måske til at man ikke kan interagere
-#: src/vnc-connection.vala:249
+#: src/vnc-properties-dialog.vala:33
 msgid "View only"
 msgstr "Kun visning"
 
-#: src/vnc-connection.vala:259
+#: src/vnc-properties-dialog.vala:38
 msgid "Show local pointer"
 msgstr "Vis lokal markør"
 
-#~ msgid "org.gnome.Connections"
-#~ msgstr "org.gnome.Connections"
+#: src/vnc-properties-dialog.vala:44
+msgid "Bandwidth"
+msgstr "Båndbredde"
+
+#: src/vnc-properties-dialog.vala:46
+msgid "High quality"
+msgstr "Høj kvalitet"
+
+#: src/vnc-properties-dialog.vala:47
+msgid "Fast refresh"
+msgstr "Hurtig opdatering"
