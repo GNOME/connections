@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-07-13 09:53+0000\n"
-"PO-Revision-Date: 2021-08-25 18:29+0200\n"
+"POT-Creation-Date: 2021-11-06 21:25+0000\n"
+"PO-Revision-Date: 2021-11-08 21:15+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Occitan <totenoc@gmail.com>\n"
 "Language: oc\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Connexions"
 
@@ -34,18 +34,27 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
+"Connexions vos permet de vos connectar e d’utilizar d’autres burèus. Aquò "
+"pòt èsser un bon biais d’accedir al contengut o als logicials sus un "
+"sistèma operatiu diferent. Pòt tanben servir a provesir una assisténcia als "
+"utilizaires que ne fan mestièr."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
+"Una plaja de diferents sistèmas operatius s’i pòdon connectar, inlutz los "
+"burèus Linux e Windows. Podètz tanben vos connectar a las maquinas "
+"virtualas."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
+"Connexions utiliza los protocòls grandament preses en carga VNC e RDP, e un "
+"d’aquestes deu èsser activat sul burèu que volètz contactar."
 
 #: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
@@ -55,7 +64,7 @@ msgstr "Lo projècte GNOME"
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
 msgstr ""
 "vnc;rdp;remote;desktop;windows;support;access;view;veire;accès;assisténcia;"
-"burèu;distant;alonhat;"
+"burèu;distant;alonhat;vista"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -67,83 +76,85 @@ msgstr "Suprimir"
 
 #: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
-msgstr "Proprietats "
+msgstr "Proprietats"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr ""
+msgstr "Quentin PAGÈS"
 
-#: src/application.vala:89 src/application.vala:234
+#: src/application.vala:89 src/application.vala:240
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Un client de burèu distant per l’environament de burèu GNOME"
 
-#: src/application.vala:148
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Impossible de dobrir lo fichièr de tipe mime desconegut %s"
 
-#: src/application.vala:177
+#: src/application.vala:180
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "La connexion cap a « %s » es estada suprimida"
 
-#: src/application.vala:180
+#: src/application.vala:183
 msgid "Undo"
 msgstr "Desfar"
 
-#: src/application.vala:226
+#: src/application.vala:230
 msgid "URL to connect"
 msgstr "URL de connexion"
 
-#: src/application.vala:227
+#: src/application.vala:231
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Dobrir lo fichièr .vnc o .rdp al camin donat"
 
-#: src/application.vala:249
+#: src/application.vala:232
+msgid "Open in full screen"
+msgstr "Dobrir en mòde ecran complet"
+
+#: src/application.vala:255
 msgid "Too many command-line arguments specified.\n"
 msgstr ""
 "Nombre de paramètres de linha de comanda especificats tròp important.\n"
 
-#. Translators: This is a link which takes users to a documentation page in yelp
-#: src/assistant.vala:34
-msgid "Learn more."
-msgstr "Ne saber mai"
-
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:65
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Captura d'ecran de %s"
 
-#: src/connection.vala:80
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Captura d’ecran efectuada"
 
 #. Translators: Open is a verb
-#: src/connection.vala:83
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Dobrir"
 
-#: src/connection.vala:128
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "« %s » requerís l’autentificacion"
 
-#: src/connection.vala:142
+#: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Fracàs d'autentificacion : %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#. Adds a custom link to the last page
-#: src/onboarding-dialog.vala:52
-msgid "Read our tutorial to learn how."
-msgstr "Legissètz nòstres tutorials per saber cossí."
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Non, mercé"
+
+#: src/onboarding-dialog.vala:86
+msgid "Close"
+msgstr "Tampar"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -153,17 +164,29 @@ msgstr "Prendre una captura d’ecran"
 msgid "Fullscreen"
 msgstr "Ecran complet"
 
-#: src/ui/assistant.ui:17
-msgid "Connect to a Desktop"
-msgstr "Se connectar a un burèu"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Picatz l’identificador ret del burèu distant ont se connectar :"
 
-#: src/ui/assistant.ui:46
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Tipe de connexion"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (estandard per las connexions a Windows)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (estandard per las connexions a Linux)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Ajuda"
+
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Se connectar"
-
-#: src/ui/assistant.ui:61
-msgid "Addresses start with either vnc:// or rdp://."
-msgstr "Las adreças començan amb siá vnc:// o rdp://."
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -177,35 +200,53 @@ msgstr "_Senhal"
 msgid "Sign In"
 msgstr "Se connectar"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Benvenguda dins Connexions"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
-"Quichatz simplament sul boton <b>+</b> per establir vòstra primièra "
-"connexion."
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Aprenètz a utilizar Connexions."
 
-#: src/ui/onboarding-dialog.ui:59
-msgid "Connections makes it easy to use other desktops remotely."
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Utilizar d’autres burèus, a distància"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
 msgstr ""
+"Utilizatz Connexion per veire l’ecran d’autres burèus. Los podètz "
+"contrarotlar en utilizant la mirga e lo clavièr !"
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Se connectar a diferents sistèmas operatius"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "Accedir a Linux, Mac e Windows en utilizant Connexions."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Activar lo burèu distant abant la connexion"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Connect to Linux or Windows"
-msgstr "Se connectar a Linux o Windows"
-
-#: src/ui/onboarding-dialog.ui:67
-msgid "Remotely access a range of desktop operating systems."
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
 msgstr ""
+"Los ordenador devon èsser configurats pel burèu a distància abans que "
+"poscatz vos i connectar."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Esperam que vos agrada Connexions !"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "Configure for Access"
-msgstr "Configurar per Accès"
-
-#: src/ui/onboarding-dialog.ui:75
-msgid "To connect to a desktop, it needs to be setup first."
-msgstr "Per se connectar a un burèu, deu èsser configurat per començar."
+msgid "More information can be found in the help."
+msgstr "Mai d’informacions se tròban dins l’ajuda."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -251,10 +292,6 @@ msgstr "Acorchis clavièr"
 msgid "Keyboard Shortcuts"
 msgstr "Acorchis clavièr"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Ajuda"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "A prepaus de Connexions"
@@ -283,56 +320,87 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:54
+#: src/ui/vnc-preferences.ui:55
 msgid "Display"
 msgstr "Afichatge"
 
-#: src/ui/vnc-preferences.ui:59
+#: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
 msgstr "Mesa a l'escala"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:67
 msgid "View only"
 msgstr "Afichar solament"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "Afichar lo puntador local"
 
 #: src/ui/vnc-preferences.ui:81
+msgid "Enable audio"
+msgstr "Activar l'àudio"
+
+#: src/ui/vnc-preferences.ui:89
 msgid "Bandwidth"
 msgstr "Benda passanta"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:96
 msgid "High quality"
 msgstr "Nauta qualitat"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:97
 msgid "Fast refresh"
 msgstr "Actualizacion rapida"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:108
 msgid "Scale mode"
 msgstr "Mòde de mesa a l’escala"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:115
 msgid "Fit window"
 msgstr "S’adaptar a la fenèstra"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:116
 msgid "Original size"
 msgstr "Talha originala"
 
-#: src/vnc-connection.vala:124
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+"Quichatz simplament sul boton <b>+</b> per establir vòstra primièra "
+"connexion."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Impossible d’analisar lo fichièr"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:132 src/vnc-connection.vala:137
-#: src/vnc-connection.vala:142 src/vnc-connection.vala:147
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Clau « %s » mancanta pel fichièr VNC"
+
+#~ msgid "Learn more."
+#~ msgstr "Ne saber mai"
+
+#~ msgid "Read our tutorial to learn how."
+#~ msgstr "Legissètz nòstres tutorials per saber cossí."
+
+#~ msgid "Connect to a Desktop"
+#~ msgstr "Se connectar a un burèu"
+
+#~ msgid "Addresses start with either vnc:// or rdp://."
+#~ msgstr "Las adreças començan amb siá vnc:// o rdp://."
+
+#~ msgid "Connect to Linux or Windows"
+#~ msgstr "Se connectar a Linux o Windows"
+
+#~ msgid "Configure for Access"
+#~ msgstr "Configurar per Accès"
+
+#~ msgid "To connect to a desktop, it needs to be setup first."
+#~ msgstr "Per se connectar a un burèu, deu èsser configurat per començar."
 
 #~ msgid "GNOME Connections"
 #~ msgstr "Connexions de GNOME"
