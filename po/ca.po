@@ -53,7 +53,7 @@ msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
-"El connexions utilitza els protocols VNC i RDP àmpliament admesos, i un "
+"El Connexions utilitza els protocols VNC i RDP àmpliament admesos, i un "
 "d'aquests ha d'estar habilitat a l'escriptori al qual voleu connectar."
 
 #: data/org.gnome.Connections.appdata.xml.in:49
@@ -211,7 +211,7 @@ msgstr "Premeu el botó <b>+</b> per a fer la vostra primera connexió."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
-msgstr "Apreneu com funcionen les connexions."
+msgstr "Apreneu com funciona el Connexions."
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
@@ -231,7 +231,7 @@ msgstr "Connecteu a diferents sistemes operatius"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Accediu a escriptoris de Linux, Mac i Windows utilitzant el Connections."
+msgstr "Accediu a escriptoris de Linux, Mac i Windows utilitzant el Connexions."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
@@ -243,12 +243,12 @@ msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
-"Cal configurar ordinadors per a usar l'escriptori remot abans de poder connectar-"
+"Cal configurar els ordinadors per a usar l'escriptori remot abans de poder connectar-"
 "vos a ells."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
-msgstr "Esperem que gaudiu del Connections!"
+msgstr "Esperem que gaudiu del Connexions!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
@@ -376,30 +376,3 @@ msgstr "No s'ha pogut analitzar el fitxer"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la clau «%s» del fitxer VNC"
-
-#~ msgid "Learn more."
-#~ msgstr "Més informació."
-
-#~ msgid "Read our tutorial to learn how."
-#~ msgstr "Llegiu el nostre tutorial per a aprendre com."
-
-#~ msgid "Connect to a Desktop"
-#~ msgstr "Connecta a un escriptori"
-
-#~ msgid "Addresses start with either vnc:// or rdp://."
-#~ msgstr "Les adreces comencen amb vnc:// o rdp://."
-
-#~ msgid "Connections makes it easy to use other desktops remotely."
-#~ msgstr "El connexions facilita l'ús remot d'altres escriptoris."
-
-#~ msgid "Connect to Linux or Windows"
-#~ msgstr "Connecta a Linux o Windows"
-
-#~ msgid "Remotely access a range of desktop operating systems."
-#~ msgstr "Accés remot a un ampli ventall de sistemes operatius d'escriptori."
-
-#~ msgid "Configure for Access"
-#~ msgstr "Configura per a accedir"
-
-#~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr "Per connectar-vos a un escriptori, primer cal configurar-lo."
