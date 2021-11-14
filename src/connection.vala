@@ -28,6 +28,12 @@ namespace Connections {
         public abstract Gtk.Widget widget { get; protected set; }
         public abstract bool scaling { get; set; }
 
+        private Cancellable auth_cancellable = new Cancellable ();
+        private Secret.Schema secret_auth_schema
+                = new Secret.Schema ("org.gnome.Connections",
+                                     Secret.SchemaFlags.NONE,
+                                     "gnome-connections-connection-uuid", Secret.SchemaAttributeType.STRING);
+
         public bool connected;
 
         public string uri {
@@ -124,12 +130,59 @@ namespace Connections {
                 auth_notification = null;
             };
 
-            var auth_string = _("“%s” requires authentication").printf (get_visible_name ());
-            auth_notification =
-                Application.application.main_window.notifications_bar.display_for_auth (auth_string,
-                                                                                        (owned) auth_func,
-                                                                                        (owned) dismiss_func,
-                                                                                        need_username);
+            Secret.password_lookup.begin (secret_auth_schema, auth_cancellable, (obj, res) => {
+                try {
+                    var parsing_error = new IOError.FAILED("couldn't unpack a string for the connection credentials");
+
+                    var credentials_str = Secret.password_lookup.end (res);
+                    if (credentials_str == null || credentials_str == "")
+                        throw parsing_error;
+
+                    try {
+                        var credentials_variant = GLib.Variant.parse (null, credentials_str, null, null);
+
+                        string username_str;
+                        credentials_variant.lookup ("username", "s", out username_str);
+                        if (username_str != null && username_str != "")
+                            this.username = username_str;
+
+                        string password_str;
+                        credentials_variant.lookup ("password", "s", out password_str);
+                        if (password_str != null && password_str != "")
+                            this.password = password_str;
+
+                        Application.application.open_connection (this);
+                    } catch (GLib.Error error) {
+                        throw parsing_error;
+                    }
+                } catch (GLib.Error error) {
+                    debug ("No credentials found in keyring. Prompting user.");
+
+                    var auth_string = _("“%s” requires authentication").printf (get_visible_name ());
+                    auth_notification = Application.application.main_window.notifications_bar.display_for_auth (auth_string,
+                                                                                                                (owned) auth_func,
+                                                                                                                (owned) dismiss_func,
+                                                                                                                need_username);
+                }
+            }, "gnome-connections-connection-uuid", uuid);
+        }
+
+        public async void delete_auth_credentials () {
+            if (uuid == null) {
+                return;
+            }
+
+            try {
+                yield Secret.password_clear (secret_auth_schema, null,
+                                             "gnome-connections-connection-uuid", uuid);
+
+                if (auth_notification != null) {
+                    auth_notification.dismiss ();
+                    auth_notification = null;
+                }
+            } catch (GLib.Error error) {
+                debug ("Failed to delete credentials for connection %s: %s", uuid, error.message);
+            }
         }
 
         protected void on_connection_error_cb (string reason) {
@@ -140,6 +193,7 @@ namespace Connections {
         protected void auth_failed (string reason) {
             disconnect_it ();
 
+            delete_auth_credentials.begin ();
             username = password = null;
 
             auth_notification = null;
@@ -155,11 +209,41 @@ namespace Connections {
         public void save (GLib.ParamSpec? pspec = null) {
             if (uuid != null && pspec != null) {
                 /* Don't save the credentials in plain text */
-                if (pspec.name == "username" || pspec.name == "password")
-                    return;
+                if (pspec.name == "username" || pspec.name == "password") {
+                  store_auth_credentials ();
+                  return;
+                }
 
                 Database.get_default ().save_property (this, pspec.name);
             }
+        }
+
+        private void store_auth_credentials () {
+            if (this.password == "" || this.password == null)
+                return;
+
+            var builder = new GLib.VariantBuilder (GLib.VariantType.VARDICT);
+
+            if (this.username != null)
+                builder.add ("{sv}", "username", new GLib.Variant ("s", this.username));
+
+            builder.add ("{sv}", "password", new GLib.Variant ("s", this.password));
+
+            var credentials_str = builder.end ().print (true);
+
+            var label = ("GNOME Connections credentials for '%s'").printf (uuid);
+            Secret.password_store.begin (secret_auth_schema,
+                                         Secret.COLLECTION_DEFAULT,
+                                         label,
+                                         credentials_str,
+                                         null,
+                                         (obj, res) => {
+                try {
+                    Secret.password_store.end (res);
+                } catch (GLib.Error error) {
+                    warning ("Failed to store password for '%s' in the keyring: %s", uuid, error.message);
+                }
+            }, "gnome-connections-connection-uuid", uuid);
         }
 
         public string get_visible_name () {
