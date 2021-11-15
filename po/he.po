@@ -6,22 +6,23 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-13 16:42+0000\n"
-"PO-Revision-Date: 2021-09-23 12:09+0300\n"
+"POT-Creation-Date: 2021-11-06 21:25+0000\n"
+"PO-Revision-Date: 2021-11-15 11:26+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : "
+"3);\n"
 "X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "חיבורים"
 
@@ -85,37 +86,37 @@ msgstr ""
 "\n"
 "<a href=\"https://l10n.gnome.org/teams/he/\">מיזם תרגום GNOME לעברית</a>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:240
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "לקוח שולחן עבודה מרוחק עבור סביבת שולחן העבודה GNOME"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "לא ניתן לפתוח קובץ כי סוגו אינו ידוע %s"
 
-#: src/application.vala:179
+#: src/application.vala:180
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "התחברות אל „%s” נמחקה"
 
-#: src/application.vala:182
+#: src/application.vala:183
 msgid "Undo"
 msgstr "ביטול"
 
-#: src/application.vala:229
+#: src/application.vala:230
 msgid "URL to connect"
 msgstr "כתובת להתחברות"
 
-#: src/application.vala:230
+#: src/application.vala:231
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Open .vnc or .rdp file at the given PATH"
 
-#: src/application.vala:231
+#: src/application.vala:232
 msgid "Open in full screen"
 msgstr "פתיחה במסך מלא"
 
-#: src/application.vala:254
+#: src/application.vala:255
 msgid "Too many command-line arguments specified.\n"
 msgstr "Too many command-line arguments specified.\n"
 
@@ -150,11 +151,11 @@ msgstr "האימות נכשל: %s"
 msgid "%d×%d"
 msgstr "‫‎%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "לא תודה"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "סגירה"
 
@@ -178,15 +179,15 @@ msgstr "סוג החיבור"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "‫RDP (תקן להתחברות אל Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "‫VNC (תקן להתחברות אל Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "עזרה"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "חיבור"
 
@@ -202,13 +203,9 @@ msgstr "_ססמה"
 msgid "Sign In"
 msgstr "כניסה"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "ברוך בואך לחיבורים"
-
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "פשוט ללחוץ על כפתור ה<b>+</b> ליצירת ההתחברות הראשונה שלך."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
@@ -339,37 +336,45 @@ msgstr "תצוגה בלבד"
 msgid "Show local pointer"
 msgstr "הצגת הסמן המקומי"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:81
+msgid "Enable audio"
+msgstr "הפעלת שמע"
+
+#: src/ui/vnc-preferences.ui:89
 msgid "Bandwidth"
 msgstr "רוחב פס"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:96
 msgid "High quality"
 msgstr "איכות גבוהה"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:97
 msgid "Fast refresh"
 msgstr "רענון מהיר"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:108
 msgid "Scale mode"
 msgstr "מצב שינוי גודל"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:115
 msgid "Fit window"
 msgstr "התאמת החלון"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:116
 msgid "Original size"
 msgstr "גודל מקורי"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "פשוט ללחוץ על כפתור ה<b>+</b> ליצירת ההתחברות הראשונה שלך."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "לא ניתן לנתח את הקובץ"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "בקובץ ה־VNC חסר המפתח „%s”"
