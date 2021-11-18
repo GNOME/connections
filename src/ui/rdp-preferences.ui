@@ -18,7 +18,6 @@
 
               <child>
                 <object class="HdyActionRow">
-                  <property name="activatable-widget">host_address_label</property>
                   <property name="visible">True</property>
                   <property name="title" translatable="yes">Address</property>
 
