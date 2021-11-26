@@ -166,6 +166,7 @@ namespace Connections {
 
             Notification.DismissFunc really_remove = () => {
                 debug ("User did not cancel deletion. Deleting now...");
+                connection.disconnect_it ();
                 connection.delete_auth_credentials.begin ();
                 Database.get_default ().delete_connection (connection);
             };
