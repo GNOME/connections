@@ -91,8 +91,11 @@ namespace Connections {
         }
 
         public override void connect_it () {
-            if (connected)
+            if (connected) {
+                show ();
+
                 return;
+            }
 
             if (username == null && password == null) {
                 handle_auth ();
