@@ -23,6 +23,15 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="41.2" date="2021-12-03">
+      <ul>
+        <li>Fix clipboard issues causing crash.</li>
+        <li>Fix crash on interaction with the Connection address row.</li>
+        <li>Fix reconnection issues causing infinite loading.</li>
+        <li>Updated translations</li>
+      </ul>
+    </release>
+
     <release version="41.1" date="2021-10-27">
       <ul>
         <li>Fix search bar stealing input from display keyboard</li>

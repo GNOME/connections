@@ -1,3 +1,26 @@
+41.2 - Dec 03, 2021
+===================
+
+ - rdp-connection: Call show () when opening an already established connection
+ - preferences: Remove activatable_widget property for the host address
+ - build: Don't use internet for appstream validation test
+ - vnc-connection: Only paste clipboard content that is text
+ - Added/updated/fixed translations:
+   - French
+   - Friulian
+   - German
+   - Russian
+
+All contributors to this release:
+
+Aleksandr Melman <Alexmelman88@gmail.com>
+Charles Monzat <charles.monzat@free.fr>
+Christian Kirbach <Christian.Kirbach@gmail.com>
+Fabio Tomat <f.t.public@gmail.com>
+Felipe Borges <felipeborges@gnome.org>
+Jeremy Bicha <jbicha@ubuntu.com>
+Manuel Wassermann <manuel.wassermann97@gmail.com>
+
 41.1 - Oct 27, 2021
 ===================
 
