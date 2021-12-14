@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2021-11-29 09:20+0000\n"
-"PO-Revision-Date: 2021-12-14 06:40+0000\n"
+"PO-Revision-Date: 2021-12-14 09:05+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.org>\n"
 "Language: is\n"
@@ -34,18 +34,25 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
+"Tengingar gera þér kleift að tengjast við og nota önnur skjáborð. Þetta er"
+" hentug leið til að hafa aðgang að efni eða hugbúnaði af öðrum ólíkum"
+" stýrikerfum. Þetta nýtist líka vel til aðstoðar öðrum notendum úr fjarlægð."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
+"Hægt er að tengjast við fjölmörg önnur stýrikerfi, meðal annarra Linux og"
+" Windows skjáborð. Einnig er hægt að tengjast við sýndarvélar."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
+"Tengingar nota hina útbreiddu VNC og RDP samskiptamáta, þarf annar hvor"
+" þeirra að vera virkur á því kerfi sem þú ætlar að tengjast."
 
 #: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
@@ -96,7 +103,7 @@ msgstr "Slóð sem á að tengjast"
 
 #: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
-msgstr ""
+msgstr "Opna .vnc eða .rdp skrá á uppgefinni SLÓÐ"
 
 #: src/application.vala:234
 msgid "Open in full screen"
@@ -155,7 +162,7 @@ msgstr "Skjáfylli"
 
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
-msgstr ""
+msgstr "Settu inn netauðkenni fjartengda skjáborðsins sem á að tengjast:"
 
 #: src/ui/assistant.ui:53
 msgid "Connection Type"
@@ -226,6 +233,8 @@ msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
+"Setja þarf viðkomandi tölvur fyrir fjartengt skjáborð áður en hægt er að"
+" tengjast þeim."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
