@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-11 09:18+0000\n"
-"PO-Revision-Date: 2021-09-11 22:16+0200\n"
-"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
+"POT-Creation-Date: 2021-11-25 08:49+0000\n"
+"PO-Revision-Date: 2021-12-12 19:37+0100\n"
+"Last-Translator: Meskó Balázs <mesko.balazs@fsf.hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Kapcsolatok"
 
@@ -54,9 +54,9 @@ msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
-"A Kapcsolatok a széles körben támogatott VNC és RDP protokollokat "
-"használja, és legalább az egyiknek elérhetőnek kell lennie azon a gépen, "
-"amelyhez kapcsolódni szeretne."
+"A Kapcsolatok a széles körben támogatott VNC és RDP protokollokat használja, "
+"és legalább az egyiknek elérhetőnek kell lennie azon a gépen, amelyhez "
+"kapcsolódni szeretne."
 
 #: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
@@ -82,61 +82,61 @@ msgstr "Tulajdonságok"
 msgid "translator-credits"
 msgstr "Meskó Balázs <mesko dot balazs at fsf dot hu>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:241
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Egy távoli asztali kliens a GNOME asztali környezethez"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nem sikerült megnyitni az ismeretlen %s MIME-típusú fájlt"
 
-#: src/application.vala:179
+#: src/application.vala:181
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "A(z) „%s” kapcsolat törölve lett"
 
-#: src/application.vala:182
+#: src/application.vala:184
 msgid "Undo"
 msgstr "Visszavonás"
 
-#: src/application.vala:229
+#: src/application.vala:231
 msgid "URL to connect"
 msgstr "URL a kapcsolódáshoz"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Egy .vnc vagy .rdp fájl megnyitása a megadott ÚTVONALON"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open in full screen"
 msgstr "Megnyitás teljes képernyős módban"
 
-#: src/application.vala:254
+#: src/application.vala:256
 msgid "Too many command-line arguments specified.\n"
 msgstr "Túl sok parancssori argumentum lett megadva.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Képernyőkép ekkor: %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "A képernyőkép elkészült"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Megnyitás"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "A(z) „%s” hitelesítést igényel"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Hitelesítés sikertelen: %s"
@@ -147,11 +147,11 @@ msgstr "Hitelesítés sikertelen: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Köszönöm, nem"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Bezárás"
 
@@ -169,7 +169,6 @@ msgstr ""
 "Adja meg a távoli asztal hálózati azonosítóját, melyhez kapcsolódni szeretne:"
 
 #: src/ui/assistant.ui:53
-#| msgid "Connections"
 msgid "Connection Type"
 msgstr "Kapcsolat típusa"
 
@@ -177,16 +176,15 @@ msgstr "Kapcsolat típusa"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (Windowshoz kapcsolódás esetén megszokott)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (Linuxhoz kapcsolódás esetén megszokott)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Súgó"
 
-#: src/ui/assistant.ui:98
-#| msgid "Connections"
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Kapcsolódás"
 
@@ -202,16 +200,11 @@ msgstr "_Jelszó"
 msgid "Sign In"
 msgstr "Bejelentkezés"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Üdvözöljük a Kapcsolatokban"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Csak nyomja meg a <b>+</b> gombot az első kapcsolata létrehozásához."
-
 #: src/ui/onboarding-dialog.ui:42
-#| msgid "About Connections"
 msgid "Learn about how Connections works."
 msgstr "Tudja meg, hogyan működik a Kapcsolatok."
 
@@ -228,7 +221,6 @@ msgstr ""
 "Egérrel és billentyűzettel is vezérelheti!"
 
 #: src/ui/onboarding-dialog.ui:57
-#| msgid "Connection Properties"
 msgid "Connect to different operating systems"
 msgstr "Kapcsolódjon más operációs rendszerekhez"
 
@@ -249,7 +241,6 @@ msgstr ""
 "hozzájuk."
 
 #: src/ui/onboarding-dialog.ui:73
-#| msgid "Welcome to Connections"
 msgid "We hope that you enjoy Connections!"
 msgstr "Reméljük, hogy élvezi fogja a Kapcsolatok használatát!"
 
@@ -258,15 +249,14 @@ msgid "More information can be found in the help."
 msgstr "További információk találhatók a súgóban."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
-#| msgid "Connection Properties"
 msgid "Connection preferences"
 msgstr "Kapcsolat beállításai"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Cím"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Név"
 
@@ -330,54 +320,61 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
-#| msgid "Display Menu"
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Megjelenítés"
 
-#: src/ui/vnc-preferences.ui:60
+#: src/ui/vnc-preferences.ui:59
 msgid "Scaling"
 msgstr "Méretezés"
 
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Csak megtekintés"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Helyi mutató megjelenítése"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Hang engedélyezése"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Sávszélesség"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Magas minőség"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Gyors frissítés"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Átméretezési mód"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Ablakhoz illesztés"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Eredeti méret"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Csak nyomja meg a <b>+</b> gombot az első kapcsolata létrehozásához."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Nem sikerült feldolgozni a fájlt"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "A VNC-fájlból hiányzik a(z) „%s” kulcs"
