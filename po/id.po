@@ -2,14 +2,14 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # Andika Triwidada <atriwidada@gnome.org>, 2020.
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2021-08-28 18:22+0700\n"
+"POT-Creation-Date: 2021-12-14 06:42+0000\n"
+"PO-Revision-Date: 2022-01-05 09:08+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Sambungan"
 
@@ -81,63 +81,63 @@ msgstr "Properti"
 msgid "translator-credits"
 msgstr ""
 "Andika Triwidada <andika@gmail.com>, 2020\n"
-"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021"
+"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021-2022"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Klien destop jarak jauh untuk lingkungan destop GNOME"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Tak dapat membuka berkas dari tipe mime yang tidak dikenal %s"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Koneksi ke \"%s\" telah dihapus"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Tak Jadi"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL untuk disambungkan"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Buka berkas .vnc atau .rdp di PATH yang diberikan"
 
-#: src/application.vala:231
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Buka di layar penuh"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Terlalu banyak argumen baris perintah yang ditentukan.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Cuplikan layar dari %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Cuplikan layar diambil"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Buka"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "\"%s\" membutuhkan autentikasi"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentikasi gagal: %s"
@@ -148,11 +148,11 @@ msgstr "Autentikasi gagal: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Tidak, Terima Kasih"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Tutup"
 
@@ -176,15 +176,15 @@ msgstr "Tipe Koneksi"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (standar untuk terhubung ke Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standar untuk terhubung ke Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Bantuan"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Sambungan"
 
@@ -200,13 +200,9 @@ msgstr "_Kata Sandi"
 msgid "Sign In"
 msgstr "Masuk"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Selamat Datang di Sambungan"
-
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
@@ -256,11 +252,11 @@ msgstr "Informasi lebih lanjut dapat ditemukan dalam bantuan."
 msgid "Connection preferences"
 msgstr "Preferensi sambungan"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Alamat"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Nama"
 
@@ -324,53 +320,61 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Tampilan"
 
-#: src/ui/vnc-preferences.ui:60
+#: src/ui/vnc-preferences.ui:59
 msgid "Scaling"
 msgstr "Penskalaan"
 
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Hanya tilik"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Tampilkan penunjuk lokal"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Aktifkan audio"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Lebar Pita"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Kualitas tinggi"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Segarkan cepat"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Mode skala"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Paskan jendela"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Ukuran asli"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Cukup tekan tombol <b>+</b> untuk membuat koneksi pertama Anda."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Tidak dapat mengurai berkas"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Berkas VNC kurang kunci \"%s\""
