@@ -1,0 +1,372 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sv1@fellsnet.is>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2022-01-21 09:26+0000\n"
+"PO-Revision-Date: 2022-01-29 11:58+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
+msgid "Connections"
+msgstr "Tengingar"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Skoða og nota önnur skjáborð"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Tengingar gera þér kleift að tengjast við og nota önnur skjáborð. Þetta er"
+" hentug leið til að hafa aðgang að efni eða hugbúnaði af öðrum ólíkum"
+" stýrikerfum. Þetta nýtist líka vel til aðstoðar öðrum notendum úr fjarlægð."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Hægt er að tengjast við fjölmörg önnur stýrikerfi, meðal annarra Linux og"
+" Windows skjáborð. Einnig er hægt að tengjast við sýndarvélar."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Tengingar nota hina útbreiddu VNC og RDP samskiptamáta, þarf annar hvor"
+" þeirra að vera virkur á því kerfi sem þú ætlar að tengjast."
+
+#: data/org.gnome.Connections.appdata.xml.in:68
+msgid "The GNOME Project"
+msgstr "GNOME verkefnið"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;fjartengt;skjáborð;windows;linux;mac;stuðningur;aðgangur;skoða"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Fjaraðgangsskrá (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Eyða"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "Eiginleikar"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr "Sveinn í Felli, sv1@fellsnet.is"
+
+#: src/application.vala:89 src/application.vala:240
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr ""
+"Viðmót til skoðunar á fjartengdum skjáborðum í GNOME skjáborðsumhverfinu"
+
+#: src/application.vala:150
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Gat ekki opnað skrá af óþekktu mime-tegundinni %s"
+
+#: src/application.vala:180
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Tengingu við “%s” hefur verið eytt"
+
+#: src/application.vala:183
+msgid "Undo"
+msgstr "Afturkalla"
+
+#: src/application.vala:230
+msgid "URL to connect"
+msgstr "Slóð sem á að tengjast"
+
+#: src/application.vala:231
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Opna .vnc eða .rdp skrá á uppgefinni SLÓÐ"
+
+#: src/application.vala:232
+msgid "Open in full screen"
+msgstr "Opna í heilskjásham"
+
+#: src/application.vala:255
+msgid "Too many command-line arguments specified.\n"
+msgstr "Of mörg skipanalínuviðföng tilgreind.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:64
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Skjámynd frá %s"
+
+#: src/connection.vala:79
+msgid "Screenshot taken"
+msgstr "Skjámynd tekin"
+
+#. Translators: Open is a verb
+#: src/connection.vala:82
+msgid "Open"
+msgstr "Opna"
+
+#: src/connection.vala:127
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "\"%s\" krefst auðkenningar"
+
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Auðkenning mistókst: %s"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:141
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "Nei, takk"
+
+#: src/onboarding-dialog.vala:86
+msgid "Close"
+msgstr "Loka"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Taka skjámynd"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Fylla skjáinn"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Settu inn netauðkenni fjartengda skjáborðsins sem á að tengjast:"
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Tegund tengingar"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (staðall til að tengjast Windows)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "RDP (staðall til að tengjast Linux)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Hjálp"
+
+#: src/ui/assistant.ui:100
+msgid "Connect"
+msgstr "Tengjast"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "Notan_danafn"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Lykilorð"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Skrá inn"
+
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+msgid "Welcome to Connections"
+msgstr "Velkomin í Tengingar"
+
+#: src/ui/empty-view.ui:41
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Ýttu bara á <b>+</b> hnappinn til að útbúa fyrstu tenginguna þína."
+
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Lærðu hvernig Tengingar virka."
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Notaðu önnur skjáborð, fjartengt"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Notaðu Tengingar til að skoða skjáinn á öðrum skjáborðum. Þú getur líka"
+" stjórnað þeim með bendlinum og lyklaborðinu."
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Tengstu öðrum ólíkum stýrikerfum"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "Tengstu við Unix/Linux, Windows og aðrar fjartengdar vélar."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Virkjaðu fjartengt skjáborð áður en þú tengist"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Setja þarf viðkomandi tölvur fyrir fjartengt skjáborð áður en hægt er að"
+" tengjast þeim."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Við vonum að Tengingar nýtist þér vel!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Nánari upplýsingar má finna í hjálparskjölunum."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Eiginleikar tengingar"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
+msgid "Address"
+msgstr "Vistfang"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "Heiti"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nýtt"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Forritavalmynd"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Leita"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Til baka"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Birta valmynd"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Aftengja"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Flýtivísanir á lyklaborði"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Flýtileiðir á lyklaborði"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Um Tengingar"
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Skjár"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Kvörðun"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Aðeins skoða"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Sýna staðværan bendil"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Bandbreidd"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Hágæða"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Hröð uppfærsla"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Kvörðunarhamur"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Laga að glugga"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Upprunaleg stærð"
+
+#: src/vnc-connection.vala:123
+msgid "Couldn’t parse the file"
+msgstr "Gat ekki þáttað skrána"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC-skrá vantar lykilinn “%s”"
