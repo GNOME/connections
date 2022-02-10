@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-13 16:42+0000\n"
-"PO-Revision-Date: 2021-09-19 19:50+0300\n"
+"POT-Creation-Date: 2021-11-29 09:20+0000\n"
+"PO-Revision-Date: 2022-02-10 19:35+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Bağlantılar"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "View and use other desktops"
-msgstr "Diğer masaüstülerini görüntüle ve kullan"
+msgstr "Diğer masaüstlerini görüntüle ve kullan"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid ""
@@ -36,10 +36,9 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
-"Bağlantılar, diğer masaüstülerine bağlanmanıza ve bu masaüstülerini "
-"kullanmanızı sağlar. Bu, başka masaüstü işletim sistemindeki içeriğe veya "
-"yazılama erişmenin harika yoludur. Yardıma gereksinen kullanıcılara destek "
-"vermek için de kullanılabilir."
+"Bağlantılar, diğer masaüstlerine bağlanmanızı ve kullanmanızı sağlar. Bu, "
+"başka masaüstü işletim sistemindeki içeriğe veya yazılama erişmenin harika "
+"yoludur. Yardım isteyen kullanıcılara destek vermek için de kullanılabilir."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
@@ -84,61 +83,61 @@ msgstr ""
 "Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Burhan KELEŞ <klsburhan@hotmail.com>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "GNOME masaüstü ortamı için uzak masaüstü istemcisi"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Bilinmeyen %s mime türündeki dosya açılamadı"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "“%s” bağlantısı silindi"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Geri Al"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "Bağlanılacak URL"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Verilen YOLdaki .vnc veya .rdp dosyasını aç"
 
-#: src/application.vala:231
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Tam ekranda aç"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Çok fazla komut satırı argümanı belirtildi.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Ekran görüntüsü %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Ekran görüntüsü çekildi"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Aç"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” kimlik doğrulaması gerektiriyor"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Kimlik doğrulanamadı: %s"
@@ -149,11 +148,11 @@ msgstr "Kimlik doğrulanamadı: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
-msgstr "Hayır Teşekkürler"
+msgstr "Hayır, teşekkürler"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Kapat"
 
@@ -177,15 +176,15 @@ msgstr "Bağlantı Türü"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (Windowsʼa bağlantı için standart)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (Linuxʼa bağlantı için standart)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Yardım"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Bağlan"
 
@@ -201,17 +200,13 @@ msgstr "_Parola"
 msgid "Sign In"
 msgstr "Giriş Yap"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Bağlantılar’a Hoş Geldiniz"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "İlk bağlantınızı yapmak için <b>+</b> düğmesine basın."
-
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
-msgstr "Bağlantılarʼın nasıl çalıştığını öğren."
+msgstr "Bağlantılarʼın nasıl çalıştığını öğrenin."
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
@@ -222,8 +217,8 @@ msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
-"Diğer masaüstülerinin ekranlarını görmek için Bağlantılarʼı kullan. İmleç ve "
-"klavye kullanarak denetleyebilirsiniz!"
+"Diğer masaüstlerinin ekranlarını görmek için Bağlantılarʼı kullanın. Ayrıca "
+"imleç ve klavye kullanarak ekranları denetleyebilirsiniz!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -231,7 +226,7 @@ msgstr "Başka işletim sistemlerine bağlan"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Bağlantılarʼı kullanarak Linux, Mac ve Windows masaüstülerine eriş"
+msgstr "Bağlantılarʼı kullanarak Linux, Mac ve Windows masaüstlerine erişin."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
@@ -250,17 +245,17 @@ msgstr "Umarız Bağlantılarʼı beğenirsiniz!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
-msgstr "Yardımda daha çok bilgi bulunabilir."
+msgstr "Yardım bölümünde daha çok bilgi bulunur."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
 msgstr "Bağlantı tercihleri"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Adres"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Ad"
 
@@ -286,7 +281,7 @@ msgstr "Menüyü Göster"
 
 #: src/ui/topbar.ui:149
 msgid "Disconnect"
-msgstr "Bağlantıyı Kes"
+msgstr "Bağlantıyı kes"
 
 #: src/ui/topbar.ui:174
 msgid "Keyboard shortcuts"
@@ -324,53 +319,61 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Ekran"
 
-#: src/ui/vnc-preferences.ui:60
+#: src/ui/vnc-preferences.ui:59
 msgid "Scaling"
 msgstr "Ölçek"
 
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Yalnızca görüntüle"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Yerel imleci göster"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Sesi etkinleştir"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Bant genişliği"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Yüksek nitelik"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Hızlı yenileme"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Ölçek kipi"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Pencereye sığdır"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Özgün boyut"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "İlk bağlantınızı yapmak için <b>+</b> düğmesine basın."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Dosya ayrıştırılamadı"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC dosyasının “%s” anahtarı eksik"
