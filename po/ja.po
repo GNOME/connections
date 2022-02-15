@@ -1,14 +1,14 @@
 # Japanese translation for gnome-connections.
-# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# Copyright (C) 2020, 2022 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# sicklylife <translation@sicklylife.jp>, 2020.
+# sicklylife <translation@sicklylife.jp>, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2021-11-06 21:25+0000\n"
-"PO-Revision-Date: 2020-09-04 23:55+0900\n"
+"PO-Revision-Date: 2022-02-15 22:30+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -25,7 +25,7 @@ msgstr "接続"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "View and use other desktops"
-msgstr ""
+msgstr "他のデスクトップを表示して使用します"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid ""
@@ -34,18 +34,25 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
+"“接続”は他のデスクトップに接続して、そのデスクトップを使用することができ"
+"ます。異なる OS 上のソフトウェアやコンテンツにアクセスするのに便利です。ま"
+"た、支援が必要なユーザーを遠隔サポートするのにも使用できます。"
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
+"Linux や Windows を含めた多様な OS に接続することができます。また、仮想マシ"
+"ンに接続することもできます。"
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
+"“接続”は広くサポートされている VNC と RDP を使用します。接続される側の"
+"デスクトップはいずれかを有効にする必要があります。"
 
 #: data/org.gnome.Connections.appdata.xml.in:59
 msgid "The GNOME Project"
@@ -53,7 +60,8 @@ msgstr "The GNOME Project"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
-msgstr ""
+msgstr "vnc;rdp;remote;desktop;windows;support;access;view;"
+"リモート;デスクトップ;ウィンドウ;サポート;アクセス;表示;"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -99,7 +107,7 @@ msgstr "指定した PATH のファイル (.vnc または .rdp) を開く"
 
 #: src/application.vala:231
 msgid "Open in full screen"
-msgstr ""
+msgstr "フルスクリーンで開く"
 
 #: src/application.vala:254
 msgid "Too many command-line arguments specified.\n"
@@ -128,7 +136,7 @@ msgstr "“%s”は認証が必要です"
 #: src/connection.vala:146
 #, c-format
 msgid "Authentication failed: %s"
-msgstr ""
+msgstr "認証に失敗しました: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:141
@@ -138,11 +146,11 @@ msgstr "%d×%d"
 
 #: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
-msgstr ""
+msgstr "結構です"
 
 #: src/onboarding-dialog.vala:86
 msgid "Close"
-msgstr ""
+msgstr "閉じる"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -150,33 +158,30 @@ msgstr "スクリーンショットを撮る"
 
 #: src/topbar.vala:62 src/ui/topbar.ui:216
 msgid "Fullscreen"
-msgstr ""
+msgstr "フルスクリーン"
 
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
+"接続するリモートデスクトップのネットワーク識別子を入力してください:"
 
 #: src/ui/assistant.ui:53
-#, fuzzy
-#| msgid "Connections"
 msgid "Connection Type"
-msgstr "接続"
+msgstr "接続の種類"
 
 #: src/ui/assistant.ui:63
 msgid "RDP (standard for connecting to Windows)"
-msgstr ""
+msgstr "RDP (Windows への接続の標準)"
 
 #: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
-msgstr ""
+msgstr "VNC (Linux への接続の標準)"
 
 #: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "ヘルプ"
 
 #: src/ui/assistant.ui:100
-#, fuzzy
-#| msgid "Connections"
 msgid "Connect"
 msgstr "接続"
 
@@ -201,56 +206,52 @@ msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "<b>+</b> ボタンを押して接続を開始してください。"
 
 #: src/ui/onboarding-dialog.ui:42
-#, fuzzy
-#| msgid "About Connections"
 msgid "Learn about how Connections works."
-msgstr "“接続”について"
+msgstr "“接続”の機能について学びましょう。"
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
-msgstr ""
+msgstr "他のデスクトップを遠隔使用する"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
+"“接続”を使用して他のデスクトップの画面を表示しましょう。(マウスなどの) ポ"
+"インターやキーボードで操作することもできます!"
 
 #: src/ui/onboarding-dialog.ui:57
-#, fuzzy
-#| msgid "Connection Properties"
 msgid "Connect to different operating systems"
-msgstr "接続のプロパティ"
+msgstr "多様な OS に接続する"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
+msgstr "“接続”を使用して Windows、Mac、Linux のデスクトップにアクセスしましょう。"
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
-msgstr ""
+msgstr "接続する前にリモートデスクトップを有効にする"
 
 #: src/ui/onboarding-dialog.ui:66
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
+"リモート接続する前に、接続される側のコンピューターでリモートデスクトップの"
+"セットアップをする必要があります。"
 
 #: src/ui/onboarding-dialog.ui:73
-#, fuzzy
-#| msgid "Welcome to Connections"
 msgid "We hope that you enjoy Connections!"
-msgstr "“接続”へようこそ"
+msgstr "“接続”を楽しんでください!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
-msgstr ""
+msgstr "より詳しい情報はヘルプを確認してください。"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
-#, fuzzy
-#| msgid "Connection Properties"
 msgid "Connection preferences"
-msgstr "接続のプロパティ"
+msgstr "接続設定"
 
 #: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
 msgid "Address"
@@ -321,10 +322,8 @@ msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
 #: src/ui/vnc-preferences.ui:55
-#, fuzzy
-#| msgid "Display Menu"
 msgid "Display"
-msgstr "メニューを表示"
+msgstr "表示"
 
 #: src/ui/vnc-preferences.ui:60
 msgid "Scaling"
@@ -340,27 +339,27 @@ msgstr "ローカルポインターを表示する"
 
 #: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
-msgstr ""
+msgstr "帯域幅"
 
 #: src/ui/vnc-preferences.ui:89
 msgid "High quality"
-msgstr ""
+msgstr "高品質"
 
 #: src/ui/vnc-preferences.ui:90
 msgid "Fast refresh"
-msgstr ""
+msgstr "高速リフレッシュ"
 
 #: src/ui/vnc-preferences.ui:101
 msgid "Scale mode"
-msgstr ""
+msgstr "スケールモード"
 
 #: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
-msgstr ""
+msgstr "ウィンドウに合わせる"
 
 #: src/ui/vnc-preferences.ui:109
 msgid "Original size"
-msgstr ""
+msgstr "オリジナルのサイズ"
 
 #: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
