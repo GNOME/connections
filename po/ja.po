@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2021-11-06 21:25+0000\n"
-"PO-Revision-Date: 2022-02-15 22:30+0900\n"
+"PO-Revision-Date: 2022-02-15 22:55+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -336,6 +336,10 @@ msgstr "表示専用"
 #: src/ui/vnc-preferences.ui:74
 msgid "Show local pointer"
 msgstr "ローカルポインターを表示する"
+
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "音声を有効にする"
 
 #: src/ui/vnc-preferences.ui:82
 msgid "Bandwidth"
