@@ -1,14 +1,14 @@
 # Lithuanian translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Aurimas Černius <aurisc4@gmail.com>, 2020-2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2020-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-10-03 07:19+0000\n"
-"PO-Revision-Date: 2021-10-03 14:15+0300\n"
+"POT-Creation-Date: 2021-11-06 13:50+0000\n"
+"PO-Revision-Date: 2022-02-20 14:50+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Ryšiai"
 
@@ -56,7 +56,7 @@ msgstr ""
 "Ryšiai naudoja plačiai palaikomus VNC ir RDP protokolos, vienas iš jų turi "
 "būti įjungtas darbalaukyje, prie kurio norima prisijungti."
 
-#: data/org.gnome.Connections.appdata.xml.in:49
+#: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "GNOME projektas"
 
@@ -83,38 +83,37 @@ msgstr ""
 "\n"
 "Aurimas Černius <aurisc4@gmail.com>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:240
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Nuotolinio darbalaukio klientas GNOME darbalaukio aplinkai"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nepavyko atverti nežinomo MIME tipo failo %s"
 
-#: src/application.vala:179
+#: src/application.vala:180
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Ryšys „%s“ buvo ištrintas"
 
-#: src/application.vala:182
+#: src/application.vala:183
 msgid "Undo"
 msgstr "Atšaukti"
 
-#: src/application.vala:229
+#: src/application.vala:230
 msgid "URL to connect"
 msgstr "Prisijungti prie URL"
 
-#: src/application.vala:230
+#: src/application.vala:231
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Atverti .vnc arba .rdp failą nurodytame KELYJE"
 
-#: src/application.vala:231
-#| msgid "Fullscreen"
+#: src/application.vala:232
 msgid "Open in full screen"
 msgstr "Atverti visame ekrane"
 
-#: src/application.vala:254
+#: src/application.vala:255
 msgid "Too many command-line arguments specified.\n"
 msgstr "Pateikta per daug komandų eilutės argumentų.\n"
 
@@ -149,11 +148,11 @@ msgstr "Nepavyko patvirtinti tapatybės: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Ne, ačiū"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Užverti"
 
@@ -171,7 +170,6 @@ msgstr ""
 "Įveskite nuotolinio darbalaukio, prie kuri jungiatės, tinklo identifikatorių:"
 
 #: src/ui/assistant.ui:53
-#| msgid "Connections"
 msgid "Connection Type"
 msgstr "Ryšio tipas"
 
@@ -179,15 +177,15 @@ msgstr "Ryšio tipas"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (įprastinis jungiantis prie Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (įprastinis jungiantis prie Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Žinynas"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Prisijungti"
 
@@ -203,21 +201,15 @@ msgstr "Sla_ptažodis"
 msgid "Sign In"
 msgstr "Prisijungti"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Sveiki pradėję naudoti ryšius"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Tiesiog spauskite mygtuką <b>+</b> pirmajam ryšiui sukurti."
-
 #: src/ui/onboarding-dialog.ui:42
-#| msgid "About Connections"
 msgid "Learn about how Connections works."
 msgstr "Sužinokite daugiau, kaip veikia ryšiai"
 
 #: src/ui/onboarding-dialog.ui:49
-#| msgid "View and use other desktops"
 msgid "Use other desktops, remotely"
 msgstr "Naudokitės kitais darbalaukiais nuotoliniu būdu"
 
@@ -250,7 +242,6 @@ msgstr ""
 "jungiantis prie jų."
 
 #: src/ui/onboarding-dialog.ui:73
-#| msgid "Welcome to Connections"
 msgid "We hope that you enjoy Connections!"
 msgstr "Tikimės, kad jums patiks ryšių programa!"
 
@@ -346,37 +337,45 @@ msgstr "Tik žiūrėti"
 msgid "Show local pointer"
 msgstr "Rodyti vietinį žymeklį"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:81
+msgid "Enable audio"
+msgstr "Įjungti garsą"
+
+#: src/ui/vnc-preferences.ui:89
 msgid "Bandwidth"
 msgstr "Pralaidumas"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:96
 msgid "High quality"
 msgstr "Aukštos kokybės"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:97
 msgid "Fast refresh"
 msgstr "Greitas atnaujinimas"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:108
 msgid "Scale mode"
 msgstr "Ištempimo veiksena"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:115
 msgid "Fit window"
 msgstr "Pritaikyti prie lango"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:116
 msgid "Original size"
 msgstr "Pradinis dydis"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Tiesiog spauskite mygtuką <b>+</b> pirmajam ryšiui sukurti."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Nepavyko perskaityti failo"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC faile trūksta rakto „%s“"
