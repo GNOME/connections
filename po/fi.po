@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-13 16:42+0000\n"
-"PO-Revision-Date: 2021-09-17 09:52+0300\n"
+"POT-Creation-Date: 2022-02-15 13:51+0000\n"
+"PO-Revision-Date: 2022-02-23 19:07+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 40.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Yhteydet"
 
@@ -80,62 +80,61 @@ msgstr "Ominaisuudet"
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Etäyhteyssovellus Gnome-työpöytäympäristölle"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ei voitu avata tuntematonta MIME-tyyppiä %s"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Yhteys koneeseen “%s” on poistettu"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Kumoa"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL johon yhdistetään"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Avaa .vnc- tai .rdp-tiedosto annetussa PATH:issa (polku)"
 
-#: src/application.vala:231
-#| msgid "Fullscreen"
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Avaa koko näytön tilassa"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Liian monta komentoriviargumenttia määritetty.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Kuvakaappaus %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Kuvakaappaus otettu"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Avaa"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” vaatii tunnistautumisen"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Tunnistautuminen epäonnistui: %s"
@@ -146,11 +145,11 @@ msgstr "Tunnistautuminen epäonnistui: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Ei kiitos"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Sulje"
 
@@ -167,7 +166,6 @@ msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr "Anna yhdistettävän etätyöpöydän verkkotunniste:"
 
 #: src/ui/assistant.ui:53
-#| msgid "Connections"
 msgid "Connection Type"
 msgstr "Yhteyden tyyppi"
 
@@ -175,15 +173,15 @@ msgstr "Yhteyden tyyppi"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (standardi Windowsiin yhdistäessä)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standardi Linuxiin yhdistäessä)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Ohje"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Yhdistä"
 
@@ -199,21 +197,15 @@ msgstr "S_alasana"
 msgid "Sign In"
 msgstr "Kirjaudu sisään"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Tervetuloa"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
-
 #: src/ui/onboarding-dialog.ui:42
-#| msgid "About Connections"
 msgid "Learn about how Connections works."
 msgstr "Lue miten Yhteydet toimii."
 
 #: src/ui/onboarding-dialog.ui:49
-#| msgid "View and use other desktops"
 msgid "Use other desktops, remotely"
 msgstr "Käytä muita työpöytiä, etänä"
 
@@ -221,7 +213,9 @@ msgstr "Käytä muita työpöytiä, etänä"
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
-msgstr "Käytä Yhteydet-sovellusta yhdistääksesi muihin työpöytiin."
+msgstr ""
+"Käytä Yhteydet-sovellusta yhdistääksesi muihin työpöytiin. Voit ohjata "
+"työpöytiä käyttäen hiirtä ja näppäimistöä."
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -244,7 +238,6 @@ msgstr ""
 "niihin."
 
 #: src/ui/onboarding-dialog.ui:73
-#| msgid "Welcome to Connections"
 msgid "We hope that you enjoy Connections!"
 msgstr "Toivottavasti Yhteydet on mieleesi!"
 
@@ -256,11 +249,11 @@ msgstr "Lisätietoja on tarjolla ohjeessa."
 msgid "Connection preferences"
 msgstr "Yhteyden asetukset"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Osoite"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Nimi"
 
@@ -324,53 +317,61 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Näytä"
 
-#: src/ui/vnc-preferences.ui:60
+#: src/ui/vnc-preferences.ui:59
 msgid "Scaling"
 msgstr "Skaalaus"
 
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Vain katselu"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Näytä paikallinen osoitin"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Ota ääni käyttöön"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Kaistanleveys"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Korkea laatu"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Nopea päivitys"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Skaalaustila"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Sovita ikkunaan"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Alkuperäinen koko"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Tiedostoa ei voitu jäsentää"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-tiedostosta puuttuu avain “%s”"
