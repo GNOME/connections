@@ -1,3 +1,46 @@
+42.beta - 24 Feb, 2022
+======================
+
+Changes since 41.0
+
+  - Finalize deleted connections
+  - Save credentials in the keyring
+  - Expose setting to enable/disable audio for VNC connections
+  - Fix clibpard issues with VNC
+  - Fix issue with the search grabing input from display
+  - Added libhandy color scheme API
+  - Improve thumbnail drawing logic
+  - Added/updated/fixed translations:
+    - Finnish
+    - Slovak
+    - Lithuanian
+    - Japanese
+    - Galician
+    - Basque
+    - Catalan
+    - Turkish
+    - Danish
+    - Russian
+    - Slovenian
+    - Brazilian Portuguese
+    - Czech
+    - Indonesian
+    - Chinese (China)
+    - Hungarian
+    - French
+    - Icelandic
+    - Hebrew
+    - Korean
+    - Croatian
+    - Occitan
+    - Portuguese
+    - Friulian
+    - Ukrainian
+    - Swedish
+    - Serbian
+    - Vietnamese
+    - Punjabi
+
 41.0 - 17 Sep, 2021
 ====================
 
