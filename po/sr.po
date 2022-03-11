@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-13 16:42+0000\n"
-"PO-Revision-Date: 2021-10-02 09:36+0200\n"
+"POT-Creation-Date: 2021-11-06 13:50+0000\n"
+"PO-Revision-Date: 2022-03-11 08:33+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <gnome-sr@googlegroups.com>\n"
 "Language: sr\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Везе"
 
@@ -65,7 +65,7 @@ msgstr "Гном пројекат"
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
 msgstr ""
 "vnc;rdp;remote;desktop;windows;support;access;view;внц;рдп;удаљено;десктоп;"
-"радна површ;виндоус;подршка;приступ;погледај;vindous;podrska;"
+"радна површ;виндоус;подршка;приступ;погледај;vindous;podrska"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -86,37 +86,37 @@ msgstr ""
 "\n"
 "https://гном.срб — превод Гнома на српски језик"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:240
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Гномов клијент за удаљену радну површину"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Не могу отворити датотеку са непознатом миме врстом %s"
 
-#: src/application.vala:179
+#: src/application.vala:180
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Веза ка „%s“ је обрисана"
 
-#: src/application.vala:182
+#: src/application.vala:183
 msgid "Undo"
 msgstr "Опозови"
 
-#: src/application.vala:229
+#: src/application.vala:230
 msgid "URL to connect"
 msgstr "УРЛ везе"
 
-#: src/application.vala:230
+#: src/application.vala:231
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Отвори .vnc или .rdp датотеку у датој ПУТАЊИ"
 
-#: src/application.vala:231
+#: src/application.vala:232
 msgid "Open in full screen"
 msgstr "Отвори преко целог екрана"
 
-#: src/application.vala:254
+#: src/application.vala:255
 msgid "Too many command-line arguments specified.\n"
 msgstr "Сувише аргумената наредбене линије наведено.\n"
 
@@ -151,11 +151,11 @@ msgstr "Идентификација није успела: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Не, хвала"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Затвори"
 
@@ -179,15 +179,15 @@ msgstr "Врста везе"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "РДП (опште за повезивање на Виндоус)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "ВНЦ (опште за повезивање на Линукс)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Помоћ"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Повежи се"
 
@@ -203,13 +203,9 @@ msgstr "_Лозинка"
 msgid "Sign In"
 msgstr "Пријави ме"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Добро дошли у Везе"
-
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Само притисните <b>+</b> дугме за стварање ваше прве везе."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
@@ -342,37 +338,45 @@ msgstr "Само приказ"
 msgid "Show local pointer"
 msgstr "Прикажи локални показивач миша"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:81
+msgid "Enable audio"
+msgstr "Омогући звук"
+
+#: src/ui/vnc-preferences.ui:89
 msgid "Bandwidth"
 msgstr "Проток"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:96
 msgid "High quality"
 msgstr "Висок квалитет"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:97
 msgid "Fast refresh"
 msgstr "Брзо освежавање"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:108
 msgid "Scale mode"
 msgstr "Режим сразмеравања"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:115
 msgid "Fit window"
 msgstr "Уклопи у прозор"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:116
 msgid "Original size"
 msgstr "Изворна величина"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Само притисните <b>+</b> дугме за стварање ваше прве везе."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Не могу да обрадим датотеку"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC датотеци недостаје кључ „%s“"
