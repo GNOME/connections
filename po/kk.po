@@ -7,19 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2021-08-29 19:35+0500\n"
+"POT-Creation-Date: 2022-02-15 13:51+0000\n"
+"PO-Revision-Date: 2022-03-12 23:05+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Байланыстар"
 
@@ -37,8 +37,8 @@ msgstr ""
 "Байланыстар қолданбасы басқа жұмыс үстелдеріне қосылуға және оларды "
 "пайдалануға мүмкіндік береді. Бұл басқа жұмыс үстелі операциялық жүйесінің "
 "мазмұны немесе бағдарламалық қамтамаға қол жеткізудің тамаша жолы болуы "
-"мүмкін. Сондай-ақ, оны көмекке мұқтаж пайдаланушыларға қолдау көрсету "
-"тәсілі ретінде пайдалануға болады."
+"мүмкін. Сондай-ақ, оны көмекке мұқтаж пайдаланушыларға қолдау көрсету тәсілі "
+"ретінде пайдалануға болады."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
@@ -84,61 +84,61 @@ msgstr "Қасиеттері"
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "GNOME жұмыс үстелі ортасына арналған қашықтағы жұмыс үстелі клиенті"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Белгісіз mime %s түрінің файлын ашу мүмкін емес"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "\"%s\" байланысы өшірілген"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Болдырмау"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "Байланысу үшін URL"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Берілген PATH бойынша орналасқан .vnc немесе .rdp файлын ашу"
 
-#: src/application.vala:231
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Толық экранда ашу"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Тым көп командалық жол аргументтері көрсетілді.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Скриншот, уақыты %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Скриншот түсірілді"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Ашу"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "\"%s\" аутентификацияны талап етеді"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Аутентификация сәтсіз: %s"
@@ -149,11 +149,11 @@ msgstr "Аутентификация сәтсіз: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Жоқ, рахмет"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Жабу"
 
@@ -177,15 +177,15 @@ msgstr "Байланыс түрі"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (Windows жүйесіне қосылу стандарты)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (Linux-қа қосылу стандарты)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Көмек"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Байланысу"
 
@@ -201,13 +201,9 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Кіру"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Байланыстар қолданбасына қош келдіңіз"
-
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Бірінші байланысты жасау үшін <b>+</b> батырмасын басыңыз."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
@@ -259,11 +255,11 @@ msgstr "Қосымша ақпаратты анықтамадан табуға б
 msgid "Connection preferences"
 msgstr "Байланыс баптаулары"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Адрес"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Аты"
 
@@ -327,53 +323,61 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Дисплей"
 
-#: src/ui/vnc-preferences.ui:60
+#: src/ui/vnc-preferences.ui:59
 msgid "Scaling"
 msgstr "Масштабтау"
 
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Тек қарау"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Жергілікті курсорды көрсету"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Аудионы іске қосу"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Өткізу қабілеті"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Жоғары сапалы"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Жылдам жаңарту"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Масштабтау режимі"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Терезеге сыйдыру"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Бастапқы өлшемі"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Бірінші байланысты жасау үшін <b>+</b> батырмасын басыңыз."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Файлды талдау мүмкін емес"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC файлында \"%s\" кілті жоқ"
