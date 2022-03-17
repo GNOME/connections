@@ -1,14 +1,15 @@
 # Italian translation for gnome-connections.
-# Copyright (C) 2020, 2021 Free Software Foundation, Inc.
+# Copyright (C) 2020, 2021, 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-connections package.
-# Milo Casagrande <milo@milo.name>, 2020, 2021.
+# Milo Casagrande <milo@milo.name>, 2020, 2021, 2022.
+# Davide Ferracin <davide.ferracin@protonmail.com>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-03-13 19:32+0000\n"
-"PO-Revision-Date: 2021-03-15 09:39+0100\n"
+"POT-Creation-Date: 2021-12-03 15:08+0000\n"
+"PO-Revision-Date: 2022-03-17 14:34+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <gnome-it-list@gnome.org>\n"
 "Language: it\n"
@@ -16,29 +17,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "Connessioni GNOME"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
+msgid "Connections"
+msgstr "Connessioni"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Un client per desktop remoto per l'ambiente grafico GNOME"
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Visualizza e usa altri computer"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Un client per desktop remoto per l'ambiente grafico GNOME."
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Connessioni permette di connettersi e usare altri computer e usarli. Può "
+"essere un buon modo per accedere a contenuti e software su computer con "
+"altri sistemi operativi. Lo si può usare anche per prestare supporto a "
+"utenti che hanno bisogno d'aiuto."
 
-#: data/org.gnome.Connections.appdata.xml.in:28
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"È possibile connettersi a un'ampia gamma di diversi sistemi operativi, come "
+"inclusi Linux e Windows, ed è possibile connettersi anche a macchine "
+"virtuali."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Connessioni usa i protocolli ampiamente supportati VNC e RDP, e uno di essi "
+"deve essere abilitato sul computer a cui connettersi."
+
+#: data/org.gnome.Connections.appdata.xml.in:68
 msgid "The GNOME Project"
 msgstr "Il progetto GNOME"
 
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Connessioni"
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;remoto;desktop;windows;supporto;accesso;visualizza"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -48,101 +74,121 @@ msgstr "File desktop remoto (VNC)"
 msgid "Delete"
 msgstr "Elimina"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Proprietà"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
-msgstr "Milo Casagrande <milo@milo.name>, 2020, 2021"
+msgstr ""
+"Milo Casagrande <milo@milo.name>, 2020, 2021\n"
+"Davide Ferracin <davide.ferracin@protonmail.com>"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:240
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Un client per desktop remoto per l'ambiente grafico GNOME"
+
+#: src/application.vala:150
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Impossibile aprire file di tipo MIME %s"
 
-#: src/application.vala:170
+#: src/application.vala:180
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "La connessione a «%s» è stata eliminata"
 
-#: src/application.vala:172
+#: src/application.vala:183
 msgid "Undo"
 msgstr "Annulla"
 
-#: src/application.vala:211
+#: src/application.vala:230
 msgid "URL to connect"
 msgstr "URL a cui connettersi"
 
-#: src/application.vala:212
+#: src/application.vala:231
 msgid "Open .vnc or .rdp file at the given PATH"
-msgstr "Apre un file .vnc o .rdp al PERCORSO specificato"
+msgstr "Apri un file .vnc o .rdp al PERCORSO specificato"
 
-#: src/application.vala:234
+#: src/application.vala:232
+msgid "Open in full screen"
+msgstr "Apri a schermo intero"
+
+#: src/application.vala:255
 msgid "Too many command-line arguments specified.\n"
-msgstr "Specificati troppi argomenti da riga di comando.\n"
+msgstr "Sono stati specificati troppi argomenti da riga di comando.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:64
 #, c-format
 msgid "Screenshot from %s"
-msgstr "Schermata da %s"
+msgstr "Schermata del %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:79
 msgid "Screenshot taken"
 msgstr "Schermata catturata"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:82
 msgid "Open"
 msgstr "Apri"
 
-#: src/connection.vala:188
+#: src/connection.vala:127
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» richiede autenticazione"
 
+#: src/connection.vala:146
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Autenticazione non riuscita: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:141
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-properties-dialog.vala:28
-msgid "Scaling"
-msgstr "Ingrandimento"
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "No grazie"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:86
+msgid "Close"
+msgstr "Chiudi"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Cattura schermata"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Crea nuova connessione"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Schermo intero"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
-"Inserire un indirizzo a cui connettersi. Gli indirizzi possono iniziare con "
-"rdp:// o vnc://."
+"Immettere l'identificativo di rete del computer remoto a cui connettersi:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Server"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Tipo di connessione"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Nome"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (standard per connessioni a Windows)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Annulla"
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (standard per connessioni a Linux)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Crea"
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Aiuto"
+
+#: src/ui/assistant.ui:100
+msgid "Connect"
+msgstr "Connetti"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -156,7 +202,7 @@ msgstr "Passw_ord"
 msgid "Sign In"
 msgstr "Accedi"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
 msgid "Welcome to Connections"
 msgstr "Benvenuti in Connessioni"
 
@@ -164,13 +210,62 @@ msgstr "Benvenuti in Connessioni"
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Premere il pulsante <b>+</b> per creare la prima connessione."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Proprietà connessione"
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "Informazioni su come funziona Connessioni."
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "Usa altri computer, da remoto"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"È possibile usare Connessioni per visualizzare lo schermo di altri computer "
+"e controllarli usando il puntatore e la tastiera."
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "Connettersi a sistemi operativi differenti"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+"Usando Connessioni è possibile accedere a computer Linux, Mac e Windows."
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "Abilitare il desktop remoto prima di connettersi"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"I computer devono essere impostati per l'accesso da remoto prima che sia "
+"possibile connettersi a essi."
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr "Speriamo che Connessioni vi piaccia!"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr "Ulteriori informazioni si trovano nella pagina di aiuto."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Preferenze di connessione"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Indirizzo"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "Nome"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -204,65 +299,81 @@ msgstr "Scorciatoie da tastiera"
 msgid "Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Aiuto"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Informazioni su Connessioni"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
-msgstr "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Canc"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Scherma"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Ingrandimento"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "Solo visualizzazione"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "Mostra puntatore locale"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Banda"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Alta qualità"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Aggiornamento rapido"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Modalità ingrandimento"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Fit window"
+msgstr "Adatta la finestra"
+
+#: src/ui/vnc-preferences.ui:108
+msgid "Original size"
+msgstr "Dimensioni originali"
+
+#: src/vnc-connection.vala:123
 msgid "Couldn’t parse the file"
 msgstr "Impossibile leggere il file"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
+#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la chiave «%s» nel file VNC"
-
-#: src/vnc-properties-dialog.vala:33
-msgid "View only"
-msgstr "Solo visualizzazione"
-
-#: src/vnc-properties-dialog.vala:38
-msgid "Show local pointer"
-msgstr "Mostra puntatore locale"
-
-#: src/vnc-properties-dialog.vala:44
-msgid "Bandwidth"
-msgstr "Banda"
-
-#: src/vnc-properties-dialog.vala:46
-msgid "High quality"
-msgstr "Alta qualità"
-
-#: src/vnc-properties-dialog.vala:47
-msgid "Fast refresh"
-msgstr "Aggiornamento rapido"
