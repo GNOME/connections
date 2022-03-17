@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-12-03 15:08+0000\n"
-"PO-Revision-Date: 2022-03-17 14:34+0100\n"
+"POT-Creation-Date: 2022-03-14 22:10+0000\n"
+"PO-Revision-Date: 2022-03-17 14:36+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <gnome-it-list@gnome.org>\n"
 "Language: it\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Connessioni"
 
@@ -58,7 +58,7 @@ msgstr ""
 "Connessioni usa i protocolli ampiamente supportati VNC e RDP, e uno di essi "
 "deve essere abilitato sul computer a cui connettersi."
 
-#: data/org.gnome.Connections.appdata.xml.in:68
+#: data/org.gnome.Connections.appdata.xml.in:34
 msgid "The GNOME Project"
 msgstr "Il progetto GNOME"
 
@@ -84,61 +84,61 @@ msgstr ""
 "Milo Casagrande <milo@milo.name>, 2020, 2021\n"
 "Davide Ferracin <davide.ferracin@protonmail.com>"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Un client per desktop remoto per l'ambiente grafico GNOME"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Impossibile aprire file di tipo MIME %s"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "La connessione a «%s» è stata eliminata"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Annulla"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL a cui connettersi"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Apri un file .vnc o .rdp al PERCORSO specificato"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Apri a schermo intero"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Sono stati specificati troppi argomenti da riga di comando.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Schermata del %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Schermata catturata"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Apri"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» richiede autenticazione"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autenticazione non riuscita: %s"
@@ -202,13 +202,9 @@ msgstr "Passw_ord"
 msgid "Sign In"
 msgstr "Accedi"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Benvenuti in Connessioni"
-
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Premere il pulsante <b>+</b> per creare la prima connessione."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
@@ -343,37 +339,45 @@ msgstr "Solo visualizzazione"
 msgid "Show local pointer"
 msgstr "Mostra puntatore locale"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Abilita audio"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Banda"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Alta qualità"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Aggiornamento rapido"
 
-#: src/ui/vnc-preferences.ui:100
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Modalità ingrandimento"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Adatta la finestra"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Dimensioni originali"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Premere il pulsante <b>+</b> per creare la prima connessione."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Impossibile leggere il file"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la chiave «%s» nel file VNC"
