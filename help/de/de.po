@@ -6,31 +6,31 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"POT-Creation-Date: 2021-02-27 20:50+0000\n"
-"PO-Revision-Date: 2021-02-27 21:54+0100\n"
-"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"POT-Creation-Date: 2022-03-21 12:15+0000\n"
+"PO-Revision-Date: 2022-03-22 18:20+0100\n"
+"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2021.\n"
-"Christian Kirbach <christian.kirbach@googlemail.com>, 2021."
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2021\n"
+"Christian Kirbach <christian.kirbach@googlemail.com>, 2021"
 
 #. (itstool) path: credit/name
-#: C/connect.page:9 C/index.page:14
+#: C/connect.page:9 C/index.page:13
 msgid "Felipe Borges"
 msgstr "Felipe Borges"
 
 #. (itstool) path: credit/years
-#: C/connect.page:11 C/index.page:16
+#: C/connect.page:11 C/index.page:15
 msgid "2020"
 msgstr "2020"
 
@@ -118,24 +118,37 @@ msgstr "Klicken Sie auf <gui style=\"button\">Erstellen</gui>."
 msgid "The remote machine will open in the collection view."
 msgstr "Der ferne Rechner wird in der Kachelansicht geöffnet."
 
-#. (itstool) path: media/span
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Verbindungen"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Verbindungen"
+
+#. (itstool) path: info/title
 #: C/index.page:9
+msgctxt "text"
 msgid "Connections"
 msgstr "Verbindungen"
 
 #. (itstool) path: info/desc
-#: C/index.page:21
+#: C/index.page:20
 msgid "Learn to connect to remote machines."
 msgstr ""
 "Erfahren Sie, wie Sie Verbindungen zu fernen Rechnern herstellen können."
 
 #. (itstool) path: page/title
-#: C/index.page:24
+#: C/index.page:23
 msgid "<_:media-1/> Connections"
 msgstr "<_:media-1/> Verbindungen"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:28
 msgid ""
 "<app>Connections</app> is a remote desktop client for the GNOME desktop "
 "environment."
@@ -144,7 +157,7 @@ msgstr ""
 "Verbindungen zu fernen Rechnern."
 
 #. (itstool) path: section/title
-#: C/index.page:32
+#: C/index.page:31
 msgid "Getting started"
 msgstr "Erste Schritte"
 
