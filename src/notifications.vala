@@ -31,14 +31,12 @@ namespace Connections {
             }
 
             set {
-                var child = get_child ();
-                if (child != null)
-                    remove (child);
-
-                if (value != null)
-                    add (value);
+                if (_active_notification != null) {
+                    remove (_active_notification);
+                }
 
                 _active_notification = value;
+                add (_active_notification);
             }
         }
 
