@@ -63,6 +63,7 @@ namespace Connections {
 
         construct {
             display = new FrdpDisplay ();
+            display.hexpand = display.vexpand = true;
             display.bind_property ("username", this, "username", BindingFlags.BIDIRECTIONAL);
             display.bind_property ("password", this, "password", BindingFlags.BIDIRECTIONAL);
 
