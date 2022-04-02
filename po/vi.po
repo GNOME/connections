@@ -1,26 +1,26 @@
 # Vietnamese translation for connections.
 # Copyright (C) 2021 connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the connections package.
-# Ngọc Quân Trần <vnwildman@gmail.com>, 2021.
+# Ngọc Quân Trần <vnwildman@gmail.com>, 2021-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-22 15:32+0000\n"
-"PO-Revision-Date: 2021-09-23 13:53+0700\n"
+"POT-Creation-Date: 2022-03-25 13:05+0000\n"
+"PO-Revision-Date: 2022-04-02 14:44+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "X-Generator: Gtranslator 3.38.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
 msgstr "Kết nối"
 
@@ -35,18 +35,18 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
-"Kết nối cho phép bạn kết nối và sử dụng các máy tính để bàn khác. Đây có "
-"thể là một cách tuyệt vời để truy cập nội dung hoặc phần mềm trên một hệ "
-"điều hành máy tính để bàn khác. Nó cũng có thể được sử dụng như một cách để "
-"cung cấp hỗ trợ cho những người dùng có thể cần giúp đỡ."
+"Kết nối cho phép bạn kết nối và sử dụng các máy tính để bàn khác. Đây có thể "
+"là một cách tuyệt vời để truy cập nội dung hoặc phần mềm trên một hệ điều "
+"hành máy tính để bàn khác. Nó cũng có thể được sử dụng như một cách để cung "
+"cấp hỗ trợ cho những người dùng có thể cần giúp đỡ."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
-"Một loạt các hệ điều hành khác nhau có thể được kết nối, bao gồm cả máy "
-"tính để bàn Linux và Windows. Bạn cũng có thể kết nối với các máy ảo."
+"Một loạt các hệ điều hành khác nhau có thể được kết nối, bao gồm cả máy tính "
+"để bàn Linux và Windows. Bạn cũng có thể kết nối với các máy ảo."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
@@ -56,7 +56,7 @@ msgstr ""
 "Kết nối sử dụng các giao thức VNC và RDP được hỗ trợ rộng rãi và một trong "
 "số này phải được bật trên máy tính để bàn mà bạn muốn kết nối."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Dự án GNOME"
 
@@ -80,65 +80,65 @@ msgstr "Thuộc tính"
 msgid "translator-credits"
 msgstr "Nhóm Việt hóa Gnome <gnome-vi-list@gnome.org>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr ""
 "Một chương trình điều khiển màn hình từ xa cho môi trường máy tính để bàn "
 "GNOME"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Không thể mở tập tin của kiểu mime chưa biết %s"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Kết nối đến “%s” đã bị xóa bỏ"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Hồi lại"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL để kết nối"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Mở tập tin .vnc hoặc .rdp ở /ĐƯỜNG/DẪN/ đã cho"
 
-#: src/application.vala:231
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Mở toàn màn hình"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr ""
 "Quá nhiều đối số dòng lệnh được đưa ra.\n"
 "\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Hình chụp vào %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Chụp màn hình"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Mở"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” cần xác thực"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Gặp lỗi khi xác thực: %s"
@@ -149,11 +149,11 @@ msgstr "Gặp lỗi khi xác thực: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
 msgstr "Không, cảm ơn"
 
-#: src/onboarding-dialog.vala:88
+#: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Đóng"
 
@@ -177,15 +177,15 @@ msgstr "Kiểu kết nối"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (tiêu chuẩn để kết nối đến Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (tiêu chuẩn để kết nối đến Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Xem trợ giúp"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Kết nối"
 
@@ -201,13 +201,9 @@ msgstr "_Mật mã"
 msgid "Sign In"
 msgstr "Đăng nhập"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
 msgid "Welcome to Connections"
 msgstr "Chào mừng bạn dùng \"Kết nối\""
-
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Chỉ cần bấm vào nút <b>+</b> để tạo kết nối đầu tiên."
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
@@ -258,11 +254,11 @@ msgstr "Muốn có thêm thông tin có thể tìm thấy trong phần trợ gi�
 msgid "Connection preferences"
 msgstr "Tùy thích kết nối"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Địa chỉ"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Tên"
 
@@ -326,53 +322,61 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Hiển thị"
 
-#: src/ui/vnc-preferences.ui:60
+#: src/ui/vnc-preferences.ui:59
 msgid "Scaling"
 msgstr "Tỷ lệ"
 
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Chỉ xem"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Hiển thị con trỏ cục bộ"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "Bật âm thanh"
+
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Băng thông"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Chất lượng cao"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Làm mới nhanh"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Chế độ co giãn"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Vừa khít cửa sổ"
 
-#: src/ui/vnc-preferences.ui:109
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Kích cỡ gốc"
 
-#: src/vnc-connection.vala:123
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Chỉ cần bấm vào nút <b>+</b> để tạo kết nối đầu tiên."
+
+#: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
 msgstr "Không thể phân tích cú pháp tập tin"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Tập tin VNC thiếu khóa “%s”"
