@@ -44,6 +44,13 @@
                   </child>
                 </object>
               </child>
+
+              <child>
+                <object class="ConnectionsBooleanProperty" id="scaling">
+                  <property name="visible">True</property>
+                  <property name="title" translatable="yes">Scaling</property>
+                </object>
+              </child>
             </object>
           </child>
         </object>
