@@ -26,12 +26,15 @@ namespace Connections {
         private unowned Gtk.Entry connection_name_entry;
         [GtkChild]
         private unowned Gtk.Label host_address_label;
+        [GtkChild]
+        private unowned BooleanProperty scaling;
 
         public RdpPreferencesWindow (Connection connection) {
             this.connection = connection;
 
             bind_widget_property (connection_name_entry, "text", "display_name");
             bind_widget_property (host_address_label, "label", "uri");
+            bind_widget_property (scaling, "active", "scaling");
         }
     }
 }
