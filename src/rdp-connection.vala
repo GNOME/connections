@@ -51,11 +51,14 @@ namespace Connections {
 
         public override bool scaling {
             set {
-                //display.set_scaling (value);
+                display.set_scaling (value);
             }
 
             get {
-                return true;
+                if (!connected)
+                    return false;
+
+                return display.scaling;
             }
         }
 
