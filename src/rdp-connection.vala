@@ -110,6 +110,8 @@ namespace Connections {
             display.open_host (host, port);
             connected = true;
             scaling = true;
+
+            display.grab_focus ();
         }
 
         public override void disconnect_it () {
