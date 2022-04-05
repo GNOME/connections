@@ -56,7 +56,7 @@ namespace Connections {
 
             get {
                 if (!connected)
-                    return false;
+                    return true;
 
                 return display.scaling;
             }
@@ -109,6 +109,7 @@ namespace Connections {
 
             display.open_host (host, port);
             connected = true;
+            scaling = true;
         }
 
         public override void disconnect_it () {
