@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.20"/>
-    <template class="ConnectionsWindow" parent="HdyApplicationWindow">
+    <template class="ConnectionsWindow" parent="GtkApplicationWindow">
       <property name="title" translatable="yes">Connections</property>
       <property name="resizable">True</property>
       <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
       <signal name="delete-event" handler="on_delete_event"/>
+
+      <child type="titlebar">
+        <object class="ConnectionsTopbar" id="topbar">
+          <property name="visible">True</property>
+        </object>
+      </child>
 
       <child>
         <object class="GtkBox">
           <property name="visible">True</property>
           <property name="orientation">vertical</property>
   
-          <child>
-            <object class="ConnectionsTopbar" id="topbar">
-              <property name="visible">True</property>
-            </object>
-          </child>
           
           <child>
             <object class="GtkSearchBar" id="search_bar">
