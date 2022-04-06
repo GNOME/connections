@@ -123,7 +123,7 @@ namespace Connections {
 
             notification_timeout_id = Timeout.add_seconds (timeout, () => {
                 notification_timeout_id = 0;
-                dismissed ();
+                dismiss ();
                 return Source.REMOVE;
             });
 
