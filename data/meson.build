@@ -20,8 +20,14 @@ if desktop_utils.found()
   )
 endif
 
+appstream_conf = configuration_data()
+appstream_conf.set('app-id', application_id)
 appstream_file = i18n.merge_file(
-  input: 'org.gnome.Connections.appdata.xml.in',
+  input: configure_file(
+    input: 'org.gnome.Connections.appdata.xml.in',
+    output: 'org.gnome.Connections.appdata.xml.in',
+    configuration: appstream_conf
+  ),
   output: '@0@.appdata.xml'.format(application_id),
   po_dir: '../po',
   install: true,

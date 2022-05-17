@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2020 Red Hat, Inc -->
 <component type="desktop">
-  <id>org.gnome.Connections.desktop</id>
+  <id>@app-id@.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Connections</name>
