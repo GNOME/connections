@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2022-07-07 11:41+0000\n"
+"PO-Revision-Date: 2022-07-17 20:07+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: \n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+msgid "Connections"
+msgstr "კავშირები"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "ნახეთ და გამოიყენეთ სხვა სამუშაო მაგიდები"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+
+#: data/org.gnome.Connections.appdata.xml.in:43
+msgid "The GNOME Project"
+msgstr "პროექტი „GNOME“"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;remote;desktop;windows;support;access;view"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Remote Desktop (VNC) ფაილი"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "წაშლა"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "პარამეტრები"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr "თემური დოღონაძე"
+
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "RDP-ის კლიენტი GNOME-ისთვის"
+
+#: src/application.vala:151
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "უცნობი mime-type-ის მქონე ფაილის გახსნა შეუძლებელია: %s"
+
+#: src/application.vala:182
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "შეერთება %s-სთან წაიშალა"
+
+#: src/application.vala:185
+msgid "Undo"
+msgstr "დაბრუნება"
+
+#: src/application.vala:232
+msgid "URL to connect"
+msgstr "დასაკავშირებელი URL"
+
+#: src/application.vala:233
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr ".vnc ან .rdp ფაილის გახსნა მითითებული ბილიკიდან"
+
+#: src/application.vala:234
+msgid "Open in full screen"
+msgstr "მთელ ეკრანზე გახსნა"
+
+#: src/application.vala:257
+msgid "Too many command-line arguments specified.\n"
+msgstr "მითითებულია მეტისმეტად ბევრი ბრძანების სტრიქონის არგუმენტი.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:70
+#, c-format
+msgid "Screenshot from %s"
+msgstr "ეკრანის ანაბეჭდი %s-დან"
+
+#: src/connection.vala:85
+msgid "Screenshot taken"
+msgstr "ეკრანის ანაბეჭდი აღებულია"
+
+#. Translators: Open is a verb
+#: src/connection.vala:88
+msgid "Open"
+msgstr "გახსნა"
+
+#: src/connection.vala:161
+#, c-format
+msgid "“%s” requires authentication"
+msgstr "%s-ს სჭირდება ავთენტიკაცია"
+
+#: src/connection.vala:200
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "ავთენტიკაციის შეცდომა: %s"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:141
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
+msgid "No Thanks"
+msgstr "არა, მადლობა"
+
+#: src/onboarding-dialog.vala:86
+msgid "Close"
+msgstr "დახურვა"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "ეკრანის ანაბეჭდის გადაღება"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "მთელ ეკრანზე"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr ""
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "შეერთების ტიპი"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (სტანდარტულად, Windows-სთვის)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (სტანდარტულად, Linux-სთვის)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "დახმარება"
+
+#: src/ui/assistant.ui:100
+msgid "Connect"
+msgstr "დაკავშირება"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_მომხმარებელი"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "პაროლი"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "შესვლა"
+
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+msgid "Welcome to Connections"
+msgstr "კეთილი იყოს თქვენი მობრძანება Connections-ში"
+
+#: src/ui/onboarding-dialog.ui:42
+msgid "Learn about how Connections works."
+msgstr "შეიტყვეთ, როგორ მუშაობს Connections."
+
+#: src/ui/onboarding-dialog.ui:49
+msgid "Use other desktops, remotely"
+msgstr "გამოიყენეთ სხვა სამუშაო მაგიდები, დაშორებულად"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:57
+msgid "Connect to different operating systems"
+msgstr "დაუკავშირდით სხვადასხვა ოპერაციულ სისტემებს"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:65
+msgid "Enable remote desktop before connecting"
+msgstr "მიერთებამდე საჭიროა RDP_ის ჩართვა"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:73
+msgid "We hope that you enjoy Connections!"
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "More information can be found in the help."
+msgstr ""
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Connection -ის მორგება"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
+msgid "Address"
+msgstr "მისამართი"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "სახელი"
+
+#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "მასშტაბირება"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "ახალი"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "აპლიკაციების მენიუ"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "ძებნა"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "უკან დაბრუნება"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "მენიუს ჩვენება"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "გათიშვა"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "კლავიატურის მალსახმობები"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "კლავიატურის მალსახმობები"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Connections-ის შესახებ"
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "ჩვენება"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "View only"
+msgstr "მხოლოდ ნახვა"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Show local pointer"
+msgstr "ლოკალური კურსორის ჩვენება"
+
+#: src/ui/vnc-preferences.ui:80
+msgid "Enable audio"
+msgstr "აუდიოს ჩართვა"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "Bandwidth"
+msgstr "გამტარობა"
+
+#: src/ui/vnc-preferences.ui:95
+msgid "High quality"
+msgstr "მაღალი ხარისხი"
+
+#: src/ui/vnc-preferences.ui:96
+msgid "Fast refresh"
+msgstr "სწრაფი განახლება"
+
+#: src/ui/vnc-preferences.ui:107
+msgid "Scale mode"
+msgstr "გადიდების რეჟიმი"
+
+#: src/ui/vnc-preferences.ui:114
+msgid "Fit window"
+msgstr "ფანჯარაში ჩატევა"
+
+#: src/ui/vnc-preferences.ui:115
+msgid "Original size"
+msgstr "საწყისი ზომა"
+
+#: src/ui/window.ui:53
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr ""
+
+#: src/vnc-connection.vala:148
+msgid "Couldn’t parse the file"
+msgstr "ფაილის დამუშავების შეცდომა"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
+#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC ფაილს აკლია გასაღები \"%s\""
