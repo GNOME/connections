@@ -6,7 +6,6 @@ stages:
 - fedora
 
 flatpak:
-    image: registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master
     needs: []
     variables:
         MANIFEST_PATH: "build-aux/flatpak/org.gnome.Connections.json"
