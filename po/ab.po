@@ -1,20 +1,14 @@
-# Copyright (C) 2022 The Abkhazian language development fund named after Bagrat Shinkuba
-# This file is distributed under the same license as the connections package.
-# Нанба Наала <naala-nanba@rambler.ru>, 2022.
-#
-
 msgid ""
 msgstr ""
-"Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2022-07-17 18:08+0000\n"
-"PO-Revision-Date: 2022-07-22 16:00+0000\n"
 "Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
-"Language-Team: Abkhazian <LL@li.org>\n"
+"Language-Team: Abkhazian <ab@li.org>\n"
 "Language: ab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -48,7 +42,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
-msgstr ""
+msgstr "The GNOME Project"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
@@ -60,7 +54,7 @@ msgstr ""
 
 #: src/actions-popover.vala:44
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
@@ -68,7 +62,7 @@ msgstr ""
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr ""
+msgstr "Нанба Наала <naala-nanba@rambler.ru>, 2022"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -86,7 +80,7 @@ msgstr ""
 
 #: src/application.vala:185
 msgid "Undo"
-msgstr ""
+msgstr "Архынҳәра"
 
 #: src/application.vala:232
 msgid "URL to connect"
@@ -129,7 +123,9 @@ msgstr ""
 msgid "Authentication failed: %s"
 msgstr ""
 
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:141
+#, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
@@ -233,7 +229,7 @@ msgstr ""
 msgid "Connection preferences"
 msgstr ""
 
-#: src/ui/rdp-preferences.ui:22+src/ui/vnc-preferences.ui:22
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Аҭыӡҭыԥ"
 
