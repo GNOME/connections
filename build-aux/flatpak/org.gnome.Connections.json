@@ -62,15 +62,15 @@
                 "-DCMAKE_INSTALL_LIBDIR=lib",
                 "-DWITH_WAYLAND:BOOL=ON",
                 "-DCHANNEL_TSMF:BOOL=ON",
-                "-DWITH_FFMPEG:BOOL=ON",
+                "-DWITH_FFMPEG:BOOL=OFF",
                 "-DWITH_MANPAGES:BOOL=OFF",
                 "-DWITH_SERVER:BOOL=OFF"
             ],
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://pub.freerdp.com/releases/freerdp-2.4.0.tar.gz",
-                    "sha256" : "10ec9b06d74182b354ae288c8e621d94c0fb189b0c3b14a59867ab4c414c08b5"
+                    "url" : "https://pub.freerdp.com/releases/freerdp-2.8.0.tar.gz",
+                    "sha256" : "fd26a41c367ea1f23a06716725d19efa41fd572c4536348d39b3465b116b3703"
                 }
             ]
         },
