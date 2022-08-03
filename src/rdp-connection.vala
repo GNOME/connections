@@ -71,7 +71,7 @@ namespace Connections {
             display.bind_property ("password", this, "password", BindingFlags.BIDIRECTIONAL);
 
             display.rdp_error.connect (on_rdp_connection_error_cb);
-            display.rdp_connected.connect (() => { show (); });
+            display.rdp_connected.connect (on_rdp_connection_connected_cb);
             //display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_auth_failure.connect (auth_failed);
             //display.size_allocate.connect (scale);
@@ -108,10 +108,6 @@ namespace Connections {
             }
 
             display.open_host (host, port);
-            connected = true;
-            scaling = true;
-
-            display.grab_focus ();
         }
 
         public override void disconnect_it () {
@@ -139,6 +135,14 @@ namespace Connections {
             username = password = null;
 
             on_connection_error_cb (reason);
+        }
+
+        private void on_rdp_connection_connected_cb () {
+            connected = true;
+            scaling = true;
+
+            display.grab_focus ();
+            show ();
         }
     }
 
