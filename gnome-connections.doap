@@ -19,7 +19,7 @@
   <maintainer>
     <foaf:Person>
       <foaf:name>Marek Kašík</foaf:name>
-      <foaf:mbxo rdf:resource="mailto:mkasik@gnome.org" />
+      <foaf:mbxo rdf:resource="mailto:mkasik@redhat.com" />
       <gnome:userid>mkasik</gnome:userid>
     </foaf:Person>
   </maintainer>
