@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-06 21:25+0000\n"
-"PO-Revision-Date: 2021-11-12 12:41+0100\n"
+"POT-Creation-Date: 2022-07-17 18:08+0000\n"
+"PO-Revision-Date: 2022-08-17 14:01+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -36,18 +36,18 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
-"Povezivanja vam omogućuje povezivanje i korištenje drugih radnih površina. "
-"To može biti sjajan način za pristup sadržaju ili softveru na radnoj "
-"površini drugog operativnog sustava. Još se može koristiti kao način podrške "
-"korisniku kojem je potrebna pomoć."
+"Povezivanja vam omogućuje povezivanje s drugim radnim površinama i njihovo "
+"korištenje. To može biti sjajan način za pristup sadržaju ili softveru na "
+"radnoj površini drugog operativnog sustava. Još se može koristiti kao način "
+"podrške korisniku kojemu je potrebna pomoć."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
-"Raspon različitih operativnih sustava se može povezati, ukljućujući Linux i "
-"Windows radna okruženja. Možete se povezati i na virtualne strojeve."
+"Povežite se na više različitih operativnih sustava, ukljućujući Linux i "
+"Windows radna okruženja. Možete se povezati i na virtualna računala."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
@@ -57,7 +57,7 @@ msgstr ""
 "Povezivanja koriste široko podržane VNC i RDP protokole, jedan od tih "
 "protokola mora biti omogućen na radnoj površini s kojom se povezujete."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "GNOME projekt"
 
@@ -83,7 +83,7 @@ msgstr ""
 "Launchpad Contributions:\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Klijent udaljene površine za GNOME radno okruženje"
 
@@ -92,52 +92,52 @@ msgstr "Klijent udaljene površine za GNOME radno okruženje"
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nemoguće otvaranje datoteke nepoznate mime vrste %s"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Povezivanje s “%s” je obrisano"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Vrati"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL za povezivanje"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Otvori .vnc ili .rdp datoteku na zadanoj PUTANJI"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Otvori u cijelom zaslonu"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Previše argumenata naredbenog redka je navedeno.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Slika zaslona od %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Uslikaj zaslon"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Otvori"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” zahtijeva ovjeru"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Neuspjela ovjera: %s"
@@ -254,13 +254,17 @@ msgstr "Više informacija se može pronaći u priručniku."
 msgid "Connection preferences"
 msgstr "Osobitosti povezivanja"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Adresa"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Naziv"
+
+#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Promjena veličine"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -322,47 +326,43 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Prikaz"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "Promjena veličine"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Samo gledaj"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Prikaži lokalni pokazivač"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:80
 msgid "Enable audio"
 msgstr "Omogući zvuk"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Propusnost"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Visoka kvaliteta"
 
-#: src/ui/vnc-preferences.ui:97
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Brzo osvježavanje"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Način promjene veličine"
 
-#: src/ui/vnc-preferences.ui:115
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Prilagodba na prozor"
 
-#: src/ui/vnc-preferences.ui:116
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Izvorna veličina"
 
