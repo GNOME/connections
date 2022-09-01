@@ -1,38 +1,38 @@
 # Turkish translation for gnome-connections.
-# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
+# Copyright (C) 2021-2022 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Sabri Ünal <libreajans@gmail.com>, 2021.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2021.
+# Sabri Ünal <libreajans@gmail.com>, 2021, 2022.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"POT-Creation-Date: 2021-02-17 14:36+0000\n"
-"PO-Revision-Date: 2021-03-07 12:39+0300\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"POT-Creation-Date: 2022-03-21 12:15+0000\n"
+"PO-Revision-Date: 2022-04-24 22:50+0300\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Sabri Ünal <libreajans@gmail.com>, 2021.\n"
-"Emin Tufan Çetin <etcetin@gmail.com>, 2021."
+"Sabri Ünal <libreajans@gmail.com>, 2021, 2022.\n"
+"Emin Tufan Çetin <etcetin@gmail.com>, 2021, 2022."
 
 #. (itstool) path: credit/name
-#: C/connect.page:9 C/index.page:14
+#: C/connect.page:9 C/index.page:13
 msgid "Felipe Borges"
 msgstr "Felipe Borges"
 
 #. (itstool) path: credit/years
-#: C/connect.page:11 C/index.page:16
+#: C/connect.page:11 C/index.page:15
 msgid "2020"
 msgstr "2020"
 
@@ -115,23 +115,36 @@ msgstr "<gui style=\"button\">Oluştur</gui>ʼa tıklayın."
 msgid "The remote machine will open in the collection view."
 msgstr "Uzak makine, koleksiyon görünümünde açılacaktır."
 
-#. (itstool) path: media/span
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Bağlantılar"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Bağlantılar"
+
+#. (itstool) path: info/title
 #: C/index.page:9
+msgctxt "text"
 msgid "Connections"
 msgstr "Bağlantılar"
 
 #. (itstool) path: info/desc
-#: C/index.page:21
+#: C/index.page:20
 msgid "Learn to connect to remote machines."
 msgstr "Uzak makinelere bağlanmayı öğren."
 
 #. (itstool) path: page/title
-#: C/index.page:24
+#: C/index.page:23
 msgid "<_:media-1/> Connections"
 msgstr "<_:media-1/> Bağlantılar"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:28
 msgid ""
 "<app>Connections</app> is a remote desktop client for the GNOME desktop "
 "environment."
@@ -140,7 +153,7 @@ msgstr ""
 "istemcisidir."
 
 #. (itstool) path: section/title
-#: C/index.page:32
+#: C/index.page:31
 msgid "Getting started"
 msgstr "Başlangıç"
 
