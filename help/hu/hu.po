@@ -1,21 +1,21 @@
 # Hungarian translation for gnome-connections.
-# Copyright (C) 2021 Free Software Foundation, Inc.
+# Copyright (C) 2021, 2022 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-connections package.
 #
 # Balázs Meskó <mesko.balazs at fsf dot hu>, 2021.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2021.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
-"POT-Creation-Date: 2021-02-17 14:36+0000\n"
-"PO-Revision-Date: 2021-02-26 00:53+0100\n"
-"Language-Team: Hungarian <gnome-hu-list@gnome.org>\n"
+"POT-Creation-Date: 2022-03-18 21:35+0000\n"
+"PO-Revision-Date: 2022-09-03 00:11+0200\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
+"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Balázs Meskó <mesko.balazs at fsf dot hu>\n"
 "X-Generator: Lokalize 19.12.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -24,12 +24,12 @@ msgid "translator-credits"
 msgstr "Meskó Balázs <mesko dot balazs at fsf dot hu>, 2021."
 
 #. (itstool) path: credit/name
-#: C/connect.page:9 C/index.page:14
+#: C/connect.page:9 C/index.page:13
 msgid "Felipe Borges"
 msgstr "Felipe Borges"
 
 #. (itstool) path: credit/years
-#: C/connect.page:11 C/index.page:16
+#: C/connect.page:11 C/index.page:15
 msgid "2020"
 msgstr "2020"
 
@@ -47,8 +47,8 @@ msgstr "Kapcsolódás egy másik számítógéphez"
 #: C/connect.page:22
 msgid "<app>Connections</app> can be used to view and access a remote machine."
 msgstr ""
-"A <app>Kapcsolatok</app> távoli gépek megtekintéséhez és eléréséhez"
-" használható."
+"A <app>Kapcsolatok</app> távoli gépek megtekintéséhez és eléréséhez "
+"használható."
 
 #. (itstool) path: note/p
 #: C/connect.page:25
@@ -70,8 +70,8 @@ msgid ""
 "Enter a URL containing the protocol, IP address and port number of the "
 "remote device or service. For example:"
 msgstr ""
-"Adjon meg egy URL-t, amely tartalmazza a távoli gép vagy szolgáltatás"
-" protokollját, IP-címét és portszámát. Például:"
+"Adjon meg egy URL-t, amely tartalmazza a távoli gép vagy szolgáltatás "
+"protokollját, IP-címét és portszámát. Például:"
 
 #. (itstool) path: item/code
 #: C/connect.page:34
@@ -102,8 +102,8 @@ msgid ""
 "The address and port number should be available from the configuration of "
 "the device or service on the remote machine."
 msgstr ""
-"A címnek és a portszámnak elérhetőnek kell lennie az eszköz konfigurációjából"
-" vagy a távoli gépen lévő szolgáltatásból."
+"A címnek és a portszámnak elérhetőnek kell lennie az eszköz "
+"konfigurációjából vagy a távoli gépen lévő szolgáltatásból."
 
 #. (itstool) path: item/p
 #: C/connect.page:46
@@ -115,23 +115,39 @@ msgstr "Kattintson a <gui style=\"button\">Létrehozás</gui> gombra."
 msgid "The remote machine will open in the collection view."
 msgstr "A távoli gép megnyílik a gyűjteménynézetben."
 
-#. (itstool) path: media/span
+#. (itstool) path: info/title
+#: C/index.page:7
+#| msgid "Connections"
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Kapcsolatok"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+#| msgid "Connections"
+msgctxt "link"
+msgid "Connections"
+msgstr "Kapcsolatok"
+
+#. (itstool) path: info/title
 #: C/index.page:9
+#| msgid "Connections"
+msgctxt "text"
 msgid "Connections"
 msgstr "Kapcsolatok"
 
 #. (itstool) path: info/desc
-#: C/index.page:21
+#: C/index.page:20
 msgid "Learn to connect to remote machines."
 msgstr "Tudja meg, hogyan kapcsolódjon távoli gépekhez."
 
 #. (itstool) path: page/title
-#: C/index.page:24
+#: C/index.page:23
 msgid "<_:media-1/> Connections"
 msgstr "<_:media-1/> Kapcsolatok"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:28
 msgid ""
 "<app>Connections</app> is a remote desktop client for the GNOME desktop "
 "environment."
@@ -140,7 +156,7 @@ msgstr ""
 "környezethez."
 
 #. (itstool) path: section/title
-#: C/index.page:32
+#: C/index.page:31
 msgid "Getting started"
 msgstr "Kezdeti lépések"
 
