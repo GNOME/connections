@@ -1,5 +1,5 @@
 project('gnome-connections', ['c', 'vala'],
-          version: '43.beta',
+          version: '43.0',
     meson_version: '>= 0.50.0',
   default_options: [ 'warning_level=2',
                    ],
