@@ -1,14 +1,15 @@
-# Turkish translation for gnome-connections.
-# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-connections package.
+# Turkish translation for connections.
+# Copyright (C) 2020-2022 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+#
 # Emin Tufan Çetin <etcetin@gmail.com>, 2020-2021.
 # Burhan Keleş <klsburhan@hotmail.com>, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-29 09:20+0000\n"
+"POT-Creation-Date: 2022-09-16 15:00+0000\n"
 "PO-Revision-Date: 2022-02-10 19:35+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
@@ -57,7 +58,7 @@ msgstr ""
 "kullanır, bu iletişim kurallarından biri bağlanmak istediğiniz bilgisayarda "
 "etkinleştirilmelidir."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
@@ -259,6 +260,10 @@ msgstr "Adres"
 msgid "Name"
 msgstr "Ad"
 
+#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Ölçek"
+
 #: src/ui/topbar.ui:21
 msgid "New"
 msgstr "Yeni"
@@ -323,10 +328,6 @@ msgstr "Ctrl + Alt + F7"
 msgid "Display"
 msgstr "Ekran"
 
-#: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Ölçek"
-
 #: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Yalnızca görüntüle"
@@ -377,58 +378,3 @@ msgstr "Dosya ayrıştırılamadı"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC dosyasının “%s” anahtarı eksik"
-
-#~ msgid "Learn more."
-#~ msgstr "Daha fazlasını öğrenin."
-
-#~ msgid "Read our tutorial to learn how."
-#~ msgstr "Nasıl olduğunu öğrenmek için eğitim bölümümüzü okuyun."
-
-#~ msgid "Connect to a Desktop"
-#~ msgstr "Bir masaüstüne bağlan"
-
-#~ msgid "Addresses start with either vnc:// or rdp://."
-#~ msgstr "Adresler ya vnc:// ya da rdp:// ile başlar."
-
-#~ msgid "Connections makes it easy to use other desktops remotely."
-#~ msgstr "Bağlantılar diğer masaüstlerini uzaktan kullanmanızı kolaylaştırır."
-
-#~ msgid "Connect to Linux or Windows"
-#~ msgstr "Linux veya Windows'a bağlan"
-
-#~ msgid "Remotely access a range of desktop operating systems."
-#~ msgstr "Bir dizi masaüstü işletim sistemine uzaktan erişin."
-
-#~ msgid "Configure for Access"
-#~ msgstr "Erişim için yapılandır"
-
-#~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr "Bir masaüstüne bağlanmak için önce masaüstünün kurulması gerekir."
-
-#~ msgid "GNOME Connections"
-#~ msgstr "GNOME Bağlantılar"
-
-#~ msgid "A remote desktop client for the GNOME desktop environment."
-#~ msgstr "GNOME masaüstü ortamı için uzak masaüstü istemcisi."
-
-#~ msgid "Create a New Connection"
-#~ msgstr "Yeni Bağlantı Oluştur"
-
-#~ msgid ""
-#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
-#~ "vnc://"
-#~ msgstr ""
-#~ "Bağlanılacak makine adresini gir. Adres, rdp:// veya vnc:// ile "
-#~ "başlayabilir"
-
-#~ msgid "Server"
-#~ msgstr "Sunucu"
-
-#~ msgid "Cancel"
-#~ msgstr "İptal Et"
-
-#~ msgid "Create"
-#~ msgstr "Oluştur"
-
-#~ msgid "org.gnome.Connections"
-#~ msgstr "org.gnome.Connections"
