@@ -1,0 +1,169 @@
+# Slovenian translation for connections.
+# Copyright (C) 2022 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections gnome-43\n"
+"POT-Creation-Date: 2022-09-19 12:34+0000\n"
+"PO-Revision-Date: 2022-09-21 11:43+0200\n"
+"Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
+"Language-Team: Slovenščina <gnome-si@googlegroups.com>\n"
+"Language: sl_SI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
+"n%100==4 ? 3 : 0);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Matej Urbančič <mateju@src.gnome.org>"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:13
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:15
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "Povezava z oddaljeno napravo v omrežju."
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "Povezava z drugo napravo"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr ""
+"Program <app>Povezovalnik</app> se uporablja za spremljanje in dostop do "
+"oddaljene naprave."
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "Oddaljena naprava mora biti že ustrezno nastavljena za povezovanje."
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr ""
+"Kliknite na <gui style=\"button\">+</gui> v zgornjem levem kotu okna za "
+"zagon nastavljalnika povezovae."
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr ""
+"Vpišite naslov URL, ki vključuje protokol, naslov IP in vrata za dostop do "
+"oddaljene naprave. Na primer:"
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "Protokol je lahko:"
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "rdp:// za povezave z oddaljenim strežnikom <app>RDP</app>."
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr ""
+"vnc:// za povezave z oddaljenim strežnikom <app>vino</app> oziroma <app>VNC</"
+"app>."
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr ""
+"Naslov URL in številka vrat sta na voljo med nastavitvami naprave oziroma "
+"storitve oddaljene naprave."
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "Kliknite <gui style=\"button\">Ustvari</gui>."
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "Dostop do oddaljene naprave bo na voljo v zbirnem pogledu."
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "Povezovalnik"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "Povezovalnik"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Connections"
+msgstr "Povezovalnik"
+
+#. (itstool) path: info/desc
+#: C/index.page:20
+msgid "Learn to connect to remote machines."
+msgstr "O povezovanju z oddaljenimi napravami."
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> Povezovalnik"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr ""
+"<app>Povezovalnik</app> je program za povezovanje z oddaljenimi napravami v "
+"okolju GNOME."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Getting started"
+msgstr "Pa začnimo ..."
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "Neprenosljivo dovoljenje Creative Commons Attribution-Share Alike 3.0"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Delo je objavljeno pod pogoji dovoljenja <_:link-1/>."
