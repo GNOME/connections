@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2022-07-07 11:41+0000\n"
-"PO-Revision-Date: 2022-07-17 20:07+0200\n"
+"PO-Revision-Date: 2022-09-24 08:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -35,18 +35,27 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
+"Connection საშუალებას გაძლევთ დაუკავშირდეთ და გამოიყენოთ სხვა სამუშაო "
+"მაგიდები. ეს შეიძლება საუკეთესო საშუალება იყოს სხვა კომპიუტერზე შენახულ "
+"შემცველობასთან ან პროგრამებთან წვდომისთვის. ასევე სხვა მომხმარებლების "
+"დასახმარებლადაც შეგიძლიათ გამოიყენოთ."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
+"შეგიძლიათ დაუკავშირდეთ სხვადასხვა ოპერაციულ სისტემებს, Linux-ის და Windows-"
+"ის სამუშაო სადგურების ჩათვლით. ასევე შეგიძლიათ მიუერთდეთ ვირტუალურ "
+"მანქანებსაც."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
+"Connections ფართოდ გამოყენებულ VNC და RDP პროტოკოლებს იყენებს და სამუშაო "
+"მაგიდაზე, რომელსაც უერთდებით, ერთ-ერთი მათგანი მაინც უნდა იყოს ჩართული."
 
 #: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
@@ -156,6 +165,8 @@ msgstr "მთელ ეკრანზე"
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr ""
+"შეიყვანეთ სამუშაო მაგიდის, რომელთან მიერთებაც გნებავთ, ქსელური "
+"იდენტიფიკატორი:"
 
 #: src/ui/assistant.ui:53
 msgid "Connection Type"
@@ -206,6 +217,8 @@ msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
+"გამოიყენეთ Connections სხვა სამუშაო მაგიდების სანახავად. ასევე შესაძლებელია "
+"მათი მართვაც, თაგუნათი და კლავიატურით!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -213,7 +226,7 @@ msgstr "დაუკავშირდით სხვადასხვა ო�
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
+msgstr "მიუერთდით Linux-ს, Mac-ს და Windows-ს Connections-ის საშუალებით."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
@@ -224,14 +237,16 @@ msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
+"სანამ მიუერთდებით, შესაბამის კომპიუტერზე remote desktop -ის ჩართვა "
+"აუცილებელია."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
-msgstr ""
+msgstr "იმედია, მოგწონთ Connections!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
-msgstr ""
+msgstr "მეტი ინფორმაცია სახელმძღვანელოში შეგიძლიათ იხილოთ."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -351,7 +366,7 @@ msgstr "საწყისი ზომა"
 
 #: src/ui/window.ui:53
 msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
+msgstr "პირველი შეერთების დასამატებლად უბრალოდ დააწექით <b>+</b> ღილაკს."
 
 #: src/vnc-connection.vala:148
 msgid "Couldn’t parse the file"
