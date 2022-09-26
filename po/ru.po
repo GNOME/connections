@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-06 21:25+0000\n"
-"PO-Revision-Date: 2021-11-14 22:13+0300\n"
-"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
+"POT-Creation-Date: 2022-09-19 13:12+0000\n"
+"PO-Revision-Date: 2022-09-20 14:24+0300\n"
+"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -58,9 +58,9 @@ msgstr ""
 "Подключения использует широко поддерживаемые протоколы VNC и RDP, и один из "
 "них должен быть включен на рабочем столе, к которому вы хотите подключиться."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
-msgstr "Проект GNOME"
+msgstr "The GNOME Project"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
@@ -86,7 +86,7 @@ msgstr ""
 "Alexey Rubtsov <rushills@gmail.com>, 2021\n"
 "Aleksandr Melman <Alexmelman88@gmail.com>, 2021"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Клиент удаленного рабочего стола для среды рабочего стола GNOME"
 
@@ -95,52 +95,52 @@ msgstr "Клиент удаленного рабочего стола для с�
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Не удалось открыть файл неизвестного mime-типа %s"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Соединение с «%s» было удалено"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Отменить"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL для подключения"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Открыть файл .vnc или .rdp в указанном Пути"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
-msgstr "Полноэкранный режим"
+msgstr "Открыть в полноэкранном режиме"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Указано слишком много аргументов командной строки.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Снимок экрана от %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
-msgstr "Сделан скриншот"
+msgstr "Сделан снимок экрана"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Открыть"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» требует аутентификации"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Аутентификация не прошла: %s"
@@ -161,7 +161,7 @@ msgstr "Закрыть"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
-msgstr "Сделать скриншот"
+msgstr "Сделать снимок экрана"
 
 #: src/topbar.vala:62 src/ui/topbar.ui:216
 msgid "Fullscreen"
@@ -251,23 +251,27 @@ msgstr "Мы надеемся, что Подключения вам понрав
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
-msgstr "Вы сможете найти подробную информацию в Справке"
+msgstr "Вы сможете найти подробную информацию в справке."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
 msgstr "Настройки подключения"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Адрес"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Имя"
 
+#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
+msgid "Scaling"
+msgstr "Масштабирование"
+
 #: src/ui/topbar.ui:21
 msgid "New"
-msgstr "Новый"
+msgstr "Новое"
 
 #: src/ui/topbar.ui:42
 msgid "Application Menu"
@@ -283,7 +287,7 @@ msgstr "Назад"
 
 #: src/ui/topbar.ui:125
 msgid "Display Menu"
-msgstr "Отображение меню"
+msgstr "Меню дисплея"
 
 #: src/ui/topbar.ui:149
 msgid "Disconnect"
@@ -325,47 +329,43 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Дисплей"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "Масштабирование"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Только просмотр"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
 msgstr "Показать локальный указатель"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:80
 msgid "Enable audio"
 msgstr "Включить звук"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
 msgstr "Полоса пропускания"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:95
 msgid "High quality"
 msgstr "Высокое качество"
 
-#: src/ui/vnc-preferences.ui:97
+#: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
 msgstr "Быстрое обновление"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
 msgstr "Режим масштабирования"
 
-#: src/ui/vnc-preferences.ui:115
+#: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
 msgstr "Подходящее окно"
 
-#: src/ui/vnc-preferences.ui:116
+#: src/ui/vnc-preferences.ui:115
 msgid "Original size"
 msgstr "Исходный размер"
 
