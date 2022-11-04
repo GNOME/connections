@@ -35,7 +35,7 @@ connections_deps = [
   dependency ('libsecret-1'),
 ]
 
-gtk_frdp_dep = dependency('gtk-frdp-0.1', required: false)
+gtk_frdp_dep = dependency('gtk-frdp-0.2', required: false)
 
 if gtk_frdp_dep.found()
   connections_deps += gtk_frdp_dep
