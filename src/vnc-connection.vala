@@ -106,6 +106,7 @@ namespace Connections {
             display.set_keyboard_grab (true);
             display.set_pointer_grab (true);
             display.set_force_size (false);
+            display.set_keep_aspect_ratio (true);
 
             dispose_display ();
 
