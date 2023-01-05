@@ -15,7 +15,7 @@ msgstr ""
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
 #: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
 msgid "Connections"
-msgstr ""
+msgstr "Аҿакрақәа"
 
 #: data/org.gnome.Connections.appdata.xml.in:8
 msgid "View and use other desktops"
@@ -108,6 +108,8 @@ msgstr ""
 #: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr ""
+"Иаразнактәи аекран\n"
+"аҭыхра "
 
 #. Translators: Open is a verb
 #: src/connection.vala:88
@@ -132,7 +134,7 @@ msgstr "%d×%d"
 
 #: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
 msgid "No Thanks"
-msgstr ""
+msgstr "Мап, иҭабуп"
 
 #: src/onboarding-dialog.vala:86
 msgid "Close"
@@ -264,7 +266,7 @@ msgstr "Адисплеи амениу"
 
 #: src/ui/topbar.ui:149
 msgid "Disconnect"
-msgstr "Аҿыхра"
+msgstr "Аҽаҿыхра"
 
 #: src/ui/topbar.ui:174
 msgid "Keyboard shortcuts"
@@ -304,15 +306,15 @@ msgstr "Ctrl + Alt + F7"
 
 #: src/ui/vnc-preferences.ui:54
 msgid "Display"
-msgstr "Аԥшра"
+msgstr "Адисплеи"
 
 #: src/ui/vnc-preferences.ui:66
 msgid "View only"
-msgstr ""
+msgstr "Ахәаҧшра амацара"
 
 #: src/ui/vnc-preferences.ui:73
 msgid "Show local pointer"
-msgstr ""
+msgstr "Илокалу арбага арбара"
 
 #: src/ui/vnc-preferences.ui:80
 msgid "Enable audio"
@@ -320,11 +322,11 @@ msgstr "Абжьы аҿакра"
 
 #: src/ui/vnc-preferences.ui:88
 msgid "Bandwidth"
-msgstr ""
+msgstr "Анашьҭра ацәаҳәа"
 
 #: src/ui/vnc-preferences.ui:95
 msgid "High quality"
-msgstr ""
+msgstr "Иҳараку ахаҭабзиара"
 
 #: src/ui/vnc-preferences.ui:96
 msgid "Fast refresh"
@@ -332,15 +334,15 @@ msgstr "Иаарласны арҿыцра"
 
 #: src/ui/vnc-preferences.ui:107
 msgid "Scale mode"
-msgstr ""
+msgstr "Амасштабркра арежим"
 
 #: src/ui/vnc-preferences.ui:114
 msgid "Fit window"
-msgstr ""
+msgstr "Ианаала аҧенџьыр"
 
 #: src/ui/vnc-preferences.ui:115
 msgid "Original size"
-msgstr ""
+msgstr "Ахалагаратә ашәагаа"
 
 #: src/ui/window.ui:53
 msgid "Just hit the <b>+</b> button to make your first connection."
