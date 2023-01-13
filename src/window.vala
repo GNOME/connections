@@ -53,6 +53,7 @@ namespace Connections {
         public Window (Gtk.Application app) {
             Object (application: app);
 
+            empty_view.icon_name = "%s-symbolic".printf (app.application_id);
             stack.set_visible_child (empty_view);
 
             bind_model (Application.application.model);
