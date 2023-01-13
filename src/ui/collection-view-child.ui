@@ -8,7 +8,6 @@
       <child>
         <object class="GtkImage" id="thumbnail">
           <property name="visible">True</property>
-          <property name="icon-name">org.gnome.Connections-symbolic</property>
           <property name="pixel-size">24</property>
           <property name="halign">fill</property>
           <property name="margin">10</property>

@@ -29,6 +29,11 @@ namespace Connections {
 
         [GtkChild]
         public unowned Gtk.Image thumbnail; 
+        private string default_thumbnail_icon {
+            owned get {
+                return ("%s-symbolic").printf (Application.application.application_id);
+            }
+        }
 
         private uint thumbnail_id = 0;
 
@@ -38,6 +43,7 @@ namespace Connections {
             update_display_name ();
             connection.notify["display-name"].connect (update_display_name);
 
+            thumbnail.icon_name = default_thumbnail_icon;
             connection.show.connect (update_thumbnail);
         }
 
@@ -50,7 +56,7 @@ namespace Connections {
                 thumbnail_id = 0;
 
                 if (!connection.connected) {
-                    thumbnail.set_from_icon_name ("org.gnome.Connections-symbolic",
+                    thumbnail.set_from_icon_name (default_thumbnail_icon,
                                                   Gtk.IconSize.LARGE_TOOLBAR);
                     return Source.REMOVE;
                 }
