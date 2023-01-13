@@ -63,7 +63,8 @@ install_data(
 icon_dir = join_paths('icons', 'hicolor', 'symbolic', 'apps')
 install_data(
   join_paths(icon_dir, 'org.gnome.Connections-symbolic.svg'),
-  install_dir: join_paths(get_option('datadir'), icon_dir)
+  install_dir: join_paths(get_option('datadir'), icon_dir),
+  rename: '@0@-symbolic.svg'.format(application_id)
 )
 
 install_data('org.gnome.Connections.gschema.xml',
