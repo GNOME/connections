@@ -1,3 +1,20 @@
+44.beta - 11 Feb, 2023
+=====================
+
+Changes since 43.0
+
+  - Update gtk-frdp
+  - Allow resizing of remote desktops
+  - Use app-id for icon name
+  - Keep aspect ratios of remote desktops
+  - Fix position of cursor for original scale
+  - Switch to master branch of gtk-frdp
+  - Use GNOME module post_install with meson
+  - Added/updated/fixed translations:
+    - Belarusian
+    - French
+    - Russian
+
 43.0 - 16 Sep, 2022
 =====================
 
