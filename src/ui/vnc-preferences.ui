@@ -54,13 +54,6 @@
               <property name="title" translatable="yes">Display</property>
 
               <child>
-                <object class="ConnectionsBooleanProperty" id="scaling">
-                  <property name="visible">True</property>
-                  <property name="title" translatable="yes">Scaling</property>
-                </object>
-              </child>
-
-              <child>
                 <object class="ConnectionsBooleanProperty" id="view_only">
                   <property name="visible">True</property>
                   <property name="title" translatable="yes">View only</property>
@@ -111,6 +104,7 @@
                       <property name="visible">True</property>
                       <property name="valign">center</property>
                       <items>
+                        <item id="resize-desktop" translatable="yes">Resize desktop</item>
                         <item id="fit-window" translatable="yes">Fit window</item>
                         <item id="original" translatable="yes">Original size</item>
                       </items>

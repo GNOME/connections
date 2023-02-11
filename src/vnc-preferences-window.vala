@@ -27,8 +27,6 @@ namespace Connections {
         [GtkChild]
         private unowned Gtk.Label host_address_label;
         [GtkChild]
-        private unowned BooleanProperty scaling;
-        [GtkChild]
         private unowned BooleanProperty view_only;
         [GtkChild]
         private unowned BooleanProperty show_local_pointer;
@@ -44,12 +42,11 @@ namespace Connections {
 
             bind_widget_property (connection_name_entry, "text", "display_name");
             bind_widget_property (host_address_label, "label", "uri");
-            bind_widget_property (scaling, "active", "scaling");
+            bind_widget_property (scale_mode_combo, "active_id", "scale-mode");
             bind_widget_property (view_only, "active", "view-only");
             bind_widget_property (enable_audio, "active", "enable_audio");
             bind_widget_property (show_local_pointer, "active", "show-local-pointer");
             bind_widget_property (bandwidth_combo, "active_id", "bandwidth");
-            bind_widget_property (scale_mode_combo, "active_id", "scale-mode");
         }
     }
 }

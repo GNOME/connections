@@ -274,20 +274,33 @@ namespace Connections {
 
             display.scaling = display.expand = false;
 
-            if (scale_mode == "original")
-                scale_to_original_size ();
-            else
-                scale_to_fit_window ();
+            switch (scale_mode) {
+                case "resize-desktop":
+                    resize_desktop_to_window ();
+                    break;
+                case "fit-window":
+                    scale_to_fit_window ();
+                    break;
+                case "original":
+                    scale_to_original_size ();
+                    break;
+            }
+        }
+
+        private void resize_desktop_to_window () {
+            display.set_allow_resize (true);
         }
 
         private void scale_to_fit_window () {
             display.scaling = display.hexpand = true;
             display.width_request = display.height_request = 0;
+            display.set_allow_resize (false);
         }
 
         private void scale_to_original_size () {
             display.width_request = display.width;
             display.height_request = display.height;
+            display.set_allow_resize (false);
         }
     }
 }
