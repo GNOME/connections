@@ -46,9 +46,13 @@
               </child>
 
               <child>
-                <object class="ConnectionsBooleanProperty" id="scaling">
+                <object class="GtkComboBoxText" id="scale_mode_combo">
                   <property name="visible">True</property>
-                  <property name="title" translatable="yes">Scaling</property>
+                  <property name="valign">center</property>
+                  <items>
+                    <item id="fit-window" translatable="yes">Fit window</item>
+                    <item id="original" translatable="yes">Original size</item>
+                  </items>
                 </object>
               </child>
             </object>

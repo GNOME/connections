@@ -27,14 +27,47 @@ namespace Connections {
         [GtkChild]
         private unowned Gtk.Label host_address_label;
         [GtkChild]
-        private unowned BooleanProperty scaling;
+        private unowned Gtk.ComboBoxText scale_mode_combo;
 
         public RdpPreferencesWindow (Connection connection) {
             this.connection = connection;
 
+            update_scale_mode_combo ();
+
             bind_widget_property (connection_name_entry, "text", "display_name");
             bind_widget_property (host_address_label, "label", "uri");
-            bind_widget_property (scaling, "active", "scaling");
+            bind_widget_property (scale_mode_combo, "active_id", "scale-mode");
+
+            connection.notify["resize-supported"].connect (update_scale_mode_combo);
+        }
+
+        private void update_scale_mode_combo () {
+            if ((((RdpConnection) connection).resize_supported ||
+                 ((RdpConnection) connection).scale_mode == "resize-desktop") &&
+                !combo_contains_item (scale_mode_combo, "resize-desktop")) {
+                // Translators: Combo item for resizing remote desktop to window's size
+                scale_mode_combo.insert (0, "resize-desktop", _("Resize desktop"));
+            }
+        }
+
+        private bool combo_contains_item (Gtk.ComboBoxText combo_box, string item_id) {
+            Gtk.TreeIter iter;
+            string       mode;
+
+            if (scale_mode_combo.model.get_iter_first (out iter)) {
+                scale_mode_combo.model.get (iter, 1, out mode);
+                if (mode == item_id) {
+                    return true;
+                } else {
+                    while (scale_mode_combo.model.iter_next (ref iter)) {
+                        scale_mode_combo.model.get (iter, 1, out mode);
+                        if (mode == item_id)
+                            return true;
+                    }
+                }
+            }
+
+            return false;
         }
     }
 }

@@ -63,6 +63,8 @@ namespace Connections {
         }
 
         public override int port { get; protected set; default = 3389; }
+        public bool resize_supported { get; protected set; default = false; }
+        public string scale_mode { get; set; default = "fit-window"; }
 
         construct {
             display = new FrdpDisplay ();
@@ -74,7 +76,10 @@ namespace Connections {
             display.rdp_connected.connect (on_rdp_connection_connected_cb);
             //display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_auth_failure.connect (auth_failed);
-            //display.size_allocate.connect (scale);
+            display.size_allocate.connect (scale);
+
+            notify["scale-mode"].connect (scale);
+            display.notify["resize-supported"].connect (update_resize_supported);
 
             need_username = need_password = true;
         }
@@ -143,6 +148,43 @@ namespace Connections {
 
             display.grab_focus ();
             show ();
+        }
+
+        public void scale () {
+            if (!display.is_open ())
+                return;
+
+            display.scaling = display.expand = false;
+
+            switch (scale_mode) {
+                case "resize-desktop":
+                    resize_desktop_to_window ();
+                    break;
+                case "fit-window":
+                    scale_to_fit_window ();
+                    break;
+                case "original":
+                    scale_to_original_size ();
+                    break;
+            }
+        }
+
+        private void resize_desktop_to_window () {
+            display.allow_resize = true;
+        }
+
+        private void scale_to_fit_window () {
+            display.scaling = display.hexpand = true;
+            display.width_request = display.height_request = 0;
+            display.allow_resize = false;
+        }
+
+        private void scale_to_original_size () {
+            display.allow_resize = false;
+        }
+
+        private void update_resize_supported () {
+            resize_supported = display.resize_supported;
         }
     }
 
