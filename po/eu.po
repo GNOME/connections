@@ -2,13 +2,13 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2020, 2021, 2022.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-01-30 12:43+0000\n"
-"PO-Revision-Date: 2022-02-13 17:00+0100\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-02-12 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Konexioak"
 
@@ -46,7 +46,7 @@ msgid ""
 "these must be enabled on the desktop that you want to connect to."
 msgstr "Konexioak aplikazioak euskarri zabala duten VNC eta RDP protokoloak erabiltzen ditu. Horietako batek gaituta egon behar du konektatuko den mahaigainean."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
@@ -130,7 +130,7 @@ msgid "Authentication failed: %s"
 msgstr "Autentifikazioak huts egin du: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -187,7 +187,7 @@ msgstr "_Pasahitza"
 msgid "Sign In"
 msgstr "Hasi saioa"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Ongi etorri Konexioak aplikaziora"
 
@@ -242,6 +242,14 @@ msgstr "Helbidea"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Izena"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Doitu leihoa"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Jatorrizko tamaina"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -308,59 +316,54 @@ msgid "Display"
 msgstr "Bistaratzea"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Eskalatzea"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Ikusi soilik"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Erakutsi erakusle lokala"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Gaitu audioa"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Banda-zabalera"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Kalitate altua"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Freskatze azkarra"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Eskalatze-modua"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Doitu leihoa"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Aldatu mahaiganaren tamaina"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Jatorrizko tamaina"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Ezin izan da fitxategia analizatu"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC fitxategiak “%s” gakoa falta du"
+
+#~ msgid "Scaling"
+#~ msgstr "Eskalatzea"
 
 #~ msgid "Learn more."
 #~ msgstr "Ikasi gehiago."
