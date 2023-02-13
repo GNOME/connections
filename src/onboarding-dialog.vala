@@ -55,6 +55,16 @@ namespace Connections {
         }
 
         [GtkCallback]
+        private bool on_key_pressed (Gtk.Widget widget, Gdk.EventKey event) {
+            if (event.keyval == Gdk.Key.Escape) {
+                close ();
+                return true;
+            }
+
+            return false;
+        }
+
+        [GtkCallback]
         private void on_next_button_clicked () {
             var index = (int) Math.round (paginator.position) + 1;
             if (index >= pages.length ())
