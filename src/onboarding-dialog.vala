@@ -83,7 +83,7 @@ namespace Connections {
             go_next_button.visible = !is_last_page;
 
             close_button.visible = is_first_page || is_last_page;
-            close_button.label = is_first_page ? _("No Thanks") : _("Close");
+            close_button.label = is_first_page ? _("_No Thanks") : _("_Close");
         }
     }
 }
