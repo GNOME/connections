@@ -6,26 +6,27 @@
 # Christian Kirbach <christian.kirbach@gmail.com>, 2020.
 # Philipp Kiemle <philipp.kiemle@gmail.com>, 2021-2022.
 # Tim Sabsch <tim@sabsch.com>, 2021.
+# Jürgen Benvenuti <gastornis@posteo.org>, 2023.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-02-15 13:51+0000\n"
-"PO-Revision-Date: 2022-03-14 02:50+0100\n"
-"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-02-16 22:14+0100\n"
+"Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Verbindungen"
 
@@ -46,14 +47,16 @@ msgstr ""
 "Möglichkeit, Benutzer zu unterstützen, die Hilfe benötigen."
 
 # Klingt nicht sehr schön - gerne besser machen! - pk
+# --
+# Etwas kürzere Variante. - jb
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
-"Es kann zu einer Vielzahl an Betriebssystemen eine Verbindung aufgebaut "
-"werden, inklusive Windows- und Linux-Umgebungen. Auch zu virtuellen "
-"Maschinen kann eine Verbindung aufgebaut werden."
+"Zu einer Vielzahl an Betriebssystemen lassen sich Verbindungen herstellen, "
+"inklusive Windows- und Linux-Umgebungen. Auch zu virtuellen Maschinen können "
+"Verbindungen aufgebaut werden."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
@@ -63,7 +66,7 @@ msgstr ""
 "Verbindungen nutzt die weit verbreiteten Protokolle VNC und RDP. Eines der "
 "beiden muss auf dem Zielrechner aktiviert sein."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
 
@@ -93,7 +96,8 @@ msgstr ""
 "Stephan Woidowski <swoidowski@t-online.de>\n"
 "Christian Kirbach <christian.kirbach@gmail.com>, 2020, 2021\n"
 "Philipp Kiemle <philipp.kiemle@gmail.com>, 2021\n"
-"Tim Sabsch <tim@sabsch.com>, 2021"
+"Tim Sabsch <tim@sabsch.com>, 2021\n"
+"Jürgen Benvenuti <gastornis@posteo.org>, 2023"
 
 # Leicht verändert aus Vinagre übernommen
 #: src/application.vala:89 src/application.vala:242
@@ -156,7 +160,7 @@ msgid "Authentication failed: %s"
 msgstr "Legitimation gescheitert: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -215,7 +219,7 @@ msgstr "_Passwort"
 msgid "Sign In"
 msgstr "Anmelden"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Willkommen zu Verbindungen"
 
@@ -274,6 +278,14 @@ msgstr "Adresse"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Name"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "In Fenster einpassen"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Originalgröße"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -340,60 +352,55 @@ msgid "Display"
 msgstr "Anzeige"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Skalierung"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Nur anzeigen"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Lokalen Zeiger anzeigen"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Audio aktivieren"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Bandbreite"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Hohe Qualität"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Schnelle Aktualisierung"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Skalierungsmodus"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "In Fenster einpassen"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Bildschirmgröße ändern"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Originalgröße"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr ""
 "Klicken Sie auf den <b>+</b>-Knopf, um Ihre erste Verbindung zu erstellen."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Die Datei konnte nicht analysiert werden"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-Datei fehlt Schlüssel »%s«"
+
+#~ msgid "Scaling"
+#~ msgstr "Skalierung"
 
 #~ msgid "Learn more."
 #~ msgstr "Mehr erfahren."
