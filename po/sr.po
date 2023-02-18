@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-06 13:50+0000\n"
-"PO-Revision-Date: 2022-03-11 08:33+0100\n"
+"POT-Creation-Date: 2023-02-17 10:01+0000\n"
+"PO-Revision-Date: 2023-02-18 07:21+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <gnome-sr@googlegroups.com>\n"
 "Language: sr\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Везе"
 
@@ -57,7 +57,7 @@ msgstr ""
 "Везе користе опште подржане ВНЦ и РДП протоколе и један од њих мора бити "
 "омогућен на машини на коју се повезујете."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Гном пројекат"
 
@@ -86,7 +86,7 @@ msgstr ""
 "\n"
 "https://гном.срб — превод Гнома на српски језик"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Гномов клијент за удаљену радну површину"
 
@@ -95,58 +95,58 @@ msgstr "Гномов клијент за удаљену радну површи�
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Не могу отворити датотеку са непознатом миме врстом %s"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Веза ка „%s“ је обрисана"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Опозови"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "УРЛ везе"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Отвори .vnc или .rdp датотеку у датој ПУТАЊИ"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Отвори преко целог екрана"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Сувише аргумената наредбене линије наведено.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Снимак од %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Снимак екрана направљен"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Отвори"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "„%s“ захтева потврду идентитета"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Идентификација није успела: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -203,7 +203,7 @@ msgstr "_Лозинка"
 msgid "Sign In"
 msgstr "Пријави ме"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Добро дошли у Везе"
 
@@ -254,13 +254,21 @@ msgstr "Више података можете наћи у помоћи."
 msgid "Connection preferences"
 msgstr "Поставке Веза"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Адреса"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Назив"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Уклопи у прозор"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Изворна величина"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -322,64 +330,59 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Приказ"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "Размера"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "Само приказ"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Прикажи локални показивач миша"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Омогући звук"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Проток"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Висок квалитет"
 
-#: src/ui/vnc-preferences.ui:97
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Брзо освежавање"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Режим сразмеравања"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Fit window"
-msgstr "Уклопи у прозор"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Промени величину екрана"
 
-#: src/ui/vnc-preferences.ui:116
-msgid "Original size"
-msgstr "Изворна величина"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Само притисните <b>+</b> дугме за стварање ваше прве везе."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Не могу да обрадим датотеку"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC датотеци недостаје кључ „%s“"
+
+#~ msgid "Scaling"
+#~ msgstr "Размера"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "Гномове везе"
