@@ -7,19 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-06 13:50+0000\n"
-"PO-Revision-Date: 2021-11-06 22:26+0100\n"
-"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
-"Language-Team: Friulian <fur@li.org>\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-02-20 20:32+0000\n"
+"Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
+"Language-Team: Friulian <f.t.public@gmail.com>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Editor: HaiPO 1.4 beta\n"
 "X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Conessions"
 
@@ -53,9 +54,10 @@ msgid ""
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
 "Conessions al dopre i protocoi VNC e RDP, che a son supuartâts in misure "
-"bondante. Si à di abilitâ un di chescj sul scritori dulà che si vûl conetisi."
+"bondante. Si à di abilitâ un di chescj sul scritori dulà che si vûl "
+"conetisi."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Il progjet GNOME"
 
@@ -79,7 +81,7 @@ msgstr "Proprietâts"
 msgid "translator-credits"
 msgstr "Fabio Tomat, <f.t.public@gmail.com>, 2021"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Un client par scritori lontan pal ambient di scritori GNOME"
 
@@ -88,58 +90,58 @@ msgstr "Un client par scritori lontan pal ambient di scritori GNOME"
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Impussibil vierzi il file di gjenar mime no cognossût %s"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "La conession a “%s” e je stade eliminade"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Disfe"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL dulà conetisi"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Vierç il file .vnc o .rdp al PERCORS indicât"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Vierç a plen visôr"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Specificâts masse argoments a linie di comant.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Schermade di %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Videade caturade"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Vierç"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” al à bisugne di autenticazion"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autenticazion falide: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -196,7 +198,7 @@ msgstr "_Password"
 msgid "Sign In"
 msgstr "Jentre"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Benvignûts su Conessions"
 
@@ -248,13 +250,21 @@ msgstr "Al è pussibil cjatâ plui informazions tal jutori."
 msgid "Connection preferences"
 msgstr "Preferencis di conession"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Direzion"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Non"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Adate il barcon"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Dimension origjinâl"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -316,64 +326,59 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Visualizazion"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "Scjale"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "Dome viôt"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Mostre pontadôr locâl"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Abilite l'audio"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Largjece di bande"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Alte cualitât"
 
-#: src/ui/vnc-preferences.ui:97
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Inzornament veloç"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Modalitât ridimensionament"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Fit window"
-msgstr "Adate il barcon"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Ridimensione scritori"
 
-#: src/ui/vnc-preferences.ui:116
-msgid "Original size"
-msgstr "Dimension origjinâl"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Al baste fracâ il boton <b>+</b> par creâ la tô prime conession."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Impussibil analizâ il file"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Al file VNC al mancje la clâf “%s”"
+
+#~ msgid "Scaling"
+#~ msgstr "Scjale"
 
 #~ msgid "Learn more."
 #~ msgstr "Plui informazions."
@@ -400,8 +405,7 @@ msgstr "Al file VNC al mancje la clâf “%s”"
 #~ msgstr "Configure pal acès"
 
 #~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr ""
-#~ "Par podê conetisi a un scritori, chest al à prime di sei configurât."
+#~ msgstr "Par podê conetisi a un scritori, chest al à prime di sei configurât."
 
 #~ msgid "GNOME Connections"
 #~ msgstr "GNOME Conessions"
@@ -416,8 +420,8 @@ msgstr "Al file VNC al mancje la clâf “%s”"
 #~ "Enter a machine address to connect to. Address can begin with rdp:// or "
 #~ "vnc://"
 #~ msgstr ""
-#~ "Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ "
-#~ "cun rdp:// o vnc://"
+#~ "Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ cun "
+#~ "rdp:// o vnc://"
 
 #~ msgid "Server"
 #~ msgstr "Servidôr"
