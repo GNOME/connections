@@ -1,27 +1,27 @@
 # Hungarian translation for gnome-connections.
-# Copyright (C) 2020, 2021 Free Software Foundation, Inc.
+# Copyright (C) 2020, 2021, 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-connections package.
 #
 # Balázs Meskó <mesko.balazs at fsf dot hu>, 2020.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2020, 2021.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-25 08:49+0000\n"
-"PO-Revision-Date: 2021-12-12 19:37+0100\n"
-"Last-Translator: Meskó Balázs <mesko.balazs@fsf.hu>\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-02-21 00:05+0100\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Kapcsolatok"
 
@@ -58,7 +58,7 @@ msgstr ""
 "és legalább az egyiknek elérhetőnek kell lennie azon a gépen, amelyhez "
 "kapcsolódni szeretne."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
@@ -82,7 +82,7 @@ msgstr "Tulajdonságok"
 msgid "translator-credits"
 msgstr "Meskó Balázs <mesko dot balazs at fsf dot hu>"
 
-#: src/application.vala:89 src/application.vala:241
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "Egy távoli asztali kliens a GNOME asztali környezethez"
 
@@ -91,28 +91,28 @@ msgstr "Egy távoli asztali kliens a GNOME asztali környezethez"
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Nem sikerült megnyitni az ismeretlen %s MIME-típusú fájlt"
 
-#: src/application.vala:181
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "A(z) „%s” kapcsolat törölve lett"
 
-#: src/application.vala:184
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Visszavonás"
 
-#: src/application.vala:231
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL a kapcsolódáshoz"
 
-#: src/application.vala:232
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Egy .vnc vagy .rdp fájl megnyitása a megadott ÚTVONALON"
 
-#: src/application.vala:233
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Megnyitás teljes képernyős módban"
 
-#: src/application.vala:256
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Túl sok parancssori argumentum lett megadva.\n"
 
@@ -142,7 +142,7 @@ msgid "Authentication failed: %s"
 msgstr "Hitelesítés sikertelen: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -200,7 +200,7 @@ msgstr "_Jelszó"
 msgid "Sign In"
 msgstr "Bejelentkezés"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Üdvözöljük a Kapcsolatokban"
 
@@ -259,6 +259,14 @@ msgstr "Cím"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Név"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Ablakhoz illesztés"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Eredeti méret"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -325,56 +333,48 @@ msgid "Display"
 msgstr "Megjelenítés"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Méretezés"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Csak megtekintés"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Helyi mutató megjelenítése"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Hang engedélyezése"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Sávszélesség"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Magas minőség"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Gyors frissítés"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Átméretezési mód"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Ablakhoz illesztés"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Asztal átméretezése"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Eredeti méret"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Csak nyomja meg a <b>+</b> gombot az első kapcsolata létrehozásához."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Nem sikerült feldolgozni a fájlt"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "A VNC-fájlból hiányzik a(z) „%s” kulcs"
