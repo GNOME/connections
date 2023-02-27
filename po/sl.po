@@ -2,28 +2,28 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Matej Urbančič <mateju@src.gnome.org>, 2020–2022.
+# Matej Urbančič <mateju@src.gnome.org>, 2020–2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-01-26 19:50+0000\n"
-"PO-Revision-Date: 2022-01-26 22:06+0100\n"
+"POT-Creation-Date: 2023-02-21 10:36+0000\n"
+"PO-Revision-Date: 2023-02-27 21:45+0100\n"
 "Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
+"n%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Povezovalnik"
 
@@ -49,17 +49,17 @@ msgid ""
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
 "Podprto je povezovanje z različnimi operacijskimi sistemi, na primer namizja "
-"Linux in Windows, mogoče je tudi povezovanje na navidezne naprave."
+"Linux in Windows, mogoče je tudi povezovanje z navideznimi napravami."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
-"Program podpira protokole VNC in RDP, katerikoli pa mora biti omogočen tudi "
+"Program podpira protokola VNC in RDP, katerikoli pa mora biti omogočen tudi "
 "na namizju, s katerim poteka povezovanje."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -87,7 +87,7 @@ msgstr "Matej Urbančič <mateju@src.gnome.org>"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Odjemalec za povezave z oddaljenim namizjem za okolje GNOME"
+msgstr "Program za povezovanje z oddaljenimi namizji v okolju GNOME"
 
 #: src/application.vala:151
 #, c-format
@@ -145,7 +145,7 @@ msgid "Authentication failed: %s"
 msgstr "Overitev je spodletela: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -168,7 +168,7 @@ msgstr "Celozaslonski način"
 
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
-msgstr "Vpišite omrežno določilo oddaljenega namizja za povezavo:"
+msgstr "Naslov oddaljenega namizja za povezavo:"
 
 #: src/ui/assistant.ui:53
 msgid "Connection Type"
@@ -202,25 +202,25 @@ msgstr "_Geslo"
 msgid "Sign In"
 msgstr "Prijava"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Dobrodošli v program Povezovalnik"
 
 #: src/ui/onboarding-dialog.ui:42
 msgid "Learn about how Connections works."
-msgstr "Več o tem, kako povezovalnik deluje."
+msgstr "Več o tem, kako deluje povezovalnik."
 
 #: src/ui/onboarding-dialog.ui:49
 msgid "Use other desktops, remotely"
-msgstr "Pregled in upravljanje namizij, oddaljeno"
+msgstr "Pregled in oddaljeno upravljanje namizij"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
-"S Povezovalnikom je mogoče delo prek zaslona drugih namiznih računalnikov. "
-"Upravljati jih je mogoče s tipkovnico in kazalnimi napravami!"
+"Povezovalnik omogoča delo na oddaljenih namiznih napravah. Na zaslonu jih je "
+"mogoče upravljati s tipkovnico in miško!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -228,27 +228,26 @@ msgstr "Povezovanje z različnimi operacijskimi sistemi"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Povezovanje z namizji Linux, Mac in Windows s programom Povezovalnik."
+msgstr "Podprto je povezovanje z namizji okolij Linux, Mac in Windows."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
-msgstr "Omogoči oddaljena namizja pred povezavo"
+msgstr "Pred povezavo je treba oddaljene naprave nastaviti"
 
 #: src/ui/onboarding-dialog.ui:66
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
-msgstr ""
-"Računalnike je treba nastaviti za delo z oddaljenimi namizji, preden se je "
-"mogoče povezati."
+msgstr "Računalnike je treba za delo z oddaljenimi namizji pravilno nastaviti."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
-msgstr "Želimo vam zadovoljstvo pri uporabi programa!"
+msgstr "Želimo vam enostavno delo s Povezovalnikom!"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "More information can be found in the help."
-msgstr "Več podrobnosti je zabeleženih na straneh pomoči."
+msgstr ""
+"Več možnosti in podrobnosti o delovanju je zabeleženih na straneh pomoči."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -261,6 +260,14 @@ msgstr "Naslov"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Ime"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Prilagodi oknu"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Izvorna velikost"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -327,59 +334,54 @@ msgid "Display"
 msgstr "Zaslon"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Prilagajanje velikosti"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Samo pogled"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Pokaži kazalnik"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Omogoči zvok"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Pasovna širina"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Visoka kakovost"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Hitro osveževanje"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Način spreminjanja velikosti"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Prilagodi oknu"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Spremeni velikost namizja"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Izvorna velikost"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Pritisnite gumb <b>+</b> in ustvarite prvo povezavo."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Datoteke ni mogoče razčleniti"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Datoteka VNC je brez ključa »%s«"
+
+#~ msgid "Scaling"
+#~ msgstr "Prilagajanje velikosti"
 
 #~ msgid "Learn more."
 #~ msgstr "Več o tem."
