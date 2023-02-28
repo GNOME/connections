@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-02-15 13:51+0000\n"
-"PO-Revision-Date: 2022-02-23 19:07+0200\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-02-28 20:28+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Yhteydet"
 
@@ -55,7 +55,7 @@ msgstr ""
 "Yhteydet käyttää laajalti tuettuja VNC- ja RDP-protokollia. Tällaisen "
 "protokollan tulee olla käytössä myös työpöydällä johon haluat yhdistää."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
@@ -140,7 +140,7 @@ msgid "Authentication failed: %s"
 msgstr "Tunnistautuminen epäonnistui: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -197,7 +197,7 @@ msgstr "S_alasana"
 msgid "Sign In"
 msgstr "Kirjaudu sisään"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Tervetuloa"
 
@@ -256,6 +256,14 @@ msgstr "Osoite"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Nimi"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Sovita ikkunaan"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Alkuperäinen koko"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -322,59 +330,54 @@ msgid "Display"
 msgstr "Näytä"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Skaalaus"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Vain katselu"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Näytä paikallinen osoitin"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Ota ääni käyttöön"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Kaistanleveys"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Korkea laatu"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Nopea päivitys"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Skaalaustila"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Sovita ikkunaan"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Muuta työpöydän kokoa"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Alkuperäinen koko"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Tiedostoa ei voitu jäsentää"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-tiedostosta puuttuu avain “%s”"
+
+#~ msgid "Scaling"
+#~ msgstr "Skaalaus"
 
 #~ msgid "Learn more."
 #~ msgstr "Lue lisää."
