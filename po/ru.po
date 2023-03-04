@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-09-19 13:12+0000\n"
-"PO-Revision-Date: 2022-09-20 14:24+0300\n"
+"POT-Creation-Date: 2023-02-11 19:36+0000\n"
+"PO-Revision-Date: 2023-02-11 23:21+0300\n"
 "Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Подключения"
 
@@ -84,7 +84,7 @@ msgstr ""
 "Станислав Соловей <whats_up@tut.by>, 2013-2019.\n"
 "Юрий Мясоедов <ymyasoedov@yandex.ru>, 2014.\n"
 "Alexey Rubtsov <rushills@gmail.com>, 2021\n"
-"Aleksandr Melman <Alexmelman88@gmail.com>, 2021"
+"Aleksandr Melman <Alexmelman88@gmail.com>, 2021-2023"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -146,7 +146,7 @@ msgid "Authentication failed: %s"
 msgstr "Аутентификация не прошла: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -204,7 +204,7 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Войти"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Добро пожаловать в Подключения"
 
@@ -265,7 +265,7 @@ msgstr "Адрес"
 msgid "Name"
 msgstr "Имя"
 
-#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
+#: src/ui/rdp-preferences.ui:51
 msgid "Scaling"
 msgstr "Масштабирование"
 
@@ -303,7 +303,7 @@ msgstr "Комбинации клавиш"
 
 #: src/ui/topbar.ui:205
 msgid "About Connections"
-msgstr "О Программе"
+msgstr "О приложении"
 
 #: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
@@ -333,53 +333,57 @@ msgstr "Ctrl + Alt + F7"
 msgid "Display"
 msgstr "Дисплей"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "Только просмотр"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Показать локальный указатель"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Включить звук"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Полоса пропускания"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Высокое качество"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Быстрое обновление"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Режим масштабирования"
 
-#: src/ui/vnc-preferences.ui:114
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Изменить размер рабочего стола"
+
+#: src/ui/vnc-preferences.ui:108
 msgid "Fit window"
 msgstr "Подходящее окно"
 
-#: src/ui/vnc-preferences.ui:115
+#: src/ui/vnc-preferences.ui:109
 msgid "Original size"
 msgstr "Исходный размер"
 
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Просто нажмите кнопку <b>+</b>, чтобы установить первое соединение."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Не удалось проанализировать файл"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "В файле VNC отсутствует ключ «%s»"
