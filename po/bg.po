@@ -1,14 +1,14 @@
 # Bulgarian translation of GNOME connections po-file.
-# Copyright (C) 2021, 2022 Alexander Shopov <ash@kambanaria.org>.
+# Copyright (C) 2021, 2022, 2023 Alexander Shopov <ash@kambanaria.org>.
 # This file is distributed under the same license as the GNOME connections package.
-# Alexander Shopov <ash@kambanaria.org>, 2021, 2022.
+# Alexander Shopov <ash@kambanaria.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-03-02 10:41+0000\n"
-"PO-Revision-Date: 2022-03-02 15:39+0100\n"
+"POT-Creation-Date: 2023-03-04 13:37+0000\n"
+"PO-Revision-Date: 2023-03-04 23:35+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Свързване"
 
@@ -55,7 +55,7 @@ msgstr ""
 "Програмата ползва широко разпространените протоколи VNC и RDP за свързване. "
 "Поне един от тях трябва да е наличен на отдалечената машина."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Проектът GNOME"
 
@@ -150,7 +150,7 @@ msgid "Authentication failed: %s"
 msgstr "Неуспешна идентификация: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -207,7 +207,7 @@ msgstr "_Парола"
 msgid "Sign In"
 msgstr "Вписване"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Добре дошли в „Свързване“"
 
@@ -264,6 +264,14 @@ msgstr "Адрес"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Име"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Напасване на прозореца"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Първоначален размер"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -330,56 +338,48 @@ msgid "Display"
 msgstr "Екран"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Мащабиране"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Само разглеждане"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Локален показалец"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Включване на аудио"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Широчина на канала"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Високо качество"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Бързо опресняване"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Режим на мащабиране"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Напасване на прозореца"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Преоразмеряване на работния плот"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Първоначален размер"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Натиснете бутона <b>+</b>, за да настроите първата връзка."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Файлът не може да се анализира"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Ключът „%s“ липсва във файла за VNC"
