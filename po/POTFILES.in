@@ -10,6 +10,7 @@ src/connection.vala
 src/display-view.vala
 src/onboarding-dialog.vala
 src/rdp-connection.vala
+src/rdp-preferences-window.vala
 src/topbar.vala
 src/ui/assistant.ui
 src/ui/auth-notification.ui
