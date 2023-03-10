@@ -10,20 +10,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-02-15 13:51+0000\n"
-"PO-Revision-Date: 2022-03-03 21:25+0100\n"
-"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-03-03 12:21+0100\n"
+"Last-Translator: Alan Paris <Alan90000@yahoo.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 40.0\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Connexions"
 
@@ -60,7 +60,7 @@ msgstr ""
 "Connexions utilise les protocoles largement répandus VNC et RDP. L’un "
 "d’entre eux doit être activé sur le bureau auquel vous voulez vous connecter."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Le projet GNOME"
 
@@ -148,7 +148,7 @@ msgid "Authentication failed: %s"
 msgstr "Échec de l’authentification : %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -206,7 +206,7 @@ msgstr "_Mot de passe"
 msgid "Sign In"
 msgstr "Authentification"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Bienvenue dans Connexions"
 
@@ -266,6 +266,14 @@ msgstr "Adresse"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Nom"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Remplir la fenêtre"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Taille originale"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -332,61 +340,56 @@ msgid "Display"
 msgstr "Affichage"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Échelle"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Afficher seulement"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Afficher le pointeur local"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Activer l’audio"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Bande passante"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Haute qualité"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Actualisation rapide"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Mode de mise à l’échelle"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Remplir la fenêtre"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Redimensionner le bureau"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Taille originale"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr ""
 "Appuyez simplement sur le bouton <b>+</b> pour établir votre première "
 "connexion."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Impossible d’analyser le fichier"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Clé « %s » manquante pour le fichier VNC"
+
+#~ msgid "Scaling"
+#~ msgstr "Échelle"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "Connexions de GNOME"
