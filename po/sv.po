@@ -2,14 +2,14 @@
 # Copyright © 2020, 2021 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020, 2021.
-# Luna Jernberg <droidbittin@gmail.com>, 2021.
+# Luna Jernberg <droidbittin@gmail.com>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-06 13:50+0000\n"
-"PO-Revision-Date: 2021-11-07 10:49+0100\n"
+"POT-Creation-Date: 2023-02-11 21:37+0000\n"
+"PO-Revision-Date: 2023-02-12 09:47+0100\n"
 "Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Anslutningar"
 
@@ -57,7 +57,7 @@ msgstr ""
 "Anslutningar använder VNC- och RDP-protokollen som många har stöd för, och "
 "ett av dessa måste vara aktiverade på skrivbordet som du vill ansluta till."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
@@ -86,7 +86,7 @@ msgstr ""
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME"
 
@@ -95,58 +95,58 @@ msgstr "En fjärrskrivbordsklient för skrivbordsmiljön GNOME"
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Kunde inte öppna fil med okänd mime-typ %s"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Anslutning till ”%s” har tagits bort"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Ångra"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL att ansluta till"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Öppna .vnc- eller .rdp-fil på angiven SÖKVÄG"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Öppna i helskärm"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "För många kommandoradsargument angivna.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Skärmbild från %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Skärmbild tagen"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Öppna"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "”%s” kräver autentisering"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentisering misslyckades: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -203,7 +203,7 @@ msgstr "_Lösenord"
 msgid "Sign In"
 msgstr "Logga in"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Välkommen till Anslutningar"
 
@@ -255,13 +255,21 @@ msgstr "Mer information kan hittas i hjälpen."
 msgid "Connection preferences"
 msgstr "Anslutningsinställningar"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Adress"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Namn"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Anpassa till fönster"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Ursprunglig storlek"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -323,61 +331,56 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Skärm"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "Skalning"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "Endast visning"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Visa lokal pekare"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Aktivera ljud"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Bandbredd"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Hög kvalitet"
 
-#: src/ui/vnc-preferences.ui:97
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Snabb uppdatering"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Skalningsläge"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Fit window"
-msgstr "Anpassa till fönster"
+#: src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Ändra storlek på skrivbordet"
 
-#: src/ui/vnc-preferences.ui:116
-msgid "Original size"
-msgstr "Ursprunglig storlek"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Kunde inte tolka filen"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-fil saknar nyckeln ”%s”"
+
+#~ msgid "Scaling"
+#~ msgstr "Skalning"
