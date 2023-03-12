@@ -2,13 +2,13 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # scootergrisen, 2020-2021.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2022.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2022-2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-02-15 13:51+0000\n"
-"PO-Revision-Date: 2022-03-07 01:04+0100\n"
+"POT-Creation-Date: 2023-03-05 17:03+0000\n"
+"PO-Revision-Date: 2023-03-11 13:14+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Forbindelser"
 
@@ -33,27 +33,38 @@ msgid ""
 "great way to access content or software on a different desktop operating "
 "system. It can also be used as a way to provide support to users who might "
 "need help."
-msgstr "Forbindelser lader dig forbinde til og bruge andre skriveborde. Dette kan være en god måde at tilgå data eller programmer på et andet skrivebordsoperativsystem. Programmet kan også bruges til at hjælpe andre brugere."
+msgstr ""
+"Forbindelser lader dig forbinde til og bruge andre skriveborde. Dette kan "
+"være en god måde at tilgå data eller programmer på et andet "
+"skrivebordsoperativsystem. Programmet kan også bruges til at hjælpe andre "
+"brugere."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
-msgstr "Det er muligt at forbinde til en række forskellige operativsystemer inklusive Linux- og Windowsskriveborde. Du kan også forbinde til virtuelle maskiner."
+msgstr ""
+"Det er muligt at forbinde til en række forskellige operativsystemer "
+"inklusive Linux- og Windowsskriveborde. Du kan også forbinde til virtuelle "
+"maskiner."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
-msgstr "Forbindelser bruger de bredt understøttede protokoller VNC og RDP. En af disse skal være slået til på det skrivebord, du vil forbinde til."
+msgstr ""
+"Forbindelser bruger de bredt understøttede protokoller VNC og RDP. En af "
+"disse skal være slået til på det skrivebord, du vil forbinde til."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
-msgstr "vnc;rdp;fjern;remote;desktop;;skrivebord;windows;support;hjælp;adgang;tilgang;tilgå;vis"
+msgstr ""
+"vnc;rdp;fjern;remote;desktop;;skrivebord;windows;support;hjælp;adgang;"
+"tilgang;tilgå;vis"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -131,7 +142,7 @@ msgid "Authentication failed: %s"
 msgstr "Godkendelse mislykkedes: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -143,6 +154,11 @@ msgstr "Nej tak"
 #: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Luk"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Ændr størrelse på skrivebord"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -188,7 +204,7 @@ msgstr "_Adgangskode"
 msgid "Sign In"
 msgstr "Log ind"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Velkommen til Forbindelser"
 
@@ -204,7 +220,9 @@ msgstr "Brug andre skriveborde over netværk"
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
-msgstr "Brug Forbindelser til at vise skærmen fra andre skriveborde. Du kan også styre dem med markør og tastatur!"
+msgstr ""
+"Brug Forbindelser til at vise skærmen fra andre skriveborde. Du kan også "
+"styre dem med markør og tastatur!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -222,7 +240,9 @@ msgstr "Slå fjernskrivebord til inden forbindelse oprettes"
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
-msgstr "Computere skal konfigureres til at bruge fjernskrivebord, før du kan forbinde til dem."
+msgstr ""
+"Computere skal konfigureres til at bruge fjernskrivebord, før du kan "
+"forbinde til dem."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
@@ -243,6 +263,14 @@ msgstr "Adresse"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Navn"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Tilpas vindue"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Oprindelig størrelse"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -309,59 +337,50 @@ msgid "Display"
 msgstr "Visning"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Skalering"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Kun visning"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Vis lokal markør"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Slå lyden til"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Båndbredde"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Høj kvalitet"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Hurtig opdatering"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Skaleringstilstand"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Tilpas vindue"
-
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Oprindelig størrelse"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Tryk blot på <b>+</b>-knappen for at oprette din første forbindelse."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Kunne ikke fortolke filen"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-filen mangler nøglen “%s”"
+
+#~ msgid "Scaling"
+#~ msgstr "Skalering"
 
 #~| msgid "Connections"
 #~ msgid "GNOME Connections"
