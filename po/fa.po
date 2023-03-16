@@ -7,19 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-11-06 21:25+0000\n"
-"PO-Revision-Date: 2021-11-10 16:29+0330\n"
-"Last-Translator: MohammadSaleh Kamyab <mskf1383@protonmail.com>\n"
+"POT-Creation-Date: 2023-03-05 17:03+0000\n"
+"PO-Revision-Date: 2023-03-16 10:31+0330\n"
+"Last-Translator: MohammadSaleh Kamyab <mskf1383@envs.net>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "دوردست‌ها"
 
@@ -30,13 +30,13 @@ msgstr "دیدن و استفاده از میزکارهای دیگر"
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid ""
 "Connections allows you to connect to and use other desktops. This can be a great "
-"way to access content or software on a different desktop operating system. It can "
-"also be used as a way to provide support to users who might need help."
+"way to access content or software on a different desktop operating system. It "
+"can also be used as a way to provide support to users who might need help."
 msgstr ""
-"دوردست‌ها می‌گذار میزکارهای دیگر را دیده و از آن‌ها استفاده کنید. این برنامه می‌تواند "
-"راهی عالی برای دسترسی به محتوا یا نرم‌افزارها روی سیستم‌عامل‌های میزکار مختلف باشد. "
-"هم‌چنین می‌تواند به عنوان راهی برای فراهم کردن پشتیبانی به کاربرانی که نیاز به کمک "
-"دارند، استفاده شود."
+"دوردست‌ها می‌گذار میزکارهای دیگر را دیده و از آن‌ها استفاده کنید. این برنامه "
+"می‌تواند راهی عالی برای دسترسی به محتوا یا نرم‌افزارها روی سیستم‌عامل‌های میزکار "
+"مختلف باشد. هم‌چنین می‌تواند به عنوان راهی برای فراهم کردن پشتیبانی به کاربرانی که "
+"نیاز به کمک دارند، استفاده شود."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
@@ -54,7 +54,7 @@ msgstr ""
 "دوردست‌ها از قراردادهای VNC و RDP پشتیبانی می‌کند و باید یکی از این‌ها روی میزکاری "
 "که می‌خواهید به آن وصل شوید، به کار افتاده باشد."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "پروژهٔ گنوم"
 
@@ -79,7 +79,7 @@ msgstr "ویژگی‌ها"
 msgid "translator-credits"
 msgstr "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: src/application.vala:89 src/application.vala:240
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "یک کارخواه میزکار دوردست برای محیط میزکار گنوم"
 
@@ -88,58 +88,58 @@ msgstr "یک کارخواه میزکار دوردست برای محیط میزک
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "نمی‌توان پرونده از گونهٔ mime ناشناخته %s را گشود"
 
-#: src/application.vala:180
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "ارتباط با %s حذف شده"
 
-#: src/application.vala:183
+#: src/application.vala:185
 msgid "Undo"
 msgstr "برگردان"
 
-#: src/application.vala:230
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "نشانی برای ارتباط"
 
-#: src/application.vala:231
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "گشودن پروندهٔ ‪.vnc‬ یا ‪.rdp‬ در مسیر داده‌شده"
 
-#: src/application.vala:232
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "'گشودن در تمام‌صفحه"
 
-#: src/application.vala:255
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "آرگومان‌های خط فرمان بیش از حد مشخّص شده.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "نماگرفت از %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "نماگرفت گرفته شد"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "گشودن"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "«%s» نیاز به تأیید هویت دارد"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "تأیید هویت شکست خورد: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%Id×%Id"
@@ -151,6 +151,11 @@ msgstr "نه، ممنون"
 #: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "بستن"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "تغییر اندازهٔ میزکار"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -196,7 +201,7 @@ msgstr "_گذرواژه"
 msgid "Sign In"
 msgstr "ورود"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "به دوردست‌ها خوش آمدید"
 
@@ -233,7 +238,8 @@ msgstr "به کار انداختن میزکار دوردست پیش از وصل 
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to them."
 msgstr ""
-"رایاناه‌ها باید پیش از این که بتوانید بهشان وصل شوید، برای میزکار دوردست برپا شوند."
+"رایاناه‌ها باید پیش از این که بتوانید بهشان وصل شوید، برای میزکار دوردست برپا "
+"شوند."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
@@ -247,13 +253,21 @@ msgstr "اطّلاعات بیش‌تر می‌تواند در راهنما پی�
 msgid "Connection preferences"
 msgstr "ترجیحات اتّصال"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "نشانی"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "نام"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "برازش پنجره"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "اندازهٔ اصلی"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -315,64 +329,55 @@ msgstr "مهار + دگرساز + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "مهار + دگرساز + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "نمایش"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "مقیاس"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "فقط مشاهده"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "نمایش اشاره‌گر محلّی"
 
-#: src/ui/vnc-preferences.ui:81
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "به کار انداختن صدا"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "پهنای باند"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "کیفیت بالا"
 
-#: src/ui/vnc-preferences.ui:97
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "نوسازی سریع"
 
-#: src/ui/vnc-preferences.ui:108
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "حالت مقیاس"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Fit window"
-msgstr "برازش پنجره"
-
-#: src/ui/vnc-preferences.ui:116
-msgid "Original size"
-msgstr "اندازهٔ اصلی"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "برای ساخت نخستین ارتباطتان، کافیست دکمهٔ <b>+</b> را بزنید."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "نمی‌توان پرونده را تجزیه کرد"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "پروندهٔ VNC کلید %s را ندارد"
+
+#~ msgid "Scaling"
+#~ msgstr "مقیاس"
 
 #~ msgid "Connect to a Desktop"
 #~ msgstr "اتّصال به یک میزکار"
@@ -392,8 +397,8 @@ msgstr "پروندهٔ VNC کلید %s را ندارد"
 #~ msgid ""
 #~ "Enter a machine address to connect to. Address can begin with rdp:// or vnc://"
 #~ msgstr ""
-#~ "برای ارتباط یا ماشین، نشانیش را وارد کنید. نشنانی‌ها می‌توانند با ‪rdp://‬ یا ‪"
-#~ "vnc://‬ شروع شوند"
+#~ "برای ارتباط یا ماشین، نشانیش را وارد کنید. نشنانی‌ها می‌توانند با ‪rdp://‬ یا "
+#~ "‪vnc://‬ شروع شوند"
 
 #~ msgid "Server"
 #~ msgstr "کارساز"
