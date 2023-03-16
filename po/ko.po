@@ -1,15 +1,15 @@
 # Korean translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# DaeHyun Sung <sungdh86+git@gmail.com>, 2020, 2022.
+# DaeHyun Sung <sungdh86+git@gmail.com>, 2020, 2022-2023.
 # Changwoo Ryu <cwryu@debian.org>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-02-15 13:51+0000\n"
-"PO-Revision-Date: 2022-03-02 11:01+0900\n"
+"POT-Creation-Date: 2023-03-05 17:03+0000\n"
+"PO-Revision-Date: 2023-03-15 23:27+0900\n"
 "Last-Translator: DaeHyun Sung <sungdh86+git@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "연결"
 
@@ -56,7 +56,7 @@ msgstr ""
 "연결 프로그램은 널리 지원되는 VNC 및 RDP 프로토콜을 사용하고, 연결하려는 데"
 "스크톱에서 이 중의 하나를 켜야 합니다."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
@@ -123,7 +123,7 @@ msgstr "명령행 인수가 너무 많이 지정되었습니다.\n"
 #: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
-msgstr "%s에서 스크린샷"
+msgstr "%s 스크린샷"
 
 #: src/connection.vala:85
 msgid "Screenshot taken"
@@ -145,7 +145,7 @@ msgid "Authentication failed: %s"
 msgstr "인증 실패: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -157,6 +157,11 @@ msgstr "아니요 괜찮습니다"
 #: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "닫기"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "데스크톱 크기조절"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -176,11 +181,11 @@ msgstr "연결 종류"
 
 #: src/ui/assistant.ui:63
 msgid "RDP (standard for connecting to Windows)"
-msgstr "RDP (윈도우에 연결할 때 표준)"
+msgstr "RDP (윈도우 연결 표준)"
 
 #: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
-msgstr "VNC (리눅스에 연결할 때 표준)"
+msgstr "VNC (리눅스 연결 표준)"
 
 #: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
@@ -202,7 +207,7 @@ msgstr "암호(_P)"
 msgid "Sign In"
 msgstr "로그인"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "연결에 오신걸 환영합니다"
 
@@ -259,6 +264,14 @@ msgstr "주소"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "이름"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "창 크기 맞추기"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "본래 크기"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -325,56 +338,47 @@ msgid "Display"
 msgstr "표시"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "크기 조절"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "읽기전용"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "로컬 포인터 보기"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "오디오 활성화"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "대역폭"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "고화질"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "빠른 반응 속도"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "크기 조정 모드"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "창 크기 맞추기"
-
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "본래 크기"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "첫번째 연결을 하려면 <b>+</b> 단추를 누르세요."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "파일을 해석할 수 없습니다"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC 파일에 “%s” 키가 없습니다"
+
+#~ msgid "Scaling"
+#~ msgstr "크기 조절"
