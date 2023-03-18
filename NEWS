@@ -1,3 +1,22 @@
+44.0 - 18 Mar, 2023
+=====================
+
+Changes since 44.rc
+
+  - Added rdp-preferences-window.vala to POTFILES.in
+  - Added/updated/fixed translations:
+    - Bulgarian
+    - Chinese (Taiwan)
+    - Czech
+    - Danish
+    - French
+    - Greek
+    - Korean
+    - Persian
+    - Polish
+    - Russian
+    - Swedish
+
 44.rc - 03 Mar, 2023
 =====================
 
