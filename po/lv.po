@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2022.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-09-01 23:01+0000\n"
-"PO-Revision-Date: 2022-09-11 11:01+0300\n"
+"POT-Creation-Date: 2023-03-05 17:03+0000\n"
+"PO-Revision-Date: 2023-03-24 22:48+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Savienojumi"
 
@@ -35,27 +35,27 @@ msgid ""
 "system. It can also be used as a way to provide support to users who might "
 "need help."
 msgstr ""
-"Savienojumu lietotne jums ļauj savienoties ar un izmantot citas darbvirsmas."
-" Tas var būt lielisks veids kā piekļūt saturam vai lietotnēm, kas atrodas uz"
-" citām operētājsistēmām. To var arī izmantot, lai sniegtu palīdzību citiem"
-" lietotājiem."
+"Savienojumu lietotne jums ļauj savienoties ar un izmantot citas darbvirsmas. "
+"Tas var būt lielisks veids kā piekļūt saturam vai lietotnēm, kas atrodas uz "
+"citām operētājsistēmām. To var arī izmantot, lai sniegtu palīdzību citiem "
+"lietotājiem."
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
-"Var savienoties ar dažādām operētājsistēmām, tai skaitā Linux un Windows"
-" darbvirsmām. Varat savienoties arī ar virtuālajām mašīnām."
+"Var savienoties ar dažādām operētājsistēmām, tai skaitā Linux un Windows "
+"darbvirsmām. Varat savienoties arī ar virtuālajām mašīnām."
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
-"Savienojumu lietotne izmanto plaši atbalstītos VNC un RDP protokolus, no"
-" kuriem vismaz vienam ir jābūt ieslēgtam uz darbvirsmas, pie kuras mēģināt"
-" pieslēgties."
+"Savienojumu lietotne izmanto plaši atbalstītos VNC un RDP protokolus, no "
+"kuriem vismaz vienam ir jābūt ieslēgtam uz darbvirsmas, pie kuras mēģināt "
+"pieslēgties."
 
 #: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
@@ -141,7 +141,7 @@ msgid "Authentication failed: %s"
 msgstr "Neizdevās autentificēties: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -153,6 +153,11 @@ msgstr "Nē, paldies"
 #: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Aizvērt"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Mainīt darbvirsmas izmēru"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -199,7 +204,7 @@ msgstr "_Parole"
 msgid "Sign In"
 msgstr "Ierakstīties"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Laipni lūdzam Savienojumos"
 
@@ -216,8 +221,8 @@ msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
-"Izmantojiet Savienojumu lietotni, lai skatītu citu darbvirsmu ekrānus. Jūs"
-" varat arī tos kontrolēt, izmantojot peles rādītāju un tastatūru!"
+"Izmantojiet Savienojumu lietotni, lai skatītu citu darbvirsmu ekrānus. Jūs "
+"varat arī tos kontrolēt, izmantojot peles rādītāju un tastatūru!"
 
 #: src/ui/onboarding-dialog.ui:57
 msgid "Connect to different operating systems"
@@ -226,8 +231,8 @@ msgstr "Savienojaties ar citām darbvirsmas sistēmām"
 #: src/ui/onboarding-dialog.ui:58
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr ""
-"Piekļūstiet Linux, Max un Windows darbvirsmām, izmantojot Savienojumu"
-" lietotni."
+"Piekļūstiet Linux, Max un Windows darbvirsmām, izmantojot Savienojumu "
+"lietotni."
 
 #: src/ui/onboarding-dialog.ui:65
 msgid "Enable remote desktop before connecting"
@@ -238,8 +243,8 @@ msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
-"Datori ir jāiestata darbam caur attālināto darbvirsmu, lai ar tiem varētu"
-" savienoties."
+"Datori ir jāiestata darbam caur attālināto darbvirsmu, lai ar tiem varētu "
+"savienoties."
 
 #: src/ui/onboarding-dialog.ui:73
 msgid "We hope that you enjoy Connections!"
@@ -261,9 +266,13 @@ msgstr "Adrese"
 msgid "Name"
 msgstr "Nosaukums"
 
-#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Mērogošana"
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Pielāgoties logam"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Sākotnējais izmērs"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -329,53 +338,48 @@ msgstr "Ctrl + Alt + F7"
 msgid "Display"
 msgstr "Displejs"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "Tikai skatīšanās"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Rādīt lokālo rādītāju"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Aktivēt audio"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Joslas platums"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Augsta kvalitāte"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Ātra atsvaidzināšana"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Mērogošanas režīms"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Pielāgoties logam"
-
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Sākotnējais izmērs"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Spiediet <b>+</b> pogu, lai izveidotu savu pirmo savienojumu."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Neizdevās parsēt datni"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC datnei trūkst “%s” atslēgas"
+
+#~ msgid "Scaling"
+#~ msgstr "Mērogošana"
