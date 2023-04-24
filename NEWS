@@ -1,3 +1,12 @@
+44.1 - 18 Mar, 2023
+=====================
+
+Changes since 44.0
+
+  - Update gtk-frdp which fixes these 2 issues:
+     - Wrong size after connection when resizing is enabled
+     - Crash when connecting second time to the same machine
+
 44.0 - 18 Mar, 2023
 =====================
 
