@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-02-15 13:51+0000\n"
-"PO-Revision-Date: 2022-02-21 11:39+0100\n"
+"POT-Creation-Date: 2023-05-05 13:43+0000\n"
+"PO-Revision-Date: 2023-06-09 09:22-0400\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Pripojenia"
 
@@ -58,7 +58,7 @@ msgstr ""
 "Jeden z týchto protokolov musí byť povolený na pracovnej ploche, ku ktorej "
 "sa chcete pripojiť."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -144,7 +144,7 @@ msgid "Authentication failed: %s"
 msgstr "Overenie totožnosti zlyhalo: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -156,6 +156,11 @@ msgstr "Nie, ďakujem"
 #: src/onboarding-dialog.vala:86
 msgid "Close"
 msgstr "Zavrieť"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Zmeniť veľkosť pracovnej plochy"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -202,7 +207,7 @@ msgstr "_Heslo"
 msgid "Sign In"
 msgstr "Prihlásiť sa"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Vitajte v aplikácii Pripojenia"
 
@@ -263,6 +268,14 @@ msgstr "Adresa"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Názov"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Prispôsobiť oknu"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Pôvodná veľkosť"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -329,59 +342,50 @@ msgid "Display"
 msgstr "Zobrazenie"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "Zmena mierky"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "Iba zobrazenie"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Zobraziť miestny ukazovateľ"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "Povoliť zvuk"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Šírka pásma"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "Vysoká kvalita"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Rýchle obnovovanie"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Režim zmeny mierky"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "Prispôsobiť oknu"
-
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "Pôvodná veľkosť"
-
-#: src/ui/window.ui:53
+#: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Na vytvorenie vášho prvého pripojenia stačí stlačiť tlačidlo <b>+</b>."
 
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Nepodarilo sa analyzovať súbor"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Súboru VNC chýba kľúč „%s”"
+
+#~ msgid "Scaling"
+#~ msgstr "Zmena mierky"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "Pripojenia prostredia GNOME"
