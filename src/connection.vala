@@ -70,7 +70,16 @@ namespace Connections {
                 var filename = _("Screenshot from %s").printf (timestamp);
                 var path = Path.build_filename (Environment.get_user_special_dir (GLib.UserDirectory.PICTURES),
                                                 filename);
-                thumbnail.save (path + ".png", "png");
+                var candidate_file = GLib.File.new_for_path (path + ".png");
+                var file_chooser = new Gtk.FileChooserNative (_("Save Screenshot"),
+                                                              widget.get_toplevel () as Gtk.Window,
+                                                              Gtk.FileChooserAction.SAVE,
+                                                              _("Save"), _("Cancel"));
+                file_chooser.set_file (candidate_file);
+                var response = file_chooser.run ();
+                if (response == Gtk.ResponseType.ACCEPT) {
+                    thumbnail.save (file_chooser.get_file ().get_path (), "png");
+                }
 
                 Notification.OKFunc open = () => {
                     debug ("Opening screenshot file");
