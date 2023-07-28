@@ -2,23 +2,23 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2020.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2020-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-12 08:12+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-07-28 09:10+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : "
-"3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3)\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -51,11 +51,11 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
-"Connections uses the widely supported VNC and RDP protocols, and one of these "
-"must be enabled on the desktop that you want to connect to."
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
 msgstr ""
-"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות פעילים "
-"בשולחן העבודה אליו ברצונך להתחבר."
+"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות "
+"פעילים בשולחן העבודה אליו ברצונך להתחבר."
 
 #: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
@@ -151,13 +151,18 @@ msgstr "האימות נכשל: %s"
 msgid "%d×%d"
 msgstr "‫‎%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "לא תודה"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_לא תודה"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "סגירה"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_סגירה"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "שינוי גודל שולחן העבודה"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -203,19 +208,19 @@ msgstr "_ססמה"
 msgid "Sign In"
 msgstr "כניסה"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "ברוך בואך לחיבורים"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "מידע על אופן העבודה של חיבורים."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "ניתן להשתמש בשולחנות עבודה, מרחוק"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -223,28 +228,29 @@ msgstr ""
 "יש להשתמש בחיבורים כדי לצפות במסך של שולחנות עבודה אחרים. ניתן גם לשלוט בהם "
 "באמצעות הסמן והמקלדת!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "התחברות למגוון מערכות הפעלה"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "גישה לשולחנות עבודה מסוג לינוקס, Mac ו־Windows דרך התוכנית חיבורים."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "יש להפעיל שולחן עבודה מרוחק בטרם החיבור"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to them."
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
 msgstr "יש להגדיר על המחשבים חיבור שולחן עבודה מרוחק בטרם אפשר להתחבר אליהם."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "אנו מקווים שתכנית החיבורים עושה לך רק טוב!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "ניתן למצוא מידע נוסף בעזרה."
 
@@ -359,10 +365,6 @@ msgstr "רענון מהיר"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "מצב שינוי גודל"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "שינוי גודל שולחן העבודה"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
