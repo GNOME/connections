@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-12 20:35+0200\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-07-28 21:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -151,13 +151,20 @@ msgstr "Розпізнавання не пройдено: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Ні, дякую"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+#| msgid "No Thanks"
+msgid "_No Thanks"
+msgstr "_Ні, дякую"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Закрити"
+#: src/onboarding-dialog.vala:96
+#| msgid "Close"
+msgid "_Close"
+msgstr "З_акрити"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Змінити розміри стільниці"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -203,19 +210,19 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Увійти"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Вітаємо у «З'єднаннях»"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Дізнайтеся про те, як працюють «З'єднання»."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Віддалене користування іншими стільничними середовищами"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -224,21 +231,21 @@ msgstr ""
 "комп'ютерів. Ви зможете також керувати вказівником миші і клавіатурою на цих "
 "комп'ютерах!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "З'єднання із іншими операційними системами"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr ""
 "Отримайте доступ до робочих станцій Linux, Mac і Windows за допомогою "
 "«З'єднань»."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Увімкніть віддалену стільницю до встановлення з'єднання"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -246,11 +253,11 @@ msgstr ""
 "Перш ніж ви зможете встановлювати з'єднання із віддаленими комп'ютерами, їх "
 "слід слід належно налаштувати."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Сподіваємося, вам сподобаються «З'єднання»!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Докладніші відомості наведено у довідці."
 
@@ -365,10 +372,6 @@ msgstr "Швидке оновлення"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Режим масштабування"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Змінити розміри стільниці"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
