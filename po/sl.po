@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-21 10:36+0000\n"
-"PO-Revision-Date: 2023-02-27 21:45+0100\n"
+"POT-Creation-Date: 2023-07-28 18:10+0000\n"
+"PO-Revision-Date: 2023-07-29 15:48+0200\n"
 "Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -150,13 +150,18 @@ msgstr "Overitev je spodletela: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Ne, hvala"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ne, hvala"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Zapri"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Zapri"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Spremeni velikost namizja"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -202,19 +207,19 @@ msgstr "_Geslo"
 msgid "Sign In"
 msgstr "Prijava"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Dobrodošli v program Povezovalnik"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Več o tem, kako deluje povezovalnik."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Pregled in oddaljeno upravljanje namizij"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -222,29 +227,29 @@ msgstr ""
 "Povezovalnik omogoča delo na oddaljenih namiznih napravah. Na zaslonu jih je "
 "mogoče upravljati s tipkovnico in miško!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Povezovanje z različnimi operacijskimi sistemi"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Podprto je povezovanje z namizji okolij Linux, Mac in Windows."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Pred povezavo je treba oddaljene naprave nastaviti"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr "Računalnike je treba za delo z oddaljenimi namizji pravilno nastaviti."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Želimo vam enostavno delo s Povezovalnikom!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr ""
 "Več možnosti in podrobnosti o delovanju je zabeleženih na straneh pomoči."
@@ -360,10 +365,6 @@ msgstr "Hitro osveževanje"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Način spreminjanja velikosti"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Spremeni velikost namizja"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
