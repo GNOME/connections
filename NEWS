@@ -1,3 +1,33 @@
+45.beta - 05 Aug, 2023
+=====================
+
+Changes since 44.1
+
+  - Close onboarding dialog when pressing ESC
+  - Add mnemonics to Close/No Thanks button to onboarding
+  - Update gtk-frdp
+    - Desktop resize fixes
+    - Clipboard channel support
+  - Added/updated/fixed translations:
+    - Belarusian
+    - Brazilian Portuguese
+    - Chinese (China)
+    - Dutch
+    - Georgian
+    - German
+    - Greek
+    - Hebrew
+    - Hungarian
+    - Icelandic
+    - Italian
+    - Latvian
+    - Persian
+    - Portuguese
+    - Russian
+    - Slovak
+    - Slovenian
+    - Ukrainian
+
 44.0 - 18 Mar, 2023
 =====================
 
