@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-28 20:28+0200\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-08-07 18:08+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -145,13 +145,18 @@ msgstr "Tunnistautuminen epäonnistui: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Ei kiitos"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ei kiitos"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Sulje"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Sulje"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Muuta työpöydän kokoa"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -197,19 +202,19 @@ msgstr "S_alasana"
 msgid "Sign In"
 msgstr "Kirjaudu sisään"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Tervetuloa"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Lue miten Yhteydet toimii."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Käytä muita työpöytiä, etänä"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -217,19 +222,19 @@ msgstr ""
 "Käytä Yhteydet-sovellusta yhdistääksesi muihin työpöytiin. Voit ohjata "
 "työpöytiä käyttäen hiirtä ja näppäimistöä."
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Yhdistä eri käyttöjärjestelmiin"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Käytä Linux-, Mac- ja Windows-työpöytiä Yhteydet-sovelluksella."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Ota etätyöpöytätuki käyttöön ennen yhdistämistä"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -237,11 +242,11 @@ msgstr ""
 "Tietokoneiden etätyöpöytätuki tulee olla käytössä, ennen kuin yhdistät "
 "niihin."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Toivottavasti Yhteydet on mieleesi!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Lisätietoja on tarjolla ohjeessa."
 
@@ -356,10 +361,6 @@ msgstr "Nopea päivitys"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Skaalaustila"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Muuta työpöydän kokoa"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
