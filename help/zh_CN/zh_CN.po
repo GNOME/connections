@@ -1,0 +1,155 @@
+# Chinese (China) translation for connections.
+# Copyright (C) 2023 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+# Victor_Trista <ljlzjzm@hotmail.com>, 2023.
+# Boyuan Yang <073plan@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections master\n"
+"POT-Creation-Date: 2023-03-26 19:17+0000\n"
+"PO-Revision-Date: 2023-03-07 15:59+0800\n"
+"Last-Translator: Victor_Trista <ljlzjzm@hotmail.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Victor_Trista <ljlzjzm@hotmail.com>, 2023"
+
+#. (itstool) path: credit/name
+#: C/connect.page:9 C/index.page:13
+msgid "Felipe Borges"
+msgstr "Felipe Borges"
+
+#. (itstool) path: credit/years
+#: C/connect.page:11 C/index.page:15
+msgid "2020"
+msgstr "2020"
+
+#. (itstool) path: info/desc
+#: C/connect.page:14
+msgid "Connect to a remote machine over the network."
+msgstr "通过网络连接到远程计算机。"
+
+#. (itstool) path: page/title
+#: C/connect.page:20
+msgid "Connect to another computer"
+msgstr "连接到另一台计算机"
+
+#. (itstool) path: page/p
+#: C/connect.page:22
+msgid "<app>Connections</app> can be used to view and access a remote machine."
+msgstr "<app>连接</app> 可以查看和访问远程计算机。"
+
+#. (itstool) path: note/p
+#: C/connect.page:25
+msgid "The remote machine should already be configured."
+msgstr "远程计算机应当预先配置好。"
+
+#. (itstool) path: item/p
+#: C/connect.page:29
+msgid ""
+"Click <gui style=\"button\">+</gui> in the top left corner to launch the "
+"remote connection creation assistant."
+msgstr "点击左上角的 <gui style=\"button\">+</gui> 以启动远程连接创建助手。"
+
+#. (itstool) path: item/p
+#: C/connect.page:32
+msgid ""
+"Enter a URL containing the protocol, IP address and port number of the "
+"remote device or service. For example:"
+msgstr "输入一个包含远程设备或服务的协议、IP 地址和端口号的 URL。例如："
+
+#. (itstool) path: item/code
+#: C/connect.page:34
+#, no-wrap
+msgid "vnc://192.168.122.1:5900"
+msgstr "vnc://192.168.122.1:5900"
+
+#. (itstool) path: item/p
+#: C/connect.page:35
+msgid "The protocol will be:"
+msgstr "协议可以是："
+
+#. (itstool) path: item/p
+#: C/connect.page:37
+msgid "rdp:// to connect to a remote <app>RDP</app> server."
+msgstr "使用 rdp:// 连接到远程 <app>RDP</app> 服务器。"
+
+#. (itstool) path: item/p
+#: C/connect.page:38
+msgid "vnc:// to connect to a remote <app>vino</app> or <app>VNC</app> server."
+msgstr "使用 vnc:// 连接到远程 <app>vino</app> 或 <app>VNC</app> 服务器。"
+
+#. (itstool) path: note/p
+#: C/connect.page:42
+msgid ""
+"The address and port number should be available from the configuration of "
+"the device or service on the remote machine."
+msgstr "地址和端口号可以从远程计算机的设备或服务的配置中获得。"
+
+#. (itstool) path: item/p
+#: C/connect.page:46
+msgid "Click <gui style=\"button\">Create</gui>."
+msgstr "点击 <gui style=\"button\">创建</gui>。"
+
+#. (itstool) path: page/p
+#: C/connect.page:49
+msgid "The remote machine will open in the collection view."
+msgstr "远程计算机将在集合视图中打开。"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link:trail"
+msgid "Connections"
+msgstr "连接"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Connections"
+msgstr "连接"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Connections"
+msgstr "连接"
+
+#. (itstool) path: info/desc
+#: C/index.page:20
+msgid "Learn to connect to remote machines."
+msgstr "学习如何连接远程计算机。"
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Connections"
+msgstr "<_:media-1/> 连接"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"<app>Connections</app> is a remote desktop client for the GNOME desktop "
+"environment."
+msgstr "<app>连接</app> 是 GNOME 桌面环境的远程桌面客户端。"
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Getting started"
+msgstr "入门"
+
+#. (itstool) path: p/link
+#: C/legal.xml:4
+msgid "Creative Commons Attribution-Share Alike 3.0 Unported License"
+msgstr "Creative Commons Attribution-Share Alike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "本作品在 <_:link-1/> 协议下授权。"
