@@ -9,16 +9,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 19:36+0000\n"
-"PO-Revision-Date: 2023-02-11 23:34+0300\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-07-29 17:50+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
-"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -149,13 +149,18 @@ msgstr "Kimlik doğrulanamadı: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Hayır, teşekkürler"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Hayır, teşekkürler"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Kapat"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Kapat"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Masaüstünü yeniden boyutlandır"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -201,19 +206,19 @@ msgstr "_Parola"
 msgid "Sign In"
 msgstr "Giriş Yap"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Bağlantılar’a Hoş Geldiniz"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Bağlantılarʼın nasıl çalıştığını öğrenin."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Diğer masaüstülerini kullan, uzaktan"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -221,30 +226,30 @@ msgstr ""
 "Diğer masaüstlerinin ekranlarını görmek için Bağlantılarʼı kullanın. Ayrıca "
 "imleç ve klavye kullanarak ekranları denetleyebilirsiniz!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Başka işletim sistemlerine bağlan"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Bağlantılarʼı kullanarak Linux, Mac ve Windows masaüstlerine erişin."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Bağlanmadan önce uzak masaüstünü etkinleştir"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
 "Bilgisayarlar, onlara bağlanılmadan önce uzak masaüstü için ayarlanmalıdır."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Umarız Bağlantılarʼı beğenirsiniz!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Yardım bölümünde daha çok bilgi bulunur."
 
@@ -260,9 +265,13 @@ msgstr "Adres"
 msgid "Name"
 msgstr "Ad"
 
-#: src/ui/rdp-preferences.ui:51
-msgid "Scaling"
-msgstr "Ölçek"
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Pencereye sığdır"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Özgün boyut"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -356,18 +365,6 @@ msgstr "Hızlı yenileme"
 msgid "Scale mode"
 msgstr "Ölçek kipi"
 
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Masaüstünü yeniden boyutlandır"
-
-#: src/ui/vnc-preferences.ui:108
-msgid "Fit window"
-msgstr "Pencereye sığdır"
-
-#: src/ui/vnc-preferences.ui:109
-msgid "Original size"
-msgstr "Özgün boyut"
-
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "İlk bağlantınızı yapmak için <b>+</b> düğmesine basın."
@@ -382,58 +379,3 @@ msgstr "Dosya ayrıştırılamadı"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC dosyasının “%s” anahtarı eksik"
-
-#~ msgid "Learn more."
-#~ msgstr "Daha fazlasını öğrenin."
-
-#~ msgid "Read our tutorial to learn how."
-#~ msgstr "Nasıl olduğunu öğrenmek için eğitim bölümümüzü okuyun."
-
-#~ msgid "Connect to a Desktop"
-#~ msgstr "Bir masaüstüne bağlan"
-
-#~ msgid "Addresses start with either vnc:// or rdp://."
-#~ msgstr "Adresler ya vnc:// ya da rdp:// ile başlar."
-
-#~ msgid "Connections makes it easy to use other desktops remotely."
-#~ msgstr "Bağlantılar diğer masaüstlerini uzaktan kullanmanızı kolaylaştırır."
-
-#~ msgid "Connect to Linux or Windows"
-#~ msgstr "Linux veya Windows'a bağlan"
-
-#~ msgid "Remotely access a range of desktop operating systems."
-#~ msgstr "Bir dizi masaüstü işletim sistemine uzaktan erişin."
-
-#~ msgid "Configure for Access"
-#~ msgstr "Erişim için yapılandır"
-
-#~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr "Bir masaüstüne bağlanmak için önce masaüstünün kurulması gerekir."
-
-#~ msgid "GNOME Connections"
-#~ msgstr "GNOME Bağlantılar"
-
-#~ msgid "A remote desktop client for the GNOME desktop environment."
-#~ msgstr "GNOME masaüstü ortamı için uzak masaüstü istemcisi."
-
-#~ msgid "Create a New Connection"
-#~ msgstr "Yeni Bağlantı Oluştur"
-
-#~ msgid ""
-#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
-#~ "vnc://"
-#~ msgstr ""
-#~ "Bağlanılacak makine adresini gir. Adres, rdp:// veya vnc:// ile "
-#~ "başlayabilir"
-
-#~ msgid "Server"
-#~ msgstr "Sunucu"
-
-#~ msgid "Cancel"
-#~ msgstr "İptal Et"
-
-#~ msgid "Create"
-#~ msgstr "Oluştur"
-
-#~ msgid "org.gnome.Connections"
-#~ msgstr "org.gnome.Connections"
