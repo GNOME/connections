@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the gnome-connections package.
 # FULL NAME <EMAIL@ADDRESS>, 2020.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2020-2023.
+# Daniel Mustieles García <daniel.mustieles@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-21 11:35+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-08-08 07:22+0200\n"
+"Last-Translator: Daniel Mustieles García <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -79,7 +80,7 @@ msgstr "Propiedades"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2021"
+msgstr "Daniel Mustieles <daniel.mustieles@gmail.com>, 2021 - 2023"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -146,13 +147,18 @@ msgstr "Falló la autenticación: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "No gracias"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_No gracias"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Cerrar"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Cerrar"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Redimensionar escritorio"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -199,19 +205,19 @@ msgstr "_Contraseña"
 msgid "Sign In"
 msgstr "Registrarse"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Bienvenido a Conexiones"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Aprender cómo funciona Conexiones."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Usar otros escritorios remotamente"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -219,19 +225,19 @@ msgstr ""
 "Use Conexiones para ver la pantalla de otros escritorios. También puede "
 "controlarlos usando el ratón y el teclado."
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Conéctese a diferentes sistemas operativos"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Acceda a escritorios Linux, Mac y Windows usando Conexiones."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Active el escritorio remoto antes de conectarse"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -239,11 +245,11 @@ msgstr ""
 "El equipo se debe configurar para aceptar conexiones remotas antes de poder "
 "conectarse a él."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Esperamos que disfrute de Conexiones"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Puede encontrar más información en la ayuda"
 
@@ -358,10 +364,6 @@ msgstr "Actualización rápida"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Modo escalado"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Redimensionar escritorio"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
