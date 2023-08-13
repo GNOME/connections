@@ -7,8 +7,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-12 17:00+0100\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-08-13 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -135,13 +135,18 @@ msgstr "Autentifikazioak huts egin du: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Ez, eskerrik asko"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ez"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Itxi"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "It_xi"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Aldatu mahaiganaren tamaina"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -187,47 +192,47 @@ msgstr "_Pasahitza"
 msgid "Sign In"
 msgstr "Hasi saioa"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Ongi etorri Konexioak aplikaziora"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Ikasi Konexioak aplikazioak nola funtzionatzen duen."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Erabili beste mahaigain batzuk urrunetik"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr "Erabili Konexioak aplikazioa beste mahaigain batzuetako pantaila ikusteko. Haiek kontrolatu ahal izango dituzu erakuslea eta teklatua erabilita."
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Konektatu beste sistema eragile batzuekin"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Sartu Linux, Mac eta Windows mahaigainetara Konexioak aplikazioa erabilita."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Gaitu urruneko mahaigaina konexioa gauzatu baino lehen"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr "Ordenagailuak konfiguratu egin behar dira urruneko mahaigain gisa funtzionatu dezaten eta haiekin konektatu ahal izateko."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Espero dugu Konexioak gustuko izango duzula!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Informazio gehiagorako, begiratu laguntza."
 
@@ -342,10 +347,6 @@ msgstr "Freskatze azkarra"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Eskalatze-modua"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Aldatu mahaiganaren tamaina"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
