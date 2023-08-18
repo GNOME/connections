@@ -1,16 +1,16 @@
 # Swedish translation for gnome-connections.
-# Copyright © 2020, 2021 gnome-connections's COPYRIGHT HOLDER
+# Copyright © 2020-2023 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020, 2021.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020, 2021, 2023.
 # Luna Jernberg <droidbittin@gmail.com>, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-12 09:47+0100\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-05-22 11:19+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -151,13 +151,18 @@ msgstr "Autentisering misslyckades: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Nej tack"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Nej tack"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Stäng"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "S_täng"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Ändra storlek på skrivbordet"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -203,19 +208,19 @@ msgstr "_Lösenord"
 msgid "Sign In"
 msgstr "Logga in"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Välkommen till Anslutningar"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Läs mer om hur Anslutningar fungerar."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Använd andra skrivbord på distans"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -223,31 +228,31 @@ msgstr ""
 "Använd Anslutningar för att visa skärmen för andra skrivbord. Du kan också "
 "styra dem med musen och tangentbordet!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Anslut till andra operativsystem"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr ""
 "Kom åt Linux-, Mac- och Windows-skrivbord genom att använda Anslutningar."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Aktivera fjärrskrivbord innan du ansluter"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
 "Datorer måste konfigureras för fjärrskrivbord innan du kan ansluta till dem."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Vi hoppas att du kommer gilla Anslutningar!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Mer information kan hittas i hjälpen."
 
@@ -363,10 +368,6 @@ msgstr "Snabb uppdatering"
 msgid "Scale mode"
 msgstr "Skalningsläge"
 
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Ändra storlek på skrivbordet"
-
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
@@ -381,6 +382,3 @@ msgstr "Kunde inte tolka filen"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-fil saknar nyckeln ”%s”"
-
-#~ msgid "Scaling"
-#~ msgstr "Skalning"
