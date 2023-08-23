@@ -2,13 +2,13 @@
 # Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# A S Alam <amanpreet.alam@gmail.com>, 2021.
+# A S Alam <amanpreet.alam@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-09-13 16:42+0000\n"
-"PO-Revision-Date: 2021-09-18 16:13-0700\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-08-22 17:03-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjab-translation@googlegroups.com>\n"
 "Language: pa\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/window.vala:108
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "ਕਨੈਕਸ਼ਨ"
 
@@ -36,22 +36,29 @@ msgid ""
 "need help."
 msgstr ""
 "ਕਨੈਕਸ਼ਨਜ਼ ਤੁਹਾਨੂੰ ਹੋਰ ਡੈਸਕਟਾਪ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਤੇ ਵਰਤਣ ਦੀ ਮਦਦਗਾਰ ਕਰਦਾ ਹੈ। ਇਹ"
-" ਵੱਖੋ-ਵੱਖਰੇ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਉੱਤੇ ਸਮੱਗਰੀ ਜਾਂ ਸਾਫਟਵੇਅਰ ਵਰਤਣ ਲਈ ਵਧੀਆ ਢੰਗ ਹੈ। ਇਸ"
-" ਨੂੰ ਮਦਦ ਦੇ ਚਾਹਵਾਨ ਵਰਤੋਂਕਾਰਾਂ ਵਾਸਤੇ ਵਧੀਆ ਢੰਗ ਵੀ ਹੋ ਸਕਦਾ ਹੈ।"
+" ਵੱਖੋ-ਵੱਖਰੇ ਓਪਰੇਟਿੰਗ "
+"ਸਿਸਟਮ ਉੱਤੇ ਸਮੱਗਰੀ ਜਾਂ ਸਾਫਟਵੇਅਰ ਵਰਤਣ ਲਈ ਵਧੀਆ ਢੰਗ ਹੈ। ਇਸ ਨੂੰ ਮਦਦ ਦੇ ਚਾਹਵਾਨ"
+" ਵਰਤੋਂਕਾਰਾਂ ਵਾਸਤੇ "
+"ਵਧੀਆ ਢੰਗ ਵੀ ਹੋ ਸਕਦਾ ਹੈ।"
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
+"ਲੀਨਕਸ ਅਤੇ ਵਿੰਡੋਜ਼ ਡੈਸਕਟਾਪ ਸਮੇਤ ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮਾਂ ਨਾਲ"
+" ਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਸੀਂ ਵਰਚੁਅਲ ਮਸ਼ੀਨਾਂ ਨਾਲ ਵੀ ਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹੋ।"
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
+"ਕਨੈਕਸ਼ਨ ਵੱਡੇ ਪੱਧਰ ਉੱਤੇ ਸਹਾਇਕ VNC ਅਤੇ RDP ਪਰੋਟੋਕਾਲਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ ਅਤੇ ਇਹਨਾਂ"
+" ਵਿੱਚੋਂ ਕੋਈ ਇੱਕ ਡੈਸਕਟਾਪ ਉੱਤੇ ਸਮਰੱਥ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਕਨੈਕਟ ਕਰਨਾ"
+" ਚਾਹੁੰਦੇ ਹੋ।"
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "ਗਨੋਮ ਪਰੋਜੈਕਟ"
 
@@ -77,78 +84,85 @@ msgstr ""
 "ਅ ਸ ਆਲਮ (A S Alam) ੨੦੨੧\n"
 "Punjabi OpenSource Team (POST) www.satluj.org"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "ਗਨੋਮ ਡੈਸਕਟਾਪ ਇਨਵਾਇਰਨਮੈਂਟ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਕਲਾਈਂਟ"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "ਅਣਜਾਣ ਮਾਈਮ ਕਿਸਮ %s ਦੀ ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "“%s” ਲਈ ਕਨੈਕਸ਼ਨ ਨੂੰ ਹਟਾਇਆ ਗਿਆ ਹੈ"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "ਵਾਪਸ ਲਵੋ"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "ਕਨੈਕਟ ਕਰਨ ਲਈ URL"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "ਦਿੱਤੇ ਮਾਰਗ ਤੋਂ .vnc ਜਾਂ .rdp ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: src/application.vala:231
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "ਪੂਰੀ ਸਕਰੀਨ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "ਬਹੁਤ ਸਾਰੇ ਕਮਾਂਡ-ਲਾਈਨ ਆਰਗੂਮੈਂਟ ਦਿੱਤੇ ਗਏ।\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "%s ਤੋਂ ਸਕਰੀਨਸ਼ਾਟ"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "ਸਕਰੀਨਸ਼ਾਟ ਲਿਆ"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” ਲਈ ਪਰਮਾਣਕਿਤਾ ਚਾਹੀਦੀ ਹੈ"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "ਪਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "ਨਹੀਂ ਜੀ ਧੰਨਵਾਦ"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+#| msgid "No Thanks"
+msgid "_No Thanks"
+msgstr "ਨਹੀਂ ਜੀ ਧੰਨਵਾਦ(_T)"
 
-#: src/onboarding-dialog.vala:88
-msgid "Close"
-msgstr "ਬੰਦ ਕਰੋ"
+#: src/onboarding-dialog.vala:96
+#| msgid "Close"
+msgid "_Close"
+msgstr "ਬੰਦ ਕਰੋ(_C)"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "ਡੈਸਕਟਾਪ ਦਾ ਆਕਾਰ ਬਦਲੋ"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -160,10 +174,9 @@ msgstr "ਪੂਰੀ ਸਕਰੀਨ"
 
 #: src/ui/assistant.ui:26
 msgid "Enter the network identifier of the remote desktop to connect to:"
-msgstr ""
+msgstr "ਇਸ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਲਈ ਨੈੱਟਵਰਕ ਪਛਾਣਕਰਤਾ ਦਿਓ:"
 
 #: src/ui/assistant.ui:53
-#| msgid "Connections"
 msgid "Connection Type"
 msgstr "ਕਨੈਕਸ਼ਨ ਦੀ ਕਿਸਮ"
 
@@ -171,16 +184,15 @@ msgstr "ਕਨੈਕਸ਼ਨ ਦੀ ਕਿਸਮ"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (Windows ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਟੈਂਡਰਡ)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (ਲੀਨਕਸ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਟੈਂਡਰਡ)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "ਮਦਦ"
 
-#: src/ui/assistant.ui:98
-#| msgid "Connections"
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "ਕਨੈਕਟ ਕਰੋ"
 
@@ -196,74 +208,76 @@ msgstr "ਪਾਸਵਰਡ(_P)"
 msgid "Sign In"
 msgstr "ਸਾਇਨ ਇਨ ਕਰੋ"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "ਕਨੈਕਸ਼ਨਸ ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਉਣ ਲਈ <b>+</b> ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
-
-#: src/ui/onboarding-dialog.ui:42
-#, fuzzy
+#: src/ui/onboarding-dialog.ui:43
 #| msgid "About Connections"
 msgid "Learn about how Connections works."
-msgstr "ਕਨੈਕਸ਼ਨਸ ਬਾਰੇ"
+msgstr "ਕਨੈਕਸ਼ਨ ਦੇ ਕੰਮ ਕਰਨ ਬਾਰੇ ਸਿੱਖੋ।"
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "ਹੋਰ ਡੈਸਕਟਾਪ ਵਰਤੋਂ, ਰਿਮੋਟ ਤੋਂ"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 msgstr ""
 "ਹੋਰ ਡੈਸਕਟਾਪਾਂ ਦੀ ਸਕਰੀਨ ਵੇਖਣ ਲਈ ਕਨੈਕਸ਼ਨਜ਼ ਵਰਤੋਂ। ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਪੁਆਇੰਟਰ ਤੇ"
-" ਕੀਬੋਰਡ ਵਰਤ ਕੇ ਕੰਟਰੋਲ ਕਰ ਸਕਦੇ ਹੋ!"
+" ਕੀਬੋਰਡ ਵਰਤ ਕੇ ਕੰਟਰੋਲ "
+"ਕਰ ਸਕਦੇ ਹੋ!"
 
-#: src/ui/onboarding-dialog.ui:57
-#| msgid "Connection Properties"
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "ਵੱਖੋ-ਵੱਖਰੇ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "ਲੀਨਕਸ, ਮੈਕ ਤੇ ਵਿੰਡੋਜ਼ ਡੈਸਕਟਾਪਾਂ ਨੂੰ ਕਨੈਕਸ਼ਨਜ਼ ਰਾਹੀਂ ਇਸਤੇਮਾਲ ਕਰੋ।"
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "ਕਨੈਕਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸਮਰੱਥ ਕਰੋ"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr ""
 "ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਤੁਸੀਂ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ, ਉਹਨਾਂ ਨਾਲ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸੈਟ"
-" ਅੱਪ ਕਰਨ ਦੀ ਲੋੜ ਹੈ।"
+" ਅੱਪ ਕਰਨ ਦੀ ਲੋੜ "
+"ਹੈ।"
 
-#: src/ui/onboarding-dialog.ui:73
-#| msgid "Welcome to Connections"
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "ਸਾਨੂੰ ਆਸ ਹੈ ਕਿ ਤੁਸੀਂ ਕਨੈਕਸ਼ਨਸ ਆਨੰਦ ਮਾਣੋਗੇ!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "ਹੋਰ ਜਾਣਕਾਰੀ ਮਦਦ ਵਿੱਚ ਲੱਭੀ ਜਾ ਸਕਦੀ ਹੈ।"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
-#| msgid "Connection Properties"
 msgid "Connection preferences"
 msgstr "ਕਨੈਕਸ਼ਨ ਪਸੰਦਾਂ"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "ਐਡਰੈਸ"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "ਨਾਂ"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "ਵਿੰਡੋ ਲਈ ਫਿੱਟ ਕਰੋ"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "ਅਸਲ ਆਕਾਰ"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -325,57 +339,55 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
-#| msgid "Display Menu"
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "ਡਿਸਪਲੇਅ"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "ਸਕੇਲਿੰਗ"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "ਸਿਰਫ਼ ਵੇਖਣ ਲਈ"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "ਲੋਕਲ ਪੁਆਇੰਟਰ ਵੇਖਾਓ"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "ਆਡੀਓ ਸਮਰੱਥ ਕਰੋ"
+
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "ਬੈਂਡਵਿਡਥ"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "ਉੱਚ ਕੁਆਲਟੀ"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "ਤੇਜ਼ ਤਾਜ਼ਾ"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "ਸਕੇਲ ਮੋਡ"
 
-#: src/ui/vnc-preferences.ui:108
-msgid "Fit window"
-msgstr "ਵਿੰਡੋ ਲਈ ਫਿੱਟ ਕਰੋ"
+#: src/ui/window.ui:52
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਉਣ ਲਈ <b>+</b> ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
 
-#: src/ui/vnc-preferences.ui:109
-msgid "Original size"
-msgstr "ਅਸਲ ਆਕਾਰ"
-
-#: src/vnc-connection.vala:123
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "ਫਾਇਲ ਨੂੰ ਪਾਰਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC ਫਾਇਲ ਲਈ “%s” ਕੁੰਜੀ ਗੁੰਮ ਹੈ"
+
+#~ msgid "Scaling"
+#~ msgstr "ਸਕੇਲਿੰਗ"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "ਗਨੋਮ ਕਨੈਕਸ਼ਨਸ"
