@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-03-05 17:03+0000\n"
-"PO-Revision-Date: 2023-03-15 23:27+0900\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-08-31 13:09+0900\n"
 "Last-Translator: DaeHyun Sung <sungdh86+git@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -150,13 +150,13 @@ msgstr "인증 실패: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "아니요 괜찮습니다"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "아니요 괜찮습니다(_N)"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "닫기"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "닫기(_C)"
 
 #. Translators: Combo item for resizing remote desktop to window's size
 #: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
@@ -207,19 +207,19 @@ msgstr "암호(_P)"
 msgid "Sign In"
 msgstr "로그인"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "연결에 오신걸 환영합니다"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "연결 프로그램이 어떻게 동작하는지 알아봅니다."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "원격으로 다른 데스크톱 사용하기"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -227,29 +227,29 @@ msgstr ""
 "연결 프로그램을 사용해 다른 데스크톱의 화면을 볼 수 있습니다. 포인팅 장치와 "
 "키보드를 사용해 데스크톱을 조작할 수도 있습니다!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "여러가지 운영 체제에 연결"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "연결 프로그램을 사용해 리눅스, 맥, 윈도우 데스크톱에 접근합니다."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "연결하기 전에 원격 데스크톱을 켜십시오"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 msgstr "연결하기 전에 해당 컴퓨터에 원격 데스크톱을 준비해야 합니다."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "연결을 즐겁게 사용해 주세요!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "더 많은 정보를 도움말에서 찾을 수 있습니다."
 
