@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-18 22:32+0200\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-09-03 21:55+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 42.0\n"
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -62,7 +62,7 @@ msgstr "GNOME projektas"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
-msgstr "vnc;rdp;nutolęs;darbalaukis;langai;pagalba;prieiga;rodymas;"
+msgstr "vnc;rdp;nutolęs;darbalaukis;langai;pagalba;prieiga;rodymas"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -148,13 +148,18 @@ msgstr "Nepavyko patvirtinti tapatybės: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Ne, ačiū"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ne, ačiū"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Užverti"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Užverti"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Keisti darbalaukio dydį"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -201,19 +206,19 @@ msgstr "Sla_ptažodis"
 msgid "Sign In"
 msgstr "Prisijungti"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Sveiki pradėję naudoti ryšius"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
-msgstr "Sužinokite daugiau, kaip veikia ryšiai"
+msgstr "Sužinokite daugiau, kaip veikia ryšiai."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Naudokitės kitais darbalaukiais nuotoliniu būdu"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -221,19 +226,19 @@ msgstr ""
 "Naudokite ryšius kitų darbalaukių ekranams matyti. Taip pat galite juos "
 "valdyti žymekliu bei klaviatūra!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Prisijunkite prie skirtingų operacinių sistemų"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Pasiekite Linux, Mac bei Windows darbalaukius ryšių pagalba."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Įjunkite nuotolinį darbalaukį prie prisijungdami"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -241,11 +246,11 @@ msgstr ""
 "Kompiuterius reikia sukonfigūruoti nuotoliniam darbalaukio naudojimui prie "
 "jungiantis prie jų."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Tikimės, kad jums patiks ryšių programa!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Daugiau informacijos rasite žinyne."
 
@@ -360,10 +365,6 @@ msgstr "Greitas atnaujinimas"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Ištempimo veiksena"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Keisti darbalaukio dydį"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
