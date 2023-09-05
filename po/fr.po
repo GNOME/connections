@@ -1,7 +1,6 @@
 # French translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Guillaume Bernard <associations@guillaume-bernard.fr>, 2021
 # Thibault Martin <thibaultamartin@gnome.org>, 2021.
 # Charles Monzat <charles.monzat@free.fr>, 2020-2022.
@@ -10,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-03-03 12:21+0100\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-09-05 15:16+0200\n"
 "Last-Translator: Alan Paris <Alan90000@yahoo.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -153,13 +152,18 @@ msgstr "Échec de l’authentification : %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Non merci"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Non merci"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Fermer"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Fermer"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Redimensionner le bureau"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -206,20 +210,20 @@ msgstr "_Mot de passe"
 msgid "Sign In"
 msgstr "Authentification"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Bienvenue dans Connexions"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Comment Connexions fonctionne."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Utilisez d’autres bureaux à distance"
 
 # Note : « pointer » est traduit par « souris » et non « pointeur » qui serait plus correct principalement pour rendre la traduction plus accessible aux non-initiés
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -227,19 +231,19 @@ msgstr ""
 "Utilisez Connexions pour visualiser l’écran d’autres bureaux. Vous pouvez "
 "également les contrôler avec la souris et le clavier !"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Connectez-vous à différents systèmes d’exploitation"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Accédez à des bureaux Linux, Mac et Windows en utilisant Connexions."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Activez le bureau à distance avant de vous connecter"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -247,11 +251,11 @@ msgstr ""
 "Les ordinateurs doivent avoir activé la connexion de bureau à distance pour "
 "que vous puissiez vous y connecter."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Nous espérons que vous appréciez Connexions !"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "L’aide contient plus d’informations."
 
@@ -366,10 +370,6 @@ msgstr "Actualisation rapide"
 #: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Mode de mise à l’échelle"
-
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Redimensionner le bureau"
 
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
