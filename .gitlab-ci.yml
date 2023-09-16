@@ -29,7 +29,7 @@ fedora:latest:
     - dnf update -y --nogpgcheck
     - dnf install -y meson git vala gtk3-devel
                      gtk-vnc2-devel gvncpulse-devel gettext freerdp-devel
-                     libhandy1-devel python3-devel libsecret-devel --nogpgcheck
+                     libhandy1-devel python3-devel libsecret-devel fuse3-devel --nogpgcheck
 
     script:
         - meson _build .
