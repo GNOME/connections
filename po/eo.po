@@ -1,14 +1,14 @@
 # Esperanto translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2020.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2020-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2020-11-22 11:44+0000\n"
-"PO-Revision-Date: 2020-11-28 17:25+0100\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-09-22 19:03+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
@@ -16,29 +16,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 42.0\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "GNOME Konektoj"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+msgid "Connections"
+msgstr "Konektoj"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "Defora labortabla montrilo por la GNOME labortablo"
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Vidi kaj uzi aliajn labortablojn"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "Defora labortabla montrilo por la GNOME labortablo."
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Konektoj permesas vin konekti kaj uzi aliajn labortablojn. Ĉi tio povas esti "
+"bonega maniero aliri enhavon aŭ programaron sur malsama labortabla "
+"operaciumo. Ĝi ankaŭ povas esti uzata kiel maniero provizi subtenon al "
+"uzantoj, kiuj eble bezonos helpon."
 
-#: data/org.gnome.Connections.appdata.xml.in:28
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Gamo da malsamaj operaciumoj povas esti konektita al, inkluzive de Linuksaj "
+"kaj Vindozaj labortabloj. Vi ankaŭ povas konektiĝi al virtualaj maŝinoj."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Konektoj uzas la vaste subtenatajn protokolojn VNC kaj RDP, kaj unu el ĉi "
+"tiuj devas esti ebligita sur la labortablo al kiu vi volas konektiĝi."
+
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "La projekto GNOME"
 
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Konektoj"
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;defora;labortablo;fenestroj;subteno;aliro;vido"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -48,101 +72,123 @@ msgstr "Defora labortabla (VNC) dosiero"
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Ecoj"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
 msgstr "Kristjan SCHMIDT"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Defora labortabla montrilo por la GNOME labortablo"
+
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Ne eblis malfermi dosieron kun nekonata MIME-tipo %s"
 
-#: src/application.vala:170
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Konekto al “%s”estas forigita"
 
-#: src/application.vala:172
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Malfari"
 
-#: src/application.vala:211
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL por konekti"
 
-#: src/application.vala:212
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Malfermi .vnc- aŭ .rdp-dosieron je la donita VOJO"
 
 #: src/application.vala:234
+msgid "Open in full screen"
+msgstr "Malfermi tutekrane"
+
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Tro multe komandliniaj argumentoj specifitaj.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Ekrankopio de %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Faris ekrankopion"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Malfermi"
 
-#: src/connection.vala:188
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” bezonas aŭtentigon"
 
+#: src/connection.vala:200
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Aŭtentigo malsukcesis: %s"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128 src/vnc-connection.vala:285
-msgid "Scaling"
-msgstr "Skalado"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ne, dankon"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Fermi"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Aligrandigi labortablon"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
 msgstr "Fari ekrankopion"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Krei novan konekton"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Tutekrana reĝimo"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
-"Enigu adreson de maŝino al kiu vi volas konekti. Adresoj povas komenci kun "
-"rdp:// aŭ vnc://"
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Enigu la retidentigilon de la fora labortablo por konektiĝi al:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Servilo"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Tipo de konekto"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:45
-msgid "Name"
-msgstr "Nomo"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (normo por konekti al Vindozo)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Nuligi"
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (normo por konekti al Linukso)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Krei"
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Helpo"
+
+#: src/ui/assistant.ui:100
+msgid "Connect"
+msgstr "Konekti"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
@@ -156,21 +202,73 @@ msgstr "_Pasvorto"
 msgid "Sign In"
 msgstr "Saluti"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Bonvenon al Konektoj"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Nur alklaku la <b>+</b> butonon por krei vian unuan konekton."
+#: src/ui/onboarding-dialog.ui:43
+msgid "Learn about how Connections works."
+msgstr "Lerni kiel Konektoj funkcias."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr "Konekto-atributoj"
+#: src/ui/onboarding-dialog.ui:50
+msgid "Use other desktops, remotely"
+msgstr "Uzu aliajn labortablojn, defore"
 
-#: src/ui/properties.ui:108
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Use Connections to view the screen of other desktops. You can control them "
+"using the pointer and keyboard, too!"
+msgstr ""
+"Uzi Konektojn por vidi la ekranon de aliaj labortabloj. Vi ankaŭ povas "
+"kontroli ilin per la montrilo kaj klavaro!"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Connect to different operating systems"
+msgstr "Konekti al diversaj operaciumoj"
+
+#: src/ui/onboarding-dialog.ui:59
+msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgstr "Aliri Linukso, Mac, kaj Vindozaj labortabloj per Konektoj."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Enable remote desktop before connecting"
+msgstr "Ebligi foran labortablon antaŭ konektiĝi"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Computers need to be set up for remote desktop before you can connect to "
+"them."
+msgstr ""
+"Komputiloj devas esti agordita por fora labortablo antaŭ ol vi povas konekti "
+"al ili."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "We hope that you enjoy Connections!"
+msgstr "Ni espers ke vi ŝatas Konektojn!"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "More information can be found in the help."
+msgstr "Pliaj informoj troveblas en la helpo."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Konekto-agordoj"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Adreso"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "Nomo"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Adapti fenestron"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Origina grandeco"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -204,65 +302,105 @@ msgstr "Klavkombinoj"
 msgid "Keyboard Shortcuts"
 msgstr "Klavkombinoj"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Helpo"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
 msgstr "Pri Konektoj"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
 msgstr "Stir + Alt + Reen"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
 msgstr "Stir + Alt + For"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
 msgstr "Stir + Alt + F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
 msgstr "Stir + Alt + F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
 msgstr "Stir + Alt + F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
 msgstr "Stir + Alt + F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Ekrano"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "View only"
+msgstr "Nurvida"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "Show local pointer"
+msgstr "Montri lokan montrilon"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "Ebligi sonon"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Kapacito"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Alta kvalito"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Rapida aktualigo"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Skala reĝimo"
+
+#: src/ui/window.ui:52
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Nur alklaku la <b>+</b> butonon por krei vian unuan konekton."
+
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Ne povis analizi la dosieron"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Al VNC-dosiero mankas ŝlosilo “%s”"
 
-#: src/vnc-connection.vala:295
-msgid "View only"
-msgstr "Nurvida"
+#~ msgid "GNOME Connections"
+#~ msgstr "GNOME Konektoj"
 
-#: src/vnc-connection.vala:305
-msgid "Show local pointer"
-msgstr "Montri lokan montrilon"
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Defora labortabla montrilo por la GNOME labortablo."
 
-#: src/vnc-connection.vala:315
-msgid "High quality"
-msgstr "Alta kvalito"
+#~ msgid "Scaling"
+#~ msgstr "Skalado"
 
-#: src/vnc-connection.vala:316
-msgid "Fast refresh"
-msgstr "Rapida aktualigo"
+#~ msgid "Create a New Connection"
+#~ msgstr "Krei novan konekton"
 
-#: src/vnc-connection.vala:319
-msgid "Bandwidth"
-msgstr "Kapacito"
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Enigu adreson de maŝino al kiu vi volas konekti. Adresoj povas komenci "
+#~ "kun rdp:// aŭ vnc://"
+
+#~ msgid "Server"
+#~ msgstr "Servilo"
+
+#~ msgid "Cancel"
+#~ msgstr "Nuligi"
+
+#~ msgid "Create"
+#~ msgstr "Krei"
