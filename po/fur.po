@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-11 21:37+0000\n"
-"PO-Revision-Date: 2023-02-20 20:32+0000\n"
-"Last-Translator: Fabio T. <f.t.public@gmail.com>\n"
+"POT-Creation-Date: 2023-05-16 10:45+0000\n"
+"PO-Revision-Date: 2023-09-30 16:28+0200\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Editor: HaiPO 1.4 beta\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -54,8 +54,7 @@ msgid ""
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
 "Conessions al dopre i protocoi VNC e RDP, che a son supuartâts in misure "
-"bondante. Si à di abilitâ un di chescj sul scritori dulà che si vûl "
-"conetisi."
+"bondante. Si à di abilitâ un di chescj sul scritori dulà che si vûl conetisi."
 
 #: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
@@ -79,7 +78,7 @@ msgstr "Proprietâts"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Fabio Tomat, <f.t.public@gmail.com>, 2021"
+msgstr "Fabio Tomat, <f.t.public@gmail.com>, 2023"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -146,13 +145,18 @@ msgstr "Autenticazion falide: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "No graciis"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_No graciis"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Siere"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Siere"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Ridimensione scritori"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -198,19 +202,19 @@ msgstr "_Password"
 msgid "Sign In"
 msgstr "Jentre"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Benvignûts su Conessions"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Scuvierç cemût che al funzione Conessions."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Dopre altris scritoris, di lontan"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -218,19 +222,19 @@ msgstr ""
 "Dopre Conessions par viodi il schermi di altris scritoris. Tu ju puedis "
 "ancje controlâ doprant il pontadôr e la tastiere!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Conetiti a diviers sistemis operatîfs"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Jentre sui scritoris Linux, Mac e Windows doprant Conessions."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Abilite il scritori lontan prime di colegâti"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -238,11 +242,11 @@ msgstr ""
 "Al è necessari configurâ i computers pal scritori esterni prime di podêsi "
 "colegâ cun lôr."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "O sperìn che tu ti gjoldis Conessions!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Al è pussibil cjatâ plui informazions tal jutori."
 
@@ -358,10 +362,6 @@ msgstr "Inzornament veloç"
 msgid "Scale mode"
 msgstr "Modalitât ridimensionament"
 
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Ridimensione scritori"
-
 #: src/ui/window.ui:52
 msgid "Just hit the <b>+</b> button to make your first connection."
 msgstr "Al baste fracâ il boton <b>+</b> par creâ la tô prime conession."
@@ -405,7 +405,8 @@ msgstr "Al file VNC al mancje la clâf “%s”"
 #~ msgstr "Configure pal acès"
 
 #~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr "Par podê conetisi a un scritori, chest al à prime di sei configurât."
+#~ msgstr ""
+#~ "Par podê conetisi a un scritori, chest al à prime di sei configurât."
 
 #~ msgid "GNOME Connections"
 #~ msgstr "GNOME Conessions"
@@ -420,8 +421,8 @@ msgstr "Al file VNC al mancje la clâf “%s”"
 #~ "Enter a machine address to connect to. Address can begin with rdp:// or "
 #~ "vnc://"
 #~ msgstr ""
-#~ "Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ cun "
-#~ "rdp:// o vnc://"
+#~ "Inserìs une direzion machine dulà conetisi. Lis direzions a puedin tacâ "
+#~ "cun rdp:// o vnc://"
 
 #~ msgid "Server"
 #~ msgstr "Servidôr"
