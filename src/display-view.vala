@@ -41,7 +41,9 @@ namespace Connections {
         private ulong show_display_id;
 
         construct {
-            event_box.set_events (EventMask.POINTER_MOTION_MASK | EventMask.SCROLL_MASK | EventMask.SMOOTH_SCROLL_MASK);
+            event_box.set_events (EventMask.POINTER_MOTION_MASK |
+                                  EventMask.SCROLL_MASK |
+                                  EventMask.SMOOTH_SCROLL_MASK);
         }
 
         private void remove_display () {
