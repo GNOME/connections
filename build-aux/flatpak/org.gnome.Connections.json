@@ -83,7 +83,9 @@
             "sources" : [
                 {
                     "type" : "git",
-                    "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git"
+                    "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git",
+                    "branch": "certificate-verification",
+                    "commit" : "baed363950cc6ad54f1bb229405cebab3677b0c1"
                 }
             ],
             "modules": [
