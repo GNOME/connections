@@ -1,123 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <!-- interface-requires gtk+ 3.9 -->
-  <template class="ConnectionsAuthNotification" parent="GtkRevealer">
+  <!-- interface-requires gtk+ 4.0 -->
+  <template class="ConnectionsAuthNotification" parent="GtkBox">
     <property name="visible">True</property>
     <property name="valign">start</property>
-    <property name="border-width">6</property>
 
     <child>
-      <object class="GtkGrid" id="grid">
-        <property name="visible">True</property>
-        <property name="column-spacing">12</property>
-        <property name="row-spacing">6</property>
-        <style>
-          <class name="app-notification"/>
-        </style>
-
-        <child>
-          <object class="GtkLabel" id="title_label">
+      <object class="GtkRevealer" id="revealer">
+        <property name="margin-start">6</property>
+        <property name="margin-end">6</property>
+        <property name="margin-top">6</property>
+        <property name="margin-bottom">6</property>
+        <property name="child">
+          <object class="GtkGrid" id="grid">
             <property name="visible">True</property>
-            <property name="use-markup">True</property>
-            <property name="halign">start</property>
-            <property name="margin-bottom">18</property>
-          </object>
-
-          <packing>
-            <property name="left-attach">0</property>
-            <property name="top-attach">0</property>
-            <property name="width">2</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-
-        <child>
-          <object class="GtkLabel" id="username_label">
-            <property name="visible">True</property>
-            <property name="use-underline">True</property>
-            <property name="margin-start">12</property>
-            <property name="label" translatable="yes">_Username</property>
-            <property name="mnemonic-widget">username_entry</property>
-          </object>
-
-          <packing>
-            <property name="left-attach">0</property>
-            <property name="top-attach">1</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-
-        <child>
-          <object class="GtkEntry" id="username_entry">
-            <property name="visible">True</property>
-            <signal name="map" handler="on_username_entry_map"/>
-            <signal name="activate" handler="on_username_entry_activated"/>
-          </object>
-
-          <packing>
-            <property name="left-attach">1</property>
-            <property name="top-attach">1</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-
-        <child>
-          <object class="GtkLabel" id="password_label">
-            <property name="visible">True</property>
-            <property name="use-underline">True</property>
-            <property name="margin-start">12</property>
-            <property name="label" translatable="yes">_Password</property>
-            <property name="mnemonic-widget">password_entry</property>
-          </object>
-
-          <packing>
-            <property name="left-attach">0</property>
-            <property name="top-attach">2</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-
-        <child>
-          <object class="GtkEntry" id="password_entry">
-            <property name="visible">True</property>
-            <property name="visibility">False</property>
-            <signal name="map" handler="on_password_entry_map"/>
-            <signal name="activate" handler="on_password_entry_activated"/>
-          </object>
-
-          <packing>
-            <property name="left-attach">1</property>
-            <property name="top-attach">2</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-
-        <child>
-          <object class="GtkButton" id="auth_button">
-            <property name="visible">True</property>
-            <property name="halign">end</property>
-            <signal name="clicked" handler="on_auth_button_clicked"/>
+            <property name="column-spacing">12</property>
+            <property name="row-spacing">6</property>
+            <style>
+              <class name="app-notification"/>
+            </style>
 
             <child>
-              <object class="GtkLabel" id="auth_button_label">
+              <object class="GtkLabel" id="title_label">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">Sign In</property>
+                <property name="use-markup">True</property>
+                <property name="halign">start</property>
+                <property name="margin-bottom">18</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">0</property>
+                  <property name="column-span">2</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkLabel" id="username_label">
+                <property name="visible">True</property>
+                <property name="use-underline">True</property>
+                <property name="margin-start">12</property>
+                <property name="label" translatable="yes">_Username</property>
+                <property name="mnemonic-widget">username_entry</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkEntry" id="username_entry">
+                <property name="visible">True</property>
+                <signal name="map" handler="on_username_entry_map"/>
+                <signal name="activate" handler="on_username_entry_activated"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkLabel" id="password_label">
+                <property name="visible">True</property>
+                <property name="use-underline">True</property>
+                <property name="margin-start">12</property>
+                <property name="label" translatable="yes">_Password</property>
+                <property name="mnemonic-widget">password_entry</property>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkEntry" id="password_entry">
+                <property name="visible">True</property>
+                <property name="visibility">False</property>
+                <signal name="map" handler="on_password_entry_map"/>
+                <signal name="activate" handler="on_password_entry_activated"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkButton" id="auth_button">
+                <property name="visible">True</property>
+                <property name="halign">end</property>
+                <property name="child">
+                  <object class="GtkLabel" id="auth_button_label">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">Sign In</property>
+                  </object>
+                </property>
+                <signal name="clicked" handler="on_auth_button_clicked"/>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">3</property>
+                </layout>
               </object>
             </child>
           </object>
-
-          <packing>
-            <property name="left-attach">1</property>
-            <property name="top-attach">3</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-
+        </property>
       </object>
     </child>
   </template>

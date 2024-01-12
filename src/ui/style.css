@@ -24,3 +24,7 @@
     background-size: 60%;
     background-position: center 15%;
 }
+
+.size-label {
+    border-radius: 10px;
+}

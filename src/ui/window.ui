@@ -1,86 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.20"/>
-    <template class="ConnectionsWindow" parent="GtkApplicationWindow">
-      <property name="title" translatable="yes">Connections</property>
+  <requires lib="gtk+" version="4.0"/>
+    <template class="ConnectionsWindow" parent="AdwApplicationWindow">
       <property name="resizable">True</property>
-      <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
-      <signal name="delete-event" handler="on_delete_event"/>
+      <property name="fullscreened" bind-source="topbar" bind-property="visible" bind-flags="bidirectional|invert-boolean"/>
 
-      <child type="titlebar">
-        <object class="ConnectionsTopbar" id="topbar">
-          <property name="visible">True</property>
-        </object>
-      </child>
+      <property name="content">
+        <object class="AdwToolbarView">
+          <property name="top-bar-style">raised-border</property>
 
-      <child>
-        <object class="GtkBox">
-          <property name="visible">True</property>
-          <property name="orientation">vertical</property>
-  
-          
-          <child>
-            <object class="GtkSearchBar" id="search_bar">
-              <property name="visible">True</property>
+          <child type="top">
+            <object class="ConnectionsTopbar" id="topbar">
+              <property name="hexpand">True</property>
             </object>
           </child>
 
-          <child>
-            <object class="GtkOverlay" id="notification_overlay">
-              <property name="visible">True</property>
-
-              <child type="overlay">
-                <object class="ConnectionsNotificationsBar" id="notifications_bar">
-                  <property name="visible">True</property>
+          <property name="content">
+            <object class="GtkBox">
+              <property name="orientation">vertical</property>
+              <child>
+                <object class="GtkSearchBar" id="search_bar">
                 </object>
               </child>
 
               <child>
-                <object class="GtkStack" id="stack">
-                  <property name="visible">True</property>
-
-                  <child>
-                    <object class="ConnectionsCollectionView" id="collection_view">
-                      <property name="visible">True</property>
+                <object class="GtkOverlay" id="notification_overlay">
+                  <child type="overlay">
+                    <object class="ConnectionsNotificationsBar" id="notifications_bar">
                     </object>
                   </child>
 
                   <child>
-                    <object class="HdyStatusPage" id="empty_view">
-                      <property name="visible">True</property>
-                      <property name="title" translatable="yes">Welcome to Connections</property>
-                      <property name="description" translatable="yes">Just hit the &lt;b&gt;+&lt;/b&gt; button to make your first connection.</property>
-                    </object>
-                  </child>
-
-                  <child>
-                    <object class="ConnectionsDisplayView" id="display_view">
-                      <property name="visible">True</property>
-                    </object>
-                  </child>
-
-                  <child>
-                    <object class="GtkBox" id="loading_view">
-                      <property name="visible">True</property>
-                      <property name="expand">True</property>
+                    <object class="GtkStack" id="stack">
+                      <property name="halign">fill</property>
+                      <property name="valign">fill</property>
 
                       <child>
-                        <object class="GtkSpinner">
-                          <property name="visible">True</property>
-                          <property name="active">True</property>
-                          <property name="width-request">32</property>
-                          <property name="height-request">32</property>
+                        <object class="GtkStackPage">
+                          <property name="name">collection_view</property>
+                          <property name="child">
+                            <object class="ConnectionsCollectionView" id="collection_view">
+                            </object>
+                          </property>
                         </object>
-                        <packing>
-                          <property name="expand">True</property>
-                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="AdwStatusPage" id="empty_view">
+                          <property name="title" translatable="yes">Welcome to Connections</property>
+                          <property name="description" translatable="yes">Just hit the &lt;b&gt;+&lt;/b&gt; button to make your first connection.</property>
+                        </object>
+                      </child>
+
+                      <child>
+                        <object class="ConnectionsDisplayView" id="display_view">
+                        </object>
+                      </child>
+
+                      <child>
+                        <object class="GtkBox" id="loading_view">
+                          <property name="hexpand">True</property>
+                          <property name="vexpand">True</property>
+
+                          <child>
+                            <object class="GtkSpinner">
+                              <property name="spinning">True</property>
+                              <property name="width-request">32</property>
+                              <property name="height-request">32</property>
+                              <property name="hexpand">True</property>
+                              <property name="vexpand">True</property>
+                            </object>
+                          </child>
+                        </object>
                       </child>
                     </object>
                   </child>
                 </object>
               </child>
             </object>
-          </child>
+          </property>
+        </object>
+      </property>
+      <child>
+        <object class="GtkEventControllerKey">
+          <signal name="key-pressed" handler="on_key_pressed" swapped="no"/>
         </object>
       </child>
     </template>

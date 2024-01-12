@@ -65,6 +65,7 @@ namespace Connections {
         }
 
         private void show_help () {
+/*
             try {
                 Gtk.show_uri_on_window (main_window,
                               "help:gnome-connections",
@@ -72,6 +73,7 @@ namespace Connections {
             } catch (GLib.Error error) {
                 warning ("Failed to display help: %s", error.message);
             }
+*/
         }
 
         private void show_about_dialog () {
@@ -98,8 +100,8 @@ namespace Connections {
         public override void startup () {
             base.startup ();
 
-            Hdy.init ();
-            Hdy.StyleManager.get_default ().color_scheme = PREFER_DARK;
+            Adw.init ();
+            Adw.StyleManager.get_default ().color_scheme = PREFER_DARK;
         }
 
         public override void activate () {
@@ -144,9 +146,11 @@ namespace Connections {
             var mime_type = GLib.ContentType.guess(file_path, null, null);
 
             switch (mime_type) {
+/*
                 case "application/x-vnc":
                     connection = new VncConnection.from_vnc_file (file_path);
                     break;
+*/
                 default:
                     warning ( _ ("Couldn’t open file of unknown mime type %s".printf (mime_type)));
                     break;

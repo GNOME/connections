@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="ConnectionsOnboardingDialog" parent="HdyWindow">
+  <template class="ConnectionsOnboardingDialog" parent="AdwWindow">
     <property name="modal">True</property>
     <property name="resizable">False</property>
     <property name="type-hint">dialog</property>
     <property name="height-request">600</property>
     <property name="width-request">710</property>
-    <signal name="delete-event" handler="gtk_widget_hide_on_delete"/>
-    <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
     <style>
       <class name="onboarding-dialog"/>
     </style>
@@ -27,11 +25,12 @@
         <child>
           <object class="GtkOverlay">
             <property name="visible">True</property>
-            <property name="expand">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
             <property name="valign">start</property>
 
             <child>
-              <object class="HdyCarousel" id="paginator">
+              <object class="AdwCarousel" id="paginator">
                 <property name="visible">True</property>
                 <property name="animation-duration">400</property>
                 <property name="margin-bottom">12</property>
@@ -81,12 +80,13 @@
             </child>
 
             <child type="overlay">
+              <property name="can-target">False</property>
               <object class="GtkBox">
                 <property name="visible">True</property>
                 <property name="orientation">horizontal</property>
                 <property name="border-width">20</property>
 
-                <child>
+                <child type="start">
                   <object class="GtkButton" id="go_back_button">
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
@@ -105,12 +105,9 @@
                       </object>
                     </child>
                   </object>
-                  <packing>
-                    <property name="pack-type">start</property>
-                  </packing>
                 </child>
 
-                <child>
+                <child type="end">
                   <object class="GtkButton" id="go_next_button">
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
@@ -129,14 +126,8 @@
                       </object>
                     </child>
                   </object>
-                  <packing>
-                    <property name="pack-type">end</property>
-                  </packing>
                 </child>
               </object>
-              <packing>
-                <property name="pass-through">True</property>
-              </packing>
             </child>
           </object>
         </child>
@@ -153,7 +144,7 @@
         </child>
 
         <child>
-          <object class="HdyCarouselIndicatorDots" id="indicator">
+          <object class="AdwCarouselIndicatorDots" id="indicator">
             <property name="visible">True</property>
             <property name="carousel">paginator</property>
             <property name="margin-top">6</property>

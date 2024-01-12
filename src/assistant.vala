@@ -27,9 +27,9 @@ namespace Connections {
         [GtkChild]
         private unowned Gtk.Button create_button; 
         [GtkChild]
-        private unowned Gtk.RadioButton rdp_radio_button;
+        private unowned Gtk.CheckButton rdp_radio_button;
         [GtkChild]
-        private unowned Gtk.RadioButton vnc_radio_button;
+        private unowned Gtk.CheckButton vnc_radio_button;
 
         private bool uri_has_supported_scheme (string uri) {
             return uri.has_prefix ("rdp://") || uri.has_prefix ("vnc://");
@@ -91,6 +91,7 @@ namespace Connections {
 
         [GtkCallback]
         private void on_help_button_clicked () {
+/*
             try {
                 Gtk.show_uri_on_window (Application.application.main_window,
                                         "help:gnome-connections/connect",
@@ -98,6 +99,7 @@ namespace Connections {
             } catch (GLib.Error error) {
                 warning ("Failed to display help: %s", error.message);
             }
+*/
         }
     }
 }

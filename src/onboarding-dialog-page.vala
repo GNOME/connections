@@ -38,7 +38,7 @@ namespace Connections {
             """.printf (image);
 
             try {
-                provider.load_from_data (css);
+                provider.load_from_string (css);
                 get_style_context ().add_provider (provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
             } catch (GLib.Error error) {
                 warning ("Failed to load CSS: %s", error.message);

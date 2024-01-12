@@ -10,7 +10,10 @@
           <property name="visible">True</property>
           <property name="pixel-size">24</property>
           <property name="halign">fill</property>
-          <property name="margin">10</property>
+          <property name="margin-start">10</property>
+          <property name="margin-end">10</property>
+          <property name="margin-top">10</property>
+          <property name="margin-bottom">10</property>
           <property name="width-request">180</property>
           <property name="height-request">134</property>
           <style>
@@ -33,11 +36,9 @@
           <property name="wrap">True</property>
           <property name="wrap-mode">word-char</property>
           <property name="margin-top">10</property>
+          <property name="hexpand">False</property>
+          <property name="vexpand">False</property>
         </object>
-        <packing>
-          <property name="expand">False</property>
-          <property name="fill">True</property>
-        </packing>
       </child>
     </template>
   </interface>

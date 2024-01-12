@@ -21,7 +21,7 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/window.ui")]
-    private class Window : Gtk.ApplicationWindow {
+    private class Window : Adw.ApplicationWindow {
         [GtkChild]
         private unowned Topbar topbar;
 
@@ -29,7 +29,7 @@ namespace Connections {
         private unowned Gtk.Stack stack;
 
         [GtkChild]
-        private unowned Hdy.StatusPage empty_view;
+        private unowned Adw.StatusPage empty_view;
 
         [GtkChild]
         public unowned CollectionView collection_view;
@@ -40,15 +40,8 @@ namespace Connections {
         [GtkChild]
         public unowned NotificationsBar notifications_bar;
 
-        public bool fullscreened {
-            get { return Gdk.WindowState.FULLSCREEN in get_window ().get_state (); }
-            set {
-                if (value)
-                    fullscreen ();
-                else
-                    unfullscreen ();
-            }
-        }
+        [GtkChild]
+        public unowned Gtk.Overlay notification_overlay;
 
         public Window (Gtk.Application app) {
             Object (application: app);
@@ -64,9 +57,9 @@ namespace Connections {
                 var file = File.new_for_uri ("resource:///org/gnome/Connections/ui/style.css");
                 style_provider.load_from_file (file);
 
-                Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                          style_provider,
-                                                          Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+                Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (),
+                                                           style_provider,
+                                                           Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             } catch (GLib.Error error) {
                 warning ("Failed to load CSS: %s", error.message);
             }
@@ -76,6 +69,8 @@ namespace Connections {
             if (app.application_id == "org.gnome.Connections.Devel") {
                 get_style_context ().add_class ("devel");
             }
+
+            close_request.connect (on_close);
         }
 
         public void bind_model (ListModel model) {
@@ -112,51 +107,49 @@ namespace Connections {
         }
 
         public void show_preferences_window (Connection connection) {
-            if (connection is VncConnection)
+/*            if (connection is VncConnection)
                 (new VncPreferencesWindow (connection)).present ();
-            else if (connection is RdpConnection)
+            else*/ if (connection is RdpConnection)
                 (new RdpPreferencesWindow (connection)).present ();
             else
                 debug ("Failed to launch preferences window for %s", connection.uri);
         }
 
         [GtkCallback]
-        private bool on_key_pressed (Gtk.Widget widget, Gdk.EventKey event) {
+        private bool on_key_pressed (Gtk.EventControllerKey controller,
+                                     uint                   keyval,
+                                     uint                   keycode,
+                                     Gdk.ModifierType       modifiers) {
             var default_modifiers = Gtk.accelerator_get_default_mod_mask ();
 
-            if (event.keyval == Gdk.Key.f &&
-                (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
+            if (keyval == Gdk.Key.f &&
+                (modifiers & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
                 collection_view.search_bar.search_mode_enabled = !collection_view.search_bar.search_mode_enabled;
-
                 return true;
-            } else if (event.keyval == Gdk.Key.F11) {
+            } else if (keyval == Gdk.Key.F11) {
                 fullscreened = !fullscreened;
-
                 return true;
-            } else if (event.keyval == Gdk.Key.q &&
-                       (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
+            } else if (keyval == Gdk.Key.q &&
+                       (modifiers & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
                 Application.application.quit_app ();
-
                 return true;
-            } else if (event.keyval == Gdk.Key.F1) {
+            } else if (keyval == Gdk.Key.F1) {
                 Application.application.activate_action ("help", null);
-
                 return true;
-            } else if (event.keyval == Gdk.Key.n &&
-                       (event.state & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
+            } else if (keyval == Gdk.Key.n &&
+                       (modifiers & default_modifiers) == Gdk.ModifierType.CONTROL_MASK) {
                 topbar.assistant.popdown ();
-
                 return true;
             }
 
-            if (stack.visible_child == collection_view)
-                return collection_view.search_bar.handle_event ((Gdk.Event) event);
+            if (stack.visible_child == collection_view) {
+                return controller.forward (collection_view.search_bar);
+            }
 
             return false;
         }
 
-        [GtkCallback]
-        private bool on_delete_event () {
+        private bool on_close () {
             notifications_bar.dismiss ();
 
             return false;

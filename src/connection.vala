@@ -73,6 +73,7 @@ namespace Connections {
                 thumbnail.save (path + ".png", "png");
 
                 Notification.OKFunc open = () => {
+/*
                     debug ("Opening screenshot file");
                     try {
                         Gtk.show_uri_on_window (Application.application.main_window,
@@ -81,6 +82,7 @@ namespace Connections {
                     } catch (GLib.Error error) {
                         warning ("Failed to open screenshot: %s", error.message);
                     }
+*/
                 };
                 var message = _("Screenshot taken");
                 // Translators: Open is a verb

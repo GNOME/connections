@@ -22,6 +22,7 @@
 namespace Connections {
     private class RdpConnection : Connection {
         private FrdpDisplay display;
+
         public override Gtk.Widget widget {
             set {
                 display = value as FrdpDisplay;
@@ -43,7 +44,7 @@ namespace Connections {
 
                 var surface = new Cairo.ImageSurface (ARGB32, alloc.width, alloc.height);
                 var context = new Cairo.Context (surface);
-                widget.draw (context);
+/*                widget.draw (context);*/
 
                 return Gdk.pixbuf_get_from_surface (surface, 0, 0, alloc.width, alloc.height);
             }
@@ -76,10 +77,12 @@ namespace Connections {
             display.rdp_connected.connect (on_rdp_connection_connected_cb);
             //display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_auth_failure.connect (auth_failed);
-            display.size_allocate.connect (scale);
+            display.resize.connect (resize_cb);
 
             notify["scale-mode"].connect (scale);
             display.notify["resize-supported"].connect (update_resize_supported);
+
+            widget = display;
 
             need_username = need_password = true;
         }
@@ -150,11 +153,16 @@ namespace Connections {
             show ();
         }
 
+        public void resize_cb (int width,
+                               int height) {
+            scale ();
+        }
+
         public void scale () {
             if (!display.is_open ())
                 return;
 
-            display.scaling = display.expand = false;
+            display.scaling = display.vexpand = display.hexpand = false;
 
             switch (scale_mode) {
                 case "resize-desktop":

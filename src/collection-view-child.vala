@@ -56,8 +56,8 @@ namespace Connections {
                 thumbnail_id = 0;
 
                 if (!connection.connected) {
-                    thumbnail.set_from_icon_name (default_thumbnail_icon,
-                                                  Gtk.IconSize.LARGE_TOOLBAR);
+                    thumbnail.set_from_icon_name (default_thumbnail_icon);
+                    thumbnail.set_icon_size (Gtk.IconSize.LARGE);
                     return Source.REMOVE;
                 }
 

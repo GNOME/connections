@@ -15,8 +15,8 @@ connections_sources = [
   'rdp-connection.vala',
   'rdp-preferences-window.vala',
   'topbar.vala',
-  'vnc-connection.vala',
-  'vnc-preferences-window.vala',
+#  'vnc-connection.vala',
+#  'vnc-preferences-window.vala',
   'window.vala',
 ]
 
@@ -27,12 +27,12 @@ connections_deps = [
   valac.find_library ('config', dirs: src_dir),
   cc.find_library('m'),
   dependency('gio-2.0', version: '>= 2.50'),
-  dependency('gtk+-3.0', version: '>= 3.22'),
-  dependency('gtk-vnc-2.0', version: '> 0.4.4'),
-  dependency('gvncpulse-1.0'),
-  dependency('libhandy-1', version: '>= 1.6.0'),
+  dependency('gtk4'),
+#  dependency('gtk-vnc-2.0', version: '> 0.4.4'),
+#  dependency('gvncpulse-1.0'),
   dependency ('libxml-2.0', version: '>= 2.7.8'),
   dependency ('libsecret-1'),
+  dependency('libadwaita-1', version: '>= 1.4'),
 ]
 
 gtk_frdp_dep = dependency('gtk-frdp-0.2', required: false)
@@ -61,7 +61,7 @@ c_args = [
 vala_args = [
   '--enable-experimental',
   '--disable-since-check',
-  '--target-glib=2.50',
+  '--target-glib=2.78',
 ]
 
 executable('gnome-connections', connections_sources,

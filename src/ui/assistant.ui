@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.20"/>
+  <requires lib="gtk+" version="4.0"/>
     <template class="ConnectionsAssistant" parent="GtkPopover">
-      <property name="border-width">10</property>
 
-      <child>
-        <object class="GtkBox">
+      <property name="child">
+        <object class="GtkBox" id="box">
           <property name="visible">True</property>
           <property name="orientation">vertical</property>
 
@@ -13,7 +12,10 @@
             <object class="GtkBox">
               <property name="visible">True</property>
               <property name="orientation">vertical</property>
-              <property name="margin">10</property>
+              <property name="margin-start">10</property>
+              <property name="margin-end">10</property>
+              <property name="margin-top">10</property>
+              <property name="margin-bottom">10</property>
               <property name="spacing">5</property>
 
               <child>
@@ -43,7 +45,10 @@
             <object class="GtkBox">
               <property name="visible">True</property>
               <property name="orientation">vertical</property>
-              <property name="margin">10</property>
+              <property name="margin-start">10</property>
+              <property name="margin-end">10</property>
+              <property name="margin-top">10</property>
+              <property name="margin-bottom">10</property>
               <property name="spacing">5</property>
 
               <child>
@@ -58,7 +63,7 @@
               </child>
 
               <child>
-                <object class="GtkRadioButton" id="rdp_radio_button">
+                <object class="GtkCheckButton" id="rdp_radio_button">
                   <property name="visible">True</property>
                   <property name="label" translatable="yes">RDP (standard for connecting to Windows)</property>
                   <signal name="toggled" handler="on_url_entry_changed"/>
@@ -66,7 +71,7 @@
               </child>
 
               <child>
-                <object class="GtkRadioButton" id="vnc_radio_button">
+                <object class="GtkCheckButton" id="vnc_radio_button">
                   <property name="visible">True</property>
                   <property name="group">rdp_radio_button</property>
                   <property name="label" translatable="yes">VNC (standard for connecting to Linux)</property>
@@ -79,7 +84,10 @@
           <child>
             <object class="GtkBox">
               <property name="visible">True</property>
-              <property name="margin">10</property>
+              <property name="margin-start">10</property>
+              <property name="margin-end">10</property>
+              <property name="margin-top">10</property>
+              <property name="margin-bottom">10</property>
               <property name="spacing">5</property>
 
               <child>
@@ -107,7 +115,7 @@
             </object>
           </child>
         </object>
-      </child>
+      </property>
     </template>
 
     <object class="GtkEntryCompletion" id="url_completion">

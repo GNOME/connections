@@ -25,12 +25,11 @@ using Gdk;
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/display-view.ui")]
     private class DisplayView : Gtk.Box {
-        [GtkChild]
-        private unowned EventBox event_box;
 
+        [GtkChild]
+        private unowned ScrolledWindow scrolled_window;
         [GtkChild]
         private unowned Stack stack;
-
         [GtkChild]
         private unowned Label size_label;
         [GtkChild]
@@ -39,16 +38,19 @@ namespace Connections {
         private Connection? connection;
 
         private ulong show_display_id;
+        private int last_width = -1;
+        private int last_height = -1;
 
-        construct {
-            event_box.set_events (EventMask.POINTER_MOTION_MASK | EventMask.SCROLL_MASK);
+        [GtkCallback]
+        private void motion_cb (double x,
+                                double y) {
+            if (!Application.application.main_window.fullscreened)
+                return;
+
+            escape_fullscreen_button.visible = (y < 40.0);
         }
 
         private void remove_display () {
-            var widget = event_box.get_child ();
-            if (widget != null)
-                event_box.remove (widget);
-
             if (connection == null)
                 return;
 
@@ -57,28 +59,54 @@ namespace Connections {
         }
 
         public void replace_display (Connection connection) {
-            if (event_box.get_child () == connection.widget)
-                return;
-
             remove_display ();
 
             this.connection = connection;
-            var display = connection.widget;
+            var display = (Gtk.DrawingArea) connection.widget;
 
-            display.set_events (display.get_events () & ~EventMask.POINTER_MOTION_MASK);
-            event_box.add (display);
-            event_box.show_all ();
+            display.hexpand = false;
+            display.vexpand = false;
+            display.halign = Gtk.Align.CENTER;
+            display.valign = Gtk.Align.CENTER;
+            display.focusable = true;
 
-            ulong draw_id = 0;
-            draw_id = display.draw.connect (() => {
-                display.disconnect (draw_id);
+            scrolled_window.set_child (display);
+            scrolled_window.show ();
+            display.show ();
 
-                /*cursor_id = display.get_window ().notify["cursor"].connect (() => {
-                   event_box.get_window ().set_cursor (display.get_window ().cursor);
-                });*/
+            ulong resize_id = 0;
+            resize_id = display.resize.connect (display_resize_cb);
+        }
 
-                return false;
-            });
+        private uint size_label_timeout;
+        private void display_resize_cb (int width, int height) {
+            var display = (Gtk.DrawingArea) connection.widget;
+
+            if (width != last_width || height != last_height) {
+                // Translators: Showing size of widget as WIDTH×HEIGHT here.
+                size_label.label = _("%d×%d").printf (width, height);
+
+                Idle.add (() => {
+                    size_label.visible = true;
+
+                    if (size_label_timeout != 0) {
+                        Source.remove (size_label_timeout);
+                        size_label_timeout = 0;
+                    }
+
+                    size_label_timeout = Timeout.add_seconds (3, () => {
+                        size_label.visible = false;
+                        size_label_timeout = 0;
+
+                        return false;
+                    });
+
+                    return false;
+                });
+            }
+
+            last_width = width;
+            last_height = height;
         }
 
         public void connect_to (Connection connection) {
@@ -100,63 +128,9 @@ namespace Connections {
         }
 
         [GtkCallback]
-        private bool on_event_box_event (Gdk.Event event) {
-            if (event.type == EventType.GRAB_BROKEN)
-                return false;
-
-            if (event_box.get_child () != null)
-                event_box.get_child ().event (event);
-
-            return false;
-        } 
-
-        private uint size_label_timeout;
-        private int width = -1;
-        private int height = -1;
-        [GtkCallback]
-        private void on_size_allocate (Gtk.Allocation allocation) {
-            if (width == allocation.width && height == allocation.height) {
-                return;
-            }
-
-            width = allocation.width;
-            height = allocation.height;
-
-            // Translators: Showing size of widget as WIDTH×HEIGHT here.
-            size_label.label = _("%d×%d").printf (allocation.width, allocation.height);
-
-            Idle.add (() => {
-                size_label.visible = true;
-
-                if (size_label_timeout != 0) {
-                    Source.remove (size_label_timeout);
-                    size_label_timeout = 0;
-                }
-
-                size_label_timeout = Timeout.add_seconds (3, () => {
-                    size_label.visible = false;
-                    size_label_timeout = 0;
-
-                    return false;
-                });
-
-                return false;
-            });
-        }
-
-        [GtkCallback]
         private void on_escape_fullscreen_button_clicked () {
             Application.application.main_window.fullscreened = false;
             escape_fullscreen_button.visible = false;
-        }
-
-        public override bool motion_notify_event (Gdk.EventMotion event) {
-            if (!Application.application.main_window.fullscreened)
-                return false;
-
-            escape_fullscreen_button.visible = (event.y < 40);
-
-            return base.motion_notify_event (event);
         }
     }
 }

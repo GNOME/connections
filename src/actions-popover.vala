@@ -47,8 +47,6 @@ namespace Connections {
             action = action_group.lookup_action ("properties") as GLib.SimpleAction;
             menu.append (_("Properties"), "connection.properties");
             action.set_enabled (true);
-
-            bind_model (menu, null);
         }
 
         private void delete_activated () {

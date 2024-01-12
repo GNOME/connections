@@ -145,7 +145,9 @@ namespace Connections {
 
             List<Connections.Connection >? connections = new List<Connections.Connection> ();
             foreach (var uuid in keyfile.get_groups ()) {
-                connections.append (get_connection (uuid));
+                var connection = get_connection (uuid);
+                if (connection != null)
+                    connections.append (connection);
             }
 
             return connections;
@@ -160,9 +162,11 @@ namespace Connections {
             Connection? connection = null;
             var protocol = get_string (uuid, "protocol");
             switch (protocol) {
+/*
                 case "vnc":
                     connection = new VncConnection (uuid);
                     break;
+*/
                 case "rdp":
                     connection = new RdpConnection (uuid);
                     break;
@@ -185,9 +189,11 @@ namespace Connections {
 
             var uri = Xml.URI.parse (_uri);
             switch (uri.scheme) {
+/*
                 case "vnc":
                     connection = new VncConnection.from_uri (_uri);
                     break;
+*/
                 case "rdp":
                     connection = new RdpConnection.from_uri (_uri);
                     break;

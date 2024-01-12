@@ -21,17 +21,19 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/topbar.ui")]
-    private class Topbar : Gtk.Stack {
+    private class Topbar : Gtk.Box {
         [GtkChild]
-        private unowned Hdy.HeaderBar collection_toolbar;
+        private unowned Gtk.Stack stack;
+        [GtkChild]
+        private unowned Adw.HeaderBar collection_toolbar;
         [GtkChild]
         public unowned Gtk.Button search_button;
         [GtkChild]
-        private unowned Gtk.HeaderBar display_toolbar;
+        private unowned Adw.HeaderBar display_toolbar;
         [GtkChild]
         public unowned Connections.Assistant assistant;
-
         private weak Connections.Connection connection;
+
         private const GLib.ActionEntry[] action_entries = {
             {"take_screenshot", take_screenshot_activated},
             {"fullscreen", fullscreen_activated},
@@ -83,13 +85,14 @@ namespace Connections {
 
         private void fullscreen_activated () {
             Application.application.main_window.fullscreened =
-                !Application.application.main_window.fullscreened;
+               !Application.application.main_window.fullscreened;
+            visible = false;
         }
 
         [GtkCallback]
         private void back_button_clicked () {
             Application.application.main_window.show_collection_view ();
-            set_visible_child (collection_toolbar);
+            stack.set_visible_child (collection_toolbar);
         }
 
         [GtkCallback]
@@ -102,19 +105,19 @@ namespace Connections {
         public void show_collection_view () {
             this.connection = null;
 
-            set_visible_child (collection_toolbar);
+            stack.set_visible_child (collection_toolbar);
         }
 
         public void show_display_view (Connection connection) {
             this.connection = connection;
 
-            set_visible_child (display_toolbar);
+            stack.set_visible_child (display_toolbar);
 
-            display_toolbar.set_title (connection.get_visible_name ());
+            display_toolbar.set_title_widget (new Gtk.Label (connection.get_visible_name ()));
         }
 
         public void set_title (string title) {
-            collection_toolbar.set_title (title);
+            collection_toolbar.set_title_widget (new Gtk.Label (title));
         }
 
         private void ctrl_alt_backspace_activated () {

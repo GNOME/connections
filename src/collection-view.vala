@@ -21,9 +21,11 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/collection-view.ui")]
-    public class CollectionView : Gtk.ScrolledWindow {
+    public class CollectionView : Gtk.Box {
         [GtkChild]
-        private unowned Gtk.FlowBox flowbox; 
+        private unowned Gtk.ScrolledWindow scrolled_window;
+        [GtkChild]
+        private unowned Gtk.FlowBox flowbox;
         [GtkChild]
         public unowned Gtk.SearchBar search_bar;
         [GtkChild]
@@ -46,7 +48,7 @@ namespace Connections {
             child.halign = Gtk.Align.START;
 
             var box = new CollectionViewChild (item as Connection);
-            child.add (box);
+            child.set_child (box);
 
             return child;
         }
@@ -58,8 +60,9 @@ namespace Connections {
                 return;
 
             Application.application.open_connection (item.connection);
-        } 
+        }
 
+/*
         [GtkCallback]
         private bool on_button_release_event (Gdk.EventButton event) { 
             if (event.type != Gdk.EventType.BUTTON_RELEASE || event.button != 3)
@@ -69,6 +72,7 @@ namespace Connections {
 
             return launch_context_popover_for_child (child);
         }
+*/
 
         private bool launch_context_popover_for_child (Gtk.FlowBoxChild child) {
             var item = child.get_child () as CollectionViewChild;
@@ -76,7 +80,7 @@ namespace Connections {
                 return false;
 
             popover.update_for_item (item.connection);
-            popover.set_relative_to (item.thumbnail);
+/*            popover.set_relative_to (item.thumbnail);*/
             popover.show ();
 
             return true;

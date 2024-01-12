@@ -1,191 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.20"/>
-    <template class="ConnectionsTopbar" parent="GtkStack">
+  <requires lib="gtk+" version="4.0"/>
+    <template class="ConnectionsTopbar" parent="GtkBox">
       <child>
-        <object class="HdyHeaderBar" id="collection_toolbar">
-          <property name="visible">True</property>
-          <property name="show-close-button">True</property>
-          <property name="title" translatable="yes">Connections</property>
-          <style>
-            <class name="titlebar"/>
-          </style>
+        <object class="GtkStack" id="stack">
+          <property name="hexpand">True</property>
 
           <child>
-            <object class="GtkMenuButton" id="new_button">
-              <property name="visible">True</property>
-              <property name="popover">assistant</property>
-
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-new-button">
-                  <property name="accessible-name" translatable="yes">New</property>
+            <object class="AdwHeaderBar" id="collection_toolbar">
+              <property name="show-end-title-buttons">True</property>
+              <property name="title-widget">
+                <object class="AdwWindowTitle">
+                  <property name="title" translatable="yes">Connections</property>
                 </object>
-              </child>
-
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">list-add-symbolic</property>
-                  <property name="icon-size">1</property>
-                </object>
-              </child>
-            </object>
-          </child>
-
-          <child>
-            <object class="GtkMenuButton" id="main_menu_button">
-              <property name="visible">True</property>
-              <property name="menu_model">main_menu_model</property>
-
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-application-menu">
-                  <property name="accessible-name" translatable="yes">Application Menu</property>
-                </object>
-              </child>
-
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">open-menu-symbolic</property>
-                  <property name="icon-size">1</property>
-                </object>
-              </child>
-            </object>
-            <packing>
-              <property name="pack-type">end</property>
-            </packing>
-          </child>
-
-          <child>
-            <object class="GtkToggleButton" id="search_button">
-              <property name="visible">False</property>
-              <property name="use-underline">True</property>
-              <property name="valign">center</property>
+              </property>
               <style>
-                <class name="image-button"/>
+                <class name="titlebar"/>
               </style>
 
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-search-button">
-                  <property name="accessible-name" translatable="yes">Search</property>
+              <child>
+                <object class="GtkMenuButton" id="new_button">
+                  <property name="popover">assistant</property>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-new-button">
+                      <property name="accessible-name" translatable="yes">New</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">list-add-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
                 </object>
               </child>
 
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">edit-find-symbolic</property>
-                  <property name="icon-size">1</property>
+              <child type="end">
+                <object class="GtkMenuButton" id="main_menu_button">
+                  <property name="menu_model">main_menu_model</property>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-application-menu">
+                      <property name="accessible-name" translatable="yes">Application Menu</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">open-menu-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <child type="end">
+                <object class="GtkToggleButton" id="search_button">
+                  <property name="visible">False</property>
+                  <property name="use-underline">True</property>
+                  <property name="valign">center</property>
+                  <style>
+                    <class name="image-button"/>
+                  </style>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-search-button">
+                      <property name="accessible-name" translatable="yes">Search</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">edit-find-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
                 </object>
               </child>
             </object>
-            <packing>
-              <property name="pack-type">end</property>
-            </packing>
-          </child>
-        </object>
-      </child>
-
-      <child>
-        <object class="GtkHeaderBar" id="display_toolbar">
-          <property name="visible">True</property>
-          <property name="show-close-button">True</property>
-          <style>
-            <class name="titlebar"/>
-          </style>
-
-          <child>
-            <object class="GtkButton" id="back_button">
-              <property name="visible">True</property>
-              <signal name="clicked" handler="back_button_clicked"/>
-
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-back-button">
-                  <property name="accessible-name" translatable="yes">Go Back</property>
-                </object>
-              </child>
-
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">go-previous-symbolic</property>
-                  <property name="icon-size">1</property>
-                </object>
-              </child>
-            </object>
-          </child>
-
-          <child>
-            <object class="GtkMenuButton" id="display_menu_button">
-              <property name="visible">True</property>
-              <property name="menu_model">display_menu_model</property>
-
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-display-menu">
-                  <property name="accessible-name" translatable="yes">Display Menu</property>
-                </object>
-              </child>
-
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">view-more-symbolic</property>
-                  <property name="icon-size">1</property>
-                </object>
-              </child>
-            </object>
-            <packing>
-              <property name="pack-type">end</property>
-            </packing>
           </child>
 
           <child>
-            <object class="GtkButton" id="disconnect_button">
-              <property name="visible">True</property>
-              <signal name="clicked" handler="disconnect_button_clicked"/>
+            <object class="AdwHeaderBar" id="display_toolbar">
+              <property name="show-end-title-buttons">True</property>
+              <style>
+                <class name="titlebar"/>
+              </style>
 
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-disconnect-button">
-                  <property name="accessible-name" translatable="yes">Disconnect</property>
+              <child>
+                <object class="GtkButton" id="back_button">
+                  <signal name="clicked" handler="back_button_clicked"/>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-back-button">
+                      <property name="accessible-name" translatable="yes">Go Back</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">go-previous-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
                 </object>
               </child>
 
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">system-shutdown-symbolic</property>
-                  <property name="icon-size">1</property>
+              <child type="end">
+                <object class="GtkMenuButton" id="display_menu_button">
+                  <property name="menu_model">display_menu_model</property>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-display-menu">
+                      <property name="accessible-name" translatable="yes">Display Menu</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">view-more-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+              <child type="end">
+                <object class="GtkButton" id="disconnect_button">
+                  <signal name="clicked" handler="disconnect_button_clicked"/>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-disconnect-button">
+                      <property name="accessible-name" translatable="yes">Disconnect</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">system-shutdown-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
+                </object>
+              </child>
+
+
+              <child type="end">
+                <object class="GtkMenuButton" id="keys_menu_button">
+                  <property name="popover">keys_input_popover</property>
+
+<!--
+                  <child internal-child="accessible">
+                    <object class="AtkObject" id="a11y-keyboard-menu">
+                      <property name="accessible-name" translatable="yes">Keyboard shortcuts</property>
+                    </object>
+                  </child>
+-->
+
+                  <child>
+                    <object class="GtkImage">
+                      <property name="icon-name">input-keyboard-symbolic</property>
+                      <property name="icon-size">1</property>
+                    </object>
+                  </child>
                 </object>
               </child>
             </object>
-            <packing>
-              <property name="pack-type">end</property>
-            </packing>
-          </child>
-
-
-          <child>
-            <object class="GtkMenuButton" id="keys_menu_button">
-              <property name="visible">True</property>
-              <property name="popover">keys_input_popover</property>
-
-              <child internal-child="accessible">
-                <object class="AtkObject" id="a11y-keyboard-menu">
-                  <property name="accessible-name" translatable="yes">Keyboard shortcuts</property>
-                </object>
-              </child>
-
-              <child>
-                <object class="GtkImage">
-                  <property name="visible">True</property>
-                  <property name="icon-name">input-keyboard-symbolic</property>
-                  <property name="icon-size">1</property>
-                </object>
-              </child>
-            </object>
-            <packing>
-              <property name="pack-type">end</property>
-            </packing>
           </child>
         </object>
       </child>
@@ -222,49 +216,49 @@
     </menu>
 
     <object class="GtkPopoverMenu" id="keys_input_popover">
-      <child>
+      <property name="menu_model">keys_input_popover_model</property>
+    </object>
+<!--
+    <object class="GtkPopoverMenu" id="keys_input_popover">
+      <child type="ID">
         <object class="GtkBox">
-          <property name="visible">True</property>
-          <property name="margin">10</property>
+          <property name="margin-start">10</property>
+          <property name="margin-end">10</property>
+          <property name="margin-top">10</property>
+          <property name="margin-bottom">10</property>
           <property name="orientation">vertical</property>
           <child>
             <object class="GtkModelButton">
-              <property name="visible">True</property>
               <property name="action-name">key.ctrl+alt+backspace</property>
               <property name="text" translatable="yes">Ctrl + Alt + Backspace</property>
             </object>
           </child>
           <child>
             <object class="GtkModelButton">
-              <property name="visible">True</property>
               <property name="action-name">key.ctrl+alt+del</property>
               <property name="text" translatable="yes">Ctrl + Alt + Del</property>
             </object>
           </child>
           <child>
             <object class="GtkModelButton">
-              <property name="visible">True</property>
               <property name="action-name">key.ctrl+alt+f1</property>
               <property name="text" translatable="yes">Ctrl + Alt + F1</property>
             </object>
           </child>
           <child>
             <object class="GtkModelButton">
-              <property name="visible">True</property>
               <property name="action-name">key.ctrl+alt+f2</property>
               <property name="text" translatable="yes">Ctrl + Alt + F2</property>
             </object>
           </child>
           <child>
             <object class="GtkModelButton">
-              <property name="visible">True</property>
               <property name="action-name">key.ctrl+alt+f3</property>
               <property name="text" translatable="yes">Ctrl + Alt + F3</property>
             </object>
           </child>
           <child>
             <object class="GtkModelButton">
-              <property name="visible">True</property>
               <property name="action-name">key.ctrl+alt+f7</property>
               <property name="text" translatable="yes">Ctrl + Alt + F7</property>
             </object>
@@ -272,8 +266,36 @@
         </object>
       </child>
     </object>
+-->
 
     <!-- Assistant popover -->
   <object class="ConnectionsAssistant" id="assistant"/>
 
-  </interface>
+  <menu id="keys_input_popover_model">
+    <item>
+      <attribute name="action">key.ctrl+alt+backspace</attribute>
+      <attribute name="label" translatable="yes">Ctrl + Alt + Backspace</attribute>
+    </item>
+    <item>
+      <attribute name="action">key.ctrl+alt+del</attribute>
+      <attribute name="label" translatable="yes">Ctrl + Alt + Del</attribute>
+    </item>
+    <item>
+      <attribute name="action">key.ctrl+alt+f1</attribute>
+      <attribute name="label" translatable="yes">Ctrl + Alt + F1</attribute>
+    </item>
+    <item>
+      <attribute name="action">key.ctrl+alt+f2</attribute>
+      <attribute name="label" translatable="yes">Ctrl + Alt + F2</attribute>
+    </item>
+    <item>
+      <attribute name="action">key.ctrl+alt+f3</attribute>
+      <attribute name="label" translatable="yes">Ctrl + Alt + F3</attribute>
+    </item>
+    <item>
+      <attribute name="action">key.ctrl+alt+f7</attribute>
+      <attribute name="label" translatable="yes">Ctrl + Alt + F7</attribute>
+    </item>
+  </menu>
+
+</interface>

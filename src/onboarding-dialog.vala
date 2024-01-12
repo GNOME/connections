@@ -20,13 +20,14 @@
  */
 
 using Gtk;
-using Hdy;
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/onboarding-dialog.ui")]
-    private class OnboardingDialog : Hdy.Window {
+    private class OnboardingDialog : Gtk.Window {
+/*
         [GtkChild]
         private unowned Carousel paginator;
+*/
         [GtkChild]
         private unowned Button go_back_button;
         [GtkChild]
@@ -38,7 +39,7 @@ namespace Connections {
 
         construct {
             pages = new GLib.List<unowned OnboardingDialogPage> ();
-
+/*
             OnboardingDialogPage? onboarding_page = null;
             foreach (var page in paginator.get_children ()) {
                 assert (page is OnboardingDialogPage);
@@ -46,7 +47,7 @@ namespace Connections {
                 onboarding_page = page as OnboardingDialogPage;
                 pages.append (onboarding_page);
             }
-
+*/
             on_position_changed ();
         }
 
@@ -54,6 +55,7 @@ namespace Connections {
             set_transient_for (window);
         }
 
+/*
         [GtkCallback]
         private bool on_key_pressed (Gtk.Widget widget, Gdk.EventKey event) {
             if (event.keyval == Gdk.Key.Escape) {
@@ -63,27 +65,33 @@ namespace Connections {
 
             return false;
         }
+*/
 
         [GtkCallback]
         private void on_next_button_clicked () {
+/*
             var index = (int) Math.round (paginator.position) + 1;
             if (index >= pages.length ())
                 return;
 
             paginator.scroll_to (pages.nth_data (index));
+*/
         }
 
         [GtkCallback]
         private void on_back_button_clicked () {
+/*
             var index = (int) Math.round (paginator.position) - 1;
             if (index < 0)
                 return;
 
             paginator.scroll_to (pages.nth_data (index));
+*/
         }
 
         [GtkCallback]
         private void on_position_changed () {
+/*
             var position = (int)paginator.position;
 
             bool is_first_page = (position == 0);
@@ -94,6 +102,7 @@ namespace Connections {
 
             close_button.visible = is_first_page || is_last_page;
             close_button.label = is_first_page ? _("_No Thanks") : _("_Close");
+*/
         }
     }
 }

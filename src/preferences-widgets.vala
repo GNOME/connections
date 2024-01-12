@@ -20,7 +20,7 @@
  */
 
 namespace Connections {
-    private class PreferencesWindow: Hdy.PreferencesWindow {
+    private class PreferencesWindow: Adw.PreferencesWindow {
         protected weak Connection connection;
 
         construct {
@@ -36,7 +36,7 @@ namespace Connections {
         }
     }
 
-    private class BooleanProperty: Hdy.ActionRow {
+    private class BooleanProperty: Adw.ActionRow {
         public bool active { get; set; }
 
         construct {
@@ -47,8 +47,8 @@ namespace Connections {
 
             bind_property ("active", widget, "active", BindingFlags.BIDIRECTIONAL);
 
-            add (widget);
-            set_activatable_widget (widget);
+/*            add (widget);*/
+            activatable_widget = widget;
         }
     }
 }

@@ -9,15 +9,15 @@
       <property name="title" translatable="yes">Connection preferences</property>
 
       <child>
-        <object class="HdyPreferencesPage">
+        <object class="AdwPreferencesPage">
           <property name="visible">True</property>
 
           <child>
-            <object class="HdyPreferencesGroup">
+            <object class="AdwPreferencesGroup">
               <property name="visible">True</property>
 
               <child>
-                <object class="HdyActionRow">
+                <object class="AdwActionRow">
                   <property name="visible">True</property>
                   <property name="title" translatable="yes">Address</property>
 
@@ -31,7 +31,7 @@
               </child>
 
               <child>
-                <object class="HdyActionRow">
+                <object class="AdwActionRow">
                   <property name="activatable-widget">connection_name_entry</property>
                   <property name="visible">True</property>
                   <property name="title" translatable="yes">Name</property>
@@ -49,7 +49,7 @@
           </child>
 
           <child>
-            <object class="HdyPreferencesGroup">
+            <object class="AdwPreferencesGroup">
               <property name="visible">True</property>
               <property name="title" translatable="yes">Display</property>
 
@@ -75,7 +75,7 @@
               </child>
 
               <child>
-                <object class="HdyActionRow">
+                <object class="AdwActionRow">
                   <property name="activatable-widget">bandwidth_combo</property>
                   <property name="visible">True</property>
                   <property name="title" translatable="yes">Bandwidth</property>
@@ -94,7 +94,7 @@
               </child>
 
               <child>
-                <object class="HdyActionRow">
+                <object class="AdwActionRow">
                   <property name="activatable-widget">scale_mode_combo</property>
                   <property name="visible">True</property>
                   <property name="title" translatable="yes">Scale mode</property>

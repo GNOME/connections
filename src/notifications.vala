@@ -19,8 +19,10 @@
  *
  */
 
+using Gtk;
+
 namespace Connections {
-    private class NotificationsBar : Gtk.Bin {
+    private class NotificationsBar : Gtk.Box {
         public const int DEFAULT_TIMEOUT = 6;
         private const int MAX_NOTIFICATIONS = 5;
 
@@ -30,13 +32,13 @@ namespace Connections {
                 return _active_notification;
             }
 
-            set {
+            set {/*
                 if (_active_notification != null) {
                     remove (_active_notification);
-                }
+                }*/
 
                 _active_notification = value;
-                add (_active_notification);
+                _active_notification.insert_before (this, null);
             }
         }
 
@@ -96,7 +98,7 @@ namespace Connections {
     }
 
     [GtkTemplate (ui = "/org/gnome/Connections/ui/notification.ui")]
-    private class Notification : Gtk.Revealer {
+    private class Notification : Gtk.Box {
         public signal void dismissed ();
 
         public delegate void OKFunc ();
@@ -105,9 +107,11 @@ namespace Connections {
         private DismissFunc? dismiss_func;
 
         [GtkChild]
-        private unowned Gtk.Label message_label; 
+        private unowned Gtk.Revealer revealer;
         [GtkChild]
-        private unowned Gtk.Button ok_button; 
+        private unowned Gtk.Label message_label;
+        [GtkChild]
+        private unowned Gtk.Button ok_button;
 
         private uint notification_timeout_id = 0;
 
@@ -117,7 +121,7 @@ namespace Connections {
                              owned DismissFunc? dismiss_func,
                              int timeout = NotificationsBar.DEFAULT_TIMEOUT) {
             this.dismiss_func = (owned)dismiss_func;
-            set_reveal_child (true);
+            revealer.set_reveal_child (true);
 
             message_label.label = message;
 
@@ -134,7 +138,7 @@ namespace Connections {
                     if (ok_func != null)
                         ok_func ();
 
-                    set_reveal_child (false);
+                    revealer.set_reveal_child (false);
                     dismissed ();
 
                     if (notification_timeout_id != 0) {
@@ -143,14 +147,14 @@ namespace Connections {
                     }
                 });
 
-                ok_button.show_all ();
+                ok_button.show ();
             }
         }
 
         [GtkCallback]
         public void dismiss () {
             dismissed ();
-            set_reveal_child (false);
+            revealer.set_reveal_child (false);
             if (dismiss_func != null)
                 dismiss_func ();
 
@@ -162,12 +166,14 @@ namespace Connections {
     }
 
     [GtkTemplate (ui = "/org/gnome/Connections/ui/auth-notification.ui")]
-    private class AuthNotification : Gtk.Revealer {
+    private class AuthNotification : Gtk.Box {
         public delegate void AuthFunc (string username, string password);
         private bool auth_pressed;
 
         public signal void dismissed ();
 
+        [GtkChild]
+        private unowned Gtk.Revealer revealer;
         [GtkChild]
         private unowned Gtk.Label title_label;
         [GtkChild]
@@ -185,7 +191,7 @@ namespace Connections {
                                  owned AuthFunc? auth_func,
                                  owned Notification.DismissFunc? dismiss_func,
                                  bool need_username) {
-            set_reveal_child (true);
+            revealer.set_reveal_child (true);
 
             title_label.label = auth_string;
 
@@ -230,7 +236,7 @@ namespace Connections {
         }
 
         public void dismiss () {
-            set_reveal_child (false);
+            revealer.set_reveal_child (false);
             dismissed ();
         }
     }

@@ -5,85 +5,92 @@
       <property name="orientation">vertical</property>
       <property name="spacing">0</property>
       <property name="vexpand">True</property>
-      <signal name="size-allocate" handler="on_size_allocate"/>
+                      <property name="can-focus">True</property>
 
       <child>
         <object class="GtkStack" id="stack">
           <property name="visible">True</property>
-          <property name="expand">True</property>
+          <property name="hexpand">True</property>
+          <property name="vexpand">True</property>
+                      <property name="can-focus">True</property>
 
           <child>
-            <object class="GtkBox">
-              <property name="visible">True</property>
-              <property name="halign">center</property>
-              <child>
-                <object class="GtkSpinner">
-                  <property name="visible">True</property>
-                  <property name="active">True</property>
-                  <property name="width-request">32</property>
-                </object>
-              </child>
-            </object>
-            <packing>
+            <object class="GtkStackPage">
               <property name="name">loading</property>
-            </packing>
+              <property name="child">
+                <object class="GtkBox">
+                  <property name="visible">True</property>
+                  <property name="halign">center</property>
+                  <child>
+                    <object class="GtkSpinner">
+                      <property name="visible">True</property>
+                      <property name="spinning">True</property>
+                      <property name="width-request">32</property>
+                    </object>
+                  </child>
+                </object>
+              </property>
+            </object>
           </child>
 
           <child>
-            <object class="GtkOverlay">
-              <property name="visible">True</property>
-
-              <child type="overlay">
-                <object class="GtkLabel" id="size_label">
-                  <property name="halign">center</property>
-                  <property name="valign">center</property>
-                  <style>
-                    <class name="app-notification"/>
-                  </style>
-                </object>
-              </child>
-
-              <child type="overlay">
-                <object class="GtkButton" id="escape_fullscreen_button">
-                  <property name="halign">center</property>
-                  <property name="valign">start</property>
-                  <signal name="clicked" handler="on_escape_fullscreen_button_clicked"/>
-                  <style>
-                    <class name="app-notification"/>
-                  </style>
-                  <child>
-                    <object class="GtkImage">
-                      <property name="visible">True</property>
-                      <property name="icon-name">view-fullscreen-symbolic</property>
-                      <property name="icon-size">1</property>
-                    </object>
-                  </child>
-                </object>
-              </child>
-
-              <child>
-                <object class="GtkScrolledWindow">
-                  <property name="visible">True</property>
-                  <property name="min-content-width">980</property>
-                  <property name="min-content-height">640</property>
-                  <child>
-                    <object class="GtkEventBox" id="event_box">
-                      <property name="visible">True</property>
-                      <property name="above-child">True</property>
-                      <signal name="event" handler="on_event_box_event"/>
-                    </object>
-                  </child>
-                </object>
-              </child>
-            </object>
-            <packing>
+            <object class="GtkStackPage">
               <property name="name">display</property>
-            </packing>
+              <property name="child">
+                <object class="GtkOverlay">
+                  <property name="visible">True</property>
 
+                  <child type="overlay">
+                    <object class="GtkButton" id="escape_fullscreen_button">
+                      <property name="visible">False</property>
+                      <property name="halign">center</property>
+                      <property name="valign">start</property>
+                      <signal name="clicked" handler="on_escape_fullscreen_button_clicked"/>
+                      <style>
+                        <class name="app-notification"/>
+                      </style>
+                      <child>
+                        <object class="GtkImage">
+                          <property name="visible">True</property>
+                          <property name="icon-name">view-fullscreen-symbolic</property>
+                          <property name="icon-size">1</property>
+                        </object>
+                      </child>
+                    </object>
+                  </child>
+
+                  <child type="overlay">
+                    <object class="GtkLabel" id="size_label">
+                      <property name="name">size_label</property>
+                      <property name="visible">False</property>
+                      <property name="halign">center</property>
+                      <property name="valign">center</property>
+                      <style>
+                        <class name="app-notification"/>
+                        <class name="size-label"/>
+                      </style>
+                    </object>
+                  </child>
+
+                  <child>
+                    <object class="GtkScrolledWindow" id="scrolled_window">
+                      <property name="visible">True</property>
+                      <property name="can-focus">True</property>
+                      <property name="min-content-width">980</property>
+                      <property name="min-content-height">640</property>
+                    </object>
+                  </child>
+                </object>
+              </property>
+            </object>
           </child>
         </object>
       </child>
 
-
+      <child>
+        <object class="GtkEventControllerMotion">
+          <signal name="motion" handler="motion_cb" swapped="no"/>
+        </object>
+      </child>
     </template>
   </interface>
