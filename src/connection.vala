@@ -246,6 +246,39 @@ namespace Connections {
             }, "gnome-connections-connection-uuid", uuid);
         }
 
+        public bool certificate_verified { get; set; }
+        public signal void certificate_verification_complete ();
+        protected void handle_certificate_verification (string subject,
+                                                        string issuer,
+                                                        string fingerprint) {
+            DialogsWindow.CertificateVerifyFunc certificate_verify_func = (verified) => {
+                certificate_verified = verified;
+                certificate_verification_complete ();
+            };
+
+            Application.application.main_window.dialogs_window.show_certificate_verification (get_visible_name (),
+                                                                                              fingerprint,
+                                                                                              (owned) certificate_verify_func);
+        }
+
+        public bool certificate_change_verified { get; set; }
+        public signal void certificate_change_verification_complete ();
+        protected void handle_certificate_change_verification (string new_subject,
+                                                               string new_issuer,
+                                                               string new_fingerprint,
+                                                               string old_subject,
+                                                               string old_issuer,
+                                                               string old_fingerprint) {
+            DialogsWindow.CertificateChangeVerifyFunc certificate_change_verify_func = (verified) => {
+                certificate_change_verified = verified;
+                certificate_change_verification_complete ();
+            };
+
+            Application.application.main_window.dialogs_window.show_certificate_change_verification (get_visible_name (),
+                                                                                                     new_fingerprint,
+                                                                                                     (owned) certificate_change_verify_func);
+        }
+
         public string get_visible_name () {
             if (display_name != null && display_name != "")
                 return display_name;

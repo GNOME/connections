@@ -39,6 +39,7 @@ namespace Connections {
 
         [GtkChild]
         public unowned NotificationsBar notifications_bar;
+        public DialogsWindow dialogs_window;
 
         public bool fullscreened {
             get { return Gdk.WindowState.FULLSCREEN in get_window ().get_state (); }
@@ -58,6 +59,10 @@ namespace Connections {
 
             bind_model (Application.application.model);
             Application.application.model.items_changed.connect (items_changed);
+
+            dialogs_window = new DialogsWindow ();
+            dialogs_window.set_modal (true);
+            dialogs_window.set_transient_for (this);
 
             try {
                 var style_provider = new Gtk.CssProvider ();

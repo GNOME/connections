@@ -5,6 +5,7 @@
     <file>ui/assistant.ui</file>
     <file>ui/collection-view.ui</file>
     <file>ui/collection-view-child.ui</file>
+    <file>ui/dialog.ui</file>
     <file>ui/display-view.ui</file>
     <file>ui/notification.ui</file>
     <file>ui/rdp-preferences.ui</file>

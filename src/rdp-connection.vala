@@ -75,6 +75,8 @@ namespace Connections {
             display.rdp_error.connect (on_rdp_connection_error_cb);
             display.rdp_connected.connect (on_rdp_connection_connected_cb);
             //display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
+            display.rdp_needs_certificate_verification.connect (on_rdp_certificate_verification_cb);
+            display.rdp_needs_certificate_change_verification.connect (on_rdp_certificate_change_verification_cb);
             display.rdp_auth_failure.connect (auth_failed);
             display.size_allocate.connect (scale);
 
@@ -82,7 +84,21 @@ namespace Connections {
             display.notify["resize-supported"].connect (update_resize_supported);
 
             need_username = need_password = true;
+
+            certificate_verified = false;
+            certificate_verification_complete.connect (update_display_verified);
+            certificate_change_verified = false;
+            certificate_change_verification_complete.connect (update_display_change_verified);
         }
+
+        private void update_display_verified () {
+            display.certificate_verify (certificate_verified ? 1 : 0);
+        }
+
+        private void update_display_change_verified () {
+            display.certificate_change_verify (certificate_change_verified ? 1 : 0);
+        }
+
 
         public RdpConnection (string uuid) {
             this.uuid = uuid;
@@ -131,6 +147,34 @@ namespace Connections {
             need_username = need_password = true;
 
             handle_auth ();
+        }
+
+        private void on_rdp_certificate_verification_cb (string host,
+                                                         uint   port,
+                                                         string common_name,
+                                                         string subject,
+                                                         string issuer,
+                                                         string fingerprint,
+                                                         uint   flags) {
+            handle_certificate_verification (subject, issuer, fingerprint);
+        }
+
+        private void on_rdp_certificate_change_verification_cb (string host,
+                                                                uint   port,
+                                                                string common_name,
+                                                                string new_subject,
+                                                                string new_issuer,
+                                                                string new_fingerprint,
+                                                                string old_subject,
+                                                                string old_issuer,
+                                                                string old_fingerprint,
+                                                                uint   flags) {
+            handle_certificate_change_verification (new_subject,
+                                                    new_issuer,
+                                                    new_fingerprint,
+                                                    old_subject,
+                                                    old_issuer,
+                                                    old_fingerprint);
         }
 
         private void on_rdp_connection_error_cb (string reason) {

@@ -36,7 +36,10 @@ namespace Connections {
                 }
 
                 _active_notification = value;
-                add (_active_notification);
+
+                if (_active_notification != null) {
+                    add (_active_notification);
+                }
             }
         }
 

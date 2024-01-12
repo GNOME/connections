@@ -9,6 +9,7 @@ connections_sources = [
   'display-view.vala',
   'main.vala',
   'notifications.vala',
+  'dialogs.vala',
   'onboarding-dialog.vala',
   'onboarding-dialog-page.vala',
   'preferences-widgets.vala',
