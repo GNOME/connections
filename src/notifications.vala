@@ -67,28 +67,10 @@ namespace Connections {
             active_notification = notification;
         }
 
-        public AuthNotification display_for_auth (string auth_string,
-                                                  owned AuthNotification.AuthFunc? auth_func,
-                                                  owned Notification.DismissFunc?  dismiss_func,
-                                                  bool                             need_username = true) {
-            var notification = new Connections.AuthNotification (auth_string,
-                                                                 (owned) auth_func,
-                                                                 (owned) dismiss_func,
-                                                                 need_username);
-            active_notification = notification;
-
-            return notification;
-        }
-
         public void dismiss () {
             if (active_notification != null) {
-                // TODO: Make AuthNotification derived from Notification
                 if (active_notification is Notification) {
                     Notification? notification = active_notification as Notification;
-
-                    notification.dismiss ();
-                } else if (active_notification is AuthNotification) {
-                    AuthNotification? notification = active_notification as AuthNotification;
 
                     notification.dismiss ();
                 }
@@ -161,80 +143,6 @@ namespace Connections {
                 Source.remove (notification_timeout_id);
                 notification_timeout_id = 0;
             }
-        }
-    }
-
-    [GtkTemplate (ui = "/org/gnome/Connections/ui/auth-notification.ui")]
-    private class AuthNotification : Gtk.Revealer {
-        public delegate void AuthFunc (string username, string password);
-        private bool auth_pressed;
-
-        public signal void dismissed ();
-
-        [GtkChild]
-        private unowned Gtk.Label title_label;
-        [GtkChild]
-        private unowned Gtk.Label username_label;
-        [GtkChild]
-        private unowned Gtk.Entry username_entry;
-        [GtkChild]
-        private unowned Gtk.Entry password_entry;
-        [GtkChild]
-        private unowned Gtk.Button auth_button;
-
-        private AuthFunc? auth_func;
-
-        public AuthNotification (string auth_string,
-                                 owned AuthFunc? auth_func,
-                                 owned Notification.DismissFunc? dismiss_func,
-                                 bool need_username) {
-            set_reveal_child (true);
-
-            title_label.label = auth_string;
-
-            username_label.visible = need_username;
-            username_entry.visible = need_username;
-
-            this.auth_func = (owned) auth_func;
-
-            dismissed.connect (() => {
-                if (!auth_pressed && dismiss_func != null)
-                    dismiss_func ();
-            });
-        }
-
-        [GtkCallback]
-        private void on_username_entry_map () {
-            username_entry.grab_focus ();
-        }
-
-        [GtkCallback]
-        private void on_username_entry_activated () {
-            password_entry.grab_focus ();
-        }
-
-        [GtkCallback]
-        private void on_password_entry_map () {
-            password_entry.grab_focus ();
-        }
-
-        [GtkCallback]
-        private void on_password_entry_activated () {
-            auth_button.activate ();
-        }
-
-        [GtkCallback]
-        private void on_auth_button_clicked () {
-            if (auth_func != null)
-                auth_func (username_entry.get_text (), password_entry.get_text ());
-            auth_pressed = true;
-
-            dismiss ();
-        }
-
-        public void dismiss () {
-            set_reveal_child (false);
-            dismissed ();
         }
     }
 }

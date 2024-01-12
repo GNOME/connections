@@ -105,29 +105,29 @@ namespace Connections {
             });
         }
 
-        private AuthNotification auth_notification = null;
         public bool need_password;
         public bool need_username;
+        public bool need_domain;
         public string? username { get; set; }
         public string? password { get; set; }
+        public string? domain { get; set; }
+
         protected void handle_auth () {
-            if (auth_notification != null)
+            if (!need_username && !need_password) {
                 return;
+            }
 
-            if (!need_username && !need_password)
-                return;
-
-            AuthNotification.AuthFunc auth_func = (username, password) => {
+            DialogsWindow.AuthenticationFunc authentication_func = (username, password, domain) => {
                 if (username != "")
                     this.username = username;
                 if (password != "")
                     this.password = password;
+                if (domain != "")
+                    this.domain = domain;
 
                 Application.application.open_connection (this);
-            };
 
-            Notification.DismissFunc dismiss_func = () => {
-                auth_notification = null;
+                authentication_complete ();
             };
 
             Secret.password_lookup.begin (secret_auth_schema, auth_cancellable, (obj, res) => {
@@ -151,6 +151,11 @@ namespace Connections {
                         if (password_str != null && password_str != "")
                             this.password = password_str;
 
+                        string domain_str;
+                        credentials_variant.lookup ("domain", "s", out domain_str);
+                        if (domain_str != null && domain_str != "")
+                            this.domain = domain_str;
+
                         Application.application.open_connection (this);
                     } catch (GLib.Error error) {
                         throw parsing_error;
@@ -158,11 +163,11 @@ namespace Connections {
                 } catch (GLib.Error error) {
                     debug ("No credentials found in keyring. Prompting user.");
 
-                    var auth_string = _("“%s” requires authentication").printf (get_visible_name ());
-                    auth_notification = Application.application.main_window.notifications_bar.display_for_auth (auth_string,
-                                                                                                                (owned) auth_func,
-                                                                                                                (owned) dismiss_func,
-                                                                                                                need_username);
+                    Application.application.main_window.dialogs_window.show_authentication (get_visible_name (),
+                                                                                            need_username,
+                                                                                            need_password,
+                                                                                            need_domain,
+                                                                                            (owned) authentication_func);
                 }
             }, "gnome-connections-connection-uuid", uuid);
         }
@@ -175,11 +180,6 @@ namespace Connections {
             try {
                 yield Secret.password_clear (secret_auth_schema, null,
                                              "gnome-connections-connection-uuid", uuid);
-
-                if (auth_notification != null) {
-                    auth_notification.dismiss ();
-                    auth_notification = null;
-                }
             } catch (GLib.Error error) {
                 debug ("Failed to delete credentials for connection %s: %s", uuid, error.message);
             }
@@ -194,9 +194,8 @@ namespace Connections {
             disconnect_it ();
 
             delete_auth_credentials.begin ();
-            username = password = null;
+            username = password = domain = null;
 
-            auth_notification = null;
             var message = _("Authentication failed: %s").printf (reason);
             Application.application.main_window.show_collection_view ();
             Application.application.main_window.notifications_bar.display_for_error (message);
@@ -209,7 +208,7 @@ namespace Connections {
         public void save (GLib.ParamSpec? pspec = null) {
             if (uuid != null && pspec != null) {
                 /* Don't save the credentials in plain text */
-                if (pspec.name == "username" || pspec.name == "password") {
+                if (pspec.name == "username" || pspec.name == "password" || pspec.name == "domain") {
                   store_auth_credentials ();
                   return;
                 }
@@ -226,6 +225,9 @@ namespace Connections {
 
             if (this.username != null)
                 builder.add ("{sv}", "username", new GLib.Variant ("s", this.username));
+
+            if (this.domain != null)
+                builder.add ("{sv}", "domain", new GLib.Variant ("s", this.domain));
 
             builder.add ("{sv}", "password", new GLib.Variant ("s", this.password));
 
@@ -278,6 +280,8 @@ namespace Connections {
                                                                                                      new_fingerprint,
                                                                                                      (owned) certificate_change_verify_func);
         }
+
+        public signal void authentication_complete ();
 
         public string get_visible_name () {
             if (display_name != null && display_name != "")

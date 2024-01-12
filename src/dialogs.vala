@@ -21,12 +21,16 @@
 
 namespace Connections {
     [GtkTemplate (ui = "/org/gnome/Connections/ui/dialog.ui")]
-    private class DialogsWindow : Gtk.Window {
+    private class DialogsWindow : Hdy.Window {
         private bool change_verification;
         private string certificate_fingerprint;
         private string connection_name;
         private bool certificate_verification_show_flag;
         private bool certificate_change_verification_show_flag;
+        private bool authentication_show_flag;
+        private bool need_username;
+        private bool need_password;
+        private bool need_domain;
 
         [GtkChild]
         public unowned Gtk.Stack content_stack;
@@ -49,6 +53,33 @@ namespace Connections {
         [GtkChild]
         private unowned Gtk.Switch delete_local_certificate_switch;
 
+        [GtkChild]
+        private unowned Gtk.Image show_password_icon;
+
+        [GtkChild]
+        private unowned Gtk.Entry username_entry;
+
+        [GtkChild]
+        private unowned Gtk.Entry password_entry;
+
+        [GtkChild]
+        private unowned Gtk.Entry domain_entry;
+
+        [GtkChild]
+        private unowned Gtk.Label authentication_text;
+
+        [GtkChild]
+        private unowned Hdy.HeaderBar dialog_headerbar;
+
+        [GtkChild]
+        private unowned Hdy.ActionRow username_row;
+
+        [GtkChild]
+        private unowned Hdy.ActionRow password_row;
+
+        [GtkChild]
+        private unowned Hdy.ActionRow domain_row;
+
         private Mutex mutex;
 
         construct {
@@ -57,7 +88,20 @@ namespace Connections {
 
             certificate_verification_show_flag = false;
             certificate_change_verification_show_flag = false;
+            authentication_show_flag = false;
             mutex = Mutex ();
+
+            try {
+                var style_provider = new Gtk.CssProvider ();
+                var css_style = "button#authenticate_button { border-radius: 0px; border-bottom: 0px; border-right: 0px; }
+                                 button#cancel_button { border-radius: 0px; border-bottom: 0px; border-left: 0px; border-right: 0px; }";
+                style_provider.load_from_data (css_style, css_style.length);
+                Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                          style_provider,
+                                                          Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            } catch (GLib.Error error) {
+                warning ("Failed to load CSS: %s", error.message);
+            }
 
             Timeout.add (50, check_show_flags);
 
@@ -65,7 +109,7 @@ namespace Connections {
         }
 
         bool check_show_flags () {
-            bool scvf, sccvf;
+            bool scvf, sccvf, saf;
 
             mutex.lock ();
 
@@ -77,6 +121,10 @@ namespace Connections {
             if (certificate_change_verification_show_flag)
                 certificate_change_verification_show_flag = false;
 
+            saf = authentication_show_flag;
+            if (authentication_show_flag)
+                authentication_show_flag = false;
+
             mutex.unlock ();
 
             if (scvf) {
@@ -85,6 +133,10 @@ namespace Connections {
 
             if (sccvf) {
                 show_certificate_change_verification_real ();
+            }
+
+            if (saf) {
+                show_authentication_real ();
             }
 
             return true;
@@ -122,6 +174,7 @@ namespace Connections {
             header_stack.set_visible_child_name ("verify-button-page");
             content_stack.show ();
             header_stack.show ();
+            dialog_headerbar.show ();
             present ();
         }
 
@@ -155,6 +208,7 @@ namespace Connections {
             header_stack.set_visible_child_name ("connect-button-page");
             content_stack.show ();
             header_stack.show ();
+            dialog_headerbar.show ();
             present ();
         }
 
@@ -169,6 +223,45 @@ namespace Connections {
             certificate_fingerprint = fingerprint.dup ();
             certificate_change_verify_func = certificate_change_verify_func_in;
             certificate_change_verification_show_flag = true;
+
+            mutex.unlock ();
+        }
+
+        public delegate void AuthenticationFunc (string username,
+                                                 string password,
+                                                 string domain);
+        AuthenticationFunc authentication_func;
+        public void show_authentication_real () {
+            mutex.lock ();
+
+            username_row.set_visible (need_username);
+            password_row.set_visible (need_password);
+            domain_row.set_visible (need_domain);
+
+            authentication_text.label = _("The remote server “%s” requires a username and password to continue to connect.").printf (connection_name);
+
+            mutex.unlock ();
+
+            content_stack.set_visible_child_name ("authentication");
+            content_stack.show ();
+            dialog_headerbar.hide ();
+            present ();
+        }
+
+        /* It is safe to call this from other threads as is usually the case. */
+        public void show_authentication (string                    name,
+                                         bool                      need_username_in,
+                                         bool                      need_password_in,
+                                         bool                      need_domain_in,
+                                         owned AuthenticationFunc? authentication_func_in) {
+            mutex.lock ();
+
+            need_username = need_username_in;
+            need_password = need_password_in;
+            need_domain = need_domain_in;
+            connection_name = name.dup ();
+            authentication_func = authentication_func_in;
+            authentication_show_flag = true;
 
             mutex.unlock ();
         }
@@ -227,8 +320,61 @@ namespace Connections {
             return false;
         }
 
+        [GtkCallback]
+        private void show_password_button_clicked () {
+            if (password_entry.visibility) {
+                show_password_icon.icon_name = "view-reveal-symbolic";
+                password_entry.visibility = false;
+            } else {
+                show_password_icon.icon_name = "user-not-tracked-symbolic";
+                password_entry.visibility = true;
+            }
+        }
+
+        [GtkCallback]
+        private void cancel_authentication_clicked () {
+            mutex.lock ();
+
+            if (authentication_func != null)
+                authentication_func ("", "", "");
+
+            mutex.unlock ();
+
+            dismiss ();
+        }
+
+        [GtkCallback]
+        private void authenticate_button_clicked () {
+            mutex.lock ();
+
+            if (authentication_func != null)
+                authentication_func (username_entry.text, password_entry.text, domain_entry.text);
+
+            mutex.unlock ();
+
+            dismiss ();
+        }
+
+        [GtkCallback]
+        private void on_username_entry_activated () {
+            authenticate_button_clicked ();
+        }
+
+        [GtkCallback]
+        private void on_password_entry_activated () {
+            authenticate_button_clicked ();
+        }
+
+        [GtkCallback]
+        private void on_domain_entry_activated () {
+            authenticate_button_clicked ();
+        }
+
         private void dismiss () {
             hide ();
+            username_entry.text = "";
+            password_entry.text = "";
+            domain_entry.text = "";
             delete_local_certificate_switch.set_active (false);
         }
 

@@ -110,10 +110,6 @@ namespace Connections {
 
             topbar.show_collection_view ();
             topbar.set_title (_("Connections"));
-
-            if (notifications_bar.active_notification is AuthNotification) {
-                notifications_bar.dismiss ();
-            }
         }
 
         public void show_preferences_window (Connection connection) {

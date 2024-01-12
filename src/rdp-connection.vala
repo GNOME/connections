@@ -74,7 +74,7 @@ namespace Connections {
 
             display.rdp_error.connect (on_rdp_connection_error_cb);
             display.rdp_connected.connect (on_rdp_connection_connected_cb);
-            //display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
+            display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_needs_certificate_verification.connect (on_rdp_certificate_verification_cb);
             display.rdp_needs_certificate_change_verification.connect (on_rdp_certificate_change_verification_cb);
             display.rdp_auth_failure.connect (auth_failed);
@@ -83,22 +83,26 @@ namespace Connections {
             notify["scale-mode"].connect (scale);
             display.notify["resize-supported"].connect (update_resize_supported);
 
-            need_username = need_password = true;
+            need_username = need_password = need_domain = true;
 
             certificate_verified = false;
             certificate_verification_complete.connect (update_display_verified);
             certificate_change_verified = false;
             certificate_change_verification_complete.connect (update_display_change_verified);
+            authentication_complete.connect (update_display_authenticated);
         }
 
         private void update_display_verified () {
-            display.certificate_verify (certificate_verified ? 1 : 0);
+            display.certificate_verify_ex_finish (certificate_verified ? 1 : 0);
         }
 
         private void update_display_change_verified () {
-            display.certificate_change_verify (certificate_change_verified ? 1 : 0);
+            display.certificate_change_verify_ex_finish (certificate_change_verified ? 1 : 0);
         }
 
+        private void update_display_authenticated () {
+            display.authenticate_finish (username, password, domain);
+        }
 
         public RdpConnection (string uuid) {
             this.uuid = uuid;
@@ -144,8 +148,6 @@ namespace Connections {
         }
 
         private void on_rdp_auth_credential_cb () {
-            need_username = need_password = true;
-
             handle_auth ();
         }
 
@@ -233,12 +235,5 @@ namespace Connections {
     }
 
     private class FrdpDisplay : Frdp.Display {
-        public override bool authenticate (out string username, out string password, out string domain) {
-            username = this.username;
-            password = this.password;
-            domain = null;
-
-            return true;
-        }
     }
 }
