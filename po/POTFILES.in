@@ -7,6 +7,7 @@ src/actions-popover.vala
 src/application.vala
 src/assistant.vala
 src/connection.vala
+src/dialogs.vala
 src/display-view.vala
 src/onboarding-dialog.vala
 src/rdp-connection.vala
@@ -14,6 +15,7 @@ src/rdp-preferences-window.vala
 src/topbar.vala
 src/ui/assistant.ui
 src/ui/auth-notification.ui
+src/ui/dialog.ui
 src/ui/onboarding-dialog.ui
 src/ui/rdp-preferences.ui
 src/ui/topbar.ui
