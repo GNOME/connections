@@ -49,7 +49,7 @@
                     <object class="HdyStatusPage" id="empty_view">
                       <property name="visible">True</property>
                       <property name="title" translatable="yes">Welcome to Connections</property>
-                      <property name="description" translatable="yes">Just hit the &lt;b&gt;+&lt;/b&gt; button to make your first connection.</property>
+                      <property name="description" translatable="yes">Click the add button to create your first connection</property>
                     </object>
                   </child>
 
