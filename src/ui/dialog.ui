@@ -270,7 +270,7 @@ the fingerprint can be verified in the Settings,
                 <child>
                   <object class="GtkImage">
                     <property name="visible">True</property>
-                    <property name="icon-name">auth-fingerprint-symbolic</property>
+                    <property name="resource">/org/gnome/Connections/ui/fingerprint2-symbolic.svg</property>
                     <property name="pixel-size">80</property>
                   </object>
 

@@ -13,6 +13,7 @@
     <file>ui/style.css</file>
     <file>ui/topbar.ui</file>
     <file>ui/window.ui</file>
+    <file>ui/fingerprint2-symbolic.svg</file>
 
     <!-- Onboarding dialog -->
     <file>ui/onboarding-dialog.ui</file>
