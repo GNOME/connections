@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-01-13 12:15+0000\n"
-"PO-Revision-Date: 2024-01-22 14:48+0100\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-10 02:22+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -144,8 +144,8 @@ msgid ""
 "is only done once."
 msgstr ""
 "První připojení k „%s“. Chcete-li si být jisti, že se připojujete k "
-"počítači, za který se vydává, ověřte, zda se otisky shodují. Tento proces "
-"se provádí pouze jednou."
+"počítači, za který se vydává, ověřte, zda se otisky shodují. Tento proces se "
+"provádí pouze jednou."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -153,8 +153,8 @@ msgid ""
 "The remote server “%s” certificate doesn't match local copy. It may be "
 "someone's pretending to be the server."
 msgstr ""
-"Certifikát „%s“ vzdáleného serveru neodpovídá místní kopii. Někdo se může "
-"za tento server vydávat."
+"Certifikát „%s“ vzdáleného serveru neodpovídá místní kopii. Někdo se může za "
+"tento server vydávat."
 
 #: src/dialogs.vala:241
 #, c-format
@@ -309,50 +309,51 @@ msgid "Welcome to Connections"
 msgstr "Vítejte v připojeních"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Průvodce vám vysvětlí, jak Připojení fungují."
+msgid "Click next to learn about remote desktop."
+msgstr "Kliknutím na tlačítko Další se dozvíte o vzdálené ploše."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Používejte jiné systémy vzdáleně"
+msgid "Access other desktops"
+msgstr "Přistupujte k jiným vzdáleným plochám"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Pomocí připojení se dá zobrazit obrazovka jiného počítače. A dokonce jej "
-"můžete pomocí klávesnice a ukazovacího zařízení ovládat."
+"Připojení umožňuje zobrazit si obrazovky jiných vzdálených pracovních ploch. "
+"Mohou být také ovládány pomocí ukazatele a klávesnice."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Připojte se k různým operačním systémům"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgid "You can access Linux, Mac, and Windows desktops."
 msgstr ""
-"Pomocí připojení lze získat přístup do uživatelských prostředí Linuxu, Macu "
-"i Windows."
+"Můžete získat přístup do uživatelských prostředí Linuxu, Macu i Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Před připojením povolte vzdálenou plochu"
+msgid "Setup is required"
+msgstr "Je vyžadováno nastavení"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Než se k počítači připojíte, je zapotřebí jej pro používání vzdálené plochy "
-"nastavit."
+"Vzdálená plocha musí být obvykle povolena na počítači, ke kterému se chcete "
+"připojit."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Ať se vám práce s Připojeními daří"
+msgid "Start by creating your first connection"
+msgstr "Začněte tím, že vytvoříte své první připojení"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Další informace jsou k dispozici v nápovědě."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Pro začátek budete potřebovat adresu počítače, ke kterému se chcete připojit."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -467,9 +468,8 @@ msgid "Scale mode"
 msgstr "Režim škálování"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
-"Pro vytvoření vašeho prvního připojení stačí zmáčknout tlačítko <b>+</b>."
+msgid "Click the add button to create your first connection"
+msgstr "Pro vytvoření vašeho prvního připojení klikněte na tlačítko Přidat"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -481,6 +481,28 @@ msgstr "Nezdařilo se zpracovat soubor"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "V souboru VNC chybí klíč „%s“"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Průvodce vám vysvětlí, jak Připojení fungují."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Používejte jiné systémy vzdáleně"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Před připojením povolte vzdálenou plochu"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Než se k počítači připojíte, je zapotřebí jej pro používání vzdálené "
+#~ "plochy nastavit."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Ať se vám práce s Připojeními daří"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Další informace jsou k dispozici v nápovědě."
 
 #, c-format
 #~ msgid "“%s” requires authentication"
