@@ -1,3 +1,35 @@
+46.beta - 10 Feb, 2024
+=====================
+
+Changes since 45.0
+
+  - Add certificate verification for RDP
+  - Add support for domains
+  - Improve text of onboarding
+  - Improve appdata for AppStream-1.0
+  - Fix translation of vala files
+  - Change icon for changed certificate
+  - Update POTFILES.in
+
+  - Update gtk-frdp
+     - Fix several crashes related to clipboard channel
+     - Retain file lists between window refocuses
+     - Add funtionality for handling of certificate verification
+     - Set initial keyboard layout to the local one
+     - Fix too bright colors for some connections
+
+  - Updated translations:
+     - Basque
+     - Catalan
+     - Czech
+     - Esperanto
+     - Friulian
+     - Persian
+     - Romanian
+     - Russian
+     - Swedish
+     - Turkish
+
 45.0 - 16 Sep, 2023
 =====================
 
