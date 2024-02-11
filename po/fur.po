@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-09-30 16:28+0200\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-11 04:58+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <f.t.public@gmail.com>\n"
 "Language: fur\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Editor: HaiPO 1.4 beta\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Conessions"
 
@@ -78,7 +78,7 @@ msgstr "Proprietâts"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Fabio Tomat, <f.t.public@gmail.com>, 2023"
+msgstr "Fabio Tomat, <f.t.public@gmail.com>, 2024"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -129,15 +129,39 @@ msgstr "Videade caturade"
 msgid "Open"
 msgstr "Vierç"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” al à bisugne di autenticazion"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autenticazion falide: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Daûr a conetisi a “%s” pe prime volte. Par jessi sigûrs che tu ti stâs "
+"colegant ae machine che e dîs di jessi, verifiche che i impronts a "
+"corispuindin. Chest passaç al ven fat dome une volte."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Il certificât dal servidôr lontan “%s” nol corispuint ae copie locâl. Al è "
+"pussibil che cualchidun al impersoni il servidôr."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Il servidôr lontan “%s” al à bisugne di un non utent e de password par "
+"continuâ la conession."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -186,7 +210,7 @@ msgstr "VNC (standard par conetisi a Linux)"
 msgid "Help"
 msgstr "Jutori"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Conet"
 
@@ -202,53 +226,131 @@ msgstr "_Password"
 msgid "Sign In"
 msgstr "Jentre"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Vierç conession"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Verifiche"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Anule"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Verifiche impront"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Sot Windows eseguìs certlm.msc o certmgr.msc\n"
+"e copie il certificât di\n"
+"<b>Remote Desktop>Certificates</b> suntun file.\n"
+"Dopo oten il so impront vie\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"Se GNOME al ven doprât come destinazion finâl de\n"
+"conession, tu puedis verifica l'impornt tes Impostazions,\n"
+"<b>Sharing>Remote Desktop>Verifiche cifradure</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Certificât inspietât"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Elimine il certificât locâl"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Autenticazion necessarie"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Non utent…"
+
+#: src/ui/dialog.ui:465
+#| msgid "_Password"
+msgid "Password…"
+msgstr "Password…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domini…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Il cjamp dal domini di solit al è facoltatîf e tu puedis\n"
+"lassâlu vueit."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Autentichiti"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Benvignûts su Conessions"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Scuvierç cemût che al funzione Conessions."
+msgid "Click next to learn about remote desktop."
+msgstr "Fâs clic su Indenant par scuvierzi alc sul scritori lontan."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Dopre altris scritoris, di lontan"
+msgid "Access other desktops"
+msgstr "Jentre in altris scritoris"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Dopre Conessions par viodi il schermi di altris scritoris. Tu ju puedis "
-"ancje controlâ doprant il pontadôr e la tastiere!"
+"Conessions ti permet di viodi il schermi di altris scritoris. Tu ju puedis "
+"ancje controlâ doprant il pontadôr e la tastiere."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Conetiti a diviers sistemis operatîfs"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Jentre sui scritoris Linux, Mac e Windows doprant Conessions."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Tu puedis jentrâ su scritoris Linux, Mac e Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Abilite il scritori lontan prime di colegâti"
+msgid "Setup is required"
+msgstr "La configurazion e je necessarie"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Al è necessari configurâ i computers pal scritori esterni prime di podêsi "
-"colegâ cun lôr."
+"Di solit al è necessari abilitâ la funzion di scritori lontan sul computer "
+"là che tu desideris conetiti."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "O sperìn che tu ti gjoldis Conessions!"
+msgid "Start by creating your first connection"
+msgstr "Scomence creant la tô prime conession"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Al è pussibil cjatâ plui informazions tal jutori."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Par scomençâ, tu varâs bisugne de direzion dal computer là che tu desideris "
+"conetiti."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -363,8 +465,8 @@ msgid "Scale mode"
 msgstr "Modalitât ridimensionament"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Al baste fracâ il boton <b>+</b> par creâ la tô prime conession."
+msgid "Click the add button to create your first connection"
+msgstr "Fâs clic sul boton par zontâ par creâ la tô prime conession"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -376,6 +478,32 @@ msgstr "Impussibil analizâ il file"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Al file VNC al mancje la clâf “%s”"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” al à bisugne di autenticazion"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Scuvierç cemût che al funzione Conessions."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Dopre altris scritoris, di lontan"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Abilite il scritori lontan prime di colegâti"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Al è necessari configurâ i computers pal scritori esterni prime di podêsi "
+#~ "colegâ cun lôr."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "O sperìn che tu ti gjoldis Conessions!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Al è pussibil cjatâ plui informazions tal jutori."
 
 #~ msgid "Scaling"
 #~ msgstr "Scjale"
@@ -426,9 +554,6 @@ msgstr "Al file VNC al mancje la clâf “%s”"
 
 #~ msgid "Server"
 #~ msgstr "Servidôr"
-
-#~ msgid "Cancel"
-#~ msgstr "Anule"
 
 #~ msgid "Create"
 #~ msgstr "Cree"
