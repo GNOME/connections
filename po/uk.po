@@ -2,13 +2,13 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-07-28 21:10+0300\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-13 20:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "З'єднання"
 
@@ -135,15 +135,39 @@ msgstr "Знімок отримано"
 msgid "Open"
 msgstr "Відкрити"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "«%s» потребує засвідчення"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Розпізнавання не пройдено: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Перше встановлення з'єднання з «%s». Щоб переконатися, що ви встановлюєте"
+" з'єднання саме з тим комп'ютером, який вам потрібен, будь ласка, перевірте"
+" відповідність відбитків. Цю процедуру слід виконати лише один раз."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Сертифікат віддаленого сервера «%s» не відповідає локальній копії. Ймовірно,"
+" хтось намагається видати себе за сервер."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Для продовження з'єднання віддаленому серверу «%s» потрібне ім'я користувача"
+" і пароль."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -152,12 +176,10 @@ msgid "%d×%d"
 msgstr "%d×%d"
 
 #: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
-#| msgid "No Thanks"
 msgid "_No Thanks"
 msgstr "_Ні, дякую"
 
 #: src/onboarding-dialog.vala:96
-#| msgid "Close"
 msgid "_Close"
 msgstr "З_акрити"
 
@@ -194,7 +216,7 @@ msgstr "VNC (стандарт для з'єднання із Linux)"
 msgid "Help"
 msgstr "Довідка"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "З'єднатися"
 
@@ -210,56 +232,142 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Увійти"
 
+#: src/ui/dialog.ui:18
+#| msgid "Connections"
+msgid "Open Connection"
+msgstr "Встановити з'єднання"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Перевірити"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Перевірити відбиток"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"У Windows запустіть certlm.msc або certmgr.msc\n"
+"і скопіюйте сертифікат з\n"
+"<b>Віддалений робочий стіл>Сертифікати</b> до файла.\n"
+"Далі, отримайте його відбиток за допомогою команди\n"
+"«certutil.exe -hashfile file SHA256».\n"
+"\n"
+"Якщо як кінцеву точку з'єднання використано GNOME,\n"
+"відбиток можна перевірити у «Параметрах»,\n"
+"<b>Спільний доступ>Віддалена стільниця>Перевірити шифрування</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Неочікуваний сертифікат"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Вилучити локальний сертифікат"
+
+#: src/ui/dialog.ui:386
+#| msgid "Authentication failed: %s"
+msgid "Authentication Required"
+msgstr "Слід пройти розпізнавання"
+
+#: src/ui/dialog.ui:437
+#| msgid "_Username"
+msgid "Username…"
+msgstr "Користувач…"
+
+#: src/ui/dialog.ui:465
+#| msgid "_Password"
+msgid "Password…"
+msgstr "Пароль…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Домен…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Поле домену, загалом, є необов'язковим, його можна\n"
+"лишити порожнім."
+
+#: src/ui/dialog.ui:638
+#| msgid "Authentication failed: %s"
+msgid "Authenticate"
+msgstr "Розпізнавання"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Вітаємо у «З'єднаннях»"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Дізнайтеся про те, як працюють «З'єднання»."
+msgid "Click next to learn about remote desktop."
+msgstr ""
+"Натисніть кнопку «Далі», щоб дізнатися більше про віддалену стільницю."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Віддалене користування іншими стільничними середовищами"
+#| msgid "View and use other desktops"
+msgid "Access other desktops"
+msgstr "Доступ до інших стільниць"
 
 #: src/ui/onboarding-dialog.ui:51
+#| msgid ""
+#| "Use Connections to view the screen of other desktops. You can control "
+#| "them using the pointer and keyboard, too!"
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
 "Скористайтеся «З'єднаннями» для перегляду зображення на екранах інших "
-"комп'ютерів. Ви зможете також керувати вказівником миші і клавіатурою на цих "
-"комп'ютерах!"
+"комп'ютерів. Ви зможете також керувати цими комп'ютерами за допомогою"
+" вказівника миші та клавіатури."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "З'єднання із іншими операційними системами"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Отримайте доступ до робочих станцій Linux, Mac і Windows за допомогою "
-"«З'єднань»."
+#| msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Ви можете отримати доступ до робочих станцій Linux, Mac і Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Увімкніть віддалену стільницю до встановлення з'єднання"
+msgid "Setup is required"
+msgstr "Потрібне налаштовування"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Перш ніж ви зможете встановлювати з'єднання із віддаленими комп'ютерами, їх "
-"слід слід належно налаштувати."
+"На комп'ютері, з яким ви хочете встановити з'єднання, типово, має бути"
+" увімкнено можливості віддаленої стільниці."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Сподіваємося, вам сподобаються «З'єднання»!"
+msgid "Start by creating your first connection"
+msgstr "Почніть зі створення вашого першого з'єднання"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Докладніші відомості наведено у довідці."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Для початку, вам потрібна адреса комп'ютера, з яким ви хочете встановити"
+" з'єднання."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -374,10 +482,9 @@ msgid "Scale mode"
 msgstr "Режим масштабування"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr ""
-"Просто натисніть на кнопку <b>+</b> кнопку, щоб створити ваше перше "
-"з'єднання."
+#| msgid "Just hit the <b>+</b> button to make your first connection."
+msgid "Click the add button to create your first connection"
+msgstr "Натисніть кнопку додавання, щоб створити ваше перше з'єднання"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -389,6 +496,32 @@ msgstr "Не вдалося обробити файл"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "У файлі VNC не вказано ключа «%s»"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "«%s» потребує засвідчення"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Дізнайтеся про те, як працюють «З'єднання»."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Віддалене користування іншими стільничними середовищами"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Увімкніть віддалену стільницю до встановлення з'єднання"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Перш ніж ви зможете встановлювати з'єднання із віддаленими комп'ютерами, "
+#~ "їх слід слід належно налаштувати."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Сподіваємося, вам сподобаються «З'єднання»!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Докладніші відомості наведено у довідці."
 
 #~ msgid "Scaling"
 #~ msgstr "Масштабування"
@@ -441,9 +574,6 @@ msgstr "У файлі VNC не вказано ключа «%s»"
 
 #~ msgid "Server"
 #~ msgstr "Сервер"
-
-#~ msgid "Cancel"
-#~ msgstr "Скасувати"
 
 #~ msgid "Create"
 #~ msgstr "Створити"
