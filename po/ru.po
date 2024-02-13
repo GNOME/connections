@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-01-25 15:18+0000\n"
-"PO-Revision-Date: 2024-02-03 10:40+0300\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-12 13:52+0300\n"
 "Last-Translator: Artur So <arturios2005@mail.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -312,49 +312,51 @@ msgid "Welcome to Connections"
 msgstr "Добро пожаловать в Подключения"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Узнайте как работают Подключения."
+msgid "Click next to learn about remote desktop."
+msgstr "Нажмите далее, чтобы узнать об удаленном рабочем столе."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Используйте другие рабочие столы, удалённо"
+msgid "Access other desktops"
+msgstr "Доступ к другим рабочим столам"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Используйте Подключения чтобы увидеть экраны других компьютеров. Вы также "
-"можете управлять ими используя мышь и клавиатуру!"
+"Приложение позволяет просматривать экраны других рабочих столов. Управлять "
+"ими можно также с помощью курсора и клавиатуры."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Подключайтесь к другим операционным системам"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Получите доступ к компьютерам с Linux, Mac и Windows, используя Подключения."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Вы можете получить доступ к рабочим столам Linux, Mac и Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Разрешите удалённый рабочий стол перед подключением"
+msgid "Setup is required"
+msgstr "Требуется настройка"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Компьютеры должны быть настроены для использования удалённых рабочих столов "
-"прежде, чем вы сможете подключиться к ним."
+"Удаленный рабочий стол обычно должен быть включен на компьютере, к которому "
+"вы хотите подключиться."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Мы надеемся, что Подключения вам понравятся!"
+msgid "Start by creating your first connection"
+msgstr "Начните с создания первого подключения"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Вы сможете найти подробную информацию в справке."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Для начала вам понадобится адрес компьютера, к которому вы хотите "
+"подключиться."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -469,8 +471,8 @@ msgid "Scale mode"
 msgstr "Режим масштабирования"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Просто нажмите кнопку <b>+</b>, чтобы установить первое соединение."
+msgid "Click the add button to create your first connection"
+msgstr "Нажмите кнопку Добавить, чтобы создать первое подключение"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -482,6 +484,28 @@ msgstr "Не удалось проанализировать файл"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "В файле VNC отсутствует ключ «%s»"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Узнайте как работают Подключения."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Используйте другие рабочие столы, удалённо"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Разрешите удалённый рабочий стол перед подключением"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Компьютеры должны быть настроены для использования удалённых рабочих "
+#~ "столов прежде, чем вы сможете подключиться к ним."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Мы надеемся, что Подключения вам понравятся!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Вы сможете найти подробную информацию в справке."
 
 #, c-format
 #~ msgid "“%s” requires authentication"
