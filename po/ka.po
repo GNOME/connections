@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-12 14:34+0100\n"
+"POT-Creation-Date: 2024-02-12 13:36+0000\n"
+"PO-Revision-Date: 2024-02-13 05:53+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <(nothing)>\n"
 "Language: ka\n"
@@ -57,7 +57,8 @@ msgstr ""
 "Connections ფართოდ გამოყენებულ VNC და RDP პროტოკოლებს იყენებს და სამუშაო "
 "მაგიდაზე, რომელსაც უერთდებით, ერთ-ერთი მათგანი მაინც უნდა იყოს ჩართული."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "პროექტი „GNOME“"
 
@@ -142,6 +143,9 @@ msgid ""
 "machine it claims to be, please verify the fingerprints match. This process "
 "is only done once."
 msgstr ""
+"\"%s\"-ს პირველად უერთდებით. იმისათვის, რომ დარწმუნდეთ, რომ ეს ის სერვერია, "
+"რომლადაც ის თავს ასაღებს, შეადარეთ მათი ანაბეჭდები. ეს პროცესი, მხოლოდ, "
+"ერთხელ სრულდება."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -149,6 +153,8 @@ msgid ""
 "The remote server “%s” certificate doesn't match local copy. It may be "
 "someone's pretending to be the server."
 msgstr ""
+"დაშორებული სერვერის \"%s\" სერტიფიკატი ლოკალურ ასლს არ ემთხვევა. შეიძლება, "
+"სხვას მოაქვს თავი, რომ სერვერია."
 
 #: src/dialogs.vala:241
 #, c-format
@@ -156,6 +162,8 @@ msgid ""
 "The remote server “%s” requires a username and password to continue to "
 "connect."
 msgstr ""
+"დაშორებულ სერვერთან \"%s\" მიერთების გასაგრძელებლად საჭიროა მომხმარებლის "
+"სახელი და პაროლი."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -250,6 +258,15 @@ msgid ""
 "the fingerprint can be verified in the Settings,\n"
 "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgstr ""
+"Window-ზე გაუშვით certlm.msc ან certmgr.msc\n"
+"და დააკოპირეთ სერტიფიკატი\n"
+"<b>Remote Deskop>სერტიფიკატები</b>-დან ფაილში.\n"
+"შემდეგ აიღეთ მისი ანაბეჭდი ბრძანებით\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"თუ GNOME გამოიყენება მიერთების ბოლოწერტილში,\n"
+"ანაბეჭდის შემოწმება პარამეტრებში შეგიძლიათ:\n"
+"<b>გაზიარება>დაშორებული სამუშაო მაგიდა>დაშიფვრის შემოწმება</b>."
 
 #: src/ui/dialog.ui:291
 msgid "Unexpected Certificate"
@@ -325,6 +342,8 @@ msgid ""
 "Remote desktop typically needs to be enabled on the computer you want to "
 "connect to."
 msgstr ""
+"დაშორებულ სამუშაო მაგიდას, ჩვეულებრივ, კომპიუტერზე, რომელსაც უკავშირდებით, "
+"ჩართვა სჭირდება."
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "Start by creating your first connection"
@@ -334,6 +353,7 @@ msgstr "დაიწყეთ თქვენი პირველი მიე
 msgid ""
 "To begin, you will need the address of the computer you want to connect to."
 msgstr ""
+"დასაწყებად გჭირდებათ იმ კომპიუტერის მისამართი, რომელთანაც მიერთება გნებავთ."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
