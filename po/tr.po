@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-01-13 12:15+0000\n"
-"PO-Revision-Date: 2024-01-25 08:00+0300\n"
+"POT-Creation-Date: 2024-02-12 13:36+0000\n"
+"PO-Revision-Date: 2024-02-13 16:38+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
@@ -59,7 +59,8 @@ msgstr ""
 "kullanır, bu iletişim kurallarından biri bağlanmak istediğiniz bilgisayarda "
 "etkinleştirilmelidir."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
@@ -310,47 +311,50 @@ msgid "Welcome to Connections"
 msgstr "Bağlantılar’a Hoş Geldiniz"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Bağlantılarʼın nasıl çalıştığını öğrenin."
+msgid "Click next to learn about remote desktop."
+msgstr "Uzak masaüstüyle ilgili bilgilenmek için sonrakine tıklayın."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Diğer masaüstülerini kullan, uzaktan"
+msgid "Access other desktops"
+msgstr "Diğer masaüstlerine eriş"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Diğer masaüstlerinin ekranlarını görmek için Bağlantılarʼı kullanın. Ayrıca "
-"imleç ve klavye kullanarak ekranları denetleyebilirsiniz!"
+"Bağlantılar, diğer masaüstlerinin ekranlarını görüntülemenizi sağlar. İmleç "
+"ve klavye kullanılarak da denetlenebilirler."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Başka işletim sistemlerine bağlan"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Bağlantılarʼı kullanarak Linux, Mac ve Windows masaüstlerine erişin."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Linux, Mac ve Windows masaüstlerine erişebilirsiniz."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Bağlanmadan önce uzak masaüstünü etkinleştir"
+msgid "Setup is required"
+msgstr "Kurulum gerekli"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Bilgisayarlar, onlara bağlanılmadan önce uzak masaüstü için ayarlanmalıdır."
+"Bağlanmak istediğiniz bilgisayarda uzak masaüstünün etkinleştirilmesi "
+"gerekir."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Umarız Bağlantılarʼı beğenirsiniz!"
+msgid "Start by creating your first connection"
+msgstr "İlk bağlantınızı oluşturarak başlayın"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Yardım bölümünde daha çok bilgi bulunur."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Başlamak için, bağlanmak istediğiniz bilgisayarın adresine gereksineceksiniz."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -465,8 +469,8 @@ msgid "Scale mode"
 msgstr "Ölçek kipi"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "İlk bağlantınızı yapmak için <b>+</b> düğmesine basın."
+msgid "Click the add button to create your first connection"
+msgstr "İlk bağlantınızı oluşturmak için ekle düğmesine tıklayın"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -478,6 +482,28 @@ msgstr "Dosya ayrıştırılamadı"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC dosyasının “%s” anahtarı eksik"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Bağlantılarʼın nasıl çalıştığını öğrenin."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Diğer masaüstülerini kullan, uzaktan"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Bağlanmadan önce uzak masaüstünü etkinleştir"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Bilgisayarlar, onlara bağlanılmadan önce uzak masaüstü için "
+#~ "ayarlanmalıdır."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Umarız Bağlantılarʼı beğenirsiniz!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Yardım bölümünde daha çok bilgi bulunur."
 
 #~ msgid "“%s” requires authentication"
 #~ msgstr "“%s” kimlik doğrulaması gerektiriyor"
