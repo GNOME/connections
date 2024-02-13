@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-01-13 12:15+0000\n"
-"PO-Revision-Date: 2024-01-18 04:09+0330\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-13 03:32+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "Language: fa\n"
@@ -302,48 +302,48 @@ msgid "Welcome to Connections"
 msgstr "به دوردست‌ها خوش آمدید"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "دربارهٔ چکونگی کارکرد دوردست‌ها بیاموزید."
+msgid "Click next to learn about remote desktop."
+msgstr "زدن بعدی برای آموختن دربارهٔ میزکار دوردست."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "استفاده از میزکارهای دیگر به صورت دوردست"
+msgid "Access other desktops"
+msgstr "دسترسی به میزکارهای دیگر"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them using "
-"the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"برای دیدن صفحهٔ میزکارهای دیگر از دوردست‌ها استفاده کنید. می‌تواند با استفاده از "
-"نشانگر و صفحه‌کلید، واپایششان هم بکنید!"
+"دوردست‌ها می‌گذارد صفحه‌های میزکارهای دیگر را ببینید. آن‌ها می‌توانند با استفاده از "
+"نشانگر و صفحه‌کلید واپایش نیز بشوند."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "وصل شدن به دیگر سیستم‌عامل‌ها"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"با استفاده از دوردست‌ها به میزکارهای گنو/لینوکس، مک و ویندوز دسترسی داشته باشید."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "می‌توانید به میزکارهای گنو/لینوکس، مک و ویندوز دسترسی داشته باشید."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "به کار انداختن میزکار دوردست پیش از وصل شدن"
+msgid "Setup is required"
+msgstr "نیازمند برپایی"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to them."
+"Remote desktop typically needs to be enabled on the computer you want to connect "
+"to."
 msgstr ""
-"رایاناه‌ها باید پیش از این که بتوانید بهشان وصل شوید، برای میزکار دوردست برپا "
-"شوند."
+"عموماً لازم است میزکار دوردست روی رایانه‌ای که ی‌خواهید به آن وصل شوید به کار "
+"افتاده باشد."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "امیدواریم از دوردست‌ها لذّت ببرید!"
+msgid "Start by creating your first connection"
+msgstr "با ایجاد نخستین ارتباطتان آغاز کنید"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "اطّلاعات بیش‌تر می‌تواند در راهنما پیدا شود."
+msgid "To begin, you will need the address of the computer you want to connect to."
+msgstr "برای شروع، به نشانی رایانه‌ای که می‌خواهید به آن وصل شوید نیاز دارید."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -458,8 +458,8 @@ msgid "Scale mode"
 msgstr "حالت مقیاس"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "برای ساخت نخستین ارتباطتان، کافیست دکمهٔ <b>+</b> را بزنید."
+msgid "Click the add button to create your first connection"
+msgstr "زدن دکمهٔ افزودن برای ایجاد نخستین ارتباطتان"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -471,6 +471,27 @@ msgstr "نمی‌توان پرونده را تجزیه کرد"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "پروندهٔ VNC کلید %s را ندارد"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "دربارهٔ چکونگی کارکرد دوردست‌ها بیاموزید."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "استفاده از میزکارهای دیگر به صورت دوردست"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "به کار انداختن میزکار دوردست پیش از وصل شدن"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to them."
+#~ msgstr ""
+#~ "رایاناه‌ها باید پیش از این که بتوانید بهشان وصل شوید، برای میزکار دوردست برپا "
+#~ "شوند."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "امیدواریم از دوردست‌ها لذّت ببرید!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "اطّلاعات بیش‌تر می‌تواند در راهنما پیدا شود."
 
 #, c-format
 #~ msgid "“%s” requires authentication"
