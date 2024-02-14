@@ -2,13 +2,13 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2020, 2021, 2022, 2023.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-08-13 17:00+0100\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-14 17:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr "Project-Id-Version: gnome-connections gnome-3-38\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Konexioak"
 
@@ -119,15 +119,32 @@ msgstr "Pantaila-argazkia hartu da"
 msgid "Open"
 msgstr "Ireki"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” konexioak autentifikazioa behar du"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentifikazioak huts egin du: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr "Lehen aldiz “%s” makinarekin konektatzen. Benetan uste duzun makinarekin konektatzen ari zarela ziurtatzeko, egiaztatu hatz-markak bat datozela. Prozesu hori behin bakarrik egingo da."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr "Urruneko “%s” zerbitzariaren ziurtagiria ez dator bat kopia lokalarekin. Zerbitzaria dela dioen beste norbait izan daiteke."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "Urruneko “%s” zerbitzariak erabiltzaile-izena eta pasahitza behar ditu konexioarekin jarraitzeko."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -176,7 +193,7 @@ msgstr "VNC (estandarra Linuxekin konektatzeko)"
 msgid "Help"
 msgstr "Laguntza"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Konektatu"
 
@@ -192,49 +209,121 @@ msgstr "_Pasahitza"
 msgid "Sign In"
 msgstr "Hasi saioa"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Ireki konexioa"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Egiaztatu"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Utzi"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Egiaztatu hatz-marka"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr "Windows sisteman, exekutatu certlm.msc edo certmgr.msc\n"
+"eta kopiatu <b>Urruneko mahaigaina>Ziurtagiriak</b> ataleko ziurtagiria fitxategi batean.\n"
+"Ondoren, eskuratu bere hatz-marka\n"
+"\"certutil.exe -hashfile fitxategia SHA256\" erabiliz.\n"
+"\n"
+"Konektatutako amaiera-puntuan GNOME erabiltzen bada,\n"
+"hatz-marka egiaztatzeko erabili ezarpenetako\n"
+"<b>Partekatzea>Urruneko mahaigaina>Egiaztatu zifratzea</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Espero ez zen ziurtagiria"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Ezabatu ziurtagiri lokala"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Autentifikazioa behar da"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Erabiltzaile-izena…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Pasahitza…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domeinua…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr "Domeinu-eremua normalean aukerakoa da eta\n"
+"hutsik utzi daiteke."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Autentifikatu"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Ongi etorri Konexioak aplikaziora"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Ikasi Konexioak aplikazioak nola funtzionatzen duen."
+msgid "Click next to learn about remote desktop."
+msgstr "Egin klik hurrengoan urruneko mahaigainei buruz ikasteko."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Erabili beste mahaigain batzuk urrunetik"
+msgid "Access other desktops"
+msgstr "Sartu beste mahaigain batzuetara"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr "Erabili Konexioak aplikazioa beste mahaigain batzuetako pantaila ikusteko. Haiek kontrolatu ahal izango dituzu erakuslea eta teklatua erabilita."
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr "Konexioak aplikazioaren bidez, beste mahaigain batzuen pantailak ikusi daitezke. Erakuslea eta teklatua erabiliz kontrolatu daitezke ere."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Konektatu beste sistema eragile batzuekin"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Sartu Linux, Mac eta Windows mahaigainetara Konexioak aplikazioa erabilita."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Linux, Mac zein Windows mahaigainetara sartu zaitezke."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Gaitu urruneko mahaigaina konexioa gauzatu baino lehen"
+msgid "Setup is required"
+msgstr "Konfiguratu behar da"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr "Ordenagailuak konfiguratu egin behar dira urruneko mahaigain gisa funtzionatu dezaten eta haiekin konektatu ahal izateko."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr "Urruneko mahaigaina normalean urruneko ordenagailuan gaitu behar da."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Espero dugu Konexioak gustuko izango duzula!"
+msgid "Start by creating your first connection"
+msgstr "Hasi zure lehen konexioa sortzen"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Informazio gehiagorako, begiratu laguntza."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "Hasteko, zure ordenagailuarekin konektatu nahi duzun urruneko ordenagailuaren helbidea behar duzu."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -349,8 +438,8 @@ msgid "Scale mode"
 msgstr "Eskalatze-modua"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Sakatu <b>+</b> botoia zure lehen konexioa sortzeko."
+msgid "Click the add button to create your first connection"
+msgstr "Egin klik gehitzeko botoian zure lehen konexioa sortzeko"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -362,6 +451,32 @@ msgstr "Ezin izan da fitxategia analizatu"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC fitxategiak “%s” gakoa falta du"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” konexioak autentifikazioa behar du"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Ikasi Konexioak aplikazioak nola funtzionatzen duen."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Erabili beste mahaigain batzuk urrunetik"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Gaitu urruneko mahaigaina konexioa gauzatu baino lehen"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Ordenagailuak konfiguratu egin behar dira urruneko mahaigain gisa "
+#~ "funtzionatu dezaten eta haiekin konektatu ahal izateko."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Espero dugu Konexioak gustuko izango duzula!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Informazio gehiagorako, begiratu laguntza."
 
 #~ msgid "Scaling"
 #~ msgstr "Eskalatzea"
@@ -414,9 +529,6 @@ msgstr "VNC fitxategiak “%s” gakoa falta du"
 
 #~ msgid "Server"
 #~ msgstr "Zerbitzaria"
-
-#~ msgid "Cancel"
-#~ msgstr "Utzi"
 
 #~ msgid "Create"
 #~ msgstr "Sortu"
