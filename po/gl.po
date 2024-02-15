@@ -8,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-08-12 11:34+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-15 03:14+0100\n"
+"Last-Translator: Fran Dieguez <fran.dieguez@gnome.org>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-DL-Team: gl\n"
 "X-DL-Module: connections\n"
 "X-DL-Branch: master\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Conexións"
 
@@ -135,15 +135,32 @@ msgstr "Captura de pantalla tomada"
 msgid "Open"
 msgstr "Abrir"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "«%s» require autenticación"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Produciuse un fallo na autenticación: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -193,7 +210,7 @@ msgstr "VNC (estándar para conectarse a Linux)"
 msgid "Help"
 msgstr "Axuda"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Conectar"
 
@@ -209,53 +226,120 @@ msgstr "_Contrasinal"
 msgid "Sign In"
 msgstr "Iniciar sesión"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Abrir conexión"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Verificar"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Verificar pegada dactilar"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Certificado non agardado"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Eliminar o certificado local"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Requírese autenticación"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Nome de usuario…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Contrasinal…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Dominio…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"O campo de dominio é un campo comunmente opcional e pode\n"
+"deixarse baleiro."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Autenticar"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Benvida a Conexións"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Saiba máis sobre como funciona Conexións."
+msgid "Click next to learn about remote desktop."
+msgstr "Prema seguinte para saber sobre os escritorios remotos."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Usar outros escritorios, de forma remota"
+msgid "Access other desktops"
+msgstr "Acceder a outros escritorios"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Use Conexións para ver a pantalla doutros escritorios. Tamén pode "
-"controlalos usando o punteiro e o rato"
+"Conexións permítelle ver a pantalla doutros escritorios. Tamén pode "
+"controlalos usando o punteiro e o rato."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Conéctese a distintos sistemas operativos"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Acceda a escritorios Linux, Mac e Windows usando Conexións."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Pode acceder a escritorios Linux, Mac e Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Active o escritorio remoto antes de conectarse"
+msgid "Setup is required"
+msgstr "Requírese a configuración"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Debe configurar o escritorio remoto nos computadores antes de poder "
-"conectarse a eles."
+"Os escritorios remotos normalmente precisan activarse no computador ao que "
+"quere conectarse."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Agardamos que desfrute de Conexións!"
+msgid "Start by creating your first connection"
+msgstr "Comezar a crear a súa primeira conexión"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Pode atopar máis información na axuda."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Para comezar, precisa o enderezo do computador ao que se quere conectar."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -370,8 +454,8 @@ msgid "Scale mode"
 msgstr "Modo de escalado"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Simplemente prema o botón <b>+</b> para crear a primeira conexión."
+msgid "Click the add button to create your first connection"
+msgstr "Prema no botón de engadir para crear a súa primeira conexión"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -383,6 +467,32 @@ msgstr "Non foi posíbel analizar o ficheiro"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "No ficheiro VNC falta unha chave «%s»"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "«%s» require autenticación"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Saiba máis sobre como funciona Conexións."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Usar outros escritorios, de forma remota"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Active o escritorio remoto antes de conectarse"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Debe configurar o escritorio remoto nos computadores antes de poder "
+#~ "conectarse a eles."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Agardamos que desfrute de Conexións!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Pode atopar máis información na axuda."
 
 #~ msgid "Scaling"
 #~ msgstr "Escalado"
@@ -434,9 +544,6 @@ msgstr "No ficheiro VNC falta unha chave «%s»"
 
 #~ msgid "Server"
 #~ msgstr "Servidor"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
 
 #~ msgid "Create"
 #~ msgstr "Crear"
