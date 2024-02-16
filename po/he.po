@@ -8,21 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-07-28 09:10+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-16 23:56+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
-"2 : 3)\n"
-"X-Generator: Gtranslator 42.0\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : "
+"3);\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "חיבורים"
 
@@ -51,11 +51,11 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
-"Connections uses the widely supported VNC and RDP protocols, and one of "
-"these must be enabled on the desktop that you want to connect to."
+"Connections uses the widely supported VNC and RDP protocols, and one of these "
+"must be enabled on the desktop that you want to connect to."
 msgstr ""
-"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות "
-"פעילים בשולחן העבודה אליו ברצונך להתחבר."
+"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות פעילים "
+"בשולחן העבודה אליו ברצונך להתחבר."
 
 #: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
@@ -135,15 +135,36 @@ msgstr "המסך צולם"
 msgid "Open"
 msgstr "פתיחה"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "‏„%s” דורש אימות"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "האימות נכשל: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"מתבצעת התחברות אל „%s” לראשונה. כדי לוודא שהחיבור הזה מתבצע למכונה המיועדת, "
+"נא לוודא שטביעות האצבע תואמות. את התהליך הזה יש לבצע רק פעם אחת."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"אישור השרת המרוחק „%s” לא תואם לעותק המקומי. יכול להיות שמישהו מנסה להתחזות "
+"לשרת."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "השרת המרוחק „%s” דורש שם משתמש וסיסמה כדי להמשיך בחיבור."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -192,7 +213,7 @@ msgstr "‫VNC (תקן להתחברות אל Linux)"
 msgid "Help"
 msgstr "עזרה"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "חיבור"
 
@@ -208,51 +229,126 @@ msgstr "_ססמה"
 msgid "Sign In"
 msgstr "כניסה"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "פתיחת חיבור"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "אימות"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "אימות טביעת אצבע"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"ב־Windows יש להריץ את certlm.msc or certmgr.msc\n"
+"ולהעתיק את האישור מתוך\n"
+"<b>שולחן עבודה מרוחק>אישורים</b> לקובץ.\n"
+"ואז להשיג את טביעת האצבע שלו דרך\n"
+"„certutil.exe -hashfile file SHA256”.\n"
+"\n"
+"אם נעשה שימוש ב־GNOME בצד השני,\n"
+"אפשר לאמת את טביעת האצבע בהגדרות,\n"
+"<b>שיתוף>שולחן עבודה מרוחק>אימות הצפנה</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "אישור מפתיע"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "מחיקת אישור מקומי"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "נדרש אימות"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "שם משתמש…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "ססמה…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "שם תחום…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"שדה שם התחום הוא בדרך כלל רשות ואפשר להשאיר אותו\n"
+"ריק."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "אימות"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "ברוך בואך לחיבורים"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "מידע על אופן העבודה של חיבורים."
+msgid "Click next to learn about remote desktop."
+msgstr "יש ללחוץ על הבא כדי ללמוד על שולחן עבודה מרוחק."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "ניתן להשתמש בשולחנות עבודה, מרחוק"
+msgid "Access other desktops"
+msgstr "גישה לשולחנות עבודה אחרים"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"יש להשתמש בחיבורים כדי לצפות במסך של שולחנות עבודה אחרים. ניתן גם לשלוט בהם "
-"באמצעות הסמן והמקלדת!"
+"החיבור מאפשר לצפות במסכים של שולחנות עבודה אחרים. אפשר גם לשלוט בהם באמצעות "
+"סמן העכבר והמקלדת."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "התחברות למגוון מערכות הפעלה"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "גישה לשולחנות עבודה מסוג לינוקס, Mac ו־Windows דרך התוכנית חיבורים."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "אפשר לגשת לשולחנות עבודה מסוג לינוקס, Mac ו־Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "יש להפעיל שולחן עבודה מרוחק בטרם החיבור"
+msgid "Setup is required"
+msgstr "נדרשת הגדרה"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr "יש להגדיר על המחשבים חיבור שולחן עבודה מרוחק בטרם אפשר להתחבר אליהם."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr "שולחן עבודה בדרך כלל אמור להיות פעיל במחשב שמיועד לחיבור."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "אנו מקווים שתכנית החיבורים עושה לך רק טוב!"
+msgid "Start by creating your first connection"
+msgstr "יש להתחיל על ידי יצירת החיבור הראשון שלך"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "ניתן למצוא מידע נוסף בעזרה."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "כדי להתחיל, צריך את כתובת המחשב לחיבור."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -367,8 +463,8 @@ msgid "Scale mode"
 msgstr "מצב שינוי גודל"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "פשוט ללחוץ על כפתור ה<b>+</b> ליצירת ההתחברות הראשונה שלך."
+msgid "Click the add button to create your first connection"
+msgstr "יש ללחוץ על כפתור ההוספה כדי ליצור את החיבור הראשון שלך"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -380,6 +476,30 @@ msgstr "לא ניתן לנתח את הקובץ"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "בקובץ ה־VNC חסר המפתח „%s”"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "‏„%s” דורש אימות"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "מידע על אופן העבודה של חיבורים."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "ניתן להשתמש בשולחנות עבודה, מרחוק"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "יש להפעיל שולחן עבודה מרוחק בטרם החיבור"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr "יש להגדיר על המחשבים חיבור שולחן עבודה מרוחק בטרם אפשר להתחבר אליהם."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "אנו מקווים שתכנית החיבורים עושה לך רק טוב!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "ניתן למצוא מידע נוסף בעזרה."
 
 #~ msgid "Scaling"
 #~ msgstr "קנה מידה"
@@ -428,9 +548,6 @@ msgstr "בקובץ ה־VNC חסר המפתח „%s”"
 
 #~ msgid "Server"
 #~ msgstr "שרת"
-
-#~ msgid "Cancel"
-#~ msgstr "ביטול"
 
 #~ msgid "Create"
 #~ msgstr "יצירה"
