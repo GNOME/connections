@@ -2,14 +2,14 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# Matej Urbančič <mateju@src.gnome.org>, 2020–2023.
+# Matej Urbančič <mateju@src.gnome.org>, 2020–2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-07-28 18:10+0000\n"
-"PO-Revision-Date: 2023-07-29 15:48+0200\n"
+"POT-Creation-Date: 2024-02-15 02:15+0000\n"
+"PO-Revision-Date: 2024-02-19 11:25+0100\n"
 "Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Povezovalnik"
 
@@ -59,7 +59,8 @@ msgstr ""
 "Program podpira protokola VNC in RDP, katerikoli pa mora biti omogočen tudi "
 "na namizju, s katerim poteka povezovanje."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -134,15 +135,39 @@ msgstr "Zaslonska slika je zajeta"
 msgid "Open"
 msgstr "Odpri"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "»%s« zahteva overitev"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Overitev je spodletela: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Zaznana je prva povezava s storitvijo »%s«. Če se želite prepričati, da se "
+"res povezujete s pravo napravo, preverite, ali se prstni odtisi ujemajo. To "
+"preverjanje se izvede le enkrat."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Potrdilo oddaljenega strežnika »%s« se ne sklada s krajevno kopijo. Morda se "
+"neka druga naprava izdaja za ciljni strežnik.."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Oddaljeni strežnik »%s« za nadaljevanje povezovanja zahteva uporabniško ime "
+"in geslo."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -191,7 +216,7 @@ msgstr "VNC (standard za povezovanje z napravami Linux)"
 msgid "Help"
 msgstr "Pomoč"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Poveži"
 
@@ -207,52 +232,133 @@ msgstr "_Geslo"
 msgid "Sign In"
 msgstr "Prijava"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Odpri povezavo"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Overi"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Overi prstni odtis"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"V sistemu Windows zaženite program certlm.msc\n"
+"ali certmgr.msc in kopirajte potrdilo iz mape\n"
+"<b>Oddaljeno namizje>Potrdila</b> v datoteko.\n"
+"Nato pridobite prstni odtis z ukazom\n"
+"»certutil.exe -hashfile file SHA256«.\n"
+"\n"
+"Če je končna točka povezave okolje GNOME,\n"
+"lahko prstni odtis preverite v nastavitvah\n"
+"<b>Souporaba>Oddaljeno namizje>Overi šifriranje</b>"
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Nepričakovano potrdilo"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Izbriši krajevno potrdilo"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Zahtevana je overitev"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Uporabniško ime …"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Geslo …"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domena …"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Polje domene običajno ni obvezen podatek\n"
+"in lahko ostane prazno polje."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Overi"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Dobrodošli v program Povezovalnik"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Več o tem, kako deluje povezovalnik."
+msgid "Click next to learn about remote desktop."
+msgstr "Kliknite naprej za več podrobnosti o oddaljenem namizju."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Pregled in oddaljeno upravljanje namizij"
+msgid "Access other desktops"
+msgstr "Dostop do oddaljenih namizij"
 
 #: src/ui/onboarding-dialog.ui:51
+#| msgid ""
+#| "Use Connections to view the screen of other desktops. You can control "
+#| "them using the pointer and keyboard, too!"
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Povezovalnik omogoča delo na oddaljenih namiznih napravah. Na zaslonu jih je "
-"mogoče upravljati s tipkovnico in miško!"
+"Program omogoča ogled zaslonov na namizjih drugih naprav. Upravljati jih je "
+"mogoče z miško in tipkovnico."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Povezovanje z različnimi operacijskimi sistemi"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Podprto je povezovanje z namizji okolij Linux, Mac in Windows."
+#| msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Mogoče se je povezati z namizji Linux, Mac in Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Pred povezavo je treba oddaljene naprave nastaviti"
+msgid "Setup is required"
+msgstr "Zahtevana je nastavitev"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr "Računalnike je treba za delo z oddaljenimi namizji pravilno nastaviti."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"Oddaljeno namizje mora biti na oddaljeni napravi omogočeno, da se povezava "
+"lahko vzpostavi."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Želimo vam enostavno delo s Povezovalnikom!"
+msgid "Start by creating your first connection"
+msgstr "Začnite z ustvarjanjem prve povezave"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
 msgstr ""
-"Več možnosti in podrobnosti o delovanju je zabeleženih na straneh pomoči."
+"Za začetek je treba vpisati naslov računalnika, s katerim se želite povezati."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -367,8 +473,8 @@ msgid "Scale mode"
 msgstr "Način spreminjanja velikosti"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Pritisnite gumb <b>+</b> in ustvarite prvo povezavo."
+msgid "Click the add button to create your first connection"
+msgstr "Kliknite na gumb za dodajanje za prvo povezavo"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -380,6 +486,32 @@ msgstr "Datoteke ni mogoče razčleniti"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Datoteka VNC je brez ključa »%s«"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "»%s« zahteva overitev"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Več o tem, kako deluje povezovalnik."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Pregled in oddaljeno upravljanje namizij"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Pred povezavo je treba oddaljene naprave nastaviti"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Računalnike je treba za delo z oddaljenimi namizji pravilno nastaviti."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Želimo vam enostavno delo s Povezovalnikom!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr ""
+#~ "Več možnosti in podrobnosti o delovanju je zabeleženih na straneh pomoči."
 
 #~ msgid "Scaling"
 #~ msgstr "Prilagajanje velikosti"
@@ -429,9 +561,6 @@ msgstr "Datoteka VNC je brez ključa »%s«"
 
 #~ msgid "Server"
 #~ msgstr "Strežnik"
-
-#~ msgid "Cancel"
-#~ msgstr "Prekliči"
 
 #~ msgid "Create"
 #~ msgstr "Ustvari"
