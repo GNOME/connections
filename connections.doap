@@ -9,6 +9,8 @@
   <description xml:lang="en">A remote desktop client for the GNOME desktop environment</description>
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
   <programming-language>Vala</programming-language>
+  <platform>GTK 3</platform>
+  <platform>Libhandy</platform>
 
   <homepage
   rdf:resource="https://wiki.gnome.org/Apps/Connections" />
