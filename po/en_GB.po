@@ -8,20 +8,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-08-26 10:01+0000\n"
-"PO-Revision-Date: 2021-08-28 10:38+0100\n"
-"Last-Translator: Bruce Cowan <bruce@bcowan.me.uk>\n"
+"POT-Creation-Date: 2024-01-13 12:09+0000\n"
+"PO-Revision-Date: 2024-02-21 20:19+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English - United Kingdom <en@li.org>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 40.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
 msgid "Connections"
 msgstr "Connections"
 
@@ -57,7 +57,7 @@ msgstr ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
 
-#: data/org.gnome.Connections.appdata.xml.in:34
+#: data/org.gnome.Connections.appdata.xml.in:43
 msgid "The GNOME Project"
 msgstr "The GNOME Project"
 
@@ -82,81 +82,88 @@ msgid "translator-credits"
 msgstr ""
 "Stephan Woidowski <swoidowski@t-online.de>\n"
 "Bruce Cowan <bruce@bcowan.me.uk>\n"
-"Zander Brown <zbrown@gnome.org>"
+"Zander Brown <zbrown@gnome.org>\n"
+"Andi Chandler <andi@gowling.com>"
 
-#: src/application.vala:89 src/application.vala:239
+#: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
 msgstr "A remote desktop client for the GNOME desktop environment"
 
-#: src/application.vala:150
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "Couldn’t open file of unknown mime type %s"
 
-#: src/application.vala:179
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
 msgstr "Connection to “%s” has been deleted"
 
-#: src/application.vala:182
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Undo"
 
-#: src/application.vala:229
+#: src/application.vala:232
 msgid "URL to connect"
 msgstr "URL to connect"
 
-#: src/application.vala:230
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Open .vnc or .rdp file at the given PATH"
 
-#: src/application.vala:231
-#| msgid "Fullscreen"
+#: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Open in full screen"
 
-#: src/application.vala:254
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
 msgstr "Too many command-line arguments specified.\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:64
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
 msgstr "Screenshot from %s"
 
-#: src/connection.vala:79
+#: src/connection.vala:85
 msgid "Screenshot taken"
 msgstr "Screenshot taken"
 
 #. Translators: Open is a verb
-#: src/connection.vala:82
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Open"
 
-#: src/connection.vala:127
+#: src/connection.vala:161
 #, c-format
 msgid "“%s” requires authentication"
 msgstr "“%s” requires authentication"
 
-#: src/connection.vala:146
+#: src/connection.vala:200
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Authentication failed: %s"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:126
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:88 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "No Thanks"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+#| msgid "No Thanks"
+msgid "_No Thanks"
+msgstr "_No Thanks"
 
-#: src/onboarding-dialog.vala:88
-msgid "Close"
-msgstr "Close"
+#: src/onboarding-dialog.vala:96
+#| msgid "Close"
+msgid "_Close"
+msgstr "_Close"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Resize desktop"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -171,7 +178,6 @@ msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr "Enter the network identifier of the remote desktop to connect to:"
 
 #: src/ui/assistant.ui:53
-#| msgid "Connections"
 msgid "Connection Type"
 msgstr "Connection Type"
 
@@ -179,15 +185,15 @@ msgstr "Connection Type"
 msgid "RDP (standard for connecting to Windows)"
 msgstr "RDP (standard for connecting to Windows)"
 
-#: src/ui/assistant.ui:71
+#: src/ui/assistant.ui:72
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standard for connecting to Linux)"
 
-#: src/ui/assistant.ui:88 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
 msgid "Help"
 msgstr "Help"
 
-#: src/ui/assistant.ui:98
+#: src/ui/assistant.ui:100
 msgid "Connect"
 msgstr "Connect"
 
@@ -203,25 +209,19 @@ msgstr "_Password"
 msgid "Sign In"
 msgstr "Sign In"
 
-#: src/ui/empty-view.ui:28 src/ui/onboarding-dialog.ui:41
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Welcome to Connections"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Just hit the <b>+</b> button to make your first connection."
-
-#: src/ui/onboarding-dialog.ui:42
-#| msgid "About Connections"
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Learn about how Connections works."
 
-#: src/ui/onboarding-dialog.ui:49
-#| msgid "View and use other desktops"
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Use other desktops, remotely"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -229,19 +229,19 @@ msgstr ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Connect to different operating systems"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Access Linux, Mac, and Windows desktops using Connections."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Enable remote desktop before connecting"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -249,12 +249,11 @@ msgstr ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
 
-#: src/ui/onboarding-dialog.ui:73
-#| msgid "Welcome to Connections"
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "We hope that you enjoy Connections!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "More information can be found in the help."
 
@@ -262,13 +261,21 @@ msgstr "More information can be found in the help."
 msgid "Connection preferences"
 msgstr "Connection preferences"
 
-#: src/ui/rdp-preferences.ui:23 src/ui/vnc-preferences.ui:23
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Address"
 
-#: src/ui/rdp-preferences.ui:38 src/ui/vnc-preferences.ui:38
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "Name"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Fit window"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Original size"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -330,56 +337,55 @@ msgstr "Ctrl + Alt + F3"
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
-#: src/ui/vnc-preferences.ui:55
+#: src/ui/vnc-preferences.ui:54
 msgid "Display"
 msgstr "Display"
 
-#: src/ui/vnc-preferences.ui:60
-msgid "Scaling"
-msgstr "Scaling"
-
-#: src/ui/vnc-preferences.ui:67
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "View only"
 
-#: src/ui/vnc-preferences.ui:74
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "Show local pointer"
 
-#: src/ui/vnc-preferences.ui:82
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "Enable audio"
+
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "Bandwidth"
 
-#: src/ui/vnc-preferences.ui:89
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "High quality"
 
-#: src/ui/vnc-preferences.ui:90
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "Fast refresh"
 
-#: src/ui/vnc-preferences.ui:101
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "Scale mode"
 
-#: src/ui/vnc-preferences.ui:108
-msgid "Fit window"
-msgstr "Fit window"
+#: src/ui/window.ui:52
+msgid "Just hit the <b>+</b> button to make your first connection."
+msgstr "Just hit the <b>+</b> button to make your first connection."
 
-#: src/ui/vnc-preferences.ui:109
-msgid "Original size"
-msgstr "Original size"
-
-#: src/vnc-connection.vala:123
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "Couldn’t parse the file"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:131 src/vnc-connection.vala:136
-#: src/vnc-connection.vala:141 src/vnc-connection.vala:146
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC File is missing key »%s«"
+
+#~ msgid "Scaling"
+#~ msgstr "Scaling"
 
 #~ msgid "Learn more."
 #~ msgstr "Learn more."
