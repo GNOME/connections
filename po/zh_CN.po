@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-05-18 15:26-0400\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-21 12:34+0800\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "连接"
 
@@ -64,7 +64,7 @@ msgstr "GNOME 项目"
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
 msgstr ""
 "vnc;rdp;remote;desktop;windows;support;access;view;远程;桌面;窗口;协助;访问;"
-"查看;"
+"查看"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -80,7 +80,7 @@ msgstr "属性"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Boyuan Yang <073plan@gmail.com>, 2020."
+msgstr "Boyuan Yang <073plan@gmail.com>, 2020"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -131,15 +131,34 @@ msgstr "已截图"
 msgid "Open"
 msgstr "打开"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s”需要认证"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "认证失败：%s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"首次连接到“%s”。为确保您连接到的目标机器不是伪造的，请验证指纹是否匹配。此过"
+"程仅执行一次。"
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr "远程服务器“%s”的证书与本地副本不匹配。可能是有人伪造了服务器。"
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "远程服务器“%s”需要用户名和密码才能继续连接。"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -188,7 +207,7 @@ msgstr "VNC（连接到 Linux 时的标准协议）"
 msgid "Help"
 msgstr "帮助"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "连接"
 
@@ -204,50 +223,124 @@ msgstr "密码(_P)"
 msgid "Sign In"
 msgstr "登录"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "打开连接"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "验证"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "取消"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "验证指纹"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"在 Windows 上运行 certlm.msc 或 certmgr.msc\n"
+"并从<b>远程桌面>证书</b>\n"
+"复制证书到文件。\n"
+"然后通过“certutil.exe -hashfile file SHA256”\n"
+"获取其指纹。\n"
+"\n"
+"如果在已连接的终端上使用 GNOME，\n"
+"则指纹可以在“设置”应用中验证，\n"
+"<b>共享>远程桌面>验证加密</b>。"
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "预期外的证书"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "删除本地证书"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "需要认证"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "用户名…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "密码…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "域…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"域字段通常是可选的，可以\n"
+"留空。"
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "认证"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "欢迎使用连接程序"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "了解“连接”程序是如何工作的。"
+msgid "Click next to learn about remote desktop."
+msgstr "点击下一步来了解远程桌面。"
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "远程使用其他桌面"
+msgid "Access other desktops"
+msgstr "访问其他桌面"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr ""
-"使用“连接”程序查看其它桌面的屏幕。您也可以使用指针设备和键盘控制这些桌面！"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr "“连接“应用可以查看其他桌面的屏幕。您也可以使用鼠标和键盘来控制它们。"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "连接到不同的操作系统"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "使用连接应用访问 Linux、Mac 和 Windows 桌面。"
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "您可以访问 Linux、Mac 和 Windows 桌面。"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "连接之前启用远程桌面"
+msgid "Setup is required"
+msgstr "需要设置"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr "要连接到的计算机需要预先设置远程桌面。"
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr "通常需要在您想要连接的计算机上启用远程桌面功能。"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "我们希望您享受使用”连接“应用程序！"
+msgid "Start by creating your first connection"
+msgstr "开始创建您的第一个连接"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "您可以在帮助中了解更多信息。"
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "首先，需要输入您想要连接的计算机的地址。"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -362,8 +455,8 @@ msgid "Scale mode"
 msgstr "缩放模式"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "只需点击 <b> + </b> 按钮即可创建您的第一个连接。"
+msgid "Click the add button to create your first connection"
+msgstr "点击添加按钮来创建您的第一个连接"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -375,6 +468,30 @@ msgstr "无法解析文件"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC 文件缺失键“%s”"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s”需要认证"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "了解“连接”程序是如何工作的。"
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "远程使用其他桌面"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "连接之前启用远程桌面"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr "要连接到的计算机需要预先设置远程桌面。"
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "我们希望您享受使用”连接“应用程序！"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "您可以在帮助中了解更多信息。"
 
 #~ msgid "Scaling"
 #~ msgstr "缩放"
@@ -395,9 +512,6 @@ msgstr "VNC 文件缺失键“%s”"
 
 #~ msgid "Server"
 #~ msgstr "服务器"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
 
 #~ msgid "Create"
 #~ msgstr "创建"
