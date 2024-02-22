@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-15 03:14+0100\n"
+"POT-Creation-Date: 2024-02-21 20:45+0000\n"
+"PO-Revision-Date: 2024-02-22 19:17+0100\n"
 "Last-Translator: Fran Dieguez <fran.dieguez@gnome.org>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -62,7 +62,8 @@ msgstr ""
 "Conexións usa os protocolos VNC e RDP, usados en moitos sitios, debe ter un "
 "destes activados no escritorio ao que quere conectarse."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "O Proxecto de GNOME"
 
@@ -84,7 +85,7 @@ msgstr "Propiedades"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Fran Diéguez <frandieguez@gnome.org>, 2020-2023"
+msgstr "Fran Diéguez <frandieguez@gnome.org>, 2020-2024"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -147,6 +148,9 @@ msgid ""
 "machine it claims to be, please verify the fingerprints match. This process "
 "is only done once."
 msgstr ""
+"Conectándose a «%s» por primeira vez. Para asegurarse que está conectándose "
+"á máquina que corresponde comprobe que as pegadas dixitais coinciden. Este "
+"proceso só se leva a cabo unha vez."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -154,6 +158,8 @@ msgid ""
 "The remote server “%s” certificate doesn't match local copy. It may be "
 "someone's pretending to be the server."
 msgstr ""
+"O certificado do servidor remoto «%s» non coincide coa copia local. Podería "
+"ser alguén finxindo ser o servidor."
 
 #: src/dialogs.vala:241
 #, c-format
@@ -161,9 +167,11 @@ msgid ""
 "The remote server “%s” requires a username and password to continue to "
 "connect."
 msgstr ""
+"O servidor remoto «%s» require dun nome de usuario e contrasinal para "
+"continuar a conexión."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -254,6 +262,15 @@ msgid ""
 "the fingerprint can be verified in the Settings,\n"
 "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgstr ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Certificados de escritorio remoto</b> a un ficheiro.\n"
+"Logo obteña a súa pegada dixital mediante\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"Se usa GNOME no endpoint conectado,\n"
+"pode verificar a pegada dixital nas Preferencias,\n"
+"<b>Compartindo>Escritorio remoto>Comprobar cifrado</b>."
 
 #: src/ui/dialog.ui:291
 msgid "Unexpected Certificate"
