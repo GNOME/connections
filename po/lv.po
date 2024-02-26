@@ -1,13 +1,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-03-05 17:03+0000\n"
-"PO-Revision-Date: 2023-03-24 22:48+0200\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-26 23:10+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Savienojumi"
 
@@ -130,15 +130,39 @@ msgstr "Ekrānattēls uzņemts"
 msgid "Open"
 msgstr "Atvērt"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” pieprasa autentificēšanos"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Neizdevās autentificēties: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Ar “%s” savienojas pirmo reizi. Lai pārliecinātos, ka jūs savienojaties ar to"
+" datoru, par kuru tas uzdodas, pārbaudiet, vai sakrīt digitālais nospiedums."
+" Šis process ir jāveic tikai vienu reizi."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Attālinātā servera “%s” sertifikāts neatbilst lokālajai kopijai. Varētu būt,"
+" ka kāds izliekas par to serveri."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Lai turpinātu savienoties, attālinātajam serverim “%s” jānorāda lietotājvārdu"
+" un paroli."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -146,13 +170,15 @@ msgstr "Neizdevās autentificēties: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Nē, paldies"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+#| msgid "No Thanks"
+msgid "_No Thanks"
+msgstr "_Nē, paldies"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Aizvērt"
+#: src/onboarding-dialog.vala:96
+#| msgid "Close"
+msgid "_Close"
+msgstr "_Aizvērt"
 
 #. Translators: Combo item for resizing remote desktop to window's size
 #: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
@@ -188,7 +214,7 @@ msgstr "VNC (standarts, lai savienotos ar Linux)"
 msgid "Help"
 msgstr "Palīdzība"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Savienoties"
 
@@ -204,55 +230,138 @@ msgstr "_Parole"
 msgid "Sign In"
 msgstr "Ierakstīties"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/dialog.ui:18
+#| msgid "Connections"
+msgid "Open Connection"
+msgstr "Atvērt savienojumu"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Pārbaudīt"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Pārbaudīt digitālo nospiedumu"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Uz Windows, palaidiet certlm.msc vai certmgr.msc\n"
+"un kopējiet sertifikātu no\n"
+"<b>Remote Desktop>Certificates</b> uz datni.\n"
+"Tad saņemiet digitālo nospiedumu ar\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"Ja GNOME tiek izmantots savienojuma galapunktā,\n"
+"digitālo nospiedumu var pārbaudīt Iestatījumos,\n"
+"<b>Koplietošana>Attālinātā darbvirsma>Pārbaudīt šifrēšanu</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Negaidīts sertifikāts"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Dzēst lokālo sertifikātu"
+
+#: src/ui/dialog.ui:386
+#| msgid "Authentication failed: %s"
+msgid "Authentication Required"
+msgstr "Nepieciešama autentifikācija"
+
+#: src/ui/dialog.ui:437
+#| msgid "_Username"
+msgid "Username…"
+msgstr "Lietotājvārds…"
+
+#: src/ui/dialog.ui:465
+#| msgid "_Password"
+msgid "Password…"
+msgstr "Parole…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domēns…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Domēna lauks parasti ir neobligāts un\n"
+"to var atstāt tukšu."
+
+#: src/ui/dialog.ui:638
+#| msgid "Authentication failed: %s"
+msgid "Authenticate"
+msgstr "Autentificēt"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Laipni lūdzam Savienojumos"
 
-#: src/ui/onboarding-dialog.ui:42
-msgid "Learn about how Connections works."
-msgstr "Uzziniet, kā darbojas Savienojumu lietotne."
-
-#: src/ui/onboarding-dialog.ui:49
-msgid "Use other desktops, remotely"
-msgstr "Izmantojiet citas darbvirsmas attālināti"
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "Spiediet “Nākamais”, lai uzzinātu par attālināto darbvirsmu."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr ""
-"Izmantojiet Savienojumu lietotni, lai skatītu citu darbvirsmu ekrānus. Jūs "
-"varat arī tos kontrolēt, izmantojot peles rādītāju un tastatūru!"
+#| msgid "View and use other desktops"
+msgid "Access other desktops"
+msgstr "Piekļūt citām darbvirsmām"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:51
+#| msgid ""
+#| "Use Connections to view the screen of other desktops. You can control "
+#| "them using the pointer and keyboard, too!"
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+"Savienojumu lietotne ļauj skatīt citu darbvirsmu ekrānus. Tos"
+"varat arī kontrolēt, izmantojot peles rādītāju un tastatūru!"
+
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Savienojaties ar citām darbvirsmas sistēmām"
 
-#: src/ui/onboarding-dialog.ui:58
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Piekļūstiet Linux, Max un Windows darbvirsmām, izmantojot Savienojumu "
-"lietotni."
-
-#: src/ui/onboarding-dialog.ui:65
-msgid "Enable remote desktop before connecting"
-msgstr "Pirms savienošanās, ieslēdziet attālināto darbvirsmu"
+#: src/ui/onboarding-dialog.ui:59
+#| msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Jūs varat piekļūst Linux, Max un Windows darbvirsmām."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr ""
-"Datori ir jāiestata darbam caur attālināto darbvirsmu, lai ar tiem varētu "
-"savienoties."
+msgid "Setup is required"
+msgstr "Nepieciešama uzstādīšana"
 
-#: src/ui/onboarding-dialog.ui:73
-msgid "We hope that you enjoy Connections!"
-msgstr "Mēs ceram, ka jums patiks Savienojumu lietotne!"
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"Parasti ir jāieslēdz attālinātās darbvirsmas piekļuve uz datoriem, ar kuriem"
+" vēlaties savienoties."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "More information can be found in the help."
-msgstr "Vairāk informācijas var iegūt palīdzības rokasgrāmatā."
+msgid "Start by creating your first connection"
+msgstr "Sāciet, izveidojot savu pirmo savienojumu"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "Lai sāktu, jums vajadzēs adresi datoram, ar kuru vēlaties savienoties."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -367,8 +476,9 @@ msgid "Scale mode"
 msgstr "Mērogošanas režīms"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Spiediet <b>+</b> pogu, lai izveidotu savu pirmo savienojumu."
+#| msgid "Just hit the <b>+</b> button to make your first connection."
+msgid "Click the add button to create your first connection"
+msgstr "Spiediet pievienošanas pogu, lai izveidotu savu pirmo savienojumu."
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -381,5 +491,32 @@ msgstr "Neizdevās parsēt datni"
 msgid "VNC File is missing key “%s”"
 msgstr "VNC datnei trūkst “%s” atslēgas"
 
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” pieprasa autentificēšanos"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Uzziniet, kā darbojas Savienojumu lietotne."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Izmantojiet citas darbvirsmas attālināti"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Pirms savienošanās, ieslēdziet attālināto darbvirsmu"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Datori ir jāiestata darbam caur attālināto darbvirsmu, lai ar tiem varētu "
+#~ "savienoties."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Mēs ceram, ka jums patiks Savienojumu lietotne!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Vairāk informācijas var iegūt palīdzības rokasgrāmatā."
+
 #~ msgid "Scaling"
 #~ msgstr "Mērogošana"
+
