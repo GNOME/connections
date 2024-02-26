@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-09-03 21:55+0300\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-26 22:08+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Ryšiai"
 
@@ -80,7 +80,6 @@ msgstr "Savybės"
 msgid "translator-credits"
 msgstr ""
 "Išvertė:\n"
-"\n"
 "Aurimas Černius <aurisc4@gmail.com>"
 
 #: src/application.vala:89 src/application.vala:242
@@ -132,15 +131,39 @@ msgstr "Ekrano nuotrauka padaryta"
 msgid "Open"
 msgstr "Atverti"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "„%s“ prašo patvirtinti tapatybę"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Nepavyko patvirtinti tapatybės: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Pirmą kartą jungiamasi prie „%s“. Siekiant užtikrinti, kad jungiatės prie "
+"teisingo kompiuterio, patikrinkite piršto atspaudų atitikimą. Šis procesas "
+"atliekamas tik kartą."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Nutolusio serverio „%s“ liudijimas nesutampa su vietinę kopija. Gali būti, "
+"kad kažkas apsimeta serveriu."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Norint prisijungti prie nutolusio serverio „%s“ reikia naudotojo vardo ir "
+"slaptažodžio."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -190,7 +213,7 @@ msgstr "VNC (įprastinis jungiantis prie Linux)"
 msgid "Help"
 msgstr "Žinynas"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Prisijungti"
 
@@ -206,53 +229,128 @@ msgstr "Sla_ptažodis"
 msgid "Sign In"
 msgstr "Prisijungti"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Atverti ryšį"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Tikrinti"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Tikrinti piršto atspaudą"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Windows sistemoje paleiskite certlm.msc arba certmgr.msc\n"
+"ir nukopijuokite liudijimą iš\n"
+"<b>Remote Desktop>Certificates</b> į failą.\n"
+"Jo piršto atspaudą gausite įvykdę\n"
+"„certutil.exe -hashfile file SHA256“.\n"
+"\n"
+"Jei kitoje ryšio pusėje naudojama GNOME,\n"
+"piršto atspaudą galima patikrinti Nustatymuose,\n"
+"<b>Bendrinimas>Nutolęs Darbastalis</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Nelauktas liudijimas"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Ištrinti vietinį liudijimą"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Būtina patvirtinti tapatybę"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Naudotojo vardas…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Slaptažodis…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domenas…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Domeno laukas paprastai nebūtinas ir gali\n"
+"būti paliktas tuščias."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Patvirtinti tapatybę"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Sveiki pradėję naudoti ryšius"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Sužinokite daugiau, kaip veikia ryšiai."
+msgid "Click next to learn about remote desktop."
+msgstr "Spauskite toliau ir sužinokite apie nutolusį darbalaukį."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Naudokitės kitais darbalaukiais nuotoliniu būdu"
+msgid "Access other desktops"
+msgstr "Pasiekti kitus darbalaukius"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Naudokite ryšius kitų darbalaukių ekranams matyti. Taip pat galite juos "
-"valdyti žymekliu bei klaviatūra!"
+"Ryšiai leidžia matyti kitų darbalaukių ekranus. Taip pat galite juos valdyti "
+"žymekliu bei klaviatūra."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Prisijunkite prie skirtingų operacinių sistemų"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Pasiekite Linux, Mac bei Windows darbalaukius ryšių pagalba."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Galite pasiekti Linux, Mac bei Windows darbalaukius."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Įjunkite nuotolinį darbalaukį prie prisijungdami"
+msgid "Setup is required"
+msgstr "Būtina nustatyti"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Kompiuterius reikia sukonfigūruoti nuotoliniam darbalaukio naudojimui prie "
-"jungiantis prie jų."
+"Nutolęs darbalaukis paprastai turi būti įjungtas kompiuteryje, prie kurio "
+"norite prisijungti."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Tikimės, kad jums patiks ryšių programa!"
+msgid "Start by creating your first connection"
+msgstr "Pradėkite sukurdami savo pirmą ryšį"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Daugiau informacijos rasite žinyne."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "Pradžiai reikia kompiuterio, prie kurio norite prisijungti, adreso."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -367,8 +465,8 @@ msgid "Scale mode"
 msgstr "Ištempimo veiksena"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Tiesiog spauskite mygtuką <b>+</b> pirmajam ryšiui sukurti."
+msgid "Click the add button to create your first connection"
+msgstr "Spauskite pridėjimo mygtuką pirmajam ryšiui sukurti"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -380,6 +478,32 @@ msgstr "Nepavyko perskaityti failo"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC faile trūksta rakto „%s“"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "„%s“ prašo patvirtinti tapatybę"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Sužinokite daugiau, kaip veikia ryšiai."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Naudokitės kitais darbalaukiais nuotoliniu būdu"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Įjunkite nuotolinį darbalaukį prie prisijungdami"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Kompiuterius reikia sukonfigūruoti nuotoliniam darbalaukio naudojimui "
+#~ "prie jungiantis prie jų."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Tikimės, kad jums patiks ryšių programa!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Daugiau informacijos rasite žinyne."
 
 #~ msgid "Scaling"
 #~ msgstr "Mastelis"
@@ -429,9 +553,6 @@ msgstr "VNC faile trūksta rakto „%s“"
 
 #~ msgid "Server"
 #~ msgstr "Serveris"
-
-#~ msgid "Cancel"
-#~ msgstr "Atsisakyti"
 
 #~ msgid "Create"
 #~ msgstr "Sukurti"
