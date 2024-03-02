@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-08-07 18:08+0300\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-03-02 15:19+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Yhteydet"
 
@@ -129,15 +129,39 @@ msgstr "Kuvakaappaus otettu"
 msgid "Open"
 msgstr "Avaa"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” vaatii tunnistautumisen"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Tunnistautuminen epäonnistui: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Yhdistetään koneeseen “%s” ensimmäistä kertaa. Varmista etäkoneen "
+"identiteetti vahvistamalla, että sormenjäljet vastaavat toisiaan. Tämä "
+"toimenpide tulee tehdä vain kerran."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Etäpalvelimen “%s” varmenne ei vastaa paikallista kopiota. Jokin muu taho "
+"saattaa esittää olevansa kyseinen palvelin."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Etäpalvelin “%s” vaatii käyttäjätunnuksen ja salasanan jatkaakseen "
+"yhdistämistä."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -186,7 +210,7 @@ msgstr "VNC (standardi Linuxiin yhdistäessä)"
 msgid "Help"
 msgstr "Ohje"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Yhdistä"
 
@@ -202,22 +226,98 @@ msgstr "S_alasana"
 msgid "Sign In"
 msgstr "Kirjaudu sisään"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Avaa yhteys"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Vahvista"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Peru"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Vahvista sormenjälki"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Windowsissa suorita certlm.msc tai certmgr.msc\n"
+"ja kopioi varmenne kohdasta\n"
+"<b>Remote Desktop>Certificates</b> tiedostoon.\n"
+"Saat varmenteen sormenjäljen suorittamalla\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"Jos etäpalvelimessa käytetään Gnomea,\n"
+"sormenjälki on saatavilla järjestelmän asetuksista,\n"
+"<b>Jakaminen>Etätyöpöytä>Vahvista salaus</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Odottamaton varmenne"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Poista paikallinen varmenne"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Tunnistautuminen vaaditaan"
+
+#: src/ui/dialog.ui:437
+#| msgid "_Username"
+msgid "Username…"
+msgstr "Käyttäjätunnus…"
+
+#: src/ui/dialog.ui:465
+#| msgid "_Password"
+msgid "Password…"
+msgstr "Salasana…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Toimialue…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Toimialuekenttä on valinnainen ja\n"
+"sen voi jättää tyhjäksi."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Tunnistaudu"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Tervetuloa"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Lue miten Yhteydet toimii."
+msgid "Click next to learn about remote desktop."
+msgstr "Napsauta seuraava oppiaksesi etätyöpöydästä."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Käytä muita työpöytiä, etänä"
+msgid "Access other desktops"
+msgstr "Käytä muita työpöytiä"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
 "Käytä Yhteydet-sovellusta yhdistääksesi muihin työpöytiin. Voit ohjata "
 "työpöytiä käyttäen hiirtä ja näppäimistöä."
@@ -227,28 +327,31 @@ msgid "Connect to different operating systems"
 msgstr "Yhdistä eri käyttöjärjestelmiin"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Käytä Linux-, Mac- ja Windows-työpöytiä Yhteydet-sovelluksella."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Voit käyttää Linux-, Mac- ja Windows-työpöytiä."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Ota etätyöpöytätuki käyttöön ennen yhdistämistä"
+msgid "Setup is required"
+msgstr "Määritys vaaditaan"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Tietokoneiden etätyöpöytätuki tulee olla käytössä, ennen kuin yhdistät "
-"niihin."
+"Etätyöpöytä tulee tyypillisesti olla otettu käyttöön tietokoneella, johon "
+"haluat yhdistää."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Toivottavasti Yhteydet on mieleesi!"
+msgid "Start by creating your first connection"
+msgstr "Aloita luomalla ensimmäinen yhteys"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Lisätietoja on tarjolla ohjeessa."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Aloittaaksesi tarvitset sen tietokoneen osoitteen, johon haluat muodostaa "
+"yhteyden."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -363,8 +466,8 @@ msgid "Scale mode"
 msgstr "Skaalaustila"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Napsauta <b>+</b> luodaksesi ensimmäisen yhteyden."
+msgid "Click the add button to create your first connection"
+msgstr "Napsauta Lisää-painiketta luodaksesi ensimmäisen yhteyden"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -376,6 +479,32 @@ msgstr "Tiedostoa ei voitu jäsentää"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-tiedostosta puuttuu avain “%s”"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” vaatii tunnistautumisen"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Lue miten Yhteydet toimii."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Käytä muita työpöytiä, etänä"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Ota etätyöpöytätuki käyttöön ennen yhdistämistä"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Tietokoneiden etätyöpöytätuki tulee olla käytössä, ennen kuin yhdistät "
+#~ "niihin."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Toivottavasti Yhteydet on mieleesi!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Lisätietoja on tarjolla ohjeessa."
 
 #~ msgid "Scaling"
 #~ msgstr "Skaalaus"
@@ -425,9 +554,6 @@ msgstr "VNC-tiedostosta puuttuu avain “%s”"
 
 #~ msgid "Server"
 #~ msgstr "Palvelin"
-
-#~ msgid "Cancel"
-#~ msgstr "Peru"
 
 #~ msgid "Create"
 #~ msgstr "Luo"
