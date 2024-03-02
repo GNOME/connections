@@ -1,3 +1,43 @@
+46.rc - 02 Mar, 2024
+=====================
+
+Changes since 46.beta
+
+  - Fixed touchpad scrolling
+  - Merge the duplicite doap files
+  - Add platform information to doap file
+  - Fix wrong developer id in metainfo
+
+  - Update gtk-frdp
+     - Add support for FreerRDP 3
+     - Handle smooth scroll events smoothly
+
+  - Updated translations:
+     - Basque
+     - British-English
+     - Catalan
+     - Chinese-China
+     - Dutch
+     - Finnish
+     - French
+     - Friulian
+     - Galician
+     - Georgian
+     - German
+     - Hebrew
+     - Hungarian
+     - Indonesian
+     - Kazakh
+     - Latvian
+     - Lithuanian
+     - Occitan
+     - Persian
+     - Russian
+     - Slovenian
+     - Spanish
+     - Turkish
+     - Ukrainian
+
 46.beta - 10 Feb, 2024
 =====================
 
