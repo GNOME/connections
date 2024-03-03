@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-01-13 12:15+0000\n"
-"PO-Revision-Date: 2024-02-02 21:39+0100\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-02-09 22:00+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -148,8 +148,8 @@ msgid ""
 "is only done once."
 msgstr ""
 "Ansluter till ”%s” för första gången. Verifiera att fingeravtrycken stämmer "
-"för att vara säker på att du ansluter till maskinen som den påstår sig "
-"vara. Denna process utförs bara en gång."
+"för att vara säker på att du ansluter till maskinen som den påstår sig vara. "
+"Denna process utförs bara en gång."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -311,48 +311,49 @@ msgid "Welcome to Connections"
 msgstr "Välkommen till Anslutningar"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Läs mer om hur Anslutningar fungerar."
+msgid "Click next to learn about remote desktop."
+msgstr "Klicka nästa för att läsa mer om fjärrskrivbord."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Använd andra skrivbord på distans"
+msgid "Access other desktops"
+msgstr "Kom åt andra skrivbord"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Använd Anslutningar för att visa skärmen för andra skrivbord. Du kan också "
-"styra dem med musen och tangentbordet!"
+"Anslutningar möjliggör visning av skärmarna för andra skrivbord. De kan "
+"också styras med musen och tangentbordet."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Anslut till andra operativsystem"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Kom åt Linux-, Mac- och Windows-skrivbord genom att använda Anslutningar."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Du kan komma åt Linux-, Mac- och Windows-skrivbord."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Aktivera fjärrskrivbord innan du ansluter"
+msgid "Setup is required"
+msgstr "Konfiguration krävs"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Datorer måste konfigureras för fjärrskrivbord innan du kan ansluta till dem."
+"Fjärrskrivbord behöver vanligen aktiveras på datorn som du vill ansluta till."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Vi hoppas att du kommer gilla Anslutningar!"
+msgid "Start by creating your first connection"
+msgstr "Starta genom att skapa din första anslutning"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Mer information kan hittas i hjälpen."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"För att komma igång behöver du adressen till datorn som du vill ansluta till."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -467,8 +468,8 @@ msgid "Scale mode"
 msgstr "Skalningsläge"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Tryck bara på knappen <b>+</b> för att skapa din första anslutning."
+msgid "Click the add button to create your first connection"
+msgstr "Tryck på lägg till-knappen för att skapa din första anslutning"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -480,6 +481,28 @@ msgstr "Kunde inte tolka filen"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-fil saknar nyckeln ”%s”"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Läs mer om hur Anslutningar fungerar."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Använd andra skrivbord på distans"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Aktivera fjärrskrivbord innan du ansluter"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Datorer måste konfigureras för fjärrskrivbord innan du kan ansluta till "
+#~ "dem."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Vi hoppas att du kommer gilla Anslutningar!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Mer information kan hittas i hjälpen."
 
 #, c-format
 #~ msgid "“%s” requires authentication"
