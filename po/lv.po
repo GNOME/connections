@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
 "POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-26 23:10+0200\n"
+"PO-Revision-Date: 2024-03-04 19:43+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -79,7 +79,7 @@ msgstr "Īpašības"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
+msgstr "Rūdolfs Mazurs"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -340,7 +340,7 @@ msgstr "Savienojaties ar citām darbvirsmas sistēmām"
 #: src/ui/onboarding-dialog.ui:59
 #| msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgid "You can access Linux, Mac, and Windows desktops."
-msgstr "Jūs varat piekļūst Linux, Max un Windows darbvirsmām."
+msgstr "Jūs varat piekļūst Linux, Mac un Windows darbvirsmām."
 
 #: src/ui/onboarding-dialog.ui:66
 msgid "Setup is required"
@@ -409,11 +409,11 @@ msgstr "Atvienoties"
 
 #: src/ui/topbar.ui:174
 msgid "Keyboard shortcuts"
-msgstr "Tastatūras saīsnes"
+msgstr "Tastatūras īsinājumtaustiņi"
 
 #: src/ui/topbar.ui:197
 msgid "Keyboard Shortcuts"
-msgstr "Tastatūras saīsnes"
+msgstr "Tastatūras īsinājumtaustiņi"
 
 #: src/ui/topbar.ui:205
 msgid "About Connections"
@@ -519,4 +519,5 @@ msgstr "VNC datnei trūkst “%s” atslēgas"
 
 #~ msgid "Scaling"
 #~ msgstr "Mērogošana"
+
 
