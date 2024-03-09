@@ -230,7 +230,7 @@ namespace Connections {
         static string opt_file_import_uri;
         const OptionEntry[] options = {
             { "", 0, 0, GLib.OptionArg.STRING_ARRAY, ref opt_uris, N_ ("URL to connect"), null },
-            { "file", 'F', 0, GLib.OptionArg.FILENAME, ref opt_file_import_uri, N_ ("Open .vnc or .rdp file at the given PATH"), "PATH" },
+            { "file", 'F', 0, GLib.OptionArg.FILENAME, ref opt_file_import_uri, N_ ("Open .vnc or .rdp file at the given PATH"), N_ ("PATH") },
             { "fullscreen", 'f', 0, GLib.OptionArg.NONE, ref opt_fullscreen, N_("Open in full screen"), null },
             { null }
         };
