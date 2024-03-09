@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-23 20:20+0100\n"
+"POT-Creation-Date: 2024-02-23 19:21+0000\n"
+"PO-Revision-Date: 2024-03-09 23:00+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Occitan <totenoc@gmail.com>\n"
 "Language: oc\n"
@@ -55,7 +55,8 @@ msgstr ""
 "Connexions utiliza los protocòls grandament preses en carga VNC e RDP, e un "
 "d’aquestes deu èsser activat sul burèu que volètz contactar."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Lo projècte GNOME"
 
@@ -143,6 +144,9 @@ msgid ""
 "machine it claims to be, please verify the fingerprints match. This process "
 "is only done once."
 msgstr ""
+"Connexion a « %s » pel primièr còp. Per vos assegurar que sètz connectat a "
+"la maquina que se presenta coma tal, verificatz se l’emprenta numerica "
+"correspond. Se realiza aquesta processús sonque un còp."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -150,6 +154,8 @@ msgid ""
 "The remote server “%s” certificate doesn't match local copy. It may be "
 "someone's pretending to be the server."
 msgstr ""
+"Lo certificat del servidor alonhat « %s » correspond pas a la còpia locala. "
+"Poiriá arribar que siá qualqu’un mai que se far passar pel servidor."
 
 #: src/dialogs.vala:241
 #, c-format
@@ -157,9 +163,11 @@ msgid ""
 "The remote server “%s” requires a username and password to continue to "
 "connect."
 msgstr ""
+"Lo servidor alonhat « %s » requerís un nom d’utilizaire e senhal per "
+"contunhar a s’i connectar."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -279,6 +287,8 @@ msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
 msgstr ""
+"Lo camp domeni es sovent opcional e se pòt\n"
+"daissar void."
 
 #: src/ui/dialog.ui:638
 msgid "Authenticate"
@@ -290,7 +300,7 @@ msgstr "Benvenguda dins Connexions"
 
 #: src/ui/onboarding-dialog.ui:43
 msgid "Click next to learn about remote desktop."
-msgstr ""
+msgstr "Clicatz seguent per ne saber mai a prepaus del burèu distant."
 
 #: src/ui/onboarding-dialog.ui:50
 msgid "Access other desktops"
@@ -322,6 +332,7 @@ msgid ""
 "Remote desktop typically needs to be enabled on the computer you want to "
 "connect to."
 msgstr ""
+"Lo burèu distant deu èsser activat sus l’ordenador que volètz contactar."
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "Start by creating your first connection"
@@ -330,7 +341,7 @@ msgstr "Començar per crear la primièra connexion"
 #: src/ui/onboarding-dialog.ui:75
 msgid ""
 "To begin, you will need the address of the computer you want to connect to."
-msgstr ""
+msgstr "Per començar, vos cal l’adreça de l’ordenador que volètz contactar."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
