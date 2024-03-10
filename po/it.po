@@ -1,7 +1,7 @@
 # Italian translation for gnome-connections.
-# Copyright (C) 2020, 2021, 2022, 2023 Free Software Foundation, Inc.
+# Copyright (C) 2020, 2021, 2022, 2023, 2024 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-connections package.
-# Milo Casagrande <milo@milo.name>, 2020, 2021, 2022, 2023.
+# Milo Casagrande <milo@milo.name>, 2020, 2021, 2022, 2023, 2024.
 # Davide Ferracin <davide.ferracin@protonmail.com>, 2021.
 # Gianvito Cavasoli <gianvito@gmx.it>, 2023.
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-22 09:29+0000\n"
-"PO-Revision-Date: 2023-09-13 16:00+0200\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-03-10 17:19+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <gnome-it-list@gnome.org>\n"
 "Language: it\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Connessioni"
 
@@ -134,15 +134,37 @@ msgstr "Schermata catturata"
 msgid "Open"
 msgstr "Apri"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "«%s» richiede autenticazione"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autenticazione non riuscita: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Prima connessione a «%s»: per assicurarsi che la connessione avvenga al "
+"dispositivo corretto, verificare che le impronte digitali corrispondano. "
+"Questo processo viene svolto una sola volta."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Il certificato del server remoto «%s» non corrisponde con la copia locale. "
+"Potrebbe trattarsi di un altro dispositivo che si identifica come il server."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "Il server remote «%s» richiede nome utente e password per connettersi."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -192,7 +214,7 @@ msgstr "VNC (standard per connessioni a Linux)"
 msgid "Help"
 msgstr "Aiuto"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Connetti"
 
@@ -208,22 +230,96 @@ msgstr "Passw_ord"
 msgid "Sign In"
 msgstr "Accedi"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Apri connessione"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Verifica"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Annulla"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Verifica impronta"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Su windows eseguire certlm.msc o certmgr.msc\n"
+"e copiare il certificato da\n"
+"<b>Certificati desktop remoto</b> su un file.\n"
+"In seguito, ottenere l'impronta digitale tramite\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"Se GNOME è utilizzato dall'altro lato della connessione,\n"
+"l'impronta può essere verificata nelle Impostazione,\n"
+"<b>Condivisione > Desktop remoto > Verifica cifratura</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Certificato inatteso"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Elimina certificato locale"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Autentificazione richiesta"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Nome utente…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Password…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Dominio…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Il campo dominio è opzionale e può essere\n"
+"lasciato vuoto."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Autentica"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Benvenuti in Connessioni"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Informazioni su come funziona Connessioni."
+msgid "Click next to learn about remote desktop."
+msgstr "Fare clic sul pulsante per avanzare e conoscere il desktop remoto."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Usa altri computer, da remoto"
+msgid "Access other desktops"
+msgstr "Accedere ad altri computer"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
 "È possibile usare Connessioni per visualizzare lo schermo di altri computer "
 "e controllarli usando il puntatore e la tastiera."
@@ -233,29 +329,31 @@ msgid "Connect to different operating systems"
 msgstr "Connettersi a sistemi operativi differenti"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Usando Connessioni è possibile accedere a computer Linux, Mac e Windows."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "È possibile accedere a computer Linux, Mac e Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Abilitare il desktop remoto prima di connettersi"
+msgid "Setup is required"
+msgstr "Configurazione richiesta"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"I computer devono essere impostati per l'accesso da remoto prima che sia "
-"possibile connettersi a essi."
+"Solitamente, il desktop remoto deve essere abilitato sul computer a cui si "
+"vuole connettersi."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Speriamo che Connessioni vi piaccia!"
+msgid "Start by creating your first connection"
+msgstr "Prima connessione"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Ulteriori informazioni si trovano nella pagina di aiuto."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Per cominciare, è necessario avere l'indirizzo del computer a cui "
+"connettersi."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -370,8 +468,8 @@ msgid "Scale mode"
 msgstr "Modalità ingrandimento"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Premere il pulsante <b>+</b> per creare la prima connessione."
+msgid "Click the add button to create your first connection"
+msgstr "Fare clic sul pulsante per aggiungere la prima connessione."
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
