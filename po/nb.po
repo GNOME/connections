@@ -1,149 +1,222 @@
-# Norwegian Bokmål translation for gnome-connections.
-# Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-connections package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2021.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-connections master\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2021-03-05 04:17+0000\n"
-"PO-Revision-Date: 2021-03-13 19:12+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Norwegian Bokmål <nb@li.org>\n"
+"POT-Creation-Date: 2024-03-09 22:01+0000\n"
+"PO-Revision-Date: 2024-03-10 16:25+0100\n"
+"Last-Translator: Brage <bragefuglseth@gnome.org>\n"
+"Language-Team: \n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
-msgid "GNOME Connections"
-msgstr "GNOME tilkoblinger"
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+msgid "Connections"
+msgstr "Fjernstyring"
 
-#: data/org.gnome.Connections.appdata.xml.in:8 src/application.vala:77
-#: src/application.vala:219
-msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "En klient for eksternt skrivebord skrevet for GNOME skrivebordsmiljøet"
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Koble til og bruk andre enheter"
 
 #: data/org.gnome.Connections.appdata.xml.in:10
-msgid "A remote desktop client for the GNOME desktop environment."
-msgstr "En klient for eksternt skrivebord for GNOME skrivebordsmiljøet."
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Fjernstyring lar deg kommunisere med og bruke eksterne enheter. Dette kan "
+"for eksempel gi deg tilgang til innhold og apper på andre operativsystemer, "
+"eller gjøre det mulig å hjelpe andre som har problemer med systemet sitt."
 
-#: data/org.gnome.Connections.appdata.xml.in:28
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Uansett om du ønsker å koble til et system med Linux eller Windows, kan du "
+"gjøre det med Fjernstyring. Du kan også koble til virtuelle maskiner."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Fjernstyring kan bruke VNC- og RDP-protokollene. Systemet du ønsker å koble "
+"til må støtte en av disse."
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
-msgstr "GNOME prosjektet"
+msgstr "GNOME"
 
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:80
-#: src/ui/topbar.ui:9
-msgid "Connections"
-msgstr "Tilkoblinger"
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"connections;vnc;rdp;fjernstyring;eksternt;skrivebord;remote desktop;"
+"brukerstøtte;virtuell;virtualisering;vm;koble til;skjermdeling;tilgang"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
-msgstr "Fil for eksternt skrivebord (VNC)"
+msgstr "Fjernstyringsfil (VNC)"
 
 #: src/actions-popover.vala:44
 msgid "Delete"
 msgstr "Slett"
 
-#: src/actions-popover.vala:48 src/topbar.vala:59 src/ui/topbar.ui:216
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
 msgid "Properties"
 msgstr "Egenskaper"
 
-#: src/application.vala:76
+#: src/application.vala:88
 msgid "translator-credits"
-msgstr "Kjartan Maraas <kmaraas@gnome.org>"
+msgstr "Brage Fuglseth https://bragefuglseth.dev"
 
-#: src/application.vala:140
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Koble til og bruk andre enheter"
+
+#: src/application.vala:151
 #, c-format
 msgid "Couldn’t open file of unknown mime type %s"
-msgstr ""
+msgstr "Åpning av fil med type «%s» mislyktes"
 
-#: src/application.vala:170
+#: src/application.vala:182
 #, c-format
 msgid "Connection to “%s” has been deleted"
-msgstr ""
+msgstr "Tilkobling til «%s» slettet"
 
-#: src/application.vala:172
+#: src/application.vala:185
 msgid "Undo"
 msgstr "Angre"
 
-#: src/application.vala:211
+#: src/application.vala:232
 msgid "URL to connect"
-msgstr "URL for tilkobling"
+msgstr "Tilkoblingsadresse"
 
-#: src/application.vala:212
+#: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
-msgstr ""
+msgstr "Åpne angitt VNC- eller RDP-fil"
 
 #: src/application.vala:234
+msgid "Open in full screen"
+msgstr "Åpne i fullskjerm"
+
+#: src/application.vala:257
 msgid "Too many command-line arguments specified.\n"
-msgstr ""
+msgstr "For mange argumenter\n"
 
 #. Translators: %s => the timestamp of when the screenshot was taken.
-#: src/connection.vala:127
+#: src/connection.vala:70
 #, c-format
 msgid "Screenshot from %s"
-msgstr "Skjermdump fra %s"
+msgstr "Skjermbilde fra %s"
 
-#: src/connection.vala:142
+#: src/connection.vala:85
 msgid "Screenshot taken"
-msgstr "Skjermdump tatt"
+msgstr "Skjermbilde tatt"
 
 #. Translators: Open is a verb
-#: src/connection.vala:145
+#: src/connection.vala:88
 msgid "Open"
 msgstr "Åpne"
 
-#: src/connection.vala:188
+#: src/connection.vala:199
 #, c-format
-msgid "“%s” requires authentication"
+msgid "Authentication failed: %s"
+msgstr "Autentisering mislyktes: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
 msgstr ""
+"Kobler til «%s» for første gang. For å være sikker på at du kobler til "
+"riktig maskin, bekreft at krypteringsavtrykkene samsvarer. Dette må bare "
+"gjøres én gang."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Sertifikatet til «%s» samsvarer ikke med kopien på enheten. Det kan hende "
+"at noen prøver å etterligne tjeneren."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "«%s» krever brukernavn og passord for å fortsette tilkoblingen."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:138
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
-msgstr "%dx%d"
+msgstr "%d×%d"
 
-#: src/rdp-connection.vala:128
-msgid "Scaling"
-msgstr "Skalering"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Hopp over"
 
-#: src/topbar.vala:55 src/ui/topbar.ui:212
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Lukk"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Skjermstørrelse"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
-msgstr "Ta skjermdump"
+msgstr "Ta skjermbilde"
 
-#: src/ui/assistant.ui:9
-msgid "Create a New Connection"
-msgstr "Lag en ny tilkobling"
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Fullskjerm"
 
-#: src/ui/assistant.ui:34
-msgid ""
-"Enter a machine address to connect to. Address can begin with rdp:// or "
-"vnc://"
-msgstr ""
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Skriv inn nettverksadressen til enheten som skal kobles til:"
 
-#: src/ui/assistant.ui:58
-msgid "Server"
-msgstr "Tjener"
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Tilkoblingstype"
 
-#: src/ui/assistant.ui:94 src/ui/properties.ui:67
-msgid "Name"
-msgstr "Navn"
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (for å koble til Windows)"
 
-#: src/ui/assistant.ui:120
-msgid "Cancel"
-msgstr "Avbryt"
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (for å koble til Linux)"
 
-#: src/ui/assistant.ui:129
-msgid "Create"
-msgstr "Lag"
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Hjelp"
+
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
+msgid "Connect"
+msgstr "Koble til"
 
 #: src/ui/auth-notification.ui:39
 msgid "_Username"
-msgstr "Br_ukernavn"
+msgstr "_Brukernavn"
 
 #: src/ui/auth-notification.ui:71
 msgid "_Password"
@@ -151,23 +224,145 @@ msgstr "_Passord"
 
 #: src/ui/auth-notification.ui:108
 msgid "Sign In"
-msgstr ""
+msgstr "Logg inn"
 
-#: src/ui/empty-view.ui:28
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Åpne tilkobling"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Verifiser"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Verifiser krypteringsavtrykk"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"På Windows, kjør certlm.msc eller certmgr.msc\n"
+"og kopier sertifikatet fra\n"
+"<b>Eksternt skrivebord → Sertifikater</b> til en fil.\n"
+"Få så tak i krypteringsavtrykket\n"
+"ved å bruke «certutil.exe -hashfile fil SHA256».\n"
+"\n"
+"Hvis systemet som kobles til bruker GNOME,\n"
+"kan avtrykket verifiseres i Innstillinger."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Uventet sertifikat"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Slett lokalt sertifikat"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Autentisering kreves"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Brukernavn…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Passord…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domene…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr "Å oppgi domenet er som regel ikke nødvendig."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Autentiser"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
-msgstr "Velkommen til tilkoblinger"
+msgstr "Velkommen til Fjernstyring"
 
-#: src/ui/empty-view.ui:41
-msgid "Just hit the <b>+</b> button to make your first connection."
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "Gå videre for å lære mer"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid "Access other desktops"
+msgstr "Bruk andre enheter"
+
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
+"Fjernstyring lar deg se skjermene til tilkoblede enheter. De kan også "
+"styres med peker og tastatur."
 
-#: src/ui/properties.ui:9
-msgid "Connection Properties"
-msgstr ""
+#: src/ui/onboarding-dialog.ui:58
+msgid "Connect to different operating systems"
+msgstr "Forskjellige systemer"
 
-#: src/ui/properties.ui:32
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Koble til systemer med Linux, macOS eller Windows."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Setup is required"
+msgstr "Enkelt oppsett"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr "Fjernstyring må ofte aktiveres på systemet du ønsker å koble til."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Start by creating your first connection"
+msgstr "Koble til en enhet"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "Først trenger du adressen til enheten du ønsker å koble til."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Oppsett"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
 msgid "Address"
 msgstr "Adresse"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "Navn"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Tilpass vindu"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Opprinnelig"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -175,7 +370,7 @@ msgstr "Ny"
 
 #: src/ui/topbar.ui:42
 msgid "Application Menu"
-msgstr "Programmeny"
+msgstr "Hovedmeny"
 
 #: src/ui/topbar.ui:70
 msgid "Search"
@@ -187,7 +382,7 @@ msgstr "Gå tilbake"
 
 #: src/ui/topbar.ui:125
 msgid "Display Menu"
-msgstr ""
+msgstr "Visningsmeny"
 
 #: src/ui/topbar.ui:149
 msgid "Disconnect"
@@ -201,45 +396,77 @@ msgstr "Tastatursnarveier"
 msgid "Keyboard Shortcuts"
 msgstr "Tastatursnarveier"
 
-#: src/ui/topbar.ui:201
-msgid "Help"
-msgstr "Hjelp"
-
 #: src/ui/topbar.ui:205
 msgid "About Connections"
-msgstr "Om Tilkoblinger"
+msgstr "Om Fjernstyring"
 
-#: src/ui/topbar.ui:230
+#: src/ui/topbar.ui:234
 msgid "Ctrl + Alt + Backspace"
-msgstr ""
+msgstr "Ctrl+Alt+Tilbake"
 
-#: src/ui/topbar.ui:237
+#: src/ui/topbar.ui:241
 msgid "Ctrl + Alt + Del"
-msgstr ""
+msgstr "Ctrl+Alt+Del"
 
-#: src/ui/topbar.ui:244
+#: src/ui/topbar.ui:248
 msgid "Ctrl + Alt + F1"
-msgstr ""
+msgstr "Ctrl+Alt+F1"
 
-#: src/ui/topbar.ui:251
+#: src/ui/topbar.ui:255
 msgid "Ctrl + Alt + F2"
-msgstr ""
+msgstr "Ctrl+Alt+F2"
 
-#: src/ui/topbar.ui:258
+#: src/ui/topbar.ui:262
 msgid "Ctrl + Alt + F3"
-msgstr ""
+msgstr "Ctrl+Alt+F3"
 
-#: src/ui/topbar.ui:265
+#: src/ui/topbar.ui:269
 msgid "Ctrl + Alt + F7"
-msgstr ""
+msgstr "Ctrl+Alt+F7"
 
-#: src/vnc-connection.vala:167
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Visning"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "View only"
+msgstr "Kun visning"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "Show local pointer"
+msgstr "Vis lokal peker"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "Lyd"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Båndbredde"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Høy kvalitet"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Rask innlasting"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Skaleringsmodus"
+
+#: src/ui/window.ui:52
+msgid "Click the add button to create your first connection"
+msgstr "Opprett en tilkobling for å komme i gang"
+
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
-msgstr "Kunne ikke lese filen"
+msgstr "Lesing av fil mislyktes"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:175 src/vnc-connection.vala:180
-#: src/vnc-connection.vala:186 src/vnc-connection.vala:191
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
-msgstr "VNC-fil mangler nøkkel «%s»"
+msgstr "VNC-fil mangler «%s»"
