@@ -1,14 +1,14 @@
 # Danish translation for gnome-connections.
-# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# Copyright (C) 2020, 2024 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # scootergrisen, 2020-2021.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2022-2023.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2022-2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-09-09 12:04+0200\n"
+"POT-Creation-Date: 2024-02-09 11:56+0000\n"
+"PO-Revision-Date: 2024-03-11 19:22+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Forbindelser"
 
@@ -80,7 +80,13 @@ msgstr "Egenskaber"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "scootergrisen"
+msgstr ""
+"scootergrisen\n"
+"Ask Hjorth Larsen\n"
+"\n"
+"Dansk-gruppen\n"
+"Websted http://dansk-gruppen.dk\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -131,15 +137,32 @@ msgstr "Skærmbillede taget"
 msgid "Open"
 msgstr "Åbn"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” kræver godkendelse"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Godkendelse mislykkedes: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr "Forbinder til “%s” for første gang. For at sikre at du forbinder til den maskine, som maskinen påstår at være, så kontrollér venligst, at fingeraftrykkene stemmer. Denne proces udføres kun én gang."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr "Certifikatet for fjernserveren “%s” svarer ikke til den lokale kopi. Nogen foregiver måske at være serveren."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "Fjernserveren “%s” kræver et brugernavn og en adgangskode for at fortsætte med at forbinde."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
 #: src/display-view.vala:126
@@ -188,7 +211,7 @@ msgstr "VNC (standard for forbindelser til Linux)"
 msgid "Help"
 msgstr "Hjælp"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Forbind"
 
@@ -204,53 +227,124 @@ msgstr "_Adgangskode"
 msgid "Sign In"
 msgstr "Log ind"
 
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Åbn forbindelse"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Kontrollér"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Annuller"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Kontrollér fingeraftryk"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"På Windows kan du køre certlm.msc eller certmgr.msc\n"
+"og kopiere certifikatet fra\n"
+"<b>Fjernskrivebord>Certifikater</b> til en fil.\n"
+"Find så dens fingeraftryk via\n"
+"\"certutil.exe -hashfile fil SHA256\".\n"
+"\n"
+"Hvis GNOME bruges på det forbundne slutpunkt,\n"
+"kan fingeraftrykket kontrolleres i indstillingerne,\n"
+"<b>Deling>Fjernskrivebord>Kontrollér kryptering</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Uventet certifikat"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Slet lokalt certifikat"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Kræver godkendelse"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Brugernavn …"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Adgangskode …"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Domæne …"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Domænefeltet er normalt valgfrit og\n"
+"kan stå tomt."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Godkend"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Velkommen til Forbindelser"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Lær om hvordan Forbindelser fungerer."
+msgid "Click next to learn about remote desktop."
+msgstr "Klik næste for at se flere oplysninger om fjernskrivebord."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Brug andre skriveborde over netværk"
+msgid "Access other desktops"
+msgstr "Tilgå andre skriveborde"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr ""
-"Brug Forbindelser til at vise skærmen fra andre skriveborde. Du kan også "
-"styre dem med markør og tastatur!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr "Forbindelser kan vise skærmen fra andre skriveborde. De kan også styres med markør og tastatur."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Forbind til forskellige operativsystemer"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Tilgå Linux-, Mac- og Windowsskriveborde med Forbindelser."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Du kan tilgå Linux-, Mac- og Windowsskriveborde."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Slå fjernskrivebord til inden forbindelse oprettes"
+msgid "Setup is required"
+msgstr "Kræver opsætning"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr ""
-"Computere skal konfigureres til at bruge fjernskrivebord, før du kan "
-"forbinde til dem."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr "Fjernskrivebord skal typisk være slået til på den computer, du vil forbinde til."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Vi håber, du er glad for Forbindelser!"
+msgid "Start by creating your first connection"
+msgstr "Begynd med at oprette din første forbindelse"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Yderligere oplysninger kan findes i hjælpen."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "Til at begynde med får du brug for adressen pâ den maskine, du vil forbinde til."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -365,8 +459,8 @@ msgid "Scale mode"
 msgstr "Skaleringstilstand"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Tryk blot på <b>+</b>-knappen for at oprette din første forbindelse."
+msgid "Click the add button to create your first connection"
+msgstr "Tryk blot på tilføjelsesknappen for at oprette din første forbindelse"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -378,6 +472,32 @@ msgstr "Kunne ikke fortolke filen"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC-filen mangler nøglen “%s”"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” kræver godkendelse"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Lær om hvordan Forbindelser fungerer."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Brug andre skriveborde over netværk"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Slå fjernskrivebord til inden forbindelse oprettes"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Computere skal konfigureres til at bruge fjernskrivebord, før du kan "
+#~ "forbinde til dem."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Vi håber, du er glad for Forbindelser!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Yderligere oplysninger kan findes i hjælpen."
 
 #~ msgid "Scaling"
 #~ msgstr "Skalering"
@@ -401,9 +521,6 @@ msgstr "VNC-filen mangler nøglen “%s”"
 
 #~ msgid "Server"
 #~ msgstr "Server"
-
-#~ msgid "Cancel"
-#~ msgstr "Annuller"
 
 #~ msgid "Create"
 #~ msgstr "Opret"
