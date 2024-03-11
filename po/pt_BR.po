@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-05 13:43+0000\n"
-"PO-Revision-Date: 2023-06-01 08:11-0300\n"
+"POT-Creation-Date: 2024-01-13 12:09+0000\n"
+"PO-Revision-Date: 2024-03-08 11:11-0300\n"
 "Last-Translator: Leônidas Araújo <leorusvellt@hotmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-DL-Team: pt_BR\n"
 "X-DL-Module: connections\n"
 "X-DL-Branch: master\n"
@@ -158,13 +158,13 @@ msgstr "A autenticação falhou: %s"
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Não, obrigado"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Não, obrigado"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Fechar"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Fechar"
 
 #. Translators: Combo item for resizing remote desktop to window's size
 #: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
@@ -216,19 +216,19 @@ msgstr "_Senha"
 msgid "Sign In"
 msgstr "Entrar"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Bem-vindo(a) ao Conexões"
 
-#: src/ui/onboarding-dialog.ui:42
+#: src/ui/onboarding-dialog.ui:43
 msgid "Learn about how Connections works."
 msgstr "Aprenda sobre como funciona o Conexões."
 
-#: src/ui/onboarding-dialog.ui:49
+#: src/ui/onboarding-dialog.ui:50
 msgid "Use other desktops, remotely"
 msgstr "Usar outras áreas de trabalho, remotamente"
 
-#: src/ui/onboarding-dialog.ui:50
+#: src/ui/onboarding-dialog.ui:51
 msgid ""
 "Use Connections to view the screen of other desktops. You can control them "
 "using the pointer and keyboard, too!"
@@ -236,19 +236,19 @@ msgstr ""
 "Use o Conexões para ver a tela de outras áreas de trabalho. Você pode "
 "controlá-las usando o ponteiro e o teclado, também!"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Conecte-se a diferentes sistemas operacionais"
 
-#: src/ui/onboarding-dialog.ui:58
+#: src/ui/onboarding-dialog.ui:59
 msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgstr "Acesse áreas de trabalho Linux, Mac e Windows usando o Conexões."
 
-#: src/ui/onboarding-dialog.ui:65
+#: src/ui/onboarding-dialog.ui:66
 msgid "Enable remote desktop before connecting"
 msgstr "Habilitar área de trabalho remota antes de conectar"
 
-#: src/ui/onboarding-dialog.ui:66
+#: src/ui/onboarding-dialog.ui:67
 msgid ""
 "Computers need to be set up for remote desktop before you can connect to "
 "them."
@@ -256,11 +256,11 @@ msgstr ""
 "É necessário que os computadores sejam configurados para a área de trabalho "
 "remota antes que você possa conectá-los."
 
-#: src/ui/onboarding-dialog.ui:73
+#: src/ui/onboarding-dialog.ui:74
 msgid "We hope that you enjoy Connections!"
 msgstr "Esperamos que aproveite o Conexões!"
 
-#: src/ui/onboarding-dialog.ui:74
+#: src/ui/onboarding-dialog.ui:75
 msgid "More information can be found in the help."
 msgstr "Mais informações podem ser encontradas na ajuda."
 
