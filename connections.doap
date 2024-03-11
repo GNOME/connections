@@ -13,7 +13,7 @@
   <platform>Libhandy</platform>
 
   <homepage
-  rdf:resource="https://wiki.gnome.org/Apps/Connections" />
+  rdf:resource="https://apps.gnome.org/Connections" />
   <download-page
   rdf:resource="http://download.gnome.org/sources/connections/"/>
   <bug-database

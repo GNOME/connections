@@ -46,10 +46,11 @@
     <name>The GNOME Project</name>
   </developer>
   <update_contact>felipeborges_at_gnome.org</update_contact>
-  <url type="homepage">https://gitlab.gnome.org/GNOME/connections</url>
+  <url type="homepage">https://apps.gnome.org/Connections</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/connections/issues</url>
   <url type="donation">https://www.gnome.org/donate/</url>
   <url type="translate">https://l10n.gnome.org/module/connections/</url>
+  <url type="contribute">https://welcome.gnome.org/en/app/Connections</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/connections</url>
   <translation type="gettext">gnome-connections</translation>
   <content_rating type="oars-1.1" />
