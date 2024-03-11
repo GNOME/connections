@@ -15,7 +15,7 @@
         <child>
           <object class="HdyHeaderBar" id="dialog_headerbar">
             <property name="visible">True</property>
-            <property name="title" translatable="yes">Open Connection</property>
+            <property name="title" translatable="yes" comments="Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).">Open Connection</property>
             <style>
               <class name="titlebar"/>
             </style>
