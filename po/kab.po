@@ -1,0 +1,478 @@
+# Kabyle translation for connections.
+# Copyright (C) 2024 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+# ZiriSut <rgebbid@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2024-03-15 15:10+0000\n"
+"PO-Revision-Date: 2024-03-18 04:53+0100\n"
+"Last-Translator: sa\n"
+"Language-Team: Kabyle <kab@li.org>\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+msgid "Connections"
+msgstr "Tuqqniwin"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Sken syen seqdec tinariyin niḍen"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Tuqqniwin ad k-ǧǧent ad teqqneḍ, daɣen ad tesqedceḍ tinariyin niḍen. Yezmer "
+"wagi d abrid i unekcum ɣer ugbur neɣ ɣer yiseɣzanen ɣef unagraw n wammud n "
+"tnarit niḍen. Yezmer daɣen ad ttusqedcent i umuddu n usefrek i yiseqdacen "
+"ara yeḥwaǧen tallalt."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Taseddart n yinagrawen n wammud yemgarden zemren ad qqnen, ula d tinariyin "
+"n Linux d Windows. Tzemreḍ daɣen ad teqqneḍ ɣer tmacinin tuhlisin."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Tuqqniwin sseqdacent ineggafen VNC akked RDP yettusefraken s tugat, yiwen "
+"seg-sen ilaq ad yermed ɣef tnarit wuɣur i tebɣiḍ ad teqqneḍ."
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
+msgid "The GNOME Project"
+msgstr "Asenfar n GNOME"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;anmeggag;tanarit;isfuyla;asefrek;anekcum;taskant"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Afaylu (VNC) n tnarit anmeggag"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Kkes"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "Iraten"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr "amsuqqel-isemdan"
+
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Amsaɣ n tnarit anmeggag i twennaḍt n tnarit GNOME"
+
+#: src/application.vala:151
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Yegguma ad d-yeldi ufaylu n wanaw mime arussin %s"
+
+#: src/application.vala:182
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Tuqqna ɣer \"%s\" tettwakkes"
+
+#: src/application.vala:185
+msgid "Undo"
+msgstr "Semmet"
+
+#: src/application.vala:232
+msgid "URL to connect"
+msgstr "URL i tuqqna"
+
+#: src/application.vala:233
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Ldi afaylu .vnc neɣ .rdp deg UBRID i d-yettwamudden"
+
+#: src/application.vala:234
+msgid "Open in full screen"
+msgstr "Ldi deg ugdil aččuran"
+
+#: src/application.vala:257
+msgid "Too many command-line arguments specified.\n"
+msgstr "Aṭas n yifukal n yizirig n tiludna yettwafernen.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:70
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Tuṭṭfa n ugdil seg %s"
+
+#: src/connection.vala:85
+msgid "Screenshot taken"
+msgstr "Tugna n ugdil tettwaṭṭef"
+
+#. Translators: Open is a verb
+#: src/connection.vala:88
+msgid "Open"
+msgstr "Ldi"
+
+#: src/connection.vala:199
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Asesteb yecceḍ: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Tuqqna ɣer \"%s\" i tikkelt tamezwarut. I wakken ad tetḥeqqeḍ teqqneḍ ɣer "
+"tmacint i yettbanen teqqneḍ ɣer-s, senqed amṣada n udsil umḍin. Akala-a "
+"iteddu tikkelt kan."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Aselkin \"%s\" n uqeddac anmeggag ur imṣada ara anâl adigan. Yezmer yella "
+"win yettarran iman-is d netta i d aqeddac."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Aqeddac anmeggag \"%s\" yesra isem n useqdac akked wawal n uwεeddi i wakken "
+"ad tkemmleḍ ad teqqneḍ."
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:128
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ala tanemmirt"
+
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Mdel"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Semsawi teɣzi n tnarit"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "Eg tuṭṭfa n ugdil"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "Agdil aččuran"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Sekcem anaglam n uzeṭṭa n tnarit tanmeggagt i wakken ad teqqneḍ ɣer:"
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Anaw n tuqqna"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (alugen i tuqqna ɣer Windows)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (alugen i tuqqna ɣer Linux)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "Tallalt"
+
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
+msgid "Connect"
+msgstr "Qqen"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Isem n useqdac"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Awal n uɛeddi"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Qqen"
+
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Ldi tuqqna"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Senqed"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Sefsex"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Senqed adsil umḍin"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Deg Windows selkem certlm.msc neɣ certmgr.msc\n"
+"syen nɣel aselkin seg\n"
+"<b>Tanarit tanmeggagt>Iselkinen</b> ɣer ufaylu.\n"
+"Sakin awi adsil-is umḍin s\n"
+"\"certutil.exe -afaylu n hashfile SHA256\".\n"
+"\n"
+"Ma yella GNOME yettuseqdec ɣef wagaz n taggara yeqqnen,\n"
+"adsil umḍin yezmer ad yettusenqed deg Yiɣewwaren,\n"
+"<b>Beṭṭu>Tanarit tanmeggagt>Senqed awgelhenn</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Aselkin ur nettwarǧa ara"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Kkes aselkin adigan"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Asesteb yettwasra"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Isem n useqdac…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Awal n uɛeddi…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Taɣult…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Urti n taɣult deg tuget d afrayan yerna yezmer\n"
+"ad yeqqim d ilem."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Asesteb"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
+msgid "Welcome to Connections"
+msgstr "Ansuf ɣer tuqqniwin"
+
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "Sit ɣef uḍfir i wakken ad tissineḍ ugar ɣef tnarit tanmeggagt."
+
+#: src/ui/onboarding-dialog.ui:50
+msgid "Access other desktops"
+msgstr "Kcem ɣer tnariyin niḍen"
+
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+"Tuqqniwin tteǧǧant ad twaliḍ igdilen n tnariyin niḍen. Zemren daɣen ad "
+"ttusneqden s usewwaṛ akked unasiw."
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Connect to different operating systems"
+msgstr "Qqen ɣer yinagrawen n wammud yemgaraden"
+
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Tzemreḍ ad tkecmeḍ ɣer tnariyin n Linux, Mac akked Windaws."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Setup is required"
+msgstr "Aserkeb yettwasra"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"Tanarit tanmeggagt tesra s umata ad tettwarmed ɣef uselkim wuɣur i tebɣiḍ "
+"ad teqqneḍ."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Start by creating your first connection"
+msgstr "Bdu s tmerna n tuqqna-k tamezwarut"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "I wakken ad tebduḍ, tesriḍ tansa n uselkim wuɣur i tebɣiḍ ad teqqneḍ."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Ismenyifen n tuqqna"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
+msgid "Address"
+msgstr "Tansa"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "Isem"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Ṣeggem asfaylu"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Teɣzi taneẓlit"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Amaynut"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Umuɣ n usnas"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Nadi"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Tuɣalin"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Sken umuɣ"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Ffeɣ seg tuqqna"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Inegzumen n unasiw"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "Inegzumen n unasiw"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Γef tuqqniwin"
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Tuɣalin ɣer deffir"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Sken"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "View only"
+msgstr "Askan kan"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "Show local pointer"
+msgstr "Sken asewwaṛ adigan"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "Rmed aseklas ameslaw"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Tehri n tesfift"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Amerkid εlayen"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Asismeḍ uzrib"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Askar n tfesniwin"
+
+#: src/ui/window.ui:52
+msgid "Click the add button to create your first connection"
+msgstr "Sit ɣef tqeffalt Rnu i wakken ad tesnulfuḍ tuqqna tamezwarut"
+
+#: src/vnc-connection.vala:149
+msgid "Couldn’t parse the file"
+msgstr "Yegguma ad isenteḍ afaylu"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "Afaylu VNC txuṣṣ-it tsarut \"%s\""
