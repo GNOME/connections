@@ -2,25 +2,25 @@
 # Copyright (C) 2021 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
-# A S Alam <amanpreet.alam@gmail.com>, 2021, 2023.
+# SPDX-FileCopyrightText: 2021, 2023, 2024 A S Alam <amanpreet.alam@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-08-22 17:03-0700\n"
-"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"POT-Creation-Date: 2024-03-14 14:38+0000\n"
+"PO-Revision-Date: 2024-03-17 19:16-0500\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <punjab-translation@googlegroups.com>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "ਕਨੈਕਸ਼ਨ"
 
@@ -47,7 +47,8 @@ msgid ""
 "and Windows desktops. You can also connect to virtual machines."
 msgstr ""
 "ਲੀਨਕਸ ਅਤੇ ਵਿੰਡੋਜ਼ ਡੈਸਕਟਾਪ ਸਮੇਤ ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮਾਂ ਨਾਲ"
-" ਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਸੀਂ ਵਰਚੁਅਲ ਮਸ਼ੀਨਾਂ ਨਾਲ ਵੀ ਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹੋ।"
+" ਕਨੈਕਟ ਕਰ ਸਕਦੇ "
+"ਹੋ। ਤੁਸੀਂ ਵਰਚੁਅਲ ਮਸ਼ੀਨਾਂ ਨਾਲ ਵੀ ਕਨੈਕਟ ਕਰ ਸਕਦੇ ਹੋ।"
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
@@ -55,10 +56,11 @@ msgid ""
 "these must be enabled on the desktop that you want to connect to."
 msgstr ""
 "ਕਨੈਕਸ਼ਨ ਵੱਡੇ ਪੱਧਰ ਉੱਤੇ ਸਹਾਇਕ VNC ਅਤੇ RDP ਪਰੋਟੋਕਾਲਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ ਅਤੇ ਇਹਨਾਂ"
-" ਵਿੱਚੋਂ ਕੋਈ ਇੱਕ ਡੈਸਕਟਾਪ ਉੱਤੇ ਸਮਰੱਥ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਕਨੈਕਟ ਕਰਨਾ"
-" ਚਾਹੁੰਦੇ ਹੋ।"
+" ਵਿੱਚੋਂ ਕੋਈ ਇੱਕ "
+"ਡੈਸਕਟਾਪ ਉੱਤੇ ਸਮਰੱਥ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਕਨੈਕਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ।"
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "ਗਨੋਮ ਪਰੋਜੈਕਟ"
 
@@ -133,29 +135,49 @@ msgstr "ਸਕਰੀਨਸ਼ਾਟ ਲਿਆ"
 msgid "Open"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” ਲਈ ਪਰਮਾਣਕਿਤਾ ਚਾਹੀਦੀ ਹੈ"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "ਪਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ: %s"
 
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"ਪਹਿਲੀ ਵਾਰ “%s” ਨਾਲ ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ। ਜਿਸ ਮਸ਼ੀਨ ਨਾਲ ਤੁਸੀਂ ਕਨੈਕਟ ਕਰਨਾ"
+" ਚਾਹੁੰਦੇ ਸੀ, ਉਸ ਨਾਲ ਹੀ ਕਨੈਕਟ ਹੋਣ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣ ਲਈ ਫਿੰਗਰਪਰਿੰਟ ਮਿਲਦੇ ਹੋਣ ਦੀ"
+" ਜਾਂਚ ਕਰੋ। ਇਹ ਪਰੋਸੈਸ ਸਿਰਫ਼ ਇੱਕ ਵਾਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"“%s” ਰਿਮੋਟ ਸਰਵਰ ਦਾ ਸਰਟੀਫਿਕੇਟ ਲੋਕਲ ਕਾਪੀ ਨਾਲ ਮਿਲਦਾ ਨਹੀਂ ਹੈ। ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਕੋਈ"
+" ਸਰਵਰ ਹੋਣ ਦਾ ਛਲ ਕਰ ਰਿਹਾ ਹੋਵੇ।"
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "“%s” ਰਿਮੋਟ ਸਰਵਰ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਚਾਹੀਦਾ ਹੈ।"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
 #: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
-#| msgid "No Thanks"
 msgid "_No Thanks"
 msgstr "ਨਹੀਂ ਜੀ ਧੰਨਵਾਦ(_T)"
 
 #: src/onboarding-dialog.vala:96
-#| msgid "Close"
 msgid "_Close"
 msgstr "ਬੰਦ ਕਰੋ(_C)"
 
@@ -192,7 +214,7 @@ msgstr "VNC (ਲੀਨਕਸ ਨਾਲ ਕਨੈਕਟ ਕਰਨ ਲਈ ਸਟ�
 msgid "Help"
 msgstr "ਮਦਦ"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "ਕਨੈਕਟ ਕਰੋ"
 
@@ -208,56 +230,140 @@ msgstr "ਪਾਸਵਰਡ(_P)"
 msgid "Sign In"
 msgstr "ਸਾਇਨ ਇਨ ਕਰੋ"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+#| msgid "Connections"
+msgid "Open Connection"
+msgstr "ਕਨੈਕਸ਼ਨ ਨੂੰ ਖੋਲ੍ਹੋ"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "ਜਾਂਚੋ"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "ਫਿੰਗਰਪਰਿੰਟ ਦੀ ਜਾਂਚ ਕਰੋ"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Windows ਉੱਤੇ certlm.msc ਜਾਂ certmgr.msc\n"
+"ਨੂੰ ਚਲਾਓ ਅਤੇ <b>Remote Desktop>Certificates</b>\n"
+"ਸਰਟੀਫਿਕੇਟ ਨੂੰ ਫ਼ਾਇਲ ਵਿੱਚ ਕਾਪੀ ਕਰੋ।\n"
+"ਤਦ ਇਸ ਦੇ ਫਿੰਗਰਪਰਿੰਟ ਇੰਝ ਲਵੋ:\n"
+"\"certutil.exe -hashfile file SHA256\"\n"
+"\n"
+"ਜੇ ਗਨੋਮ ਨੂੰ ਕਨੈਕਟ ਹੋਏ ਐਂਡ-ਪੁਆਇੰਟ ਵਜੋਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ,\n"
+"ਫਿੰਗਰਪਰਿੰਟ ਨੂੰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇੰਝ ਜਾਂਚਿਆ ਜਾ ਸਕਦਾ ਹੈ,\n"
+"<b>ਸਾਂਝਾ ਕਰਨਾ>ਰਿਮੋਟ ਡੈਸਕਟਾਪ>ਇੰਕ੍ਰਿਪਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ</b>।"
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "ਬੇਲੋੜਾ ਸਰਟੀਫਿਕੇਟ"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "ਲੋਕਲ ਸਰਟੀਫਿਕੇਟ ਨੂੰ ਹਟਾਓ"
+
+#: src/ui/dialog.ui:386
+#| msgid "Authentication failed: %s"
+msgid "Authentication Required"
+msgstr "ਪਰਮਾਣੀਕਰਨ ਚਾਹੀਦਾ ਹੈ"
+
+#: src/ui/dialog.ui:437
+#| msgid "_Username"
+msgid "Username…"
+msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ…"
+
+#: src/ui/dialog.ui:465
+#| msgid "_Password"
+msgid "Password…"
+msgstr "ਪਾਸਵਰਡ…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "ਡੋਮੇਨ…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"ਡੋਮੇਨ ਖੇਤਰ ਆਮ ਤੌਰ ਉੱਤੇ ਚੋਣਵਾਂ ਹੁੰਦਾ ਹੈ ਅਤੇ ਖਾਲੀ ਛੱਡਿਆ\n"
+"ਜਾ ਸਕਦਾ ਹੈ।"
+
+#: src/ui/dialog.ui:638
+#| msgid "Authentication failed: %s"
+msgid "Authenticate"
+msgstr "ਪਰਮਾਣਕਿਤਾ"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "ਕਨੈਕਸ਼ਨਸ ਵਲੋਂ ਜੀ ਆਇਆਂ ਨੂੰ"
 
 #: src/ui/onboarding-dialog.ui:43
-#| msgid "About Connections"
-msgid "Learn about how Connections works."
-msgstr "ਕਨੈਕਸ਼ਨ ਦੇ ਕੰਮ ਕਰਨ ਬਾਰੇ ਸਿੱਖੋ।"
+msgid "Click next to learn about remote desktop."
+msgstr "ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਬਾਰੇ ਜਾਣਨ ਲਈ ਅੱਗੇ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "ਹੋਰ ਡੈਸਕਟਾਪ ਵਰਤੋਂ, ਰਿਮੋਟ ਤੋਂ"
+#| msgid "View and use other desktops"
+msgid "Access other desktops"
+msgstr "ਹੋਰ ਡੈਸਕਟਾਪ ਲਈ ਪਹੁੰਚ"
 
 #: src/ui/onboarding-dialog.ui:51
+#| msgid ""
+#| "Use Connections to view the screen of other desktops. You can control "
+#| "them using the pointer and keyboard, too!"
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"ਹੋਰ ਡੈਸਕਟਾਪਾਂ ਦੀ ਸਕਰੀਨ ਵੇਖਣ ਲਈ ਕਨੈਕਸ਼ਨਜ਼ ਵਰਤੋਂ। ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਪੁਆਇੰਟਰ ਤੇ"
-" ਕੀਬੋਰਡ ਵਰਤ ਕੇ ਕੰਟਰੋਲ "
-"ਕਰ ਸਕਦੇ ਹੋ!"
+"ਕਨੈਕਸ਼ਨਜ਼ ਹੋਰ ਡੈਸਕਟਾਪ ਦੀਆਂ ਸਕਰੀਨਾਂ ਵੇਖਣ ਲਈ ਸਹਾਇਕ ਹੈ। ਇਹਨਾਂ ਨੂੰ ਪੁਆਇੰਟਰ ਅਤੇ"
+" ਕੀਬੋਰਡ ਰਾਹੀਂ ਵੀ ਕੰਟਰੋਲ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "ਵੱਖੋ-ਵੱਖਰੇ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "ਲੀਨਕਸ, ਮੈਕ ਤੇ ਵਿੰਡੋਜ਼ ਡੈਸਕਟਾਪਾਂ ਨੂੰ ਕਨੈਕਸ਼ਨਜ਼ ਰਾਹੀਂ ਇਸਤੇਮਾਲ ਕਰੋ।"
+#| msgid "Access Linux, Mac, and Windows desktops using Connections."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "ਤੁਸੀਂ ਲੀਨਕਸ, ਮੈਕ ਤੇ ਵਿੰਡੋਜ਼ ਡੈਸਕਟਾਪਾਂ ਨੂੰ ਵਰਤ ਸਕਦੇ ਹੋ।"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "ਕਨੈਕਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸਮਰੱਥ ਕਰੋ"
+msgid "Setup is required"
+msgstr "ਸੈਟਅੱਪ ਚਾਹੀਦਾ ਹੈ"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਤੁਸੀਂ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ, ਉਹਨਾਂ ਨਾਲ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸੈਟ"
-" ਅੱਪ ਕਰਨ ਦੀ ਲੋੜ "
-"ਹੈ।"
+"ਜਿਸ ਕੰਪਿਊਟਰ ਨਾਲ ਤੁਸੀਂ ਕਨੈਕਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਉਸ ਉੱਤੇ ਤੁਹਾਨੂੰ ਅਕਸਰ ਰਿਮੋਟ"
+" ਡੈਸਕਟਾਟ ਸਮਰੱਥ ਕਰਨ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "ਸਾਨੂੰ ਆਸ ਹੈ ਕਿ ਤੁਸੀਂ ਕਨੈਕਸ਼ਨਸ ਆਨੰਦ ਮਾਣੋਗੇ!"
+msgid "Start by creating your first connection"
+msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾ ਕੇ ਸ਼ੁਰੂ ਕਰੋ"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "ਹੋਰ ਜਾਣਕਾਰੀ ਮਦਦ ਵਿੱਚ ਲੱਭੀ ਜਾ ਸਕਦੀ ਹੈ।"
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਉਸ ਕੰਪਿਊਟਰ ਦਾ ਐਡਰੈਸ ਚਾਹੀਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਕਨੈਕਟ ਕਰਨਾ ਹੈ।"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -372,8 +478,9 @@ msgid "Scale mode"
 msgstr "ਸਕੇਲ ਮੋਡ"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਉਣ ਲਈ <b>+</b> ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
+#| msgid "Just hit the <b>+</b> button to make your first connection."
+msgid "Click the add button to create your first connection"
+msgstr "ਆਪਣਾ ਪਹਿਲਾਂ ਕਨੈਕਸ਼ਨ ਬਣਾਉਣ ਲਈ ਜੋੜ ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -385,6 +492,33 @@ msgstr "ਫਾਇਲ ਨੂੰ ਪਾਰਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸ
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC ਫਾਇਲ ਲਈ “%s” ਕੁੰਜੀ ਗੁੰਮ ਹੈ"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” ਲਈ ਪਰਮਾਣਕਿਤਾ ਚਾਹੀਦੀ ਹੈ"
+
+#~| msgid "About Connections"
+#~ msgid "Learn about how Connections works."
+#~ msgstr "ਕਨੈਕਸ਼ਨ ਦੇ ਕੰਮ ਕਰਨ ਬਾਰੇ ਸਿੱਖੋ।"
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "ਹੋਰ ਡੈਸਕਟਾਪ ਵਰਤੋਂ, ਰਿਮੋਟ ਤੋਂ"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "ਕਨੈਕਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸਮਰੱਥ ਕਰੋ"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਕਿ ਤੁਸੀਂ ਕੰਪਿਊਟਰਾਂ ਨਾਲ ਕਨੈਕਟ ਕਰੋ, ਉਹਨਾਂ ਨਾਲ ਰਿਮੋਟ ਡੈਸਕਟਾਪ ਸੈਟ ਅੱਪ ਕਰਨ ਦੀ "
+#~ "ਲੋੜ ਹੈ।"
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "ਸਾਨੂੰ ਆਸ ਹੈ ਕਿ ਤੁਸੀਂ ਕਨੈਕਸ਼ਨਸ ਆਨੰਦ ਮਾਣੋਗੇ!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "ਹੋਰ ਜਾਣਕਾਰੀ ਮਦਦ ਵਿੱਚ ਲੱਭੀ ਜਾ ਸਕਦੀ ਹੈ।"
 
 #~ msgid "Scaling"
 #~ msgstr "ਸਕੇਲਿੰਗ"
@@ -406,8 +540,6 @@ msgstr "VNC ਫਾਇਲ ਲਈ “%s” ਕੁੰਜੀ ਗੁੰਮ ਹੈ"
 #~ msgid "Server"
 #~ msgstr "ਸਰਵਰ"
 
-#~ msgid "Cancel"
-#~ msgstr "ਰੱਦ ਕਰੋ"
-
 #~ msgid "Create"
 #~ msgstr "ਬਣਾਓ"
+
