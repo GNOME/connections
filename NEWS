@@ -1,3 +1,29 @@
+46.0 - 18 Mar, 2024
+=====================
+
+Changes since 46.rc
+
+  - Update links in app metadata
+  - Clarify a title of a dialog
+
+  - Update gtk-frdp
+     - Do not attempt to process empty clipboard data
+     - Do not send coordinates with smooth scroll
+     - Limit value of mouse scroll
+
+  - Updated translations:
+     - Brazilian-Portuguese
+     - Catalan
+     - Danish
+     - Italian
+     - Korean
+     - Latvian
+     - Norwegian-Bokm-l
+     - Occitan
+     - Polish
+     - Punjabi
+     - Swedish
+
 46.rc - 02 Mar, 2024
 =====================
 

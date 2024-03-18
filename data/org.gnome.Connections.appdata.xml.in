@@ -32,9 +32,9 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="45.0" date="2023-09-16">
+    <release version="46.0" date="2024-03-18">
       <description>
-        <p>GNOME Connections 45.0 culminates six months of feature development, bugfixes, and performance improvements.</p>
+        <p>GNOME Connections 46.0 culminates six months of feature development, bugfixes, and performance improvements.</p>
       </description>
     </release>
   </releases>
