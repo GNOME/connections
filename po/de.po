@@ -6,16 +6,16 @@
 # Christian Kirbach <christian.kirbach@gmail.com>, 2020.
 # Philipp Kiemle <philipp.kiemle@gmail.com>, 2021-2022, 2024.
 # Tim Sabsch <tim@sabsch.com>, 2021.
-# Jürgen Benvenuti <gastornis@posteo.org>, 2023.
+# Jürgen Benvenuti <gastornis@posteo.org>, 2023, 2024.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-26 21:10+0000\n"
-"PO-Revision-Date: 2024-03-01 01:00+0100\n"
-"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
+"POT-Creation-Date: 2024-03-14 14:56+0000\n"
+"PO-Revision-Date: 2024-03-18 17:39+0100\n"
+"Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr ""
 "Christian Kirbach <christian.kirbach@gmail.com>, 2020, 2021\n"
 "Philipp Kiemle <philipp.kiemle@gmail.com>, 2021\n"
 "Tim Sabsch <tim@sabsch.com>, 2021\n"
-"Jürgen Benvenuti <gastornis@posteo.org>, 2023"
+"Jürgen Benvenuti <gastornis@posteo.org>, 2023, 2024"
 
 # Leicht verändert aus Vinagre übernommen
 #: src/application.vala:89 src/application.vala:242
@@ -162,10 +162,10 @@ msgid ""
 "machine it claims to be, please verify the fingerprints match. This process "
 "is only done once."
 msgstr ""
-"Mit »%s« wird zum ersten Mal eine Verbindung hergestellt. Um "
-"sicherzugehen, dass Sie sich mit der Maschine verbinden, für die sie sich "
-"ausgibt, prüfen Sie bitte, ob die Fiingerabdrücke übereinstimmen. Dieser "
-"Vorgang muss nur einmal erledigt werden."
+"Mit »%s« wird zum ersten Mal eine Verbindung hergestellt. Um sicherzugehen, "
+"dass Sie sich mit der Maschine verbinden, für die sie sich ausgibt, prüfen "
+"Sie bitte, ob die Fiingerabdrücke übereinstimmen. Dieser Vorgang muss nur "
+"einmal erledigt werden."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -251,8 +251,8 @@ msgid "Sign In"
 msgstr "Anmelden"
 
 # https://gitlab.gnome.org/GNOME/connections/-/issues/156 - pk
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
-#, fuzzy
 msgid "Open Connection"
 msgstr "Verbindung öffnen"
 
@@ -280,6 +280,15 @@ msgid ""
 "the fingerprint can be verified in the Settings,\n"
 "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgstr ""
+"Führen Sie unter Windows certlm.msc oder certmgr.msc\n"
+"aus und kopieren Sie das Zertifikat von\n"
+"<b>Bildschirmfreigabe>Zertifikate</b> in eine Datei.\n"
+"Ermitteln Sie anschließend den Fingerabdruck mit\n"
+"\"certutil.exe -hashfile Datei SHA256\".\n"
+"\n"
+"Wenn GNOME der Endpunkt der Verbindung ist,\n"
+"kann der Fingerabdruck in den Einstellungen überprüft werden,\n"
+"<b>Freigabe>Bildschirmfreigabe>Verschlüsselung prüfen</b>."
 
 #: src/ui/dialog.ui:291
 msgid "Unexpected Certificate"
@@ -354,6 +363,8 @@ msgid ""
 "Remote desktop typically needs to be enabled on the computer you want to "
 "connect to."
 msgstr ""
+"Die Bildschirmfreigabe muss auf dem Rechner eingeschaltet werden, mit dem "
+"Sie sich verbinden wollen."
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "Start by creating your first connection"
