@@ -216,7 +216,7 @@ Then obtain its fingerprint via
 
 If GNOME is used on the connected endpoint,
 the fingerprint can be verified in the Settings,
-&lt;b&gt;Sharing>Remote Desktop>Verify Encryption&lt;/b&gt;.</property>
+&lt;b&gt;System>Remote Desktop>Verify Encryption&lt;/b&gt;.</property>
                           </object>
                         </child>
                       </object>
