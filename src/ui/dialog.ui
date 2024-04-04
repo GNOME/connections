@@ -215,8 +215,9 @@ Then obtain its fingerprint via
 "certutil.exe -hashfile file SHA256".
 
 If GNOME is used on the connected endpoint,
-the fingerprint can be verified in the Settings,
-&lt;b&gt;System>Remote Desktop>Verify Encryption&lt;/b&gt;.</property>
+the fingerprint can be verified in the &lt;b&gt;Settings>Sharing&lt;/b&gt;
+panel or &lt;b&gt;Settings>System&lt;/b&gt; panel under
+&lt;b&gt;Remote Desktop>Verify Encryption&lt;/b&gt;.</property>
                           </object>
                         </child>
                       </object>
