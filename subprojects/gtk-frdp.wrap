@@ -1,4 +1,4 @@
 [wrap-git]
 directory=gtk-frdp
 url=https://gitlab.gnome.org/gnome/gtk-frdp.git
-revision=master
+revision=433db195c8428643e37cd42281bddd2f9e2704c8
