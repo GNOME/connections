@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-16 10:45+0000\n"
-"PO-Revision-Date: 2023-08-01 23:01+0300\n"
+"POT-Creation-Date: 2024-03-14 14:38+0000\n"
+"PO-Revision-Date: 2024-05-01 21:49+0300\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek <gnome-el-list@gnome.org>\n"
 "Language: el\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Συνδέσεις"
 
@@ -59,7 +59,8 @@ msgstr ""
 "και ένα από αυτά πρέπει να είναι ενεργοποιημένο στον υπολογιστή στον οποία "
 "θέλετε να συνδεθείτε."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
@@ -140,18 +141,43 @@ msgstr "Λήφθηκε στιγμιότυπο"
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "Το «%s» απαιτεί πιστοποίηση"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Η πιστοποίηση απέτυχε: %s"
 
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Σύνδεση στο «%s» για πρώτη φορά. Για να βεβαιωθείτε ότι συνδέεστε στο "
+"μηχάνημα που ισχυρίζεται ότι είναι, ελέγξτε ότι τα δακτυλικά αποτυπώματα "
+"ταιριάζουν. Αυτή η διαδικασία γίνεται μόνο μία φορά."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Το πιστοποιητικό του απομακρυσμένου διακομιστή «%s» δεν ταιριάζει με το "
+"τοπικό αντίγραφο. Μπορεί να είναι κάποιος που προσποιείται ότι είναι ο "
+"διακομιστής."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Ο απομακρυσμένος διακομιστής «%s» απαιτεί όνομα χρήστη και συνθηματικό για "
+"να συνεχίσει τη σύνδεση."
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -199,7 +225,7 @@ msgstr "VNC (πρότυπο για σύνδεση με Linux)"
 msgid "Help"
 msgstr "Βοήθεια"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Σύνδεση"
 
@@ -215,56 +241,134 @@ msgstr "_Συνθηματικό"
 msgid "Sign In"
 msgstr "Σύνδεση"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Άνοιγμα σύνδεσης"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Επαλήθευση"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Aκύρωση"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Επαλήθευση δακτυλικού αποτυπώματος"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Στα Windows εκτελέστε το certlm.msc ή το certmgr.msc\n"
+"και αντιγράψτε το πιστοποιητικό από την\n"
+"<b>Απομακρυσμένη επιφάνεια εργασίας>Πιστοποιητικά</b> σε ένα αρχείο.\n"
+"Στη συνέχεια, αποκτήστε το δακτυλικό του αποτύπωμα μέσω\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"Εάν το GNOME χρησιμοποιείται στο συνδεδεμένο τελικό σημείο,\n"
+"το δακτυλικό αποτύπωμα μπορεί να επαληθευτεί στις Ρυθμίσεις,\n"
+"<b>Κοινή χρήση>Απομακρυσμένη επιφάνεια εργασίας>Επαλήθευση κρυπτογράφησης</"
+"b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Απροσδόκητο πιστοποιητικό"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Διαγραφή τοπικού πιστοποιητικού"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Απαιτείται πιστοποίηση"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Όνομα χρήστη…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Συνθηματικό…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Τομέας…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Το πεδίο τομέα είναι συνήθως προαιρετικό και μπορεί\n"
+"να παραμείνει κενό."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Πιστοποίηση"
+
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Καλώς ήλθατε στις Συνδέσεις"
 
 #: src/ui/onboarding-dialog.ui:43
-msgid "Learn about how Connections works."
-msgstr "Μάθετε πως να χρησιμοποιείτε τις Συνδέσεις."
+msgid "Click next to learn about remote desktop."
+msgstr ""
+"Κάντε κλικ στο επόμενο κουμπί για να μάθετε σχετικά με την απομακρυσμένη "
+"επιφάνεια εργασίας."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid "Use other desktops, remotely"
-msgstr "Χρησιμοποιήστε άλλους υπολογιστές, από απόσταση"
+msgid "Access other desktops"
+msgstr "Πρόσβαση σε άλλους υπολογιστές"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
 msgstr ""
-"Χρησιμοποιήστε τις Συνδέσεις για να προβάλετε την οθόνη άλλων επιτραπέζιων "
-"υπολογιστών. Μπορείτε επίσης να τα ελέγξετε χρησιμοποιώντας το δείκτη και το "
-"πληκτρολόγιο!"
+"Οι Συνδέσεις επιτρέπουν την προβολή των οθονών άλλων υπολογιστών. Μπορούν "
+"επίσης να ελεγχθούν με τη χρήση του δείκτη και του πληκτρολογίου."
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Συνδεθείτε σε διαφορετικά λειτουργικά συστήματα"
 
 #: src/ui/onboarding-dialog.ui:59
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr ""
-"Αποκτήστε πρόσβαση σε επιτραπέζιους υπολογιστές Linux, Mac και Windows "
-"χρησιμοποιώντας τις Συνδέσεις."
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Μπορείτε να έχετε πρόσβαση σε υπολογιστές Linux, Mac και Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Enable remote desktop before connecting"
-msgstr "Ενεργοποιήστε τον απομακρυσμένο υπολογιστή πριν από τη σύνδεση"
+msgid "Setup is required"
+msgstr "Απαιτείται ρύθμιση"
 
 #: src/ui/onboarding-dialog.ui:67
 msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
 msgstr ""
-"Οι υπολογιστές πρέπει να ρυθμιστούν για απομακρυσμένη σύνδεση για να "
-"μπορέσετε να συνδεθείτε σε αυτούς."
+"Η απομακρυσμένη επιφάνεια εργασίας πρέπει συνήθως να είναι ενεργοποιημένη "
+"στον υπολογιστή στον οποίο θέλετε να συνδεθείτε."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "We hope that you enjoy Connections!"
-msgstr "Ελπίζουμε να απολαύσετε τις Συνδέσεις!"
+msgid "Start by creating your first connection"
+msgstr "Ξεκινήστε δημιουργώντας την πρώτη σας σύνδεση"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid "More information can be found in the help."
-msgstr "Περισσότερες πληροφορίες μπορείτε να βρείτε στη βοήθεια."
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Για να ξεκινήσετε, θα χρειαστείτε τη διεύθυνση του υπολογιστή στον οποίο "
+"θέλετε να συνδεθείτε."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -379,8 +483,9 @@ msgid "Scale mode"
 msgstr "Λειτουργία κλιμάκωσης"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Πατήστε το κουμπί <b>+</b> για να κάνετε την πρώτη σας σύνδεση."
+msgid "Click the add button to create your first connection"
+msgstr ""
+"Κάντε κλικ στο κουμπί προσθήκη για να δημιουργήσετε την πρώτη σας σύνδεση"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -392,6 +497,32 @@ msgstr "Αδυναμία ανάλυσης του αρχείου"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Λείπει το κλειδί “%s” στο αρχείο VNC"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "Το «%s» απαιτεί πιστοποίηση"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Μάθετε πως να χρησιμοποιείτε τις Συνδέσεις."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Χρησιμοποιήστε άλλους υπολογιστές, από απόσταση"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Ενεργοποιήστε τον απομακρυσμένο υπολογιστή πριν από τη σύνδεση"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Οι υπολογιστές πρέπει να ρυθμιστούν για απομακρυσμένη σύνδεση για να "
+#~ "μπορέσετε να συνδεθείτε σε αυτούς."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Ελπίζουμε να απολαύσετε τις Συνδέσεις!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Περισσότερες πληροφορίες μπορείτε να βρείτε στη βοήθεια."
 
 #~ msgid "Scaling"
 #~ msgstr "Κλιμάκωση"
@@ -416,9 +547,6 @@ msgstr "Λείπει το κλειδί “%s” στο αρχείο VNC"
 
 #~ msgid "Server"
 #~ msgstr "Διακομιστής"
-
-#~ msgid "Cancel"
-#~ msgstr "Aκύρωση"
 
 #~ msgid "Create"
 #~ msgstr "Δημιουργία"
