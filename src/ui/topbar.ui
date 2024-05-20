@@ -236,10 +236,6 @@
         <attribute name="label" translatable="yes">Take Screenshot</attribute>
       </item>
       <item>
-        <attribute name="action">display.fullscreen</attribute>
-        <attribute name="label" translatable="yes">Fullscreen</attribute>
-      </item>
-      <item>
         <attribute name="action">display.properties</attribute>
         <attribute name="label" translatable="yes">Properties</attribute>
       </item>
