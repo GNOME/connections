@@ -187,6 +187,30 @@
               <property name="pack-type">end</property>
             </packing>
           </child>
+          <child>
+            <object class="GtkButton" id="fullscreen_button">
+              <property name="visible">True</property>
+              <property name="valign">center</property>
+              <property name="action-name">display.fullscreen</property>
+
+              <child internal-child="accessible">
+                <object class="AtkObject" id="a11y-fullscreen-button">
+                  <property name="accessible-name" translatable="yes">Fullscreen</property>
+                </object>
+              </child>
+
+              <child>
+                <object class="GtkImage">
+                  <property name="visible">True</property>
+                  <property name="icon-name">view-fullscreen-symbolic</property>
+                  <property name="icon-size">1</property>
+                </object>
+              </child>
+            </object>
+            <packing>
+              <property name="pack-type">end</property>
+            </packing>
+          </child>
         </object>
       </child>
     </template>
