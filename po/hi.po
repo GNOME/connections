@@ -1,0 +1,473 @@
+# Hindi translation for connections.
+# Copyright (C) 2024 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+# Scrambled777 <weblate.scrambled777@simplelogin.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections gnome-46\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2024-05-19 11:45+0000\n"
+"PO-Revision-Date: 2024-05-20 11:46+0530\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 46.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+msgid "Connections"
+msgstr "Connections"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "अन्य डेस्कटॉप देखें और उनका उपयोग करें"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Connections आपको अन्य डेस्कटॉप से जुड़ने और उपयोग करने की अनुमति देता है। यह किसी भिन्न "
+"डेस्कटॉप ऑपरेटिंग सिस्टम पर सामग्री या सॉफ़्टवेयर तक पहुंचने का एक शानदार तरीका हो सकता "
+"है। इसका उपयोग उन उपयोगकर्ताओं को सहायता प्रदान करने के तरीके के रूप में भी किया जा "
+"सकता है जिन्हें सहायता की आवश्यकता हो सकती है।"
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Linux और Windows डेस्कटॉप सहित विभिन्न ऑपरेटिंग सिस्टमों की एक श्रृंखला को जोड़ा जा "
+"सकता है। आप वर्चुअल मशीन से भी जुड़ सकते हैं।"
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Connections व्यापक रूप से समर्थित VNC और RDP प्रोटोकॉल का उपयोग करता है, और इनमें से "
+"एक को उस डेस्कटॉप पर सक्षम किया जाना चाहिए जिससे आप जुड़ना चाहते हैं।"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
+msgid "The GNOME Project"
+msgstr "GNOME परियोजना"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;रिमोट;डेस्कटॉप;windows;समर्थन;पहुंच;देखें;"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "रिमोट डेस्कटॉप (VNC) फाइल"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "मिटाएं"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+msgid "Properties"
+msgstr "प्रॉपर्टी"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
+
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "GNOME डेस्कटॉप वातावरण के लिए एक रिमोट डेस्कटॉप क्लाइंट"
+
+#: src/application.vala:151
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "अज्ञात माइम प्रकार %s की फाइल नहीं खुल सकी"
+
+#: src/application.vala:182
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "“%s” से कनेक्शन मिटा दिया गया है"
+
+#: src/application.vala:185
+msgid "Undo"
+msgstr "पूर्ववत करें"
+
+#: src/application.vala:232
+msgid "URL to connect"
+msgstr "जुड़ने के लिए URL"
+
+#: src/application.vala:233
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "प्रदत्त पथ पर .vnc या .rdp फाइल खोलें"
+
+#: src/application.vala:234
+msgid "Open in full screen"
+msgstr "पूर्ण स्क्रीन में खोलें"
+
+#: src/application.vala:257
+msgid "Too many command-line arguments specified.\n"
+msgstr "बहुत अधिक कमांड-लाइन तर्क निर्दिष्ट हैं।\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:70
+#, c-format
+msgid "Screenshot from %s"
+msgstr "%s से स्क्रीनशॉट"
+
+#: src/connection.vala:85
+msgid "Screenshot taken"
+msgstr "स्क्रीनशॉट लिया गया"
+
+#. Translators: Open is a verb
+#: src/connection.vala:88
+msgid "Open"
+msgstr "खोले"
+
+#: src/connection.vala:199
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "प्रमाणीकरण विफल: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"पहली बार “%s” से जुड़ रहा है। यह सुनिश्चित करने के लिए कि आप उस मशीन से जुड़ें हैं जिसके होने "
+"का दावा किया गया है, कृपया फिंगरप्रिंट मिलान की पुष्टि करें। यह प्रक्रिया केवल एक बार ही "
+"की जाती है।"
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"रिमोट सर्वर “%s” प्रमाणपत्र स्थानीय प्रतिलिपि से मेल नहीं खाता है। यह हो सकता है कि "
+"कोई सर्वर होने का नाटक कर रहा हो।"
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"रिमोट सर्वर “%s” से जुड़ना जारी रखने के लिए उपयोक्तानाम और पासवर्ड की आवश्यकता होती है।"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:128
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "जी नहीं, धन्यवाद (_N)"
+
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "बंद करें (_C)"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "डेस्कटॉप का आकार बदलें"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:212
+msgid "Take Screenshot"
+msgstr "स्क्रीनशॉट लें"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:216
+msgid "Fullscreen"
+msgstr "पूर्णस्क्रीन"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "जुड़ने के लिए रिमोट डेस्कटॉप का नेटवर्क पहचानकर्ता दर्ज करें:"
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "कनेक्शन प्रकार"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (Windows से जुड़ने के लिए मानक)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (Linux से जुड़ने के लिए मानक)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+msgid "Help"
+msgstr "सहायता"
+
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
+msgid "Connect"
+msgstr "जुड़ें"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "उपयोक्तानाम (_U)"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "पासवर्ड (_P)"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "साइन इन"
+
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "कनेक्शन खोलें"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "सत्यापित करें"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "फिंगरप्रिंट सत्यापित करें"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Windows पर certlm.msc या certmgr.msc चलाएं और <b>रिमोट डेस्कटॉप>प्रमाणपत्र</b> से "
+"प्रमाणपत्र को एक फाइल में कॉपी करें।\n"
+"फिर \"certutil.exe -hashfile फाइल SHA256\" के माध्यम से इसका फिंगरप्रिंट प्राप्त "
+"करें।\n"
+"\n"
+"यदि जुड़े हुए एंडपॉइंट पर GNOME का उपयोग किया जाता है, तो फिंगरप्रिंट को सेटिंग्स, "
+"<b>साझाकरण>रिमोट डेस्कटॉप>एन्क्रिप्शन सत्यापित करें</b> में सत्यापित किया जा सकता है।"
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "अप्रत्याशित प्रमाणपत्र"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "स्थानीय प्रमाणपत्र मिटाएं"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "प्रमाणीकरण आवश्यक"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "उपयोक्तानाम…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "पासवर्ड…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "डोमेन…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr "डोमेन क्षेत्र आमतौर पर वैकल्पिक है और इसे खाली छोड़ा जा सकता है।"
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "प्रमाणित करें"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
+msgid "Welcome to Connections"
+msgstr "Connections में आपका स्वागत है"
+
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "रिमोट डेस्कटॉप के बारे में जानने के लिए आगे क्लिक करें।"
+
+#: src/ui/onboarding-dialog.ui:50
+msgid "Access other desktops"
+msgstr "अन्य डेस्कटॉप तक पहुंचें"
+
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+"Connections अन्य डेस्कटॉप की स्क्रीन देखने की अनुमति देता है। इन्हें सूचक और कीबोर्ड का "
+"उपयोग करके भी नियंत्रित किया जा सकता है।"
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Connect to different operating systems"
+msgstr "विभिन्न ऑपरेटिंग सिस्टम से जुड़ें"
+
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "आप Linux, Mac और Windows डेस्कटॉप तक पहुंच सकते हैं।"
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Setup is required"
+msgstr "सेटअप आवश्यक है"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"रिमोट डेस्कटॉप को आमतौर पर उस कंप्यूटर पर सक्षम करना होगा जिससे आप जुड़ना चाहते हैं।"
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Start by creating your first connection"
+msgstr "अपना पहला कनेक्शन बनाकर शुरुआत करें"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr "आरंभ करने के लिए, आपको उस कंप्यूटर के पते की आवश्यकता होगी जिससे आप जुड़ना चाहते हैं।"
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "कनेक्शन प्राथमिकताएं"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
+msgid "Address"
+msgstr "पता"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "नाम"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "खिड़की के समुचित"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "मूल आकार"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "नया"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "अनुप्रयोग मेनू"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "खोजें"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "पीछे जाएं"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "प्रदर्शन मेनू"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "डिस्कनेक्ट"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "कीबोर्ड शॉर्टकट"
+
+#: src/ui/topbar.ui:197
+msgid "Keyboard Shortcuts"
+msgstr "कीबोर्ड शॉर्टकट"
+
+#: src/ui/topbar.ui:205
+msgid "About Connections"
+msgstr "Connections के बारे में (_A)"
+
+#: src/ui/topbar.ui:234
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:241
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:248
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:255
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:262
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:269
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "प्रदर्शन"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "View only"
+msgstr "केवल देखें"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "Show local pointer"
+msgstr "स्थानीय सूचक दिखाएं"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "ऑडियो सक्षम करें"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "बेंडविड्थ"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "उच्च गुणवत्ता"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "त्वरित ताजा करें"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "स्केल मोड"
+
+#: src/ui/window.ui:52
+msgid "Click the add button to create your first connection"
+msgstr "अपना पहला कनेक्शन बनाने के लिए जोड़ें बटन पर क्लिक करें"
+
+#: src/vnc-connection.vala:149
+msgid "Couldn’t parse the file"
+msgstr "फाइल का विश्लेषण नहीं किया जा सका"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC फाइल में कुंजी “%s” गुम है"
