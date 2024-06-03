@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Nepali Translation\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-03-21 12:15+0000\n"
-"PO-Revision-Date: 2022-05-09 15:39+0545\n"
+"POT-Creation-Date: 2024-05-19 11:45+0000\n"
+"PO-Revision-Date: 2024-06-03 14:59+0545\n"
 "Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
 "Language-Team: \n"
 "Language: ne\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7 data/org.gnome.Connections.desktop.in:3
-#: src/application.vala:92 src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/application.vala:92 src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "जडानहरू"
 
@@ -29,31 +29,32 @@ msgstr "अन्य डेस्कटप हेर्नुहोस् र �
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid ""
-"Connections allows you to connect to and use other desktops. This can be a great way to access "
-"content or software on a different desktop operating system. It can also be used as a way to "
-"provide support to users who might need help."
+"Connections allows you to connect to and use other desktops. This can be a great way to "
+"access content or software on a different desktop operating system. It can also be used as a "
+"way to provide support to users who might need help."
 msgstr ""
 "जडानले तपाईँलाई अन्य डेस्कटपमा जडान गर्न र प्रयोग गर्न अनुमति दिन्छ । यो विभिन्न डेस्कटप सञ्चालन प्रणालीमा "
-"सामग्री वा सफ्टवेयर पहुँच प्राप्त गर्न एक राम्रो तरिका हुन सक्छ। मदतको खाँचो परेका प्रयोगकर्ताहरूलाई सहयोग दिन "
-"पनि यसलाई प्रयोग गर्न सकिन्छ।"
+"सामग्री वा सफ्टवेयर पहुँच प्राप्त गर्न एक राम्रो तरिका हुन सक्छ। मदतको खाँचो परेका प्रयोगकर्ताहरूलाई सहयोग "
+"दिन पनि यसलाई प्रयोग गर्न सकिन्छ।"
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
-"A range of different operating systems can be connected to, including Linux and Windows desktops. "
-"You can also connect to virtual machines."
+"A range of different operating systems can be connected to, including Linux and Windows "
+"desktops. You can also connect to virtual machines."
 msgstr ""
-"लिनक्स र विन्डोज डेस्कटप हरू सहित विभिन्न सञ्चालन प्रणालीमा जडान गर्न सकिन्छ । तपाईँले अवास्तविक मेसिनमा पनि "
-"जडान गर्न सक्नुहुन्छ ।"
+"लिनक्स र विन्डोज डेस्कटप हरू सहित विभिन्न सञ्चालन प्रणालीमा जडान गर्न सकिन्छ । तपाईँले अवास्तविक मेसिनमा "
+"पनि जडान गर्न सक्नुहुन्छ ।"
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
-"Connections uses the widely supported VNC and RDP protocols, and one of these must be enabled on "
-"the desktop that you want to connect to."
+"Connections uses the widely supported VNC and RDP protocols, and one of these must be "
+"enabled on the desktop that you want to connect to."
 msgstr ""
-"जडानले व्यापक रूपमा समर्थित भीएनसी र RDP प्रोटोकलप्रयोग गर्दछ, र यी मध्ये एउटा तपाईँले जडान गर्न चाहनु भएको "
-"डेस्कटपमा सक्षम हुनुपर्दछ ।"
+"जडानले व्यापक रूपमा समर्थित भीएनसी र RDP प्रोटोकलप्रयोग गर्दछ, र यी मध्ये एउटा तपाईँले जडान गर्न चाहनु "
+"भएको डेस्कटपमा सक्षम हुनुपर्दछ ।"
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "जिनोम परियोजना"
 
@@ -126,29 +127,51 @@ msgstr "स्क्रिनको तस्बिर लिइयो"
 msgid "Open"
 msgstr "खुला"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "“%s” प्रमाणीकरण आवश्यक छ"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "प्रमाणीकरण असफल भयो %s"
 
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the machine it claims "
+"to be, please verify the fingerprints match. This process is only done once."
+msgstr ""
+"पहिलो पटक \"%s\" मा जडान गर्दैछ । यो दाबी गरिएको मेशिनमा जडान गर्दै हुनुहुन्छ भनेर निश्चित गर्न, कृपया "
+"फिंगरप्रिन्टहरू मेल खाने पुष्टि गर्नुहोस्। यो प्रक्रिया एक पटक मात्र गरिन्छ।"
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be someone's pretending "
+"to be the server."
+msgstr ""
+"टाढाको सर्भर \"%s\" प्रमाणपत्र स्थानीय प्रतिलिपिसँग मेल खाँदैन । यो सर्भर भएको नाटक कसैले गरेको हुन सक्छ।"
+
+#: src/dialogs.vala:241
+#, c-format
+msgid "The remote server “%s” requires a username and password to continue to connect."
+msgstr "टाढाको सर्भर \"%s\" लाई जडान जारी राख्न प्रयोगकर्ता नाम र पासवर्ड आवश्यक पर्दछ ।"
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "धन्यवाद"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "होइन धन्यवाद"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
 msgstr "बन्द गर्नुहोस्"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "डेस्कटप पुन: साइज गर्नुहोस्"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -178,7 +201,7 @@ msgstr "भीएनसी (लिनक्समा जडानका ला�
 msgid "Help"
 msgstr "मद्दत"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "जडान गर्नुहोस्"
 
@@ -194,49 +217,124 @@ msgstr "पासवर्ड"
 msgid "Sign In"
 msgstr "लगइन गर्दै"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "जडान खोल्नुहोस्"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "रूजु गर्नुहोस्"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "रद्द गर्ने"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "फिंगरप्रिन्ट रुजु गर्नुहोस्"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"र बाट प्रमाणपत्र प्रतिलिपि बनाउनुहोस्\n"
+"<b>टाढाको डेस्कटप>प्रमाणपत्र</b> फाइलमा प्रमाणित गर्दछ ।\n"
+"त्यसपछि यसको फिंगरप्रिन्ट प्राप्त गर्नुहोस्\n"
+"\"certutil.exe-हैशफाइल फाइल एसएचए 256\".\n"
+"\n"
+"यदि जिनोम जडान गरिएको अन्त्यबिन्दुमा प्रयोग गरिन्छ भने,\n"
+"फिंगरप्रिन्ट सेटिङमा प्रमाणित गर्न सकिन्छ,\n"
+"<b>साझेदारी>ट गर्नुहोस् डेस्कटप हटाउनुहोस्>गुक्रिप्शन पुष्टि गर्नुहोस्</b> ।"
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "अनपेक्षित प्रमाणपत्र"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "स्थानीय प्रमाणपत्र मेट्नुहोस्"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "प्रमाणीकरण आवश्यक"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "प्रयोगकर्ता नाम…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "पासवर्ड…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "डोमेन…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"डोमेन फिल्ड सामान्यतया वैकल्पिक हुन्छ र हुन सक्छ\n"
+"खाली छोड दियो।"
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "प्रमाणीकरण"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "जडानमा स्वागत छ"
 
-#: src/ui/onboarding-dialog.ui:42
-msgid "Learn about how Connections works."
-msgstr "जडान कार्यको बारेमा अधिक जानकारी लिनुहोस् ."
-
-#: src/ui/onboarding-dialog.ui:49
-msgid "Use other desktops, remotely"
-msgstr "टाढाबाट, अन्य डेस्कटप प्रयोग गर्नुहोस्"
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "टाढाको डेस्कटपको बारेमा जान्न अर्को क्लिक गर्नुहोस्।"
 
 #: src/ui/onboarding-dialog.ui:50
-msgid ""
-"Use Connections to view the screen of other desktops. You can control them using the pointer and "
-"keyboard, too!"
-msgstr ""
-"अन्य डेस्कटपको पर्दा हेर्न जडान प्रयोग गर्नुहोस् । तपाईँले पनि सूचक र कुञ्जीपाटी प्रयोग गरेर तिनीहरूलाई नियन्त्रण गर्न "
-"सक्नुहुन्छ!"
+msgid "Access other desktops"
+msgstr "अन्य डेस्कटपमा पहुँच"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be controlled using "
+"the pointer and keyboard."
+msgstr ""
+"जडानले अन्य डेस्कटपको पर्दा हेर्न अनुमति दिन्छ । तिनीहरूलाई सूचक र कुञ्जीपाटी प्रयोग गरेर पनि नियन्त्रण गर्न "
+"सकिन्छ।"
+
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "विभिन्न सञ्चालन प्रणालीमा जडान गर्नुहोस्"
 
-#: src/ui/onboarding-dialog.ui:58
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "जडान प्रयोग गरेर पहुँच लिनक्स, म्याक, र विन्डोज डेस्कटप ।"
-
-#: src/ui/onboarding-dialog.ui:65
-msgid "Enable remote desktop before connecting"
-msgstr "जडान गर्नु भन्दा पहिले टाढाको डेस्कटप सक्षम पार्नुहोस्"
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "तपाईं लिनक्स, म्याक, र विन्डोज डेस्कटपपहुँच गर्न सक्नुहुन्छ।"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid "Computers need to be set up for remote desktop before you can connect to them."
-msgstr "तपाईँले डेस्कटपमा जडान गर्न सक्नु भन्दा पहिले कम्प्युटरहरू टाढाको डेस्कटपका लागि सेटअप गर्नु आवश्यक छ ।"
+msgid "Setup is required"
+msgstr "सेटअप आवश्यक छ"
 
-#: src/ui/onboarding-dialog.ui:73
-msgid "We hope that you enjoy Connections!"
-msgstr "हामी आशा गर्छौं कि तपाईं जडानको आनन्द लिनुहुन्छ!"
+#: src/ui/onboarding-dialog.ui:67
+msgid "Remote desktop typically needs to be enabled on the computer you want to connect to."
+msgstr "टाढाको डेस्कटप सामान्यतया तपाईँले जडान गर्न चाहनुभएको कम्प्युटरमा सक्षम पार्नु पर्दछ ।"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "More information can be found in the help."
-msgstr "मद्दत मा थप जानकारी पाईन्छ."
+msgid "Start by creating your first connection"
+msgstr "तपाईँको पहिलो जडान सिर्जना गरेर सुरु गर्नुहोस्"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid "To begin, you will need the address of the computer you want to connect to."
+msgstr "सुरु गर्न, तपाईंलाई जडान गर्न चाहानुभएको कम्प्युटरको ठेगाना चाहिन्छ।"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -249,6 +347,14 @@ msgstr "ठेगाना"
 #: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
 msgid "Name"
 msgstr "नाम"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "संझ्याल मिलान"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "मौलिक साइज"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -315,59 +421,73 @@ msgid "Display"
 msgstr "प्रदर्शन गर्नुहोस्"
 
 #: src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "मापन गर्दैछ"
-
-#: src/ui/vnc-preferences.ui:66
 msgid "View only"
 msgstr "हेर्ने-मात्र"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 msgid "Show local pointer"
 msgstr "स्थानीय सूचक देखाउनुहोस्"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "ध्वनि सक्षम पार्नुहोस्"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "ब्यान्डविथ"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "उच्च गुणस्तर"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "चाँडो ताजा पार्नुहोस्"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "मापन शैली"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "संझ्याल मिलान"
+#: src/ui/window.ui:52
+msgid "Click the add button to create your first connection"
+msgstr "तपाईँको पहिलो जडान सिर्जना गर्न थप्ने बटन क्लिक गर्नुहोस्"
 
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "मौलिक साइज"
-
-#: src/ui/window.ui:53
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "पहिलो जडान बनाउन <b> + </b> बटन थिच्नुहोस् ।."
-
-#: src/vnc-connection.vala:148
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "फाईल पार्स गर्न सकिएन"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161 src/vnc-connection.vala:166
-#: src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162 src/vnc-connection.vala:167
+#: src/vnc-connection.vala:172
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC फाईलमा “%s”कुञ्जी हराइरहेको छ"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "“%s” प्रमाणीकरण आवश्यक छ"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "जडान कार्यको बारेमा अधिक जानकारी लिनुहोस् ."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "टाढाबाट, अन्य डेस्कटप प्रयोग गर्नुहोस्"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "जडान गर्नु भन्दा पहिले टाढाको डेस्कटप सक्षम पार्नुहोस्"
+
+#~ msgid "Computers need to be set up for remote desktop before you can connect to them."
+#~ msgstr ""
+#~ "तपाईँले डेस्कटपमा जडान गर्न सक्नु भन्दा पहिले कम्प्युटरहरू टाढाको डेस्कटपका लागि सेटअप गर्नु आवश्यक छ ।"
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "हामी आशा गर्छौं कि तपाईं जडानको आनन्द लिनुहुन्छ!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "मद्दत मा थप जानकारी पाईन्छ."
+
+#~ msgid "Scaling"
+#~ msgstr "मापन गर्दैछ"
 
 #~ msgid "GNOME Connections"
 #~ msgstr "जि-नोम जडानहरू"
@@ -383,9 +503,6 @@ msgstr "VNC फाईलमा “%s”कुञ्जी हराइरहे�
 
 #~ msgid "Server"
 #~ msgstr "सर्भर"
-
-#~ msgid "Cancel"
-#~ msgstr "रद्द गर्ने"
 
 #~ msgid "Create"
 #~ msgstr "सिर्जना गर्नुहोस्"
