@@ -4,6 +4,7 @@
     "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-connections",
+    "rename-icon": "org.gnome.Connections.Devel",
     "finish-args": [
         "--share=network",
         "--share=ipc",
