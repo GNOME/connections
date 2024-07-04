@@ -156,7 +156,7 @@ namespace Connections {
                         if (domain_str != null && domain_str != "")
                             this.domain = domain_str;
 
-                        Application.application.open_connection (this);
+                        authentication_complete ();
                     } catch (GLib.Error error) {
                         throw parsing_error;
                     }
