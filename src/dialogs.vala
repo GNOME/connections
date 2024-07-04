@@ -335,8 +335,12 @@ namespace Connections {
         private void cancel_authentication_clicked () {
             mutex.lock ();
 
-            if (authentication_func != null)
+            hide ();
+
+            if (authentication_func != null) {
                 authentication_func ("", "", "");
+                authentication_func = null;
+            }
 
             mutex.unlock ();
 
@@ -347,8 +351,12 @@ namespace Connections {
         private void authenticate_button_clicked () {
             mutex.lock ();
 
-            if (authentication_func != null)
+            hide ();
+
+            if (authentication_func != null) {
                 authentication_func (username_entry.text, password_entry.text, domain_entry.text);
+                authentication_func = null;
+            }
 
             mutex.unlock ();
 
