@@ -129,6 +129,7 @@ namespace Connections {
             });
             connection.set_audio (new Vnc.AudioPulse ());
             connection.audio_enable ();
+            authentication_complete.connect (update_display_authenticated);
         }
 
         public VncConnection (string uuid) {
@@ -179,6 +180,10 @@ namespace Connections {
             debug ("Closing connection with %s", widget.name);
 
             disconnect_it ();
+        }
+
+        private void update_display_authenticated () {
+            connect_it ();
         }
 
         public override void connect_it () {
