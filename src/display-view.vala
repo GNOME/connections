@@ -85,7 +85,11 @@ namespace Connections {
 
         public void connect_to (Connection connection) {
             stack.set_visible_child_name ("loading");
+            switch_to (connection);
+            connection.connect_it ();
+        }
 
+        public void switch_to (Connection connection) {
             if (show_display_id != 0) {
                 this.connection.disconnect (show_display_id);
                 show_display_id = 0;
@@ -94,7 +98,6 @@ namespace Connections {
             replace_display (connection);
 
             show_display_id = connection.show.connect (show_display);
-            connection.connect_it ();
         }
 
         private void show_display () {

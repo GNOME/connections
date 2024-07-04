@@ -99,10 +99,13 @@ namespace Connections {
         }
 
         public void open_connection (Connection connection) {
-            display_view.connect_to (connection);
-
             stack.set_visible_child (display_view);
             topbar.show_display_view (connection);
+
+            if (!connection.connected)
+                display_view.connect_to (connection);
+            else
+                display_view.switch_to (connection);
         }
 
         public void show_collection_view () {
