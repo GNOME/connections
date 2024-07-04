@@ -65,6 +65,7 @@ namespace Connections {
         public override int port { get; protected set; default = 3389; }
         public bool resize_supported { get; protected set; default = false; }
         public string scale_mode { get; set; default = "fit-window"; }
+        protected bool connecting = false;
 
         construct {
             display = new FrdpDisplay ();
@@ -121,25 +122,29 @@ namespace Connections {
         }
 
         public override void connect_it () {
-            if (connected) {
-                show ();
-
+            if (connecting) {
                 return;
             }
 
-            if (username == null && password == null) {
-                handle_auth ();
+            connecting = true;
 
+            if (connected) {
+                show ();
+
+                connecting = false;
                 return;
             }
 
             display.open_host (host, port);
+
+            connecting = false;
         }
 
         public override void disconnect_it () {
-            if (connected)
+            if (connected) {
                 display.close ();
-            connected = false;
+                connected = false;
+            }
         }
 
         public override void dispose_display () {
