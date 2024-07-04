@@ -130,46 +130,52 @@ namespace Connections {
                 authentication_complete ();
             };
 
-            Secret.password_lookup.begin (secret_auth_schema, auth_cancellable, (obj, res) => {
-                try {
-                    var parsing_error = new IOError.FAILED("couldn't unpack a string for the connection credentials");
-
-                    var credentials_str = Secret.password_lookup.end (res);
-                    if (credentials_str == null || credentials_str == "")
-                        throw parsing_error;
-
+            if (!((need_username && this.username == null) ||
+                  (need_password && this.password == null) ||
+                  (need_domain && this.domain == null))) {
+                authentication_complete ();
+            } else {
+                Secret.password_lookup.begin (secret_auth_schema, auth_cancellable, (obj, res) => {
                     try {
-                        var credentials_variant = GLib.Variant.parse (null, credentials_str, null, null);
+                        var parsing_error = new IOError.FAILED("couldn't unpack a string for the connection credentials");
 
-                        string username_str;
-                        credentials_variant.lookup ("username", "s", out username_str);
-                        if (username_str != null && username_str != "")
-                            this.username = username_str;
+                        var credentials_str = Secret.password_lookup.end (res);
+                        if (credentials_str == null || credentials_str == "")
+                            throw parsing_error;
 
-                        string password_str;
-                        credentials_variant.lookup ("password", "s", out password_str);
-                        if (password_str != null && password_str != "")
-                            this.password = password_str;
+                        try {
+                            var credentials_variant = GLib.Variant.parse (null, credentials_str, null, null);
 
-                        string domain_str;
-                        credentials_variant.lookup ("domain", "s", out domain_str);
-                        if (domain_str != null && domain_str != "")
-                            this.domain = domain_str;
+                            string username_str;
+                            credentials_variant.lookup ("username", "s", out username_str);
+                            if (username_str != null && username_str != "")
+                                this.username = username_str;
 
-                        authentication_complete ();
+                            string password_str;
+                            credentials_variant.lookup ("password", "s", out password_str);
+                            if (password_str != null && password_str != "")
+                                this.password = password_str;
+
+                            string domain_str;
+                            credentials_variant.lookup ("domain", "s", out domain_str);
+                            if (domain_str != null && domain_str != "")
+                                this.domain = domain_str;
+
+                            authentication_complete ();
+                        } catch (GLib.Error error) {
+                            throw parsing_error;
+                        }
                     } catch (GLib.Error error) {
-                        throw parsing_error;
-                    }
-                } catch (GLib.Error error) {
-                    debug ("No credentials found in keyring. Prompting user.");
+                        debug ("No credentials found in keyring. Prompting user.");
 
-                    Application.application.main_window.dialogs_window.show_authentication (get_visible_name (),
-                                                                                            need_username,
-                                                                                            need_password,
-                                                                                            need_domain,
-                                                                                            (owned) authentication_func);
-                }
-            }, "gnome-connections-connection-uuid", uuid);
+                        Application.application.main_window.dialogs_window.show_authentication (get_visible_name (),
+                                                                                                need_username,
+                                                                                                need_password,
+                                                                                                need_domain,
+                                                                                                (owned) authentication_func);
+                    }
+                }, "gnome-connections-connection-uuid", uuid);
+            }
         }
 
         public async void delete_auth_credentials () {
