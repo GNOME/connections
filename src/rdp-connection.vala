@@ -74,6 +74,7 @@ namespace Connections {
 
             display.rdp_error.connect (on_rdp_connection_error_cb);
             display.rdp_connected.connect (on_rdp_connection_connected_cb);
+            display.rdp_disconnected.connect (on_rdp_connection_disconnected_cb);
             display.rdp_needs_authentication.connect (on_rdp_auth_credential_cb);
             display.rdp_needs_certificate_verification.connect (on_rdp_certificate_verification_cb);
             display.rdp_needs_certificate_change_verification.connect (on_rdp_certificate_change_verification_cb);
@@ -194,6 +195,11 @@ namespace Connections {
 
             display.grab_focus ();
             show ();
+        }
+
+        private void on_rdp_connection_disconnected_cb () {
+            Application.application.main_window.show_collection_view ();
+            connected = false;
         }
 
         public void scale () {
