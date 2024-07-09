@@ -28,13 +28,31 @@
             "name" : "gtk-vnc",
             "buildsystem" : "meson",
             "config-opts" : [
-                "-Dpulseaudio=enabled"
+                "-Dpulseaudio=enabled",
+                "--libdir=/app/lib"
             ],
             "sources" : [
                 {
                     "type" : "archive",
                     "url" : "https://download.gnome.org/sources/gtk-vnc/1.3/gtk-vnc-1.3.1.tar.xz",
                     "sha256" : "512763ac4e0559d0158b6682ca5dd1a3bd633f082f5e4349d7158e6b5f80f1ce"
+                }
+            ]
+        },
+        {
+            "name": "libfuse",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dexamples=false",
+                "-Dutils=false",
+                "--libdir=/app/lib"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/libfuse/libfuse.git",
+                    "tag": "fuse-3.16.1",
+                    "commit": "1f0dfae4084577997291bb0e1b94aeff89a5e70f"
                 }
             ]
         },
@@ -69,8 +87,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://pub.freerdp.com/releases/freerdp-2.11.7.tar.gz",
-                    "sha256" : "5a2d54e1ca0f1facd1632bcc94c73b9f071a80c5fdbbb3f26e79f02aaa586ca3"
+                    "url" : "https://pub.freerdp.com/releases/freerdp-3.6.3.tar.xz",
+                    "sha256" : "6704e9e63fd1823070814ba648c65f591f06468b3b433ea99807bd2dee550b92"
                 }
             ]
         },
@@ -84,24 +102,6 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/gnome/gtk-frdp.git"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "libfuse",
-                    "buildsystem": "meson",
-                    "config-opts": [
-                        "-Dexamples=false",
-                        "-Dutils=false"
-                    ],
-                    "sources": [
-                        {
-                            "type": "git",
-                            "url": "https://github.com/libfuse/libfuse.git",
-                            "tag": "fuse-3.16.1",
-                            "commit": "1f0dfae4084577997291bb0e1b94aeff89a5e70f"
-                        }
-                    ]
                 }
             ]
         },
