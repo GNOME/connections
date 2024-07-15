@@ -1,3 +1,32 @@
+47.alpha - 15 Jul, 2024
+=====================
+
+Changes since 46.0
+
+  - Bump freerdp version to 3.6.3 for flatpak
+  - Fix build of flatpak
+  - Move fullscreen button to the topbar
+  - Fix handling of authentication/certificate dialog
+
+  - Update gtk-frdp
+     - Make connection via RDP synchronous to prevent race conditions
+     - Handle freerdp_shall_disconnect() sooner
+     - Clear the update_id when the source is removed
+     - Fix getting of properties for session
+     - Do not block CPU during iterations
+     - Disconnect handlers on disconnection
+     - Wait until fuse-session thread is finished
+     - Clear the clipboard if it contains remote data at finalize
+
+  - Added/Updated translations:
+     - Brazilian
+     - German
+     - Greek
+     - Hindi
+     - Kabyle
+     - Nepali
+     - Portuguese
+
 46.0 - 18 Mar, 2024
 =====================
 
