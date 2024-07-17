@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-05-05 13:43+0000\n"
+"POT-Creation-Date: 2024-05-19 11:45+0000\n"
 "PO-Revision-Date: 2023-06-09 09:22-0400\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "Pripojenia"
 
@@ -58,7 +58,8 @@ msgstr ""
 "Jeden z týchto protokolov musí byť povolený na pracovnej ploche, ku ktorej "
 "sa chcete pripojiť."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -133,29 +134,53 @@ msgstr "Zachytená snímka obrazovky"
 msgid "Open"
 msgstr "Otvoriť"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "Pripojenie „%s” vyžaduje overenie totožnosti"
-
-#: src/connection.vala:200
+#: src/connection.vala:199
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Overenie totožnosti zlyhalo: %s"
 
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Prvé pripojenie k „%s“. Ak chcete mať istotu, že sa pripájate k počítaču, za "
+"ktorý sa vydáva, overte, či sa zhodujú jeho odtlačky. Tento úkon sa vykonáva "
+"len raz."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Certifikát „%s“ vzdialeného servera nezodpovedá miestnej kópii. Niekto môže "
+"identitu servera falšovať."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Vzdialený server „%s“ vyžaduje pred pokračovaním zadanie mena používateľa a "
+"hesla."
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Nie, ďakujem"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Nie, ďakujem"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Zavrieť"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Zavrieť"
 
 #. Translators: Combo item for resizing remote desktop to window's size
 #: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
@@ -191,7 +216,7 @@ msgstr "VNC (štandard pripojenia k systému Linux)"
 msgid "Help"
 msgstr "Pomocník"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Pripojiť"
 
@@ -207,55 +232,132 @@ msgstr "_Heslo"
 msgid "Sign In"
 msgstr "Prihlásiť sa"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Otvoriť pripojenie"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Overiť"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Overiť odtlačok"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"V systéme Windows spustite certlm.msc alebo certmgr.msc\n"
+"a skopírujte certifikát z cesty\n"
+"<b>Vzdialená plocha>Certifikáty</b> do súboru.\n"
+"Potom získajte jeho odtlačok pomocou\n"
+"\"certutil.exe -hashfile súbor SHA256\".\n"
+"\n"
+"Ak sa na pripojenom koncovom bode používa GNOME,\n"
+"odtlačok je možné overiť v Nastaveniach,\n"
+"<b>Zdieľanie>Vzdialená plocha>Overiť šifrovanie</b>."
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "Neočakávaný certifikát"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "Odstrániť lokálny certifikát"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "Vyžaduje overenie"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "Meno používateľa…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "Heslo…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "Doména…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Pole domény je obvykle voliteľné a môžete ho\n"
+"nechať prázdne."
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "Overiť"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Vitajte v aplikácii Pripojenia"
 
-#: src/ui/onboarding-dialog.ui:42
-msgid "Learn about how Connections works."
-msgstr "Dozveďte sa ako funguje aplikácia Pripojenia."
-
-#: src/ui/onboarding-dialog.ui:49
-msgid "Use other desktops, remotely"
-msgstr "Použitie iných pracovných plôch, vzdialene"
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "Kliknutím na tlačidlo Ďalší sa dozviete viac o vzdialenej ploche."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr ""
-"Použite aplikáciu Pripojenia na zobrazenie obrazoviek iných pracovných "
-"plôch. Môžete ich ovládať pomocou ukazovateľa a tiež klávesnice!"
+msgid "Access other desktops"
+msgstr "Pristupujte k iným vzdialeným plochám"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+"Aplikácia Pripojenia vám umožní zobraziť obrazovky iných vzdialených "
+"pracovných plôch. Môžete ich tiež ovládať pomocou myši a klávesnice."
+
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Pripojenie k rôznym operačným systémom"
 
-#: src/ui/onboarding-dialog.ui:58
-msgid "Access Linux, Mac, and Windows desktops using Connections."
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
 msgstr ""
-"Pristupujte k pracovným plochám systémov Linux, Mac a Windows pomocou "
-"aplikácie Pripojenia."
-
-#: src/ui/onboarding-dialog.ui:65
-msgid "Enable remote desktop before connecting"
-msgstr "Povolenie vzdialenej plochy pred pripojením"
+"Môžete získať prístup k pracovným plochám systémov Linux, Mac a Windows."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr ""
-"Predtým, než sa pripojíte k počítačom, musia byť nastavené na použitie "
-"vzdialenej pracovnej plochy."
+msgid "Setup is required"
+msgstr "Vyžaduje sa nastavenie"
 
-#: src/ui/onboarding-dialog.ui:73
-msgid "We hope that you enjoy Connections!"
-msgstr "Dúfame, že sa vám bude aplikácia Pripojenia páčiť!"
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"Vzdialená plocha musí byť obvykle povolená na počítači, ku ktorému sa chcete "
+"pripojiť."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "More information can be found in the help."
-msgstr "Viac informácií môžete nájsť v pomocníkovi."
+msgid "Start by creating your first connection"
+msgstr "Začnite tým, že vytvoríte svoje prvé pripojenie"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Pre začiatok budete potrebovať adresu počítača, ku ktorému sa chcete "
+"pripojiť."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -370,8 +472,8 @@ msgid "Scale mode"
 msgstr "Režim zmeny mierky"
 
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Na vytvorenie vášho prvého pripojenia stačí stlačiť tlačidlo <b>+</b>."
+msgid "Click the add button to create your first connection"
+msgstr "Na vytvorenie vášho prvého pripojenia kliknite na tlačidlo Pridať"
 
 #: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
@@ -383,6 +485,32 @@ msgstr "Nepodarilo sa analyzovať súbor"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Súboru VNC chýba kľúč „%s”"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "Pripojenie „%s” vyžaduje overenie totožnosti"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Dozveďte sa ako funguje aplikácia Pripojenia."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Použitie iných pracovných plôch, vzdialene"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Povolenie vzdialenej plochy pred pripojením"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Predtým, než sa pripojíte k počítačom, musia byť nastavené na použitie "
+#~ "vzdialenej pracovnej plochy."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Dúfame, že sa vám bude aplikácia Pripojenia páčiť!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Viac informácií môžete nájsť v pomocníkovi."
 
 #~ msgid "Scaling"
 #~ msgstr "Zmena mierky"
@@ -405,9 +533,6 @@ msgstr "Súboru VNC chýba kľúč „%s”"
 
 #~ msgid "Server"
 #~ msgstr "Server"
-
-#~ msgid "Cancel"
-#~ msgstr "Zrušiť"
 
 #~ msgid "Create"
 #~ msgstr "Vytvoriť"
