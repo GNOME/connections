@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-12 13:36+0000\n"
-"PO-Revision-Date: 2024-02-13 16:38+0300\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"POT-Creation-Date: 2024-03-14 14:38+0000\n"
+"PO-Revision-Date: 2024-05-07 11:44+0300\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -64,9 +64,12 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
+# https://gitlab.gnome.org/GNOME/glib/-/issues/443 hatası sebebiyle uygulama adı dahil ingilizce hallerini de koruyalım.
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
-msgstr "vnc;rdp;uzak;masaüstü;windows;destek;erişim;görüntüleme"
+msgstr ""
+"connections;vnc;rdp;remote;desktop;windows;support;access;view;uzak;masaüstü;"
+"destek;erişim;görüntüleme"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -170,7 +173,7 @@ msgstr ""
 "gerektirir."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -232,6 +235,7 @@ msgstr "_Parola"
 msgid "Sign In"
 msgstr "Giriş Yap"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Bağlantı Aç"
