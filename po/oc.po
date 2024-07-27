@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-23 19:21+0000\n"
-"PO-Revision-Date: 2024-03-09 23:00+0100\n"
+"POT-Creation-Date: 2024-07-27 09:14+0000\n"
+"PO-Revision-Date: 2024-07-28 00:10+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Occitan <totenoc@gmail.com>\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.3\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -229,6 +229,7 @@ msgstr "_Senhal"
 msgid "Sign In"
 msgstr "Se connectar"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Connexion dobèrta"
@@ -257,6 +258,15 @@ msgid ""
 "the fingerprint can be verified in the Settings,\n"
 "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgstr ""
+"Sus Windows executatz certlm.msc o certmgr.msc\n"
+"e copiar lo certificat dempuèi\n"
+"<b>Burèu distant>Certificats</b> cap a un fichièr.\n"
+"Puèi obtenètz son emprenta digitala via\n"
+"\"certutil.exe -fichièr hash SHA256\".\n"
+"\n"
+"Se GNOME es utilizat sul ponch de terminason connectat,\n"
+"l'emprenta digitala pòt èsser verificada dins los Paramètres,\n"
+"<b>Partatge > Burèu a distància>Verificar lo chiframent</b>."
 
 #: src/ui/dialog.ui:291
 msgid "Unexpected Certificate"
