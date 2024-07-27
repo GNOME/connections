@@ -8,20 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2022-05-09 09:55+0000\n"
-"PO-Revision-Date: 2022-05-29 04:42+0800\n"
-"Last-Translator: Freddy Cheng <freddy4212@gmail.com>\n"
-"Language-Team: Chinese - Taiwan <chinese-l10n@googlegroups.com>\n"
+"POT-Creation-Date: 2024-05-19 11:45+0000\n"
+"PO-Revision-Date: 2024-07-27 09:13+0000\n"
+"Last-Translator: Chao-Hsiung Liao <pesder@mail.edu.tw>\n"
+"Language-Team: Chinese (Traditional) <http://darkbear.mercusysddns.com/"
+"projects/gnome-45/connections-po-ui-gnome-46/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 41.0\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:106
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
 msgid "Connections"
 msgstr "連線"
 
@@ -53,7 +54,8 @@ msgstr ""
 "《連線》用的是被廣泛支援的通訊協定：VNC 和 RDP，您需在欲連線的遠端桌面啟用上"
 "述其中一種通訊協定。"
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "GNOME 專案"
 
@@ -90,7 +92,6 @@ msgstr "GNOME 桌面環境的遠端桌面客戶端"
 
 #: src/application.vala:151
 #, c-format
-#| msgid "Couldn't open file of unknown mime type %s"
 msgid "Couldn’t open file of unknown mime type %s"
 msgstr "無法開啟檔案：不明的 MIME 類型「%s」"
 
@@ -104,12 +105,10 @@ msgid "Undo"
 msgstr "還原"
 
 #: src/application.vala:232
-#| msgid "URL to connection"
 msgid "URL to connect"
 msgstr "要連線的 URL"
 
 #: src/application.vala:233
-#| msgid "Open .vnc or .rdp file at at giving PATH"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "指定要開啟的 .vnc 或 .rdp 檔路徑 PATH"
 
@@ -118,7 +117,6 @@ msgid "Open in full screen"
 msgstr "以全螢幕開啟"
 
 #: src/application.vala:257
-#| msgid "Too many command line arguments specified.\n"
 msgid "Too many command-line arguments specified.\n"
 msgstr "指定過多的命令行引數。\n"
 
@@ -137,29 +135,52 @@ msgstr "已擷取螢幕快照"
 msgid "Open"
 msgstr "開啟"
 
-#: src/connection.vala:161
-#, fuzzy, c-format
-msgid "“%s” requires authentication"
-msgstr "「%s」需要認證"
-
-#: src/connection.vala:200
-#, fuzzy, c-format
+#: src/connection.vala:199
+#, c-format
 msgid "Authentication failed: %s"
-msgstr "認證失敗：%s"
+msgstr "核對失敗：%s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr "第一次連接到「%s」。為確保您連接到的機器正確無誤，請驗證指紋是否相符。這個過"
+"程只進行一次。"
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr "遠端伺服器「%s」憑證與本機副本不符。可能是有人偽裝伺服器。"
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "遠端伺服器「%s」需要使用者名稱和密碼才能繼續連線。"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:141
+#: src/display-view.vala:128
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "不用了，謝謝"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "不用了，謝謝(_N)"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "關閉"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "關閉(_C)"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "調整桌面大小"
 
 #: src/topbar.vala:58 src/ui/topbar.ui:212
 msgid "Take Screenshot"
@@ -174,7 +195,6 @@ msgid "Enter the network identifier of the remote desktop to connect to:"
 msgstr "輸入遠端桌面的網路識別碼："
 
 #: src/ui/assistant.ui:53
-#| msgid "Connections"
 msgid "Connection Type"
 msgstr "連線類型"
 
@@ -190,8 +210,7 @@ msgstr "VNC（連線到 Linux 和 Mac）"
 msgid "Help"
 msgstr "求助"
 
-#: src/ui/assistant.ui:100
-#| msgid "Connections"
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "連線"
 
@@ -207,52 +226,125 @@ msgstr "密碼(_P)"
 msgid "Sign In"
 msgstr "登入"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:52
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "開啟連線"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "檢驗"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+msgid "Cancel"
+msgstr "取消"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "檢驗指紋"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the Settings,\n"
+"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"在 Windows 上執行 certlm.msc 或 certmgr.msc\n"
+"並複製憑證\n"
+"<b>遠端桌面>憑證</b>到檔案。\n"
+"然後透過取得其指紋\n"
+"“certutil.exe -hashfile file SHA256”。\n"
+"\n"
+"如果在連接的端點上使用 GNOME，\n"
+"可以在設定中驗證指紋，\n"
+"<b>共用>遠端桌面>驗證加密</b>。"
+
+#: src/ui/dialog.ui:291
+msgid "Unexpected Certificate"
+msgstr "未預期的憑證"
+
+#: src/ui/dialog.ui:333
+msgid "Delete Local Certificate"
+msgstr "刪除本機憑證"
+
+#: src/ui/dialog.ui:386
+msgid "Authentication Required"
+msgstr "需要核對"
+
+#: src/ui/dialog.ui:437
+msgid "Username…"
+msgstr "使用者名稱…"
+
+#: src/ui/dialog.ui:465
+msgid "Password…"
+msgstr "密碼…"
+
+#: src/ui/dialog.ui:515
+msgid "Domain…"
+msgstr "網域…"
+
+#: src/ui/dialog.ui:536
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"網域欄位通常是選擇性的，可以\n"
+"留空。"
+
+#: src/ui/dialog.ui:638
+msgid "Authenticate"
+msgstr "核對"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "歡迎使用連線"
 
-#: src/ui/onboarding-dialog.ui:42
-#| msgid "About Connections"
-msgid "Learn about how Connections works."
-msgstr "了解《連線》如何運作。"
-
-#: src/ui/onboarding-dialog.ui:49
-msgid "Use other desktops, remotely"
-msgstr "從「遠端」使用其他桌面"
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "點擊下一步以了解遠端桌面。"
 
 #: src/ui/onboarding-dialog.ui:50
-msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr "使用《連線》檢視其他桌面螢幕，還能用滑鼠與鍵盤控制它們！"
+msgid "Access other desktops"
+msgstr "存取其他桌面"
 
-#: src/ui/onboarding-dialog.ui:57
-#| msgid "Connection Properties"
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr "使用《連線》檢視其他桌面螢幕。還能用滑鼠與鍵盤控制它們！"
+
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "連線到不同的作業系統"
 
-#: src/ui/onboarding-dialog.ui:58
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "使用《連線》存取 Linux、Mac 和 Windows 桌面。"
-
-#: src/ui/onboarding-dialog.ui:65
-msgid "Enable remote desktop before connecting"
-msgstr "連線前需先開啟遠端桌面服務"
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "您可以使用《連線》存取 Linux、Mac 和 Windows 桌面。"
 
 #: src/ui/onboarding-dialog.ui:66
-msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr "連線到電腦之前要先對它們進行設定。"
+msgid "Setup is required"
+msgstr "需要設定"
 
-#: src/ui/onboarding-dialog.ui:73
-#| msgid "Welcome to Connections"
-msgid "We hope that you enjoy Connections!"
-msgstr "希望你會喜歡連線！"
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr "通常需要在要連接的電腦上啟用遠端桌面。"
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "More information can be found in the help."
-msgstr "更多資訊請參見《連線》選單中的求助。"
+msgid "Start by creating your first connection"
+msgstr "首先建立您的第一個連線"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
 
 # 備忘錄：
 # 加入備忘錄
@@ -261,7 +353,6 @@ msgstr "更多資訊請參見《連線》選單中的求助。"
 # src/ui/rdp-preferences.ui:9
 # src/ui/vnc-preferences.ui:9
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
-#| msgid "Connection Properties"
 msgid "Connection preferences"
 msgstr "連線偏好設定"
 
@@ -273,9 +364,13 @@ msgstr "位址"
 msgid "Name"
 msgstr "名稱"
 
-#: src/ui/rdp-preferences.ui:51 src/ui/vnc-preferences.ui:59
-msgid "Scaling"
-msgstr "縮放"
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "適應視窗"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "原始大小"
 
 #: src/ui/topbar.ui:21
 msgid "New"
@@ -339,63 +434,83 @@ msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
 #: src/ui/vnc-preferences.ui:54
-#| msgid "Display Menu"
 msgid "Display"
 msgstr "顯示"
 
-#: src/ui/vnc-preferences.ui:66
+#: src/ui/vnc-preferences.ui:59
 msgid "View only"
 msgstr "僅檢視"
 
-#: src/ui/vnc-preferences.ui:73
+#: src/ui/vnc-preferences.ui:66
 #, fuzzy
 msgid "Show local pointer"
 msgstr "顯示本機滑鼠指標"
 
-#: src/ui/vnc-preferences.ui:80
+#: src/ui/vnc-preferences.ui:73
 msgid "Enable audio"
 msgstr "啟用聲音"
 
-#: src/ui/vnc-preferences.ui:88
+#: src/ui/vnc-preferences.ui:81
 msgid "Bandwidth"
 msgstr "頻寬設定"
 
-#: src/ui/vnc-preferences.ui:95
+#: src/ui/vnc-preferences.ui:88
 msgid "High quality"
 msgstr "畫質優先"
 
-#: src/ui/vnc-preferences.ui:96
+#: src/ui/vnc-preferences.ui:89
 msgid "Fast refresh"
 msgstr "速度優先"
 
-#: src/ui/vnc-preferences.ui:107
+#: src/ui/vnc-preferences.ui:100
 msgid "Scale mode"
 msgstr "縮放模式"
 
-#: src/ui/vnc-preferences.ui:114
-msgid "Fit window"
-msgstr "適應視窗"
-
-#: src/ui/vnc-preferences.ui:115
-msgid "Original size"
-msgstr "原始大小"
-
-#: src/ui/window.ui:53
-msgid "Just hit the <b>+</b> button to make your first connection."
+#: src/ui/window.ui:52
+#, fuzzy
+#| msgid "Just hit the <b>+</b> button to make your first connection."
+msgid "Click the add button to create your first connection"
 msgstr "按下「+」按鈕開始您的首次連線。"
 
-#: src/vnc-connection.vala:148
-#| msgid "Could not parse the file"
+#: src/vnc-connection.vala:149
 msgid "Couldn’t parse the file"
 msgstr "無法解析檔案"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:156 src/vnc-connection.vala:161
-#: src/vnc-connection.vala:166 src/vnc-connection.vala:171
+#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
+#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
 #, c-format
-#| msgid "VNC File is missing key “Host“"
 msgid "VNC File is missing key “%s”"
 msgstr "VNC 檔案遺失金鑰「%s」"
+
+#, fuzzy, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "「%s」需要認證"
+
+#~| msgid "About Connections"
+#~ msgid "Learn about how Connections works."
+#~ msgstr "了解《連線》如何運作。"
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "從「遠端」使用其他桌面"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "連線前需先開啟遠端桌面服務"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr "連線到電腦之前要先對它們進行設定。"
+
+#~| msgid "Welcome to Connections"
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "希望你會喜歡連線！"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "更多資訊請參見《連線》選單中的求助。"
+
+#~ msgid "Scaling"
+#~ msgstr "縮放"
 
 #~ msgid "A remote desktop client for the GNOME desktop environment."
 #~ msgstr "GNOME 桌面環境的遠端桌面客戶端。"
@@ -416,9 +531,6 @@ msgstr "VNC 檔案遺失金鑰「%s」"
 
 #~ msgid "Server"
 #~ msgstr "伺服器"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
 
 #~ msgid "Create"
 #~ msgstr "建立"
