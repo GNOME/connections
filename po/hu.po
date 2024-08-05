@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-03-02 10:52+0100\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-05 16:16+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Kapcsolatok"
 
@@ -58,7 +58,8 @@ msgstr ""
 "és legalább az egyiknek elérhetőnek kell lennie azon a gépen, amelyhez "
 "kapcsolódni szeretne."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
@@ -74,7 +75,7 @@ msgstr "Távoli asztali (VNC) fájl"
 msgid "Delete"
 msgstr "Törlés"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Tulajdonságok"
 
@@ -108,6 +109,10 @@ msgstr "URL a kapcsolódáshoz"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Egy .vnc vagy .rdp fájl megnyitása a megadott ÚTVONALON"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "ÚTVONAL"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Megnyitás teljes képernyős módban"
@@ -131,7 +136,7 @@ msgstr "A képernyőkép elkészült"
 msgid "Open"
 msgstr "Megnyitás"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Hitelesítés sikertelen: %s"
@@ -145,9 +150,8 @@ msgid ""
 msgstr ""
 "Kapcsolódás a következőhöz az első alkalommal: „%s”. Győződjön meg arról, "
 "hogy a gép, amelyhez kapcsolódik, valóban az, aminek állítja magát. "
-"Ellenőrizze, hogy az ujjlenyomatok egyeznek-e. Ez a folyamat csak egyszer"
-" megy "
-"végbe."
+"Ellenőrizze, hogy az ujjlenyomatok egyeznek-e. Ez a folyamat csak egyszer "
+"megy végbe."
 
 #: src/dialogs.vala:201
 #, c-format
@@ -164,11 +168,11 @@ msgid ""
 "The remote server “%s” requires a username and password to continue to "
 "connect."
 msgstr ""
-"A(z) „%s” távoli kiszolgáló felhasználónevet és jelszót követel meg a"
-" kapcsolódás folytatásához."
+"A(z) „%s” távoli kiszolgáló felhasználónevet és jelszót követel meg a "
+"kapcsolódás folytatásához."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -186,11 +190,11 @@ msgstr "_Bezárás"
 msgid "Resize desktop"
 msgstr "Asztal átméretezése"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Képernyőkép készítése"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Teljes képernyő"
 
@@ -211,7 +215,7 @@ msgstr "RDP (Windowshoz kapcsolódás esetén megszokott)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (Linuxhoz kapcsolódás esetén megszokott)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Súgó"
 
@@ -231,8 +235,8 @@ msgstr "_Jelszó"
 msgid "Sign In"
 msgstr "Bejelentkezés"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
-#| msgid "Connections"
 msgid "Open Connection"
 msgstr "Kapcsolat megnyitása"
 
@@ -240,7 +244,7 @@ msgstr "Kapcsolat megnyitása"
 msgid "Verify"
 msgstr "Ellenőrzés"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Mégse"
 
@@ -249,6 +253,16 @@ msgid "Verify Fingerprint"
 msgstr "Ujjlenyomat ellenőrzése"
 
 #: src/ui/dialog.ui:211
+#| msgid ""
+#| "On Windows run certlm.msc or certmgr.msc\n"
+#| "and copy the certificate from\n"
+#| "<b>Remote Desktop>Certificates</b> to a file.\n"
+#| "Then obtain its fingerprint via\n"
+#| "\"certutil.exe -hashfile file SHA256\".\n"
+#| "\n"
+#| "If GNOME is used on the connected endpoint,\n"
+#| "the fingerprint can be verified in the Settings,\n"
+#| "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgid ""
 "On Windows run certlm.msc or certmgr.msc\n"
 "and copy the certificate from\n"
@@ -257,47 +271,46 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Windowson futtassa a certlm.msc vagy certmgr.msc\n"
 "programot, és másolja a tanúsítványt egy fájlba\n"
-"innen: <b>Távoli asztal>Tanúsítványok</b>.\n"
+"innen: <b>Távoli asztal > Tanúsítványok</b>.\n"
 "Ezután szerezze be az ujjlenyomatot ezzel:\n"
 "„certutil.exe -hashfile file SHA256”.\n"
 "\n"
-"Ha GNOME van ott, ahová kapcsolódik, akkor az\n"
-"ujjlenyomat a Beállításokban ellenőrizhető:,\n"
-"<b>Megosztás>Távoli asztal>Titkosítás ellenőrzése</b>."
+"Ha a GNOME-ot használnak a csatlakoztatott végponton,\n"
+"akkor az ujjlenyomat a <b>Beállítások > Megosztás</b>\n"
+"panelen vagy a <b>Távoli asztal > Titkosítás ellenőrzése</b>\n"
+"alatti <b>Beállítások > Rendszer</b> panelen ellenőrizhető."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Nem várt tanúsítvány"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Helyi tanúsítvány törlése"
 
-#: src/ui/dialog.ui:386
-#| msgid "Authentication failed: %s"
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Hitelesítés szükséges"
 
-#: src/ui/dialog.ui:437
-#| msgid "_Username"
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Felhasználónév…"
 
-#: src/ui/dialog.ui:465
-#| msgid "_Password"
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Jelszó…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Tartomány…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -305,8 +318,7 @@ msgstr ""
 "A tartomány mező általában nem kötelező, és\n"
 "üresen hagyható."
 
-#: src/ui/dialog.ui:638
-#| msgid "Authentication failed: %s"
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Hitelesítés"
 
@@ -319,14 +331,10 @@ msgid "Click next to learn about remote desktop."
 msgstr "Kattintson a következőre, hogy többet tudjon meg a távoli asztalról."
 
 #: src/ui/onboarding-dialog.ui:50
-#| msgid "View and use other desktops"
 msgid "Access other desktops"
 msgstr "Más asztalok elérése"
 
 #: src/ui/onboarding-dialog.ui:51
-#| msgid ""
-#| "Use Connections to view the screen of other desktops. You can control "
-#| "them using the pointer and keyboard, too!"
 msgid ""
 "Connections allows viewing the screens of other desktops. They can also be "
 "controlled using the pointer and keyboard."
@@ -339,7 +347,6 @@ msgid "Connect to different operating systems"
 msgstr "Kapcsolódjon más operációs rendszerekhez"
 
 #: src/ui/onboarding-dialog.ui:59
-#| msgid "Access Linux, Mac, and Windows desktops using Connections."
 msgid "You can access Linux, Mac, and Windows desktops."
 msgstr "Linuxos, maces és windowsos asztalokat is elérhet."
 
@@ -363,8 +370,8 @@ msgstr "Kezdje az első kapcsolata létrehozásával"
 msgid ""
 "To begin, you will need the address of the computer you want to connect to."
 msgstr ""
-"A kezdéshez szüksége lesz annak a számítógépnek a címére, amelyhez"
-" kapcsolódni szeretne."
+"A kezdéshez szüksége lesz annak a számítógépnek a címére, amelyhez "
+"kapcsolódni szeretne."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -414,35 +421,35 @@ msgstr "Kapcsolat bontása"
 msgid "Keyboard shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "A Kapcsolatok névjegye"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -479,17 +486,16 @@ msgid "Scale mode"
 msgstr "Átméretezési mód"
 
 #: src/ui/window.ui:52
-#| msgid "Just hit the <b>+</b> button to make your first connection."
 msgid "Click the add button to create your first connection"
 msgstr "Kattintson a hozzáadás gombra az első kapcsolata létrehozásához"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Nem sikerült feldolgozni a fájlt"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "A VNC-fájlból hiányzik a(z) „%s” kulcs"
