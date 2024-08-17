@@ -7,20 +7,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-06-03 09:17+0000\n"
-"PO-Revision-Date: 2024-06-19 14:15+0530\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-09 12:29+0530\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Gtranslator 46.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Connections"
 
@@ -59,7 +59,7 @@ msgstr ""
 #. developer_name tag deprecated with Appstream 1.0
 #: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
-msgstr "GNOME परियोजना"
+msgstr "गनोम परियोजना"
 
 #: data/org.gnome.Connections.desktop.in:8
 msgid "vnc;rdp;remote;desktop;windows;support;access;view"
@@ -83,7 +83,7 @@ msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
-msgstr "GNOME डेस्कटॉप वातावरण के लिए एक रिमोट डेस्कटॉप क्लाइंट"
+msgstr "गनोम डेस्कटॉप वातावरण के लिए एक रिमोट डेस्कटॉप क्लाइंट"
 
 #: src/application.vala:151
 #, c-format
@@ -106,6 +106,10 @@ msgstr "जुड़ने के लिए URL"
 #: src/application.vala:233
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "प्रदत्त पथ पर .vnc या .rdp फाइल खोलें"
+
+#: src/application.vala:233
+msgid "PATH"
+msgstr "पथ"
 
 #: src/application.vala:234
 msgid "Open in full screen"
@@ -130,7 +134,7 @@ msgstr "स्क्रीनशॉट लिया गया"
 msgid "Open"
 msgstr "खोले"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "प्रमाणीकरण विफल: %s"
@@ -164,7 +168,7 @@ msgstr ""
 "रिमोट सर्वर “%s” से जुड़ना जारी रखने के लिए उपयोक्तानाम और पासवर्ड की आवश्यकता होती है।"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -235,7 +239,7 @@ msgstr "कनेक्शन खोलें"
 msgid "Verify"
 msgstr "सत्यापित करें"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "रद्द करें"
 
@@ -252,48 +256,52 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
-"Windows पर certlm.msc या certmgr.msc चलाएं और <b>रिमोट डेस्कटॉप>प्रमाणपत्र</b> से "
-"प्रमाणपत्र को एक फाइल में कॉपी करें।\n"
-"फिर \"certutil.exe -hashfile फाइल SHA256\" के माध्यम से इसका फिंगरप्रिंट प्राप्त "
-"करें।\n"
+"Windows पर certlm.msc या certmgr.msc चलाएं \n"
+"और <b>रिमोट डेस्कटॉप>प्रमाणपत्र</b> से प्रमाणपत्र को एक \n"
+"फाइल में कॉपी करें।\n"
+"फिर \"certutil.exe -hashfile फाइल SHA256\" \n"
+"के माध्यम से इसका फिंगरप्रिंट प्राप्त करें।\n"
 "\n"
-"यदि जुड़े हुए एंडपॉइंट पर GNOME का उपयोग किया जाता है, तो फिंगरप्रिंट को सेटिंग्स, "
-"<b>साझाकरण>रिमोट डेस्कटॉप>एन्क्रिप्शन सत्यापित करें</b> में सत्यापित किया जा सकता है।"
+"यदि जुड़े हुए एंडपॉइंट पर गनोम का उपयोग किया जाता है, \n"
+"तो फिंगरप्रिंट को <b>सेटिंग>शेयरिंग</b> पैनल में या \n"
+"<b>रिमोट डेस्कटॉप>कूटलेखन सत्यापित करें</b> के अंतर्गत \n"
+"<b>सेटिंग>सिस्टम</b> पैनल में सत्यापित किया जा सकता है।"
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "अप्रत्याशित प्रमाणपत्र"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "स्थानीय प्रमाणपत्र मिटाएं"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "प्रमाणीकरण आवश्यक"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "उपयोक्तानाम…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "पासवर्ड…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "डोमेन…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
 msgstr "डोमेन क्षेत्र आमतौर पर वैकल्पिक है और इसे खाली छोड़ा जा सकता है।"
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "प्रमाणित करें"
 
@@ -461,13 +469,13 @@ msgstr "स्केल मोड"
 msgid "Click the add button to create your first connection"
 msgstr "अपना पहला कनेक्शन बनाने के लिए जोड़ें बटन पर क्लिक करें"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "फाइल का विश्लेषण नहीं किया जा सका"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC फाइल में कुंजी “%s” गुम है"
