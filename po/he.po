@@ -2,27 +2,27 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2020-2023.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2020-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-16 23:56+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-22 18:54+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : "
-"3);\n"
-"X-Generator: Poedit 3.4.1\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3)\n"
+"X-Generator: Gtranslator 46.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "חיבורים"
 
@@ -51,13 +51,14 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
-"Connections uses the widely supported VNC and RDP protocols, and one of these "
-"must be enabled on the desktop that you want to connect to."
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
 msgstr ""
-"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות פעילים "
-"בשולחן העבודה אליו ברצונך להתחבר."
+"תכנית החיבורים משתמשת בפרוטוקולים הנפוצים VNC ו־RDP ועל אחד מאלה להיות "
+"פעילים בשולחן העבודה אליו ברצונך להתחבר."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "מיזם GNOME"
 
@@ -75,7 +76,7 @@ msgstr "קובץ שולחן עבודה מרוחק (VNC)"
 msgid "Delete"
 msgstr "מחיקה"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "מאפיינים"
 
@@ -112,6 +113,10 @@ msgstr "כתובת להתחברות"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "פתיחת קובץ .vnc או .rdp בנתיב (PATH) שסופק"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "נתיב"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "פתיחה במסך מלא"
@@ -135,7 +140,7 @@ msgstr "המסך צולם"
 msgid "Open"
 msgstr "פתיחה"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "האימות נכשל: %s"
@@ -167,7 +172,7 @@ msgid ""
 msgstr "השרת המרוחק „%s” דורש שם משתמש וסיסמה כדי להמשיך בחיבור."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "‫‎%d×%d"
@@ -185,11 +190,11 @@ msgstr "_סגירה"
 msgid "Resize desktop"
 msgstr "שינוי גודל שולחן העבודה"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "צילום מסך"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "מסך מלא"
 
@@ -209,7 +214,7 @@ msgstr "‫RDP (תקן להתחברות אל Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "‫VNC (תקן להתחברות אל Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "עזרה"
 
@@ -229,6 +234,7 @@ msgstr "_ססמה"
 msgid "Sign In"
 msgstr "כניסה"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "פתיחת חיבור"
@@ -237,7 +243,7 @@ msgstr "פתיחת חיבור"
 msgid "Verify"
 msgstr "אימות"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -254,44 +260,46 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
-"ב־Windows יש להריץ את certlm.msc or certmgr.msc\n"
+"ב־Windows יש להריץ את certlm.msc או את certmgr.msc\n"
 "ולהעתיק את האישור מתוך\n"
 "<b>שולחן עבודה מרוחק>אישורים</b> לקובץ.\n"
 "ואז להשיג את טביעת האצבע שלו דרך\n"
 "„certutil.exe -hashfile file SHA256”.\n"
 "\n"
 "אם נעשה שימוש ב־GNOME בצד השני,\n"
-"אפשר לאמת את טביעת האצבע בהגדרות,\n"
-"<b>שיתוף>שולחן עבודה מרוחק>אימות הצפנה</b>."
+"אפשר לאמת את טביעת האצבע בלוח <b>הגדרות>שיתוף</b>\n"
+"או בלוח <b>הגדרות>מערכת</b> תחת\n"
+"<b>שולחן עבודה מרוחק>אימות הצפנה</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "אישור מפתיע"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "מחיקת אישור מקומי"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "נדרש אימות"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "שם משתמש…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "ססמה…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "שם תחום…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -299,7 +307,7 @@ msgstr ""
 "שדה שם התחום הוא בדרך כלל רשות ואפשר להשאיר אותו\n"
 "ריק."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "אימות"
 
@@ -398,35 +406,35 @@ msgstr "ניתוק"
 msgid "Keyboard shortcuts"
 msgstr "צירופי מקשים"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "צירופי מקשים"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "על חיבורים"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -466,13 +474,13 @@ msgstr "מצב שינוי גודל"
 msgid "Click the add button to create your first connection"
 msgstr "יש ללחוץ על כפתור ההוספה כדי ליצור את החיבור הראשון שלך"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "לא ניתן לנתח את הקובץ"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "בקובץ ה־VNC חסר המפתח „%s”"
@@ -493,7 +501,8 @@ msgstr "בקובץ ה־VNC חסר המפתח „%s”"
 #~ msgid ""
 #~ "Computers need to be set up for remote desktop before you can connect to "
 #~ "them."
-#~ msgstr "יש להגדיר על המחשבים חיבור שולחן עבודה מרוחק בטרם אפשר להתחבר אליהם."
+#~ msgstr ""
+#~ "יש להגדיר על המחשבים חיבור שולחן עבודה מרוחק בטרם אפשר להתחבר אליהם."
 
 #~ msgid "We hope that you enjoy Connections!"
 #~ msgstr "אנו מקווים שתכנית החיבורים עושה לך רק טוב!"
