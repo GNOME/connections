@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-23 21:46+0000\n"
-"PO-Revision-Date: 2024-02-27 22:20+0100\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-22 21:28+0200\n"
 "Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
 "Language-Team: ca\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Connexions"
 
@@ -73,7 +73,7 @@ msgstr "Fitxer d'escriptori remot (VNC)"
 msgid "Delete"
 msgstr "Suprimeix"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Propietats"
 
@@ -109,6 +109,10 @@ msgstr "URL a connectar"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Obre el fitxer .vnc o .rdp al CAMÍ indicat"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "CAMÍ"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Obre a pantalla completa"
@@ -132,7 +136,7 @@ msgstr "Captura de pantalla feta"
 msgid "Open"
 msgstr "Obre"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Ha fallat l'autenticació: %s"
@@ -167,7 +171,7 @@ msgstr ""
 "la connexió."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -185,11 +189,11 @@ msgstr "_Tanca"
 msgid "Resize desktop"
 msgstr "Redimensiona l'escriptori"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Fes una captura de pantalla"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
@@ -211,7 +215,7 @@ msgstr "RDP (estàndard per a connectar-se a Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (estàndard per a connectar-se a Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Ajuda"
 
@@ -231,6 +235,7 @@ msgstr "_Contrasenya"
 msgid "Sign In"
 msgstr "Inicia la sessió"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Obre una connexió"
@@ -239,7 +244,7 @@ msgstr "Obre una connexió"
 msgid "Verify"
 msgstr "Verifica"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -256,44 +261,47 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
-"En Windows, executeu certlm.msc o certmgr.msc\n"
+"En Windows, executeu «certlm.msc» o «certmgr.msc»\n"
 "i copieu el certificat de \n"
 "<b>Escriptori remot>Certificats</b> en un fitxer.\n"
 "Després cal obtenir-ne l'empremta usant \n"
-"\"certutil.exe -hashfile fitxer SHA256\".\n"
+"«certutil.exe -hashfile fitxer SHA256».\n"
 "\n"
 "Si s'usa GNOME al punt connectat,\n"
-"l'empremta es pot verificar a Paràmetres,\n"
-"<b>Compartició>Escriptori remot>Verifica el xifratge</b>."
+"l'empremta es pot verificar al panell\n"
+"<b>Paràmetres>Compartició</b> o al panell\n"
+"<b>Paràmetres>Sistema</b> sota de\n"
+"<b>Escriptori remot>Verifica el xifratge</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "No s'esperava el certificat"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Esborra el certificat local"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Es requereix autenticació"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
-msgstr "Nom d'usuari..."
+msgstr "Nom d'usuari…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
-msgstr "Contrasenya..."
+msgstr "Contrasenya…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
-msgstr "Domini..."
+msgstr "Domini…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -301,7 +309,7 @@ msgstr ""
 "El camp domini és normalment opcional i pot ser\n"
 "deixat en blanc."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Autentica"
 
@@ -403,35 +411,35 @@ msgstr "Desconnecta"
 msgid "Keyboard shortcuts"
 msgstr "Dreceres de teclat"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Dreceres de teclat"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Quant al Connexions"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Retrocés"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Supr"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -471,13 +479,13 @@ msgstr "Mode d'escala"
 msgid "Click the add button to create your first connection"
 msgstr "Cliqueu el botó d'afegir per crear la primera connexió"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "No s'ha pogut analitzar el fitxer"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Manca la clau «%s» del fitxer VNC"
