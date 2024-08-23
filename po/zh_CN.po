@@ -2,27 +2,27 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # Boyuan Yang <073plan@gmail.com>, 2020.
-# lumingzh <lumingzh@qq.com>, 2022.
 # Nanling <neithern@outlook.com>, 2023.
+# lumingzh <lumingzh@qq.com>, 2022-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-21 12:34+0800\n"
-"Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
-"Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-23 15:51+0800\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Gtranslator 46.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "连接"
 
@@ -56,7 +56,8 @@ msgstr ""
 "“连接”应用程序使用广泛支持的 VNC 和 RDP 协议，您想要连接的计算机必须预先启用"
 "其中的某个协议。"
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
@@ -74,13 +75,16 @@ msgstr "远程桌面（VNC）文件"
 msgid "Delete"
 msgstr "删除"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "属性"
 
 #: src/application.vala:88
 msgid "translator-credits"
-msgstr "Boyuan Yang <073plan@gmail.com>, 2020"
+msgstr ""
+"Boyuan Yang <073plan@gmail.com>, 2020\n"
+"lumingzh <lumingzh@qq.com>, 2022-2024\n"
+"Nanling <neithern@outlook.com>, 2023"
 
 #: src/application.vala:89 src/application.vala:242
 msgid "A remote desktop client for the GNOME desktop environment"
@@ -108,6 +112,10 @@ msgstr "要连接的 URL"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "在指定路径打开 .vnc 或 .rdp 文件"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "路径"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "以全屏方式打开"
@@ -131,7 +139,7 @@ msgstr "已截图"
 msgid "Open"
 msgstr "打开"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "认证失败：%s"
@@ -161,7 +169,7 @@ msgid ""
 msgstr "远程服务器“%s”需要用户名和密码才能继续连接。"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -179,11 +187,11 @@ msgstr "关闭(_C)"
 msgid "Resize desktop"
 msgstr "缩放桌面"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "截图"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "全屏"
 
@@ -203,7 +211,7 @@ msgstr "RDP（连接到 Windows 的标准协议）"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC（连接到 Linux 时的标准协议）"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "帮助"
 
@@ -223,6 +231,7 @@ msgstr "密码(_P)"
 msgid "Sign In"
 msgstr "登录"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "打开连接"
@@ -231,7 +240,7 @@ msgstr "打开连接"
 msgid "Verify"
 msgstr "验证"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "取消"
 
@@ -248,8 +257,9 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "在 Windows 上运行 certlm.msc 或 certmgr.msc\n"
 "并从<b>远程桌面>证书</b>\n"
@@ -258,34 +268,35 @@ msgstr ""
 "获取其指纹。\n"
 "\n"
 "如果在已连接的终端上使用 GNOME，\n"
-"则指纹可以在“设置”应用中验证，\n"
-"<b>共享>远程桌面>验证加密</b>。"
+"则指纹可以在<b>设置>共享</b>面板\n"
+"或<b>设置>系统</b>面板下面的\n"
+"<b>远程桌面>验证加密</b>中验证。"
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "预期外的证书"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "删除本地证书"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "需要认证"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "用户名…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "密码…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "域…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -293,7 +304,7 @@ msgstr ""
 "域字段通常是可选的，可以\n"
 "留空。"
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "认证"
 
@@ -390,35 +401,35 @@ msgstr "断开连接"
 msgid "Keyboard shortcuts"
 msgstr "键盘快捷键"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "键盘快捷键"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "关于“连接”"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -458,13 +469,13 @@ msgstr "缩放模式"
 msgid "Click the add button to create your first connection"
 msgstr "点击添加按钮来创建您的第一个连接"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "无法解析文件"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC 文件缺失键“%s”"
