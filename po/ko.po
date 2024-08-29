@@ -1,7 +1,7 @@
 # Korean translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# DaeHyun Sung <sungdh86+git@gmail.com>, 2020, 2022-2023.
+# DaeHyun Sung <sungdh86+git@gmail.com>, 2020, 2022-2024.
 # Changwoo Ryu <cwryu@debian.org>, 2021.
 # Seong-ho Cho <shcho@gnome.org>, 2024. (contributed temporarily)
 #
@@ -9,20 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-03-14 14:38+0000\n"
-"PO-Revision-Date: 2024-03-15 23:44+0900\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-27 15:15+0900\n"
+"Last-Translator: DaeHyun Sung <sungdh86+git@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "연결"
 
@@ -77,7 +77,7 @@ msgstr "원격 데스크톱(VNC) 파일"
 msgid "Delete"
 msgstr "삭제"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "속성"
 
@@ -113,6 +113,10 @@ msgstr "연결할 URL"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "주어진 PATH에서 .vnc 또는 .rdp 파일 열기"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr ""
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "전체 화면에서 열기"
@@ -136,7 +140,7 @@ msgstr "찍은 스크린샷"
 msgid "Open"
 msgstr "열기"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "인증 실패: %s"
@@ -168,7 +172,7 @@ msgid ""
 msgstr "“%s” 원격 서버에 연결을 계속하려면 사용자 이름과 암호가 필요합니다."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -186,11 +190,11 @@ msgstr "닫기(_C)"
 msgid "Resize desktop"
 msgstr "데스크톱 크기조절"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "스크린샷 찍기"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "전체 화면"
 
@@ -210,7 +214,7 @@ msgstr "RDP (윈도우 연결 표준)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (리눅스 연결 표준)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "도움말"
 
@@ -239,7 +243,7 @@ msgstr "연결 열기"
 msgid "Verify"
 msgstr "검증"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "취소"
 
@@ -256,43 +260,45 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
-"윈오두에서는 certlm.msc 또는 certmgr.msc를 실행하고\n"
-"<b>원격 데스트탑>인증서</b>에서 파일로 인증서를 복사하십시오.\n"
+"윈도우에서는 certlm.msc 또는 certmgr.msc를 실행하고\n"
+"<b>원격 데스크톱>인증서</b>에서 인증서를 파일로 복사합니다.\n"
 "그 다음 \"certutil.exe -hashfile file SHA256\"\n"
 "명령을 실행하여 지문키를 만드십시오.\n"
 "\n"
-"그놈을 연결 엔드포인트에서 사용한다면\n"
-"<b>공유>원격 데스크톱>암호화 검증</b>\n"
-"설정에서 지문키를 검증할 수 있습니다."
+"그놈을 연결 엔드포인트에서 사용한다면,\n"
+"지문키는 <b>설정>공유</b> 패널 또는\n"
+"<b>설정>시스템</b>패널의 <b>원격 데스크톱>암호화 검증</b>\n"
+"에서 검증할 수 있습니다."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "예기키 못한 인증서"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "로컬 인증서 삭제"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "인증이 필요합니다"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "사용자 이름…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "암호…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "도메인…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -300,7 +306,7 @@ msgstr ""
 "도메인 필드는 보통 추가로 입력하거나 비운 채로\n"
 "둘 수 있습니다."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "인증"
 
@@ -400,35 +406,35 @@ msgstr "연결 끊기"
 msgid "Keyboard shortcuts"
 msgstr "키보드 바로 가기"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "키보드 바로 가기"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "연결 정보"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + 백스페이스"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -468,13 +474,13 @@ msgstr "크기 조정 모드"
 msgid "Click the add button to create your first connection"
 msgstr "추가 단추를 눌러 첫 연결을 만드십시오"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "파일을 해석할 수 없습니다"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC 파일에 “%s” 키가 없습니다"
