@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-10 02:22+0100\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-29 23:26+0200\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Připojení"
 
@@ -57,7 +57,8 @@ msgstr ""
 "Přípojení používají široce podporované protokoly VNC a RDP, takže některý z "
 "nich musí být zapnutý i v systému, ke kterému se chcete připojit."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -74,7 +75,7 @@ msgstr "Soubor vzdálené plochy (VNC)"
 msgid "Delete"
 msgstr "Smazat"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Vlastnosti"
 
@@ -108,6 +109,10 @@ msgstr "Adresa URL, ke které se má připojit"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Otevřít soubor .vnc nebo .rdp v zadané CESTĚ"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "CESTA"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Otevřít na celou obrazovku"
@@ -131,7 +136,7 @@ msgstr "Byl pořízen snímek obrazovky"
 msgid "Open"
 msgstr "Otevřít"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Ověření selhalo: %s"
@@ -166,7 +171,7 @@ msgstr ""
 "připojení."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d × %d"
@@ -184,11 +189,11 @@ msgstr "_Zavřít"
 msgid "Resize desktop"
 msgstr "Změnit velikost plochy"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Pořídit snímek obrazovky"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
 
@@ -210,7 +215,7 @@ msgstr "RDP (standard pro připojení k Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standard pro připojení k Linuxu)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Nápověda"
 
@@ -230,6 +235,7 @@ msgstr "_Heslo"
 msgid "Sign In"
 msgstr "Přihlásit se"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Otevřít připojení"
@@ -238,7 +244,7 @@ msgstr "Otevřít připojení"
 msgid "Verify"
 msgstr "Ověřit"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -255,8 +261,9 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "V systému Windows spusťte certlm.msc nebo certmgr.msc\n"
 "a zkopírujte certifikát z\n"
@@ -265,34 +272,35 @@ msgstr ""
 "\"certutil.exe -hashfile soubor SHA256\".\n"
 "\n"
 "Pokud se na připojeném koncovém bodu používá GNOME,\n"
-"otisk prstu lze ověřit v Nastavení,\n"
+"otisk prstu lze ověřit v panelu <b>Nastavení>Sdílení</b>\n"
+"nebo panelu <b>Nastavení>Systém</b> pod\n"
 "<b>Sdílení>Vzdálená plocha>Ověřit šifrování</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Neočekávaný certifikát"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Smazat místní certifikát"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Vyžaduje ověření"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Uživatelské jméno…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Heslo…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Doména…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -300,7 +308,7 @@ msgstr ""
 "Pole domény je běžně volitelné a může být\n"
 "ponecháno prázdné."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Ověřit"
 
@@ -403,35 +411,35 @@ msgstr "Odpojit"
 msgid "Keyboard shortcuts"
 msgstr "Klávesové zkratky"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové zkratky"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "O aplikaci Připojení"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -471,13 +479,13 @@ msgstr "Režim škálování"
 msgid "Click the add button to create your first connection"
 msgstr "Pro vytvoření vašeho prvního připojení klikněte na tlačítko Přidat"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Nezdařilo se zpracovat soubor"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "V souboru VNC chybí klíč „%s“"
