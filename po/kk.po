@@ -7,19 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-25 11:14+0600\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-30 19:25+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Байланыстар"
 
@@ -58,7 +58,8 @@ msgstr ""
 "пайдаланады және қосылғыңыз келетін жұмыс үстелінде олардың бірі іске "
 "қосылуы тиіс."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "GNOME жобасы"
 
@@ -76,7 +77,7 @@ msgstr "Қашықтағы жұмыс үстел (VNC) файлы"
 msgid "Delete"
 msgstr "Өшіру"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Қасиеттері"
 
@@ -110,6 +111,10 @@ msgstr "Байланысу үшін URL"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Берілген PATH бойынша орналасқан .vnc немесе .rdp файлын ашу"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "ЖОЛ"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Толық экранда ашу"
@@ -133,7 +138,7 @@ msgstr "Скриншот түсірілді"
 msgid "Open"
 msgstr "Ашу"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Аутентификация сәтсіз: %s"
@@ -168,7 +173,7 @@ msgstr ""
 "мен парольді талап етеді."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -186,11 +191,11 @@ msgstr "_Жабу"
 msgid "Resize desktop"
 msgstr "Жұмыс үстелі өлшемін өзгерту"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Скриншотты түсіру"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Толық экран"
 
@@ -210,7 +215,7 @@ msgstr "RDP (Windows жүйесіне қосылу стандарты)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (Linux-қа қосылу стандарты)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Көмек"
 
@@ -230,6 +235,7 @@ msgstr "_Пароль"
 msgid "Sign In"
 msgstr "Кіру"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Байланысты ашу"
@@ -238,7 +244,7 @@ msgstr "Байланысты ашу"
 msgid "Verify"
 msgstr "Растау"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Бас тарту"
 
@@ -255,8 +261,9 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Windows ішінде certlm.msc немесе certmgr.msc орындап,\n"
 "сертификатты <b>Қашықтағы жұмыс үстелі>Сертификаттар</b>\n"
@@ -264,35 +271,36 @@ msgstr ""
 "Одан кейін оның баспасын келесідей алыңыз\n"
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
-"Байланысқан торапта GNOME қолданылса,\n"
-"баспаны Баптаулар ішінде тексеруге болады,\n"
-"<b>Бөлісу>Қашықтағы жұмыс үстелі>Шифрлеуді растау</b>."
+"Байланысқан торапта GNOME қолданылса, баспаны\n"
+"<b>Баптаулар>Бөлісу</b> панелі немесе \n"
+"<b>Қашықтағы жұмыс үстелі>Шифрлеуді растау</b>\n"
+"ішінде тексеруге болады."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Күтілмеген сертификат"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Жергілікті сертификатты өшіру"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Аутентификация керек"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Пайдаланушы аты…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Пароль…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Домен…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -300,7 +308,7 @@ msgstr ""
 "Домен өрісі әдетте міндетті емес және бос болып\n"
 "қалдырылуы мүмкін."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Аутентификациялау"
 
@@ -401,35 +409,35 @@ msgstr "Байланысты үзу"
 msgid "Keyboard shortcuts"
 msgstr "Пернетақта жарлықтары"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Пернетақта жарлықтары"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Байланыстар туралы"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -469,13 +477,13 @@ msgstr "Масштабтау режимі"
 msgid "Click the add button to create your first connection"
 msgstr "Бірінші байланысты жасау үшін қосу батырмасын басыңыз"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Файлды талдау мүмкін емес"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC файлында \"%s\" кілті жоқ"
