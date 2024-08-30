@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-07-27 09:14+0000\n"
-"PO-Revision-Date: 2024-08-07 13:46+0300\n"
+"POT-Creation-Date: 2024-08-11 11:26+0000\n"
+"PO-Revision-Date: 2024-08-23 08:12+0300\n"
 "Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
 "gmail [dot] com>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Conexiuni"
 
@@ -80,7 +80,7 @@ msgstr "Fișier de desktop la distanță (VNC)"
 msgid "Delete"
 msgstr "Șterge"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Proprietăți"
 
@@ -117,6 +117,10 @@ msgstr "URL de conectat"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Deschide fișierul .vnc sau .rdp la CALEA dată"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "PATH"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Deschideți pe ecran complet"
@@ -140,7 +144,7 @@ msgstr "Captură de ecran luată"
 msgid "Open"
 msgstr "Deschide"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentificarea a eșuat: %s"
@@ -175,7 +179,7 @@ msgstr ""
 "pentru a continua conectarea."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -193,11 +197,11 @@ msgstr "În_chide"
 msgid "Resize desktop"
 msgstr "Redimensionează desktopul"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Fă captură de ecran"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Ecran complet"
 
@@ -219,7 +223,7 @@ msgstr "RDP (standard pentru conectarea la Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standard pentru conectarea la Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Ajutor"
 
@@ -248,7 +252,7 @@ msgstr "Deschide conexiunea"
 msgid "Verify"
 msgstr "Verifică"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Anulează"
 
@@ -265,44 +269,46 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Pe Windows rulați certlm.msc sau certmgr.msc\n"
 "și copiați certificatul de la\n"
 "<b>Desktop la distanță>Certificări</b> la un fișier.\n"
-"Apoi obțineți amprenta acestuia via\n"
-"\"certutil.exe -hashfile file SHA256\".\n"
+"Apoi obțineți amprenta acestuia prin\n"
+"„certutil.exe -hashfile file SHA256”.\n"
 "\n"
-"Dacă GNOME este utilizat pe endpoint-ul conectat,\n"
-"amprenta poate fi verificată în Configurări,\n"
-"<b>Partajare>Desktop la distanță>Verifică criptarea</b>."
+"Dacă GNOME este utilizat pe punctul final conectat,\n"
+"amprenta poate fi verificată în panoul <b>Configurări>Partajare</b>\n"
+"sau în panoul <b>Configurări>Sistem</b> sub\n"
+"<b>Desktop la distanță>Verifică criptarea</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Certificat neașteptat"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Șterge certificatul local"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Autentificarea este necesară"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Nume de utilizator…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Parola…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Domeniu…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -310,7 +316,7 @@ msgstr ""
 "Câmpul domeniului este de obicei opțional și poate fi\n"
 "lăsat gol."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Autentificare"
 
@@ -413,35 +419,35 @@ msgstr "Deconectează"
 msgid "Keyboard shortcuts"
 msgstr "Scurtături de tastatură"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Scurtături de tastatură"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Despre Conexiuni"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -481,13 +487,13 @@ msgstr "Modul scalare"
 msgid "Click the add button to create your first connection"
 msgstr "Dați clic pe butonul de adăugare pentru a crea prima conexiune"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Nu s-a putut parsa fișierul"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Fișierului VNC îi lipsește cheia „%s”"
