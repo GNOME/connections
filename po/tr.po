@@ -1,5 +1,5 @@
 # Turkish translation for gnome-connections.
-# Copyright (C) 2020-2023 gnome-connections's COPYRIGHT HOLDER
+# Copyright (C) 2020-2024 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 #
 # Burhan Keleş <klsburhan@hotmail.com>, 2021.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-08-21 20:14+0000\n"
+"POT-Creation-Date: 2024-08-24 14:59+0000\n"
 "PO-Revision-Date: 2024-08-24 08:00+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <takim@gnome.org.tr>\n"
@@ -277,8 +277,8 @@ msgstr ""
 "\n"
 "Eğer bağlı bitiş noktasında GNOME kullanılıyorsa\n"
 "parmak izi şuralardan doğrulanabilir:\n"
-"<b>Ayarlar>Paylaşım</b> bölmesinden ya da\n."
-"<b>Ayarlar>Sistem</b> altındaki\n"
+"<b>Ayarlar>Paylaşım</b> bölmesinden ya da\n"
+".<b>Ayarlar>Sistem</b> altındaki\n"
 "<b>Uzak Masaüstü>Şifrelemeyi Doğrula</b> bölmesinden."
 
 #: src/ui/dialog.ui:292
@@ -493,28 +493,3 @@ msgstr "Dosya ayrıştırılamadı"
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC dosyasının “%s” anahtarı eksik"
-
-#~ msgid "Learn about how Connections works."
-#~ msgstr "Bağlantılarʼın nasıl çalıştığını öğrenin."
-
-#~ msgid "Use other desktops, remotely"
-#~ msgstr "Diğer masaüstülerini kullan, uzaktan"
-
-#~ msgid "Enable remote desktop before connecting"
-#~ msgstr "Bağlanmadan önce uzak masaüstünü etkinleştir"
-
-#~ msgid ""
-#~ "Computers need to be set up for remote desktop before you can connect to "
-#~ "them."
-#~ msgstr ""
-#~ "Bilgisayarlar, onlara bağlanılmadan önce uzak masaüstü için "
-#~ "ayarlanmalıdır."
-
-#~ msgid "We hope that you enjoy Connections!"
-#~ msgstr "Umarız Bağlantılarʼı beğenirsiniz!"
-
-#~ msgid "More information can be found in the help."
-#~ msgstr "Yardım bölümünde daha çok bilgi bulunur."
-
-#~ msgid "“%s” requires authentication"
-#~ msgstr "“%s” kimlik doğrulaması gerektiriyor"
