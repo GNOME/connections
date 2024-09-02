@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-21 20:45+0000\n"
-"PO-Revision-Date: 2024-02-22 19:17+0100\n"
+"POT-Creation-Date: 2024-08-31 14:13+0000\n"
+"PO-Revision-Date: 2024-09-02 19:27+0200\n"
 "Last-Translator: Fran Dieguez <fran.dieguez@gnome.org>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 "X-DL-Team: gl\n"
 "X-DL-Module: connections\n"
 "X-DL-Branch: master\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Conexións"
 
@@ -79,7 +79,7 @@ msgstr "Ficheiro de Escritorio Remoto (VNC)"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Propiedades"
 
@@ -113,6 +113,10 @@ msgstr "URL á que conectarse"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Abrir ficheiro .vnc ou .rdp no PATH fornecido"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "RUTA"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Abrir a pantalla completa"
@@ -136,7 +140,7 @@ msgstr "Captura de pantalla tomada"
 msgid "Open"
 msgstr "Abrir"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Produciuse un fallo na autenticación: %s"
@@ -171,7 +175,7 @@ msgstr ""
 "continuar a conexión."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -189,11 +193,11 @@ msgstr "_Pechar"
 msgid "Resize desktop"
 msgstr "Redimensionar o escritorio"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Tomar captura de pantalla"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
@@ -214,7 +218,7 @@ msgstr "RDP (estándar para conectarse a Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (estándar para conectarse a Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Axuda"
 
@@ -234,6 +238,7 @@ msgstr "_Contrasinal"
 msgid "Sign In"
 msgstr "Iniciar sesión"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Abrir conexión"
@@ -242,7 +247,7 @@ msgstr "Abrir conexión"
 msgid "Verify"
 msgstr "Verificar"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -259,44 +264,47 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
-"On Windows run certlm.msc or certmgr.msc\n"
-"and copy the certificate from\n"
+"En Windows execute certlm.msc ou certmgr.msc\n"
+"ou copia o certificado desde\n"
 "<b>Certificados de escritorio remoto</b> a un ficheiro.\n"
 "Logo obteña a súa pegada dixital mediante\n"
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "Se usa GNOME no endpoint conectado,\n"
-"pode verificar a pegada dixital nas Preferencias,\n"
-"<b>Compartindo>Escritorio remoto>Comprobar cifrado</b>."
+"pode verificar a pegada dixital no panel de \n"
+"<b>Preferencias>Compartindo</b> ou o panel \n"
+"<b>Preferencias>Sistema</b> baixo,\n"
+"<b>Escritorio remoto>Comprobar cifrado</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Certificado non agardado"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Eliminar o certificado local"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Requírese autenticación"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Nome de usuario…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Contrasinal…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Dominio…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -304,7 +312,7 @@ msgstr ""
 "O campo de dominio é un campo comunmente opcional e pode\n"
 "deixarse baleiro."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Autenticar"
 
@@ -406,35 +414,35 @@ msgstr "Desconectarse"
 msgid "Keyboard shortcuts"
 msgstr "Atallos de teclado"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Atallos de teclado"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Sobre Conexións"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Retroceso"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Supr"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -474,13 +482,13 @@ msgstr "Modo de escalado"
 msgid "Click the add button to create your first connection"
 msgstr "Prema no botón de engadir para crear a súa primeira conexión"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Non foi posíbel analizar o ficheiro"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "No ficheiro VNC falta unha chave «%s»"
