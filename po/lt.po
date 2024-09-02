@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-26 22:08+0200\n"
+"POT-Creation-Date: 2024-08-31 14:13+0000\n"
+"PO-Revision-Date: 2024-09-02 22:46+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Ryšiai"
 
@@ -56,7 +56,8 @@ msgstr ""
 "Ryšiai naudoja plačiai palaikomus VNC ir RDP protokolos, vienas iš jų turi "
 "būti įjungtas darbalaukyje, prie kurio norima prisijungti."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "GNOME projektas"
 
@@ -72,7 +73,7 @@ msgstr "Nuotolinio darbalaukio (VNC) failas"
 msgid "Delete"
 msgstr "Ištrinti"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Savybės"
 
@@ -108,6 +109,10 @@ msgstr "Prisijungti prie URL"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Atverti .vnc arba .rdp failą nurodytame KELYJE"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "KELIAS"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Atverti visame ekrane"
@@ -131,7 +136,7 @@ msgstr "Ekrano nuotrauka padaryta"
 msgid "Open"
 msgstr "Atverti"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Nepavyko patvirtinti tapatybės: %s"
@@ -166,7 +171,7 @@ msgstr ""
 "slaptažodžio."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -184,11 +189,11 @@ msgstr "_Užverti"
 msgid "Resize desktop"
 msgstr "Keisti darbalaukio dydį"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Padaryti nuotrauką"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Visame ekrane"
 
@@ -209,7 +214,7 @@ msgstr "RDP (įprastinis jungiantis prie Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (įprastinis jungiantis prie Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Žinynas"
 
@@ -229,6 +234,7 @@ msgstr "Sla_ptažodis"
 msgid "Sign In"
 msgstr "Prisijungti"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Atverti ryšį"
@@ -237,7 +243,7 @@ msgstr "Atverti ryšį"
 msgid "Verify"
 msgstr "Tikrinti"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Atsisakyti"
 
@@ -254,44 +260,47 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Windows sistemoje paleiskite certlm.msc arba certmgr.msc\n"
 "ir nukopijuokite liudijimą iš\n"
 "<b>Remote Desktop>Certificates</b> į failą.\n"
-"Jo piršto atspaudą gausite įvykdę\n"
+"Tuomet gaukite jo  piršto atspaudą įvykdę\n"
 "„certutil.exe -hashfile file SHA256“.\n"
 "\n"
 "Jei kitoje ryšio pusėje naudojama GNOME,\n"
-"piršto atspaudą galima patikrinti Nustatymuose,\n"
-"<b>Bendrinimas>Nutolęs Darbastalis</b>."
+"piršto atspaudą galima patikrinti <b>Nustatymuose</b>,\n"
+"<b>Bendrinimo skydelyje arba <b>Nustatymuose</b>,\n"
+"<b>Sistemos</b> skydelyje žemiau <b>Nutolęs Darbastalis</b>,\n"
+"<b>Patikrinti šifravimą</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Nelauktas liudijimas"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Ištrinti vietinį liudijimą"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Būtina patvirtinti tapatybę"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Naudotojo vardas…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Slaptažodis…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Domenas…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -299,7 +308,7 @@ msgstr ""
 "Domeno laukas paprastai nebūtinas ir gali\n"
 "būti paliktas tuščias."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Patvirtinti tapatybę"
 
@@ -400,35 +409,35 @@ msgstr "Atsijungti"
 msgid "Keyboard shortcuts"
 msgstr "Klaviatūros trumpiniai"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Klaviatūros trumpiniai"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Apie ryšius"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Vald + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Vald + Alt + Trinti"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Vald + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Vald + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Vald + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Vald + Alt + F7"
 
@@ -468,13 +477,13 @@ msgstr "Ištempimo veiksena"
 msgid "Click the add button to create your first connection"
 msgstr "Spauskite pridėjimo mygtuką pirmajam ryšiui sukurti"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Nepavyko perskaityti failo"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC faile trūksta rakto „%s“"
