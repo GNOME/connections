@@ -3,25 +3,26 @@
 # This file is distributed under the same license as the gnome-connections package.
 # FULL NAME <EMAIL@ADDRESS>, 2020.
 # Daniel Mustieles <daniel.mustieles@gmail.com>, 2023-2024.
+# Daniel Mustieles García <daniel.mustieles@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-21 11:54+0100\n"
-"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
+"POT-Creation-Date: 2024-08-31 14:13+0000\n"
+"PO-Revision-Date: 2024-09-03 09:00+0200\n"
+"Last-Translator: Daniel Mustieles García <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 45.3\n"
+"X-Generator: Gtranslator 46.1\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Conexiones"
 
@@ -57,7 +58,8 @@ msgstr ""
 "Conexiones usa los protocolos VNC y RDP, ampliamente soportados, y al menos "
 "uno de ellos debe estar activado en el escritorio al que quiera conectarse."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "El Proyecto GNOME"
 
@@ -73,7 +75,7 @@ msgstr "Archivo de escritorio remoto (VNC)"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Propiedades"
 
@@ -107,6 +109,10 @@ msgstr "URL al que conectar"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Abrir archivo .vnc .o .rdp en la RUTA dada"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "RUTA"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Abrir en pantalla completa"
@@ -130,7 +136,7 @@ msgstr "Captura realizada"
 msgid "Open"
 msgstr "Abrir"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Falló la autenticación: %s"
@@ -165,7 +171,7 @@ msgstr ""
 "conectarse."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -183,11 +189,11 @@ msgstr "_Cerrar"
 msgid "Resize desktop"
 msgstr "Redimensionar escritorio"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Capturar la pantalla"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
@@ -208,7 +214,7 @@ msgstr "RDP (estándar para conectarse a Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (estándar para conectarse a Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Ayuda"
 
@@ -228,6 +234,7 @@ msgstr "_Contraseña"
 msgid "Sign In"
 msgstr "Registrarse"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Abrir conexión"
@@ -236,7 +243,7 @@ msgstr "Abrir conexión"
 msgid "Verify"
 msgstr "Comprobar"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -253,8 +260,9 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "En Windows ejecute certlm.msc o certmgr.msc\n"
 "y copie el certificado de\n"
@@ -263,34 +271,36 @@ msgstr ""
 "«certutil.exe -hashfile file SHA256».\n"
 "\n"
 "Si se usa GNOME en el punto final conectado,\n"
-"la huella se puede verificar en la Configuración,\n"
-"<b>Compartición>Escritorio remoto>Verificar cifrado</b>."
+"la huella se puede verificar en en panel,\n"
+"<b>Configuración>Compartición</b> o en.\n"
+"<b>Configuración>Sistema</b>, dentro de\n"
+"<b>Escritorio remoto>Verificar cifrado</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Certificado no esperado"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Eliminar el certificado local"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Se requiere autenticación"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Nombre de usuario…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Contraseña…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Dominio…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -298,7 +308,7 @@ msgstr ""
 "El campo del dominio normalmente es opcional y se puede\n"
 "dejar vacío"
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Autenticar"
 
@@ -400,35 +410,35 @@ msgstr "Desconectar"
 msgid "Keyboard shortcuts"
 msgstr "Atajos del teclado"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Atajo del teclado"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Acerca de Conexiones"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Retroceso"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Supr"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -468,13 +478,13 @@ msgstr "Modo escalado"
 msgid "Click the add button to create your first connection"
 msgstr "Pulse el botón «Añadir» para crear su primera conexión"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "No se pudo analizar el archivo"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "El archivo VNC no tiene la clave «%s»"
