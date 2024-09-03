@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-03-14 14:38+0000\n"
-"PO-Revision-Date: 2024-05-01 21:49+0300\n"
+"POT-Creation-Date: 2024-09-02 09:32+0000\n"
+"PO-Revision-Date: 2024-09-03 22:48+0300\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek <gnome-el-list@gnome.org>\n"
 "Language: el\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Συνδέσεις"
 
@@ -77,7 +77,7 @@ msgstr "Αρχείο απομακρυσμένης επιφάνειας εργα�
 msgid "Delete"
 msgstr "Διαγραφή"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Ιδιότητες"
 
@@ -118,6 +118,10 @@ msgstr "URL για σύνδεση"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Άνοιγμα αρχείου .vnc ή .rdp στο δοσμένο PATH"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "ΔΙΑΔΡΟΜΗ"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Άνοιγμα σε πλήρη οθόνη"
@@ -141,7 +145,7 @@ msgstr "Λήφθηκε στιγμιότυπο"
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Η πιστοποίηση απέτυχε: %s"
@@ -177,7 +181,7 @@ msgstr ""
 "να συνεχίσει τη σύνδεση."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -195,11 +199,11 @@ msgstr "_Κλείσιμο"
 msgid "Resize desktop"
 msgstr "Αλλαγή μεγέθους επιφάνειας εργασίας"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Λήψη στιγμιοτύπου"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Πλήρης οθόνη"
 
@@ -221,7 +225,7 @@ msgstr "RDP (πρότυπο για σύνδεση με Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (πρότυπο για σύνδεση με Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Βοήθεια"
 
@@ -250,7 +254,7 @@ msgstr "Άνοιγμα σύνδεσης"
 msgid "Verify"
 msgstr "Επαλήθευση"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Aκύρωση"
 
@@ -267,8 +271,9 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Στα Windows εκτελέστε το certlm.msc ή το certmgr.msc\n"
 "και αντιγράψτε το πιστοποιητικό από την\n"
@@ -277,35 +282,36 @@ msgstr ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "Εάν το GNOME χρησιμοποιείται στο συνδεδεμένο τελικό σημείο,\n"
-"το δακτυλικό αποτύπωμα μπορεί να επαληθευτεί στις Ρυθμίσεις,\n"
-"<b>Κοινή χρήση>Απομακρυσμένη επιφάνεια εργασίας>Επαλήθευση κρυπτογράφησης</"
-"b>."
+"το δακτυλικό αποτύπωμα μπορεί να επαληθευτεί στον πίνακα <b>Ρυθμίσεις>Κοινή "
+"χρήση</b>\n"
+"ή στον πίνακα <b>Ρυθμίσεις>Σύστημα</b> υπό το\n"
+"<b>Απομακρυσμένη επιφάνεια εργασίας>Επαλήθευση κρυπτογράφησης</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Απροσδόκητο πιστοποιητικό"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Διαγραφή τοπικού πιστοποιητικού"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Απαιτείται πιστοποίηση"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Όνομα χρήστη…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Συνθηματικό…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Τομέας…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -313,7 +319,7 @@ msgstr ""
 "Το πεδίο τομέα είναι συνήθως προαιρετικό και μπορεί\n"
 "να παραμείνει κενό."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Πιστοποίηση"
 
@@ -418,35 +424,35 @@ msgstr "Αποσύνδεση"
 msgid "Keyboard shortcuts"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Περί του Συνδέσεις"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -487,13 +493,13 @@ msgid "Click the add button to create your first connection"
 msgstr ""
 "Κάντε κλικ στο κουμπί προσθήκη για να δημιουργήσετε την πρώτη σας σύνδεση"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Αδυναμία ανάλυσης του αρχείου"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Λείπει το κλειδί “%s” στο αρχείο VNC"
