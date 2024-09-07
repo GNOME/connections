@@ -1,26 +1,26 @@
 # Indonesian translation for gnome-connections.
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
-# Andika Triwidada <atriwidada@gnome.org>, 2020.
+# Andika Triwidada <atriwidada@gnome.org>, 2020, 2024.
 # Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-09 11:56+0000\n"
-"PO-Revision-Date: 2024-02-20 19:43+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2024-08-31 14:13+0000\n"
+"PO-Revision-Date: 2024-09-07 16:20+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Sambungan"
 
@@ -57,7 +57,8 @@ msgstr ""
 "Sambungan menggunakan protokol VNC dan RDP yang didukung secara luas, dan "
 "salah satu dari ini harus diaktifkan pada destop yang ingin Anda sambungkan."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
@@ -73,14 +74,14 @@ msgstr "Berkas Destop Jarak Jauh (VNC)"
 msgid "Delete"
 msgstr "Hapus"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Properti"
 
 #: src/application.vala:88
 msgid "translator-credits"
 msgstr ""
-"Andika Triwidada <andika@gmail.com>, 2020\n"
+"Andika Triwidada <andika@gmail.com>, 2020, 2024.\n"
 "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021-2024"
 
 #: src/application.vala:89 src/application.vala:242
@@ -109,6 +110,10 @@ msgstr "URL untuk disambungkan"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Buka berkas .vnc atau .rdp di PATH yang diberikan"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "PATH"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Buka di layar penuh"
@@ -132,7 +137,7 @@ msgstr "Cuplikan layar diambil"
 msgid "Open"
 msgstr "Buka"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Autentikasi gagal: %s"
@@ -167,7 +172,7 @@ msgstr ""
 "terhubung."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -185,11 +190,11 @@ msgstr "_Tutup"
 msgid "Resize desktop"
 msgstr "Ubah ukuran destop"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Ambil Cuplikan Layar"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Layar Penuh"
 
@@ -209,7 +214,7 @@ msgstr "RDP (standar untuk terhubung ke Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standar untuk terhubung ke Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Bantuan"
 
@@ -229,6 +234,7 @@ msgstr "_Kata Sandi"
 msgid "Sign In"
 msgstr "Masuk"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Buka Sambungan"
@@ -237,7 +243,7 @@ msgstr "Buka Sambungan"
 msgid "Verify"
 msgstr "Verifikasi"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Batal"
 
@@ -254,44 +260,46 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Di Windows, jalankan certlm.msc atau certmgr.msc\n"
 "dan salin sertifikat dari\n"
-"<b>Destop Jauh>Sertifikat</b> ke berkas.\n"
+"<b>Destop Jauh>Sertifikat</b> ke suatu berkas.\n"
 "Kemudian dapatkan sidik jarinya melalui\n"
-"\"certutil.exe -file hashfile SHA256\".\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "Jika GNOME digunakan pada titik akhir yang terhubung,\n"
-"sidik jari dapat diverifikasi di Pengaturan,\n"
-"<b>Berbagi>Destop Jarak Jauh>Verifikasi Enkripsi</b>."
+"sidik jari dapat diverifikasi di panel <b>Pengaturan>\n"
+"Berbagi</b> atau <b>Pengaturan>Sistem</b> di bawah\n"
+"<b>Destop Jarak Jauh>Verifikasi Enkripsi</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Sertifikat Tak Terduga"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Hapus Sertifikat Lokal"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Autentikasi Diperlukan"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Nama pengguna…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Kata sandi…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Domain…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -299,7 +307,7 @@ msgstr ""
 "Kolom domain umumnya opsional dan bisa saja\n"
 "dibiarkan kosong."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Autentikasi"
 
@@ -400,35 +408,35 @@ msgstr "Putuskan"
 msgid "Keyboard shortcuts"
 msgstr "Pintasan papan tik"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Papan Tik"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Tentang Sambungan"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -468,94 +476,13 @@ msgstr "Mode skala"
 msgid "Click the add button to create your first connection"
 msgstr "Klik tombol tambah untuk membuat sambungan pertama Anda"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Tidak dapat mengurai berkas"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "Berkas VNC kurang kunci \"%s\""
-
-#, c-format
-#~ msgid "“%s” requires authentication"
-#~ msgstr "\"%s\" membutuhkan autentikasi"
-
-#~ msgid "Learn about how Connections works."
-#~ msgstr "Pelajari tentang cara kerja Koneksi."
-
-#~ msgid "Use other desktops, remotely"
-#~ msgstr "Gunakan destop lain, dari jarak jauh"
-
-#~ msgid "Enable remote desktop before connecting"
-#~ msgstr "Aktifkan destop jarak jauh sebelum menyambungkan"
-
-#~ msgid ""
-#~ "Computers need to be set up for remote desktop before you can connect to "
-#~ "them."
-#~ msgstr ""
-#~ "Komputer perlu diatur untuk destop jarak jauh sebelum Anda dapat "
-#~ "terhubung ke mereka."
-
-#~ msgid "We hope that you enjoy Connections!"
-#~ msgstr "Kami harap Anda menikmati Koneksi!"
-
-#~ msgid "More information can be found in the help."
-#~ msgstr "Informasi lebih lanjut dapat ditemukan dalam bantuan."
-
-#~ msgid "Scaling"
-#~ msgstr "Penskalaan"
-
-#~ msgid "Learn more."
-#~ msgstr "Pelajari lebih lanjut."
-
-#~ msgid "Read our tutorial to learn how."
-#~ msgstr "Baca tutorial kami untuk mempelajari caranya."
-
-#~ msgid "Connect to a Desktop"
-#~ msgstr "Sambungkan ke Destop"
-
-#~ msgid "Addresses start with either vnc:// or rdp://."
-#~ msgstr "Alamat dimulai dengan vnc:// atau rdp://."
-
-#~ msgid "Connections makes it easy to use other desktops remotely."
-#~ msgstr "Sambungan memudahkan penggunaan destop lain dari jarak jauh."
-
-#~ msgid "Connect to Linux or Windows"
-#~ msgstr "Sambungkan ke Linux atau Windows"
-
-#~ msgid "Remotely access a range of desktop operating systems."
-#~ msgstr "Mengakses berbagai sistem operasi destop dari jarak jauh."
-
-#~ msgid "Configure for Access"
-#~ msgstr "Konfigurasikan untuk Akses"
-
-#~ msgid "To connect to a desktop, it needs to be setup first."
-#~ msgstr "Untuk tersambung ke destop, perlu penyetelan terlebih dahulu."
-
-#~ msgid "GNOME Connections"
-#~ msgstr "GNOME Koneksi"
-
-#~ msgid "A remote desktop client for the GNOME desktop environment."
-#~ msgstr "Klien destop jarak jauh untuk lingkungan destop GNOME."
-
-#~ msgid "Create a New Connection"
-#~ msgstr "Membuat Koneksi Baru"
-
-#~ msgid ""
-#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
-#~ "vnc://"
-#~ msgstr ""
-#~ "Masukkan alamat mesin untuk dihubungi. Alamat dapat dimulai dengan rdp:// "
-#~ "atau vnc://"
-
-#~ msgid "Server"
-#~ msgstr "Peladen"
-
-#~ msgid "Create"
-#~ msgstr "Buat"
-
-#~ msgid "org.gnome.Connections"
-#~ msgstr "org.gnome.Connections"
