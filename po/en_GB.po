@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-02-21 20:45+0000\n"
-"PO-Revision-Date: 2024-02-22 15:36+0000\n"
+"POT-Creation-Date: 2024-07-31 16:56+0000\n"
+"PO-Revision-Date: 2024-08-13 20:27+0100\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English - United Kingdom <en@li.org>\n"
 "Language: en_GB\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Connections"
 
@@ -75,7 +75,7 @@ msgstr "Remote Desktop (VNC) file"
 msgid "Delete"
 msgstr "Delete"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Properties"
 
@@ -113,6 +113,10 @@ msgstr "URL to connect"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Open .vnc or .rdp file at the given PATH"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "PATH"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Open in full screen"
@@ -136,7 +140,7 @@ msgstr "Screenshot taken"
 msgid "Open"
 msgstr "Open"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Authentication failed: %s"
@@ -171,7 +175,7 @@ msgstr ""
 "connect."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -189,11 +193,11 @@ msgstr "_Close"
 msgid "Resize desktop"
 msgstr "Resize desktop"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Take Screenshot"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Fullscreen"
 
@@ -213,7 +217,7 @@ msgstr "RDP (standard for connecting to Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standard for connecting to Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Help"
 
@@ -233,6 +237,7 @@ msgstr "_Password"
 msgid "Sign In"
 msgstr "Sign In"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Open Connection"
@@ -241,7 +246,7 @@ msgstr "Open Connection"
 msgid "Verify"
 msgstr "Verify"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -250,6 +255,16 @@ msgid "Verify Fingerprint"
 msgstr "Verify Fingerprint"
 
 #: src/ui/dialog.ui:211
+#| msgid ""
+#| "On Windows run certlm.msc or certmgr.msc\n"
+#| "and copy the certificate from\n"
+#| "<b>Remote Desktop>Certificates</b> to a file.\n"
+#| "Then obtain its fingerprint via\n"
+#| "\"certutil.exe -hashfile file SHA256\".\n"
+#| "\n"
+#| "If GNOME is used on the connected endpoint,\n"
+#| "the fingerprint can be verified in the Settings,\n"
+#| "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgid ""
 "On Windows run certlm.msc or certmgr.msc\n"
 "and copy the certificate from\n"
@@ -258,44 +273,46 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
-"On Windows, run certlm.msc or certmgr.msc\n"
+"On Windows run certlm.msc or certmgr.msc\n"
 "and copy the certificate from\n"
 "<b>Remote Desktop>Certificates</b> to a file.\n"
 "Then obtain its fingerprint via\n"
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Unexpected Certificate"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Delete Local Certificate"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Authentication Required"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Username…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Password…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Domain…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -303,7 +320,7 @@ msgstr ""
 "Domain field is commonly optional and can be\n"
 "left empty."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Authenticate"
 
@@ -405,35 +422,35 @@ msgstr "Disconnect"
 msgid "Keyboard shortcuts"
 msgstr "Keyboard shortcuts"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Keyboard Shortcuts"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "About Connections"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -473,13 +490,13 @@ msgstr "Scale mode"
 msgid "Click the add button to create your first connection"
 msgstr "Click the add button to create your first connection"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Couldn’t parse the file"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC File is missing key »%s«"
