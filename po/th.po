@@ -1,0 +1,466 @@
+# Thai translation for connections.
+# Copyright (C) 2024 connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the connections package.
+# Aefgh Threenine <aefgh39622@gmail.com>,  2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: connections master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2024-09-09 22:02+0000\n"
+"PO-Revision-Date: 2024-09-10 16:40+0700\n"
+"Last-Translator: \n"
+"Language-Team: Thai <Thai>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
+msgid "Connections"
+msgstr "การเชื่อมต่อ"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "ดูและใช้คอมพิวเตอร์เครื่องอื่นๆ"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"“การเชื่อมต่อ” ให้คุณเชื่อมต่อและใช้คอมพิวเตอร์เครื่องอื่นๆ ได้ "
+"ซึ่งเป็นวิธีที่ดีในการเข้าถึงเนื้อหาหรือซอฟต์แวร์บนระบบปฏิบัติการเดสก์ท็อปอื่น "
+"โดยสามารถใช้เพื่อให้ความช่วยเหลือกับผู้ใช้ที่อาจต้องการความช่วยเหลือได้"
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"คุณสามารถเชื่อมต่อกับระบบปฏิบัติการต่างๆ ได้ รวมถึง Linux และ Windows "
+"นอกจากนี้ยังสามารถเชื่อมต่อกับคอมพิวเตอร์เสมือนได้เช่นกัน"
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"“การเชื่อมต่อ” ใช้โพรโทคอล VNC และ RDP ที่รองรับกันอย่างกว้างขวาง "
+"และคุณจะต้องเปิดใช้โพรโทคอลแบบใดแบบหนึ่งนี้บนเครื่องที่คุณต้องการเชื่อมต่อไปด้วย"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
+msgid "The GNOME Project"
+msgstr "The GNOME Project"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr "vnc;rdp;ระยะไกล;คอมพิวเตอร์;windows;รองรับ;เข้าถึง;ดู;"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "ไฟล์ Remote Desktop (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "ลบ"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
+msgid "Properties"
+msgstr "คุณสมบัติ"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr "Aefgh Threenine <aefgh39622@gmail.com>"
+
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "ลูกข่ายเดสก์ท็อประยะไกลสำหรับสภาพแวดล้อมเดสก์ท็อป GNOME"
+
+#: src/application.vala:151
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "ไม่สามารถเปิดไฟล์ที่มีชนิดไมม์ %s ซึ่งไม่รู้จัก"
+
+#: src/application.vala:182
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "การเชื่อมต่อกับ “%s” ถูกลบแล้ว"
+
+#: src/application.vala:185
+msgid "Undo"
+msgstr "เรียกคืน"
+
+#: src/application.vala:232
+msgid "URL to connect"
+msgstr "URL ที่จะเชื่อมต่อ"
+
+#: src/application.vala:233
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "เปิดไฟล์ .vnc หรือ .rdp ที่พาธตามที่ระบุ"
+
+#: src/application.vala:233
+msgid "PATH"
+msgstr "พาธ"
+
+#: src/application.vala:234
+msgid "Open in full screen"
+msgstr "เปิดแบบเต็มจอ"
+
+#: src/application.vala:257
+msgid "Too many command-line arguments specified.\n"
+msgstr "ระบุอาร์กิวเมนต์บรรทัดคำสั่งมากเกินไป\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:70
+#, c-format
+msgid "Screenshot from %s"
+msgstr "ภาพหน้าจอเมื่อ %s"
+
+#: src/connection.vala:85
+msgid "Screenshot taken"
+msgstr "เก็บภาพหน้าจอแล้ว"
+
+#. Translators: Open is a verb
+#: src/connection.vala:88
+msgid "Open"
+msgstr "เปิด"
+
+#: src/connection.vala:205
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "ยืนยันตัวตนไม่สำเร็จ: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"กำลังเชื่อมต่อกับ “%s” เป็นครั้งแรก เพื่อให้แน่ใจว่าคุณกำลังเชื่อมต่อกับเครื่องดังกล่าวจริงๆ "
+"โปรดยืนยันว่าลายนิ้วมือดังกล่าวตรงกันทั้งสองฝั่ง โดยกระบวนการนี้จะทำเพียงครั้งเดียว"
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"ใบรับรอง “%s” ที่เซิร์ฟเวอร์ระยะไกลไม่ตรงกับฉบับที่อยู่ในเครื่อง "
+"อาจเป็นไปได้ว่ามีคนกำลังปลอมแปลงเซิร์ฟเวอร์ดังกล่าว"
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr "ใบรับรอง “%s” ที่เซิร์ฟเวอร์ระยะไกลต้องการชื่อผู้ใช้และรหัสผ่านเพื่อใช้ในการเชื่อมต่อ"
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:131
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "ไ_ม่เป็นไร"
+
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_ปิด"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "เปลี่ยนขนาดเดสก์ท็อป"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:236
+msgid "Take Screenshot"
+msgstr "เก็บภาพหน้าจอ"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:198
+msgid "Fullscreen"
+msgstr "เต็มจอ"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "ป้อนหมายเลขเครือข่ายของเดสก์ท็อประยะไกลที่จะเชื่อมต่อ:"
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "ชนิดการเชื่อมต่อ"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (มาตรฐานสำหรับการเชื่อมต่อกับระบบ Windows)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (มาตรฐานสำหรับการเชื่อมต่อกับระบบ Linux)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
+msgid "Help"
+msgstr "วิธีใช้"
+
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
+msgid "Connect"
+msgstr "เชื่อมต่อ"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_ชื่อผู้ใช้"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "รหัส_ผ่าน"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "ลงชื่อเข้า"
+
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "เปิดการเชื่อมต่อ"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "ยืนยัน"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "ยืนยันลายนิ้วมือ"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+
+#: src/ui/dialog.ui:292
+msgid "Unexpected Certificate"
+msgstr "ใบรับรองที่ไม่คาดคิด"
+
+#: src/ui/dialog.ui:334
+msgid "Delete Local Certificate"
+msgstr "ลบใบรับรองในเครื่อง"
+
+#: src/ui/dialog.ui:387
+msgid "Authentication Required"
+msgstr "ต้องยืนยันตัวตน"
+
+#: src/ui/dialog.ui:438
+msgid "Username…"
+msgstr "ชื่อผู้ใช้…"
+
+#: src/ui/dialog.ui:466
+msgid "Password…"
+msgstr "รหัสผ่าน…"
+
+#: src/ui/dialog.ui:516
+msgid "Domain…"
+msgstr "โดเมน…"
+
+#: src/ui/dialog.ui:537
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"ช่อง “โดเมน” ไม่บังคับกรอก\n"
+"และสามารถเว้นว่างได้"
+
+#: src/ui/dialog.ui:639
+msgid "Authenticate"
+msgstr "ยืนยันตัวตน"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
+msgid "Welcome to Connections"
+msgstr "ยินดีต้อนรับสู่ “การเชื่อมต่อ”"
+
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:50
+msgid "Access other desktops"
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Connect to different operating systems"
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Setup is required"
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Start by creating your first connection"
+msgstr ""
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "ปรับแต่งการเชื่อมต่อ"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
+msgid "Address"
+msgstr "ที่อยู่"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "ชื่อ"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "ปรับพอดีหน้าต่าง"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "ขนาดดั้งเดิม"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "ใหม่"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "เมนูแอปพลิเคชัน"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "ค้นหา"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "ย้อนกลับ"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "เมนูการแสดงผล"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "ตัดการเชื่อมต่อ"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "ปุ่มลัดแป้นพิมพ์"
+
+#: src/ui/topbar.ui:221
+msgid "Keyboard Shortcuts"
+msgstr "ปุ่มลัดแป้นพิมพ์"
+
+#: src/ui/topbar.ui:229
+msgid "About Connections"
+msgstr "เกี่ยวกับ “การเชื่อมต่อ”"
+
+#: src/ui/topbar.ui:254
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:261
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:268
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:275
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:282
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:289
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "การแสดงผล"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "View only"
+msgstr "ดูอย่างเดียว"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "Show local pointer"
+msgstr "แสดงตัวชี้เมาส์จากในเครื่อง"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "เปิดใช้ระบบเสียง"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "แบนด์วิดธ์"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "คุณภาพสูง"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "รีเฟรชแบบเร็ว"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "โหมดปรับมาตราส่วน"
+
+#: src/ui/window.ui:52
+msgid "Click the add button to create your first connection"
+msgstr "คลิกปุ่มเพิ่มเพื่อสร้างการเชื่อมต่อรายการแรกของคุณ"
+
+#: src/vnc-connection.vala:150
+msgid "Couldn’t parse the file"
+msgstr "ไม่สามารถแจงไฟล์ได้"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "ไฟล์ VNC ไม่มีคีย์ “%s”"
