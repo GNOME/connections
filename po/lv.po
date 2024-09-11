@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-03-04 17:44+0000\n"
-"PO-Revision-Date: 2024-03-08 23:34+0200\n"
+"POT-Creation-Date: 2024-08-31 14:13+0000\n"
+"PO-Revision-Date: 2024-09-11 22:37+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:112
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Savienojumi"
 
@@ -74,7 +74,7 @@ msgstr "Attālās darbvirsmas (VNC) datne"
 msgid "Delete"
 msgstr "Dzēst"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Īpašības"
 
@@ -108,6 +108,10 @@ msgstr "URL, ar kuru savienoties"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Atvērt .vnc vai .rdp datni dotajā CEĻĀ"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "CEĻŠ"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Atvērt pilnekrāna režīmā"
@@ -131,7 +135,7 @@ msgstr "Ekrānattēls uzņemts"
 msgid "Open"
 msgstr "Atvērt"
 
-#: src/connection.vala:199
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Neizdevās autentificēties: %s"
@@ -153,8 +157,8 @@ msgid ""
 "The remote server “%s” certificate doesn't match local copy. It may be "
 "someone's pretending to be the server."
 msgstr ""
-"Attālā servera “%s” sertifikāts neatbilst lokālajai kopijai. Varētu būt, "
-"ka kāds izliekas par to serveri."
+"Attālā servera “%s” sertifikāts neatbilst lokālajai kopijai. Varētu būt, ka "
+"kāds izliekas par to serveri."
 
 #: src/dialogs.vala:241
 #, c-format
@@ -162,11 +166,11 @@ msgid ""
 "The remote server “%s” requires a username and password to continue to "
 "connect."
 msgstr ""
-"Lai turpinātu savienoties, attālajam serverim “%s” jānorāda "
-"lietotājvārdu un paroli."
+"Lai turpinātu savienoties, attālajam serverim “%s” jānorāda lietotājvārdu un "
+"paroli."
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:128
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
@@ -184,11 +188,11 @@ msgstr "_Aizvērt"
 msgid "Resize desktop"
 msgstr "Mainīt darbvirsmas izmēru"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Uzņemt ekrānattēlu"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Pilnekrāns"
 
@@ -209,7 +213,7 @@ msgstr "RDP (standarts, lai savienotos ar Windows)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "VNC (standarts, lai savienotos ar Linux)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Palīdzība"
 
@@ -229,6 +233,7 @@ msgstr "_Parole"
 msgid "Sign In"
 msgstr "Ierakstīties"
 
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
 #: src/ui/dialog.ui:18
 msgid "Open Connection"
 msgstr "Atvērt savienojumu"
@@ -237,7 +242,7 @@ msgstr "Atvērt savienojumu"
 msgid "Verify"
 msgstr "Pārbaudīt"
 
-#: src/ui/dialog.ui:105 src/ui/dialog.ui:612
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
 msgid "Cancel"
 msgstr "Atcelt"
 
@@ -246,6 +251,16 @@ msgid "Verify Fingerprint"
 msgstr "Pārbaudīt digitālo nospiedumu"
 
 #: src/ui/dialog.ui:211
+#| msgid ""
+#| "On Windows run certlm.msc or certmgr.msc\n"
+#| "and copy the certificate from\n"
+#| "<b>Remote Desktop>Certificates</b> to a file.\n"
+#| "Then obtain its fingerprint via\n"
+#| "\"certutil.exe -hashfile file SHA256\".\n"
+#| "\n"
+#| "If GNOME is used on the connected endpoint,\n"
+#| "the fingerprint can be verified in the Settings,\n"
+#| "<b>Sharing>Remote Desktop>Verify Encryption</b>."
 msgid ""
 "On Windows run certlm.msc or certmgr.msc\n"
 "and copy the certificate from\n"
@@ -254,8 +269,9 @@ msgid ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "If GNOME is used on the connected endpoint,\n"
-"the fingerprint can be verified in the Settings,\n"
-"<b>Sharing>Remote Desktop>Verify Encryption</b>."
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
 "Uz Windows, palaidiet certlm.msc vai certmgr.msc\n"
 "un kopējiet sertifikātu no\n"
@@ -264,34 +280,36 @@ msgstr ""
 "\"certutil.exe -hashfile file SHA256\".\n"
 "\n"
 "Ja GNOME tiek izmantots savienojuma galapunktā,\n"
-"digitālo nospiedumu var pārbaudīt Iestatījumos,\n"
-"<b>Koplietošana>Attālā darbvirsma>Pārbaudīt šifrēšanu</b>."
+"digitālo nospiedumu var pārbaudīt\n"
+"<b>Iestatījumi>Kopīgošana</b> panelī vai\n"
+"<b>Iestatījumi>Sistēma</b> panelī zem,\n"
+"<b>Attālā darbvirsma>Pārbaudīt šifrēšanu</b>."
 
-#: src/ui/dialog.ui:291
+#: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
 msgstr "Negaidīts sertifikāts"
 
-#: src/ui/dialog.ui:333
+#: src/ui/dialog.ui:334
 msgid "Delete Local Certificate"
 msgstr "Dzēst lokālo sertifikātu"
 
-#: src/ui/dialog.ui:386
+#: src/ui/dialog.ui:387
 msgid "Authentication Required"
 msgstr "Nepieciešama autentifikācija"
 
-#: src/ui/dialog.ui:437
+#: src/ui/dialog.ui:438
 msgid "Username…"
 msgstr "Lietotājvārds…"
 
-#: src/ui/dialog.ui:465
+#: src/ui/dialog.ui:466
 msgid "Password…"
 msgstr "Parole…"
 
-#: src/ui/dialog.ui:515
+#: src/ui/dialog.ui:516
 msgid "Domain…"
 msgstr "Domēns…"
 
-#: src/ui/dialog.ui:536
+#: src/ui/dialog.ui:537
 msgid ""
 "Domain field is commonly optional and can be\n"
 "left empty."
@@ -299,7 +317,7 @@ msgstr ""
 "Domēna lauks parasti ir neobligāts un\n"
 "to var atstāt tukšu."
 
-#: src/ui/dialog.ui:638
+#: src/ui/dialog.ui:639
 msgid "Authenticate"
 msgstr "Autentificēt"
 
@@ -400,35 +418,35 @@ msgstr "Atvienoties"
 msgid "Keyboard shortcuts"
 msgstr "Tastatūras īsinājumtaustiņi"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Tastatūras īsinājumtaustiņi"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "Par Savienojumiem"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -468,13 +486,13 @@ msgstr "Mērogošanas režīms"
 msgid "Click the add button to create your first connection"
 msgstr "Spiediet pievienošanas pogu, lai izveidotu savu pirmo savienojumu."
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Neizdevās parsēt datni"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC datnei trūkst “%s” atslēgas"
