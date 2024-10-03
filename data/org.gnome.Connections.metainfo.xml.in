@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2020 Red Hat, Inc -->
-<component type="desktop">
-  <id>@app-id@.desktop</id>
+<component type="desktop-application">
+  <id>@app-id@</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Connections</name>
@@ -31,13 +31,10 @@
       <image>https://gitlab.gnome.org/GNOME/connections/-/raw/master/data/screenshots/42/04-windows.png</image>
     </screenshot>
   </screenshots>
-  <releases>
-    <release version="47.0" date="2024-09-13">
-      <description>
-        <p>GNOME Connections 47.0 culminates six months of feature development, bugfixes, and performance improvements.</p>
-      </description>
-    </release>
-  </releases>
+  <branding>
+    <color type="primary" scheme_preference="light">#00b3c1</color>
+    <color type="primary" scheme_preference="dark">#007b6e</color>
+  </branding>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
   <project_group>GNOME</project_group>
   <!-- developer_name tag deprecated with Appstream 1.0 -->
@@ -45,7 +42,6 @@
   <developer id="org.gnome">
     <name>The GNOME Project</name>
   </developer>
-  <update_contact>felipeborges_at_gnome.org</update_contact>
   <url type="homepage">https://apps.gnome.org/Connections</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/connections/issues</url>
   <url type="donation">https://www.gnome.org/donate/</url>
@@ -54,4 +50,22 @@
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/connections</url>
   <translation type="gettext">gnome-connections</translation>
   <content_rating type="oars-1.1" />
+  <requires>
+    <display_length compare="ge">980</display_length>
+  </requires>
+  <recommends>
+    <internet>always</internet>
+  </recommends>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </supports>
+  <update_contact>felipeborges_at_gnome.org</update_contact>
+  <releases>
+    <release version="47.0" date="2024-09-13">
+      <description>
+        <p>GNOME Connections 47.0 culminates six months of feature development, bugfixes, and performance improvements.</p>
+      </description>
+    </release>
+  </releases>
 </component>

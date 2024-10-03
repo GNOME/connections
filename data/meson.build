@@ -24,11 +24,11 @@ appstream_conf = configuration_data()
 appstream_conf.set('app-id', application_id)
 appstream_file = i18n.merge_file(
   input: configure_file(
-    input: 'org.gnome.Connections.appdata.xml.in',
-    output: 'org.gnome.Connections.appdata.xml.in',
+    input: 'org.gnome.Connections.metainfo.xml.in',
+    output: 'org.gnome.Connections.metainfo.xml.in',
     configuration: appstream_conf
   ),
-  output: '@0@.appdata.xml'.format(application_id),
+  output: '@0@.metainfo.xml'.format(application_id),
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'metainfo')
