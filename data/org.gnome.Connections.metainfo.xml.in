@@ -60,7 +60,6 @@
     <control>keyboard</control>
     <control>pointing</control>
   </supports>
-  <update_contact>felipeborges_at_gnome.org</update_contact>
   <releases>
     <release version="47.0" date="2024-09-13">
       <description>
