@@ -1,7 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/org.gnome.Connections.appdata.xml.in
 data/org.gnome.Connections.desktop.in
+data/org.gnome.Connections.metainfo.xml.in
 data/org.gnome.Connections.xml
 src/actions-popover.vala
 src/application.vala
