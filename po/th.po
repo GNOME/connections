@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-09-09 22:02+0000\n"
-"PO-Revision-Date: 2024-09-10 16:40+0700\n"
+"POT-Creation-Date: 2024-09-15 02:37+0000\n"
+"PO-Revision-Date: 2024-10-19 12:53+0700\n"
 "Last-Translator: \n"
 "Language-Team: Thai <Thai>\n"
 "Language: th\n"
@@ -17,9 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.5\n"
 
-#: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
+#: data/org.gnome.Connections.appdata.xml.in:7 data/org.gnome.Connections.desktop.in:3
+#: src/application.vala:92 src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "การเชื่อมต่อ"
 
@@ -29,10 +28,9 @@ msgstr "ดูและใช้คอมพิวเตอร์เครื่
 
 #: data/org.gnome.Connections.appdata.xml.in:10
 msgid ""
-"Connections allows you to connect to and use other desktops. This can be a "
-"great way to access content or software on a different desktop operating "
-"system. It can also be used as a way to provide support to users who might "
-"need help."
+"Connections allows you to connect to and use other desktops. This can be a great way to "
+"access content or software on a different desktop operating system. It can also be used as a "
+"way to provide support to users who might need help."
 msgstr ""
 "“การเชื่อมต่อ” ให้คุณเชื่อมต่อและใช้คอมพิวเตอร์เครื่องอื่นๆ ได้ "
 "ซึ่งเป็นวิธีที่ดีในการเข้าถึงเนื้อหาหรือซอฟต์แวร์บนระบบปฏิบัติการเดสก์ท็อปอื่น "
@@ -40,16 +38,16 @@ msgstr ""
 
 #: data/org.gnome.Connections.appdata.xml.in:13
 msgid ""
-"A range of different operating systems can be connected to, including Linux "
-"and Windows desktops. You can also connect to virtual machines."
+"A range of different operating systems can be connected to, including Linux and Windows "
+"desktops. You can also connect to virtual machines."
 msgstr ""
 "คุณสามารถเชื่อมต่อกับระบบปฏิบัติการต่างๆ ได้ รวมถึง Linux และ Windows "
 "นอกจากนี้ยังสามารถเชื่อมต่อกับคอมพิวเตอร์เสมือนได้เช่นกัน"
 
 #: data/org.gnome.Connections.appdata.xml.in:16
 msgid ""
-"Connections uses the widely supported VNC and RDP protocols, and one of "
-"these must be enabled on the desktop that you want to connect to."
+"Connections uses the widely supported VNC and RDP protocols, and one of these must be "
+"enabled on the desktop that you want to connect to."
 msgstr ""
 "“การเชื่อมต่อ” ใช้โพรโทคอล VNC และ RDP ที่รองรับกันอย่างกว้างขวาง "
 "และคุณจะต้องเปิดใช้โพรโทคอลแบบใดแบบหนึ่งนี้บนเครื่องที่คุณต้องการเชื่อมต่อไปด้วย"
@@ -140,9 +138,8 @@ msgstr "ยืนยันตัวตนไม่สำเร็จ: %s"
 #: src/dialogs.vala:167
 #, c-format
 msgid ""
-"Connecting to “%s” for the first time. To be sure you're connecting to the "
-"machine it claims to be, please verify the fingerprints match. This process "
-"is only done once."
+"Connecting to “%s” for the first time. To be sure you're connecting to the machine it claims "
+"to be, please verify the fingerprints match. This process is only done once."
 msgstr ""
 "กำลังเชื่อมต่อกับ “%s” เป็นครั้งแรก เพื่อให้แน่ใจว่าคุณกำลังเชื่อมต่อกับเครื่องดังกล่าวจริงๆ "
 "โปรดยืนยันว่าลายนิ้วมือดังกล่าวตรงกันทั้งสองฝั่ง โดยกระบวนการนี้จะทำเพียงครั้งเดียว"
@@ -150,17 +147,14 @@ msgstr ""
 #: src/dialogs.vala:201
 #, c-format
 msgid ""
-"The remote server “%s” certificate doesn't match local copy. It may be "
-"someone's pretending to be the server."
+"The remote server “%s” certificate doesn't match local copy. It may be someone's pretending "
+"to be the server."
 msgstr ""
-"ใบรับรอง “%s” ที่เซิร์ฟเวอร์ระยะไกลไม่ตรงกับฉบับที่อยู่ในเครื่อง "
-"อาจเป็นไปได้ว่ามีคนกำลังปลอมแปลงเซิร์ฟเวอร์ดังกล่าว"
+"ใบรับรอง “%s” ที่เซิร์ฟเวอร์ระยะไกลไม่ตรงกับฉบับที่อยู่ในเครื่อง อาจเป็นไปได้ว่ามีคนกำลังปลอมแปลงเซิร์ฟเวอร์ดังกล่าว"
 
 #: src/dialogs.vala:241
 #, c-format
-msgid ""
-"The remote server “%s” requires a username and password to continue to "
-"connect."
+msgid "The remote server “%s” requires a username and password to continue to connect."
 msgstr "ใบรับรอง “%s” ที่เซิร์ฟเวอร์ระยะไกลต้องการชื่อผู้ใช้และรหัสผ่านเพื่อใช้ในการเชื่อมต่อ"
 
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
@@ -256,6 +250,16 @@ msgid ""
 "panel or <b>Settings>System</b> panel under\n"
 "<b>Remote Desktop>Verify Encryption</b>."
 msgstr ""
+"ใน Windows ให้เรียกใช้ certlm.msc หรือ certmgr.msc\n"
+"แล้วคัดลอกใบรับรองจาก\n"
+"<b>เดสก์ท็อประยะไกล>ใบรับรอง</b> ไปยังไฟล์\n"
+"แล้วดึงลายนิ้วมือของใบรับรองออกมาโดยใช้คำสั่ง\n"
+"“certutil.exe -hashfile file SHA256”\n"
+"\n"
+"ถ้ามีการใช้ GNOME อยู่ที่ตำแหน่งข้อมูลซึ่งเชื่อมต่ออยู่\n"
+"คุณสามารถยืนยันลายนิ้วมือได้ในแผง <b>ตั้งค่า>การใช้ร่วมกัน</b>\n"
+"หรือแผง <b>ตั้งค่า>ระบบ</b> ภายใต้หัวข้อ\n"
+"<b>เดสก์ท็อประยะไกล>ยืนยันการเข้ารหัสลับ</b>"
 
 #: src/ui/dialog.ui:292
 msgid "Unexpected Certificate"
@@ -299,44 +303,43 @@ msgstr "ยินดีต้อนรับสู่ “การเชื่�
 
 #: src/ui/onboarding-dialog.ui:43
 msgid "Click next to learn about remote desktop."
-msgstr ""
+msgstr "คลิก “ถัดไป” เพื่อเรียนรู้เกี่ยวกับเดสก์ท็อประยะไกล"
 
 #: src/ui/onboarding-dialog.ui:50
 msgid "Access other desktops"
-msgstr ""
+msgstr "เข้าถึงคอมพิวเตอร์เครื่องอื่นๆ"
 
 #: src/ui/onboarding-dialog.ui:51
 msgid ""
-"Connections allows viewing the screens of other desktops. They can also be "
-"controlled using the pointer and keyboard."
+"Connections allows viewing the screens of other desktops. They can also be controlled using "
+"the pointer and keyboard."
 msgstr ""
+"“การเชื่อมต่อ” สามารถให้คุณดูหน้าจอของคอมพิวเตอร์เครื่องอื่นๆ ได้ "
+"และยังสามารถควบคุมเครื่องโดยใช้ตัวชี้เมาส์และแป้นพิมพ์ได้ด้วย"
 
 #: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
-msgstr ""
+msgstr "เชื่อมต่อกับระบบปฏิบัติการต่างๆ"
 
 #: src/ui/onboarding-dialog.ui:59
 msgid "You can access Linux, Mac, and Windows desktops."
-msgstr ""
+msgstr "คุณสามารถเข้าถึงคอมพิวเตอร์ระบบ Linux, Mac และ Windows ได้"
 
 #: src/ui/onboarding-dialog.ui:66
 msgid "Setup is required"
-msgstr ""
+msgstr "จำเป็นต้องตั้งค่าก่อน"
 
 #: src/ui/onboarding-dialog.ui:67
-msgid ""
-"Remote desktop typically needs to be enabled on the computer you want to "
-"connect to."
-msgstr ""
+msgid "Remote desktop typically needs to be enabled on the computer you want to connect to."
+msgstr "โดยปกติแล้ว คุณจะต้องเปิดใช้เดสก์ท็อประยะไกลบนคอมพิวเตอร์ที่คุณต้องการเชื่อมต่อเสียก่อน"
 
 #: src/ui/onboarding-dialog.ui:74
 msgid "Start by creating your first connection"
-msgstr ""
+msgstr "เริ่มจากตั้งค่าการเชื่อมต่อแรกของคุณ"
 
 #: src/ui/onboarding-dialog.ui:75
-msgid ""
-"To begin, you will need the address of the computer you want to connect to."
-msgstr ""
+msgid "To begin, you will need the address of the computer you want to connect to."
+msgstr "เมื่อต้องการเริ่ม คุณจะต้องทราบที่อยู่ของเครื่องคอมพิวเตอร์ที่คุณต้องการเชื่อมต่อ"
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -459,8 +462,8 @@ msgid "Couldn’t parse the file"
 msgstr "ไม่สามารถแจงไฟล์ได้"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
-#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163 src/vnc-connection.vala:168
+#: src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "ไฟล์ VNC ไม่มีคีย์ “%s”"
