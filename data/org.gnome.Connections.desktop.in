@@ -4,6 +4,8 @@ Exec=gnome-connections %U
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;RemoteAccess;Network;
+# Translators: "windows" refers specifically to the Microsoft Windows brand,
+# not a desktop window or a pane of glass in the side of a building
 Keywords=vnc;rdp;remote;desktop;windows;support;access;view
 StartupNotify=true
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
