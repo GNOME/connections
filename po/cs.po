@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: connections\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2024-07-31 16:56+0000\n"
-"PO-Revision-Date: 2024-08-29 23:26+0200\n"
+"POT-Creation-Date: 2024-09-15 02:37+0000\n"
+"PO-Revision-Date: 2024-10-29 22:58+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/org.gnome.Connections.appdata.xml.in:7
 #: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
@@ -314,7 +314,7 @@ msgstr "Ověřit"
 
 #: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
-msgstr "Vítejte v připojeních"
+msgstr "Vítejte v Připojeních"
 
 #: src/ui/onboarding-dialog.ui:43
 msgid "Click next to learn about remote desktop."
