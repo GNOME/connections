@@ -1,0 +1,560 @@
+# Serbian translation for gnome-connections.
+# Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-connections package.
+# Marko Kostić <marko.m.kostic@gmail.com>, 2020.
+# Marko M. Kostić <marko.m.kostic@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-connections gnome-3-38\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
+"POT-Creation-Date: 2024-09-15 02:37+0000\n"
+"PO-Revision-Date: 2024-11-01 00:58+0100\n"
+"Last-Translator: Marko M. Kostić <marko.m.kostic@gmail.com>\n"
+"Language-Team: Serbian <gnome-sr@googlegroups.com>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Gtranslator 46.1\n"
+
+#: data/org.gnome.Connections.appdata.xml.in:7
+#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
+msgid "Connections"
+msgstr "Veze"
+
+#: data/org.gnome.Connections.appdata.xml.in:8
+msgid "View and use other desktops"
+msgstr "Gledajte i koristite druge radne površine"
+
+#: data/org.gnome.Connections.appdata.xml.in:10
+msgid ""
+"Connections allows you to connect to and use other desktops. This can be a "
+"great way to access content or software on a different desktop operating "
+"system. It can also be used as a way to provide support to users who might "
+"need help."
+msgstr ""
+"Veze vam omogućavaju da se povežete na i koristite druge radne površine. Ovo "
+"može biti odličan način za pristup sadržaju i programima na drugim "
+"operativnim sistemima. Takođe se može koristiti za pružanje podrške "
+"korisnicima kojima treba pomoć."
+
+#: data/org.gnome.Connections.appdata.xml.in:13
+msgid ""
+"A range of different operating systems can be connected to, including Linux "
+"and Windows desktops. You can also connect to virtual machines."
+msgstr ""
+"Možete se povezati na širok opseg operativnih sistema, uključujući Linuks i "
+"Vindous. Takođe se možete povezati na virtuelne mašine."
+
+#: data/org.gnome.Connections.appdata.xml.in:16
+msgid ""
+"Connections uses the widely supported VNC and RDP protocols, and one of "
+"these must be enabled on the desktop that you want to connect to."
+msgstr ""
+"Veze koriste opšte podržane VNC i RDP protokole i jedan od njih mora biti "
+"omogućen na mašini na koju se povezujete."
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.appdata.xml.in:44
+msgid "The GNOME Project"
+msgstr "Gnom projekat"
+
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;vnc;rdp;udaljeno;desktop;"
+"radna površ;vindous;podrška;pristup;pogledaj;vindous;podrska"
+
+#: data/org.gnome.Connections.xml:5
+msgid "Remote Desktop (VNC) file"
+msgstr "Datoteka udaljene površine (VNC)"
+
+#: src/actions-popover.vala:44
+msgid "Delete"
+msgstr "Obriši"
+
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
+msgid "Properties"
+msgstr "Svojstva"
+
+#: src/application.vala:88
+msgid "translator-credits"
+msgstr ""
+"Marko M. Kostić (Marko M. Kostić) <marko.m.kostic@gmail.com>\n"
+"\n"
+"https://gnom.srb — prevod Gnoma na srpski jezik"
+
+#: src/application.vala:89 src/application.vala:242
+msgid "A remote desktop client for the GNOME desktop environment"
+msgstr "Gnomov klijent za udaljenu radnu površinu"
+
+#: src/application.vala:151
+#, c-format
+msgid "Couldn’t open file of unknown mime type %s"
+msgstr "Ne mogu otvoriti datoteku sa nepoznatom mime vrstom %s"
+
+#: src/application.vala:182
+#, c-format
+msgid "Connection to “%s” has been deleted"
+msgstr "Veza ka „%s“ je obrisana"
+
+#: src/application.vala:185
+msgid "Undo"
+msgstr "Opozovi"
+
+#: src/application.vala:232
+msgid "URL to connect"
+msgstr "URL veze"
+
+#: src/application.vala:233
+msgid "Open .vnc or .rdp file at the given PATH"
+msgstr "Otvori .vnc ili .rdp datoteku u datoj PUTANJI"
+
+#: src/application.vala:233
+msgid "PATH"
+msgstr "PUTANJA"
+
+#: src/application.vala:234
+msgid "Open in full screen"
+msgstr "Otvori preko celog ekrana"
+
+#: src/application.vala:257
+msgid "Too many command-line arguments specified.\n"
+msgstr "Suviše argumenata naredbene linije navedeno.\n"
+
+#. Translators: %s => the timestamp of when the screenshot was taken.
+#: src/connection.vala:70
+#, c-format
+msgid "Screenshot from %s"
+msgstr "Snimak od %s"
+
+#: src/connection.vala:85
+msgid "Screenshot taken"
+msgstr "Snimak ekrana napravljen"
+
+#. Translators: Open is a verb
+#: src/connection.vala:88
+msgid "Open"
+msgstr "Otvori"
+
+#: src/connection.vala:205
+#, c-format
+msgid "Authentication failed: %s"
+msgstr "Identifikacija nije uspela: %s"
+
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Povezujete se na „%s“ po prvi put. Da proverite da li se povezujete na "
+"računar koji želite proverite njegove digitalne otiske prsta. Ova procedura "
+"je potrebna samo jednom."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Sertifikat udaljenog servera „%s“ se ne poklapa sa lokalnom kopijom. Možda "
+"neko pokušava da se predstavi kao ovaj server."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Udaljeni server „%s“ zahteva korisničko ime i lozinku da bi nastavio sa "
+"povezivanjem."
+
+#. Translators: Showing size of widget as WIDTH×HEIGHT here.
+#: src/display-view.vala:131
+#, c-format
+msgid "%d×%d"
+msgstr "%d×%d"
+
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Ne, hvala"
+
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Zatvori"
+
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Promeni veličinu ekrana"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:236
+msgid "Take Screenshot"
+msgstr "Napravi snimak ekrana"
+
+#: src/topbar.vala:62 src/ui/topbar.ui:198
+msgid "Fullscreen"
+msgstr "Preko celog ekrana"
+
+#: src/ui/assistant.ui:26
+msgid "Enter the network identifier of the remote desktop to connect to:"
+msgstr "Unesite mrežno ime udaljene radne površine na koju se povezujete:"
+
+#: src/ui/assistant.ui:53
+msgid "Connection Type"
+msgstr "Vrsta veze"
+
+#: src/ui/assistant.ui:63
+msgid "RDP (standard for connecting to Windows)"
+msgstr "RDP (opšte za povezivanje na Vindous)"
+
+#: src/ui/assistant.ui:72
+msgid "VNC (standard for connecting to Linux)"
+msgstr "VNC (opšte za povezivanje na Linuks)"
+
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
+msgid "Help"
+msgstr "Pomoć"
+
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
+msgid "Connect"
+msgstr "Poveži se"
+
+#: src/ui/auth-notification.ui:39
+msgid "_Username"
+msgstr "_Korisnik"
+
+#: src/ui/auth-notification.ui:71
+msgid "_Password"
+msgstr "_Lozinka"
+
+#: src/ui/auth-notification.ui:108
+msgid "Sign In"
+msgstr "Prijavi me"
+
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Otvaranje veze"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Potvrdi"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Proveri otisak prsta"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"Na Windows sistemu pokrenite certlm.msc ili certmgr.msc\n"
+"i kopirajte sertifikat iz\n"
+"<b>Udaljena radna površ>Sertifikati</b> u datoteku.\n"
+"Zatim napravite otisak prsta pomoću\n"
+"„certutil.exe -hashfile file SHA256“.\n"
+"\n"
+"Ukoliko se Gnom koristi kao krajnja tačka za povezivanje,\n"
+"otisak prsta možete verifikovati iz površi\n"
+"<b>Podešavanja>Deljenje</b> ili \n"
+"<b>Podešavanja>Sistemski podaci</b>, a zatim\n"
+"<b>Udaljena radna površ>Potvrdi šifrovanje</b>."
+
+#: src/ui/dialog.ui:292
+msgid "Unexpected Certificate"
+msgstr "Neočekivan sertifikat"
+
+#: src/ui/dialog.ui:334
+msgid "Delete Local Certificate"
+msgstr "Obriši lokalni sertifikat"
+
+#: src/ui/dialog.ui:387
+msgid "Authentication Required"
+msgstr "Potrebna je prijava"
+
+#: src/ui/dialog.ui:438
+msgid "Username…"
+msgstr "Korisničko ime…"
+
+#: src/ui/dialog.ui:466
+msgid "Password…"
+msgstr "Lozinka…"
+
+#: src/ui/dialog.ui:516
+msgid "Domain…"
+msgstr "Domen…"
+
+#: src/ui/dialog.ui:537
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Polje za unos domena je obično opciono i\n"
+"možete da ostaviti prazno."
+
+#: src/ui/dialog.ui:639
+msgid "Authenticate"
+msgstr "Prijava"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
+msgid "Welcome to Connections"
+msgstr "Dobro došli u Veze"
+
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "Kliknite na naredno da saznate više o udaljenim ranim površima."
+
+#: src/ui/onboarding-dialog.ui:50
+msgid "Access other desktops"
+msgstr "Pristupite drugim radnim površima"
+
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+"Veze omogućavaju da vidite ekran na drugim radnim površima. Njih možete "
+"kontrolisati preko pokazivača i tastature."
+
+#: src/ui/onboarding-dialog.ui:58
+msgid "Connect to different operating systems"
+msgstr "Povežite se na različite operativne sisteme"
+
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Možete pristupiti Linuks, Mek i Vindous radnim površinama."
+
+#: src/ui/onboarding-dialog.ui:66
+msgid "Setup is required"
+msgstr "Potrebna su podešavanja"
+
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"Udaljeni desktop  treba da bude omogućena na računaru na koji želite da se "
+"povežete."
+
+#: src/ui/onboarding-dialog.ui:74
+msgid "Start by creating your first connection"
+msgstr "Počnite pravljenjem prve veze"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Da počnete, biće vam potrebna adresa računara na koji želite da se povežete."
+
+#: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
+msgid "Connection preferences"
+msgstr "Postavke Veza"
+
+#: src/ui/rdp-preferences.ui:22 src/ui/vnc-preferences.ui:22
+msgid "Address"
+msgstr "Adresa"
+
+#: src/ui/rdp-preferences.ui:37 src/ui/vnc-preferences.ui:37
+msgid "Name"
+msgstr "Naziv"
+
+#: src/ui/rdp-preferences.ui:53 src/ui/vnc-preferences.ui:108
+msgid "Fit window"
+msgstr "Uklopi u prozor"
+
+#: src/ui/rdp-preferences.ui:54 src/ui/vnc-preferences.ui:109
+msgid "Original size"
+msgstr "Izvorna veličina"
+
+#: src/ui/topbar.ui:21
+msgid "New"
+msgstr "Nova"
+
+#: src/ui/topbar.ui:42
+msgid "Application Menu"
+msgstr "Meni programa"
+
+#: src/ui/topbar.ui:70
+msgid "Search"
+msgstr "Pretraži"
+
+#: src/ui/topbar.ui:104
+msgid "Go Back"
+msgstr "Idi nazad"
+
+#: src/ui/topbar.ui:125
+msgid "Display Menu"
+msgstr "Prikaži meni"
+
+#: src/ui/topbar.ui:149
+msgid "Disconnect"
+msgstr "Prekini vezu"
+
+#: src/ui/topbar.ui:174
+msgid "Keyboard shortcuts"
+msgstr "Prečice na tastaturi"
+
+#: src/ui/topbar.ui:221
+msgid "Keyboard Shortcuts"
+msgstr "Prečice na tastaturi"
+
+#: src/ui/topbar.ui:229
+msgid "About Connections"
+msgstr "O Vezama"
+
+#: src/ui/topbar.ui:254
+msgid "Ctrl + Alt + Backspace"
+msgstr "Ctrl + Alt + Backspace"
+
+#: src/ui/topbar.ui:261
+msgid "Ctrl + Alt + Del"
+msgstr "Ctrl + Alt + Del"
+
+#: src/ui/topbar.ui:268
+msgid "Ctrl + Alt + F1"
+msgstr "Ctrl + Alt + F1"
+
+#: src/ui/topbar.ui:275
+msgid "Ctrl + Alt + F2"
+msgstr "Ctrl + Alt + F2"
+
+#: src/ui/topbar.ui:282
+msgid "Ctrl + Alt + F3"
+msgstr "Ctrl + Alt + F3"
+
+#: src/ui/topbar.ui:289
+msgid "Ctrl + Alt + F7"
+msgstr "Ctrl + Alt + F7"
+
+#: src/ui/vnc-preferences.ui:54
+msgid "Display"
+msgstr "Prikaz"
+
+#: src/ui/vnc-preferences.ui:59
+msgid "View only"
+msgstr "Samo prikaz"
+
+#: src/ui/vnc-preferences.ui:66
+msgid "Show local pointer"
+msgstr "Prikaži lokalni pokazivač miša"
+
+#: src/ui/vnc-preferences.ui:73
+msgid "Enable audio"
+msgstr "Omogući zvuk"
+
+#: src/ui/vnc-preferences.ui:81
+msgid "Bandwidth"
+msgstr "Protok"
+
+#: src/ui/vnc-preferences.ui:88
+msgid "High quality"
+msgstr "Visok kvalitet"
+
+#: src/ui/vnc-preferences.ui:89
+msgid "Fast refresh"
+msgstr "Brzo osvežavanje"
+
+#: src/ui/vnc-preferences.ui:100
+msgid "Scale mode"
+msgstr "Režim srazmeravanja"
+
+#: src/ui/window.ui:52
+msgid "Click the add button to create your first connection"
+msgstr "Kliknite na dugme za dodavanje da napravite prvu vezu"
+
+#: src/vnc-connection.vala:150
+msgid "Couldn’t parse the file"
+msgstr "Ne mogu da obradim datoteku"
+
+#. Translators: %s is a VNC file key
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
+#, c-format
+msgid "VNC File is missing key “%s”"
+msgstr "VNC datoteci nedostaje ključ „%s“"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "„%s“ zahteva potvrdu identiteta"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Saznajte više o tome kako Veze rade."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Koristite druge udaljene radne površine"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Omogući udaljenu radnu površ pre povezivanja"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Pre nego što se povežete na udaljene računare, oni moraju biti podešeni za "
+#~ "to."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Nadamo se da uživate u programu Veze!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Više podataka možete naći u pomoći."
+
+#~ msgid "Scaling"
+#~ msgstr "Razmera"
+
+#~ msgid "GNOME Connections"
+#~ msgstr "Gnomove veze"
+
+#~ msgid "A remote desktop client for the GNOME desktop environment."
+#~ msgstr "Gnomov klijent za udaljenu radnu površinu."
+
+#~ msgid "Create a New Connection"
+#~ msgstr "Napravi novu vezu"
+
+#~ msgid ""
+#~ "Enter a machine address to connect to. Address can begin with rdp:// or "
+#~ "vnc://"
+#~ msgstr ""
+#~ "Unesite adresu mašine na koju se želite povezati. Adrese mogu počinjati sa "
+#~ "rdp:// ili vnc://"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Create"
+#~ msgstr "Napravi"
+
+#~ msgid "A remote connection manager for the GNOME desktop"
+#~ msgstr "Upravnik udaljenim vezama za Gnomovu radnu površinu"
+
+#~ msgid "— A simple application to access remote connections"
+#~ msgstr "— Jednostavan program za pristup udaljenim vezama"
+
+#~ msgid "VNC File is missing key “Port“"
+#~ msgstr "VNC datoteci nedostaje ključ \"Port\" (port)"
+
+#~ msgid "VNC File is missing key “Username“"
+#~ msgstr "VNC datoteci nedostaje ključ \"Username\" (korisničko ime)"
+
+#~ msgid "VNC File is missing key “Password“"
+#~ msgstr "VNC datoteci nedostaje ključ \"Password\" (lozinka)"
