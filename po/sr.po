@@ -2,34 +2,41 @@
 # Copyright (C) 2020 gnome-connections's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-connections package.
 # Марко Костић <marko.m.kostic@gmail.com>, 2020.
+# Марко М. Костић <marko.m.kostic@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-connections gnome-3-38\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/connections/issues\n"
-"POT-Creation-Date: 2023-02-17 10:01+0000\n"
-"PO-Revision-Date: 2023-02-18 07:21+0100\n"
+"POT-Creation-Date: 2024-10-31 23:59+0000\n"
+"PO-Revision-Date: 2024-11-01 00:58+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: Serbian <gnome-sr@googlegroups.com>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 3.1.1\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Gtranslator 46.1\n"
 
-#: data/org.gnome.Connections.appdata.xml.in:7
-#: data/org.gnome.Connections.desktop.in:3 src/application.vala:92
-#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:107
+#: data/org.gnome.Connections.desktop.in:3
+#: data/org.gnome.Connections.metainfo.xml.in:7 src/application.vala:92
+#: src/ui/topbar.ui:9 src/ui/window.ui:5 src/window.vala:115
 msgid "Connections"
 msgstr "Везе"
 
-#: data/org.gnome.Connections.appdata.xml.in:8
+#: data/org.gnome.Connections.desktop.in:8
+msgid "vnc;rdp;remote;desktop;windows;support;access;view"
+msgstr ""
+"vnc;rdp;remote;desktop;windows;support;access;view;внц;рдп;удаљено;десктоп;"
+"радна површ;виндоус;подршка;приступ;погледај;vindous;podrska"
+
+#: data/org.gnome.Connections.metainfo.xml.in:8
 msgid "View and use other desktops"
 msgstr "Гледајте и користите друге радне површине"
 
-#: data/org.gnome.Connections.appdata.xml.in:10
+#: data/org.gnome.Connections.metainfo.xml.in:10
 msgid ""
 "Connections allows you to connect to and use other desktops. This can be a "
 "great way to access content or software on a different desktop operating "
@@ -41,7 +48,7 @@ msgstr ""
 "оперативним системима. Такође се може користити за пружање подршке "
 "корисницима којима треба помоћ."
 
-#: data/org.gnome.Connections.appdata.xml.in:13
+#: data/org.gnome.Connections.metainfo.xml.in:13
 msgid ""
 "A range of different operating systems can be connected to, including Linux "
 "and Windows desktops. You can also connect to virtual machines."
@@ -49,7 +56,7 @@ msgstr ""
 "Можете се повезати на широк опсег оперативних система, укључујући Линукс и "
 "Виндоус. Такође се можете повезати на виртуелне машине."
 
-#: data/org.gnome.Connections.appdata.xml.in:16
+#: data/org.gnome.Connections.metainfo.xml.in:16
 msgid ""
 "Connections uses the widely supported VNC and RDP protocols, and one of "
 "these must be enabled on the desktop that you want to connect to."
@@ -57,15 +64,10 @@ msgstr ""
 "Везе користе опште подржане ВНЦ и РДП протоколе и један од њих мора бити "
 "омогућен на машини на коју се повезујете."
 
-#: data/org.gnome.Connections.appdata.xml.in:43
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.Connections.metainfo.xml.in:41
 msgid "The GNOME Project"
 msgstr "Гном пројекат"
-
-#: data/org.gnome.Connections.desktop.in:8
-msgid "vnc;rdp;remote;desktop;windows;support;access;view"
-msgstr ""
-"vnc;rdp;remote;desktop;windows;support;access;view;внц;рдп;удаљено;десктоп;"
-"радна површ;виндоус;подршка;приступ;погледај;vindous;podrska"
 
 #: data/org.gnome.Connections.xml:5
 msgid "Remote Desktop (VNC) file"
@@ -75,7 +77,7 @@ msgstr "Датотека удаљене површине (VNC)"
 msgid "Delete"
 msgstr "Обриши"
 
-#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:220
+#: src/actions-popover.vala:48 src/topbar.vala:66 src/ui/topbar.ui:240
 msgid "Properties"
 msgstr "Својства"
 
@@ -112,6 +114,10 @@ msgstr "УРЛ везе"
 msgid "Open .vnc or .rdp file at the given PATH"
 msgstr "Отвори .vnc или .rdp датотеку у датој ПУТАЊИ"
 
+#: src/application.vala:233
+msgid "PATH"
+msgstr "ПУТАЊА"
+
 #: src/application.vala:234
 msgid "Open in full screen"
 msgstr "Отвори преко целог екрана"
@@ -135,35 +141,64 @@ msgstr "Снимак екрана направљен"
 msgid "Open"
 msgstr "Отвори"
 
-#: src/connection.vala:161
-#, c-format
-msgid "“%s” requires authentication"
-msgstr "„%s“ захтева потврду идентитета"
-
-#: src/connection.vala:200
+#: src/connection.vala:205
 #, c-format
 msgid "Authentication failed: %s"
 msgstr "Идентификација није успела: %s"
 
+#: src/dialogs.vala:167
+#, c-format
+msgid ""
+"Connecting to “%s” for the first time. To be sure you're connecting to the "
+"machine it claims to be, please verify the fingerprints match. This process "
+"is only done once."
+msgstr ""
+"Повезујете се на „%s“ по први пут. Да проверите да ли се повезујете на "
+"рачунар који желите проверите његове дигиталне отиске прста. Ова процедура "
+"је потребна само једном."
+
+#: src/dialogs.vala:201
+#, c-format
+msgid ""
+"The remote server “%s” certificate doesn't match local copy. It may be "
+"someone's pretending to be the server."
+msgstr ""
+"Сертификат удаљеног сервера „%s“ се не поклапа са локалном копијом. Можда "
+"неко покушава да се представи као овај сервер."
+
+#: src/dialogs.vala:241
+#, c-format
+msgid ""
+"The remote server “%s” requires a username and password to continue to "
+"connect."
+msgstr ""
+"Удаљени сервер „%s“ захтева корисничко име и лозинку да би наставио са "
+"повезивањем."
+
 #. Translators: Showing size of widget as WIDTH×HEIGHT here.
-#: src/display-view.vala:126
+#: src/display-view.vala:131
 #, c-format
 msgid "%d×%d"
 msgstr "%d×%d"
 
-#: src/onboarding-dialog.vala:86 src/ui/onboarding-dialog.ui:147
-msgid "No Thanks"
-msgstr "Не, хвала"
+#: src/onboarding-dialog.vala:96 src/ui/onboarding-dialog.ui:148
+msgid "_No Thanks"
+msgstr "_Не, хвала"
 
-#: src/onboarding-dialog.vala:86
-msgid "Close"
-msgstr "Затвори"
+#: src/onboarding-dialog.vala:96
+msgid "_Close"
+msgstr "_Затвори"
 
-#: src/topbar.vala:58 src/ui/topbar.ui:212
+#. Translators: Combo item for resizing remote desktop to window's size
+#: src/rdp-preferences-window.vala:49 src/ui/vnc-preferences.ui:107
+msgid "Resize desktop"
+msgstr "Промени величину екрана"
+
+#: src/topbar.vala:58 src/ui/topbar.ui:236
 msgid "Take Screenshot"
 msgstr "Направи снимак екрана"
 
-#: src/topbar.vala:62 src/ui/topbar.ui:216
+#: src/topbar.vala:62 src/ui/topbar.ui:198
 msgid "Fullscreen"
 msgstr "Преко целог екрана"
 
@@ -183,11 +218,11 @@ msgstr "РДП (опште за повезивање на Виндоус)"
 msgid "VNC (standard for connecting to Linux)"
 msgstr "ВНЦ (опште за повезивање на Линукс)"
 
-#: src/ui/assistant.ui:90 src/ui/topbar.ui:201
+#: src/ui/assistant.ui:90 src/ui/topbar.ui:225
 msgid "Help"
 msgstr "Помоћ"
 
-#: src/ui/assistant.ui:100
+#: src/ui/assistant.ui:100 src/ui/dialog.ui:68 src/ui/dialog.ui:74
 msgid "Connect"
 msgstr "Повежи се"
 
@@ -203,52 +238,133 @@ msgstr "_Лозинка"
 msgid "Sign In"
 msgstr "Пријави ме"
 
-#: src/ui/onboarding-dialog.ui:41 src/ui/window.ui:51
+#. Translators: The dialog with this title is shown to the user before opening the connection if needed (e.g. certificate confirmation).
+#: src/ui/dialog.ui:18
+msgid "Open Connection"
+msgstr "Отварање везе"
+
+#: src/ui/dialog.ui:37 src/ui/dialog.ui:43
+msgid "Verify"
+msgstr "Потврди"
+
+#: src/ui/dialog.ui:105 src/ui/dialog.ui:613
+msgid "Cancel"
+msgstr "Откажи"
+
+#: src/ui/dialog.ui:144
+msgid "Verify Fingerprint"
+msgstr "Провери отисак прста"
+
+#: src/ui/dialog.ui:211
+msgid ""
+"On Windows run certlm.msc or certmgr.msc\n"
+"and copy the certificate from\n"
+"<b>Remote Desktop>Certificates</b> to a file.\n"
+"Then obtain its fingerprint via\n"
+"\"certutil.exe -hashfile file SHA256\".\n"
+"\n"
+"If GNOME is used on the connected endpoint,\n"
+"the fingerprint can be verified in the <b>Settings>Sharing</b>\n"
+"panel or <b>Settings>System</b> panel under\n"
+"<b>Remote Desktop>Verify Encryption</b>."
+msgstr ""
+"На Windows систему покрените certlm.msc или certmgr.msc\n"
+"и копирајте сертификат из\n"
+"<b>Удаљена радна површ>Сертификати</b> у датотеку.\n"
+"Затим направите отисак прста помоћу\n"
+"„certutil.exe -hashfile file SHA256“.\n"
+"\n"
+"Уколико се Гном користи као крајња тачка за повезивање,\n"
+"отисак прста можете верификовати из површи\n"
+"<b>Подешавања>Дељење</b> или \n"
+"<b>Подешавања>Системски подаци</b>, а затим\n"
+"<b>Удаљена радна површ>Потврди шифровање</b>."
+
+#: src/ui/dialog.ui:292
+msgid "Unexpected Certificate"
+msgstr "Неочекиван сертификат"
+
+#: src/ui/dialog.ui:334
+msgid "Delete Local Certificate"
+msgstr "Обриши локални сертификат"
+
+#: src/ui/dialog.ui:387
+msgid "Authentication Required"
+msgstr "Потребна је пријава"
+
+#: src/ui/dialog.ui:438
+msgid "Username…"
+msgstr "Корисничко име…"
+
+#: src/ui/dialog.ui:466
+msgid "Password…"
+msgstr "Лозинка…"
+
+#: src/ui/dialog.ui:516
+msgid "Domain…"
+msgstr "Домен…"
+
+#: src/ui/dialog.ui:537
+msgid ""
+"Domain field is commonly optional and can be\n"
+"left empty."
+msgstr ""
+"Поље за унос домена је обично опционо и\n"
+"можете да оставити празно."
+
+#: src/ui/dialog.ui:639
+msgid "Authenticate"
+msgstr "Пријава"
+
+#: src/ui/onboarding-dialog.ui:42 src/ui/window.ui:51
 msgid "Welcome to Connections"
 msgstr "Добро дошли у Везе"
 
-#: src/ui/onboarding-dialog.ui:42
-msgid "Learn about how Connections works."
-msgstr "Сазнајте више о томе како Везе раде."
-
-#: src/ui/onboarding-dialog.ui:49
-msgid "Use other desktops, remotely"
-msgstr "Користите друге удаљене радне површине"
+#: src/ui/onboarding-dialog.ui:43
+msgid "Click next to learn about remote desktop."
+msgstr "Кликните на наредно да сазнате више о удаљеним раним површима."
 
 #: src/ui/onboarding-dialog.ui:50
-msgid ""
-"Use Connections to view the screen of other desktops. You can control them "
-"using the pointer and keyboard, too!"
-msgstr ""
-"Искористите програм Везе за прегледање екрана других радних површина. Такође "
-"можете управљати њима користећи вашу тастатуру и миша!"
+msgid "Access other desktops"
+msgstr "Приступите другим радним површима"
 
-#: src/ui/onboarding-dialog.ui:57
+#: src/ui/onboarding-dialog.ui:51
+msgid ""
+"Connections allows viewing the screens of other desktops. They can also be "
+"controlled using the pointer and keyboard."
+msgstr ""
+"Везе омогућавају да видите екран на другим радним површима. Њих можете "
+"контролисати преко показивача и тастатуре."
+
+#: src/ui/onboarding-dialog.ui:58
 msgid "Connect to different operating systems"
 msgstr "Повежите се на различите оперативне системе"
 
-#: src/ui/onboarding-dialog.ui:58
-msgid "Access Linux, Mac, and Windows desktops using Connections."
-msgstr "Приступите Линукс, Мек и Виндоус радним површинама преко Веза."
-
-#: src/ui/onboarding-dialog.ui:65
-msgid "Enable remote desktop before connecting"
-msgstr "Омогући удаљену радну површ пре повезивања"
+#: src/ui/onboarding-dialog.ui:59
+msgid "You can access Linux, Mac, and Windows desktops."
+msgstr "Можете приступити Линукс, Мек и Виндоус радним површинама."
 
 #: src/ui/onboarding-dialog.ui:66
-msgid ""
-"Computers need to be set up for remote desktop before you can connect to "
-"them."
-msgstr ""
-"Пре него што се повежете на удаљене рачунаре, они морају бити подешени за то."
+msgid "Setup is required"
+msgstr "Потребна су подешавања"
 
-#: src/ui/onboarding-dialog.ui:73
-msgid "We hope that you enjoy Connections!"
-msgstr "Надамо се да уживате у програму Везе!"
+#: src/ui/onboarding-dialog.ui:67
+msgid ""
+"Remote desktop typically needs to be enabled on the computer you want to "
+"connect to."
+msgstr ""
+"Удаљени десктоп  треба да буде омогућена на рачунару на који желите да се "
+"повежете."
 
 #: src/ui/onboarding-dialog.ui:74
-msgid "More information can be found in the help."
-msgstr "Више података можете наћи у помоћи."
+msgid "Start by creating your first connection"
+msgstr "Почните прављењем прве везе"
+
+#: src/ui/onboarding-dialog.ui:75
+msgid ""
+"To begin, you will need the address of the computer you want to connect to."
+msgstr ""
+"Да почнете, биће вам потребна адреса рачунара на који желите да се повежете."
 
 #: src/ui/rdp-preferences.ui:9 src/ui/vnc-preferences.ui:9
 msgid "Connection preferences"
@@ -298,35 +414,35 @@ msgstr "Прекини везу"
 msgid "Keyboard shortcuts"
 msgstr "Пречице на тастатури"
 
-#: src/ui/topbar.ui:197
+#: src/ui/topbar.ui:221
 msgid "Keyboard Shortcuts"
 msgstr "Пречице на тастатури"
 
-#: src/ui/topbar.ui:205
+#: src/ui/topbar.ui:229
 msgid "About Connections"
 msgstr "О Везама"
 
-#: src/ui/topbar.ui:234
+#: src/ui/topbar.ui:254
 msgid "Ctrl + Alt + Backspace"
 msgstr "Ctrl + Alt + Backspace"
 
-#: src/ui/topbar.ui:241
+#: src/ui/topbar.ui:261
 msgid "Ctrl + Alt + Del"
 msgstr "Ctrl + Alt + Del"
 
-#: src/ui/topbar.ui:248
+#: src/ui/topbar.ui:268
 msgid "Ctrl + Alt + F1"
 msgstr "Ctrl + Alt + F1"
 
-#: src/ui/topbar.ui:255
+#: src/ui/topbar.ui:275
 msgid "Ctrl + Alt + F2"
 msgstr "Ctrl + Alt + F2"
 
-#: src/ui/topbar.ui:262
+#: src/ui/topbar.ui:282
 msgid "Ctrl + Alt + F3"
 msgstr "Ctrl + Alt + F3"
 
-#: src/ui/topbar.ui:269
+#: src/ui/topbar.ui:289
 msgid "Ctrl + Alt + F7"
 msgstr "Ctrl + Alt + F7"
 
@@ -362,24 +478,46 @@ msgstr "Брзо освежавање"
 msgid "Scale mode"
 msgstr "Режим сразмеравања"
 
-#: src/ui/vnc-preferences.ui:107
-msgid "Resize desktop"
-msgstr "Промени величину екрана"
-
 #: src/ui/window.ui:52
-msgid "Just hit the <b>+</b> button to make your first connection."
-msgstr "Само притисните <b>+</b> дугме за стварање ваше прве везе."
+msgid "Click the add button to create your first connection"
+msgstr "Кликните на дугме за додавање да направите прву везу"
 
-#: src/vnc-connection.vala:149
+#: src/vnc-connection.vala:150
 msgid "Couldn’t parse the file"
 msgstr "Не могу да обрадим датотеку"
 
 #. Translators: %s is a VNC file key
-#: src/vnc-connection.vala:157 src/vnc-connection.vala:162
-#: src/vnc-connection.vala:167 src/vnc-connection.vala:172
+#: src/vnc-connection.vala:158 src/vnc-connection.vala:163
+#: src/vnc-connection.vala:168 src/vnc-connection.vala:173
 #, c-format
 msgid "VNC File is missing key “%s”"
 msgstr "VNC датотеци недостаје кључ „%s“"
+
+#, c-format
+#~ msgid "“%s” requires authentication"
+#~ msgstr "„%s“ захтева потврду идентитета"
+
+#~ msgid "Learn about how Connections works."
+#~ msgstr "Сазнајте више о томе како Везе раде."
+
+#~ msgid "Use other desktops, remotely"
+#~ msgstr "Користите друге удаљене радне површине"
+
+#~ msgid "Enable remote desktop before connecting"
+#~ msgstr "Омогући удаљену радну површ пре повезивања"
+
+#~ msgid ""
+#~ "Computers need to be set up for remote desktop before you can connect to "
+#~ "them."
+#~ msgstr ""
+#~ "Пре него што се повежете на удаљене рачунаре, они морају бити подешени за "
+#~ "то."
+
+#~ msgid "We hope that you enjoy Connections!"
+#~ msgstr "Надамо се да уживате у програму Везе!"
+
+#~ msgid "More information can be found in the help."
+#~ msgstr "Више података можете наћи у помоћи."
 
 #~ msgid "Scaling"
 #~ msgstr "Размера"
@@ -402,9 +540,6 @@ msgstr "VNC датотеци недостаје кључ „%s“"
 
 #~ msgid "Server"
 #~ msgstr "Сервер"
-
-#~ msgid "Cancel"
-#~ msgstr "Откажи"
 
 #~ msgid "Create"
 #~ msgstr "Направи"
