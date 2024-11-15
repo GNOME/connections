@@ -47,6 +47,7 @@
                 <object class="GtkButton" id="escape_fullscreen_button">
                   <property name="halign">center</property>
                   <property name="valign">start</property>
+                  <property name="focus-on-click">False</property>
                   <signal name="clicked" handler="on_escape_fullscreen_button_clicked"/>
                   <style>
                     <class name="app-notification"/>
