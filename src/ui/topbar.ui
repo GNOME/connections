@@ -190,6 +190,7 @@
           <child>
             <object class="GtkButton" id="fullscreen_button">
               <property name="visible">True</property>
+              <property name="focus-on-click">False</property>
               <property name="valign">center</property>
               <property name="action-name">display.fullscreen</property>
 
