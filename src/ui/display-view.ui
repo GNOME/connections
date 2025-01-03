@@ -71,6 +71,7 @@
                     <object class="GtkEventBox" id="event_box">
                       <property name="visible">True</property>
                       <property name="above-child">True</property>
+                      <signal name="scroll-event" handler="on_event_box_scroll_event"/>
                       <signal name="event" handler="on_event_box_event"/>
                     </object>
                   </child>
