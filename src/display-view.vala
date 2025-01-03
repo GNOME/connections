@@ -105,8 +105,33 @@ namespace Connections {
         }
 
         [GtkCallback]
+        private bool on_event_box_scroll_event (Gdk.EventScroll scroll_event) {
+            if (scroll_event.type == EventType.GRAB_BROKEN)
+                return false;
+
+            if (event_box.get_child () != null) {
+                if ((event_box.get_child ().get_events () & EventMask.SMOOTH_SCROLL_MASK) == 0) {
+                    if (scroll_event.delta_x >= 0.5)
+                        scroll_event.direction = ScrollDirection.RIGHT;
+                    else if (scroll_event.delta_x <= -0.5)
+                        scroll_event.direction = ScrollDirection.LEFT;
+
+                    if (scroll_event.delta_y >= 0.5)
+                        scroll_event.direction = ScrollDirection.DOWN;
+                    else if (scroll_event.delta_y <= -0.5)
+                        scroll_event.direction = ScrollDirection.UP;
+                }
+
+                event_box.get_child ().event (scroll_event);
+            }
+
+            return false;
+        }
+
+        [GtkCallback]
         private bool on_event_box_event (Gdk.Event event) {
-            if (event.type == EventType.GRAB_BROKEN)
+            if (event.type == EventType.GRAB_BROKEN ||
+                event.type == EventType.SCROLL)
                 return false;
 
             if (event_box.get_child () != null)
