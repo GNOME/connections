@@ -32,6 +32,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="47.1" date="2025-01-22">
+      <description>
+        <p>GNOME Connections 47.1 contains several bugfixes and updates for some translations.</p>
+      </description>
+    </release>
+  </releases>
+  <releases>
     <release version="47.0" date="2024-09-13">
       <description>
         <p>GNOME Connections 47.0 culminates six months of feature development, bugfixes, and performance improvements.</p>

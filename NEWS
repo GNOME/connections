@@ -1,7 +1,29 @@
-47.0 - 13 Sep, 2024
+47.1 - 22 Jan, 2025
 =====================
 
 Changes since 47.0
+
+  - Fix key events in fullscreen mode
+  - Fix scrolling for VNC connections
+  - Start using GNOME Release Service
+  - Add GIT_SUBMODULE_STRATEGY recursive to bundle subprojects
+  - Switch to master gnome release service branch
+  - Update gtk-frdp:
+     - Queue drawing of the area from the main thread
+
+  - Added/Updated translations:
+     - Brazilian-Portuguese
+     - Czech
+     - Dutch
+     - Friulian
+     - Serbian
+     - Serbian-Latin
+     - Thai
+
+47.0 - 13 Sep, 2024
+=====================
+
+Changes since 47.beta
 
   - Added/Updated translations:
      - Basque
