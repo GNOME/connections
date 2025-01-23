@@ -1,9 +1,9 @@
 include:
-  - project: 'GNOME/citemplates'
+  - project: 'gnome/citemplates'
     file: 'flatpak/flatpak_ci_initiative.yml'
   - component: gitlab.gnome.org/GNOME/citemplates/release-service@master
     inputs:
-      dist-job-name: flatpak
+      dist-job-name: "flatpak"
       tarball-artifact-path: ".flatpak-builder/build/connections/_flatpak_build/meson-dist/gnome-connections-$CI_COMMIT_TAG.tar.xz"
 
 stages:
@@ -20,7 +20,7 @@ flatpak:
         APP_ID: "org.gnome.Connections.Devel"
         BUNDLE: "connections.flatpak"
         GIT_SUBMODULE_STRATEGY: recursive
-    extends: .flatpak 
+    extends: ".flatpak"
 
 nightly:
   extends: '.publish_nightly'
