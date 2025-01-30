@@ -2,7 +2,7 @@
 
 A remote desktop client for the GNOME desktop environment.
 
-<img src="https://gitlab.gnome.org/GNOME/connections/-/raw/master/data/screenshot.png" width="800"/>
+<img src="https://gitlab.gnome.org/GNOME/gnome-connections/-/raw/master/data/screenshot.png" width="800"/>
 
 ## Goals
 
@@ -12,7 +12,7 @@ Connections aims at replacing Vinagre as the remote desktop client for GNOME.
 
 If you want to report bugs, please check if there isn't already one on:
 
- [Connections Issues](https://gitlab.gnome.org/GNOME/connections/issues)
+ [Connections Issues](https://gitlab.gnome.org/GNOME/gnome-connections/issues)
 
 If one does not exist already, please file a new one.
 

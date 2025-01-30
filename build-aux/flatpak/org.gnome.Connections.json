@@ -115,7 +115,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/connections.git"
+                    "url": "https://gitlab.gnome.org/GNOME/gnome-connections.git"
                 }
             ]
         }

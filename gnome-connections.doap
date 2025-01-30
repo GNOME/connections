@@ -15,9 +15,9 @@
   <homepage
   rdf:resource="https://apps.gnome.org/Connections" />
   <download-page
-  rdf:resource="http://download.gnome.org/sources/connections/"/>
+  rdf:resource="http://download.gnome.org/sources/gnome-connections/"/>
   <bug-database
-  rdf:resource="https://gitlab.gnome.org/GNOME/connections/issues"/>
+  rdf:resource="https://gitlab.gnome.org/GNOME/gnome-connections/issues"/>
 
   <maintainer>
     <foaf:Person>
